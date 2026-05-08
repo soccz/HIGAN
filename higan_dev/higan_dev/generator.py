@@ -104,6 +104,25 @@ class HiGANGenerator(nn.Module):
             wp = wp.unsqueeze(1).repeat(1, self.num_layers, 1)
         return self._net.synthesis(wp)
 
+    def synthesize_at_block(self, wp: torch.Tensor, block_idx: int) -> torch.Tensor:
+        """Return the activation right after block `block_idx` (before its
+        per-block output projection). For bedroom256, block_idx in [0..6]
+        corresponds to spatial 4, 8, 16, 32, 64, 128, 256.
+        """
+        if wp.dim() == 2:
+            wp = wp.unsqueeze(1).repeat(1, self.num_layers, 1)
+        synth = self._net.synthesis
+        init_log2 = synth.init_res_log2
+        x = None
+        for res_log2 in range(init_log2, init_log2 + block_idx + 1):
+            bi = res_log2 - init_log2
+            if bi == 0:
+                x = synth.__getattr__(f"layer{2 * bi}")(wp[:, 2 * bi])
+            else:
+                x = synth.__getattr__(f"layer{2 * bi}")(x, wp[:, 2 * bi])
+            x = synth.__getattr__(f"layer{2 * bi + 1}")(x, wp[:, 2 * bi + 1])
+        return x
+
     def forward(self, latent: torch.Tensor,
                 space: Literal["z", "w", "wp"] = "wp") -> torch.Tensor:
         if space == "z":
