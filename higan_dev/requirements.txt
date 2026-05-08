@@ -1,13 +1,33 @@
-# Install torch + torchvision FIRST to pin CUDA version, e.g.
-#   pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
-# Then install the rest with --no-deps for lpips so it doesn't drag in a newer torch.
+# =============================================================
+# HIGAN higan_dev — install order matters (avoid torch upgrades)
+# =============================================================
+#
+# 1) Pin torch + torchvision FIRST (cu121 build):
+#    pip install torch==2.2.2 torchvision==0.17.2 \
+#        --index-url https://download.pytorch.org/whl/cu121
+#
+# 2) Install everything else WITHOUT pulling new torch:
+#    pip install --no-deps lpips==0.1.4 open_clip_torch
+#    pip install pyyaml "numpy<2" pillow opencv-python tqdm \
+#                matplotlib scipy scikit-learn datasets ftfy \
+#                regex wcwidth huggingface_hub safetensors timm
+# =============================================================
 torch==2.2.2
 torchvision==0.17.2
 numpy<2
 pillow
 opencv-python
 tqdm
-lpips==0.1.4    # install with --no-deps
-pyyaml
 matplotlib
 scipy
+scikit-learn       # K-means clustering for taxonomy (script 22)
+pyyaml
+lpips==0.1.4       # install with --no-deps
+open_clip_torch    # install with --no-deps; CLIP ViT-B-32 for cluster labelling (script 24)
+datasets           # streaming LSUN bedroom (script 25)
+ftfy               # open_clip transitive
+regex              # open_clip transitive
+wcwidth            # ftfy transitive
+huggingface_hub    # open_clip / datasets transitive
+safetensors        # open_clip transitive
+timm               # open_clip transitive

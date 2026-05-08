@@ -77,3 +77,22 @@ class AverageMeter:
     @property
     def avg(self) -> float:
         return self.sum / max(self.n, 1)
+
+
+# -----------------------------------------------------------------------------
+# Drawing utilities used by visualisation scripts (15..28).
+# -----------------------------------------------------------------------------
+def label_bar(text: str, w: int, h: int = 24, fs: int = 14,
+              bg: tuple[int, int, int] = (245, 245, 244),
+              fg: tuple[int, int, int] = (40, 40, 40)) -> np.ndarray:
+    """Render a single-line text strip of width `w` and height `h`."""
+    from PIL import Image, ImageDraw, ImageFont
+    img = Image.new("RGB", (w, h), bg)
+    draw = ImageDraw.Draw(img)
+    try:
+        font = ImageFont.truetype(
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", fs)
+    except OSError:
+        font = ImageFont.load_default()
+    draw.text((6, max(0, (h - fs) // 2 - 1)), text, fill=fg, font=font)
+    return np.asarray(img)

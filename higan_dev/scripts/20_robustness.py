@@ -18,21 +18,11 @@ from torch.func import jvp
 from PIL import Image, ImageDraw, ImageFont
 
 from higan_dev.config import Config, resolve
+from higan_dev.utils import label_bar as _label
 from higan_dev.generator import HiGANGenerator
 from higan_dev.manipulate import load_boundary, list_available_boundaries
 from higan_dev.cam.grad_saliency import _layered_direction
 
-
-def _label(text: str, w: int, h: int = 22, fs: int = 13) -> np.ndarray:
-    img = Image.new("RGB", (w, h), (245, 245, 244))
-    draw = ImageDraw.Draw(img)
-    try:
-        font = ImageFont.truetype(
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", fs)
-    except OSError:
-        font = ImageFont.load_default()
-    draw.text((6, 3), text, fill=(40, 40, 40), font=font)
-    return np.asarray(img)
 
 
 def main() -> None:

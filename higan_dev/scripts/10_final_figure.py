@@ -16,17 +16,6 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 
-def _label_strip(text: str, w: int, h: int = 18, font_size: int = 14) -> np.ndarray:
-    img = Image.new("RGB", (w, h), (240, 240, 240))
-    draw = ImageDraw.Draw(img)
-    try:
-        font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-                                  font_size)
-    except OSError:
-        font = ImageFont.load_default()
-    draw.text((4, 1), text, fill=(20, 20, 20), font=font)
-    return np.asarray(img)
-
 
 def _hstack_with_labels(blocks: list[np.ndarray], labels: list[str]) -> np.ndarray:
     H = blocks[0].shape[0]

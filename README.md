@@ -36,28 +36,37 @@
 - **잠재 → 픽셀 saliency 두 가지 버전**:
   - forward perturbation (`cam/diff_map.py`): 분류기 없이 ±δ로 픽셀 차이 누적 — cheap, classifier-free, 평균 spatial 패턴.
   - backward gradient (`cam/grad_saliency.py`): 미분 가능 generator + `torch.func.jvp`로 ∂I/∂α를 정확히 계산 — 각 침실의 실제 램프/창문/우드 프레임을 pinpoint.
-- **로컬 실행**: Colab 의존 제거, YAML config + CLI 8단계.
+- **분석 28종**: per-layer / 8×14 / disentanglement / local edit / encoder attention /
+  random direction discovery / compositional / robustness / intermediate Grad-CAM /
+  K-means taxonomy / CLIP zero-shot / ckpt evolution / ∂²I/∂α² / saliency morph /
+  실제 LSUN 사진 등 — 모두 추가 학습 0개로 frozen generator + 기존 ckpt 위에서.
+- **로컬 실행**: Colab 의존 제거, YAML config + 28-step CLI.
 
-자세한 사용법은 [`higan_dev/README.md`](higan_dev/README.md) 참조. 30초 요약:
+자세한 사용법과 모든 스크립트 인덱스는 [`higan_dev/README.md`](higan_dev/README.md). 30초 요약:
 
 ```bash
 cd higan_dev
 pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
-pip install --no-deps lpips==0.1.4
-pip install pyyaml "numpy<2" pillow opencv-python tqdm matplotlib scipy
+pip install --no-deps lpips==0.1.4 open_clip_torch
+pip install pyyaml "numpy<2" pillow opencv-python tqdm matplotlib scipy \
+            scikit-learn datasets ftfy regex wcwidth huggingface_hub safetensors timm
 
-python scripts/01_download_assets.py            # HiGAN 자산 다운로드
+python scripts/01_download_assets.py            # HiGAN 자산
 PYTHONPATH=. python scripts/02_invert_optim.py --self-test --steps 1000 --lr 0.1 --out out/inv_selftest
-PYTHONPATH=. python scripts/03_train_encoder.py # 20k iter ≈ 1h 47m on RTX 3070
-PYTHONPATH=. python scripts/06_cam_analysis.py --num-samples 64 --out out/cam
-PYTHONPATH=. python scripts/09_edit_real.py --ckpt out/encoder_train/ckpt/enc_020000.pt --out out/edit_real
+PYTHONPATH=. python scripts/03_train_encoder.py                  # 40k iter ≈ 1h 50m
+PYTHONPATH=. python scripts/11_grad_saliency.py --num-samples 64 # JVP saliency (헤드라인)
+PYTHONPATH=. python scripts/22_taxonomy.py                       # unsupervised attribute discovery
+PYTHONPATH=. python scripts/24_clip_label_clusters.py            # CLIP zero-shot 라벨
 ```
 
 ## 결과 하이라이트
 
-- **인버전**: optim 1000-step Adam이 self-test에서 loss 5.6 → 0.027 (99.5% ↓). v1이 풀지 못했던 정확 재구성 달성.
-- **Saliency**: 8개 boundary 모두 의미상 정확한 위치에서 활성. forward perturbation 버전은 평균 패턴, JVP 기반 gradient 버전은 *각 침실의 실제 lamp / 창문 / 우드 프레임을 scene-specific 하게 pinpoint*. "잠재 방향이 픽셀 어디에 작용하는가"가 정량+spatial로 드러남.
-- **인코더**: 1-pass inversion이 LPIPS 0.40 (under-fit 상태이나 편집 방향성은 보존됨). 추가 학습 시 0.20대 도달 예상.
+- **인버전**: optim 1000-step Adam이 self-test에서 loss 5.6 → 0.027 (99.5% ↓).
+- **Saliency**: JVP 기반 gradient 버전이 각 침실의 실제 lamp / 창문 / 우드 프레임을 scene-specific 하게 pinpoint.
+- **Disentanglement**: HiGAN의 8 boundary가 사실상 view + 표면 텍스처 두 클러스터로 갈림 (view만 직교 0.32, 나머지 7개 mutually 0.6–0.83 entangled).
+- **Compositional**: 같은 layer cluster는 선형 합성 (carpet+wood corr 0.97), 교차는 비선형 간섭 (view+wood 0.55) — view의 곡률이 다른 attribute의 40배라는 ∂²I/∂α² 분석으로 직접 설명.
+- **CLIP rediscovery**: 256개 random direction → K-means → CLIP zero-shot으로 cluster 2가 "a view through a window" 자동 식별. 라벨/분류기 0개로 HiGAN의 view boundary 재발견.
+- **학습 동역학**: encoder의 saliency-vs-GT 상관이 1k → 40k에서 45배 향상 (recon MSE는 18%만), saliency가 reconstruction보다 학습에 민감.
 
 ## 라이선스
 

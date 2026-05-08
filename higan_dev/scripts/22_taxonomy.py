@@ -17,20 +17,10 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
 from higan_dev.config import Config, resolve
+from higan_dev.utils import label_bar as _label
 from higan_dev.generator import HiGANGenerator
 from higan_dev.cam.diff_map import colorize_heat
 
-
-def _label(text: str, w: int, h: int = 22, fs: int = 13) -> np.ndarray:
-    img = Image.new("RGB", (w, h), (245, 245, 244))
-    draw = ImageDraw.Draw(img)
-    try:
-        font = ImageFont.truetype(
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", fs)
-    except OSError:
-        font = ImageFont.load_default()
-    draw.text((6, 3), text, fill=(40, 40, 40), font=font)
-    return np.asarray(img)
 
 
 def main() -> None:
