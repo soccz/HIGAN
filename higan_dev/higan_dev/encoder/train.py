@@ -36,14 +36,17 @@ def _sample_targets(G: HiGANGenerator, batch: int) -> tuple[torch.Tensor, torch.
     return wp_gt, image
 
 
-def train(cfg: Config) -> None:
+def train(cfg: Config, *, resume_from: str | None = None,
+          extra_iters: int | None = None,
+          out_subdir: str = "encoder_train") -> None:
     set_seed(cfg.train.seed)
     device = torch.device(cfg.train.device)
-    out_dir = ensure_dir(Path(cfg.paths.out_dir) / "encoder_train")
+    out_dir = ensure_dir(Path(cfg.paths.out_dir) / out_subdir)
     ckpt_dir = ensure_dir(out_dir / "ckpt")
     vis_dir = ensure_dir(out_dir / "vis")
     log_path = out_dir / "log.jsonl"
-    log_path.unlink(missing_ok=True)
+    if not resume_from:
+        log_path.unlink(missing_ok=True)
 
     # ----- generator (frozen) -----
     G = HiGANGenerator(higan_repo=cfg.paths.higan_repo,
@@ -58,6 +61,13 @@ def train(cfg: Config) -> None:
         latent_dim=cfg.encoder.latent_dim,
         pretrained=True,
     )).to(device)
+
+    start_iter = 0
+    if resume_from:
+        state = torch.load(resume_from, map_location=device, weights_only=False)
+        enc.load_state_dict(state["model"])
+        start_iter = int(state.get("iter", 0))
+        print(f"[resume] loaded {resume_from}  start_iter={start_iter}")
     enc.train()
 
     # ----- losses -----
@@ -78,7 +88,8 @@ def train(cfg: Config) -> None:
 
     avg = {k: AverageMeter() for k in ("total", "w_mse", "pixel_l2", "lpips", "perceptual", "tv")}
     t0 = time.time()
-    pbar = tqdm(range(1, cfg.train.num_iters + 1), ncols=100, dynamic_ncols=True)
+    end_iter = start_iter + (extra_iters if extra_iters is not None else cfg.train.num_iters)
+    pbar = tqdm(range(start_iter + 1, end_iter + 1), ncols=100, dynamic_ncols=True)
 
     for it in pbar:
         # warmup lr
@@ -132,7 +143,7 @@ def train(cfg: Config) -> None:
             save_image(G.to_uint8(grid)[0], vis_dir / f"it{it:06d}.png")
 
         # ----- checkpoint -----
-        if it % cfg.train.ckpt_every == 0 or it == cfg.train.num_iters:
+        if it % cfg.train.ckpt_every == 0 or it == end_iter:
             torch.save(
                 {
                     "iter": it,

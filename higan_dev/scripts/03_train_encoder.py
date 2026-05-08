@@ -34,6 +34,12 @@ def main() -> None:
     ap.add_argument("--config", default="configs/default.yaml")
     ap.add_argument("--override", nargs="*", default=[],
                     help="dotted overrides like train.batch_size=4")
+    ap.add_argument("--resume", default=None,
+                    help="path to a checkpoint to resume from")
+    ap.add_argument("--extra-iters", type=int, default=None,
+                    help="when resuming, number of additional iters to run")
+    ap.add_argument("--out-subdir", default="encoder_train",
+                    help="output subdirectory under out/")
     args = ap.parse_args()
 
     cfg = Config.load(resolve(args.config))
@@ -44,8 +50,11 @@ def main() -> None:
     print(f"backbone={cfg.encoder.backbone}  batch={cfg.train.batch_size}  "
           f"iters={cfg.train.num_iters}  lr={cfg.train.lr}  amp={cfg.train.amp}")
     print(f"loss_weights={cfg.train.loss_weights}")
+    if args.resume:
+        print(f"resume from: {args.resume}  extra_iters={args.extra_iters}")
     print()
-    train(cfg)
+    train(cfg, resume_from=args.resume, extra_iters=args.extra_iters,
+          out_subdir=args.out_subdir)
 
 
 if __name__ == "__main__":
