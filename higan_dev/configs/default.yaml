@@ -1,0 +1,51 @@
+paths:
+  higan_repo: data/higan_repo            # cloned genforce/higan
+  generator_ckpt: data/higan_repo/models/pretrain/pytorch/stylegan_bedroom256_generator.pth
+  w1k_npy: data/higan_repo/order_w_1k.npy
+  boundaries_dir: data/higan_repo/boundaries/stylegan_bedroom
+  out_dir: out
+
+generator:
+  model_name: stylegan_bedroom
+  resolution: 256
+  num_layers: 14
+  latent_dim: 512
+
+encoder:
+  backbone: resnet50          # resnet18 / resnet34 / resnet50
+  input_size: 256
+  num_layers: 14
+  latent_dim: 512
+
+train:
+  batch_size: 8
+  num_iters: 20000
+  lr: 1.0e-4
+  warmup_iters: 500
+  log_every: 50
+  ckpt_every: 1000
+  vis_every: 500
+  seed: 0
+  device: cuda
+  loss_weights:
+    w_mse: 1.0
+    pixel_l2: 1.0
+    lpips: 0.8
+    perceptual: 0.05
+    tv: 1.0e-4
+  amp: false                  # StyleGAN bedroom synthesis NaNs under fp16 autocast; keep fp32
+
+inversion_optim:
+  num_steps: 1500
+  lr: 0.01
+  num_inits: 10
+  loss_weights:
+    mse: 100.0
+    tv: 0.005
+    perceptual: 40.0
+    lpips: 30.0
+
+cam:
+  delta: 1.5                  # boundary perturbation magnitude for diff-map
+  num_samples: 32             # number of latent codes to average over
+  steps: 5                    # ± steps within delta range

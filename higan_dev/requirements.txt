@@ -1,0 +1,13 @@
+# Install torch + torchvision FIRST to pin CUDA version, e.g.
+#   pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
+# Then install the rest with --no-deps for lpips so it doesn't drag in a newer torch.
+torch==2.2.2
+torchvision==0.17.2
+numpy<2
+pillow
+opencv-python
+tqdm
+lpips==0.1.4    # install with --no-deps
+pyyaml
+matplotlib
+scipy
