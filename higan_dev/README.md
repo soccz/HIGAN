@@ -15,11 +15,16 @@ class of GPUs. Three things are different from the notebooks:
    itself flagged. We replace it with a small ResNet-backbone encoder
    trained by synthetic supervision (sample `wp ~ p(w)` from the generator,
    render the image, regress back to `wp`). No real bedroom dataset needed.
-3. **CAM-style attribute saliency.** The next step the notebook hinted at
-   ("install `ttach`, but never use it") is implemented here as a
-   classifier-free perturbation analysis: shift `wp` along each HiGAN
-   boundary by ±δ, render, and accumulate pixel-space differences and
-   variance to produce per-attribute heatmaps.
+3. **Two flavours of attribute saliency.**
+   - `cam/diff_map.py`: classifier-free *forward* perturbation. Shift `wp`
+     along each HiGAN boundary by ±δ, render, accumulate pixel diff. Cheap
+     and simple but mechanically just a finite-difference probe.
+   - `cam/grad_saliency.py`: classifier-free *backward-gradient* saliency
+     via forward-mode JVP through the differentiable generator
+     (`torch.func.jvp`). Returns the exact first-order pixel sensitivity
+     `∂I[c,h,w]/∂α` for `α` = scalar movement along the boundary. Per-sample
+     saliency picks out the actual lamp / window / wood frame in each
+     scene, where the perturbation map only shows averaged spatial bias.
 
 
 ## Quick start
@@ -51,9 +56,14 @@ PYTHONPATH=. python scripts/05_manipulate.py \
     --attrs indoor_lighting wood view --num-samples 4 --steps 5 --delta 3 \
     --out out/manipulate
 
-# 7. CAM / spatial saliency for every attribute
+# 7. Spatial saliency for every attribute (forward perturbation)
 PYTHONPATH=. python scripts/06_cam_analysis.py \
     --num-samples 64 --delta 1.5 --out out/cam
+
+# 8. Backward-gradient saliency (JVP through generator) — pinpoints
+#    scene-specific lamps / windows / wood frames per sample.
+PYTHONPATH=. python scripts/11_grad_saliency.py --num-samples 64 \
+    --out out/grad_saliency
 ```
 
 ## Layout
@@ -72,7 +82,8 @@ higan_dev/
 │   │   ├── optim.py           Adam-on-W+ inversion w/ proper lr ramp
 │   │   └── encode.py          one-shot inversion via encoder
 │   └── cam/
-│       └── diff_map.py        boundary-perturbation pixel attribution
+│       ├── diff_map.py        boundary-perturbation pixel attribution
+│       └── grad_saliency.py   forward-mode JVP per-pixel ∂I/∂α
 ├── scripts/                   CLI entrypoints (numbered by pipeline order)
 ├── configs/default.yaml
 └── data/, out/                downloaded assets / generated outputs (gitignored)
@@ -122,9 +133,12 @@ The accumulators are saved as raw `.npz` plus colorised PNGs and a final
 
 - The generator weights are the same `stylegan_bedroom256` checkpoint from
   `genforce/higan`; we did not retrain it.
-- The CAM is **classifier-free**. It tells you *where pixels move* under a
-  semantic perturbation, not "where a classifier decided the attribute is".
-  If a Grad-CAM-style classifier signal is needed later, a small
-  bedroom-attribute classifier can be added under `higan_dev/cam/grad_cam.py`.
+- Both saliency methods are **classifier-free**: they tell you *where pixels
+  move* under a semantic perturbation, not "where a classifier decided the
+  attribute is". The grad-saliency variant tracks *exact* per-pixel
+  sensitivity (forward-mode JVP through the generator's full backward graph),
+  but still does not compute a per-class decision map. If a Grad-CAM-style
+  classifier signal is wanted, a small bedroom-attribute classifier can be
+  dropped in (slot reserved at `higan_dev/cam/grad_cam.py`).
 - The pSp / FFHQ-encoder code path from the notebook is intentionally
   removed — domain mismatch made it worse than starting from `w_avg`.

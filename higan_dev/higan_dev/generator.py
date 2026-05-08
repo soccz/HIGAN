@@ -39,6 +39,12 @@ class HiGANGenerator(nn.Module):
         self._net.eval()
         for p in self._net.parameters():
             p.requires_grad_(False)
+        # Monkey-patch synthesis.forward to avoid `self.lod.cpu().tolist()`,
+        # which breaks torch.func.jvp (can't dereference dual tensors via
+        # .cpu()). For a frozen, fixed-resolution model, `lod` is constant
+        # (0.0 for stylegan_bedroom256), so we read it once and substitute
+        # a python float into the closure.
+        self._patch_synthesis_for_jvp()
 
         self.num_layers: int = G.num_layers
         self.w_dim: int = G.w_space_dim
@@ -48,6 +54,36 @@ class HiGANGenerator(nn.Module):
         self.truncation_layers: int = G.truncation_layers
         self.device = torch.device(device)
         self.to(self.device)
+
+    # ----- monkey-patch -----
+    def _patch_synthesis_for_jvp(self) -> None:
+        synth = self._net.synthesis
+        cached_lod = float(synth.lod.detach().cpu().item())
+        init_log2 = synth.init_res_log2
+        final_log2 = synth.final_res_log2
+
+        def jvp_safe_forward(self_synth, w):
+            # Replace `lod = self.lod.cpu().tolist()` with cached float so the
+            # forward-mode autodiff doesn't try to dereference a dual tensor.
+            lod = cached_lod
+            for res_log2 in range(init_log2, final_log2 + 1):
+                if res_log2 + lod <= final_log2:
+                    block_idx = res_log2 - init_log2
+                    if block_idx == 0:
+                        x = self_synth.__getattr__(f"layer{2 * block_idx}")(w[:, 2 * block_idx])
+                    else:
+                        x = self_synth.__getattr__(f"layer{2 * block_idx}")(x, w[:, 2 * block_idx])
+                    x = self_synth.__getattr__(f"layer{2 * block_idx + 1}")(
+                        x, w[:, 2 * block_idx + 1]
+                    )
+                    image = self_synth.__getattr__(f"output{block_idx}")(x)
+                else:
+                    image = self_synth.upsample(image)
+            return image
+
+        # bind the patched method to this specific synth instance
+        import types
+        synth.forward = types.MethodType(jvp_safe_forward, synth)
 
     # ----- latent space conversions -----
     def z_to_w(self, z: torch.Tensor) -> torch.Tensor:
