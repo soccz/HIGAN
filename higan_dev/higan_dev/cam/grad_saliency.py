@@ -45,13 +45,73 @@ class GradSaliencyResult:
 
 
 def _layered_direction(boundary: Boundary, num_layers: int, latent_dim: int,
-                       device: torch.device) -> torch.Tensor:
-    """Return (L, D) tensor with boundary direction on manipulate_layers, zero elsewhere."""
+                       device: torch.device,
+                       only_layer: Optional[int] = None) -> torch.Tensor:
+    """Return (L, D) tensor with boundary direction on manipulate_layers, zero elsewhere.
+
+    If `only_layer` is given, place the direction *only* on that single layer
+    (useful for per-layer decomposition).
+    """
     b = torch.zeros(num_layers, latent_dim, device=device)
+    if only_layer is not None:
+        if 0 <= only_layer < num_layers:
+            b[only_layer] = boundary.direction.to(device)
+        return b
     for li in boundary.manipulate_layers:
         if 0 <= li < num_layers:
             b[li] = boundary.direction.to(device)
     return b
+
+
+def compute_per_layer_saliency(
+    generator: HiGANGenerator,
+    boundary: Boundary,
+    *,
+    num_samples: int = 32,
+    micro_batch: int = 4,
+    base_wp: Optional[torch.Tensor] = None,
+) -> dict[int, np.ndarray]:
+    """Decompose the saliency by manipulate-layer.
+
+    For each layer in `boundary.manipulate_layers`, compute the JVP-based
+    saliency that would result from perturbing *only that layer* of wp along
+    the boundary direction. Returns {layer_idx: (H, W) abs-saliency in [0, 1]}.
+    """
+    device = generator.device
+    boundary = boundary.to(device)
+    if base_wp is None:
+        gen = torch.Generator(device=device).manual_seed(0)
+        base_wp = generator.sample_wp(num_samples, generator=gen)
+    else:
+        base_wp = base_wp.to(device)
+        num_samples = base_wp.shape[0]
+
+    H = W = generator.resolution
+    out: dict[int, np.ndarray] = {}
+
+    for li in boundary.manipulate_layers:
+        b_layered = _layered_direction(boundary, generator.num_layers,
+                                       generator.w_dim, device, only_layer=li)
+        acc = torch.zeros(H, W, device=device)
+        n_done = 0
+        for start in range(0, num_samples, micro_batch):
+            wp_chunk = base_wp[start:start + micro_batch].detach()
+            B = wp_chunk.shape[0]
+
+            def f(alpha: torch.Tensor) -> torch.Tensor:
+                wp_p = wp_chunk + alpha.view(B, 1, 1) * b_layered.unsqueeze(0)
+                return generator.synthesize(wp_p)
+
+            alpha0 = torch.zeros(B, device=device)
+            tangent = torch.ones(B, device=device)
+            _, dimg = jvp(f, (alpha0,), (tangent,))
+            acc += dimg.abs().mean(dim=1).sum(dim=0)
+            n_done += B
+        sal = (acc / n_done).cpu().numpy()
+        if sal.max() > 1e-8:
+            sal = sal / sal.max()
+        out[li] = sal.astype(np.float32)
+    return out
 
 
 def compute_grad_saliency(
