@@ -116,4 +116,22 @@ python3 -u experiments/domains/ffhq/run_resolution_invariance.py \
     --num-samples 16 \
     > "$LOGDIR/track13_resolution.log" 2>&1
 
-echo "[$(date +%T)] === ALL TRACKS COMPLETE (Wave 1 + Wave 2) ==="
+# ---- Wave 3 ----
+
+echo "[$(date +%T)] === Track 14: noise robustness (bedroom + ffhq) ==="
+python3 -u experiments/metrics/run_noise_robustness.py --domain bedroom \
+    > "$LOGDIR/track14_noise_bedroom.log" 2>&1
+python3 -u experiments/metrics/run_noise_robustness.py --domain ffhq \
+    > "$LOGDIR/track14_noise_ffhq.log" 2>&1
+
+echo "[$(date +%T)] === Track 17: intrinsic dim (bedroom + ffhq) ==="
+python3 -u experiments/method/run_intrinsic_dim.py --domain bedroom \
+    > "$LOGDIR/track17_intrinsic_bedroom.log" 2>&1
+python3 -u experiments/method/run_intrinsic_dim.py --domain ffhq \
+    > "$LOGDIR/track17_intrinsic_ffhq.log" 2>&1
+
+echo "[$(date +%T)] === Track 18: FD validation ==="
+python3 -u experiments/method/run_fd_validation.py --domain bedroom \
+    > "$LOGDIR/track18_fd_validation.log" 2>&1
+
+echo "[$(date +%T)] === ALL TRACKS COMPLETE (Waves 1 + 2 + 3) ==="
