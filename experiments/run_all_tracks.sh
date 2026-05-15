@@ -134,4 +134,14 @@ echo "[$(date +%T)] === Track 18: FD validation ==="
 python3 -u experiments/method/run_fd_validation.py --domain bedroom \
     > "$LOGDIR/track18_fd_validation.log" 2>&1
 
-echo "[$(date +%T)] === ALL TRACKS COMPLETE (Waves 1 + 2 + 3) ==="
+# ---- Wave 4 ----
+
+echo "[$(date +%T)] === Track 19: DINOv2 path curvature ==="
+python3 -u experiments/metrics/run_dino_path_curvature.py \
+    > "$LOGDIR/track19_dino.log" 2>&1
+
+echo "[$(date +%T)] === Track 20: FFHQ alpha magnitude scan ==="
+python3 -u experiments/domains/ffhq/run_alpha_magnitude_scan.py \
+    > "$LOGDIR/track20_alpha_scan.log" 2>&1
+
+echo "[$(date +%T)] === ALL TRACKS COMPLETE (Waves 1 + 2 + 3 + 4) ==="
