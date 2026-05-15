@@ -72,4 +72,48 @@ echo "[$(date +%T)] === Track 2: Editing head-to-head N=1000 ==="
 python3 -u experiments/baselines/run_editing_head_to_head.py \
     --n-test 1000 \
     > "$LOGDIR/track2_editing.log" 2>&1
-echo "[$(date +%T)] === ALL TRACKS COMPLETE ==="
+echo "[$(date +%T)] === Wave 1 complete; starting Wave 2 ==="
+
+# ---- Wave 2 ----
+
+echo "[$(date +%T)] === Track 6: DAAM SD baseline ==="
+python3 -u experiments/diffusion/run_daam_comparison.py \
+    --n-seeds 16 \
+    > "$LOGDIR/track6_daam.log" 2>&1
+
+echo "[$(date +%T)] === Track 7: Park-NeurIPS23 Riemannian repro ==="
+python3 -u experiments/diffusion/run_park_repro.py \
+    --n-seeds 8 --K-probes 32 --top-k 4 \
+    > "$LOGDIR/track7_park_repro.log" 2>&1
+
+echo "[$(date +%T)] === Track 8: FFHQ truncation-ψ ablation ==="
+python3 -u experiments/domains/ffhq/run_truncation_ablation.py \
+    --num-samples 16 \
+    > "$LOGDIR/track8_truncation.log" 2>&1
+
+echo "[$(date +%T)] === Track 9: Multi-CLIP-encoder C2 robustness ==="
+python3 -u experiments/metrics/run_multi_clip_c2.py \
+    --num-samples 8 \
+    > "$LOGDIR/track9_multi_clip.log" 2>&1
+
+echo "[$(date +%T)] === Track 10: Per-layer C1 (bedroom + ffhq) ==="
+python3 -u experiments/metrics/run_per_layer_c1.py --domain bedroom \
+    > "$LOGDIR/track10_per_layer_bedroom.log" 2>&1
+python3 -u experiments/metrics/run_per_layer_c1.py --domain ffhq \
+    > "$LOGDIR/track10_per_layer_ffhq.log" 2>&1
+
+echo "[$(date +%T)] === Track 11: Wall-clock benchmark ==="
+python3 -u experiments/method/run_walltime_benchmark.py --domain bedroom \
+    > "$LOGDIR/track11_walltime.log" 2>&1
+
+echo "[$(date +%T)] === Track 12: C6 N-scaling (bedroom) ==="
+python3 -u experiments/metrics/run_c6_scaling.py \
+    --Ns 128 192 256 384 512 \
+    > "$LOGDIR/track12_c6_scaling.log" 2>&1
+
+echo "[$(date +%T)] === Track 13: FFHQ resolution invariance ==="
+python3 -u experiments/domains/ffhq/run_resolution_invariance.py \
+    --num-samples 16 \
+    > "$LOGDIR/track13_resolution.log" 2>&1
+
+echo "[$(date +%T)] === ALL TRACKS COMPLETE (Wave 1 + Wave 2) ==="
