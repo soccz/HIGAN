@@ -1,0 +1,391 @@
+{
+  "bedroom": [
+    {
+      "top_k": 1,
+      "n_clusters": 8,
+      "matched_clusters": 6,
+      "matched_attrs": [
+        "carpet",
+        "glossy",
+        "view"
+      ],
+      "n_matched_attrs": 3,
+      "n_gt_attrs": 8,
+      "precision": 0.75,
+      "recall": 0.375,
+      "f1": 0.5,
+      "cluster_to_attrs": {
+        "0": [
+          "carpet"
+        ],
+        "1": [],
+        "2": [
+          "view"
+        ],
+        "3": [
+          "carpet"
+        ],
+        "4": [
+          "carpet"
+        ],
+        "5": [],
+        "6": [
+          "glossy"
+        ],
+        "7": [
+          "carpet"
+        ]
+      },
+      "null_recall": 0.40869687452408165,
+      "null_precision": 0.06666666666666665,
+      "recall_lift": -0.033696874524081655,
+      "precision_lift": 0.6833333333333333
+    },
+    {
+      "top_k": 2,
+      "n_clusters": 8,
+      "matched_clusters": 7,
+      "matched_attrs": [
+        "carpet",
+        "dirt",
+        "glossy",
+        "view"
+      ],
+      "n_matched_attrs": 4,
+      "n_gt_attrs": 8,
+      "precision": 0.875,
+      "recall": 0.5,
+      "f1": 0.6363636363636364,
+      "cluster_to_attrs": {
+        "0": [
+          "carpet",
+          "view"
+        ],
+        "1": [],
+        "2": [
+          "dirt",
+          "view"
+        ],
+        "3": [
+          "carpet"
+        ],
+        "4": [
+          "carpet",
+          "dirt"
+        ],
+        "5": [
+          "carpet"
+        ],
+        "6": [
+          "glossy"
+        ],
+        "7": [
+          "carpet"
+        ]
+      },
+      "null_recall": 0.6354014626329061,
+      "null_precision": 0.13017241379310346,
+      "recall_lift": -0.1354014626329061,
+      "precision_lift": 0.7448275862068965
+    },
+    {
+      "top_k": 3,
+      "n_clusters": 8,
+      "matched_clusters": 8,
+      "matched_attrs": [
+        "carpet",
+        "dirt",
+        "glossy",
+        "scary",
+        "view"
+      ],
+      "n_matched_attrs": 5,
+      "n_gt_attrs": 8,
+      "precision": 1.0,
+      "recall": 0.625,
+      "f1": 0.7692307692307693,
+      "cluster_to_attrs": {
+        "0": [
+          "carpet",
+          "scary",
+          "view"
+        ],
+        "1": [
+          "scary"
+        ],
+        "2": [
+          "dirt",
+          "scary",
+          "view"
+        ],
+        "3": [
+          "carpet"
+        ],
+        "4": [
+          "carpet",
+          "dirt",
+          "scary"
+        ],
+        "5": [
+          "carpet"
+        ],
+        "6": [
+          "dirt",
+          "glossy"
+        ],
+        "7": [
+          "carpet",
+          "glossy"
+        ]
+      },
+      "null_recall": 0.7664339791729836,
+      "null_precision": 0.19060960591133003,
+      "recall_lift": -0.14143397917298361,
+      "precision_lift": 0.80939039408867
+    },
+    {
+      "top_k": 4,
+      "n_clusters": 8,
+      "matched_clusters": 8,
+      "matched_attrs": [
+        "carpet",
+        "dirt",
+        "glossy",
+        "indoor_lighting",
+        "scary",
+        "view"
+      ],
+      "n_matched_attrs": 6,
+      "n_gt_attrs": 8,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "cluster_to_attrs": {
+        "0": [
+          "carpet",
+          "indoor_lighting",
+          "scary",
+          "view"
+        ],
+        "1": [
+          "scary"
+        ],
+        "2": [
+          "carpet",
+          "dirt",
+          "scary",
+          "view"
+        ],
+        "3": [
+          "carpet"
+        ],
+        "4": [
+          "carpet",
+          "dirt",
+          "scary",
+          "view"
+        ],
+        "5": [
+          "carpet",
+          "glossy"
+        ],
+        "6": [
+          "dirt",
+          "glossy"
+        ],
+        "7": [
+          "carpet",
+          "glossy"
+        ]
+      },
+      "null_recall": 0.8457642578041471,
+      "null_precision": 0.24807060755336616,
+      "recall_lift": -0.0957642578041471,
+      "precision_lift": 0.7519293924466338
+    }
+  ],
+  "ffhq": [
+    {
+      "top_k": 1,
+      "n_clusters": 8,
+      "matched_clusters": 3,
+      "matched_attrs": [
+        "age",
+        "pose",
+        "smile"
+      ],
+      "n_matched_attrs": 3,
+      "n_gt_attrs": 5,
+      "precision": 0.375,
+      "recall": 0.6,
+      "f1": 0.4615384615384615,
+      "cluster_to_attrs": {
+        "4": [
+          "age"
+        ],
+        "0": [
+          "smile"
+        ],
+        "1": [],
+        "2": [],
+        "3": [],
+        "5": [],
+        "6": [
+          "pose"
+        ],
+        "7": []
+      },
+      "null_recall": 0.6476149932964967,
+      "null_precision": 0.125,
+      "recall_lift": -0.047614993296496766,
+      "precision_lift": 0.25
+    },
+    {
+      "top_k": 2,
+      "n_clusters": 8,
+      "matched_clusters": 6,
+      "matched_attrs": [
+        "age",
+        "gender",
+        "pose",
+        "smile"
+      ],
+      "n_matched_attrs": 4,
+      "n_gt_attrs": 5,
+      "precision": 0.75,
+      "recall": 0.8,
+      "f1": 0.7741935483870969,
+      "cluster_to_attrs": {
+        "4": [
+          "age"
+        ],
+        "0": [
+          "smile"
+        ],
+        "1": [
+          "age"
+        ],
+        "2": [
+          "age"
+        ],
+        "3": [
+          "gender"
+        ],
+        "5": [],
+        "6": [
+          "pose"
+        ],
+        "7": []
+      },
+      "null_recall": 0.8743603137547542,
+      "null_precision": 0.2384057971014492,
+      "recall_lift": -0.07436031375475416,
+      "precision_lift": 0.5115942028985507
+    },
+    {
+      "top_k": 3,
+      "n_clusters": 8,
+      "matched_clusters": 8,
+      "matched_attrs": [
+        "age",
+        "eyeglasses",
+        "gender",
+        "pose",
+        "smile"
+      ],
+      "n_matched_attrs": 5,
+      "n_gt_attrs": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "cluster_to_attrs": {
+        "4": [
+          "age"
+        ],
+        "0": [
+          "gender",
+          "smile"
+        ],
+        "1": [
+          "age"
+        ],
+        "2": [
+          "age"
+        ],
+        "3": [
+          "age",
+          "gender"
+        ],
+        "5": [
+          "eyeglasses"
+        ],
+        "6": [
+          "gender",
+          "pose"
+        ],
+        "7": [
+          "pose"
+        ]
+      },
+      "null_recall": 0.9546506149485419,
+      "null_precision": 0.34090909090909094,
+      "recall_lift": 0.045349385051458135,
+      "precision_lift": 0.6590909090909091
+    },
+    {
+      "top_k": 4,
+      "n_clusters": 8,
+      "matched_clusters": 8,
+      "matched_attrs": [
+        "age",
+        "eyeglasses",
+        "gender",
+        "pose",
+        "smile"
+      ],
+      "n_matched_attrs": 5,
+      "n_gt_attrs": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "cluster_to_attrs": {
+        "4": [
+          "age",
+          "eyeglasses"
+        ],
+        "0": [
+          "gender",
+          "smile"
+        ],
+        "1": [
+          "age",
+          "pose"
+        ],
+        "2": [
+          "age",
+          "gender"
+        ],
+        "3": [
+          "age",
+          "gender"
+        ],
+        "5": [
+          "age",
+          "eyeglasses"
+        ],
+        "6": [
+          "age",
+          "gender",
+          "pose"
+        ],
+        "7": [
+          "pose"
+        ]
+      },
+      "null_recall": 0.9834615923094031,
+      "null_precision": 0.43318275926971583,
+      "recall_lift": 0.01653840769059689,
+      "precision_lift": 0.5668172407302842
+    }
+  ]
+}

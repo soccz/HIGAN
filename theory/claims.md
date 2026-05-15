@@ -166,7 +166,7 @@ HiGAN's view boundary.
 | C3   | ✓         | **✓ (8/8 positive at top-10/20/30/50%)** | **✓ (5/5 positive at top-10/20/30/50%, mean +0.16)** | ⬜             | layer-pair IoU difference, threshold-robust |
 | C4   | ✓         | ✓ (Spearman 0.48, p=0.01, n=28; no-view -0.17 n=21 — regime, not within) | ✓ (Spearman 0.81, p=0.005, n=10; no-pose +0.60 n=6) | ⬜ (3 pairs only) | Spearman + scatter plot |
 | C5   | ✓         | ✓             | ⬜            | n/a           | recon vs saliency-vs-GT |
-| C6   | ✓         | ✓ (view auto-labelled) | ✓ (smile auto-labelled) | ⬜ | precision via K-sweep |
+| C6   | ✓         | ✓ (P=1.00 R=0.62 @ K=3, P-lift +0.81 vs null) | ✓ (P=1.00 R=1.00 @ K=3, P-lift +0.66 vs null) | ⬜ | precision/recall vs CLIP-vocab-permutation null |
 
 **Baselines (NEW, Week 2)**:
 
