@@ -1,30 +1,73 @@
 % =====================================================
-% 06_application.tex — ~1 pg
+% 06_application.tex — applications of the framework
 % =====================================================
-\todo{compositional editing prediction + saliency-guided local edit user study}
 
-\subsection{Predicting compositional editing failure}
-Using the predictor $P(a, b)$ derived from the mixed Hessian, we ask:
-given two attribute boundaries $a, b$ in a domain we have not yet
-tested compositionally, can we predict ahead of time whether they
-will compose linearly or interfere?
+\subsection{Curvature-based pre-selection of editing directions}
+\label{sec:app-curvature-preselect}
 
-We hold out 10 of 28 bedroom pairs as a test set, compute the
-predictor on the remaining 18, fit a single threshold, and report
-test-set accuracy. \todo{numbers and table go here.}
+The C2 ratio $\bar\rho_a$ from §\ref{sec:exp-c1} ranks attributes
+\emph{by what kind of edit they perform} --- texture-only edits sit at
+$\bar\rho \approx 1$, topology-changing edits at $\bar\rho \gtrsim 20$.
+Two practical uses follow:
 
-\subsection{Saliency-guided local editing: user study}
-For 30 image-attribute pairs in each domain, we present human raters
-on Prolific with three editing outputs:
-(a) baseline image,
-(b) global edit at $\alpha = +3$,
-(c) saliency-mask-guided local edit at $\alpha = +3$.
-Each rater (n = $\geq 60$) rates "preferred edit" between (b) and (c)
-and provides a free-text rationale. \todo{report preference rates
-and significance.}
+\paragraph{(a) Curvature as an editing-quality filter.}
+Given a candidate pool of $N$ direction discoveries
+(GANSpace, SeFa, LatentCLR, DisCo, random), filter to the
+curvature-low subset $\{v : \bar\rho_v < \tau\}$ if the goal is
+clean, identity-preserving edits, or the curvature-high subset if
+the goal is intentional structural change. Track 2
+(experiments/baselines/run\_editing\_head\_to\_head.py) implements
+this on $N = 1000$ FFHQ test latents and reports paired ID-cos /
+target-Δ-attribute / LPIPS at the StyleSpace equal-strength matching
+\cite{Wu2021StyleSpace}. \todo[Result numbers fill here once Track 2
+completes (ETA after Wave 1 queue).]
+
+\paragraph{(b) Predicting compositional editing failure.}
+Using the mixed-Hessian predictor $P(a, b)$ from §\ref{sec:exp-c4},
+we ask: given two attribute boundaries $a, b$ in a domain we have
+not yet tested compositionally, can we predict ahead of time
+whether they will compose linearly or interfere? The honest answer
+from §\ref{sec:exp-c4} is "yes, *between* curvature regimes; no,
+*within*". A 28-pair bedroom train / 10-pair FFHQ test
+hold-out gives a single regime-threshold classifier that
+identifies structural-vs-textural pair behaviour at
+$\sim 80\%$ accuracy.
 
 \subsection{Unsupervised attribute discovery + CLIP labelling}
-We use the C6 pipeline to discover new attribute candidates in
-each domain, label them via CLIP zero-shot, and propose them as
-boundary directions for future labelling efforts. Examples are shown
-in the supplementary.
+\label{sec:app-c6-pipeline}
+
+The C6 pipeline (§\ref{sec:exp-c6}, code in
+\texttt{experiments/domains/ffhq/run\_discovery\_c6.py}) yields
+candidate attribute boundaries without any human-labelled training
+data: sample $N$ random unit directions on per-layer W$^+$ spheres,
+cluster, label cluster centroids with CLIP. We exploit this in two
+ways:
+
+\paragraph{Proposing unlabelled directions.}
+On bedroom, the C6 clusters at top-3 CLIP labels recovered 5/8 HiGAN
+boundaries (precision 1.00). The 3 missed attributes
+(\texttt{wood}, \texttt{indoor\_lighting}, \texttt{cluttered\_space})
+do not appear in the top-3 of any K=8 cluster, but the corresponding
+phrases are in the CLIP vocabulary — \emph{the pipeline tells us
+which attributes the generator's latent geometry doesn't natively
+stratify}. We propose this as a diagnostic for attribute-taxonomy
+adequacy.
+
+\paragraph{Recall scaling with N (Track 12).}
+Bedroom recall vs $N \in \{128, 192, 256, 384, 512\}$ tells us how
+much sampling is sufficient. \todo[fill once Track 12 completes].
+
+\subsection{The framework as a cross-method evaluator}
+\label{sec:app-as-evaluator}
+
+The C1 ratio, the C2 path-length / direct-distance metric, the
+spatial-diversity metric, and the C6 precision/recall pipeline all
+operate on any K direction vectors regardless of how they were
+discovered. We use them to evaluate GANSpace, SeFa, LatentCLR,
+DisCo, random, and the GT InterFaceGAN/HiGAN boundaries on a single
+comparable axis (§\ref{sec:exp-baselines-results}).
+\textbf{Methodologically, this re-frames our paper:} we are not a
+new direction-discovery method; we are the evaluation framework
+through which existing methods can be compared, and through which
+genuinely-novel claims about each method's geometric character
+(linear vs structural, isotropic vs PCA-like) become measurable.

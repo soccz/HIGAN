@@ -1,7 +1,6 @@
 % =====================================================
 % 04_method.tex — ~1 pg
 % =====================================================
-\todo{draft — concrete algorithms with pseudocode and complexity}
 
 \subsection{First-order pushforward saliency}
 \begin{algorithmic}
@@ -64,6 +63,29 @@ one such operation in the genforce StyleGAN bedroom synthesis
 (\texttt{self.lod.cpu().tolist()}); we replace it with a cached
 Python float at wrapper construction. We provide the patch in
 supplementary code for StyleGAN, StyleGAN2, and HiGAN variants.
+
+\subsection{\jvp through the DDIM sampling chain}
+For diffusion (\S\ref{sec:exp-c1}, \S\ref{sec:exp-c2}), we adapt the
+GENIE~\cite{Dockhorn2022GENIE} JVP-through-U-Net construction to
+sample $\partial x_0 / \partial v$ where $v$ is an h-space direction
+applied at edit timestep $t_{\text{edit}}$:
+\begin{algorithmic}
+\STATE Reach $x_{t_{\text{edit}}}$ unperturbed (no JVP).
+\STATE Define $f(\alpha) := \text{DDIM}(x_{t_{\text{edit}}}; h_t + \alpha v)$
+       running the remaining $M$ DDIM steps to $t=0$.
+\STATE $(x_0, \dot x_0) \leftarrow \texttt{jvp}(f, (0,), (1,))$
+       traces forward AD through $M$ U-Net evaluations and the VAE
+       decoder.
+\end{algorithmic}
+Two practical adjustments allow this to fit at 512$^2$ on 8 GB:
+the math \texttt{AttnProcessor} (the flash-attention kernel does not
+support forward AD as of torch 2.2), attention slicing, and
+sequential cond/uncond passes for classifier-free guidance instead
+of batched ones. We additionally replace composed-JVP for the
+second derivative by a finite difference of two first-order JVPs
+($\pm\epsilon$, $\epsilon = 0.05$), matching Park et
+al.~\cite{Park2023Riemannian}'s construction for the diffusion
+Jacobian.
 
 \subsection{Comparison to finite differences}
 A finite-difference estimator

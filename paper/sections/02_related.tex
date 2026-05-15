@@ -1,7 +1,6 @@
 % =====================================================
-% 02_related.tex — short related work, ~0.5–0.75 page
+% 02_related.tex — short related work, ~0.75 page
 % =====================================================
-\todo{trim to 0.5–0.75 pg, cite 25–30 papers, expand to full survey in supp.}
 
 \paragraph{GAN interpretation and attribute editing.}
 \textbf{Unit-level / segmentation-based dissection}
@@ -9,48 +8,82 @@
 attached segmentation classifiers. \textbf{Boundary-based editing}
 \cite{Shen2020InterFaceGAN, Yang2020HiGAN} learns linear hyperplanes
 in $W^+$ for semantic attributes; we use the resulting boundaries as
-inputs to our analysis. \textbf{Unsupervised discovery} approaches —
-PCA on activations~\cite{Harkonen2020GANSpace}, closed-form factorisation
-of the affine layer~\cite{Shen2021SeFa}, and channel-wise style
-manipulation~\cite{Wu2021StyleSpace} — find directions without
-labels; we compare against these on rediscovery of hand-curated
-boundaries.
+inputs to our analysis. \textbf{Unsupervised discovery} approaches:
+PCA on activations~\cite{Harkonen2020GANSpace}, closed-form
+factorisation of the affine layer~\cite{Shen2021SeFa}, channel-wise
+style manipulation~\cite{Wu2021StyleSpace}, contrastive direction
+learning~\cite{Yuksel2021LatentCLR, Ren2022DisCo}, and
+deformation-field editing~\cite{Pan2023DragGAN}. We compare against
+all of these on attribute rediscovery and editing-task head-to-head
+(§\ref{sec:experiments}).
 
-\paragraph{Classical saliency.}
+\paragraph{Diffusion-model interpretation.}
+The diffusion analogue of $W$-space is the U-Net bottleneck h-space
+introduced by Asyrp~\cite{Kwon2023Asyrp}, with homogeneity, linearity,
+and timestep-consistency reported by the authors. Park et
+al.~\cite{Park2023Riemannian} constructs a first-order pullback
+Riemannian metric on h-space via Jacobian SVD and uses it for
+editing; \textbf{they consider only the metric, not the curvature}.
+Prompt-side editing methods --- Prompt-to-Prompt~\cite{Hertz2023P2P},
+null-text inversion~\cite{Mokady2023NullText},
+SEGA~\cite{Brack2023SEGA} --- operate in attention space rather than
+on the generator's image manifold. DAAM~\cite{Tang2023DAAM} provides
+cross-attention saliency at the prompt level. We use h-space (Asyrp)
+as the W-analog, compute the second-fundamental form there, and
+compare our gradient saliency to DAAM directly.
+
+\paragraph{Score-network geometry of diffusion.}
+Stanczuk et al.~\cite{Stanczuk2024IntrinsicDim} measure rank
+deficiency of the score Jacobian to recover the intrinsic data
+dimension. Higher-order ODE solvers
+(GENIE~\cite{Dockhorn2022GENIE}) use JVPs through the U-Net for
+better numerical accuracy. Our use of forward-mode AD through the
+DDIM sampling chain extends the GENIE recipe to second-order
+geometric measurement of the rendered image, complementing the
+score-side analyses of~\cite{Stanczuk2024IntrinsicDim}.
+
+\paragraph{Classical saliency, image attribution, and Grad-CAM.}
 CAM~\cite{Zhou2016CAM} and Grad-CAM~\cite{Selvaraju2017GradCAM}
 attribute classifier decisions to spatial regions via either pooled
 weights or class-score gradients. Our pushforward saliency parallels
 Grad-CAM in spirit but operates on the generator alone, with no
-classifier. We discuss this distinction in \S\ref{sec:method} and
-include real Grad-CAM (through a CLIP-distilled attribute classifier)
-as a baseline in \S\ref{sec:experiments}.
+classifier --- the source of curvature is the model itself, not a
+recognition head. As §\ref{sec:experiments} shows, CLIP-Grad-CAM
+saliency and our JVP saliency are cross-domain near-orthogonal
+($|r| < 0.11$ on bedroom, $< 0.02$ on FFHQ), establishing them as
+complementary rather than competing measurements.
 
-\paragraph{Differential geometry of neural networks.}
-Natural gradient methods~\cite{Amari1998NaturalGradient} and
-geometric deep learning~\cite{Bronstein2021GeometricDL} formalise the
-ambient geometry of \emph{parameter} space and \emph{input} domains.
-Our setting is different: we study the geometry of the manifold of
-\emph{outputs} learned by a fixed generator. Closest in spirit is
-\cite{Zhu2016ManipulationOnManifold}, which introduced the "natural
-image manifold" formulation; we provide a tractable curvature
-estimator on this manifold.
+\paragraph{Differential geometry of neural-network manifolds.}
+Natural gradient~\cite{Amari1998NaturalGradient} and geometric deep
+learning~\cite{Bronstein2021GeometricDL} formalise the ambient
+geometry of \emph{parameter} space and \emph{input} domains. Our
+setting is different: we study the geometry of the manifold of
+\emph{outputs} learned by a fixed generator. Zhu et
+al.~\cite{Zhu2016ManipulationOnManifold} introduced the "natural
+image manifold" formulation; we provide a tractable second-order
+estimator on this manifold and connect curvature to disentanglement
+and compositional editing.
 
 \paragraph{Forward-mode autodifferentiation.}
 The Pearlmutter trick~\cite{Pearlmutter1994HVP} for Hessian-vector
 products underlies modern second-order optimisation
-\cite{Martens2015KFAC} and is implemented as \texttt{torch.func.jvp}
-and \texttt{jax.jvp}~\cite{PyTorch2023functorch}. To our knowledge no
-prior work applies \emph{composed} forward-mode \jvp to GAN latent
-spaces for per-pixel curvature and compositional editing
-prediction.
+\cite{Martens2015KFAC}; PyTorch \texttt{torch.func.jvp} and
+\texttt{jax.jvp} provide composable forward AD. We compose JVP twice
+to obtain the per-pixel second derivative in one pass (§4), which is
+$10^3$-$10^4 \times$ faster than per-pixel reverse mode for the
+high-dimensional-output regime studied here.
 
-\paragraph{Other related directions.}
-Compositional editing approaches such as
-GANalyze~\cite{Goetschalckx2019GANalyze} and steerable
-GANs~\cite{Jahanian2020Steerability} explicitly treat latent
-manipulations as vector fields. EditGAN~\cite{Ling2021EditGAN}
-performs non-linear edits using segmentation supervision.
-StyleCLIP~\cite{Patashnik2021StyleCLIP} uses CLIP for text-driven
-editing; we use CLIP only to label automatically discovered
-clusters. A full survey of $\sim$60 references is provided in the
-supplementary material.
+\paragraph{Encoders, inversion, and chart consistency.}
+pSp~\cite{Richardson2021pSp}, e4e~\cite{Tov2021e4e}, and the
+survey~\cite{Xia2022InversionSurvey} establish reconstruction-error
+as the de facto encoder-quality metric. We argue (§5.5) that
+\emph{first-order} chart consistency --- agreement of saliency
+derivatives at the encoded code with those at the ground-truth code
+--- is a strictly stronger signal: on bedroom, the saliency
+correlation rises 45$\times$ while recon MSE only falls 17\% across
+40k iterations of synthetic-supervision training.
+
+A full survey of $\sim$60 additional references --- spanning
+StyleGAN-NADA, EditGAN~\cite{Ling2021EditGAN}, NoiseCLR, LELSD,
+WarpedGANSpace, Concept Algebra, LEDITS, and Hessian-Penalty --- is
+in the supplementary material.
