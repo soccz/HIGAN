@@ -2,39 +2,39 @@
 % 03_theory.tex — theoretical framework
 % =====================================================
 
+\definecolor{stoneSeven}{HTML}{44403c}
+\definecolor{stoneEight}{HTML}{292524}
+\definecolor{stoneOne}{HTML}{f5f5f4}
+\definecolor{cyanSeven}{HTML}{0e7490}
+\definecolor{redSix}{HTML}{dc2626}
+\definecolor{redSeven}{HTML}{b91c1c}
+
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[scale=1.0,>=stealth]
 % manifold
-\draw[thick, color=stone-700, fill=stone-100, fill opacity=0.5]
+\draw[thick, color=stoneSeven, fill=stoneOne, fill opacity=0.5]
   (0, 0) ellipse [x radius=3.2, y radius=1.6, rotate=-10];
-\node[color=stone-800] at (2.8, 1.4) {$\Mfd \subset \R^{3HW}$};
+\node[color=stoneEight] at (2.8, 1.4) {$\Mfd \subset \R^{3HW}$};
 
 % point G(wp)
-\fill[color=stone-700] (0.4, -0.1) circle (0.08);
-\node[anchor=north west, color=stone-700] at (0.45, -0.05) {$G(wp)$};
+\fill[color=stoneSeven] (0.4, -0.1) circle (0.08);
+\node[anchor=north west, color=stoneSeven] at (0.45, -0.05) {$G(wp)$};
 
 % tangent vector dG(b)
-\draw[->, thick, color=cyan-700] (0.4, -0.1) -- (1.9, 0.3);
-\node[anchor=south, color=cyan-700] at (1.2, 0.05) {$dG\!\cdot\!b$};
+\draw[->, thick, color=cyanSeven] (0.4, -0.1) -- (1.9, 0.3);
+\node[anchor=south, color=cyanSeven] at (1.2, 0.05) {$dG\!\cdot\!b$};
 
 % second derivative H(wp,b) — projected onto normal bundle
-\draw[->, thick, color=red-600] (0.4, -0.1) -- (-0.1, 1.0);
-\node[anchor=south, color=red-600] at (0.1, 0.8) {$H(wp, b)$};
+\draw[->, thick, color=redSix] (0.4, -0.1) -- (-0.1, 1.0);
+\node[anchor=south, color=redSix] at (0.1, 0.8) {$H(wp, b)$};
 % normal-component decoration
-\draw[dashed, color=red-700] (-0.1, 1.0) -- (1.05, 0.6);
-\node[anchor=west, color=red-700] at (0.2, 1.1) {$\mathrm{II}(b, b)$};
+\draw[dashed, color=redSeven] (-0.1, 1.0) -- (1.05, 0.6);
+\node[anchor=west, color=redSeven] at (0.2, 1.1) {$\mathrm{II}(b, b)$};
 
 % legend below
-\node[color=stone-700, font=\footnotesize, anchor=center]
+\node[color=stoneSeven, font=\footnotesize, anchor=center]
    at (0, -2.4) {one composed-JVP returns $H(wp, b)$ along any direction $b$};
-
-\definecolor{stone-700}{HTML}{44403c}
-\definecolor{stone-800}{HTML}{292524}
-\definecolor{stone-100}{HTML}{f5f5f4}
-\definecolor{cyan-700}{HTML}{0e7490}
-\definecolor{red-600}{HTML}{dc2626}
-\definecolor{red-700}{HTML}{b91c1c}
 \end{tikzpicture}
 \caption{Geometric setup. The generator $G$ maps a latent $wp$ to a
 point on the image manifold $\Mfd \subset \R^{3HW}$. The first

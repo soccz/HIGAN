@@ -239,7 +239,7 @@ discrimination.}
 \label{sec:exp-c5}
 
 We train a synthetic-supervision W$^+$ encoder
-$E:\,\Img\to\W^+$ on each domain and probe its checkpoints at
+$E:\,\Img\to\W$ on each domain and probe its checkpoints at
 $\{1k, 5k, 10k, 20k, 40k\}$ iterations. Reconstruction MSE plateaus
 early; the
 \emph{saliency-vs-GT correlation}
@@ -347,7 +347,7 @@ axis.}
 
 \paragraph{Editing head-to-head (Track 2).}
 \todo[Curvature-low pre-selection vs random vs GANSpace-eigenvalue
-ranking, N=1000 FFHQ test latents, paired ID-cos / CLIP-Δattr /
+ranking, N=1000 FFHQ test latents, paired ID-cos / CLIP-$\Delta$attr /
 LPIPS at matched target strength. Code: \texttt{experiments/baselines/
 run\_editing\_head\_to\_head.py}; ETA $\sim$30 h.]
 
