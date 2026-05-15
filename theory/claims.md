@@ -182,16 +182,27 @@ PCA-based methods (GANSpace) dominate where W has clear principal axes
 latent is more isotropic (bedroom). Our JVP framework is the *evaluator*
 across all three methods.
 
-**CLIP-Grad-CAM vs JVP saliency comparison (NEW)**:
+**CLIP-Grad-CAM vs JVP saliency comparison (CROSS-DOMAIN)**:
 
-| attribute | pixel-corr(JVP, CLIP-grad) | IoU top-20% |
+Bedroom (StyleGAN1 LSUN, 256²):
+| attribute | pixel-corr | IoU top-20% |
 |---|---|---|
 | view            | -0.049 | 0.089 |
 | indoor_lighting | -0.071 | 0.101 |
 | wood            | -0.105 | 0.089 |
 | glossy          | -0.097 | 0.094 |
 
-JVP saliency and CLIP-grad-CAM are **near-orthogonal**: neither
+FFHQ (StyleGAN1 face, 1024²):
+| attribute  | pixel-corr | IoU top-20% |
+|---|---|---|
+| pose       | -0.017 | 0.200 |
+| smile      | -0.001 | 0.200 |
+| eyeglasses | -0.013 | 0.200 |
+| age        | -0.020 | 0.200 |
+| gender     | -0.013 | 0.200 |
+
+FFHQ shows even *stronger* near-orthogonality (all |corr| < 0.02).
+JVP saliency and CLIP-grad-CAM are **cross-domain near-orthogonal**: neither
 correlated nor IoU-overlapping above chance. The two answer
 *different questions*:
   - JVP = "where do pixels move when the latent moves along this direction?"
