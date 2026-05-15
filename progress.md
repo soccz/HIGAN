@@ -4,6 +4,47 @@ Weekly status updates. Most recent first.
 
 ---
 
+## Week 2 · 2026-05-15 (continued, midnight session)
+
+**Goal**: baselines (GANSpace + SeFa) on bedroom + FFHQ, C3 quantitative,
+CLIP-Grad-CAM comparison.
+
+**Done**:
+- GANSpace-W: PCA on W samples, both domains.
+- SeFa: closed-form eigendecomp of style projection matrices, both
+  domains.
+- K-sweep at K ∈ {2..16} on both:
+  - Bedroom: **random+CLIP dominates at low K** (6/8 at K=4 vs 4/8 GANSpace,
+    3/8 SeFa). All saturate at K=16 (7/8 each).
+  - FFHQ: **GANSpace dominates** — full 5/5 coverage at K=8, while SeFa
+    stuck at 4/5 and random at 3/5.
+  Discovery-method effectiveness is **domain-dependent**, tracking the
+  PC structure of the latent's W distribution.
+- C3 quantitative on bedroom: layer-pair IoU at top-20%. Mean C3
+  score +0.087, **all 8 attributes positive** (glossy +0.115 most
+  localised, wood +0.058 least). Validates C3 with one scalar per
+  attribute.
+- CLIP-Grad-CAM baseline: backprop CLIP-text-image similarity through
+  the generator into image space. Compare with JVP saliency:
+  pixel-correlation ≈ -0.05 to -0.11, IoU(top-20%) ≈ 0.09 (chance
+  level). **Two methods are near-orthogonal** — they measure different
+  things. Editing-aligned vs recognition-aligned.
+- Cross-domain composite plate (`metrics/run_cross_domain_plate.py`):
+  C2 ratios + C3 scores + C4 scatters in one figure for the paper.
+
+**Updated claims status**:
+- C3 now has quantitative number (+0.087 mean, 8/8 attrs positive).
+- Baselines comparison documented for paper §5.
+- CLIP-Grad-CAM positioned as complementary, not competitor.
+
+**Next**:
+1. Mask2Former segmentation IoU → C2 quantitative threshold.
+2. C3 on FFHQ (5 attrs × 18 layers).
+3. GAN Dissection baseline (segmentation network + units).
+4. Start paper §3 (theory) LaTeX expansion from theory/*.md.
+
+---
+
 ## Week 2 · 2026-05-15 (same session, late evening)
 
 **Late-evening addition**: C6 cross-domain via FFHQ random-direction

@@ -146,16 +146,48 @@ HiGAN's view boundary.
 
 ---
 
-## Quick status summary (updated 2026-05-15 Week 1)
+## Quick status summary (updated 2026-05-15 Week 2 mid-day)
 
 | Claim | Theory done | Bedroom evidence | FFHQ evidence | Church evidence | Quantitative metric |
 |------|-----------|---------------|--------------|---------------|--------------------|
-| C1   | ✓         | ✓             | **✓**         | **✓**          | mean/median/p95 stats |
-| C2   | ✓         | ✓ (view 23.2) | **✓** (pose 49.9, eye 22.8) | partial (no structural attr) | ratio across attributes |
-| C3   | ✓         | ✓             | partial       | ⬜             | needs canonical-layer IoU |
-| C4   | ✓         | **✓ (Spearman 0.48, p=0.01, n=28)** | **✓ (Spearman 0.81, p=0.005, n=10)** | ⬜ (3 pairs only) | Spearman + scatter plot |
-| C5   | ✓         | ✓             | ⬜            | n/a           | ✓                  |
-| C6   | ✓         | partial       | ⬜            | ⬜             | needs precision/recall vs labels |
+| C1   | ✓         | ✓             | ✓             | ✓              | mean/median/p95 stats |
+| C2   | ✓         | ✓ (view 23.2) | ✓ (pose 49.9, eye 22.8) | partial (no structural attr) | ratio across attributes |
+| C3   | ✓         | **✓ (mean +0.087, 8/8 positive)** | partial   | ⬜             | layer-pair IoU difference |
+| C4   | ✓         | ✓ (Spearman 0.48, p=0.01, n=28) | ✓ (Spearman 0.81, p=0.005, n=10) | ⬜ (3 pairs only) | Spearman + scatter plot |
+| C5   | ✓         | ✓             | ⬜            | n/a           | recon vs saliency-vs-GT |
+| C6   | ✓         | ✓ (view auto-labelled) | ✓ (smile auto-labelled) | ⬜ | precision via K-sweep |
+
+**Baselines (NEW, Week 2)**:
+
+| K | bedroom GANSpace | bedroom SeFa | bedroom random+CLIP | FFHQ GANSpace | FFHQ SeFa | FFHQ random |
+|--|---|---|---|---|---|---|
+| 4  | 4/8  | 3/8 | **6/8** | 4/5 | 3/5 | 2/5 |
+| 8  | 5/8  | 6/8 | 6/8 | **5/5** | 4/5 | 3/5 |
+| 16 | 7/8  | 7/8 | 7/8 | 5/5 | 4/5 | 4/5 |
+
+Conclusion: **discovery-method ranking is domain-dependent**.
+PCA-based methods (GANSpace) dominate where W has clear principal axes
+(FFHQ identity bundle); random+CLIP is competitive or better where the
+latent is more isotropic (bedroom). Our JVP framework is the *evaluator*
+across all three methods.
+
+**CLIP-Grad-CAM vs JVP saliency comparison (NEW)**:
+
+| attribute | pixel-corr(JVP, CLIP-grad) | IoU top-20% |
+|---|---|---|
+| view            | -0.049 | 0.089 |
+| indoor_lighting | -0.071 | 0.101 |
+| wood            | -0.105 | 0.089 |
+| glossy          | -0.097 | 0.094 |
+
+JVP saliency and CLIP-grad-CAM are **near-orthogonal**: neither
+correlated nor IoU-overlapping above chance. The two answer
+*different questions*:
+  - JVP = "where do pixels move when the latent moves along this direction?"
+  - CLIP-grad = "where in this rendered image does CLIP locate the attribute?"
+The first is editing-aligned; the second is recognition-aligned. They
+do not measure the same thing, and our framework is the editing-aligned
+analogue of Grad-CAM.
 
 **Week 1 progress** (cross-domain validation):
 - C1 replicates on FFHQ (1024^2 StyleGAN1) and church (256^2 StyleGAN2).
