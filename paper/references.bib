@@ -156,3 +156,180 @@
   booktitle = {CVPR},
   year   = {2022}
 }
+
+% -- added 2026-05-15 for design docs (SD extension, editing head-to-head, baselines) ---
+
+@inproceedings{Kwon2023Asyrp,
+  title  = {Diffusion Models Already Have a Semantic Latent Space},
+  author = {Kwon, Mingi and Jeong, Jaeseok and Uh, Youngjung},
+  booktitle = {ICLR},
+  year   = {2023},
+  note   = {arXiv:2210.10960; introduces h-space}
+}
+
+@inproceedings{Park2023Riemannian,
+  title  = {Understanding the Latent Space of Diffusion Models through the Lens of {R}iemannian Geometry},
+  author = {Park, Yong-Hyun and Kwon, Mingi and Choi, Jaewoong and Jo, Junghyo and Uh, Youngjung},
+  booktitle = {NeurIPS},
+  year   = {2023},
+  note   = {arXiv:2307.12868; pullback metric, Jacobian SVD on h-space}
+}
+
+@inproceedings{Hertz2023P2P,
+  title  = {Prompt-to-Prompt Image Editing with Cross Attention Control},
+  author = {Hertz, Amir and Mokady, Ron and Tenenbaum, Jay and Aberman, Kfir and Pritch, Yael and Cohen-Or, Daniel},
+  booktitle = {ICLR},
+  year   = {2023},
+  note   = {arXiv:2208.01626}
+}
+
+@inproceedings{Mokady2023NullText,
+  title  = {Null-text Inversion for Editing Real Images using Guided Diffusion Models},
+  author = {Mokady, Ron and Hertz, Amir and Aberman, Kfir and Pritch, Yael and Cohen-Or, Daniel},
+  booktitle = {CVPR},
+  year   = {2023},
+  note   = {arXiv:2211.09794}
+}
+
+@inproceedings{Brack2023SEGA,
+  title  = {{SEGA}: Instructing Text-to-Image Models using Semantic Guidance},
+  author = {Brack, Manuel and Friedrich, Felix and Hintersdorf, Dominik and Struppek, Lukas and Schramowski, Patrick and Kersting, Kristian},
+  booktitle = {NeurIPS},
+  year   = {2023},
+  note   = {arXiv:2301.12247}
+}
+
+@inproceedings{Tang2023DAAM,
+  title  = {What the {DAAM}: Interpreting Stable Diffusion Using Cross Attention},
+  author = {Tang, Raphael and Liu, Linqing and Pandey, Akshat and Jiang, Zhiying and Yang, Gefei and Sun, Karun and Lin, Jimmy and Ture, Ferhan},
+  booktitle = {ACL},
+  year   = {2023},
+  note   = {arXiv:2210.04885}
+}
+
+@inproceedings{Dockhorn2022GENIE,
+  title  = {{GENIE}: Higher-Order Denoising Diffusion Solvers},
+  author = {Dockhorn, Tim and Vahdat, Arash and Kreis, Karsten},
+  booktitle = {NeurIPS},
+  year   = {2022},
+  note   = {arXiv:2208.05405; JVP-through-UNet recipe}
+}
+
+@inproceedings{Stanczuk2024IntrinsicDim,
+  title  = {Your Diffusion Model Secretly Knows the Dimension of the Data Manifold},
+  author = {Sta\'{n}czuk, Jan and Batzolis, Georgios and Deveney, Teo and Sch\"onlieb, Carola-Bibiane},
+  booktitle = {ICML},
+  year   = {2024},
+  note   = {arXiv:2212.12611}
+}
+
+@inproceedings{Park2023UnsupervisedSemantic,
+  title  = {Unsupervised Discovery of Semantic Latent Directions in Diffusion Models},
+  author = {Park, Yong-Hyun and Kwon, Mingi and Jo, Junghyo and Uh, Youngjung},
+  booktitle = {arXiv preprint},
+  year   = {2023},
+  note   = {arXiv:2302.12469}
+}
+
+@inproceedings{Wu2021StyleSpace,
+  title  = {{StyleSpace} Analysis: Disentangled Controls for {StyleGAN} Image Generation},
+  author = {Wu, Zongze and Lischinski, Dani and Shechtman, Eli},
+  booktitle = {CVPR},
+  year   = {2021},
+  note   = {DCI, Attribute Dependency, equal-strength comparison protocol}
+}
+
+@inproceedings{Patashnik2021StyleCLIP,
+  title  = {{StyleCLIP}: Text-Driven Manipulation of {StyleGAN} Imagery},
+  author = {Patashnik, Or and Wu, Zongze and Shechtman, Eli and Cohen-Or, Daniel and Lischinski, Dani},
+  booktitle = {ICCV},
+  year   = {2021}
+}
+
+@inproceedings{Pan2023DragGAN,
+  title  = {Drag Your {GAN}: Interactive Point-based Manipulation on the Generative Image Manifold},
+  author = {Pan, Xingang and Tewari, Ayush and Leimk\"uhler, Thomas and Liu, Lingjie and Meka, Abhimitra and Theobalt, Christian},
+  booktitle = {SIGGRAPH},
+  year   = {2023},
+  note   = {arXiv:2305.10973; N=1000 FFHQ protocol}
+}
+
+@inproceedings{Ling2021EditGAN,
+  title  = {{EditGAN}: High-Precision Semantic Image Editing},
+  author = {Ling, Huan and Kreis, Karsten and Li, Daiqing and Kim, Seung Wook and Torralba, Antonio and Fidler, Sanja},
+  booktitle = {NeurIPS},
+  year   = {2021},
+  note   = {arXiv:2111.03186}
+}
+
+@inproceedings{Deng2019ArcFace,
+  title  = {{ArcFace}: Additive Angular Margin Loss for Deep Face Recognition},
+  author = {Deng, Jiankang and Guo, Jia and Xue, Niannan and Zafeiriou, Stefanos},
+  booktitle = {CVPR},
+  year   = {2019},
+  note   = {arXiv:1801.07698; identity-preservation metric}
+}
+
+@inproceedings{Zhang2018LPIPS,
+  title  = {The Unreasonable Effectiveness of Deep Features as a Perceptual Metric},
+  author = {Zhang, Richard and Isola, Phillip and Efros, Alexei A. and Shechtman, Eli and Wang, Oliver},
+  booktitle = {CVPR},
+  year   = {2018}
+}
+
+@inproceedings{Yuksel2021LatentCLR,
+  title  = {{LatentCLR}: A Contrastive Learning Approach for Unsupervised Discovery of Interpretable Directions},
+  author = {Y{\"u}ksel, Oguz Kaan and Simsar, Enis and Er, Ezgi Gulperi and Yanardag, Pinar},
+  booktitle = {ICCV},
+  year   = {2021}
+}
+
+@inproceedings{Ren2022DisCo,
+  title  = {Learning Disentangled Representation by Exploiting Pretrained Generative Models: A Contrastive Cue},
+  author = {Ren, Xuanchi and Yang, Tao and Wang, Yuwang and Zeng, Wenjun},
+  booktitle = {ICLR},
+  year   = {2022},
+  note   = {DisCo; OpenReview j-63FSNcO5a}
+}
+
+@inproceedings{Khodadadeh2022LELSD,
+  title  = {Latent to Latent: A Learned Mapper for Identity Preserving Editing of Multiple Face Attributes in {StyleGAN}-generated Images},
+  author = {Khodadadeh, Siavash and Ghadar, Shabab and Motiian, Saeid and Lin, Wei-An and B{\"o}l{\"o}ni, Ladislau and Kalarot, Ratheesh},
+  booktitle = {WACV},
+  year   = {2022},
+  note   = {arXiv:2111.12583}
+}
+
+@inproceedings{Richardson2021pSp,
+  title  = {Encoding in Style: a {StyleGAN} Encoder for Image-to-Image Translation},
+  author = {Richardson, Elad and Alaluf, Yuval and Patashnik, Or and Azar, Yotam and Shapiro, Shir and Cohen-Or, Daniel},
+  booktitle = {CVPR},
+  year   = {2021},
+  note   = {arXiv:2008.00951; pSp encoder}
+}
+
+@inproceedings{Tov2021e4e,
+  title  = {Designing an Encoder for {StyleGAN} Image Manipulation},
+  author = {Tov, Omer and Alaluf, Yuval and Nitzan, Yotam and Patashnik, Or and Cohen-Or, Daniel},
+  booktitle = {SIGGRAPH},
+  year   = {2021},
+  note   = {arXiv:2102.02766; e4e encoder}
+}
+
+@inproceedings{Xia2022InversionSurvey,
+  title  = {{GAN} Inversion: A Survey},
+  author = {Xia, Weihao and Zhang, Yulun and Yang, Yujiu and Xue, Jing-Hao and Zhou, Bolei and Yang, Ming-Hsuan},
+  booktitle = {IEEE T-PAMI},
+  year   = {2022},
+  note   = {arXiv:2101.05278}
+}
+
+@article{Efron1979Bootstrap,
+  title  = {Bootstrap Methods: Another Look at the Jackknife},
+  author = {Efron, Bradley},
+  journal = {Annals of Statistics},
+  volume  = {7},
+  number  = {1},
+  pages   = {1--26},
+  year    = {1979}
+}
