@@ -82,14 +82,20 @@ LatentCLR~\cite{Yuksel2021LatentCLR},
 DisCo~\cite{Ren2022DisCo}, and
 CLIP-Grad-CAM~\cite{Selvaraju2017GradCAM}.
 
-Two headline empirical findings:
+Three headline empirical findings:
 \textbf{(a)} Two independent curvature measures --- the pixel-space
 $\partial^2 I/\partial\alpha^2$ ratio and the CLIP-feature
 path-vs-direct distance ratio --- have Pearson agreement
-$r = +0.99$ (bedroom) and $r = +1.00$ Spearman (FFHQ) across
-attributes. \textbf{(b)} Across 13 attribute--domain combinations,
-the layer-localisation IoU score is positive at every top-$k$
+$r = +0.99$ (bedroom) and Spearman $r = +1.00$ (FFHQ) across
+attributes.
+\textbf{(b)} Across 13 attribute--domain combinations, the
+layer-localisation IoU score is positive at every top-$k$
 threshold from 10\% to 50\% of pixels.
+\textbf{(c)} Plotting (pixel $\bar\rho$, CLIP path) for every
+(domain, attribute) pair on a log--linear axis and clustering with
+$k=2$ k-means recovers the a-priori structural/textural split for
+13/14 attributes (92.86\%) --- a single 2D geometric signature that
+identifies topology-changing attributes \emph{across architectures}.
 
 The framework is classifier-free: every signal comes from the
 generator's own derivative structure, not from a separately trained
