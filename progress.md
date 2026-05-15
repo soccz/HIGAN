@@ -4,6 +4,43 @@ Weekly status updates. Most recent first.
 
 ---
 
+## Week 2 · 2026-05-15 (same session, evening)
+
+**Goal**: Church domain + C4 cross-domain validation.
+
+**Done** (cumulative this session)
+- LSUN church domain via genforce/higan stylegan2_church256 (14 layers, 256²).
+  No JVP monkey-patch needed for StyleGAN2 — synthesis cleaner.
+- Church battery (`run_all.py`): saliency, ∂²I/∂α², 3×3 disentanglement
+  for clouds/sunny/vegetation. All ratios cluster around 0.04
+  (architecture-dependent floor); no structural boundary in this set
+  to reach the high-curvature regime.
+- **C4 validated on FFHQ**:
+  Spearman r=+0.806, p=0.0049, n=10 pairs.
+  Mixed Hessian / Jacobian-norm ratio predicts compositional
+  non-linearity in rank.
+- **C4 validated on bedroom**:
+  Spearman r=+0.480, p=0.0097, n=28 pairs.
+  Weaker than FFHQ but still significant. view+X pairs sit at low
+  predictor + low non-linearity, anchoring the trend.
+
+**Updated claims status** (in `theory/claims.md`):
+- C1 ✓ replicates on all 3 domains.
+- C2 ✓ replicates with caveat: domain-relative ordering, not
+  absolute (StyleGAN2 ratio floor is ~10× lower than StyleGAN1).
+- **C4 ✓ headline result** — single scalar predicts compositional
+  failure in two domains, both p < 0.01.
+
+**Next**
+1. Combined 3-domain figure for paper §5 (one row per domain,
+   columns: saliency / ∂²I / disentangle / C4 scatter).
+2. Saliency-segmentation IoU (Mask2Former) for C2's "topological vs
+   textural" quantitative threshold.
+3. C6 unsupervised discovery / CLIP labelling on FFHQ.
+4. Start a baseline (GANSpace easiest — just PCA on activations).
+
+---
+
 ## Week 1 · 2026-05-15
 
 **Goal**: bootstrap FFHQ domain, run first cross-domain saliency
