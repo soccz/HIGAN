@@ -90,13 +90,24 @@ across all $\binom{8}{2} = 28$ HiGAN pairs.
 **Evidence so far.** §13 + §19 of report:
 - Texture+texture pairs: corr ≈ 0.97, low $\rho$.
 - View + texture pairs: corr ≈ 0.55, high $\rho$ (for view).
-The two qualitatively align but the Spearman number has not been
-computed.
+- Bedroom Spearman r=+0.48, p=0.01 (n=28); FFHQ r=+0.81, p=0.005 (n=10).
+
+**Robustness caveat (Week 2 robustness pass).**
+- Dropping the high-curvature outlier attribute (view in bedroom,
+  pose in FFHQ) collapses or destabilises the rank:
+  - bedroom no-view: Spearman r=-0.17, p=0.47 (n=21)
+  - ffhq no-pose: Spearman r=+0.60, p=0.21 (n=6)
+- Conclusion: $P(a,b)$ as a **single scalar predictor**
+  discriminates *between* curvature regimes (structural vs texture)
+  but does NOT discriminate *within* the texture regime. The
+  regime boundary itself is the signal C4 captures.
+- Pedagogically this is the same effect that drives C2: there is a
+  real curvature-regime boundary, and several single-scalar
+  measures see it from different angles.
 
 **Missing for paper.**
-- Compute $P(a,b)$ for all 28 pairs.
-- Plot $P$ vs interference and report rank correlation.
-- Cross-domain replication.
+- A finer within-regime predictor (per-attribute normalised mixed term).
+- Cross-domain replication on church (only 3 pairs there — n too small).
 
 ---
 
@@ -153,7 +164,7 @@ HiGAN's view boundary.
 | C1   | ✓         | ✓             | ✓             | ✓              | mean/median/p95 stats |
 | C2   | ✓         | ✓ (view 23.2) | ✓ (pose 49.9, eye 22.8) | partial (no structural attr) | ratio across attributes |
 | C3   | ✓         | **✓ (mean +0.087, 8/8 positive)** | partial   | ⬜             | layer-pair IoU difference |
-| C4   | ✓         | ✓ (Spearman 0.48, p=0.01, n=28) | ✓ (Spearman 0.81, p=0.005, n=10) | ⬜ (3 pairs only) | Spearman + scatter plot |
+| C4   | ✓         | ✓ (Spearman 0.48, p=0.01, n=28; no-view -0.17 n=21 — regime, not within) | ✓ (Spearman 0.81, p=0.005, n=10; no-pose +0.60 n=6) | ⬜ (3 pairs only) | Spearman + scatter plot |
 | C5   | ✓         | ✓             | ⬜            | n/a           | recon vs saliency-vs-GT |
 | C6   | ✓         | ✓ (view auto-labelled) | ✓ (smile auto-labelled) | ⬜ | precision via K-sweep |
 
