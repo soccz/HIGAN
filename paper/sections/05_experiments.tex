@@ -144,6 +144,26 @@ N=32 test seeds, FD-of-JVPs second-derivative formulation. Running;
 ETA $\sim$11 h; will fill ratios and cross-architecture Pearson in
 camera-ready.]
 
+\paragraph{Cross-domain curvature signature.}
+Plotting (pixel $\bar\rho$, CLIP-path ratio) for every (domain,
+attribute) pair on a log--linear axis and running unsupervised
+$k=2$ k-means recovers the a-priori structural / textural split
+for \textbf{13 out of 14} attributes (92.86\% agreement). The
+structural cluster contains exactly the three attributes whose
+edits insert or remove image-space objects: bedroom
+\texttt{view}, FFHQ \texttt{pose}, FFHQ \texttt{eyeglasses}.
+Figure~\ref{fig:crossdomain-signature} shows the 2D signature.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig7_crossdomain_signature.png}
+\caption{Cross-domain curvature signature. Each point is one
+(domain, attribute) measured by (pixel $\bar\rho$, CLIP-path
+ratio). Red = a-priori structural, blue = textural. Unsupervised
+$k=2$ k-means agrees with the labels at 92.86\%.}
+\label{fig:crossdomain-signature}
+\end{figure}
+
 \subsection{C3 --- Boundaries are layer-localised sections}
 \label{sec:exp-c3}
 
