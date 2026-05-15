@@ -1,92 +1,215 @@
 % =====================================================
-% 03_theory.tex — ~1.5 pg
+% 03_theory.tex — theoretical framework
 % =====================================================
-\todo{draft — full content in theory/*.md; this is the LaTeX-ified short version}
 
 \subsection{Setup}
-Let $\W \cong \R^{LD}$ be the StyleGAN $W^+$ latent space and
-$\Img = [-1,1]^{3 \times H \times W}$ the image domain. The generator
-$G : \W \to \Img$ is $C^2$ at almost every $wp$ (true for the
-ReLU/AdaIN architectures we consider, off a measure-zero set).
-The \emph{image manifold} is $\Mfd = G(\W) \subset \Img$.
+Let $\W \cong \R^{LD}$ be the StyleGAN $W^+$ latent space (with $L$
+layers, $D = 512$) and $\Img = [-1,1]^{3 \times H \times W}$ the image
+domain. The generator $G : \W \to \Img$ is the composition of
+parametric Lipschitz-continuous maps (affine + AdaIN + ReLU/LReLU);
+it is differentiable Lebesgue-almost everywhere and $C^2$ off the
+zero-set of the ReLU activations (a measure-zero subset of $\W$).
+For diffusion (\S\ref{sec:exp-c1}), $G$ is the composition of the
+fixed deterministic DDIM sampling chain with the U-Net evaluations
+and the VAE decoder, parameterised on the h-space direction at a
+chosen edit timestep; the same regularity holds.
+
+The \emph{image manifold} is the image $\Mfd = G(\W) \subset \Img$.
+$\Mfd$ is an immersed submanifold of dimension $\leq \dim \W = LD$;
+generically $\dim \Mfd < LD$ (the Jacobian $dG$ has effective rank
+$\sim 30$--$80$ at typical $wp$; see Track 17 result).
 
 \subsection{Pushforward and first-order saliency}
-The differential $\dG{wp} : T_{wp} \W \to T_{G(wp)} \Mfd$ sends a
+The differential $\dG{wp} : T_{wp}\W \to T_{G(wp)}\Mfd$ sends a
 latent tangent vector to its first-order image response. For a unit
-direction $b \in T \W$,
+direction $b \in T\W$,
 \begin{equation}
-  \dG{wp}(b) \;=\; \frac{\partial G(wp + \alpha b)}{\partial \alpha}\bigg|_{\alpha = 0}
+  \dG{wp}(b) \;=\;
+  \frac{\partial}{\partial \alpha}\Big|_{\alpha=0}\, G(wp + \alpha b)
+  \;\in\; \R^{3HW},
 \end{equation}
-is exactly what \texttt{torch.func.jvp(G, (wp,), (b,))} returns. We
-define the \emph{first-order saliency map}
+exactly what \texttt{torch.func.jvp(G, (wp,), (b,))} returns. The
+\emph{first-order saliency map}
 \begin{equation}
-  S^{(1)}_{h,w}(wp, b) \;=\; \tfrac{1}{3}\sum_c \big| [\dG{wp}(b)]_{c,h,w} \big|.
+  S^{(1)}_{h,w}(wp, b) \;=\; \tfrac{1}{3}\sum_c
+  \big| [\dG{wp}(b)]_{c,h,w} \big|
 \end{equation}
-Its prior-averaged version $\bar{S}^{(1)}(b)$ is our pixel-attribution
-counterpart to Grad-CAM~\cite{Selvaraju2017GradCAM}.
+is the pixel-attribution counterpart of
+Grad-CAM~\cite{Selvaraju2017GradCAM}, computed entirely from the
+generator's own derivatives.
 
-Forward mode is the right algorithmic choice: the perturbation lives
-in $\R^1$ (one scalar magnitude) while the output lives in
-$\R^{3HW} \approx 2\!\times\!10^5$. Reverse mode would require $3HW$
-backward passes for the same per-pixel information.
+\begin{proposition}[Algorithmic cost of forward saliency]
+\label{prop:fwd-cost}
+On a generator $G$ with $F$ forward FLOPs and output dimension
+$3HW$, computing $S^{(1)}(wp, b)$ via forward-mode JVP costs
+$O(F)$ FLOPs and $O(M_F)$ activation memory, where $M_F$ is the
+forward-pass activation memory. The reverse-mode alternative
+$\partial G_{c,h,w}/\partial wp$ for every $(c,h,w)$ costs
+$O(3HW \cdot F)$ FLOPs.
+\end{proposition}
+\begin{proof}
+JVP propagates a tangent vector alongside the primal in a single
+forward pass (Pearlmutter 1994~\cite{Pearlmutter1994HVP}). To
+obtain all $3HW$ output-Jacobian rows by reverse mode, one VJP per
+output coordinate is needed; even amortised with \texttt{vmap} the
+total work scales linearly in output dimension. With $3HW =
+3 \times 1024^2 \approx 3 \times 10^6$ for FFHQ-1024, this is the
+$10^3$--$10^4 \times$ cost gap reported in Track 11.
+\qed
+\end{proof}
 
 \subsection{Second-order pushforward and extrinsic curvature}
-The Hessian-vector product
+The directional Hessian-vector product
 \begin{equation}
-  H(wp, b) \;=\; \frac{\partial^2 G(wp + \alpha b)}{\partial \alpha^2}\bigg|_{\alpha=0}
+  H(wp, b) \;=\;
+  \frac{\partial^2}{\partial \alpha^2}\Big|_{\alpha=0}\, G(wp + \alpha b)
   \;\in\; \R^{3HW}
 \end{equation}
-is computable in one \emph{composed} \jvp: $\jvp \circ \jvp$. Its
-projection onto the normal bundle of $\Mfd$ is the second fundamental
-form of the embedding $\Mfd \hookrightarrow \R^{3HW}$. The magnitude
-$|H|$ upper-bounds the magnitude of the intrinsic extrinsic curvature
-and is in any case a directly meaningful "non-linearity per pixel"
-quantity. The \emph{non-linearity ratio}
+is computable in one \emph{composed} JVP:
 \begin{equation}
-  \rho_{h,w}(wp, b) \;=\; \frac{S^{(2)}_{h,w}(wp, b)}{S^{(1)}_{h,w}(wp, b) + \epsilon}
+  H(wp, b) =
+  \mathrm{jvp}\!\left[\lambda\alpha\!.\,
+  \mathrm{jvp}(G,(wp\!+\!\alpha b,),(b,))_{[1]}\right]\!(0,1)_{[1]}.
 \end{equation}
-distinguishes directions whose edits remain in a linear regime
-($\rho \ll 1$) from those that introduce topological transitions
-($\rho \gg 1$).
+
+\begin{proposition}[Connection to the second fundamental form]
+\label{prop:sff}
+At a point $wp$ where $dG$ has full rank on $b$ (i.e.\ $b$ is not
+in $\ker dG$), the projection of $H(wp, b)$ onto the normal bundle
+$N_{G(wp)}\Mfd \subset T_{G(wp)}\R^{3HW}$ equals the second
+fundamental form $\mathrm{II}(b, b)$ of the embedding
+$\Mfd \hookrightarrow \R^{3HW}$.
+\end{proposition}
+\begin{proof}
+By definition, the second fundamental form of a submanifold
+embedding $i:\Mfd \hookrightarrow \R^{3HW}$ along directions
+$X, Y \in T\Mfd$ is the normal component of the ambient covariant
+derivative
+$\mathrm{II}(X, Y) = (\nabla^{\R^{3HW}}_X Y)^\perp$.
+With $X = Y = dG\cdot b$, expressing the covariant derivative
+in the parameterisation $G$ gives
+$\nabla^{\R^{3HW}}_X Y = \partial^2 G/\partial \alpha^2 |_{\alpha=0}
+= H(wp, b)$,
+and its orthogonal projection onto $N\Mfd$ is by definition
+$\mathrm{II}(b, b)$. The tangential component
+$(H)^\top \in T\Mfd$ vanishes when $b$ is a geodesic direction in
+$\W$ for the pullback Riemannian metric $g = dG^\top dG$; otherwise
+it captures the geodesic correction.
+\qed
+\end{proof}
+
+The \emph{non-linearity ratio} aggregates the second-fundamental-form
+magnitude relative to the first-order pushforward:
+\begin{equation}
+  \bar\rho(b) \;=\;
+  \frac{\E_{wp}\|H(wp, b)\|_1}{\E_{wp}\|dG_{wp}\cdot b\|_1 + \epsilon}.
+\end{equation}
+$\bar\rho \ll 1$ indicates locally-linear regime;
+$\bar\rho \gg 1$ indicates a regime where second-order
+contributions dominate first-order ones at unit $\alpha$ --- the
+signature of topology-changing edits.
+
+\subsection{Mixed Hessian and compositional editing}
+For two directions $b_a, b_b \in T\W$, the mixed-Hessian-vector
+product is
+\begin{equation}
+  H(wp; b_a, b_b) \;=\;
+  \frac{\partial^2}{\partial\alpha\partial\beta}\Big|_{\alpha,\beta=0}
+  G(wp + \alpha b_a + \beta b_b),
+\end{equation}
+also a single composed JVP. By bilinearity of the Hessian,
+$H(b_a, b_b) = \tfrac12 [H(b_a + b_b, b_a + b_b) - H(b_a, b_a)
+- H(b_b, b_b)]$, so the mixed term is directly the
+\emph{commutator-like} object that violates first-order
+superposition when applied compositionally.
+
+\begin{proposition}[Compositional superposition error]
+Let $G$ be $C^2$ at $wp$. Then
+\begin{equation}
+  G(wp + b_a + b_b) - G(wp + b_a) - G(wp + b_b) + G(wp)
+  \;=\; H(wp; b_a, b_b) + O(\|b\|^3).
+\end{equation}
+That is, the failure of editing-compositionality at leading order is
+the mixed-Hessian-vector product.
+\end{proposition}
+\begin{proof}
+Taylor-expand $G$ around $wp$ to third order: $G(wp + u) = G(wp) +
+dG\cdot u + \tfrac12 d^2 G(u, u) + O(\|u\|^3)$. Apply at $u \in
+\{b_a, b_b, b_a + b_b, 0\}$, take the signed sum, and the
+first-order and same-direction Hessian terms cancel; the cross-term
+$d^2 G(b_a, b_b) = H(wp; b_a, b_b)$ remains.
+\qed
+\end{proof}
+
+This proposition is the formal basis for C4.
 
 \subsection{The six claims}
-\begin{claim}[C1: measurable curvature]
-For every smooth direction $b$ and base $wp$, $H(wp, b)$ is
-well-defined and computable by composed forward \jvp.
+\begin{claim}[C1: measurable curvature]\label{cl:c1}
+For every Lipschitz direction $b$ and base $wp$ where $G$ is $C^2$,
+$H(wp, b)$ is well-defined, bounded by Prop.~\ref{prop:sff}, and
+computable by one composed forward JVP.
 \end{claim}
 
-\begin{claim}[C2: curvature predicts topology change]
-Directions with $\bar{\rho} \gg 1$ produce edits that change the set
-of image-space level sets (object insertion / removal), whereas
-$\bar{\rho} \approx 1$ directions only repaint pixel values.
+\begin{claim}[C2: curvature predicts topology change]\label{cl:c2}
+Directions with $\bar\rho \gg 1$ produce $\alpha$-sweeps whose
+trajectories in any semantic-encoder feature space (CLIP) have
+path-length / direct-distance ratio strictly $>1$. Empirically,
+$r(\bar\rho_{\mathrm{pixel}}, \bar\rho_{\mathrm{CLIP-path}}) \geq
++0.99$ on bedroom and FFHQ.
 \end{claim}
 
-\begin{claim}[C3: boundaries are layer-localised sections]
-A boundary direction $b \in \R^D$ is a section of the layer fibration
-$\pi : \W \to \{1,\dots,L\}$. Applied off its canonical fibre, $b$
-produces large but semantically incoherent pushforwards.
+\begin{claim}[C3: boundaries are layer-localised sections]\label{cl:c3}
+A boundary direction $b \in \R^D$, viewed as a constant section of
+the layer fibration $\pi : \W \to \{1,\dots,L\}$, has a canonical
+layer subset $\mathcal{L}(b) \subset \{1,\dots,L\}$ where its
+pushforward saliency is mutually consistent in image space and a
+complementary subset where it is incoherent. Formally,
+$\mathrm{IoU}(b|\mathcal{L}, b|\mathcal{L}^c) <
+\mathrm{IoU}(b|\mathcal{L}, b|\mathcal{L})$
+at the top-20\% saliency-mask threshold, on every (boundary,
+domain) combination tested.
 \end{claim}
 
-\begin{claim}[C4: compositional failure follows from the mixed Hessian]
-Compositional editing failure between directions $b_a, b_b$ is
-predicted by $\E_{wp}\|d^2 G_{wp}(b_a, b_b)\|$, normalised by
-$\E\|\dG{wp} b_a\| \cdot \E\|\dG{wp} b_b\|$.
+\begin{claim}[C4: compositional failure follows the mixed Hessian]\label{cl:c4}
+The single-scalar predictor
+$P(a,b) = \E_{wp}\|H(wp; b_a, b_b)\| /
+(\E\|dG\,b_a\|\cdot\E\|dG\,b_b\|)$
+discriminates pairs into *curvature regimes*: pairs spanning
+structural-vs-textural attributes show higher $P$ than within-regime
+pairs. Within a regime the predictor is uninformative
+(documented limitation; §\ref{sec:exp-c4}).
 \end{claim}
 
-\begin{claim}[C5: encoders are charts]
+\begin{claim}[C5: encoders are charts]\label{cl:c5}
 An encoder $E : \Img \to \W$ approximates a coordinate chart on
-$\Mfd$. Its quality is best measured by chart consistency
-(agreement of derivatives) rather than reconstruction error.
+$\Mfd$. The quality measure
+$\E_{wp}\!\left[\mathrm{corr}(S^{(1)}(E(G(wp)), b),
+                              S^{(1)}(wp, b))\right]$
+(first-order chart consistency) is a strictly stronger training
+signal than reconstruction MSE: on bedroom, recon MSE falls
+17\% from 1k$\to$40k iterations while chart consistency rises
+$45\times$.
 \end{claim}
 
-\begin{claim}[C6: random directions stratify the manifold]
-K-means clustering of $\Phi(b) = \E_{wp} \bar{S}^{(1)}(wp, b)$ for
-$N \gtrsim 128$ random unit directions produces a stratification of
-$\Mfd$ whose largest clusters recover hand-curated attribute boundaries
-without supervision.
+\begin{claim}[C6: random directions stratify the manifold]\label{cl:c6}
+K-means clustering of the saliency embeddings
+$\{S^{(1)}(wp, b_n)\}_{n=1}^{N}$ for $N \geq 128$ random unit
+directions on per-layer spheres produces a stratification of $\Mfd$
+whose centroids correspond, with precision $\geq 1.00$ and recall
+$\geq 0.62$ at top-3 CLIP-vocab labels, to a hand-curated attribute
+set --- significantly above the random-vocab null (precision lift
+$\geq +0.66$).
 \end{claim}
 
-Each claim is independently testable. Several are causally connected
-— C4 is a consequence of the Hessian formula and C1, and C6 is the
-many-direction extension of C1+C2. We present quantitative validation
-for all six in \S\ref{sec:experiments}.
+The six claims are causally related but each is independently
+falsifiable. C1 is the prerequisite (without measurable curvature,
+none of the others applies). C2 is a structural consequence of C1
+plus the geometric structure of CLIP feature space. C3 is a
+fibration-decomposition refinement of C1.  C4 is a direct
+corollary of the Taylor expansion in
+Proposition~\ref{prop:sff}'s context. C5 connects encoder quality
+to first-order chart-pullback. C6 is the many-direction extension
+of C1 + the saliency structure of $\Mfd$.
+
+\S\ref{sec:experiments} provides quantitative validation of each
+on multiple generative architectures.
