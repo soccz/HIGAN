@@ -176,6 +176,23 @@ HiGAN's view boundary.
 | 8  | 5/8  | 6/8 | 6/8 | **5/5** | 4/5 | 3/5 |
 | 16 | 7/8  | 7/8 | 7/8 | 5/5 | 4/5 | 4/5 |
 
+**Spatial diversity (NEW, generator-grounded)**: for K=8 at apply-layers 6–11,
+1 - mean pairwise top-20% saliency-IoU across the 8 directions:
+
+| method | spatial_diversity | mean pairwise IoU |
+|---|---|---|
+| Random unit  | 0.737 | 0.263 |
+| SeFa         | 0.714 | 0.286 |
+| GANSpace-W   | 0.705 | 0.295 |
+| HiGAN GT     | 0.687 | 0.313 |
+
+Counter-intuitive ranking — human-curated boundaries are the
+*least* spatially diverse. Real semantic attributes overlap in
+image space (lighting + glossy share mid-tone surfaces, etc.).
+Spatial diversity is not a quality proxy on its own — methods
+that recover meaningful semantic structure trade off some
+diversity for coverage.
+
 Conclusion: **discovery-method ranking is domain-dependent**.
 PCA-based methods (GANSpace) dominate where W has clear principal axes
 (FFHQ identity bundle); random+CLIP is competitive or better where the
