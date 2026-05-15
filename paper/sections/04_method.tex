@@ -1,6 +1,50 @@
 % =====================================================
-% 04_method.tex — ~1 pg
+% 04_method.tex — algorithms + complexity + JVP engineering
 % =====================================================
+
+The estimators below are the operational core of every claim in
+§\ref{sec:experiments}. They reduce to one or two
+\texttt{torch.func.jvp} calls per measurement; all are deterministic,
+batchable across noise seeds, and require no auxiliary training.
+
+\begin{algorithm}
+\caption{First-order per-pixel saliency
+$\bar S^{(1)}(b)$ via forward-mode JVP}
+\label{alg:c1-fwd}
+\begin{algorithmic}[1]
+\REQUIRE generator $G$, direction $b$, sample count $N$
+\STATE $\bar S \leftarrow 0$
+\FOR{$n = 1, \dots, N$}
+  \STATE $wp_n \sim p(\W)$
+  \STATE $(\_,\ \dot y) \leftarrow \texttt{jvp}(G,\ (wp_n,),\ (b,))$
+  \STATE $\bar S \mathrel{+}\!=
+          \tfrac{1}{N}\!\cdot\!|\dot y|_{\text{mean over RGB}}$
+\ENDFOR
+\RETURN $\bar S$
+\end{algorithmic}
+Complexity: $O(N \cdot F)$ FLOPs, $O(M_F)$ memory, where $F$ is the
+generator forward cost and $M_F$ is the forward activation memory.
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Second-order per-pixel saliency $\bar S^{(2)}(b)$ via
+composed forward-mode JVP}
+\label{alg:c1-c2}
+\begin{algorithmic}[1]
+\STATE $\bar H \leftarrow 0$
+\FOR{$n = 1, \dots, N$}
+  \STATE $wp_n \sim p(\W)$
+  \STATE $\dot f(\alpha) \leftarrow
+          \texttt{jvp}(G \circ (+\alpha b),\ (\alpha,),\ (1,))_{[1]}$
+  \STATE $(\_,\ \ddot y) \leftarrow
+          \texttt{jvp}(\dot f,\ (0,),\ (1,))$
+  \STATE $\bar H \mathrel{+}\!=
+          \tfrac{1}{N}\!\cdot\!|\ddot y|_{\text{mean over RGB}}$
+\ENDFOR
+\RETURN $\bar H$
+\end{algorithmic}
+Complexity: $\sim\!2.2 N \cdot F$ FLOPs, $\sim\!2 \cdot M_F$ memory.
+\end{algorithm}
 
 \subsection{First-order pushforward saliency}
 \begin{algorithmic}
