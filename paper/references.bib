@@ -323,3 +323,103 @@
   year   = {2022},
   note   = {arXiv:2112.10752; LDM / Stable Diffusion}
 }
+
+% -- 2024-2025 prior art added 2026-05-15 ---
+% TIER 1: direct Hessian/curvature on generators
+
+@inproceedings{Lobashev2025HessianLatent,
+  title  = {Hessian Geometry of Latent Space in Generative Models},
+  author = {Lobashev, Alexander and others},
+  booktitle = {ICML},
+  year   = {2025},
+  note   = {arXiv:2506.10632; Hessian / Fisher information on Stable Diffusion latents}
+}
+
+@misc{Saito2025Tangential,
+  title  = {Be Tangential to Manifold: Discovering Riemannian Metric for Diffusion Models},
+  author = {Saito, Yuki and Matsubara, Takashi},
+  howpublished = {arXiv:2510.05509},
+  year   = {2025}
+}
+
+@misc{Karczewski2025Spacetime,
+  title  = {The Spacetime of Diffusion Models: An Information Geometry Perspective},
+  author = {Karczewski, Rafa{\l} and Heinonen, Markus and Pouplin, Alison and Hauberg, S{\o}ren and Garg, Vikas},
+  howpublished = {arXiv:2505.17517},
+  year   = {2025}
+}
+
+% TIER 2: h-space + Jacobian SVD precedents
+
+@inproceedings{Haas2024Hspace,
+  title  = {Discovering Interpretable Directions in the Semantic Latent Space of Diffusion Models},
+  author = {Haas, Ren{\'e} and Huberman-Spiegelglas, Inbar and Mulayoff, Rotem and Gra{\ss}hof, Stella and Brandt, Sami S. and Michaeli, Tomer},
+  booktitle = {IEEE FG},
+  year   = {2024},
+  note   = {arXiv:2303.11073; spectral analysis of denoiser Jacobian via JVPs}
+}
+
+@inproceedings{Diepeveen2025ScoreBasedPullback,
+  title  = {Score-based Pullback {R}iemannian Geometry},
+  author = {Diepeveen, Willem and Batzolis, Georgios and Shumaylov, Zakhar and Sch{\"o}nlieb, Carola-Bibiane},
+  booktitle = {ICML},
+  year   = {2025},
+  note   = {arXiv:2410.01950}
+}
+
+@misc{Wang2025SVDDiffusion,
+  title  = {Exploring the Latent Space of Diffusion Models Directly Through {SVD}},
+  author = {Wang, Yujia and others},
+  howpublished = {arXiv:2502.02225},
+  year   = {2025}
+}
+
+% TIER 3: compositional editing & attribute discovery in newer architectures
+
+@inproceedings{Dalva2024NoiseCLR,
+  title  = {{NoiseCLR}: A Contrastive Learning Approach for Unsupervised Discovery of Interpretable Directions in Diffusion Models},
+  author = {Dalva, Yusuf and Yanardag, Pinar},
+  booktitle = {CVPR},
+  year   = {2024},
+  note   = {arXiv:2312.05390; oral}
+}
+
+@inproceedings{Dalva2025FluxSpace,
+  title  = {{FluxSpace}: Disentangled Semantic Editing in Rectified Flow Models},
+  author = {Dalva, Yusuf and others},
+  booktitle = {CVPR},
+  year   = {2025}
+}
+
+@inproceedings{Gandikota2024ConceptSliders,
+  title  = {Concept Sliders: {LoRA} Adaptors for Precise Control in Diffusion Models},
+  author = {Gandikota, Rohit and Materzy{\'n}ska, Joanna and Zhou, Tingrui and Torralba, Antonio and Bau, David},
+  booktitle = {ECCV},
+  year   = {2024},
+  note   = {arXiv:2311.12092}
+}
+
+@inproceedings{Pegios2024Counterfactual,
+  title  = {Counterfactual Explanations via {R}iemannian Latent Space Traversal},
+  author = {Pegios, Paraskevas and Feragen, Aasa and Hansen, Andreas Munk and Arvanitidis, Georgios},
+  booktitle = {NeurIPS Workshop (NeurReps)},
+  year   = {2024},
+  note   = {arXiv:2411.02259}
+}
+
+% TIER 4: forward-mode AD foundations
+
+@inproceedings{Cobb2025FoMoH,
+  title  = {Second-Order Forward-Mode Automatic Differentiation for Optimization},
+  author = {Cobb, Adam D. and others},
+  booktitle = {ICLR},
+  year   = {2025},
+  note   = {arXiv:2408.10419; FoMoH; hyper-dual numbers}
+}
+
+@misc{Jones2025ManifoldDiffusionGeometry,
+  title  = {Manifold Diffusion Geometry: Curvature, Tangent Spaces, and Dimension},
+  author = {Jones, Iolo},
+  howpublished = {arXiv:2411.04100, to appear SIAM J. Math. Data Sci.},
+  year   = {2025}
+}

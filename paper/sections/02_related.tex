@@ -19,18 +19,44 @@ all of these on attribute rediscovery and editing-task head-to-head
 
 \paragraph{Diffusion-model interpretation.}
 The diffusion analogue of $W$-space is the U-Net bottleneck h-space
-introduced by Asyrp~\cite{Kwon2023Asyrp}, with homogeneity, linearity,
-and timestep-consistency reported by the authors. Park et
+introduced by Asyrp~\cite{Kwon2023Asyrp}. Park et
 al.~\cite{Park2023Riemannian} constructs a first-order pullback
-Riemannian metric on h-space via Jacobian SVD and uses it for
-editing; \textbf{they consider only the metric, not the curvature}.
+Riemannian metric on h-space via Jacobian SVD;
+Haas et al.~\cite{Haas2024Hspace} adds spectral analysis of the
+denoiser Jacobian via forward-mode JVPs --- methodologically the
+closest \emph{computational} precedent to our approach.
+Diepeveen et al.~\cite{Diepeveen2025ScoreBasedPullback} and Saito \&
+Matsubara~\cite{Saito2025Tangential} formalise pullback / Jacobian
+Riemannian metrics for diffusion;
+Karczewski et al.~\cite{Karczewski2025Spacetime} extends this to a
+Fisher-Rao metric on the latent spacetime.
+\textbf{Most relevant of all is Lobashev et al.~\cite{Lobashev2025HessianLatent},
+who measure the Hessian of the Fisher information metric on the
+\emph{latent} space of Stable Diffusion} --- the closest existing work
+to our second-order analysis.
+
+\emph{Our delta over these works.} Park, Diepeveen, Saito, and
+Karczewski compute \emph{first-order} pullback metrics, not
+second-order curvature. Haas computes a first-order Jacobian
+spectrum (no Hessian). Lobashev computes a Hessian, but of the
+\emph{Fisher information metric on latents} --- a different object
+from our \emph{second fundamental form of the rendered image
+manifold}. Our framework operates on the image manifold extrinsic
+curvature, connects it to disentanglement / composition /
+layer-localisation, and applies across StyleGAN1, StyleGAN2, and
+Stable Diffusion.
+
 Prompt-side editing methods --- Prompt-to-Prompt~\cite{Hertz2023P2P},
 null-text inversion~\cite{Mokady2023NullText},
-SEGA~\cite{Brack2023SEGA} --- operate in attention space rather than
-on the generator's image manifold. DAAM~\cite{Tang2023DAAM} provides
-cross-attention saliency at the prompt level. We use h-space (Asyrp)
-as the W-analog, compute the second-fundamental form there, and
-compare our gradient saliency to DAAM directly.
+SEGA~\cite{Brack2023SEGA}, Concept
+Sliders~\cite{Gandikota2024ConceptSliders},
+FluxSpace~\cite{Dalva2025FluxSpace} --- operate in attention or
+LoRA space rather than on the image manifold geometry.
+DAAM~\cite{Tang2023DAAM} provides cross-attention saliency at the
+prompt level; we compare our gradient saliency to DAAM directly in
+\S\ref{sec:exp-baselines-results}.
+NoiseCLR~\cite{Dalva2024NoiseCLR} extends contrastive direction
+discovery to diffusion noise space; we add it to the head-to-head.
 
 \paragraph{Score-network geometry of diffusion.}
 Stanczuk et al.~\cite{Stanczuk2024IntrinsicDim} measure rank
@@ -68,10 +94,15 @@ and compositional editing.
 The Pearlmutter trick~\cite{Pearlmutter1994HVP} for Hessian-vector
 products underlies modern second-order optimisation
 \cite{Martens2015KFAC}; PyTorch \texttt{torch.func.jvp} and
-\texttt{jax.jvp} provide composable forward AD. We compose JVP twice
-to obtain the per-pixel second derivative in one pass (§4), which is
-$10^3$-$10^4 \times$ faster than per-pixel reverse mode for the
-high-dimensional-output regime studied here.
+\texttt{jax.jvp} provide composable forward AD. Cobb et
+al.~\cite{Cobb2025FoMoH} recently introduced FoMoH, a hyper-dual-number
+implementation that returns first-order tangent and second-order
+curvature in a single forward pass --- a strict generalisation of the
+composed-JVP construction we use here.
+We compose JVP twice to obtain the per-pixel second derivative in
+one pass (§4), which is $10^3$-$10^4 \times$ faster than per-pixel
+reverse mode for the high-dimensional-output regime studied here
+(empirically verified, Track 11).
 
 \paragraph{Encoders, inversion, and chart consistency.}
 pSp~\cite{Richardson2021pSp}, e4e~\cite{Tov2021e4e}, and the
