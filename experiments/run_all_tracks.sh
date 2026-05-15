@@ -25,14 +25,23 @@ wait_gpu_free() {
 echo "[$(date +%T)] === Track-runner starting; waiting for any current GPU job ==="
 wait_gpu_free
 
+echo "[$(date +%T)] === Track 1B: SD C1/C2 RE-RUN at N=64 (paper-grade) ==="
+python3 -u experiments/diffusion/run_c1_c2.py \
+    --attrs smile age gender eyeglasses pose \
+    --n-train 64 --n-test 64 \
+    --timestep-fracs 0.7 0.5 0.3 \
+    --out experiments/out/sd_c1_c2_n64 \
+    > "$LOGDIR/track1b_sd_n64.log" 2>&1
+echo "[$(date +%T)] Track 1B done"
+
 echo "[$(date +%T)] === Track 3: sample scaling — bedroom ==="
 python3 -u experiments/metrics/run_sample_scaling.py --domain bedroom \
     > "$LOGDIR/track3_scaling_bedroom.log" 2>&1
 echo "[$(date +%T)] Track 3 bedroom done"
 
-echo "[$(date +%T)] === Track 3: sample scaling — ffhq (N_max=64) ==="
-python3 -u experiments/metrics/run_sample_scaling.py --domain ffhq --n-max 64 \
-    --Ns 8 16 32 64 \
+echo "[$(date +%T)] === Track 3: sample scaling — ffhq (N_max=128) ==="
+python3 -u experiments/metrics/run_sample_scaling.py --domain ffhq --n-max 128 \
+    --Ns 8 16 32 64 128 \
     > "$LOGDIR/track3_scaling_ffhq.log" 2>&1
 echo "[$(date +%T)] Track 3 ffhq done"
 
@@ -53,9 +62,10 @@ python3 -u experiments/baselines/disco/train.py \
     > "$LOGDIR/track5_disco.log" 2>&1
 echo "[$(date +%T)] Track 5 DisCo done"
 
-echo "[$(date +%T)] === Track 4: FFHQ C5 encoder training ==="
+echo "[$(date +%T)] === Track 4: FFHQ C5 encoder training (80k iter) ==="
 python3 -u experiments/domains/ffhq/encoder/train.py \
-    --num-iters 40000 --batch 1 \
+    --num-iters 80000 --batch 1 \
+    --ckpt-iters 1000 5000 10000 20000 40000 60000 80000 \
     > "$LOGDIR/track4_ffhq_encoder.log" 2>&1
 echo "[$(date +%T)] Track 4 training done; running eval..."
 python3 -u experiments/domains/ffhq/encoder/eval_c5.py \
@@ -64,13 +74,15 @@ python3 -u experiments/domains/ffhq/encoder/eval_c5.py \
             experiments/out/ffhq_c5/ckpt/enc_010000.pt \
             experiments/out/ffhq_c5/ckpt/enc_020000.pt \
             experiments/out/ffhq_c5/ckpt/enc_040000.pt \
-    --num-test 64 \
+            experiments/out/ffhq_c5/ckpt/enc_060000.pt \
+            experiments/out/ffhq_c5/ckpt/enc_080000.pt \
+    --num-test 128 \
     > "$LOGDIR/track4_ffhq_eval.log" 2>&1
 echo "[$(date +%T)] Track 4 done"
 
 echo "[$(date +%T)] === Track 2: Editing head-to-head N=1000 ==="
 python3 -u experiments/baselines/run_editing_head_to_head.py \
-    --n-test 1000 \
+    --n-test 1000 --n-curv-samples 64 --k-top 16 \
     > "$LOGDIR/track2_editing.log" 2>&1
 echo "[$(date +%T)] === Wave 1 complete; starting Wave 2 ==="
 
@@ -78,28 +90,28 @@ echo "[$(date +%T)] === Wave 1 complete; starting Wave 2 ==="
 
 echo "[$(date +%T)] === Track 6: DAAM SD baseline ==="
 python3 -u experiments/diffusion/run_daam_comparison.py \
-    --n-seeds 16 \
+    --n-seeds 32 \
     > "$LOGDIR/track6_daam.log" 2>&1
 
 echo "[$(date +%T)] === Track 7: Park-NeurIPS23 Riemannian repro ==="
 python3 -u experiments/diffusion/run_park_repro.py \
-    --n-seeds 8 --K-probes 32 --top-k 4 \
+    --n-seeds 24 --K-probes 64 --top-k 6 \
     > "$LOGDIR/track7_park_repro.log" 2>&1
 
 echo "[$(date +%T)] === Track 8: FFHQ truncation-ψ ablation ==="
 python3 -u experiments/domains/ffhq/run_truncation_ablation.py \
-    --num-samples 16 \
+    --num-samples 64 \
     > "$LOGDIR/track8_truncation.log" 2>&1
 
 echo "[$(date +%T)] === Track 9: Multi-CLIP-encoder C2 robustness ==="
 python3 -u experiments/metrics/run_multi_clip_c2.py \
-    --num-samples 8 \
+    --num-samples 16 \
     > "$LOGDIR/track9_multi_clip.log" 2>&1
 
 echo "[$(date +%T)] === Track 10: Per-layer C1 (bedroom + ffhq) ==="
-python3 -u experiments/metrics/run_per_layer_c1.py --domain bedroom \
+python3 -u experiments/metrics/run_per_layer_c1.py --domain bedroom --n-samples 32 \
     > "$LOGDIR/track10_per_layer_bedroom.log" 2>&1
-python3 -u experiments/metrics/run_per_layer_c1.py --domain ffhq \
+python3 -u experiments/metrics/run_per_layer_c1.py --domain ffhq --n-samples 32 \
     > "$LOGDIR/track10_per_layer_ffhq.log" 2>&1
 
 echo "[$(date +%T)] === Track 11: Wall-clock benchmark ==="
@@ -108,40 +120,40 @@ python3 -u experiments/method/run_walltime_benchmark.py --domain bedroom \
 
 echo "[$(date +%T)] === Track 12: C6 N-scaling (bedroom) ==="
 python3 -u experiments/metrics/run_c6_scaling.py \
-    --Ns 128 192 256 384 512 \
+    --Ns 128 192 256 384 512 768 \
     > "$LOGDIR/track12_c6_scaling.log" 2>&1
 
 echo "[$(date +%T)] === Track 13: FFHQ resolution invariance ==="
 python3 -u experiments/domains/ffhq/run_resolution_invariance.py \
-    --num-samples 16 \
+    --num-samples 32 \
     > "$LOGDIR/track13_resolution.log" 2>&1
 
 # ---- Wave 3 ----
 
 echo "[$(date +%T)] === Track 14: noise robustness (bedroom + ffhq) ==="
-python3 -u experiments/metrics/run_noise_robustness.py --domain bedroom \
+python3 -u experiments/metrics/run_noise_robustness.py --domain bedroom --num-samples 64 \
     > "$LOGDIR/track14_noise_bedroom.log" 2>&1
-python3 -u experiments/metrics/run_noise_robustness.py --domain ffhq \
+python3 -u experiments/metrics/run_noise_robustness.py --domain ffhq --num-samples 64 \
     > "$LOGDIR/track14_noise_ffhq.log" 2>&1
 
 echo "[$(date +%T)] === Track 17: intrinsic dim (bedroom + ffhq) ==="
-python3 -u experiments/method/run_intrinsic_dim.py --domain bedroom \
+python3 -u experiments/method/run_intrinsic_dim.py --domain bedroom --n-latents 32 --K-probes 128 \
     > "$LOGDIR/track17_intrinsic_bedroom.log" 2>&1
-python3 -u experiments/method/run_intrinsic_dim.py --domain ffhq \
+python3 -u experiments/method/run_intrinsic_dim.py --domain ffhq --n-latents 32 --K-probes 128 \
     > "$LOGDIR/track17_intrinsic_ffhq.log" 2>&1
 
 echo "[$(date +%T)] === Track 18: FD validation ==="
-python3 -u experiments/method/run_fd_validation.py --domain bedroom \
+python3 -u experiments/method/run_fd_validation.py --domain bedroom --n-pairs 16 \
     > "$LOGDIR/track18_fd_validation.log" 2>&1
 
 # ---- Wave 4 ----
 
 echo "[$(date +%T)] === Track 19: DINOv2 path curvature ==="
-python3 -u experiments/metrics/run_dino_path_curvature.py \
+python3 -u experiments/metrics/run_dino_path_curvature.py --num-samples 16 \
     > "$LOGDIR/track19_dino.log" 2>&1
 
 echo "[$(date +%T)] === Track 20: FFHQ alpha magnitude scan ==="
-python3 -u experiments/domains/ffhq/run_alpha_magnitude_scan.py \
+python3 -u experiments/domains/ffhq/run_alpha_magnitude_scan.py --n-samples 32 \
     > "$LOGDIR/track20_alpha_scan.log" 2>&1
 
 echo "[$(date +%T)] === ALL TRACKS COMPLETE (Waves 1 + 2 + 3 + 4) ==="
