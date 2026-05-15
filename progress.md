@@ -4,6 +4,68 @@ Weekly status updates. Most recent first.
 
 ---
 
+## Week 2 · 2026-05-15 (robustness pass)
+
+**Goal**: leave no ambiguity in the claim-evidence table before paper
+draft. Run robustness/cross-checks for each claim's headline metric.
+
+**Done**:
+- **C2 cross-architecture** — FFHQ CLIP path curvature.
+  Spearman r=+1.000, Pearson r=+0.970 vs pixel ∂²I/∂α² ratio.
+  Replicates bedroom's r=0.99 on a 1024² face generator with a
+  different attribute taxonomy. C2 now has two domains × two
+  independent curvature measures all agreeing.
+- **C3 threshold robustness** — top-k ∈ {10%, 20%, 30%, 50%}.
+  Bedroom: 8/8 positive at every threshold, mean 0.057→0.082.
+  FFHQ:    5/5 positive at every threshold, mean 0.168→0.130.
+  All 13 attr-domain combinations stable across a 5× range.
+- **C4 robustness** — dropping the high-curvature outlier.
+  Bedroom no-view: Spearman drops +0.48 → -0.17 (n=21, p=0.47).
+  FFHQ no-pose:    Spearman drops +0.81 → +0.60 (n=6, p=0.21).
+  Honest reading: the single-scalar predictor discriminates
+  *between* curvature regimes (structural vs texture) but NOT
+  *within* the texture regime. Within-regime predictor refinement
+  is paper §7 future work.
+- **C4 third domain** — church (3 attrs, 3 pairs): Spearman
+  +0.50 (p=0.67). Sign preserved across all 3 domains, power
+  limited by tiny n.
+- **C6 quantitative** — precision/recall vs random CLIP-vocab null.
+  Bedroom K=3: P=1.00 R=0.62 (lift +0.81 vs null P=0.19).
+  FFHQ K=3:    P=1.00 R=1.00 (lift +0.66 vs null P=0.34).
+  Honest reading: precision lift is the meaningful signal —
+  recall saturates near the null because of vocab×cluster size.
+- **CLIP-Grad-CAM on FFHQ** — domain cross-check of orthogonality.
+  All 5 attrs: |pixel-corr| < 0.02, IoU(top-20%)=0.20 (chance).
+  Stronger than bedroom's [-0.11, -0.05]; confirms JVP saliency
+  and Grad-CAM are cross-domain near-orthogonal measurements.
+- **Spatial diversity** — generator-grounded baseline metric.
+  Random > SeFa > GANSpace > HiGAN-GT (0.737 → 0.687). Reveals
+  spatial diversity is *anti*-correlated with semantic coverage:
+  human-curated attributes overlap because they share material
+  structure. Spatial diversity is not a quality proxy.
+
+**Claims table after robustness pass**:
+
+| Claim | Headline metric                            | Robustness verified | Domains |
+|-------|--------------------------------------------|---------------------|---------|
+| C1    | per-attr ∂²I/∂α² well-defined              | ratio bands         | 3 |
+| C2    | pixel ∂² ↔ CLIP path r=0.99/1.00           | two domains × two measures | 2 |
+| C3    | layer-pair IoU difference, all positive    | top-k 10/20/30/50%  | 2 (13/13) |
+| C4    | mixed-Hessian Spearman 0.48/0.81/0.50      | regime-discriminator only (no-outlier collapses bedroom) | 3 |
+| C5    | recon vs saliency-vs-GT 5-ckpt curve       | (bedroom only)      | 1 |
+| C6    | cluster→GT P=1.00 K=3                       | random-vocab null lift +0.81/+0.66 | 2 |
+
+**Honest residual gaps** (none paper-blocking, all paper §future-work):
+- C4: design a within-regime predictor (currently a regime indicator only).
+- C5: FFHQ encoder retraining (40k iter, ~hours). Has rich prior single-domain evidence.
+
+**Total this session**: 7 new robustness scripts + 7 new committed
+metric outputs. 6 commits since post-midnight session.
+
+**Next phase: paper writing**.
+
+---
+
 ## Week 2 · 2026-05-15 (post-midnight)
 
 **Goal**: complete the experimental evidence base for all 6 claims +
