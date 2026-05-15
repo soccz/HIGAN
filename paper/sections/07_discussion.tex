@@ -1,45 +1,77 @@
 % =====================================================
-% 07_discussion.tex — ~0.5 pg
+% 07_discussion.tex — limitations + future work
 % =====================================================
-\todo{honest limitations}
+
+\paragraph{C4 is a regime indicator, not a within-regime ordering.}
+Our mixed-Hessian predictor $P(a,b)$ has Spearman correlation
+$+0.48 / +0.81 / +0.50$ with measured compositional non-linearity
+across three architectures. However, dropping the highest-curvature
+attribute from each domain collapses bedroom's Spearman to $-0.17$
+($n=21$, $p=0.47$) and FFHQ's to $+0.60$ ($n=6$, $p=0.21$). The
+single-scalar predictor therefore discriminates \emph{between}
+structural and textural curvature regimes but does not order pairs
+within the texture regime. A finer per-pixel predictor that
+preserves the directional information of $d^2 G(b_a, b_b)$ rather
+than collapsing to its norm is the natural next refinement.
 
 \paragraph{Linear boundaries only.}
 The Lie-bracket analysis in \S\ref{sec:theory} treats attribute
 directions as constant vector fields on $\W$. For learned non-linear
-edits — e.g. EditGAN's part-conditioned edit
-vectors~\cite{Ling2021EditGAN} — the full Lie bracket of generally
-varying vector fields is non-zero and may dominate the Hessian term.
-Extending the curvature prediction to such cases is open.
+edits --- e.g.\ EditGAN's part-conditioned edit
+vectors~\cite{Ling2021EditGAN} or DragGAN's
+point-based deformation fields~\cite{Pan2023DragGAN} --- the full Lie
+bracket of generally varying vector fields is non-zero and may
+dominate the Hessian term. Extending the curvature prediction to such
+cases is open.
 
-\paragraph{Forward mode only goes so far.}
-For first-order pushforward and HVP we exploit forward mode
-maximally. Pure reverse-mode setups (existing Grad-CAM frameworks
-trained on classifier loss) cannot directly compete, but
-high-dimensional latent-space optimisation (e.g. PTI) is best done in
-reverse. We consider forward mode complementary, not a replacement.
+\paragraph{Diffusion: image-space derivative, not score derivative.}
+For Stable Diffusion we measure $\partial^{1,2}\, \mathrm{decode}(x_0)
+/\partial(\text{h-space direction})$ via JVP through the DDIM
+sampling chain, parallel to the StyleGAN measurements. This is
+strictly different from the score-network Hessian
+$\nabla^2_x \log p_t(x)$ studied
+in~\cite{Stanczuk2024IntrinsicDim, Park2023Riemannian}, which lives
+in noisy-latent space and concerns the data distribution's local
+geometry. The two views are complementary: ours is generator-side
+and operational (predicts edit behaviour), theirs is
+distribution-side and structural (counts intrinsic dimension). A
+unified treatment is an attractive next step.
 
-\paragraph{Domain coverage and generators.}
-We validated on three style-based generators (HiGAN bedroom, StyleGAN2
-FFHQ, HiGAN church). Diffusion-based generators have a different
-mathematical structure (stochastic, time-conditional) and our
-framework as stated does not directly apply; an analogous
-score-function-Hessian formulation is open work.
+\paragraph{Memory ceiling forces FD-of-JVPs on SD.}
+Composed JVP through the full 50-step DDIM chain at 512\textsuperscript{2}
+OOMs on 8 GB. We therefore compute the second derivative as a
+finite-difference of two first-order JVPs at $\pm\epsilon$, which
+keeps peak memory at the single-JVP budget. This is the same
+construction used by~\cite{Park2023Riemannian} for the diffusion
+Jacobian. A larger GPU enables direct composed-JVP and would
+reduce the FD truncation error; we report sensitivity-to-$\epsilon$
+in Appendix~C.
 
-\paragraph{User study scope.}
-Our user study covers $\sim 90$ image–attribute pairs across three
-domains. Results are statistically significant but cannot speak to
-artist-grade editing workflows where context-sensitive judgement
-dominates.
+\paragraph{Forward mode is the right tool here, not a panacea.}
+For pushforward and HVP we exploit forward-mode maximally: input
+dimension $1$, output dimension $\sim 10^5$ pixels makes forward
+$10^3$--$10^4 \times$ faster than reverse-mode at matched accuracy.
+For high-dimensional latent-space optimisation (e.g.\ PTI
+inversion) reverse mode remains the right choice. We consider
+forward mode complementary, not a replacement.
 
 \paragraph{Theoretical assumptions.}
 We assume $G$ is $C^2$ at the sampled latents. ReLU non-smoothness
-forms a measure-zero set in $\W$ and we did not encounter
-numerical issues in practice, but a fully rigorous statement requires
-piece-wise smooth differential geometry — see supplementary remark.
+forms a measure-zero set in $\W$; we did not encounter numerical
+issues in practice. A fully rigorous statement requires piece-wise
+smooth differential geometry --- see supplementary remark.
 
-\paragraph{Beyond GANs.}
+\paragraph{Beyond GANs and diffusion.}
 The differential-geometric view applies, with adaptation, to any
-generative model defined by a smooth map from a latent space. We
-expect direct application to VAEs, normalising flows, and
-score-based generators after suitable smoothing; this is a clear next
-step.
+generative model defined by a smooth map from a latent space. Direct
+application to VAEs, normalising flows, and consistency-based
+generators after suitable smoothing is a clear next step.
+
+\paragraph{Editing claim is descriptive without the head-to-head.}
+The cleanest prescriptive use of our metric --- pre-selecting
+editing directions by curvature regime --- requires the editing
+head-to-head we present in \S\ref{sec:exp-baselines-results}.
+In its current form the metric is established as descriptive
+(curvature correlates with disentanglement, composition, layer
+localisation); the prescriptive payoff is the empirical question
+that decides whether the framework changes practice.

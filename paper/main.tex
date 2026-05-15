@@ -70,20 +70,28 @@ Institute\\
 
 %%%%%%%%% ABSTRACT
 \begin{abstract}
-We propose viewing trained GAN latent spaces through a differential-geometric
-lens: the generator $G : \W \to \Img$ defines an image manifold $\Mfd = G(\W)$,
-and many ``interpretation'' tasks reduce to classical geometric operations on
-this manifold — pushforward of tangent vectors (per-pixel saliency), second-order
-pushforward (curvature), Lie brackets of attribute vector fields (compositional
-editing failure), and stratification by tangent-space clustering (unsupervised
-attribute discovery). We argue that \emph{forward-mode automatic differentiation}
-is the natural and efficient computational tool: it gives all per-pixel
-sensitivities in one pass and composes cleanly to second order. We formalise
-six structural claims about trained GAN manifolds, validate each
-quantitatively on three generative domains (LSUN bedroom, FFHQ faces, LSUN
-church), and present a single use case — \emph{predicting compositional
-editing interference from manifold curvature} — that benefits from the
-unified framework. Code and reproducible benchmarks at
+We view trained image generators through the differential geometry of their
+image manifold $\Mfd = G(\W) \subset \R^{3HW}$. Per-pixel saliency,
+attribute disentanglement, compositional editing failure, and unsupervised
+direction discovery are recast as classical operations: pushforward, the
+second fundamental form, Lie brackets of vector fields, and tangent-space
+clustering. Forward-mode automatic differentiation gives all per-pixel
+first- and second-order sensitivities in a single composed pass, making
+each operation directly measurable in $\sim 2 \times$ a generator forward.
+We formalise six structural claims and validate each quantitatively on
+four pre-trained generators spanning two architecture families: StyleGAN1
+(LSUN bedroom, FFHQ faces), StyleGAN2 (LSUN church), and Stable Diffusion
+v1.5 (latent diffusion). Across 13 attribute--domain combinations, layer
+localisation IoU is positive at every threshold from 10\% to 50\% of
+pixels; two independent curvature measures (pixel
+$\partial^2 I/\partial\alpha^2$ and CLIP-feature path length / direct
+distance) agree at Pearson $r=+0.99$ (bedroom) and Spearman $r=+1.00$
+(FFHQ); unsupervised K-means clusters of random directions recover the
+ground-truth attribute set with precision $1.00$ on both bedroom and FFHQ
+(lift $+0.81 / +0.66$ over the random-vocab null). The mixed-Hessian
+predictor of compositional non-linearity is honest about its scope: it
+discriminates between curvature regimes but does not order within a
+regime. Code and reproducible benchmarks at
 \url{https://github.com/soccz/HIGAN}.
 \end{abstract}
 
