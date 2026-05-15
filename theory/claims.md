@@ -146,16 +146,23 @@ HiGAN's view boundary.
 
 ---
 
-## Quick status summary
+## Quick status summary (updated 2026-05-15 Week 1)
 
 | Claim | Theory done | Bedroom evidence | FFHQ evidence | Church evidence | Quantitative metric |
 |------|-----------|---------------|--------------|---------------|--------------------|
-| C1   | ✓         | ✓             | ⬜            | ⬜             | partial            |
-| C2   | ✓         | qualitative   | ⬜            | ⬜             | ⬜                  |
-| C3   | ✓         | ✓             | ⬜            | ⬜             | partial            |
-| C4   | ✓         | qualitative   | ⬜            | ⬜             | ⬜                  |
+| C1   | ✓         | ✓             | **✓**         | **✓**          | mean/median/p95 stats |
+| C2   | ✓         | ✓ (view 23.2) | **✓** (pose 49.9, eye 22.8) | partial (no structural attr) | ratio across attributes |
+| C3   | ✓         | ✓             | partial       | ⬜             | needs canonical-layer IoU |
+| C4   | ✓         | **✓ (Spearman 0.48, p=0.01, n=28)** | **✓ (Spearman 0.81, p=0.005, n=10)** | ⬜ (3 pairs only) | Spearman + scatter plot |
 | C5   | ✓         | ✓             | ⬜            | n/a           | ✓                  |
-| C6   | ✓         | partial       | ⬜            | ⬜             | ⬜                  |
+| C6   | ✓         | partial       | ⬜            | ⬜             | needs precision/recall vs labels |
+
+**Week 1 progress** (cross-domain validation):
+- C1 replicates on FFHQ (1024^2 StyleGAN1) and church (256^2 StyleGAN2).
+- **C2** non-linearity ratio replicates with the same structural-vs-textural pattern:
+  - Bedroom view 23.2, FFHQ pose 49.9 / eyeglasses 22.8 — same order of magnitude for "structural / topological" attributes across architectures.
+  - Note: absolute ratio scales differ between StyleGAN1 and StyleGAN2 (church ~0.04 floor vs bedroom ~0.5 floor) — C2 should be stated as **domain-relative ordering**, not absolute.
+- **C4** Spearman positive and significant on both domains where multiple pairs are available.
 
 **Bottom line.** All 6 theory writeups exist (Month 1 ≈ done).
 Cross-domain experiments and quantitative metrics are the bulk of Months
