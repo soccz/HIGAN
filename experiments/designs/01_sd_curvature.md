@@ -76,8 +76,17 @@ dx0_dα = jvp(lambda α: ddim_sample_from(h_t + α*v_a, t),
 For the 50-step schedule starting from $t_{\text{edit}} = 0.5T$, this
 is 25 U-Net evaluations under JVP.
 
-**Second derivative.** Composed JVP — `jvp(jvp(...))` — as we already
-do for StyleGAN, applied to the same DDIM chain.
+**Second derivative.** Smoke test 2 showed that *composed* JVP through
+25 DDIM steps OOMs at 512² on 8 GB. We therefore compute the second
+derivative as a **finite-difference of two first-order JVPs**:
+$\partial^2 x_0/\partial\alpha^2 \approx
+(\partial x_0/\partial \alpha\,|_{+\epsilon} -
+ \partial x_0/\partial \alpha\,|_{-\epsilon}) / (2\epsilon)$
+with $\epsilon = 0.05$. Peak memory equals a single first-order JVP
+(fits comfortably with ~1300 MB free), and the two JVPs run
+sequentially. This is the same construction Park et al. NeurIPS 2023
+use for the diffusion Jacobian (their pullback metric is computed
+via FD-of-JVP), so the precedent is clean.
 
 **Saliency map.** Per-pixel $|d x_0/d\alpha|$ averaged across the 3 RGB
 channels, just as in StyleGAN.
