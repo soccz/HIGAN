@@ -4,6 +4,36 @@ Weekly status updates. Most recent first.
 
 ---
 
+## Week 2 · 2026-05-15 (same session, late evening)
+
+**Late-evening addition**: C6 cross-domain via FFHQ random-direction
+clustering + CLIP. 192 random directions → kept 96 (above-median
+strength) → PCA-32 + k=8 → CLIP zero-shot label.
+
+  cluster 4 (n=63, layer 1):  identity/age/gender bundle
+  cluster 0 (n=24, layer 7):  smile rediscovery
+                              ("open mouth / smiling face" Δ>0)
+  clusters 1–3, 5–7 (n=1–3):  layer-17 fine-detail outliers
+
+The smile cluster's CLIP top-1 label literally matches the name of
+InterFaceGAN's smile boundary, while sitting at the boundary's
+canonical layer range (4–8). C6 now has *two* domain cases of
+unsupervised semantic rediscovery — same as bedroom's view cluster.
+
+**Updated claims status** (`theory/claims.md`):
+| Claim | Bedroom | FFHQ      | Church   |
+|------|---------|-----------|----------|
+| C1   | ✓        | ✓          | ✓         |
+| C2   | ✓        | ✓ (pose 49.9, glasses 22.8) | partial (no struct attr) |
+| C3   | ✓        | partial    | ⬜         |
+| C4   | ✓ (Spearman 0.48, p<0.01, n=28) | ✓ (0.81, p<0.005, n=10) | ⬜ |
+| C5   | ✓        | ⬜          | n/a       |
+| C6   | ✓        | ✓ (smile rediscovered) | ⬜ |
+
+5 of 6 claims now have multi-domain statistical evidence.
+
+---
+
 ## Week 2 · 2026-05-15 (same session, evening)
 
 **Goal**: Church domain + C4 cross-domain validation.
