@@ -163,7 +163,7 @@ HiGAN's view boundary.
 |------|-----------|---------------|--------------|---------------|--------------------|
 | C1   | ✓         | ✓             | ✓             | ✓              | mean/median/p95 stats |
 | C2   | ✓         | ✓ (view 23.2) | ✓ (pose 49.9, eye 22.8) | partial (no structural attr) | ratio across attributes |
-| C3   | ✓         | **✓ (mean +0.087, 8/8 positive)** | partial   | ⬜             | layer-pair IoU difference |
+| C3   | ✓         | **✓ (8/8 positive at top-10/20/30/50%)** | **✓ (5/5 positive at top-10/20/30/50%, mean +0.16)** | ⬜             | layer-pair IoU difference, threshold-robust |
 | C4   | ✓         | ✓ (Spearman 0.48, p=0.01, n=28; no-view -0.17 n=21 — regime, not within) | ✓ (Spearman 0.81, p=0.005, n=10; no-pose +0.60 n=6) | ⬜ (3 pairs only) | Spearman + scatter plot |
 | C5   | ✓         | ✓             | ⬜            | n/a           | recon vs saliency-vs-GT |
 | C6   | ✓         | ✓ (view auto-labelled) | ✓ (smile auto-labelled) | ⬜ | precision via K-sweep |
