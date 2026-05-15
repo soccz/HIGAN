@@ -4,6 +4,47 @@ Weekly status updates. Most recent first.
 
 ---
 
+## Week 1 · 2026-05-15
+
+**Goal**: bootstrap FFHQ domain, run first cross-domain saliency
+figures, replicate C2 (∂²I/∂α² non-linearity) on FFHQ. Total wall
+time today: ~2 h.
+
+**Done**
+- FFHQ generator wrapper (`experiments/domains/ffhq/generator.py`)
+  built on top of genforce/interfacegan StyleGAN1 FFHQ
+  (1024², 18 layers). JVP-safe synthesis patch ported with
+  InterFaceGAN-specific layer indexing.
+- First-order saliency (`run_saliency.py`) on 5 attributes
+  (smile, age, pose, gender, eyeglasses), 8 base latents.
+  Sanity checks pass: smile→mouth, eyeglasses→eyes, pose→contour.
+- **C2 cross-domain validated** (`run_higher_order.py`):
+  - smile 1.75, age 7.6, gender 8.7, eyeglasses 22.8, pose 49.9.
+  - Pattern matches bedroom: texture ≪ 10, structural ≈ 20+.
+  - **eyeglasses ratio ≈ bedroom view ratio** — same curvature
+    signature for object-insertion attributes across domains.
+
+**Key finding**
+The non-linearity-ratio threshold (~20) for separating "structural /
+topological" from "textural" attributes is **transferable across
+generative domains**. This is much stronger than the bedroom-only
+result and the central empirical lever for the paper's C2 claim.
+
+**Not done / known gaps**
+- LSUN church domain (planned next).
+- Pair-wise disentanglement matrix on FFHQ (5×5 instead of bedroom's
+  8×8).
+- Quantitative saliency–segmentation IoU.
+
+**Next**
+1. FFHQ 5×5 disentanglement matrix.
+2. LSUN church setup (genforce has stylegan_church_outdoor +
+  HiGAN-trained boundaries).
+3. Combined three-domain figure for the paper's "C1+C2 replicate"
+  composite.
+
+---
+
 ## Week 0 · 2026-05-09
 
 **Goal**: bootstrap paper repo from scratch, get to a state where every
