@@ -1,0 +1,44 @@
+# Large pre-trained weights and outputs — stored elsewhere
+experiments/**/data/
+experiments/**/ckpt/
+experiments/**/out/
+data/
+*.pt
+*.pth
+*.npy
+*.npz
+*.webp
+*.gif
+
+# LaTeX build artefacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/sections/*.aux
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# scratch and big experiments
+scratch/
+
+# user study raw data (privacy)
+experiments/user_study/raw/

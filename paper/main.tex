@@ -1,0 +1,131 @@
+% =============================================================
+% HIGAN paper main.tex — CVPR template skeleton (v0 draft)
+% Compile with: pdflatex main && bibtex main && pdflatex main x2
+% =============================================================
+%
+% IMPORTANT: the CVPR style file is NOT shipped with this repo.
+% Download cvpr.sty / cvpr_template.tex from the latest CVPR
+% template and place alongside this file before compiling.
+%
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}             % CVPR official style — fetch separately
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[bookmarks=false]{hyperref}
+\usepackage{microtype}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc, arrows.meta, decorations.pathreplacing}
+
+% --- our macros ---
+\newcommand{\jvp}{\textsc{jvp}\xspace}
+\newcommand{\vjp}{\textsc{vjp}\xspace}
+\newcommand{\hvp}{\textsc{hvp}\xspace}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\W}{W^+}
+\newcommand{\Mfd}{\mathcal{M}}
+\newcommand{\Img}{\mathcal{I}}
+\newcommand{\dG}[1]{\mathrm{d}G_{#1}}
+\newcommand{\todo}[1]{\textcolor{red}{[\textbf{TODO}: #1]}}
+\newcommand{\note}[1]{\textcolor{blue}{[\textbf{note}: #1]}}
+
+% theorem environments
+\newtheorem{claim}{Claim}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\cvprfinalcopy % uncomment for camera-ready
+
+\def\cvprPaperID{****}
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+\ifcvprfinal\pagestyle{empty}\fi
+
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Forward-Mode Differential Geometry of GAN Latent Spaces:\\
+       Per-Pixel Curvature and Compositional Editing Prediction}
+
+\author{Jihong An\\
+Affiliation\\
+Institute\\
+{\tt\small ether9073@gmail.com}
+% For a paper whose authors are all at the same institution,
+% omit the following lines until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+}
+
+\maketitle
+\thispagestyle{empty}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+We propose viewing trained GAN latent spaces through a differential-geometric
+lens: the generator $G : \W \to \Img$ defines an image manifold $\Mfd = G(\W)$,
+and many ``interpretation'' tasks reduce to classical geometric operations on
+this manifold — pushforward of tangent vectors (per-pixel saliency), second-order
+pushforward (curvature), Lie brackets of attribute vector fields (compositional
+editing failure), and stratification by tangent-space clustering (unsupervised
+attribute discovery). We argue that \emph{forward-mode automatic differentiation}
+is the natural and efficient computational tool: it gives all per-pixel
+sensitivities in one pass and composes cleanly to second order. We formalise
+six structural claims about trained GAN manifolds, validate each
+quantitatively on three generative domains (LSUN bedroom, FFHQ faces, LSUN
+church), and present a single use case — \emph{predicting compositional
+editing interference from manifold curvature} — that benefits from the
+unified framework. Code and reproducible benchmarks at
+\url{https://github.com/soccz/HIGAN}.
+\end{abstract}
+
+%-------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+\input{sections/01_introduction}
+
+%-------------------------------------------------------------------------
+\section{Related Work}
+\label{sec:related}
+\input{sections/02_related}
+
+%-------------------------------------------------------------------------
+\section{Theoretical Framework}
+\label{sec:theory}
+\input{sections/03_theory}
+
+%-------------------------------------------------------------------------
+\section{Method}
+\label{sec:method}
+\input{sections/04_method}
+
+%-------------------------------------------------------------------------
+\section{Empirical Validation of the Six Claims}
+\label{sec:experiments}
+\input{sections/05_experiments}
+
+%-------------------------------------------------------------------------
+\section{Application: Compositional Editing Prediction}
+\label{sec:application}
+\input{sections/06_application}
+
+%-------------------------------------------------------------------------
+\section{Limitations and Discussion}
+\label{sec:discussion}
+\input{sections/07_discussion}
+
+%-------------------------------------------------------------------------
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{references}
+}
+
+\end{document}

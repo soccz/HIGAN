@@ -1,0 +1,61 @@
+% =====================================================
+% 05_experiments.tex — ~3 pg
+% =====================================================
+\todo{full experiments — three domains, six claims, five baselines}
+
+\subsection{Domains and setup}
+We validate every claim on three pretrained generative domains:
+\textbf{LSUN bedroom} (HiGAN, 8 attribute boundaries),
+\textbf{FFHQ faces} (StyleGAN2 + InterFaceGAN boundaries),
+and \textbf{LSUN church} (HiGAN, 2-3 boundaries).
+All evaluations use $N = 32$ to $128$ latent samples and average over
+seed.
+
+\subsection{Baselines}
+We compare against five existing methods on the same data and
+metrics:
+\textbf{GAN Dissection}~\cite{Bau2019GANDissection},
+\textbf{GANSpace}~\cite{Harkonen2020GANSpace},
+\textbf{SeFa}~\cite{Shen2021SeFa},
+\textbf{StyleSpace}~\cite{Wu2021StyleSpace},
+and \textbf{Grad-CAM} with a CLIP-distilled attribute classifier as
+the closest classifier-based analogue. Comparison is on
+saliency–segmentation IoU, direction-recovery precision/recall (for
+unsupervised methods), and wall-clock.
+
+\subsection{C1 — Curvature is measurable across domains}
+\todo{table: $\bar{\rho}$ for each (attribute, domain) pair with
+$N \in \{8, 16, 32, 64, 128\}$ to show convergence; expected pattern:
+$\bar{\rho} = O(1)$ for texture, $\bar{\rho} \gg 1$ for structural.}
+
+\subsection{C2 — Curvature predicts topological transitions}
+\todo{using pretrained semantic segmentation
+(Mask2Former~\cite{cheng2022masked}), count the number of distinct
+labels in sweep frames at $\alpha \in [-3, +3]$; high-$\bar{\rho}$
+directions should change this count.}
+
+\subsection{C3 — Boundaries are layer-localised sections}
+\todo{8-by-14 saliency matrix for bedroom, equivalent for FFHQ and
+church. Quantitative coherence score = IoU(saliency at canonical
+layer, saliency at GT wp).}
+
+\subsection{C4 — Mixed-Hessian predictor of compositional failure}
+\todo{scatter plot: $P(a, b)$ (predictor) vs $1 - \mathrm{corr}(a,b)$
+(measured failure). Report Spearman $\rho$ across all
+$\binom{n}{2}$ pairs for each domain; target $|\rho| > 0.6$.}
+
+\subsection{C5 — Encoder chart consistency}
+\todo{table: 5 checkpoints, two metrics (recon MSE, saliency
+correlation to GT). Show that saliency correlation improves at much
+higher rate than recon MSE. (Result already exists for bedroom; need
+to retrain or borrow encoder for FFHQ.)}
+
+\subsection{C6 — Unsupervised rediscovery of attribute boundaries}
+\todo{Per domain: $N \in \{64, 128, 256, 512\}$ random directions,
+k-means with $k \in \{4, 8, 16\}$, measure precision/recall of
+(cluster, hand-curated boundary) matching. Also show CLIP top-1
+labelling accuracy.}
+
+\subsection{Forward vs reverse mode wall-clock}
+\todo{table comparing \jvp / vmap+vjp / finite difference / per-pixel
+backward at matched-accuracy regime, on RTX 3070 8 GB and an A100.}

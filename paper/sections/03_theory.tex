@@ -1,0 +1,92 @@
+% =====================================================
+% 03_theory.tex — ~1.5 pg
+% =====================================================
+\todo{draft — full content in theory/*.md; this is the LaTeX-ified short version}
+
+\subsection{Setup}
+Let $\W \cong \R^{LD}$ be the StyleGAN $W^+$ latent space and
+$\Img = [-1,1]^{3 \times H \times W}$ the image domain. The generator
+$G : \W \to \Img$ is $C^2$ at almost every $wp$ (true for the
+ReLU/AdaIN architectures we consider, off a measure-zero set).
+The \emph{image manifold} is $\Mfd = G(\W) \subset \Img$.
+
+\subsection{Pushforward and first-order saliency}
+The differential $\dG{wp} : T_{wp} \W \to T_{G(wp)} \Mfd$ sends a
+latent tangent vector to its first-order image response. For a unit
+direction $b \in T \W$,
+\begin{equation}
+  \dG{wp}(b) \;=\; \frac{\partial G(wp + \alpha b)}{\partial \alpha}\bigg|_{\alpha = 0}
+\end{equation}
+is exactly what \texttt{torch.func.jvp(G, (wp,), (b,))} returns. We
+define the \emph{first-order saliency map}
+\begin{equation}
+  S^{(1)}_{h,w}(wp, b) \;=\; \tfrac{1}{3}\sum_c \big| [\dG{wp}(b)]_{c,h,w} \big|.
+\end{equation}
+Its prior-averaged version $\bar{S}^{(1)}(b)$ is our pixel-attribution
+counterpart to Grad-CAM~\cite{Selvaraju2017GradCAM}.
+
+Forward mode is the right algorithmic choice: the perturbation lives
+in $\R^1$ (one scalar magnitude) while the output lives in
+$\R^{3HW} \approx 2\!\times\!10^5$. Reverse mode would require $3HW$
+backward passes for the same per-pixel information.
+
+\subsection{Second-order pushforward and extrinsic curvature}
+The Hessian-vector product
+\begin{equation}
+  H(wp, b) \;=\; \frac{\partial^2 G(wp + \alpha b)}{\partial \alpha^2}\bigg|_{\alpha=0}
+  \;\in\; \R^{3HW}
+\end{equation}
+is computable in one \emph{composed} \jvp: $\jvp \circ \jvp$. Its
+projection onto the normal bundle of $\Mfd$ is the second fundamental
+form of the embedding $\Mfd \hookrightarrow \R^{3HW}$. The magnitude
+$|H|$ upper-bounds the magnitude of the intrinsic extrinsic curvature
+and is in any case a directly meaningful "non-linearity per pixel"
+quantity. The \emph{non-linearity ratio}
+\begin{equation}
+  \rho_{h,w}(wp, b) \;=\; \frac{S^{(2)}_{h,w}(wp, b)}{S^{(1)}_{h,w}(wp, b) + \epsilon}
+\end{equation}
+distinguishes directions whose edits remain in a linear regime
+($\rho \ll 1$) from those that introduce topological transitions
+($\rho \gg 1$).
+
+\subsection{The six claims}
+\begin{claim}[C1: measurable curvature]
+For every smooth direction $b$ and base $wp$, $H(wp, b)$ is
+well-defined and computable by composed forward \jvp.
+\end{claim}
+
+\begin{claim}[C2: curvature predicts topology change]
+Directions with $\bar{\rho} \gg 1$ produce edits that change the set
+of image-space level sets (object insertion / removal), whereas
+$\bar{\rho} \approx 1$ directions only repaint pixel values.
+\end{claim}
+
+\begin{claim}[C3: boundaries are layer-localised sections]
+A boundary direction $b \in \R^D$ is a section of the layer fibration
+$\pi : \W \to \{1,\dots,L\}$. Applied off its canonical fibre, $b$
+produces large but semantically incoherent pushforwards.
+\end{claim}
+
+\begin{claim}[C4: compositional failure follows from the mixed Hessian]
+Compositional editing failure between directions $b_a, b_b$ is
+predicted by $\E_{wp}\|d^2 G_{wp}(b_a, b_b)\|$, normalised by
+$\E\|\dG{wp} b_a\| \cdot \E\|\dG{wp} b_b\|$.
+\end{claim}
+
+\begin{claim}[C5: encoders are charts]
+An encoder $E : \Img \to \W$ approximates a coordinate chart on
+$\Mfd$. Its quality is best measured by chart consistency
+(agreement of derivatives) rather than reconstruction error.
+\end{claim}
+
+\begin{claim}[C6: random directions stratify the manifold]
+K-means clustering of $\Phi(b) = \E_{wp} \bar{S}^{(1)}(wp, b)$ for
+$N \gtrsim 128$ random unit directions produces a stratification of
+$\Mfd$ whose largest clusters recover hand-curated attribute boundaries
+without supervision.
+\end{claim}
+
+Each claim is independently testable. Several are causally connected
+— C4 is a consequence of the Hessian formula and C1, and C6 is the
+many-direction extension of C1+C2. We present quantitative validation
+for all six in \S\ref{sec:experiments}.

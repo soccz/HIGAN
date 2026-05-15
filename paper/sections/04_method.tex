@@ -1,0 +1,80 @@
+% =====================================================
+% 04_method.tex — ~1 pg
+% =====================================================
+\todo{draft — concrete algorithms with pseudocode and complexity}
+
+\subsection{First-order pushforward saliency}
+\begin{algorithmic}
+\STATE \textbf{Input:} generator $G$, base latent $wp$, direction $b$, sample count $N$
+\STATE \textbf{Output:} averaged first-order saliency map
+\STATE
+\STATE $\bar S \leftarrow 0$
+\FOR{$n = 1, \ldots, N$}
+  \STATE $wp_n \sim p(\W)$
+  \STATE $(\_, \dot y) \leftarrow \texttt{torch.func.jvp}(G, (wp_n,), (b,))$
+  \STATE $\bar S \mathrel{+}= \tfrac{1}{N} \cdot |\dot y|_{\text{mean over RGB}}$
+\ENDFOR
+\RETURN $\bar S$
+\end{algorithmic}
+
+Cost: $N$ forward passes, no extra memory per pass.
+
+\subsection{Second-order pushforward via composed \jvp}
+\begin{algorithmic}
+\STATE $\bar H \leftarrow 0$
+\FOR{$n = 1, \ldots, N$}
+  \STATE $wp_n \sim p(\W)$
+  \STATE $\dot f(\alpha) := \texttt{jvp}(\lambda\alpha. G(wp_n + \alpha b), (\alpha,), (1,))_{[1]}$
+  \STATE $(\_, \ddot y) \leftarrow \texttt{jvp}(\dot f, (0,), (1,))$
+  \STATE $\bar H \mathrel{+}= \tfrac{1}{N} \cdot |\ddot y|_{\text{mean over RGB}}$
+\ENDFOR
+\RETURN $\bar H$
+\end{algorithmic}
+
+Cost: $\sim 2.2 N$ forward passes, $2\times$ activation memory.
+
+\subsection{Mixed Hessian for compositional prediction}
+For directions $b_a, b_b$, replace the inner function by
+$G(wp_n + \alpha b_a + \beta b_b)$ and differentiate in $\alpha$ then
+$\beta$:
+\begin{equation*}
+  \mathrm{inner}(\beta) := \texttt{jvp}(\lambda \alpha. G(\ldots), (0,), (1,))_{[1]}
+\end{equation*}
+\begin{equation*}
+  \mathrm{mixed} := \texttt{jvp}(\mathrm{inner}, (0,), (1,))_{[1]} \;\;=\;\; d^2 G(b_a, b_b)
+\end{equation*}
+
+This is the workhorse for the compositional-editing-prediction
+experiment in \S\ref{sec:application}.
+
+\subsection{Random-direction stratification}
+\begin{algorithmic}
+\STATE Sample $N$ unit directions on per-layer $S^{D-1}$.
+\STATE Compute $\Phi(b_n)$ via Algorithm 1 for each.
+\STATE Apply PCA-32 to the $\Phi$ vectors.
+\STATE Run k-means with $k = 8$ (we ablate this choice).
+\STATE Caption each centroid with CLIP zero-shot top-1 from a fixed
+       vocabulary (see supp.).
+\end{algorithmic}
+
+\subsection{Engineering: \jvp-safe pre-trained generators}
+Composed \jvp through StyleGAN-family generators requires removing
+operations that escape the dual-tensor abstraction. We discovered
+one such operation in the genforce StyleGAN bedroom synthesis
+(\texttt{self.lod.cpu().tolist()}); we replace it with a cached
+Python float at wrapper construction. We provide the patch in
+supplementary code for StyleGAN, StyleGAN2, and HiGAN variants.
+
+\subsection{Comparison to finite differences}
+A finite-difference estimator
+$\hat S^{(1)} \approx (G(wp + \delta b) - G(wp - \delta b))/(2\delta)$
+is an alternative. We show in \S\ref{sec:experiments} that:
+\begin{itemize}
+\item For $\delta \in [0.1, 1]$, FD matches \jvp within $\sim 5\%$ in
+      norm for first-order quantities on smooth directions.
+\item For second-order quantities, FD requires four function
+      evaluations and suffers $O(1/\delta)$ error in the derivative;
+      composed \jvp avoids this entirely.
+\item \jvp is also $\sim 1.6\times$ wall-clock faster at the matched
+      accuracy regime.
+\end{itemize}

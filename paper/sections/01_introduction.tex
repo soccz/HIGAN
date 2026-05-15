@@ -1,0 +1,78 @@
+% =====================================================
+% 01_introduction.tex
+% =====================================================
+\todo{full draft — 1 page}
+
+A trained generative adversarial network~\cite{Karras2019StyleGAN,
+Karras2020StyleGAN2} defines a smooth map $G : \W \to \Img$ from a
+Euclidean latent space to an ambient image space. Recent
+interpretability work has produced a rich vocabulary for asking
+questions about this map: which spatial regions does an attribute
+boundary affect~\cite{Bau2019GANDissection, Shen2020InterFaceGAN}?
+What unsupervised directions exist~\cite{Harkonen2020GANSpace,
+Shen2021SeFa}? How disentangled are the resulting
+edits~\cite{Wu2021StyleSpace, Eastwood2020DisentanglementMetrics}?
+
+We argue that these questions admit a unified treatment through
+\emph{differential geometry}. The generator's image set $\Mfd = G(\W)$
+is a finite-dimensional immersed submanifold of $\R^{3HW}$, and the
+above questions correspond, respectively, to (i)~the pushforward of
+tangent vectors through $G$, (ii)~the spectrum of $dG$ restricted to
+the manifold tangent space, (iii)~the structure of the
+\emph{second}-order pushforward, and (iv)~the commutator (Lie bracket)
+of attribute-induced vector fields.
+
+This paper makes three contributions.
+
+\textbf{1. A geometric framework.} We formalise six structural claims
+about trained GAN manifolds (\S\ref{sec:theory}, claims C1--C6) that
+together describe the tangent and curvature structure of $\Mfd$ and how
+it interacts with attribute editing.
+
+\textbf{2. An efficient computational realisation.} For our regime —
+single-direction input, many-pixel output — \emph{forward-mode}
+automatic differentiation (\jvp) is the right algorithmic direction.
+A single composed \jvp computes first- and second-order per-pixel
+sensitivities in $\sim 2.2 \times$ the cost of a vanilla generator
+forward pass. We further exploit this for unsupervised attribute
+discovery via tangent-space clustering.
+
+\textbf{3. An applied payoff: compositional editing prediction.} We
+show that the \emph{mixed Hessian} $d^2 G(b_a, b_b)$, also estimable
+via composed \jvp, predicts when two attribute boundaries combine
+non-linearly when applied simultaneously. The same machinery that
+visualises individual attribute saliency tells us which edit
+combinations are safe and which will interfere.
+
+We validate every claim on three pre-trained generative domains
+(LSUN bedroom, FFHQ faces, LSUN church) and compare against five
+baselines spanning the segmentation-based dissection
+\cite{Bau2019GANDissection}, unsupervised
+factorisation~\cite{Harkonen2020GANSpace, Shen2021SeFa}, per-channel
+style analysis~\cite{Wu2021StyleSpace}, and gradient attribution
+\cite{Selvaraju2017GradCAM} families. A user study on local-edit
+precision confirms that saliency-mask-guided editing is preferred over
+global editing by human raters.
+
+The framework is classifier-free: every signal comes from the
+generator's own derivative structure, not from a separately trained
+attribute classifier. This removes a major source of bias and
+re-training overhead that has constrained prior GAN attribution
+methods.
+
+% ---- structure-of-paper paragraph ----
+The remainder of the paper proceeds as follows.
+\S\ref{sec:related} positions the work against
+GAN-interpretation, classical saliency, Riemannian deep-learning
+geometry, and forward-mode autodiff literatures.
+\S\ref{sec:theory} introduces the geometric framework and the six
+claims.
+\S\ref{sec:method} describes the \jvp-based estimators.
+\S\ref{sec:experiments} validates each claim across three domains
+with quantitative metrics and baselines.
+\S\ref{sec:application} shows the compositional-editing-prediction
+result and a saliency-guided local editing user study.
+\S\ref{sec:discussion} discusses limitations, particularly the
+restriction to constant vector fields (linear boundaries) and
+implications for non-linear edit methods like
+EditGAN~\cite{Ling2021EditGAN}.

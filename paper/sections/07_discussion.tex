@@ -1,0 +1,45 @@
+% =====================================================
+% 07_discussion.tex — ~0.5 pg
+% =====================================================
+\todo{honest limitations}
+
+\paragraph{Linear boundaries only.}
+The Lie-bracket analysis in \S\ref{sec:theory} treats attribute
+directions as constant vector fields on $\W$. For learned non-linear
+edits — e.g. EditGAN's part-conditioned edit
+vectors~\cite{Ling2021EditGAN} — the full Lie bracket of generally
+varying vector fields is non-zero and may dominate the Hessian term.
+Extending the curvature prediction to such cases is open.
+
+\paragraph{Forward mode only goes so far.}
+For first-order pushforward and HVP we exploit forward mode
+maximally. Pure reverse-mode setups (existing Grad-CAM frameworks
+trained on classifier loss) cannot directly compete, but
+high-dimensional latent-space optimisation (e.g. PTI) is best done in
+reverse. We consider forward mode complementary, not a replacement.
+
+\paragraph{Domain coverage and generators.}
+We validated on three style-based generators (HiGAN bedroom, StyleGAN2
+FFHQ, HiGAN church). Diffusion-based generators have a different
+mathematical structure (stochastic, time-conditional) and our
+framework as stated does not directly apply; an analogous
+score-function-Hessian formulation is open work.
+
+\paragraph{User study scope.}
+Our user study covers $\sim 90$ image–attribute pairs across three
+domains. Results are statistically significant but cannot speak to
+artist-grade editing workflows where context-sensitive judgement
+dominates.
+
+\paragraph{Theoretical assumptions.}
+We assume $G$ is $C^2$ at the sampled latents. ReLU non-smoothness
+forms a measure-zero set in $\W$ and we did not encounter
+numerical issues in practice, but a fully rigorous statement requires
+piece-wise smooth differential geometry — see supplementary remark.
+
+\paragraph{Beyond GANs.}
+The differential-geometric view applies, with adaptation, to any
+generative model defined by a smooth map from a latent space. We
+expect direct application to VAEs, normalising flows, and
+score-based generators after suitable smoothing; this is a clear next
+step.

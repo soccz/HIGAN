@@ -1,0 +1,56 @@
+% =====================================================
+% 02_related.tex — short related work, ~0.5–0.75 page
+% =====================================================
+\todo{trim to 0.5–0.75 pg, cite 25–30 papers, expand to full survey in supp.}
+
+\paragraph{GAN interpretation and attribute editing.}
+\textbf{Unit-level / segmentation-based dissection}
+\cite{Bau2019GANDissection} probes individual generator units via
+attached segmentation classifiers. \textbf{Boundary-based editing}
+\cite{Shen2020InterFaceGAN, Yang2020HiGAN} learns linear hyperplanes
+in $W^+$ for semantic attributes; we use the resulting boundaries as
+inputs to our analysis. \textbf{Unsupervised discovery} approaches —
+PCA on activations~\cite{Harkonen2020GANSpace}, closed-form factorisation
+of the affine layer~\cite{Shen2021SeFa}, and channel-wise style
+manipulation~\cite{Wu2021StyleSpace} — find directions without
+labels; we compare against these on rediscovery of hand-curated
+boundaries.
+
+\paragraph{Classical saliency.}
+CAM~\cite{Zhou2016CAM} and Grad-CAM~\cite{Selvaraju2017GradCAM}
+attribute classifier decisions to spatial regions via either pooled
+weights or class-score gradients. Our pushforward saliency parallels
+Grad-CAM in spirit but operates on the generator alone, with no
+classifier. We discuss this distinction in \S\ref{sec:method} and
+include real Grad-CAM (through a CLIP-distilled attribute classifier)
+as a baseline in \S\ref{sec:experiments}.
+
+\paragraph{Differential geometry of neural networks.}
+Natural gradient methods~\cite{Amari1998NaturalGradient} and
+geometric deep learning~\cite{Bronstein2021GeometricDL} formalise the
+ambient geometry of \emph{parameter} space and \emph{input} domains.
+Our setting is different: we study the geometry of the manifold of
+\emph{outputs} learned by a fixed generator. Closest in spirit is
+\cite{Zhu2016ManipulationOnManifold}, which introduced the "natural
+image manifold" formulation; we provide a tractable curvature
+estimator on this manifold.
+
+\paragraph{Forward-mode autodifferentiation.}
+The Pearlmutter trick~\cite{Pearlmutter1994HVP} for Hessian-vector
+products underlies modern second-order optimisation
+\cite{Martens2015KFAC} and is implemented as \texttt{torch.func.jvp}
+and \texttt{jax.jvp}~\cite{PyTorch2023functorch}. To our knowledge no
+prior work applies \emph{composed} forward-mode \jvp to GAN latent
+spaces for per-pixel curvature and compositional editing
+prediction.
+
+\paragraph{Other related directions.}
+Compositional editing approaches such as
+GANalyze~\cite{Goetschalckx2019GANalyze} and steerable
+GANs~\cite{Jahanian2020Steerability} explicitly treat latent
+manipulations as vector fields. EditGAN~\cite{Ling2021EditGAN}
+performs non-linear edits using segmentation supervision.
+StyleCLIP~\cite{Patashnik2021StyleCLIP} uses CLIP for text-driven
+editing; we use CLIP only to label automatically discovered
+clusters. A full survey of $\sim$60 references is provided in the
+supplementary material.
