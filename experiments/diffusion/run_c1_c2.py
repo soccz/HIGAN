@@ -34,6 +34,7 @@ from torch.func import jvp
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from lib.reproducibility import set_deterministic, run_metadata     # noqa: E402
 from diffusion.generator import SDH, SDConfig                       # noqa: E402
 
 NEUTRAL_PROMPT = "a face, neutral expression, photograph"
@@ -163,8 +164,10 @@ def main():
                     default=TIMESTEP_FRACS)
     ap.add_argument("--resolution", type=int, default=512)
     ap.add_argument("--out", default="experiments/out/sd_c1_c2")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
 
+    set_deterministic(seed=args.seed)
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
@@ -298,10 +301,14 @@ def main():
         results["per_attr"].append({"attr": attr, "per_t": per_t})
 
         # incremental save in case the run is interrupted
+        results["_meta"] = run_metadata(seed=args.seed,
+                                         extra={"track": "1_sd_c1c2"})
         with open(out / "metrics_partial.json", "w") as fp:
             json.dump(results, fp, indent=2)
 
     # final save + plot
+    results["_meta"] = run_metadata(seed=args.seed,
+                                     extra={"track": "1_sd_c1c2"})
     with open(out / "metrics.json", "w") as fp:
         json.dump(results, fp, indent=2)
     print(f"\nsaved {out / 'metrics.json'}")

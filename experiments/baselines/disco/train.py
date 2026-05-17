@@ -27,6 +27,8 @@ PAPER = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PAPER / "experiments"))
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 from domains.ffhq.generator import FFHQGenerator                  # noqa: E402
 from baselines.latentclr.model import DirectionBank, nt_xent_loss  # noqa: E402
 from baselines.latentclr.train import install_feature_hook         # noqa: E402
@@ -45,13 +47,16 @@ def train(K: int = 100, B: int = 8, chunk: int = 10,
           lr: float = 5e-4, direction_scale: float = 6.0,
           feature_layer: int = 10, temperature: float = 0.5,
           ortho_weight: float = 0.5,
-          out: str = "experiments/out/disco_ffhq", seed: int = 0):
+          out: str = "experiments/out/disco_ffhq", seed: int = 0,
+          lod: float = 2.0):
     out_p = Path(out)
     out_p.mkdir(parents=True, exist_ok=True)
 
-    G = FFHQGenerator()
+    set_deterministic(seed=seed)
+    G = FFHQGenerator(lod_override=lod)
     G_dev = G.device
-    torch.manual_seed(seed)
+    print(f"[DisCo] FFHQ generator at lod={lod} "
+          f"(resolution {G.resolution // (2**int(lod))}²)")
 
     bank = DirectionBank(K, G.w_dim).to(G_dev)
     opt = torch.optim.Adam(bank.parameters(), lr=lr)
@@ -138,7 +143,9 @@ if __name__ == "__main__":
     ap.add_argument("--temperature", type=float, default=0.5)
     ap.add_argument("--ortho-weight", type=float, default=0.5)
     ap.add_argument("--out", default="experiments/out/disco_ffhq")
-    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--seed", type=int, default=2027)
+    ap.add_argument("--lod", type=float, default=2.0,
+                    help="StyleGAN1 lod override (2=256², 0=1024²)")
     args = ap.parse_args()
 
     train(**{k: v for k, v in vars(args).items()})

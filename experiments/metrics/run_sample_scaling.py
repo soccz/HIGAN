@@ -25,6 +25,8 @@ PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 
 def per_sample_ratio(G, base_wp, b_layered, idx) -> float:
     """ratio = mean |∂²I/∂α²| / mean |∂I/∂α|, single sample."""
@@ -62,7 +64,10 @@ def main():
     ap.add_argument("--n-max", type=int, default=128)
     ap.add_argument("--Ns", nargs="+", type=int, default=[8, 16, 32, 64, 128])
     ap.add_argument("--out", default=None)
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out or
                f"experiments/out/sample_scaling_{args.domain}")

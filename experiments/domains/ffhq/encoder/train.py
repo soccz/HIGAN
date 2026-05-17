@@ -22,10 +22,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-PAPER = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(PAPER / "experiments"))
+PAPER = Path(__file__).resolve().parents[4]   # paper/
+EXPERIMENTS = PAPER / "experiments"
+sys.path.insert(0, str(EXPERIMENTS))
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 
+from lib.reproducibility import set_deterministic, run_metadata  # noqa: E402
 from domains.ffhq.generator import FFHQGenerator           # noqa: E402
 from higan_dev.encoder.model import WPlusEncoder, WPlusEncoderCfg  # noqa: E402
 from higan_dev.losses import ImageReconLoss                # noqa: E402
@@ -60,8 +62,10 @@ def main():
     ap.add_argument("--backbone", default="resnet50")
     ap.add_argument("--log-every", type=int, default=50)
     ap.add_argument("--ckpt-every", type=int, default=1000)
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
 
+    set_deterministic(seed=args.seed)
     out = Path(args.out)
     (out / "ckpt").mkdir(parents=True, exist_ok=True)
     (out / "vis").mkdir(parents=True, exist_ok=True)

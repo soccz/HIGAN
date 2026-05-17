@@ -23,6 +23,8 @@ PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 
 def per_sample_ratio(G, base_wp, b_layered, idx):
     wp = base_wp[idx:idx + 1].detach()
@@ -47,6 +49,8 @@ def main():
     ap.add_argument("--num-samples", type=int, default=32)
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out or
                f"experiments/out/noise_robustness_{args.domain}")

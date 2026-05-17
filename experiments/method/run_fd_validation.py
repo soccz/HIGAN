@@ -25,6 +25,8 @@ PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 
 def composed_jvp(G, wp, bl):
     """Reference: |d²G(b, b)| pixel map via composed JVP."""
@@ -66,7 +68,10 @@ def main():
     ap.add_argument("--epsilons", nargs="+", type=float,
                     default=[1e-1, 1e-2, 1e-3, 1e-4, 1e-5])
     ap.add_argument("--out", default="experiments/out/fd_validation")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)

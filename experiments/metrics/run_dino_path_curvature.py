@@ -22,6 +22,8 @@ PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 PIXEL_RATIOS_BEDROOM = {
     "indoor_lighting": 0.495, "wood": 0.624, "carpet": 0.95,
     "cluttered_space": 0.85, "glossy": 0.92, "dirt": 0.93,
@@ -106,7 +108,10 @@ def main():
                     default=[-3.0, 3.0])
     ap.add_argument("--alpha-steps", type=int, default=13)
     ap.add_argument("--out", default="experiments/out/dino_path_curvature")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)

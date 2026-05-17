@@ -23,8 +23,9 @@ import torch
 import torch.nn.functional as F
 from torch.func import jvp
 
-PAPER = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(PAPER / "experiments"))
+PAPER = Path(__file__).resolve().parents[4]   # paper/
+EXPERIMENTS = PAPER / "experiments"
+sys.path.insert(0, str(EXPERIMENTS))
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 
 from domains.ffhq.generator import FFHQGenerator             # noqa: E402

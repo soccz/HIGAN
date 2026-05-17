@@ -25,6 +25,8 @@ PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 
 def per_layer_ratio(G, b_dir, base_wp, layer_idx, n_samples):
     """ρ for boundary applied only to a single layer."""
@@ -55,7 +57,10 @@ def main():
     ap.add_argument("--domain", choices=["bedroom", "ffhq"], required=True)
     ap.add_argument("--n-samples", type=int, default=16)
     ap.add_argument("--out", default=None)
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out or
                f"experiments/out/per_layer_c1_{args.domain}")

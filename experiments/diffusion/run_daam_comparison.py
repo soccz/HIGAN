@@ -24,6 +24,8 @@ import torch.nn.functional as F
 PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 from diffusion.generator import SDH, SDConfig                      # noqa: E402
 
 
@@ -177,7 +179,10 @@ def main():
     ap.add_argument("--jvp-sal-dir", default="experiments/out/sd_c1_c2",
                     help="dir with Track 1 JVP saliencies (per-seed images)")
     ap.add_argument("--out", default="experiments/out/sd_daam")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)

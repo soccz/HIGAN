@@ -40,6 +40,8 @@ PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER / "experiments"))
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 from domains.ffhq.generator import FFHQGenerator                  # noqa: E402
 from baselines.ganspace import ganspace_directions                # noqa: E402
 from baselines.sefa import sefa_directions                        # noqa: E402
@@ -191,7 +193,10 @@ def main():
     ap.add_argument("--disco-path",
                     default="experiments/out/disco_ffhq/directions.npy")
     ap.add_argument("--out", default="experiments/out/editing_head_to_head")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)

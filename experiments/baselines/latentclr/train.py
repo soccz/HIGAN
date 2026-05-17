@@ -25,6 +25,7 @@ PAPER = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PAPER / "experiments"))
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
 from domains.ffhq.generator import FFHQGenerator                  # noqa: E402
 from baselines.latentclr.model import (                            # noqa: E402
     DirectionBank, nt_xent_loss,
@@ -52,15 +53,23 @@ def train(K: int = 100, B: int = 16, epochs: int = 100,
           direction_scale: float = 6.0, feature_layer: int = 10,
           temperature: float = 0.5,
           out: str = "experiments/out/latentclr_ffhq", seed: int = 0,
-          chunk: int = 25):
+          chunk: int = 25, lod: float = 2.0):
     """K is the number of directions; chunk controls how many directions
-    we forward per minibatch slice (memory)."""
+    we forward per minibatch slice (memory).
+
+    lod (level-of-detail): StyleGAN1 supports lod=2 → 256² rendering with
+    ~10× less activation memory than lod=0 → 1024². Since LatentCLR only
+    uses synthesis-layer-10 features (mid-level), the 256² rendering is
+    feature-space equivalent for contrastive training, and fits in 8 GB.
+    Set lod=0 for 1024² rendering (will OOM on 8 GB with K=100)."""
     out_p = Path(out)
     out_p.mkdir(parents=True, exist_ok=True)
 
-    G = FFHQGenerator()
+    set_deterministic(seed=seed)
+    G = FFHQGenerator(lod_override=lod)
     G_dev = G.device
-    torch.manual_seed(seed)
+    print(f"[LatentCLR] FFHQ generator at lod={lod} "
+          f"(resolution {G.resolution // (2**int(lod))}²)")
 
     bank = DirectionBank(K, G.w_dim).to(G_dev)
     opt = torch.optim.Adam(bank.parameters(), lr=lr)
@@ -141,7 +150,10 @@ if __name__ == "__main__":
     ap.add_argument("--feature-layer", type=int, default=10)
     ap.add_argument("--temperature", type=float, default=0.5)
     ap.add_argument("--out", default="experiments/out/latentclr_ffhq")
-    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--seed", type=int, default=2027)
+    ap.add_argument("--lod", type=float, default=2.0,
+                    help="StyleGAN1 lod override (2=256², 1=512², 0=1024²); "
+                    "lod≥1 needed for K=100 chunk=8+ on 8GB")
     args = ap.parse_args()
 
     train(K=args.K, B=args.B, epochs=args.epochs,
@@ -149,4 +161,5 @@ if __name__ == "__main__":
           direction_scale=args.direction_scale,
           feature_layer=args.feature_layer,
           temperature=args.temperature,
-          out=args.out, seed=args.seed, chunk=args.chunk)
+          out=args.out, seed=args.seed, chunk=args.chunk,
+          lod=args.lod)

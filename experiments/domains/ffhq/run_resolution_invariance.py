@@ -21,6 +21,8 @@ from scipy.stats import spearmanr
 PAPER = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PAPER / "experiments"))
 
+from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
+
 from domains.ffhq.generator import FFHQGenerator                  # noqa: E402
 
 
@@ -89,7 +91,10 @@ def main():
     ap.add_argument("--lods", nargs="+", type=float, default=[0, 1, 2])
     ap.add_argument("--num-samples", type=int, default=16)
     ap.add_argument("--out", default="experiments/out/ffhq_resolution")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
+
+    set_deterministic(seed=getattr(args, 'seed', 2027))
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
