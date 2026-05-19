@@ -78,8 +78,8 @@ def main():
 
     rng = torch.Generator(device=device).manual_seed(9999)  # disjoint
     wp_test = G.sample_wp(args.num_test, generator=rng)
-    with torch.no_grad():
-        img_test = G.synthesize(wp_test).clamp(-1, 1)
+    # Memory-frugal: never materialize the full (N, 3, 1024, 1024) tensor on GPU.
+    # All per-sample work happens in a loop over single samples.
 
     results = []
     for ck in args.ckpts:
@@ -92,17 +92,29 @@ def main():
         n_iter = int(state.get("iter", 0))
         print(f"\n== ckpt {ck} (iter={n_iter}) ==")
 
+        # Pre-compute wp_pred for all test samples (small tensor, fits)
+        wp_pred_list = []
+        recon_mse_sum = 0.0
+        recon_l2_256_sum = 0.0
         with torch.no_grad():
-            target_small = F.interpolate(img_test, size=(256, 256),
-                                          mode="bilinear", align_corners=False)
-            wp_pred = enc(target_small)
-            img_pred = G.synthesize(wp_pred).clamp(-1, 1)
-            recon_mse = F.mse_loss(img_pred, img_test).item()
-            # cheap LPIPS-ish: feature MSE on VGG; for simplicity use
-            # downscaled L2 in image space as the recon-quality proxy.
-            recon_l2_256 = F.mse_loss(
-                F.interpolate(img_pred, 256), F.interpolate(img_test, 256)
-            ).item()
+            for s in range(args.num_test):
+                wp_gt_s = wp_test[s:s + 1]
+                img_gt_s = G.synthesize(wp_gt_s).clamp(-1, 1)
+                tgt_small = F.interpolate(img_gt_s, size=(256, 256),
+                                           mode="bilinear", align_corners=False)
+                wp_pred_s = enc(tgt_small)
+                img_pred_s = G.synthesize(wp_pred_s).clamp(-1, 1)
+                recon_mse_sum += F.mse_loss(img_pred_s, img_gt_s).item()
+                recon_l2_256_sum += F.mse_loss(
+                    F.interpolate(img_pred_s, 256),
+                    F.interpolate(img_gt_s, 256)
+                ).item()
+                wp_pred_list.append(wp_pred_s.detach())
+                torch.cuda.empty_cache()
+        recon_mse = recon_mse_sum / args.num_test
+        recon_l2_256 = recon_l2_256_sum / args.num_test
+        wp_pred = torch.cat(wp_pred_list, dim=0)
+        print(f"  recon_mse={recon_mse:.6f}  recon_l2_256={recon_l2_256:.6f}")
 
         # saliency correlation per attribute
         per_attr_corr = {}
