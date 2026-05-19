@@ -48,6 +48,7 @@ def main():
                     default=[2027, 2028, 2029, 2030, 2031])
     ap.add_argument("--num-samples", type=int, default=32)
     ap.add_argument("--out", default=None)
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
 
     set_deterministic(seed=getattr(args, 'seed', 2027))

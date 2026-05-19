@@ -28,6 +28,7 @@ EXPERIMENTS = PAPER / "experiments"
 sys.path.insert(0, str(EXPERIMENTS))
 sys.path.insert(0, str(PAPER.parent / "higan_dev"))
 
+from lib.reproducibility import set_deterministic, run_metadata  # noqa: E402
 from domains.ffhq.generator import FFHQGenerator             # noqa: E402
 from higan_dev.encoder.model import WPlusEncoder, WPlusEncoderCfg  # noqa: E402
 
@@ -56,8 +57,10 @@ def main():
                     help="paths to encoder checkpoint files")
     ap.add_argument("--num-test", type=int, default=64)
     ap.add_argument("--out", default="experiments/out/ffhq_c5/eval")
+    ap.add_argument("--seed", type=int, default=2027)
     args = ap.parse_args()
 
+    set_deterministic(seed=args.seed)
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
@@ -143,8 +146,11 @@ def main():
         })
         print(f"  recon_mse={recon_mse:.4f}  mean sal_corr={agg:+.3f}")
 
+    payload = {"results": results,
+                "_meta": run_metadata(seed=args.seed,
+                                       extra={"track": "4_c5_eval"})}
     with open(out / "c5_eval.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(payload, f, indent=2)
 
     # plot
     import matplotlib
