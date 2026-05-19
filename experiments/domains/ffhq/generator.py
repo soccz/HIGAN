@@ -42,6 +42,23 @@ class FFHQGenerator(nn.Module):
     def __init__(self, model_name: str = "stylegan_ffhq", device: str = "cuda",
                  lod_override: float | None = None):
         super().__init__()
+        # If HiGAN was loaded earlier in the same Python process, its
+        # `higan_repo/` is on sys.path AND its `models.stylegan_generator`
+        # module is cached in sys.modules with a different API (no
+        # `latent_space_dim`). We must evict colliding modules and
+        # guarantee InterFaceGAN's path comes first.
+        import sys as _sys
+        _interfacegan = str(_INTERFACEGAN_REPO)
+        for _mod in list(_sys.modules.keys()):
+            if _mod == "models" or _mod.startswith("models."):
+                _f = getattr(_sys.modules[_mod], "__file__", "") or ""
+                if _interfacegan not in _f:
+                    del _sys.modules[_mod]
+        _sys.path[:] = [p for p in _sys.path
+                         if "higan_repo" not in p or _interfacegan in p]
+        if _interfacegan not in _sys.path:
+            _sys.path.insert(0, _interfacegan)
+
         _ensure_on_path()
         from models.stylegan_generator import StyleGANGenerator           # noqa: E402
 

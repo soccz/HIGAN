@@ -18,7 +18,7 @@ import torch
 from torch.func import jvp
 from scipy.stats import spearmanr
 
-PAPER = Path(__file__).resolve().parents[2]
+PAPER = Path(__file__).resolve().parents[3]   # paper/
 sys.path.insert(0, str(PAPER / "experiments"))
 
 from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
