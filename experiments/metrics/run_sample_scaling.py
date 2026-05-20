@@ -29,7 +29,13 @@ from lib.reproducibility import set_deterministic, run_metadata    # noqa: E402
 
 
 def per_sample_ratio(G, base_wp, b_layered, idx) -> float:
-    """ratio = mean |∂²I/∂α²| / mean |∂I/∂α|, single sample."""
+    """Per-pixel ratio convention (matching original run_higher_order.py):
+        first_map = |∂I/∂α| averaged over RGB         (H×W per-pixel)
+        second_map = |∂²I/∂α²| averaged over RGB      (H×W per-pixel)
+        ratio = (second_map / (first_map + 1e-6)).mean()
+    This is the mean-of-ratios convention used to populate paper §5
+    (e.g. bedroom view = 23.22, FFHQ pose = 49.87).
+    """
     wp = base_wp[idx:idx + 1].detach()
 
     def f(alpha):
@@ -43,9 +49,11 @@ def per_sample_ratio(G, base_wp, b_layered, idx) -> float:
     one = torch.ones(1, device=G.device)
     _, first = jvp(f, (a0,), (one,))
     _, second = jvp(df, (a0,), (one,))
-    first_mean = first.abs().mean().item()
-    second_mean = second.abs().mean().item()
-    return second_mean / max(first_mean, 1e-8)
+    # Per-pixel maps then per-pixel ratio (matches run_higher_order.py)
+    first_map = first.abs().mean(dim=1).squeeze(0)    # (H, W)
+    second_map = second.abs().mean(dim=1).squeeze(0)
+    ratio_map = second_map / (first_map + 1e-6)
+    return float(ratio_map.mean().item())
 
 
 def bootstrap_mean_ci(values: list[float], n_boot: int = 10_000,

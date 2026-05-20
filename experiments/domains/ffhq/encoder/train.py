@@ -53,7 +53,11 @@ def main():
                     default=[1000, 5000, 10000, 20000, 40000])
     ap.add_argument("--batch", type=int, default=1)
     ap.add_argument("--lr", type=float, default=1e-4)
-    ap.add_argument("--w-mse-weight", type=float, default=0.1)
+    ap.add_argument("--w-mse-weight", type=float, default=2.0,
+                    help="Higher = encoder forced toward wp_pred=wp_gt. "
+                    "FFHQ needs ≥1.0 for sal_corr to improve (bedroom "
+                    "tolerates 0.1 but FFHQ has 18 W+ layers and more "
+                    "wp-space ambiguity per image).")
     ap.add_argument("--pixel-weight", type=float, default=1.0)
     ap.add_argument("--lpips-weight", type=float, default=0.8)
     ap.add_argument("--lpips-size", type=int, default=256,

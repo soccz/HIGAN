@@ -83,16 +83,25 @@ def train(K: int = 100, B: int = 8, chunk: int = 10,
                     base_feat = cap["feat"].detach()
 
                 directions = bank.unit_dirs
-                feats = []
-                for k0 in range(0, K, chunk):
-                    k1 = min(k0 + chunk, K)
-                    chunk_dirs = directions[k0:k1]
+                # Gradient checkpointing for K=100 fit in 8GB
+                import torch.utils.checkpoint as cp
+
+                def synth_one(chunk_dirs):
                     wp_pos = wp_base.unsqueeze(0) + direction_scale * \
                              chunk_dirs.unsqueeze(1).unsqueeze(2)
                     wp_pos = wp_pos.reshape(-1, *wp_base.shape[1:])
                     _ = G.synthesize(wp_pos)
-                    feat_pos = cap["feat"]
-                    feat_diff = feat_pos - base_feat.repeat(k1 - k0, 1)
+                    feat_pos = cap["feat"].clone()
+                    return feat_pos - base_feat.repeat(
+                        chunk_dirs.shape[0], 1)
+
+                feats = []
+                for k0 in range(0, K, chunk):
+                    k1 = min(k0 + chunk, K)
+                    chunk_dirs = directions[k0:k1]
+                    feat_diff = cp.checkpoint(
+                        synth_one, chunk_dirs, use_reentrant=False
+                    )
                     feats.append(feat_diff)
                 features = torch.cat(feats, dim=0)
 

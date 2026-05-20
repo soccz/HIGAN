@@ -94,18 +94,32 @@ def train(K: int = 100, B: int = 16, epochs: int = 100,
                     base_feat = cap["feat"].detach()        # (B, C)
 
                 directions = bank.unit_dirs                  # (K, w_dim)
-                # forward each direction; chunk over K to fit memory
-                feats = []
-                for k0 in range(0, K, chunk):
-                    k1 = min(k0 + chunk, K)
-                    chunk_dirs = directions[k0:k1]           # (k1-k0, w_dim)
-                    # build batched wp: (chunk*B, L, D)
+                # Gradient checkpointing: forward each direction without
+                # holding the activations for backward; recompute them
+                # later. This is what lets K=100 fit in 8GB VRAM —
+                # otherwise the synthesizer's intermediate tensors for
+                # all K forwards pile up and OOM.
+                import torch.utils.checkpoint as cp
+
+                def synth_one(chunk_dirs):
+                    """Forward (k1-k0)*B latents, return feature_diff.
+                    Activations recomputed during backward.
+                    """
                     wp_pos = wp_base.unsqueeze(0) + direction_scale * \
                              chunk_dirs.unsqueeze(1).unsqueeze(2)
                     wp_pos = wp_pos.reshape(-1, *wp_base.shape[1:])
                     _ = G.synthesize(wp_pos)
-                    feat_pos = cap["feat"]                   # ((k1-k0)*B, C)
-                    feat_diff = feat_pos - base_feat.repeat(k1 - k0, 1)
+                    feat_pos = cap["feat"].clone()
+                    return feat_pos - base_feat.repeat(
+                        chunk_dirs.shape[0], 1)
+
+                feats = []
+                for k0 in range(0, K, chunk):
+                    k1 = min(k0 + chunk, K)
+                    chunk_dirs = directions[k0:k1]
+                    feat_diff = cp.checkpoint(
+                        synth_one, chunk_dirs, use_reentrant=False
+                    )
                     feats.append(feat_diff)
                 features = torch.cat(feats, dim=0)           # (K*B, C)
 
