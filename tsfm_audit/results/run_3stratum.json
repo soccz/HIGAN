@@ -1,0 +1,37 @@
+{
+  "config": {
+    "context": 256,
+    "horizon": 24,
+    "season": 24,
+    "model": "chronos-t5-small"
+  },
+  "strata": {
+    "in_domain": {
+      "stratum": "in_domain",
+      "n_series": 30,
+      "chronos_median_mase": 0.469671729346927,
+      "rlinear_median_mase": 1.4535224251551375,
+      "seasonal_naive_median_mase": 0.7418679387980232,
+      "chronos_minus_rlinear_gap": -0.9838506958082105,
+      "chronos_beats_rlinear_winrate": 1.0
+    },
+    "zero_shot": {
+      "stratum": "zero_shot",
+      "n_series": 15,
+      "chronos_median_mase": 0.5510939059708391,
+      "rlinear_median_mase": 2.0939784653230213,
+      "seasonal_naive_median_mase": 0.6481426928114457,
+      "chronos_minus_rlinear_gap": -1.5428845593521823,
+      "chronos_beats_rlinear_winrate": 1.0
+    },
+    "synthetic": {
+      "stratum": "synthetic",
+      "n_series": 9,
+      "chronos_median_mase": 0.7223738101302921,
+      "rlinear_median_mase": 0.7557612461793779,
+      "seasonal_naive_median_mase": 1.1049703398827575,
+      "chronos_minus_rlinear_gap": -0.033387436049085784,
+      "chronos_beats_rlinear_winrate": 0.5555555555555556
+    }
+  }
+}
