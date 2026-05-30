@@ -1,0 +1,153 @@
+% =============================================================
+% Short methods note. Honest, narrow, clean.
+% Build: pdflatex main && pdflatex main
+% =============================================================
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{microtype}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\jvp}{\textsc{jvp}}
+\newcommand{\fd}{\textsc{fd}}
+
+\title{\vspace{-2em}Forward-Mode Differential Geometry of Generative Manifolds:\\
+Exact Higher-Order Pushforward and the Failure of Finite Differences}
+\author{Jihong An \quad\texttt{ether9073@gmail.com}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We describe an exact, constant-memory instrument for the higher-order
+differential geometry of a trained image generator's latent-to-image map,
+built on forward-mode automatic differentiation (\jvp). A single forward pass
+yields the exact pushforward (first-order Jacobian--vector product); composing
+two forward passes yields the exact second-order pushforward (curvature term),
+and the construction extends to arbitrary order at constant memory. We then make
+a simple but practically important point precise: \emph{finite differences
+cannot substitute for this instrument}. On a toy map with analytically known
+derivatives, central finite differences (\fd) approximate the second-order term
+with at best $\sim$$10^{-8}$ relative error in double precision---$3.5\times10^{8}$
+times worse than the exact composed \jvp---and diverge under catastrophic
+cancellation as the step shrinks; on real generators in single precision the
+\fd{} second-order estimate never approaches the \jvp{} value at any step size.
+As a demonstration of what the instrument reveals, we report that per-layer
+curvature intensity decays monotonically across the synthesis layers of a
+StyleGAN generator (8/8 attributes, Spearman $\in[-0.96,-0.80]$), i.e.\ curvature
+concentrates in the coarse early layers. We deliberately make no claim that this
+curvature signal is an actionable predictor or controller of edit damage; a
+companion analysis finds that it is not, and we treat the instrument and the
+finite-difference fact as the contribution.
+\end{abstract}
+
+\section{Introduction}
+Let $G:\R^{d}\to\R^{3HW}$ be a trained generator mapping a latent code to an
+image, and let $\gamma(\alpha)=z_0+\alpha\,u$ be a straight latent path along a
+direction $u$. The local geometry of the image manifold along this path is
+governed by the pushforwards
+\[
+\dot I(\alpha)=\frac{\partial}{\partial\alpha}G(\gamma(\alpha)),
+\qquad
+\ddot I(\alpha)=\frac{\partial^2}{\partial\alpha^2}G(\gamma(\alpha)),
+\]
+the first being the image-space velocity and the second the curvature
+(acceleration) term. These are standard objects, but computing $\ddot I$ for a
+generator that outputs millions of pixels is usually approached either by
+finite differencing $G$, which is inaccurate (Section~\ref{sec:fd}), or by
+materializing Jacobians via reverse-mode automatic differentiation, which is
+memory-prohibitive at output dimension $3HW$. We instead use forward-mode
+automatic differentiation, which gives $\dot I$ and $\ddot I$ \emph{exactly} in
+one and two forward passes respectively, at the memory cost of a single forward
+pass.
+
+\section{Method: exact higher-order pushforward via composed \jvp}
+Forward-mode AD evaluates, for a map $f$ and a tangent $v$, the
+Jacobian--vector product $\partial f(x)[v]$ alongside $f(x)$ in one pass without
+forming the Jacobian. Taking $f=G$, $x=\gamma(\alpha)$, $v=u$ gives the exact
+first-order pushforward $\dot I(\alpha)$. The second-order term is the
+directional derivative of the first, so composing forward mode with itself,
+\[
+\ddot I(\alpha)
+=\frac{\partial}{\partial\alpha}\,\big[\partial G(\gamma(\alpha))[u]\big][u],
+\]
+is again exact and is evaluated by nesting two \jvp{} calls
+(\texttt{torch.func.jvp} of a function that itself returns a \jvp). Memory stays
+at one forward pass because no Jacobian is stored; the same nesting gives any
+order. The instrument is generator-agnostic: we ran it unmodified on StyleGAN1,
+StyleGAN2, and a latent-diffusion model.
+
+\section{Finite differences cannot recover the curvature term}
+\label{sec:fd}
+A natural objection is that one could just finite-difference $G$. We show this
+fails, with an analytic referee so that \jvp{} is not judged against itself.
+
+\paragraph{Toy map with known derivatives.}
+Let $f(\alpha)=\big[e^{0.7\alpha},\,\sin 3\alpha,\,(\alpha+0.4)^3,\,\tanh
+2\alpha,\,\alpha^2\cos\alpha\big]$, whose first and second derivatives are known
+in closed form. At $\alpha=0.3$ in double precision (finite differences' best
+case), Table~\ref{tab:toy} shows the central-\fd{} second-order relative error
+is U-shaped---truncation error at large step, catastrophic cancellation at small
+step---bottoming at $8.6\times10^{-9}$ near $\varepsilon=10^{-4}$ and diverging
+to $0.29$ by $\varepsilon=10^{-8}$. The composed \jvp{} attains
+$2.5\times10^{-17}$ (machine precision), i.e.\ \fd's best is $3.5\times10^{8}$
+times worse. No step size lets \fd{} recover the curvature.
+
+\begin{table}[h]\centering
+\begin{tabular}{rcc}
+\toprule
+$\varepsilon$ & central \fd{} 2nd-order rel.\ err.\ & \\
+\midrule
+$10^{-1}$ & $7.9\times10^{-3}$ & (truncation) \\
+$10^{-2}$ & $8.0\times10^{-5}$ & \\
+$10^{-4}$ & $8.6\times10^{-9}$ & (best) \\
+$10^{-6}$ & $3.0\times10^{-5}$ & \\
+$10^{-8}$ & $2.9\times10^{-1}$ & (cancellation) \\
+\midrule
+composed \jvp & $2.5\times10^{-17}$ & (exact) \\
+\bottomrule
+\end{tabular}
+\caption{Second-order accuracy on the analytic toy map at $\alpha=0.3$,
+double precision. Finite differences never approach \jvp.}
+\label{tab:toy}
+\end{table}
+
+\paragraph{Real generator.}
+On a StyleGAN bedroom generator in single precision, the \fd{} second-order
+estimate's relative error versus \jvp{} rises monotonically as the step shrinks
+across all tested attributes (e.g.\ for \texttt{view}, from $2.4$ at
+$\varepsilon=10^{-1}$ to $561$ at $\varepsilon=10^{-5}$; third-order errors reach
+$\sim$$10^{7}$), with no step recovering the curvature. The single-precision
+arithmetic that generators use makes the cancellation regime far more severe
+than the toy fp64 case.
+
+\section{What the instrument reveals: per-layer curvature structure}
+As a brief illustration, we apply the instrument layer-by-layer: restricting the
+tangent to each synthesis layer in turn and measuring the mean curvature
+intensity. Across the $8$ annotated StyleGAN-bedroom attributes, curvature
+intensity decays monotonically from the coarse early layers to the fine late
+layers ($8/8$ attributes, Spearman$(\text{layer},\text{intensity})\in[-0.96,
+-0.80]$): curvature is concentrated where coarse structure is set. This is a
+descriptive observation enabled by the exact instrument; we do not build a claim
+on top of it here.
+
+\section{Limitations and scope}
+This is a tools-and-numerics note. The instrument is a thin, exact wrapper around
+forward-mode AD; its value is in making exact higher-order pushforward routine
+and in the precise finite-difference comparison, not in algorithmic novelty. We
+explicitly do \emph{not} claim that the curvature signal predicts or controls
+perceptual/identity edit damage: a separate, rigorous analysis (across
+architectures, encoders, identity metrics, and $>$$2000$ matched edit pairs)
+finds that, after controlling for edit magnitude, curvature carries at most a
+weak, baseline-definition-dependent residual and is not an actionable
+per-direction edit-risk signal. We report that negative result honestly
+elsewhere and keep this note to what is clean: an exact instrument and the fact
+that finite differences cannot replace it.
+
+\end{document}
