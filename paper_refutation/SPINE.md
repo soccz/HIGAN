@@ -1,4 +1,23 @@
-# TARGET LOCK v4 (CONVERGED) — TMLR (primary) + ICLR/NeurIPS (upside)
+> ⚠️ **v5 DID NOT CONVERGE — it over-corrected toward the null. (6th audit, verified.)**
+> Three "floor" pillars are artifacts, NOT findings:
+> - **C4b "magnitude leak" (0.765/0.287) is a TAUTOLOGY** (independently reproduced):
+>   a RANDOM selector gives 0.730–0.745/0.251–0.265; low-ρ is the smaller-edit side
+>   only 51.9% (coin flip); mean magnitude flow to low-ρ = −0.0001. **DELETE C4b.**
+> - **"ρ reverses sign under LPIPS control" (−0.19/−0.38/−0.11) is CIRCULAR**:
+>   dmg_lpips correlates +0.92/+0.99/+0.92 with dmg_id → partialling the outcome on a
+>   copy of itself. Under TRUE magnitude controls the sign STAYS POSITIVE
+>   (partial(ρ,dmgID|attr_mag)=+0.27/+0.48/+0.20; |abs_alpha=+0.46/+0.72/+0.57). **DELETE.**
+> - **within-(seed,attr) collapse (+0.07/+0.16/−0.08)** is n=6/group noise.
+>
+> **HONEST POSITION (v6, pending framing decision):** ρ is a **weak, magnitude-
+> confounded, but NON-ZERO** per-direction edit-risk signal — positive partial-Spearman
+> **6/6 over clean latent-step magnitude (+0.46…+0.75)** — that **does NOT dominate**
+> edit magnitude in variance-ranking. Whether ρ "beats magnitude" is
+> **baseline-definition-dependent** (beats abs_alpha; not the outcome-coupled realized
+> Δ). Neither "ρ predicts" (v1) nor "ρ not actionable" (v5) holds. The 6-workflow
+> oscillation IS the finding: the signal is weak and the question is fragile.
+
+# TARGET LOCK v4 (CONVERGED) — TMLR (primary) + ICLR/NeurIPS (upside) [SUPERSEDED, see banner]
 
 **Re-locked 2026-05-30 after FOUR adversarial workflows. v1 ("ρ predicts damage")
 over-claimed; v2/v3 ("magnitude is a sufficient statistic / 0-41") over-claimed
@@ -94,7 +113,7 @@ The 95 control_v* versions live in a Robustness Appendix that defends, never nar
 | **C2c** | Curvature signature transfers across domains | k=2 clustering **92.3%** (12/13, bedroom+ffhq) | **Weak/Suggestive** | FIX: was 92.86%/13-14 (wrong; n=13, misassigns ffhq-eyeglasses). **Single-seed, no CI.** Bootstrap ≥100 + ARI vs label-permutation null. Drops to 77.8% incl SD. |
 | **C3** | ρ predicts damage rank (population), null-sensitive | FFHQ-only Spearman +0.38±0.08 (CLIP)/+0.32±0.09 (ArcFace); 3-domain CLIP ~+0.41, std ~0.15, spread bedroom +0.28→church +0.58; **null-sensitive 6/21** | **Weak, regime-dependent** | FIX label: the ±0.08 set is **FFHQ-only** (ArcFace=face). Report FDR over the ~125-test family; state which cells survive. Frame (per floor): ρ adds **no actionable per-direction value** — apparent residual is a between-attribute proxy that vanishes within-unit and reverses under LPIPS (see BASELINE row). |
 | **C4** | ρ matched-pair win-rate **collapses under tight magnitude matching** | tight-match (`matched_pair_magnitude_residual.json`): win ≈0.55, z≈+2.7 at rel≤0.05 (n≈646); **→ z≈+1.9 NS at rel≤0.02** (n≈247) | **Moderate (collapses)** | Raw 0.587 was magnitude-confounded (C4b). The residual that remains at moderate matching reverses under LPIPS control (BASELINE) → not actionable. Robust to pairing method. |
-| **C4b** | **Matched-pair benchmark leaks realized magnitude** (measurement-validity finding) | low-ρ wins **0.765** on smaller realized edits vs **0.287** on larger (pooled n=2489/2311); `build_matched_pairs` matches probe_gain+target, NOT realized Δ. (`residual_conservative.json`) | **Strong — A CONTRIBUTION** | Reproducible numbers (replaced unverifiable 80.7/30.8). This confound IS a result: latent-geometry-editing selection benchmarks silently re-encode edit magnitude. New §7/§8 subsection. |
+| ~~C4b~~ | ~~Matched-pair benchmark leaks realized magnitude~~ **DISPROVEN — TAUTOLOGY** | random selector reproduces 0.765/0.287 (0.730–0.745); low-ρ smaller-edit side only 51.9%; magflow −0.0001 | **DELETED** | Independently confirmed selector-independent. Remove from thesis/intro/§7/§8. The only defensible coupling is Spearman(ρ, realized-Δ)=+0.07/+0.41/+0.28 (modest, church/ffhq only). |
 | **C5** | ρ-gap stratification is **non-monotone even at matched magnitude** | DONE magnitude-matched (`c5_magnitude_matched.json`, rel≤0.05, n=646): Q1 0.56 → Q3 0.60 (peak) → **Q4 0.50/0.45 collapse** at extreme ρ-gap; Spearman(ρ-gap,win) −0.19. (unmatched was 0.551/0.551/0.598/0.540) | **Supporting (confirmed real)** | The inverted-U **survives** magnitude matching → not a pure artifact; at extreme ρ-separation low-ρ even *loses*. Consistent with **no actionable per-direction signal**. `deterministic_set=false` still needs a clean re-run. |
 | **BASELINE** | Magnitude operationally dominates; ρ's apparent residual is an **attribute-difficulty / magnitude-axis artifact** | within-(seed,attr) partial Spearman(ρ,dmgID\|attr-mag) = **+0.07 / +0.16 / −0.08**; **reverses under LPIPS control −0.19 / −0.38 / −0.11**; pooled looked +0.27/+0.48/+0.20 (between-attr proxy). incr CV-R² over realized-mag: large 1/6 (bedroom/LPIPS +0.43), **vanishes ffhq/ID (−0.010)** (`residual_conservative.json`, `rho_incremental_over_realized.json`) | **Strong — THE RECONCILED FLOOR** | Honest claim: **ρ is NOT an actionable per-direction risk signal**; magnitude dominates. Report the pooled-vs-within-unit gap + the LPIPS sign-flip as the reconciliation. |
 
