@@ -1,0 +1,61 @@
+{
+  "bedroom_LPIPS": {
+    "domain": "bedroom",
+    "metric": "LPIPS",
+    "n": 960,
+    "partial_spearman_rho_given_realized_mag": 0.37347885042620327,
+    "incr_cvr2_rho_over_realized_mag": 0.43511860855446505,
+    "marginal_spearman": 0.3686913315878137
+  },
+  "bedroom_ID": {
+    "domain": "bedroom",
+    "metric": "ID",
+    "n": 960,
+    "partial_spearman_rho_given_realized_mag": 0.26901096574013744,
+    "incr_cvr2_rho_over_realized_mag": 0.05336272182201385,
+    "marginal_spearman": 0.26932460592947494
+  },
+  "church_LPIPS": {
+    "domain": "church",
+    "metric": "LPIPS",
+    "n": 360,
+    "partial_spearman_rho_given_realized_mag": 0.5783715528050825,
+    "incr_cvr2_rho_over_realized_mag": 0.03286237836070893,
+    "marginal_spearman": 0.5883257844067614
+  },
+  "church_ID": {
+    "domain": "church",
+    "metric": "ID",
+    "n": 360,
+    "partial_spearman_rho_given_realized_mag": 0.4786012383757938,
+    "incr_cvr2_rho_over_realized_mag": 0.01304095627356594,
+    "marginal_spearman": 0.528689007374018
+  },
+  "ffhq_LPIPS": {
+    "domain": "ffhq",
+    "metric": "LPIPS",
+    "n": 600,
+    "partial_spearman_rho_given_realized_mag": 0.303632737660207,
+    "incr_cvr2_rho_over_realized_mag": 0.054934501397531865,
+    "marginal_spearman": 0.3697911383087133
+  },
+  "ffhq_ID": {
+    "domain": "ffhq",
+    "metric": "ID",
+    "n": 600,
+    "partial_spearman_rho_given_realized_mag": 0.19911535459323826,
+    "incr_cvr2_rho_over_realized_mag": -0.010170247731382198,
+    "marginal_spearman": 0.29794832763424
+  },
+  "_summary": {
+    "cells": 6,
+    "partial_spearman_positive": 6,
+    "partial_spearman_range": [
+      0.199,
+      0.578
+    ],
+    "incr_cvr2_large_gt_0.1": 1,
+    "incr_cvr2_vanish_le_0": 1,
+    "verdict": "real ordinal residual (6/6 partial Spearman positive), weak variance (incr CV-R2 large in 1/6, vanishes in 1/6)"
+  }
+}

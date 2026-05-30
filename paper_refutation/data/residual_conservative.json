@@ -1,0 +1,60 @@
+{
+  "residual": {
+    "bedroom": {
+      "n": 960,
+      "n_attrs": 8,
+      "pooled_partial_rho_dmgID_given_attrmag": 0.26901096574013744,
+      "within_unit_partial_rho_dmgID_given_attrmag": 0.0739614999282234,
+      "between_attr_spearman_meanrho_meanID": 0.2857142857140363,
+      "partial_rho_dmgID_given_LPIPS": -0.18684675979153328,
+      "spearman_rho_realized_attrmag": 0.06830792188359529
+    },
+    "church": {
+      "n": 360,
+      "n_attrs": 3,
+      "pooled_partial_rho_dmgID_given_attrmag": 0.4786012383757938,
+      "within_unit_partial_rho_dmgID_given_attrmag": 0.16037722220382591,
+      "between_attr_spearman_meanrho_meanID": NaN,
+      "partial_rho_dmgID_given_LPIPS": -0.3803229188293394,
+      "spearman_rho_realized_attrmag": 0.4105566658178868
+    },
+    "ffhq": {
+      "n": 600,
+      "n_attrs": 5,
+      "pooled_partial_rho_dmgID_given_attrmag": 0.19911535459323826,
+      "within_unit_partial_rho_dmgID_given_attrmag": -0.07999522586087553,
+      "between_attr_spearman_meanrho_meanID": 0.9999999999985855,
+      "partial_rho_dmgID_given_LPIPS": -0.11278616239886534,
+      "spearman_rho_realized_attrmag": 0.2833706760296524
+    }
+  },
+  "c4b_magnitude_leak": {
+    "bedroom": {
+      "low_wins_when_low_applies_SMALLER_edit": 0.7543554006968641,
+      "low_wins_when_low_applies_LARGER_edit": 0.30670926517571884,
+      "n_small": 1148,
+      "n_large": 1252,
+      "spearman_realizedmaggap_vs_lowwins": -0.4388197897256566
+    },
+    "church": {
+      "low_wins_when_low_applies_SMALLER_edit": 0.9281767955801105,
+      "low_wins_when_low_applies_LARGER_edit": 0.17366946778711484,
+      "n_small": 543,
+      "n_large": 357,
+      "spearman_realizedmaggap_vs_lowwins": -0.673155514183757
+    },
+    "ffhq": {
+      "low_wins_when_low_applies_SMALLER_edit": 0.6679197994987469,
+      "low_wins_when_low_applies_LARGER_edit": 0.3091168091168091,
+      "n_small": 798,
+      "n_large": 702,
+      "spearman_realizedmaggap_vs_lowwins": -0.32656961003093626
+    },
+    "POOLED": {
+      "low_wins_when_low_applies_SMALLER_edit": 0.7645640819606268,
+      "low_wins_when_low_applies_LARGER_edit": 0.28688879273041973,
+      "n_small": 2489,
+      "n_large": 2311
+    }
+  }
+}

@@ -1,0 +1,45 @@
+% =============================================================
+% paper_refutation/main.tex — v2 refutation rewrite (TMLR primary)
+% Venue-agnostic skeleton: drop in TMLR (tmlr.sty) or ICLR (iclr2027.sty) style.
+% Prose written per section only AFTER SPINE.md Step-0 verification passes.
+% =============================================================
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,multirow,graphicx,xcolor}
+\usepackage[bookmarks=false]{hyperref}
+\usepackage{microtype}
+
+% --- macros ---
+\newcommand{\jvp}{\textsc{jvp}\xspace}
+\newcommand{\rhoC}{\rho}                  % curvature ratio signal
+\newcommand{\Mfd}{\mathcal{M}}
+\newcommand{\todo}[1]{\textcolor{red}{[\textbf{TODO}: #1]}}
+\newtheorem{claim}{Claim}
+
+\title{Edit Magnitude is a Sufficient Statistic:\\
+       Latent Curvature Encodes Semantics but Does Not Predict or\\
+       Control Generative Edit Damage}
+\author{Jihong An \\ \texttt{ether9073@gmail.com}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\todo{abstract written LAST, after the body (per SPINE WORKPLAN order).}
+\end{abstract}
+
+\input{sections/01_introduction}
+\input{sections/02_related}
+\input{sections/03_method}
+\input{sections/04_signal_real}
+\input{sections/05_no_beat_magnitude}
+\input{sections/06_no_control}
+\input{sections/07_mechanism}
+\input{sections/08_baseline_protocol}
+\input{sections/09_conclusion}
+
+% \bibliographystyle{plain}
+% \bibliography{refs}
+\end{document}
