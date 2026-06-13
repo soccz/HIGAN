@@ -117,6 +117,27 @@ code{font-family:'JetBrains Mono',monospace;font-size:.84em;background:var(--bg2
 .fnext{margin-top:.9rem;padding-top:.8rem;border-top:1px dashed var(--bdl);font-size:.88rem;font-weight:500;color:var(--grn);}
 .fnext::before{content:'→ ';font-weight:700;}
 .fstep.fail .fnext{color:var(--red);}
+/* evidence tiers (성공/실패 확실하게) */
+.tier{margin-bottom:1.5rem;}
+.tier-h{font-weight:700;font-size:1.02rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem;}
+.tier-h .dot{width:11px;height:11px;border-radius:50%;flex:none;}
+.tier.win .dot{background:var(--grn);}.tier.lose .dot{background:var(--red);}.tier.gray .dot{background:var(--amb);}
+.tier-h .cnt{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--mut);font-weight:500;}
+.ev{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;padding:.65rem .95rem;border:1px solid var(--bd);border-radius:8px;margin-bottom:.5rem;background:var(--card);align-items:center;}
+.ev-t{font-size:.89rem;color:var(--tx);font-weight:500;}.ev-t .sub{display:block;color:var(--tx2);font-size:.8rem;font-weight:400;margin-top:.1rem;line-height:1.5;}
+.ev-n{font-family:'JetBrains Mono',monospace;font-size:.76rem;font-weight:600;white-space:nowrap;text-align:right;}
+.ev.win{border-left:3px solid var(--grn);}.ev.win .ev-n{color:var(--grn);}
+.ev.lose{border-left:3px solid var(--red);}.ev.lose .ev-n{color:var(--red);}
+.ev.gray{border-left:3px solid var(--amb);}.ev.gray .ev-n{color:var(--amb);}
+/* future challenge cards */
+.fut{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+@media(max-width:680px){.fut{grid-template-columns:1fr;}}
+.futc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:1.4rem 1.5rem;border-top:3px solid var(--ac);}
+.futc .fct{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--mut);letter-spacing:.06em;margin-bottom:.35rem;}
+.futc h4{font-size:.98rem;font-weight:700;margin-bottom:.55rem;line-height:1.4;}
+.futc p{font-size:.86rem;line-height:1.62;margin-bottom:.5rem;}
+.futc .need{font-size:.79rem;color:var(--tx2);border-top:1px dashed var(--bdl);padding-top:.55rem;margin-top:.65rem;}
+.futc .need b{color:var(--ac);font-weight:700;}
 /* tables */
 .tbl-wrap{overflow-x:auto;border:1px solid var(--bd);border-radius:10px;margin:1.4rem 0;background:var(--card);}
 table.led{width:100%;border-collapse:collapse;font-size:.82rem;}
@@ -248,33 +269,83 @@ footer a{color:var(--tx2);text-decoration:none;}footer a:hover{color:var(--ac);}
 </div></section><hr>
 
 <section class="bl alt"><div class="container">
-<div class="lab">04 · 결산 — 무엇이 살아남고 무엇이 무너졌나</div><h2>같은 원장에 공존하는 성공과 실패</h2>
-<div class="grid2">
-<div class="card g"><h4>살아남음</h4>
-<p>① forward-mode JVP 곡률 도구 (cross-arch, 정확)</p>
-<p>② FD는 곡률 복원 못 함 — toy로 airtight (<span class="num">8.6e-9</span> vs <span class="num">2.5e-17</span>)</p>
-<p>③ per-layer 곡률 단조감소 (8/8, Spearman −0.96~−0.80)</p>
-<p>④ 곡률-vs-magnitude의 baseline-fragility를 규명한 것</p></div>
-<div class="card r"><h4>무너짐 (정직하게)</h4>
-<p>① edit-risk를 예측·제어하는 actionable 신호 — fragile</p>
-<p>② cross-encoder 보편성 — 1개 attr 빼면 Pearson 0.99→0.10</p>
-<p>③ FFHQ C5 인코더 전이 — sal_corr 0.07 정체</p>
-<p>④ Park NeurIPS23 재현 ρ=0.04 / real-LSUN 전이 +1148%</p></div>
+<div class="lab">04 · 결산 — 성공과 실패, 확실하게</div><h2>같은 원장의 세 층위</h2>
+<p class="lead">결과를 셋으로 가른다: 어떤 공격에도 견딘 <strong>확실한 성공</strong>,
+숫자가 분명한 <strong>확실한 실패</strong>, 그리고 강해 보였지만 검증에서 무너진 <strong>artifact</strong>.</p>
+
+<div class="tier win">
+<div class="tier-h"><span class="dot"></span>확실한 성공 — 적대적 검증을 견딤 <span class="cnt">clean wins</span></div>
+<div class="ev win"><span class="ev-t">forward-mode JVP 곡률 도구<span class="sub">toy 해석적 정답에서 정확도 검증. FD는 어떤 step에서도 곡률 복원 불가(truncation↔cancellation).</span></span><span class="ev-n">JVP 2.5e-17<br>vs FD 8.6e-9</span></div>
+<div class="ev win"><span class="ev-t">per-layer 곡률 단조감소<span class="sub">곡률이 coarse 초기 layer에 집중. 8/8 attribute 전부 단조.</span></span><span class="ev-n">Spearman<br>−0.96~−0.80</span></div>
+<div class="ev win"><span class="ev-t">noise robustness<span class="sub">잡음 섭동에도 곡률 순위 안정 — 측정 자체는 견고.</span></span><span class="ev-n">bed +0.986<br>ffhq +1.000</span></div>
+<div class="ev win"><span class="ev-t">cross-arch 단일패스 실행 + 재현성<span class="sub">SG1·SG2·SD 가로질러 실행. 743 감사실행 0 실패, 17자리 bit-identical.</span></span><span class="ev-n">JVP 45.6ms<br>0 fail</span></div>
 </div>
-<div class="callout"><p><strong>도구 + FD-non-recoverability만 깨끗하게 살아남았다.</strong> 짧은 methods note로 banking.</p></div>
+
+<div class="tier lose">
+<div class="tier-h"><span class="dot"></span>확실한 실패 — 숫자가 분명함 <span class="cnt">clean fails</span></div>
+<div class="ev lose"><span class="ev-t">Park NeurIPS23 재현<span class="sub">강한 σ↔ρ 상관을 기대했으나 사실상 0. 선행연구 주장 재현 실패.</span></span><span class="ev-n">ρ = 0.04<br>Spear −0.15</span></div>
+<div class="ev lose"><span class="ev-t">real-LSUN 인코더 전이<span class="sub">합성으로 학습한 인코더가 실사진엔 무너짐 — synthetic supervision 한계.</span></span><span class="ev-n">gap +1148%</span></div>
+<div class="ev lose"><span class="ev-t">FFHQ C5 인코더 saliency 전이<span class="sub">160k iter·w_mse=2.0까지 올려도 정체. 못 풀었다.</span></span><span class="ev-n">sal_corr 0.07</span></div>
+<div class="ev lose"><span class="ev-t">church(StyleGAN2) 제어기<span class="sub">cross-architecture 제어 — random/low-risk baseline한테 짐.</span></span><span class="ev-n">&lt; baseline</span></div>
+<div class="ev lose"><span class="ev-t">saliency-vs-segmentation 정렬<span class="sub">곡률 saliency가 의미 분할과 정렬한다는 신호 없음.</span></span><span class="ev-n">Spearman None</span></div>
+</div>
+
+<div class="tier gray">
+<div class="tier-h"><span class="dot"></span>강해 보였으나 artifact — 검증에서 무너짐 <span class="cnt">looked strong, weren't</span></div>
+<div class="ev gray"><span class="ev-t">edit-risk 예측·제어 신호<span class="sub">6번 결론 뒤집힘. baseline 정의에 따라 답이 갈리는 fragile 신호.</span></span><span class="ev-n">6× 뒤집힘</span></div>
+<div class="ev gray"><span class="ev-t">cross-encoder 보편성<span class="sub">3개 인코더 Pearson 0.97–0.99로 강해 보였으나, 지배적 attr 1개(view/pose) 빼면 붕괴.</span></span><span class="ev-n">0.99 → 0.10</span></div>
+<div class="ev gray"><span class="ev-t">"magnitude가 충분통계량"<span class="sub">"0/41"의 baseline이 outcome과 결합된 leaky 4-feature MAX. 깨끗한 baseline엔 ρ가 6/6 이김.</span></span><span class="ev-n">0/41 = leak</span></div>
+<div class="ev gray"><span class="ev-t">matched-pair magnitude leak<span class="sub">0.765/0.287로 강해 보였으나 — 무작위 selector도 재현하는 tautology.</span></span><span class="ev-n">random도 재현</span></div>
+<div class="ev gray"><span class="ev-t">cross-domain k=2 클러스터링<span class="sub">92.86% 일치로 헤드라인감이었으나 single-seed, n=14, CI 없음.</span></span><span class="ev-n">92.86% (n=14)</span></div>
+</div>
 </div></section><hr>
 
 <section class="bl"><div class="container">
-<div class="lab">05 · 피벗 & 메타 교훈</div><h2>다음 질문도 같은 패턴 — 왜 반복됐나</h2>
-<p class="lead"><strong>피벗:</strong> HIGAN이 tool-first라 약했나 싶어, problem-first로 "오픈 TSFM zero-shot SOTA가
-오염인가"를 감사했다. 그런데 "Chronos가 baseline 박살" gap은 <strong>baseline-starvation artifact</strong>(짧은
-series)였고, 제대로 된 baseline엔 겨우 0.03 이김 — 부풀릴 advantage가 없었다. <em>같은 패턴, 같은 날 shelved.</em></p>
-<p><strong>메타 교훈:</strong> 두 번 다 강한 신호=artifact, 진짜 효과=thin. 구조적이다 — "주장이 진짜냐"를 엄격히
-감사하면 대부분 부풀려져 있으니 <em>깎는(deflationary) 결과</em>로 수렴한다. top-venue가 원하는 "새로 되는 것"이
-아니라 "주장이 안 맞다" 쪽. 그래서 멈췄다. 깨끗한 것을 banking하고, 다음 큰 시도는 감사가 아니라
-<strong>positive-construction</strong>으로 — 새 시점에.</p>
-<div class="callout"><p><strong>그래도 rigor는 남는다.</strong> 6번의 뒤집힘을 워크플로우 6번이 아니라 Day 3에 잡게 된 것 —
-자기 자신을 속이지 않는 법은 작동했다. 743 실행 0 실패, 17자리 bit-identical 재현이 그 증거다.</p></div>
+<div class="lab">05 · 피벗 — 같은 패턴의 재확인</div><h2>problem-first로 바꿔도 같았다</h2>
+<p class="lead">HIGAN이 tool-first라 약했나 싶어, problem-first로 "오픈 TSFM zero-shot SOTA가 pretraining 오염인가"를
+감사했다. 파이프라인은 ETTh1에서 검증됐다(Chronos 0.58 / DLinear 0.61). 그런데 "Chronos가 baseline 박살"
+gap은 <strong>baseline-starvation artifact</strong> — 짧은 eval series(m4_hourly ~1k점)가 DLinear를 굶긴 것.
+긴 series(ETT 17k)에선 DLinear가 멀쩡(0.61). 제대로 된 baseline엔 Chronos가 <strong>겨우 0.03</strong> 이김 —
+오염이 부풀릴 큰 advantage가 애초에 없었다. recall index도 신호 0. <em>같은 패턴, 같은 날 shelved.</em>
+다른 점 하나: 6 워크플로우가 아니라 <strong>Day 3</strong>에 잡았다.</p>
+</div></section><hr>
+
+<section class="bl alt"><div class="container">
+<div class="lab">06 · 결론</div><h2>이 여정이 확정한 것</h2>
+<p class="lead">강한 주장 하나를 끝까지 밀어붙여 그 한계를 정확히 알아냈다. 네 가지가 확정됐다.</p>
+<div class="grid2">
+<div class="card g"><h4>① 도구는 진짜다</h4><p>생성기의 고차 곡률을 정확·상수메모리로 재는 forward-mode 도구는 작동하고, FD는 그걸 대체 못 한다. 재사용 가능한 instrument로 남는다.</p></div>
+<div class="card r"><h4>② 곡률=edit-risk는 아니다</h4><p>곡률을 actionable한 편집-위험 신호로 만드는 건 데이터가 지지하지 않는다. 약하고, baseline 정의에 fragile하다 — 6번의 뒤집힘이 그 증거.</p></div>
+<div class="card"><h4>③ 감사는 깎는다</h4><p>"주장이 진짜냐"를 엄격히 감사하는 접근은 구조적으로 deflationary — 효과가 주장보다 작다는 결론으로 수렴한다. 정직하지만 thin.</p></div>
+<div class="card"><h4>④ rigor는 작동했다</h4><p>자기 자신을 속이지 않는 법은 작동했다. 강한 신호를 매번 직접 반박했고, 두 번째 프로젝트는 6 워크플로우가 아니라 Day 3에 멈췄다.</p></div>
+</div>
+<div class="callout"><p><strong>그래서 멈추고 banking했다.</strong> 깨끗한 것(도구 + FD-non-recoverability)은 짧은 methods note로,
+나머지는 정직한 negative로 — 그게 데이터가 실제 지지하는 전부이기 때문.</p></div>
+</div></section><hr>
+
+<section class="bl"><div class="container">
+<div class="lab">07 · 앞으로의 도전</div><h2>다음에 무엇을 시도할까</h2>
+<p class="lead">교훈은 분명하다 — 다음 큰 시도는 <strong>감사가 아니라 positive-construction</strong>. 살아남은 자산(도구·rigor)을
+"되는 것"을 만드는 데 쓴다. 네 갈래를 후보로 둔다.</p>
+<div class="fut">
+<div class="futc"><div class="fct">CHALLENGE A · 도구를 positive하게</div>
+<h4>FD-non-recoverability가 실제 논문 결론을 바꾸는 사례</h4>
+<p>latent-geometry/editing 논문 다수가 곡률을 finite-difference로 잰다. 그 중 하나를 재현해, exact JVP로 다시 계산하면 <em>결론이 뒤집히는</em> 사례를 보인다.</p>
+<p class="need"><b>필요:</b> FD로 곡률을 쓰는 실제 논문 탐색 + exact JVP 재현으로 결론 변화 입증. → 방법론 기여, TMLR급.</p></div>
+<div class="futc"><div class="fct">CHALLENGE B · positive-construction</div>
+<h4>감사 말고 "되는 method"를 만든다</h4>
+<p>clean한 답이 나올 법하고 수요 있는 문제를 problem-first로 고른다. 도구 끼워맞추기(tool-first)는 두 번 다 약했으니, 문제에서 출발한다.</p>
+<p class="need"><b>필요:</b> clean-answer 가능성 + venue 수요가 동시에 큰 문제 선정. → top-venue 유일한 경로(高분산).</p></div>
+<div class="futc"><div class="fct">CHALLENGE C · 정직한 negative를 묶기</div>
+<h4>baseline-starvation + edit-risk fragility = 하나의 방법론 논문</h4>
+<p>"TSFM zero-shot 우위는 under-trained baseline에 부풀려진다" + "latent-geometry edit-risk는 baseline-fragile" — 둘을 measurement-validity cautionary 논문으로.</p>
+<p class="need"><b>필요:</b> strong baseline 표준화 + 다수 데이터셋 확증. → TMLR 현실적.</p></div>
+<div class="futc"><div class="fct">CHALLENGE D · 기하 구조를 robust하게</div>
+<h4>cross-architecture 곡률 구조를 descriptive science로</h4>
+<p>cross-encoder 곡률 일치(Pearson 0.94–0.99)가 outlier 의존이었으니, magnitude를 partial out하고 더 많은 attribute로 강건하게 만들어, 편집 주장 없이 "곡률 구조" 자체를 본다.</p>
+<p class="need"><b>필요:</b> outlier critique 통과(partial-Δ + shuffle-null) + 재프레이밍. → 살아남으면 clean한 descriptive 결과.</p></div>
+</div>
+<p class="note">공통 원칙(이 여정의 교훈): 문제에서 출발하라(problem-first), 모든 주장을 content-blind null/logical control에 anchor하라, 강한 신호가 보이면 <strong>먼저 스스로 반박하라</strong>. clean refute는 clean confirm만큼 가치 있다.</p>
 </div></section><hr>
 
 <section class="bl alt" id="data"><div class="container">
