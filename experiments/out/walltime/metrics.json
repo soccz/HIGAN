@@ -1,0 +1,37 @@
+{
+  "domain": "bedroom",
+  "resolution": 256,
+  "jvp": {
+    "mean_ms": 45.616865158081055,
+    "std_ms": 0.9716483288480983,
+    "peak_mb": 325.7412109375
+  },
+  "fd": {
+    "mean_ms": 18.427467346191406,
+    "std_ms": 0.4724267989192441,
+    "peak_mb": 215.02587890625,
+    "epsilon": 0.001,
+    "rel_err_vs_jvp": 0.9164587398230775
+  },
+  "vmap_vjp_cap": {
+    "K": 256,
+    "mean_ms": null,
+    "peak_mb": null,
+    "extrap_full_s": null
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-21T11:21:38.479883+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "track": "walltime",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

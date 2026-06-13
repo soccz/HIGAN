@@ -1,0 +1,1253 @@
+============================================================
+HIGAN paper — all-tracks aggregation
+============================================================
+
+[Track 1: SD C1/C2]
+  smile        t_idx=  35  ρ=0.043  CLIP-path=7.570
+  smile        t_idx=  25  ρ=0.092  CLIP-path=7.986
+  smile        t_idx=  15  ρ=0.559  CLIP-path=7.520
+  age          t_idx=  35  ρ=0.051  CLIP-path=8.103
+  age          t_idx=  25  ρ=0.071  CLIP-path=8.460
+  age          t_idx=  15  ρ=0.547  CLIP-path=7.711
+  gender       t_idx=  35  ρ=0.049  CLIP-path=7.934
+  gender       t_idx=  25  ρ=0.065  CLIP-path=7.551
+  gender       t_idx=  15  ρ=0.358  CLIP-path=7.029
+  eyeglasses   t_idx=  35  ρ=0.049  CLIP-path=7.928
+  eyeglasses   t_idx=  25  ρ=0.066  CLIP-path=7.977
+  eyeglasses   t_idx=  15  ρ=0.141  CLIP-path=6.723
+  pose         t_idx=  35  ρ=0.044  CLIP-path=8.019
+  pose         t_idx=  25  ρ=0.060  CLIP-path=7.938
+  pose         t_idx=  15  ρ=0.172  CLIP-path=8.260
+
+[Track 3 scaling, bedroom (v1 ratio-of-means)]
+  N=   8  indoor_lighting=0.339±0.068  wood=0.465±0.073  view=9.484±6.992  carpet=0.511±0.203  cluttered_space=0.465±0.070  glossy=0.393±0.074  dirt=0.333±0.072  scary=0.278±0.060
+  N=  16  indoor_lighting=0.432±0.181  wood=0.536±0.131  view=6.767±3.828  carpet=0.629±0.271  cluttered_space=0.537±0.064  glossy=0.406±0.043  dirt=0.360±0.049  scary=0.292±0.036
+  N=  32  indoor_lighting=0.498±0.169  wood=0.573±0.126  view=6.285±2.937  carpet=0.753±0.279  cluttered_space=0.545±0.072  glossy=0.400±0.044  dirt=0.342±0.038  scary=0.285±0.027
+  N=  64  indoor_lighting=0.522±0.146  wood=0.603±0.125  view=5.350±2.091  carpet=0.808±0.252  cluttered_space=0.537±0.052  glossy=0.396±0.035  dirt=0.331±0.026  scary=0.281±0.019
+  N= 128  indoor_lighting=0.544±0.118  wood=0.651±0.110  view=4.699±1.305  carpet=0.892±0.224  cluttered_space=0.524±0.038  glossy=0.396±0.026  dirt=0.329±0.019  scary=0.274±0.012
+
+[Track 3 scaling, bedroom (v2 mean-of-ratios)]
+  N=   8  indoor_lighting=0.649±0.098  wood=0.945±0.245  view=53.181±35.711  carpet=0.945±0.351  cluttered_space=0.971±0.156  glossy=0.873±0.251  dirt=0.726±0.187  scary=0.627±0.186
+  N=  16  indoor_lighting=0.847±0.279  wood=1.041±0.223  view=36.608±19.494  carpet=1.173±0.383  cluttered_space=1.232±0.217  glossy=0.977±0.207  dirt=0.859±0.227  scary=0.656±0.120
+  N=  32  indoor_lighting=0.953±0.284  wood=1.150±0.258  view=38.073±20.033  carpet=1.357±0.429  cluttered_space=1.241±0.251  glossy=0.965±0.191  dirt=0.792±0.160  scary=0.660±0.106
+  N=  64  indoor_lighting=0.975±0.233  wood=1.169±0.228  view=32.819±13.608  carpet=1.471±0.420  cluttered_space=1.233±0.174  glossy=0.930±0.118  dirt=0.742±0.097  scary=0.644±0.067
+  N= 128  indoor_lighting=1.004±0.198  wood=1.257±0.204  view=28.317±8.366  carpet=1.640±0.388  cluttered_space=1.169±0.113  glossy=0.931±0.084  dirt=0.724±0.065  scary=0.599±0.044
+
+[Track 3 scaling, ffhq (v1 ratio-of-means)]
+  N=   8  smile=1.187±0.322  age=4.406±1.575  pose=21.818±5.209  gender=5.053±1.593  eyeglasses=10.980±5.534
+  N=  16  smile=1.220±0.229  age=3.950±0.959  pose=20.583±4.082  gender=5.025±1.329  eyeglasses=8.022±3.245
+  N=  32  smile=1.231±0.194  age=3.647±0.627  pose=23.508±4.712  gender=5.104±0.779  eyeglasses=6.755±1.875
+  N=  64  smile=1.273±0.159  age=3.481±0.510  pose=21.551±2.990  gender=4.887±0.500  eyeglasses=5.564±1.125
+  N= 128  smile=1.266±0.120  age=3.453±0.389  pose=20.779±1.927  gender=4.698±0.386  eyeglasses=5.298±0.885
+
+[Track 3 scaling, ffhq (v2 mean-of-ratios)]
+  N=   8  smile=4.056±1.312  age=18.985±7.413  pose=150.904±40.835  gender=23.893±10.697  eyeglasses=44.549±23.258
+  N=  16  smile=4.105±0.818  age=17.427±5.189  pose=149.529±51.529  gender=23.569±8.791  eyeglasses=31.464±13.576
+  N=  32  smile=3.929±0.650  age=16.995±4.106  pose=166.373±55.218  gender=25.631±6.335  eyeglasses=27.625±8.323
+  N=  64  smile=3.971±0.503  age=15.429±2.698  pose=151.184±34.317  gender=23.455±3.672  eyeglasses=23.309±4.878
+  N= 128  smile=3.973±0.423  age=15.655±2.155  pose=166.685±30.413  gender=22.111±2.605  eyeglasses=22.389±3.799
+
+[Track 3 scaling, church (v1 ratio-of-means)]
+  N=   8  clouds=0.039±0.007  sunny=0.037±0.003  vegetation=0.042±0.011
+  N=  16  clouds=0.040±0.005  sunny=0.044±0.005  vegetation=0.042±0.007
+  N=  32  clouds=0.038±0.003  sunny=0.042±0.003  vegetation=0.043±0.005
+  N=  64  clouds=0.036±0.002  sunny=0.040±0.002  vegetation=0.043±0.003
+  N= 128  clouds=0.036±0.001  sunny=0.039±0.001  vegetation=0.043±0.003
+
+[Track 3 scaling, church (v2 mean-of-ratios)]
+  N=   8  clouds=0.091±0.019  sunny=0.068±0.008  vegetation=0.057±0.011
+  N=  16  clouds=0.089±0.011  sunny=0.070±0.006  vegetation=0.058±0.007
+  N=  32  clouds=0.084±0.007  sunny=0.067±0.004  vegetation=0.057±0.005
+  N=  64  clouds=0.080±0.004  sunny=0.063±0.003  vegetation=0.058±0.003
+  N= 128  clouds=0.077±0.003  sunny=0.061±0.002  vegetation=0.056±0.003
+
+[Track 5 latentclr_ffhq]  K=20  epochs_done=50  final_loss=1.7279
+
+[Track 5 latentclr_ffhq_v2]  K=50  epochs_done=24  final_loss=2.6198
+
+[Track 5 disco_ffhq]  K=20  epochs_done=50  final_loss=1.7279
+
+[Track 5 disco_ffhq_v2]  K=50  epochs_done=10  final_loss=2.6198
+
+[Track 4 C5 FFHQ eval — v1 (w_mse=0.1, 40k iter)]
+  iter=  1000  recon_mse=0.3112  sal_corr_mean=+0.086
+  iter=  5000  recon_mse=0.5652  sal_corr_mean=+0.077
+  iter= 10000  recon_mse=0.3677  sal_corr_mean=+0.070
+  iter= 20000  recon_mse=0.2663  sal_corr_mean=+0.079
+  iter= 40000  recon_mse=0.3128  sal_corr_mean=+0.078
+  iter= 60000  recon_mse=0.3230  sal_corr_mean=+0.080
+  iter= 80000  recon_mse=0.3028  sal_corr_mean=+0.083
+
+[Track 4 C5 FFHQ eval — v2 (w_mse=2.0, 160k iter)]
+  iter=  5000  recon_mse=0.3753  sal_corr_mean=+0.072
+  iter= 20000  recon_mse=0.4117  sal_corr_mean=+0.067
+  iter= 40000  recon_mse=0.2888  sal_corr_mean=+0.076
+  iter= 80000  recon_mse=0.2961  sal_corr_mean=+0.078
+  iter=120000  recon_mse=0.3426  sal_corr_mean=+0.069
+  iter=160000  recon_mse=0.3596  sal_corr_mean=+0.056
+
+[Track 2 editing head-to-head]
+  smile        curvature_low         ID-cos=0.981  Δattr=+0.000
+  smile        curvature_high        ID-cos=0.915  Δattr=+0.001
+  smile        random                ID-cos=0.953  Δattr=-0.001
+  age          curvature_low         ID-cos=0.951  Δattr=+0.001
+  age          curvature_high        ID-cos=0.786  Δattr=+0.004
+  age          random                ID-cos=0.901  Δattr=+0.004
+  pose         curvature_low         ID-cos=0.974  Δattr=-0.000
+  pose         curvature_high        ID-cos=0.824  Δattr=+0.011
+  pose         random                ID-cos=0.938  Δattr=+0.001
+  gender       curvature_low         ID-cos=0.951  Δattr=+0.001
+  gender       curvature_high        ID-cos=0.786  Δattr=+0.008
+  gender       random                ID-cos=0.901  Δattr=-0.004
+  eyeglasses   curvature_low         ID-cos=0.951  Δattr=-0.000
+  eyeglasses   curvature_high        ID-cos=0.786  Δattr=-0.002
+  eyeglasses   random                ID-cos=0.901  Δattr=+0.000
+
+[Track 6 DAAM] /mnt/20t/study/HIGAN/paper/experiments/out/sd_daam/daam_maps.json ready
+
+[Track 7 Park reproduction]  top-1 σ=0.0015166536322794855  top-1 ρ=0.04250712944236238  Spearman σ↔ρ=-0.15
+
+[Track 8 truncation-ψ]
+  ψ=0.5  smile=1.273  age=3.481  pose=21.550  gender=4.886  eyeglasses=5.561
+  ψ=0.7  smile=1.273  age=3.481  pose=21.550  gender=4.886  eyeglasses=5.561
+  ψ=1.0  smile=1.273  age=3.481  pose=21.550  gender=4.886  eyeglasses=5.561
+  rank-stability 0.5_vs_0.7: Spearman r=+1.000
+  rank-stability 0.5_vs_1.0: Spearman r=+1.000
+  rank-stability 0.7_vs_1.0: Spearman r=+1.000
+
+[Track 9 multi-CLIP C2]
+  ViT-B-32   bedroom   Pearson=+0.991  Spearman=+0.429
+  ViT-B-32   ffhq      Pearson=+0.970  Spearman=+1.000
+  ViT-L-14   bedroom   Pearson=+0.987  Spearman=+0.429
+  ViT-L-14   ffhq      Pearson=+0.977  Spearman=+1.000
+  ViT-H-14   bedroom   Pearson=+0.989  Spearman=+0.286
+  ViT-H-14   ffhq      Pearson=+0.966  Spearman=+1.000
+
+[Track 10 per-layer C1, bedroom]  argmax-in-canonical rate: 0.125
+
+[Track 10 per-layer C1, ffhq]  argmax-in-canonical rate: 0.8
+
+[Track 11 wall-clock]  JVP=45.6ms  FD=18.4ms  vmap-vjp@256px=None
+
+[Track 12 C6 scaling, bedroom]
+  N= 128  P=0.88  R=0.88  F1=0.88
+  N= 192  P=0.75  R=0.88  F1=0.81
+  N= 256  P=0.88  R=0.75  F1=0.81
+  N= 384  P=0.75  R=0.88  F1=0.81
+  N= 512  P=0.75  R=0.75  F1=0.75
+  N= 768  P=0.88  R=0.88  F1=0.88
+
+[Track 13 FFHQ resolution]
+  lod=0  smile=1.231  age=3.651  pose=23.541  gender=5.106  eyeglasses=6.753
+  lod=1  smile=1.174  age=2.992  pose=19.197  gender=4.140  eyeglasses=5.762
+  lod=2  smile=1.044  age=2.505  pose=16.050  gender=3.540  eyeglasses=4.765
+
+[Track 14 noise robustness, bedroom]  mean pairwise Spearman = +0.986
+
+[Track 14 noise robustness, ffhq]  mean pairwise Spearman = +1.000
+
+[Track 17 intrinsic dim, bedroom]  median rank = 50.44835662841797
+
+[Track 17 intrinsic dim, ffhq]  median rank = 63.74713134765625
+
+[Track 18 FD validation]
+  view: ε=0.1:m2_rel=2e+00  ε=0.01:m2_rel=7e+00  ε=0.001:m2_rel=2e+01  ε=0.0001:m2_rel=7e+01  ε=1e-05:m2_rel=6e+02
+  indoor_lighting: ε=0.1:m2_rel=6e+00  ε=0.01:m2_rel=2e+01  ε=0.001:m2_rel=4e+01  ε=0.0001:m2_rel=2e+02  ε=1e-05:m2_rel=2e+03
+  wood: ε=0.1:m2_rel=5e+00  ε=0.01:m2_rel=1e+01  ε=0.001:m2_rel=3e+01  ε=0.0001:m2_rel=2e+02  ε=1e-05:m2_rel=1e+03
+
+[Track 19 DINOv2 path curvature]
+  bedroom   Pearson=+0.977  Spearman=+0.429
+  ffhq      Pearson=+0.937  Spearman=+0.900
+
+[Track 20 α magnitude scan]
+  smile        log-slope = -0.086
+  age          log-slope = -0.146
+  pose         log-slope = -0.486
+  gender       log-slope = -0.123
+  eyeglasses   log-slope = -0.157
+
+[Track 21 C2 path curvature, bedroom]
+  view               mean_ratio=6.262  median=6.395
+  indoor_lighting    mean_ratio=2.707  median=2.616
+  wood               mean_ratio=3.060  median=2.942
+  glossy             mean_ratio=2.813  median=2.757
+  carpet             mean_ratio=3.205  median=3.047
+  dirt               mean_ratio=2.844  median=2.726
+  scary              mean_ratio=2.772  median=2.641
+  cluttered_space    mean_ratio=2.946  median=2.821
+  vs_pixel  Pearson=+0.991  Spearman=+0.429
+
+[Track 21 C2 path curvature, ffhq]
+  pose               mean_ratio=6.329  median=6.524
+  gender             mean_ratio=3.507  median=3.442
+  age                mean_ratio=3.083  median=3.084
+  eyeglasses         mean_ratio=3.681  median=3.712
+  smile              mean_ratio=2.141  median=2.113
+  vs_pixel  Pearson=+0.970  Spearman=+1.000
+
+[Track 22 C2 saliency-vs-segmentation, bedroom]  Spearman r = None
+
+[Track 23 C3 layer-IOU, bedroom]  mean_c3=0.087  top_frac=0.200  N=16
+
+[Track 23 C3 layer-IOU, ffhq]  mean_c3=0.161  top_frac=0.200  N=8
+
+[Track 24 C3 threshold sweep, bedroom]  thresholds=['0.1', '0.2', '0.3', '0.5']
+
+[Track 24 C3 threshold sweep, ffhq]  thresholds=['0.1', '0.2', '0.3', '0.5']
+
+[Track 25 C4 composition, bedroom]  Pearson=+0.162  Spearman=+0.480  n_pairs=28
+
+[Track 25 C4 composition, ffhq]  Pearson=+0.169  Spearman=+0.806  n_pairs=?
+
+[Track 25 C4 composition, church]  Pearson=+0.397  Spearman=+0.500  n_pairs=3
+
+[Track 26 C4 robustness (composition ablations)]
+  bedroom  full          n=28  Spearman=+0.480
+  bedroom  no_view       n=21  Spearman=-0.166
+  bedroom  only_view     n=7  Spearman=-0.857
+  ffhq     full          n=10  Spearman=+0.806
+  ffhq     no_pose       n=6  Spearman=+0.600
+  ffhq     only_pose     n=4  Spearman=+0.400
+
+[Track 27 C6 precision/recall]
+  bedroom  top-1  P=0.75  R=0.38  F1=0.50  P_lift=+0.68  R_lift=-0.03
+  bedroom  top-2  P=0.88  R=0.50  F1=0.64  P_lift=+0.74  R_lift=-0.14
+  bedroom  top-3  P=1.00  R=0.62  F1=0.77  P_lift=+0.81  R_lift=-0.14
+  bedroom  top-4  P=1.00  R=0.75  F1=0.86  P_lift=+0.75  R_lift=-0.10
+  ffhq     top-1  P=0.38  R=0.60  F1=0.46  P_lift=+0.25  R_lift=-0.05
+  ffhq     top-2  P=0.75  R=0.80  F1=0.77  P_lift=+0.51  R_lift=-0.07
+  ffhq     top-3  P=1.00  R=1.00  F1=1.00  P_lift=+0.66  R_lift=+0.05
+  ffhq     top-4  P=1.00  R=1.00  F1=1.00  P_lift=+0.57  R_lift=+0.02
+
+[Track 28 CLIP-GradCAM baseline, clip_gradcam]
+  view         corr=-0.049  IOU=0.089
+  indoor_lighting corr=-0.071  IOU=0.101
+  wood         corr=-0.105  IOU=0.089
+  glossy       corr=-0.097  IOU=0.094
+
+[Track 28 CLIP-GradCAM baseline, ffhq_clip_gradcam]
+  pose         corr=-0.017  IOU=0.200
+  smile        corr=-0.001  IOU=0.200
+  eyeglasses   corr=-0.013  IOU=0.200
+  age          corr=-0.020  IOU=0.200
+  gender       corr=-0.013  IOU=0.200
+
+[Track 29 spatial diversity, bedroom]
+  ganspace     spatial_div=0.705  mean_IOU=0.295  n_dirs=8
+  sefa         spatial_div=0.714  mean_IOU=0.286  n_dirs=8
+  random       spatial_div=0.737  mean_IOU=0.263  n_dirs=8
+  higan_gt     spatial_div=0.687  mean_IOU=0.313  n_dirs=8
+
+[Track 30 baselines sweep, bedroom_baselines_sweep]
+  ganspace    best K=16  n_coverage=7  diversity=10
+  sefa        best K=16  n_coverage=7  diversity=7
+  random      best K=12  n_coverage=7  diversity=9
+
+[Track 30 baselines sweep, ffhq_baselines_sweep]
+  ganspace    best K=8  n_coverage=5  diversity=4
+  sefa        best K=8  n_coverage=4  diversity=6
+  random      best K=16  n_coverage=4  diversity=6
+
+[Track 31 cross-domain k=2 signature]  agreement=0.778 (14/18)
+
+[Track 33 church (StyleGAN2) — higher-order ratio 2nd/1st]
+  clouds       ratio_mean=0.0427  p95=0.0741
+  sunny        ratio_mean=0.0448  p95=0.0654
+  vegetation   ratio_mean=0.0429  p95=0.0961
+
+[Track 35 FFHQ higher-order (∂²/∂¹ ratio)]
+  smile        ratio_mean=1.750  p95=3.625
+  age          ratio_mean=7.622  p95=17.034
+  pose         ratio_mean=49.868  p95=138.143
+  gender       ratio_mean=8.705  p95=20.354
+  eyeglasses   ratio_mean=22.822  p95=50.958
+
+[Track 36 FFHQ C6 discovery]  K=8 clusters from 96 candidate directions
+  cluster 0: 'open mouth' (Δ=+0.0033)
+  cluster 1: 'dark hair' (Δ=+0.0021)
+  cluster 2: 'dark hair' (Δ=+0.0033)
+  cluster 3: 'blond hair' (Δ=+0.0012)
+  cluster 4: 'an old face' (Δ=+0.0092)
+  cluster 5: 'blond hair' (Δ=+0.0009)
+  cluster 6: 'a side profile' (Δ=+0.0023)
+  cluster 7: 'a forehead' (Δ=+0.0000)
+
+[Track 37 SD C1/C2 at N=64]
+  smile        t=35  ρ=0.046
+  smile        t=25  ρ=0.060
+  smile        t=15  ρ=0.175
+  age          t=35  ρ=0.049
+  age          t=25  ρ=0.079
+  age          t=15  ρ=0.260
+  gender       t=35  ρ=0.050
+  gender       t=25  ρ=0.071
+  gender       t=15  ρ=0.246
+  eyeglasses   t=35  ρ=0.046
+  eyeglasses   t=25  ρ=0.065
+  eyeglasses   t=15  ρ=0.191
+  pose         t=35  ρ=0.043
+  pose         t=25  ρ=0.065
+  pose         t=15  ρ=0.330
+
+[Track 38 8x14 attribute-layer saliency matrix, bedroom]
+  carpet             peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+  cluttered_space    peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+  dirt               peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+  glossy             peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+  indoor_lighting    peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+  scary              peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+  view               peak L=0  canonical=[0, 1, 2, 3, 4]
+  wood               peak L=0  canonical=[6, 7, 8, 9, 10, 11]
+
+[Track 39 CLIP zero-shot cluster labels]
+  cluster 0:  top-1 = 'soft texture' (Δ=+0.009)
+  cluster 1:  top-1 = 'clean room' (Δ=+0.004)
+  cluster 2:  top-1 = 'a view through a window' (Δ=+0.021)
+  cluster 3:  top-1 = 'soft texture' (Δ=+0.004)
+  cluster 4:  top-1 = 'soft texture' (Δ=+0.022)
+  cluster 5:  top-1 = 'clean room' (Δ=+0.007)
+  cluster 6:  top-1 = 'metal surface' (Δ=+0.003)
+  cluster 7:  top-1 = 'soft texture' (Δ=+0.003)
+
+[Track 41 InterFaceGAN supervised baseline, FFHQ]
+  K=5  coverage=4/5 (['age', 'eyeglasses', 'gender', 'smile'])  diversity=4  wall_time=1.62s
+  → SUPERVISED upper bound; unsupervised GANSpace matches at K=8
+
+[Track 40 Real LSUN photo encoder transfer]
+  N photos: 4
+  LPIPS optim-inv: 0.040±0.011
+  LPIPS encoder:   0.495±0.066
+  encoder gap: +1148% (synthetic-supervision limit)
+
+[Main claim A edit-regime prediction]
+  log10_pixel_rho      n=16  AUROC=1.000  LODO-acc=0.867
+  clip_path_ratio      n=13  AUROC=1.000  LODO-acc=0.900
+
+[Main claim B composition-failure prediction]
+  bedroom  Spearman=+0.480  AUROC=0.673  baseline=0.247
+  ffhq     Spearman=+0.806  AUROC=0.960  baseline=0.040
+  church   Spearman=+0.500  AUROC=0.500  baseline=0.250
+  pooled within-domain percentile AUROC=0.727
+
+[Main claim C fixed-alpha curvature-guided selection]
+  curvature_low_minus_random   ΔID=+0.0425  ΔLPIPS=-0.0329  Δ|attr|=-0.0037
+  curvature_low_minus_high     ΔID=+0.1422  ΔLPIPS=-0.1396  Δ|attr|=-0.0100
+
+[Main claim C2 matched-attribute edit pilot]
+  age           curvature_low:ID=0.931,LPIPS=0.388,|Δ|=0.020  random:ID=0.918,LPIPS=0.497,|Δ|=0.022  curvature_high:ID=0.804,LPIPS=1.038,|Δ|=0.028
+  eyeglasses    curvature_low:ID=0.927,LPIPS=0.384,|Δ|=0.015  random:ID=0.929,LPIPS=0.409,|Δ|=0.016  curvature_high:ID=0.818,LPIPS=1.008,|Δ|=0.027
+  gender        curvature_low:ID=0.921,LPIPS=0.416,|Δ|=0.030  random:ID=0.893,LPIPS=0.581,|Δ|=0.033  curvature_high:ID=0.800,LPIPS=1.063,|Δ|=0.051
+  pose          curvature_low:ID=0.955,LPIPS=0.301,|Δ|=0.007  random:ID=0.938,LPIPS=0.400,|Δ|=0.009  curvature_high:ID=0.955,LPIPS=0.305,|Δ|=0.007
+  smile         curvature_low:ID=0.961,LPIPS=0.219,|Δ|=0.012  random:ID=0.964,LPIPS=0.189,|Δ|=0.011  curvature_high:ID=0.972,LPIPS=0.155,|Δ|=0.010
+  pooled Δlow-random mean_id_cos=+0.0110  Δlow-high=+0.0696
+  pooled Δlow-random mean_lpips_proxy=-0.0732  Δlow-high=-0.3720
+  pooled Δlow-random mean_abs_delta_attr=-0.0013  Δlow-high=-0.0080
+
+[Control A direction control, full matched semantic edit]
+  pooled Δlow-random mean_id_cos=-0.0035  Δlow-high=+0.0453
+  pooled Δlow-random mean_lpips_proxy=-0.0026  Δlow-high=-0.2310
+  pooled Δlow-random mean_abs_delta_attr=-0.0000  Δlow-high=-0.0049
+
+[Control B curvature-guided layer intervention]
+  pooled Δcurv-random mean_id_cos=-0.0602  Δcurv-wrong=-0.1704  Δcurv-canonical=-0.0140
+  pooled Δcurv-random mean_lpips_proxy=+0.0799  Δcurv-wrong=+0.6661  Δcurv-canonical=+0.0258
+  pooled Δcurv-random mean_abs_delta_attr=+0.0401  Δcurv-wrong=+0.0831  Δcurv-canonical=-0.0010
+
+[Control C actual composition guard]
+  mixed-Hessian vs actual failure: Spearman=+0.467  AUROC=0.720
+  guard accepted_mean_failure=3.282  rejected_mean_failure=3.508
+
+[Control D risk-aware direction controller]
+  pooled Δrisk-gain mean_id_cos=+0.0116  Δrisk-random=+0.0299  Δrisk-high=+0.0567  Δrisk-low=+0.0101
+  pooled Δrisk-gain mean_lpips_proxy=-0.0631  Δrisk-random=-0.1260  Δrisk-high=-0.2499  Δrisk-low=-0.0138
+  pooled Δrisk-gain mean_abs_delta_attr=-0.0006  Δrisk-random=-0.0021  Δrisk-high=-0.0046  Δrisk-low=+0.0003
+
+[Control D2 risk-aware seed robustness]
+  risk_minus_gain_only   seed-mean ΔID=+0.0138 wins=5/5  ΔLPIPS=-0.0765 wins=5/5  Δ|attr|=-0.0008
+  risk_minus_random      seed-mean ΔID=+0.0237 wins=5/5  ΔLPIPS=-0.0968 wins=5/5  Δ|attr|=-0.0009
+  risk_minus_high_risk   seed-mean ΔID=+0.0492 wins=5/5  ΔLPIPS=-0.2302 wins=5/5  Δ|attr|=-0.0035
+  risk_minus_low_risk    seed-mean ΔID=+0.0017 wins=3/5  ΔLPIPS=+0.0165 wins=1/5  Δ|attr|=+0.0014
+
+[Control D3 risk-signal negative controls]
+  actual_minus_shuffled    seed-mean ΔID=+0.0137 wins=5/5  ΔLPIPS=-0.0786 wins=5/5  Δ|attr|=-0.0009
+  actual_minus_inverted    seed-mean ΔID=+0.0226 wins=5/5  ΔLPIPS=-0.1198 wins=5/5  Δ|attr|=-0.0012
+
+[Control D4 risk-power sensitivity risk_power_0p5]
+  risk_minus_gain_only   seed-mean ΔID=+0.0141 wins=5/5  ΔLPIPS=-0.0747 wins=5/5  Δ|attr|=-0.0009
+  risk_minus_random      seed-mean ΔID=+0.0241 wins=5/5  ΔLPIPS=-0.0952 wins=5/5  Δ|attr|=-0.0010
+  risk_minus_high_risk   seed-mean ΔID=+0.0496 wins=5/5  ΔLPIPS=-0.2284 wins=5/5  Δ|attr|=-0.0036
+  risk_minus_low_risk    seed-mean ΔID=+0.0022 wins=3/5  ΔLPIPS=+0.0181 wins=1/5  Δ|attr|=+0.0014
+
+[Control D4 risk-power sensitivity risk_power_2p0]
+  risk_minus_gain_only   seed-mean ΔID=+0.0119 wins=5/5  ΔLPIPS=-0.0670 wins=5/5  Δ|attr|=-0.0007
+  risk_minus_random      seed-mean ΔID=+0.0219 wins=5/5  ΔLPIPS=-0.0873 wins=5/5  Δ|attr|=-0.0008
+  risk_minus_high_risk   seed-mean ΔID=+0.0474 wins=5/5  ΔLPIPS=-0.2207 wins=5/5  Δ|attr|=-0.0034
+  risk_minus_low_risk    seed-mean ΔID=-0.0001 wins=2/5  ΔLPIPS=+0.0261 wins=0/5  Δ|attr|=+0.0016
+
+[Control D5/D6 true-LPIPS validation]
+  risk_minus_gain_only   seed-mean ΔID=+0.0138 wins=5/5  Δmean_lpips_true=-0.0456 wins=5/5  Δ|attr|=-0.0008
+  risk_minus_random      seed-mean ΔID=+0.0237 wins=5/5  Δmean_lpips_true=-0.0661 wins=5/5  Δ|attr|=-0.0009
+  risk_minus_high_risk   seed-mean ΔID=+0.0492 wins=5/5  Δmean_lpips_true=-0.1392 wins=5/5  Δ|attr|=-0.0035
+  risk_minus_low_risk    seed-mean ΔID=+0.0017 wins=3/5  Δmean_lpips_true=-0.0017 wins=3/5  Δ|attr|=+0.0014
+
+[Control D5/D6 expanded candidate universe]
+  risk_minus_gain_only   seed-mean ΔID=+0.0127 wins=5/5  Δmean_lpips_proxy=-0.0627 wins=5/5  Δ|attr|=-0.0010
+  risk_minus_random      seed-mean ΔID=+0.0349 wins=5/5  Δmean_lpips_proxy=-0.1628 wins=5/5  Δ|attr|=-0.0024
+  risk_minus_high_risk   seed-mean ΔID=+0.0670 wins=5/5  Δmean_lpips_proxy=-0.3283 wins=5/5  Δ|attr|=-0.0052
+  risk_minus_low_risk    seed-mean ΔID=+0.0169 wins=5/5  Δmean_lpips_proxy=-0.0735 wins=5/5  Δ|attr|=-0.0002
+
+[Control D7 fixed-target risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0140 wins=5/5  ΔLPIPS=-0.0807 wins=5/5  Δ|attr|=-0.0010
+  actual_minus_inverted    seed-mean ΔID=+0.0242 wins=5/5  ΔLPIPS=-0.1273 wins=5/5  Δ|attr|=-0.0016
+
+[Control D8 extended validation fixed-target true-LPIPS]
+  risk_minus_gain_only   seed-mean ΔID=+0.0139 wins=5/5  Δmean_lpips_true=-0.0465 wins=5/5  Δ|attr|=-0.0009
+  risk_minus_random      seed-mean ΔID=+0.0243 wins=5/5  Δmean_lpips_true=-0.0678 wins=5/5  Δ|attr|=-0.0010
+  risk_minus_high_risk   seed-mean ΔID=+0.0493 wins=5/5  Δmean_lpips_true=-0.1410 wins=5/5  Δ|attr|=-0.0035
+  risk_minus_low_risk    seed-mean ΔID=+0.0029 wins=3/5  Δmean_lpips_true=-0.0044 wins=3/5  Δ|attr|=+0.0012
+
+[Control D8 extended validation expanded universe true-LPIPS]
+  risk_minus_gain_only   seed-mean ΔID=+0.0098 wins=5/5  Δmean_lpips_true=-0.0298 wins=5/5  Δ|attr|=-0.0008
+  risk_minus_random      seed-mean ΔID=+0.0317 wins=5/5  Δmean_lpips_true=-0.0998 wins=5/5  Δ|attr|=-0.0023
+  risk_minus_high_risk   seed-mean ΔID=+0.0640 wins=5/5  Δmean_lpips_true=-0.1992 wins=5/5  Δ|attr|=-0.0053
+  risk_minus_low_risk    seed-mean ΔID=+0.0195 wins=5/5  Δmean_lpips_true=-0.0627 wins=5/5  Δ|attr|=-0.0010
+
+[Control D8 extended validation probe budget 8/16]
+  risk_minus_gain_only   seed-mean ΔID=+0.0157 wins=5/5  Δmean_lpips_proxy=-0.0803 wins=5/5  Δ|attr|=-0.0010
+  risk_minus_random      seed-mean ΔID=+0.0135 wins=5/5  Δmean_lpips_proxy=-0.0540 wins=5/5  Δ|attr|=+0.0004
+  risk_minus_high_risk   seed-mean ΔID=+0.0437 wins=5/5  Δmean_lpips_proxy=-0.2094 wins=5/5  Δ|attr|=-0.0032
+  risk_minus_low_risk    seed-mean ΔID=-0.0099 wins=0/5  Δmean_lpips_proxy=+0.0662 wins=0/5  Δ|attr|=+0.0030
+
+[Control D8 extended validation probe budget 16/16]
+  risk_minus_gain_only   seed-mean ΔID=+0.0149 wins=5/5  Δmean_lpips_proxy=-0.0894 wins=5/5  Δ|attr|=-0.0011
+  risk_minus_random      seed-mean ΔID=+0.0143 wins=5/5  Δmean_lpips_proxy=-0.0607 wins=5/5  Δ|attr|=+0.0005
+  risk_minus_high_risk   seed-mean ΔID=+0.0442 wins=5/5  Δmean_lpips_proxy=-0.2148 wins=5/5  Δ|attr|=-0.0030
+  risk_minus_low_risk    seed-mean ΔID=-0.0093 wins=0/5  Δmean_lpips_proxy=+0.0604 wins=0/5  Δ|attr|=+0.0031
+
+[Control D8 extended validation k sensitivity k=4]
+  risk_minus_gain_only   seed-mean ΔID=+0.0176 wins=5/5  Δmean_lpips_proxy=-0.1005 wins=5/5  Δ|attr|=-0.0015
+  risk_minus_random      seed-mean ΔID=+0.0230 wins=5/5  Δmean_lpips_proxy=-0.1271 wins=5/5  Δ|attr|=-0.0004
+  risk_minus_high_risk   seed-mean ΔID=+0.0854 wins=5/5  Δmean_lpips_proxy=-0.3937 wins=5/5  Δ|attr|=-0.0063
+  risk_minus_low_risk    seed-mean ΔID=+0.0029 wins=4/5  Δmean_lpips_proxy=-0.0034 wins=2/5  Δ|attr|=+0.0015
+
+[Control D8 extended validation k sensitivity k=12]
+  risk_minus_gain_only   seed-mean ΔID=+0.0000 wins=0/5  Δmean_lpips_proxy=+0.0000 wins=0/5  Δ|attr|=+0.0000
+  risk_minus_random      seed-mean ΔID=+0.0086 wins=5/5  Δmean_lpips_proxy=-0.0229 wins=4/5  Δ|attr|=-0.0003
+  risk_minus_high_risk   seed-mean ΔID=+0.0181 wins=5/5  Δmean_lpips_proxy=-0.0835 wins=5/5  Δ|attr|=-0.0016
+  risk_minus_low_risk    seed-mean ΔID=-0.0142 wins=0/5  Δmean_lpips_proxy=+0.0870 wins=0/5  Δ|attr|=+0.0019
+
+[Control D8 extended validation gain threshold q=.25]
+  risk_minus_gain_only   seed-mean ΔID=+0.0240 wins=5/5  Δmean_lpips_proxy=-0.1411 wins=5/5  Δ|attr|=-0.0023
+  risk_minus_random      seed-mean ΔID=+0.0347 wins=5/5  Δmean_lpips_proxy=-0.1641 wins=5/5  Δ|attr|=-0.0024
+  risk_minus_high_risk   seed-mean ΔID=+0.0597 wins=5/5  Δmean_lpips_proxy=-0.2949 wins=5/5  Δ|attr|=-0.0050
+  risk_minus_low_risk    seed-mean ΔID=+0.0125 wins=5/5  Δmean_lpips_proxy=-0.0504 wins=5/5  Δ|attr|=-0.0000
+
+[Control D8 extended validation gain threshold q=.75]
+  risk_minus_gain_only   seed-mean ΔID=+0.0000 wins=0/5  Δmean_lpips_proxy=+0.0000 wins=0/5  Δ|attr|=+0.0000
+  risk_minus_random      seed-mean ΔID=+0.0102 wins=5/5  Δmean_lpips_proxy=-0.0219 wins=5/5  Δ|attr|=-0.0002
+  risk_minus_high_risk   seed-mean ΔID=+0.0357 wins=5/5  Δmean_lpips_proxy=-0.1552 wins=5/5  Δ|attr|=-0.0027
+  risk_minus_low_risk    seed-mean ΔID=-0.0112 wins=0/5  Δmean_lpips_proxy=+0.0893 wins=0/5  Δ|attr|=+0.0021
+
+[Control D8 extended validation target magnitude q=.10]
+  risk_minus_gain_only   seed-mean ΔID=+0.0135 wins=5/5  Δmean_lpips_proxy=-0.0791 wins=5/5  Δ|attr|=-0.0012
+  risk_minus_random      seed-mean ΔID=+0.0222 wins=5/5  Δmean_lpips_proxy=-0.1037 wins=5/5  Δ|attr|=-0.0018
+  risk_minus_high_risk   seed-mean ΔID=+0.0458 wins=5/5  Δmean_lpips_proxy=-0.2392 wins=5/5  Δ|attr|=-0.0041
+  risk_minus_low_risk    seed-mean ΔID=+0.0073 wins=5/5  Δmean_lpips_proxy=-0.0138 wins=3/5  Δ|attr|=-0.0004
+
+[Control D8 extended validation target magnitude q=.50]
+  risk_minus_gain_only   seed-mean ΔID=+0.0178 wins=5/5  Δmean_lpips_proxy=-0.0862 wins=5/5  Δ|attr|=-0.0012
+  risk_minus_random      seed-mean ΔID=+0.0108 wins=4/5  Δmean_lpips_proxy=-0.0253 wins=4/5  Δ|attr|=+0.0025
+  risk_minus_high_risk   seed-mean ΔID=+0.0532 wins=5/5  Δmean_lpips_proxy=-0.2238 wins=5/5  Δ|attr|=-0.0034
+  risk_minus_low_risk    seed-mean ΔID=-0.0261 wins=0/5  Δmean_lpips_proxy=+0.1387 wins=0/5  Δ|attr|=+0.0069
+
+[Control D8 extended validation large held-out n=512]
+  risk_minus_gain_only   seed-mean ΔID=+0.0139 wins=5/5  Δmean_lpips_proxy=-0.0771 wins=5/5  Δ|attr|=-0.0009
+  risk_minus_random      seed-mean ΔID=+0.0243 wins=5/5  Δmean_lpips_proxy=-0.0995 wins=5/5  Δ|attr|=-0.0011
+  risk_minus_high_risk   seed-mean ΔID=+0.0494 wins=5/5  Δmean_lpips_proxy=-0.2319 wins=5/5  Δ|attr|=-0.0036
+  risk_minus_low_risk    seed-mean ΔID=+0.0028 wins=3/5  Δmean_lpips_proxy=+0.0112 wins=2/5  Δ|attr|=+0.0011
+
+[Control D8 extended validation probe alpha 0.5]
+  risk_minus_gain_only   seed-mean ΔID=+0.0179 wins=5/5  Δmean_lpips_proxy=-0.0979 wins=5/5  Δ|attr|=-0.0014
+  risk_minus_random      seed-mean ΔID=+0.0198 wins=5/5  Δmean_lpips_proxy=-0.0818 wins=5/5  Δ|attr|=-0.0008
+  risk_minus_high_risk   seed-mean ΔID=+0.0448 wins=5/5  Δmean_lpips_proxy=-0.2144 wins=5/5  Δ|attr|=-0.0032
+  risk_minus_low_risk    seed-mean ΔID=-0.0016 wins=2/5  Δmean_lpips_proxy=+0.0294 wins=0/5  Δ|attr|=+0.0014
+
+[Control D8 extended validation probe alpha 2.0]
+  risk_minus_gain_only   seed-mean ΔID=+0.0149 wins=5/5  Δmean_lpips_proxy=-0.0839 wins=5/5  Δ|attr|=-0.0013
+  risk_minus_random      seed-mean ΔID=+0.0317 wins=5/5  Δmean_lpips_proxy=-0.1325 wins=5/5  Δ|attr|=-0.0018
+  risk_minus_high_risk   seed-mean ΔID=+0.0568 wins=5/5  Δmean_lpips_proxy=-0.2651 wins=5/5  Δ|attr|=-0.0042
+  risk_minus_low_risk    seed-mean ΔID=+0.0103 wins=5/5  Δmean_lpips_proxy=-0.0213 wins=5/5  Δ|attr|=+0.0004
+
+[Control D9 true-LPIPS fixed-target risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0140 wins=5/5  Δmean_lpips_true=-0.0505 wins=5/5  Δ|attr|=-0.0010
+  actual_minus_inverted    seed-mean ΔID=+0.0242 wins=5/5  Δmean_lpips_true=-0.0775 wins=5/5  Δ|attr|=-0.0016
+
+[Control D10 bedroom cross-domain true-LPIPS controller]
+  risk_minus_gain_only   seed-mean ΔID=+0.0009 wins=3/5  Δmean_lpips_true=-0.0020 wins=3/5  Δ|attr|=-0.0001
+  risk_minus_random      seed-mean ΔID=+0.0268 wins=5/5  Δmean_lpips_true=-0.0612 wins=5/5  Δ|attr|=-0.0013
+  risk_minus_high_risk   seed-mean ΔID=+0.0263 wins=5/5  Δmean_lpips_true=-0.0607 wins=5/5  Δ|attr|=-0.0013
+  risk_minus_low_risk    seed-mean ΔID=+0.0184 wins=5/5  Δmean_lpips_true=-0.0396 wins=5/5  Δ|attr|=-0.0002
+
+[Control D11 bedroom cross-domain risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0054 wins=4/5  Δmean_lpips_true=-0.0105 wins=4/5  Δ|attr|=-0.0003
+  actual_minus_inverted    seed-mean ΔID=+0.0077 wins=5/5  Δmean_lpips_true=-0.0187 wins=5/5  Δ|attr|=-0.0006
+
+[Control D12 church StyleGAN2 cross-domain true-LPIPS controller]
+  risk_minus_gain_only   seed-mean ΔID=+0.0090 wins=4/5  Δmean_lpips_true=-0.0172 wins=4/5  Δ|attr|=-0.0007
+  risk_minus_random      seed-mean ΔID=-0.0044 wins=1/5  Δmean_lpips_true=+0.0116 wins=1/5  Δ|attr|=+0.0004
+  risk_minus_high_risk   seed-mean ΔID=+0.0256 wins=5/5  Δmean_lpips_true=-0.0526 wins=5/5  Δ|attr|=-0.0024
+  risk_minus_low_risk    seed-mean ΔID=-0.0173 wins=0/5  Δmean_lpips_true=+0.0431 wins=0/5  Δ|attr|=+0.0016
+
+[Control D13 church StyleGAN2 cross-domain risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0099 wins=5/5  Δmean_lpips_true=-0.0225 wins=4/5  Δ|attr|=-0.0010
+  actual_minus_inverted    seed-mean ΔID=+0.0142 wins=4/5  Δmean_lpips_true=-0.0304 wins=4/5  Δ|attr|=-0.0014
+
+[Control D14 church StyleGAN2 risk-power sensitivity risk_power_0p5]
+  risk_minus_gain_only   seed-mean ΔID=+0.0083 wins=4/5  Δmean_lpips_true=-0.0169 wins=4/5  Δ|attr|=-0.0007
+  risk_minus_random      seed-mean ΔID=-0.0051 wins=2/5  Δmean_lpips_true=+0.0118 wins=2/5  Δ|attr|=+0.0005
+  risk_minus_high_risk   seed-mean ΔID=+0.0249 wins=5/5  Δmean_lpips_true=-0.0523 wins=5/5  Δ|attr|=-0.0024
+  risk_minus_low_risk    seed-mean ΔID=-0.0180 wins=0/5  Δmean_lpips_true=+0.0434 wins=0/5  Δ|attr|=+0.0016
+
+[Control D14 church StyleGAN2 risk-power sensitivity risk_power_2p0]
+  risk_minus_gain_only   seed-mean ΔID=+0.0106 wins=4/5  Δmean_lpips_true=-0.0201 wins=4/5  Δ|attr|=-0.0008
+  risk_minus_random      seed-mean ΔID=-0.0029 wins=1/5  Δmean_lpips_true=+0.0086 wins=1/5  Δ|attr|=+0.0004
+  risk_minus_high_risk   seed-mean ΔID=+0.0271 wins=5/5  Δmean_lpips_true=-0.0555 wins=5/5  Δ|attr|=-0.0025
+  risk_minus_low_risk    seed-mean ΔID=-0.0158 wins=0/5  Δmean_lpips_true=+0.0402 wins=0/5  Δ|attr|=+0.0015
+
+[Control D15 church StyleGAN2 failure diagnosis structured_only]
+  risk_minus_gain_only   seed-mean ΔID=+0.0027 wins=3/5  Δmean_lpips_true=-0.0020 wins=3/5  Δ|attr|=-0.0003
+  risk_minus_random      seed-mean ΔID=+0.0057 wins=5/5  Δmean_lpips_true=-0.0189 wins=5/5  Δ|attr|=-0.0005
+  risk_minus_high_risk   seed-mean ΔID=+0.0255 wins=5/5  Δmean_lpips_true=-0.0558 wins=5/5  Δ|attr|=-0.0021
+  risk_minus_low_risk    seed-mean ΔID=-0.0001 wins=2/5  Δmean_lpips_true=-0.0051 wins=3/5  Δ|attr|=+0.0000
+
+[Control D15 church StyleGAN2 failure diagnosis high_gain_floor]
+  risk_minus_gain_only   seed-mean ΔID=+0.0025 wins=3/5  Δmean_lpips_true=-0.0034 wins=3/5  Δ|attr|=-0.0002
+  risk_minus_random      seed-mean ΔID=-0.0110 wins=0/5  Δmean_lpips_true=+0.0253 wins=0/5  Δ|attr|=+0.0010
+  risk_minus_high_risk   seed-mean ΔID=+0.0190 wins=5/5  Δmean_lpips_true=-0.0389 wins=5/5  Δ|attr|=-0.0019
+  risk_minus_low_risk    seed-mean ΔID=-0.0239 wins=0/5  Δmean_lpips_true=+0.0568 wins=0/5  Δ|attr|=+0.0021
+
+[Control D16 church StyleGAN2 structured-only risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0026 wins=3/5  Δmean_lpips_true=-0.0048 wins=3/5  Δ|attr|=-0.0002
+  actual_minus_inverted    seed-mean ΔID=+0.0057 wins=3/5  Δmean_lpips_true=-0.0123 wins=3/5  Δ|attr|=-0.0006
+
+[Control D17 church structured-only confirmatory replication]
+  risk_minus_gain_only   seed-mean ΔID=-0.0012 wins=3/5  Δmean_lpips_true=+0.0054 wins=3/5  Δ|attr|=-0.0000
+  risk_minus_random      seed-mean ΔID=+0.0096 wins=3/5  Δmean_lpips_true=-0.0230 wins=4/5  Δ|attr|=-0.0009
+  risk_minus_high_risk   seed-mean ΔID=+0.0158 wins=5/5  Δmean_lpips_true=-0.0308 wins=4/5  Δ|attr|=-0.0015
+  risk_minus_low_risk    seed-mean ΔID=+0.0037 wins=4/5  Δmean_lpips_true=-0.0086 wins=4/5  Δ|attr|=-0.0004
+
+[Control D17b church structured-only confirmatory negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0020 wins=3/5  Δmean_lpips_true=-0.0025 wins=2/5  Δ|attr|=-0.0002
+  actual_minus_inverted    seed-mean ΔID=+0.0006 wins=3/5  Δmean_lpips_true=+0.0027 wins=2/5  Δ|attr|=-0.0003
+
+[Control D18 church structured-only estimator stability]
+  risk_minus_gain_only   seed-mean ΔID=+0.0017 wins=3/5  Δmean_lpips_true=-0.0021 wins=2/5  Δ|attr|=-0.0002
+  risk_minus_random      seed-mean ΔID=+0.0124 wins=4/5  Δmean_lpips_true=-0.0327 wins=4/5  Δ|attr|=-0.0008
+  risk_minus_high_risk   seed-mean ΔID=+0.0294 wins=5/5  Δmean_lpips_true=-0.0649 wins=5/5  Δ|attr|=-0.0024
+  risk_minus_low_risk    seed-mean ΔID=-0.0071 wins=2/5  Δmean_lpips_true=+0.0150 wins=2/5  Δ|attr|=+0.0004
+
+[Control D19 church structured-source ablation ganspace_only]
+  risk_minus_gain_only   seed-mean ΔID=+0.0000 wins=0/5  Δmean_lpips_true=+0.0000 wins=0/5  Δ|attr|=+0.0000
+  risk_minus_random      seed-mean ΔID=-0.0040 wins=1/5  Δmean_lpips_true=+0.0115 wins=1/5  Δ|attr|=+0.0005
+  risk_minus_high_risk   seed-mean ΔID=-0.0056 wins=1/5  Δmean_lpips_true=+0.0152 wins=1/5  Δ|attr|=+0.0004
+  risk_minus_low_risk    seed-mean ΔID=-0.0007 wins=3/5  Δmean_lpips_true=+0.0044 wins=3/5  Δ|attr|=+0.0000
+
+[Control D19 church structured-source ablation sefa_only]
+  risk_minus_gain_only   seed-mean ΔID=+0.0000 wins=0/5  Δmean_lpips_true=+0.0000 wins=0/5  Δ|attr|=+0.0000
+  risk_minus_random      seed-mean ΔID=+0.0091 wins=4/5  Δmean_lpips_true=-0.0177 wins=3/5  Δ|attr|=-0.0006
+  risk_minus_high_risk   seed-mean ΔID=+0.0171 wins=5/5  Δmean_lpips_true=-0.0357 wins=5/5  Δ|attr|=-0.0010
+  risk_minus_low_risk    seed-mean ΔID=-0.0054 wins=1/5  Δmean_lpips_true=+0.0119 wins=1/5  Δ|attr|=+0.0003
+
+[Control D20 church risk predictive validity]
+  rho vs ID Spearman                 mean=-0.6206 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6597 wins=5/5
+  rho beta for ID                    mean=-0.1622 wins=5/5
+  rho beta for LPIPS                 mean=+0.2415 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0192 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0383 wins=5/5
+
+[Control D20 bedroom risk predictive validity]
+  rho vs ID Spearman                 mean=-0.3328 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5572 wins=5/5
+  rho beta for ID                    mean=-0.2531 wins=4/5
+  rho beta for LPIPS                 mean=+0.6888 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0051 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0271 wins=5/5
+
+[Control D21 church gain-first/risk-tiebreak controller]
+  risk_minus_gain_only   seed-mean ΔID=+0.0030 wins=2/5  Δmean_lpips_true=-0.0040 wins=2/5  Δ|attr|=-0.0002
+  risk_minus_random      seed-mean ΔID=+0.0072 wins=4/5  Δmean_lpips_true=-0.0133 wins=4/5  Δ|attr|=-0.0007
+  risk_minus_high_risk   seed-mean ΔID=+0.0051 wins=3/5  Δmean_lpips_true=-0.0098 wins=4/5  Δ|attr|=-0.0006
+  risk_minus_low_risk    seed-mean ΔID=-0.0067 wins=0/5  Δmean_lpips_true=+0.0147 wins=0/5  Δ|attr|=+0.0006
+
+[Control D21b church gain-first/risk-tiebreak negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0019 wins=3/5  Δmean_lpips_true=-0.0020 wins=3/5  Δ|attr|=-0.0003
+  actual_minus_inverted    seed-mean ΔID=+0.0109 wins=4/5  Δmean_lpips_true=-0.0225 wins=4/5  Δ|attr|=-0.0010
+
+[Control D22 main-claim readiness]
+  readiness=main_predictive_claim_only
+  predictive=8/8  controller=5/12
+
+[Control D23 main evidence table]
+  readiness=main_predictive_claim_only  evidence_pass=32/56
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_main_evidence_table_v1/main_evidence_table.md
+
+[Control D24 church semantic-feasible minimum-risk controller]
+  risk_minus_gain_only   seed-mean ΔID=+0.0041 wins=4/5  Δmean_lpips_true=-0.0080 wins=4/5  Δ|attr|=-0.0002  Δprobe_gain=-0.0004  Δ|alpha|=-0.0171
+  risk_minus_random      seed-mean ΔID=-0.0033 wins=2/5  Δmean_lpips_true=+0.0089 wins=2/5  Δ|attr|=+0.0003  Δprobe_gain=+0.0008  Δ|alpha|=-0.0181
+  risk_minus_high_risk   seed-mean ΔID=+0.0183 wins=5/5  Δmean_lpips_true=-0.0384 wins=4/5  Δ|attr|=-0.0011  Δprobe_gain=+0.0006  Δ|alpha|=-0.5998
+  risk_minus_low_risk    seed-mean ΔID=-0.0069 wins=1/5  Δmean_lpips_true=+0.0227 wins=1/5  Δ|attr|=+0.0005  Δprobe_gain=+0.0005  Δ|alpha|=-0.2240
+
+[Control D25 church feasible-controller risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0030 wins=4/5  Δmean_lpips_true=-0.0029 wins=3/5  Δ|attr|=-0.0000
+  actual_minus_inverted    seed-mean ΔID=+0.0094 wins=5/5  Δmean_lpips_true=-0.0199 wins=5/5  Δ|attr|=-0.0005
+
+[Control D24 bedroom semantic-feasible minimum-risk controller]
+  risk_minus_gain_only   seed-mean ΔID=+0.0005 wins=2/5  Δmean_lpips_true=+0.0026 wins=1/5  Δ|attr|=-0.0001  Δprobe_gain=-0.0025  Δ|alpha|=+0.6296
+  risk_minus_random      seed-mean ΔID=+0.0036 wins=3/5  Δmean_lpips_true=-0.0156 wins=3/5  Δ|attr|=+0.0002  Δprobe_gain=+0.0015  Δ|alpha|=-0.2281
+  risk_minus_high_risk   seed-mean ΔID=+0.0076 wins=3/5  Δmean_lpips_true=-0.0213 wins=4/5  Δ|attr|=-0.0004  Δprobe_gain=+0.0002  Δ|alpha|=+0.2123
+  risk_minus_low_risk    seed-mean ΔID=-0.0019 wins=1/5  Δmean_lpips_true=-0.0046 wins=3/5  Δ|attr|=+0.0010  Δprobe_gain=+0.0029  Δ|alpha|=-0.7101
+
+[Control D25 bedroom feasible-controller risk-signal negatives]
+  actual_minus_shuffled    seed-mean ΔID=+0.0047 wins=4/5  Δmean_lpips_true=-0.0068 wins=4/5  Δ|attr|=-0.0004
+  actual_minus_inverted    seed-mean ΔID=+0.0046 wins=4/5  Δmean_lpips_true=-0.0119 wins=4/5  Δ|attr|=-0.0003
+
+[Control D26 feasible-control readiness]
+  readiness=predictive_claim_with_feasible_control_boundary
+  predictive=8/8  controller=12/20  boundary=3/8
+
+[Control D27 feasible-control evidence table]
+  readiness=predictive_claim_with_feasible_control_boundary  required_pass=20/28  all_pass=23/36
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_feasible_evidence_table_v1/feasible_control_evidence_table.md
+
+[Control D28 church predictive stress: FD-risk-estimator]
+  rho vs ID Spearman                 mean=-0.6899 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.7517 wins=5/5
+  rho beta for ID                    mean=-0.2782 wins=5/5
+  rho beta for LPIPS                 mean=+0.4013 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0290 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0764 wins=5/5
+
+[Control D28 bedroom predictive stress: FD-risk-estimator]
+  rho vs ID Spearman                 mean=-0.3929 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6026 wins=5/5
+  rho beta for ID                    mean=-0.2943 wins=5/5
+  rho beta for LPIPS                 mean=+0.7825 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0028 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0324 wins=3/5
+
+[Control D28 church predictive stress: prompt-template]
+  rho vs ID Spearman                 mean=-0.7168 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.7286 wins=5/5
+  rho beta for ID                    mean=-0.2472 wins=4/5
+  rho beta for LPIPS                 mean=+0.2349 wins=4/5
+  low-risk minus high-risk ID        mean=+0.0216 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0468 wins=5/5
+
+[Control D28 bedroom predictive stress: prompt-template]
+  rho vs ID Spearman                 mean=-0.4042 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5963 wins=5/5
+  rho beta for ID                    mean=-0.0356 wins=4/5
+  rho beta for LPIPS                 mean=+0.5875 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0074 wins=2/5
+  low-risk minus high-risk LPIPS     mean=-0.0120 wins=3/5
+
+[Control D28 church predictive stress: prompt-caption]
+  rho vs ID Spearman                 mean=-0.5122 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6071 wins=5/5
+  rho beta for ID                    mean=-0.0652 wins=3/5
+  rho beta for LPIPS                 mean=+0.1010 wins=3/5
+  low-risk minus high-risk ID        mean=+0.0075 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0144 wins=3/5
+
+[Control D28 bedroom predictive stress: prompt-caption]
+  rho vs ID Spearman                 mean=-0.3477 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5902 wins=5/5
+  rho beta for ID                    mean=+0.2023 wins=1/5
+  rho beta for LPIPS                 mean=+0.4813 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0169 wins=1/5
+  low-risk minus high-risk LPIPS     mean=-0.0022 wins=3/5
+
+[Control D28 church predictive stress: prompt-ensemble]
+  rho vs ID Spearman                 mean=-0.4473 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5123 wins=5/5
+  rho beta for ID                    mean=-0.2098 wins=5/5
+  rho beta for LPIPS                 mean=+0.2805 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0131 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0174 wins=3/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble]
+  rho vs ID Spearman                 mean=-0.4104 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6074 wins=5/5
+  rho beta for ID                    mean=+0.1020 wins=1/5
+  rho beta for LPIPS                 mean=+0.4533 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0077 wins=2/5
+  low-risk minus high-risk LPIPS     mean=-0.0181 wins=3/5
+
+[Control D28 church predictive stress: prompt-ensemble-high-ntest128]
+  rho vs ID Spearman                 mean=-0.5433 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6012 wins=5/5
+  rho beta for ID                    mean=-0.2894 wins=5/5
+  rho beta for LPIPS                 mean=+0.3525 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0166 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0292 wins=4/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-high-ntest128]
+  rho vs ID Spearman                 mean=-0.4085 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6436 wins=5/5
+  rho beta for ID                    mean=-0.0071 wins=3/5
+  rho beta for LPIPS                 mean=+0.5440 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0142 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0399 wins=5/5
+
+[Control D28 church predictive stress: prompt-ensemble-strict-gain]
+  rho vs ID Spearman                 mean=-0.6970 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.7289 wins=5/5
+  rho beta for ID                    mean=-0.2351 wins=5/5
+  rho beta for LPIPS                 mean=+0.2706 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0213 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0449 wins=4/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-strict-gain]
+  rho vs ID Spearman                 mean=-0.2050 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5606 wins=5/5
+  rho beta for ID                    mean=-0.0898 wins=3/5
+  rho beta for LPIPS                 mean=+0.6578 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0150 wins=2/5
+  low-risk minus high-risk LPIPS     mean=-0.0193 wins=3/5
+
+[Control D28 church predictive stress: prompt-ensemble-FD]
+  rho vs ID Spearman                 mean=-0.6229 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6849 wins=5/5
+  rho beta for ID                    mean=-0.2164 wins=5/5
+  rho beta for LPIPS                 mean=+0.3491 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0024 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0156 wins=3/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-FD]
+  rho vs ID Spearman                 mean=-0.3130 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5871 wins=5/5
+  rho beta for ID                    mean=-0.2926 wins=5/5
+  rho beta for LPIPS                 mean=+0.8437 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0170 wins=1/5
+  low-risk minus high-risk LPIPS     mean=-0.0139 wins=4/5
+
+[Control D28 church predictive stress: prompt-ensemble-ganspace-only]
+  rho vs ID Spearman                 mean=-0.6548 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6968 wins=5/5
+  rho beta for ID                    mean=-0.1459 wins=3/5
+  rho beta for LPIPS                 mean=+0.2120 wins=4/5
+  low-risk minus high-risk ID        mean=+0.0016 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0068 wins=3/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-ganspace-only]
+  rho vs ID Spearman                 mean=-0.4416 wins=4/5
+  rho vs LPIPS Spearman              mean=+0.5670 wins=5/5
+  rho beta for ID                    mean=-0.5367 wins=5/5
+  rho beta for LPIPS                 mean=+0.8222 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0032 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0029 wins=2/5
+
+[Control D28 church predictive stress: prompt-ensemble-sefa-only]
+  rho vs ID Spearman                 mean=-0.5185 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6427 wins=5/5
+  rho beta for ID                    mean=-0.0751 wins=3/5
+  rho beta for LPIPS                 mean=+0.2144 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0331 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0727 wins=5/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-sefa-only]
+  rho vs ID Spearman                 mean=-0.4065 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6785 wins=5/5
+  rho beta for ID                    mean=+0.0305 wins=1/5
+  rho beta for LPIPS                 mean=+0.6684 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0181 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0670 wins=5/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble]
+  rho vs ID Spearman                 mean=-0.3839 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4029 wins=5/5
+  rho beta for ID                    mean=-0.2422 wins=5/5
+  rho beta for LPIPS                 mean=+0.3962 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0278 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0576 wins=5/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-high-ntest128]
+  rho vs ID Spearman                 mean=-0.4055 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4468 wins=5/5
+  rho beta for ID                    mean=-0.2361 wins=5/5
+  rho beta for LPIPS                 mean=+0.4027 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0143 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0398 wins=5/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-strict-gain]
+  rho vs ID Spearman                 mean=-0.3928 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4632 wins=5/5
+  rho beta for ID                    mean=-0.3280 wins=5/5
+  rho beta for LPIPS                 mean=+0.4953 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0121 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0244 wins=4/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-FD]
+  rho vs ID Spearman                 mean=-0.2172 wins=4/5
+  rho vs LPIPS Spearman              mean=+0.2257 wins=5/5
+  rho beta for ID                    mean=-0.4974 wins=5/5
+  rho beta for LPIPS                 mean=+0.5484 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0210 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0302 wins=4/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-FD-n10]
+  rho vs ID Spearman                 mean=-0.2818 wins=9/10
+  rho vs LPIPS Spearman              mean=+0.3169 wins=10/10
+  rho beta for ID                    mean=-0.4657 wins=10/10
+  rho beta for LPIPS                 mean=+0.5542 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0192 wins=8/10
+  low-risk minus high-risk LPIPS     mean=-0.0343 wins=8/10
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-ganspace-only]
+  rho vs ID Spearman                 mean=-0.4939 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5087 wins=5/5
+  rho beta for ID                    mean=-0.4790 wins=5/5
+  rho beta for LPIPS                 mean=+0.5305 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0090 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0255 wins=3/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-ganspace-only-n10]
+  rho vs ID Spearman                 mean=-0.3432 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.3338 wins=10/10
+  rho beta for ID                    mean=-0.3863 wins=10/10
+  rho beta for LPIPS                 mean=+0.4004 wins=10/10
+  low-risk minus high-risk ID        mean=-0.0040 wins=5/10
+  low-risk minus high-risk LPIPS     mean=+0.0029 wins=4/10
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-sefa-only]
+  rho vs ID Spearman                 mean=-0.4012 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5079 wins=5/5
+  rho beta for ID                    mean=-0.0504 wins=4/5
+  rho beta for LPIPS                 mean=+0.3721 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0048 wins=2/5
+  low-risk minus high-risk LPIPS     mean=+0.0038 wins=2/5
+
+[Control D28 ffhq predictive stress: ffhq-prompt-ensemble-sefa-only-n10]
+  rho vs ID Spearman                 mean=-0.3452 wins=9/10
+  rho vs LPIPS Spearman              mean=+0.4517 wins=10/10
+  rho beta for ID                    mean=-0.0717 wins=7/10
+  rho beta for LPIPS                 mean=+0.3732 wins=10/10
+  low-risk minus high-risk ID        mean=-0.0110 wins=4/10
+  low-risk minus high-risk LPIPS     mean=+0.0100 wins=5/10
+
+[Control D28 church predictive stress: prompt-ensemble-random-universe]
+  rho vs ID Spearman                 mean=-0.5804 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6201 wins=5/5
+  rho beta for ID                    mean=-0.0830 wins=4/5
+  rho beta for LPIPS                 mean=+0.1242 wins=3/5
+  low-risk minus high-risk ID        mean=+0.0118 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0237 wins=4/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-random-universe]
+  rho vs ID Spearman                 mean=-0.2949 wins=4/5
+  rho vs LPIPS Spearman              mean=+0.6249 wins=5/5
+  rho beta for ID                    mean=-0.1157 wins=5/5
+  rho beta for LPIPS                 mean=+0.6304 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0090 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0303 wins=5/5
+
+[Control D28 ffhq predictive stress: prompt-ensemble-random-universe]
+  rho vs ID Spearman                 mean=-0.4077 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4035 wins=5/5
+  rho beta for ID                    mean=-0.3565 wins=5/5
+  rho beta for LPIPS                 mean=+0.4404 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0242 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0566 wins=5/5
+
+[Control D28 church predictive stress: prompt-ensemble-random-universe-n10]
+  rho vs ID Spearman                 mean=-0.5682 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6072 wins=10/10
+  rho beta for ID                    mean=-0.0811 wins=8/10
+  rho beta for LPIPS                 mean=+0.1320 wins=8/10
+  low-risk minus high-risk ID        mean=+0.0080 wins=8/10
+  low-risk minus high-risk LPIPS     mean=-0.0161 wins=7/10
+
+[Control D28 bedroom predictive stress: prompt-ensemble-random-universe-n10]
+  rho vs ID Spearman                 mean=-0.2374 wins=8/10
+  rho vs LPIPS Spearman              mean=+0.6069 wins=10/10
+  rho beta for ID                    mean=-0.1024 wins=8/10
+  rho beta for LPIPS                 mean=+0.6463 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0046 wins=8/10
+  low-risk minus high-risk LPIPS     mean=-0.0252 wins=10/10
+
+[Control D28 ffhq predictive stress: prompt-ensemble-random-universe-n10]
+  rho vs ID Spearman                 mean=-0.3700 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.3882 wins=10/10
+  rho beta for ID                    mean=-0.3130 wins=10/10
+  rho beta for LPIPS                 mean=+0.4376 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0192 wins=10/10
+  low-risk minus high-risk LPIPS     mean=-0.0455 wins=10/10
+
+[Control D28 church predictive stress: prompt-ensemble-random-high-budget]
+  rho vs ID Spearman                 mean=-0.6033 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6655 wins=5/5
+  rho beta for ID                    mean=-0.1736 wins=5/5
+  rho beta for LPIPS                 mean=+0.2206 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0048 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0105 wins=3/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-random-high-budget]
+  rho vs ID Spearman                 mean=-0.2985 wins=4/5
+  rho vs LPIPS Spearman              mean=+0.6194 wins=5/5
+  rho beta for ID                    mean=-0.0449 wins=3/5
+  rho beta for LPIPS                 mean=+0.5898 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0016 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0242 wins=4/5
+
+[Control D28 ffhq predictive stress: prompt-ensemble-random-high-budget]
+  rho vs ID Spearman                 mean=-0.3891 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4189 wins=5/5
+  rho beta for ID                    mean=-0.2728 wins=5/5
+  rho beta for LPIPS                 mean=+0.4207 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0247 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0613 wins=5/5
+
+[Control D28 church predictive stress: prompt-ensemble-random-high-budget-n10]
+  rho vs ID Spearman                 mean=-0.6129 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6613 wins=10/10
+  rho beta for ID                    mean=-0.1549 wins=10/10
+  rho beta for LPIPS                 mean=+0.1966 wins=9/10
+  low-risk minus high-risk ID        mean=+0.0083 wins=9/10
+  low-risk minus high-risk LPIPS     mean=-0.0176 wins=7/10
+
+[Control D28 bedroom predictive stress: prompt-ensemble-random-high-budget-n10]
+  rho vs ID Spearman                 mean=-0.2792 wins=8/10
+  rho vs LPIPS Spearman              mean=+0.5854 wins=10/10
+  rho beta for ID                    mean=-0.0584 wins=5/10
+  rho beta for LPIPS                 mean=+0.6400 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0014 wins=6/10
+  low-risk minus high-risk LPIPS     mean=-0.0218 wins=8/10
+
+[Control D28 ffhq predictive stress: prompt-ensemble-random-high-budget-n10]
+  rho vs ID Spearman                 mean=-0.3494 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.3805 wins=10/10
+  rho beta for ID                    mean=-0.2946 wins=10/10
+  rho beta for LPIPS                 mean=+0.4362 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0250 wins=10/10
+  low-risk minus high-risk LPIPS     mean=-0.0614 wins=10/10
+
+[Control D28 church predictive stress: prompt-ensemble-wide-universe]
+  rho vs ID Spearman                 mean=-0.5468 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6098 wins=5/5
+  rho beta for ID                    mean=-0.1592 wins=5/5
+  rho beta for LPIPS                 mean=+0.2176 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0097 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0204 wins=4/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-wide-universe]
+  rho vs ID Spearman                 mean=-0.3585 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6504 wins=5/5
+  rho beta for ID                    mean=-0.1156 wins=4/5
+  rho beta for LPIPS                 mean=+0.6361 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0135 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0399 wins=5/5
+
+[Control D28 ffhq predictive stress: prompt-ensemble-wide-universe]
+  rho vs ID Spearman                 mean=-0.3322 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4116 wins=5/5
+  rho beta for ID                    mean=-0.1655 wins=5/5
+  rho beta for LPIPS                 mean=+0.3604 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0162 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0578 wins=5/5
+
+[Control D28 church predictive stress: prompt-ensemble-wide-universe-n10]
+  rho vs ID Spearman                 mean=-0.5847 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6420 wins=10/10
+  rho beta for ID                    mean=-0.1451 wins=9/10
+  rho beta for LPIPS                 mean=+0.1973 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0079 wins=9/10
+  low-risk minus high-risk LPIPS     mean=-0.0174 wins=9/10
+
+[Control D28 bedroom predictive stress: prompt-ensemble-wide-universe-n10]
+  rho vs ID Spearman                 mean=-0.3207 wins=9/10
+  rho vs LPIPS Spearman              mean=+0.6492 wins=10/10
+  rho beta for ID                    mean=-0.0787 wins=7/10
+  rho beta for LPIPS                 mean=+0.6481 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0111 wins=9/10
+  low-risk minus high-risk LPIPS     mean=-0.0405 wins=10/10
+
+[Control D28 ffhq predictive stress: prompt-ensemble-wide-universe-n10]
+  rho vs ID Spearman                 mean=-0.3883 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.4671 wins=10/10
+  rho beta for ID                    mean=-0.2256 wins=10/10
+  rho beta for LPIPS                 mean=+0.4096 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0192 wins=10/10
+  low-risk minus high-risk LPIPS     mean=-0.0619 wins=10/10
+
+[Control D28 church predictive stress: prompt-ensemble-target-q10]
+  rho vs ID Spearman                 mean=-0.5426 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.5956 wins=5/5
+  rho beta for ID                    mean=-0.0727 wins=4/5
+  rho beta for LPIPS                 mean=+0.1360 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0163 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0348 wins=5/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-target-q10]
+  rho vs ID Spearman                 mean=-0.1241 wins=4/5
+  rho vs LPIPS Spearman              mean=+0.4344 wins=5/5
+  rho beta for ID                    mean=-0.1421 wins=4/5
+  rho beta for LPIPS                 mean=+0.6495 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0078 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0246 wins=3/5
+
+[Control D28 ffhq predictive stress: prompt-ensemble-target-q10]
+  rho vs ID Spearman                 mean=-0.3647 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4060 wins=5/5
+  rho beta for ID                    mean=-0.1720 wins=5/5
+  rho beta for LPIPS                 mean=+0.3720 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0189 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0655 wins=5/5
+
+[Control D28 church predictive stress: prompt-ensemble-target-q10-n10]
+  rho vs ID Spearman                 mean=-0.4954 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.5690 wins=10/10
+  rho beta for ID                    mean=-0.0937 wins=9/10
+  rho beta for LPIPS                 mean=+0.1555 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0115 wins=10/10
+  low-risk minus high-risk LPIPS     mean=-0.0250 wins=10/10
+
+[Control D28 bedroom predictive stress: prompt-ensemble-target-q10-n10]
+  rho vs ID Spearman                 mean=-0.2281 wins=9/10
+  rho vs LPIPS Spearman              mean=+0.5401 wins=10/10
+  rho beta for ID                    mean=-0.1501 wins=8/10
+  rho beta for LPIPS                 mean=+0.6899 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0098 wins=7/10
+  low-risk minus high-risk LPIPS     mean=-0.0295 wins=8/10
+
+[Control D28 ffhq predictive stress: prompt-ensemble-target-q10-n10]
+  rho vs ID Spearman                 mean=-0.3268 wins=9/10
+  rho vs LPIPS Spearman              mean=+0.3721 wins=9/10
+  rho beta for ID                    mean=-0.2118 wins=10/10
+  rho beta for LPIPS                 mean=+0.3862 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0148 wins=9/10
+  low-risk minus high-risk LPIPS     mean=-0.0510 wins=9/10
+
+[Control D28 church predictive stress: prompt-ensemble-target-q50]
+  rho vs ID Spearman                 mean=-0.5938 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6350 wins=5/5
+  rho beta for ID                    mean=-0.1314 wins=4/5
+  rho beta for LPIPS                 mean=+0.1998 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0149 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0313 wins=5/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-target-q50]
+  rho vs ID Spearman                 mean=-0.4077 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6241 wins=5/5
+  rho beta for ID                    mean=-0.0133 wins=2/5
+  rho beta for LPIPS                 mean=+0.5498 wins=5/5
+  low-risk minus high-risk ID        mean=-0.0080 wins=2/5
+  low-risk minus high-risk LPIPS     mean=-0.0126 wins=3/5
+
+[Control D28 ffhq predictive stress: prompt-ensemble-target-q50]
+  rho vs ID Spearman                 mean=-0.4513 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.4889 wins=5/5
+  rho beta for ID                    mean=-0.3414 wins=5/5
+  rho beta for LPIPS                 mean=+0.4724 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0276 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0599 wins=5/5
+
+[Control D28 church predictive stress: prompt-ensemble-target-q50-n10]
+  rho vs ID Spearman                 mean=-0.6175 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6538 wins=10/10
+  rho beta for ID                    mean=-0.1596 wins=9/10
+  rho beta for LPIPS                 mean=+0.2291 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0141 wins=10/10
+  low-risk minus high-risk LPIPS     mean=-0.0304 wins=9/10
+
+[Control D28 bedroom predictive stress: prompt-ensemble-target-q50-n10]
+  rho vs ID Spearman                 mean=-0.4056 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6445 wins=10/10
+  rho beta for ID                    mean=-0.0719 wins=6/10
+  rho beta for LPIPS                 mean=+0.6115 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0015 wins=6/10
+  low-risk minus high-risk LPIPS     mean=-0.0230 wins=8/10
+
+[Control D28 ffhq predictive stress: prompt-ensemble-target-q50-n10]
+  rho vs ID Spearman                 mean=-0.4362 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.4711 wins=10/10
+  rho beta for ID                    mean=-0.2939 wins=10/10
+  rho beta for LPIPS                 mean=+0.4476 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0242 wins=9/10
+  low-risk minus high-risk LPIPS     mean=-0.0519 wins=9/10
+
+[Control D28 church predictive stress: prompt-ensemble-DINO-preservation]
+  rho vs ID Spearman                 mean=-0.6678 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6845 wins=5/5
+  rho beta for ID                    mean=-0.1973 wins=5/5
+  rho beta for LPIPS                 mean=+0.2850 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0099 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0274 wins=4/5
+  rho vs DINO Spearman               mean=-0.6982 wins=5/5
+  rho beta for DINO                  mean=-0.2971 wins=5/5
+  low-risk minus high-risk DINO      mean=+0.0260 wins=4/5
+
+[Control D28 bedroom predictive stress: prompt-ensemble-DINO-preservation]
+  rho vs ID Spearman                 mean=-0.4952 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6893 wins=5/5
+  rho beta for ID                    mean=-0.2819 wins=5/5
+  rho beta for LPIPS                 mean=+0.7701 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0131 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0395 wins=5/5
+  rho vs DINO Spearman               mean=-0.6519 wins=5/5
+  rho beta for DINO                  mean=-0.6339 wins=5/5
+  low-risk minus high-risk DINO      mean=+0.0168 wins=3/5
+
+[Control D28 ffhq predictive stress: prompt-ensemble-DINO-preservation]
+  rho vs ID Spearman                 mean=-0.3486 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.3832 wins=5/5
+  rho beta for ID                    mean=-0.2980 wins=4/5
+  rho beta for LPIPS                 mean=+0.4708 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0169 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0260 wins=4/5
+  rho vs DINO Spearman               mean=-0.3454 wins=5/5
+  rho beta for DINO                  mean=-0.3052 wins=5/5
+  low-risk minus high-risk DINO      mean=+0.0203 wins=4/5
+
+[Control D28 church predictive stress: prompt-ensemble-DINO-preservation-n10]
+  rho vs ID Spearman                 mean=-0.6242 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6556 wins=10/10
+  rho beta for ID                    mean=-0.2088 wins=9/10
+  rho beta for LPIPS                 mean=+0.2821 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0138 wins=8/10
+  low-risk minus high-risk LPIPS     mean=-0.0299 wins=8/10
+  rho vs DINO Spearman               mean=-0.6620 wins=10/10
+  rho beta for DINO                  mean=-0.2774 wins=10/10
+  low-risk minus high-risk DINO      mean=+0.0323 wins=8/10
+
+[Control D28 bedroom predictive stress: prompt-ensemble-DINO-preservation-n10]
+  rho vs ID Spearman                 mean=-0.4737 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.6505 wins=10/10
+  rho beta for ID                    mean=-0.1166 wins=7/10
+  rho beta for LPIPS                 mean=+0.6647 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0007 wins=5/10
+  low-risk minus high-risk LPIPS     mean=-0.0283 wins=9/10
+  rho vs DINO Spearman               mean=-0.6298 wins=10/10
+  rho beta for DINO                  mean=-0.4472 wins=9/10
+  low-risk minus high-risk DINO      mean=-0.0043 wins=5/10
+
+[Control D28 ffhq predictive stress: prompt-ensemble-DINO-preservation-n10]
+  rho vs ID Spearman                 mean=-0.3410 wins=10/10
+  rho vs LPIPS Spearman              mean=+0.3880 wins=10/10
+  rho beta for ID                    mean=-0.2894 wins=9/10
+  rho beta for LPIPS                 mean=+0.4658 wins=10/10
+  low-risk minus high-risk ID        mean=+0.0132 wins=8/10
+  low-risk minus high-risk LPIPS     mean=-0.0298 wins=8/10
+  rho vs DINO Spearman               mean=-0.3502 wins=10/10
+  rho beta for DINO                  mean=-0.3114 wins=10/10
+  low-risk minus high-risk DINO      mean=+0.0184 wins=8/10
+
+[Control D28 church predictive stress: high-ntest128]
+  rho vs ID Spearman                 mean=-0.5692 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6373 wins=5/5
+  rho beta for ID                    mean=-0.1719 wins=5/5
+  rho beta for LPIPS                 mean=+0.2108 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0067 wins=4/5
+  low-risk minus high-risk LPIPS     mean=-0.0129 wins=4/5
+
+[Control D28 bedroom predictive stress: high-ntest128]
+  rho vs ID Spearman                 mean=-0.4175 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6261 wins=5/5
+  rho beta for ID                    mean=-0.2166 wins=4/5
+  rho beta for LPIPS                 mean=+0.6960 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0021 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0179 wins=4/5
+
+[Control D28 church predictive stress: strict-gain-match]
+  rho vs ID Spearman                 mean=-0.6387 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6949 wins=5/5
+  rho beta for ID                    mean=-0.1123 wins=3/5
+  rho beta for LPIPS                 mean=+0.1388 wins=3/5
+  low-risk minus high-risk ID        mean=+0.0282 wins=5/5
+  low-risk minus high-risk LPIPS     mean=-0.0583 wins=4/5
+
+[Control D28 bedroom predictive stress: strict-gain-match]
+  rho vs ID Spearman                 mean=-0.3723 wins=5/5
+  rho vs LPIPS Spearman              mean=+0.6235 wins=5/5
+  rho beta for ID                    mean=-0.2696 wins=5/5
+  rho beta for LPIPS                 mean=+0.7355 wins=5/5
+  low-risk minus high-risk ID        mean=+0.0122 wins=3/5
+  low-risk minus high-risk LPIPS     mean=-0.0374 wins=3/5
+
+[Control D29 predictive assumption-stress readiness]
+  readiness=assumption_sensitive_predictive_claim  passes=13/16
+
+[Control D30 extended predictive stress evidence]
+  readiness=extended_predictive_stress_sensitive  required_pass=36/48  all_pass=57/72
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v1/predictive_stress_evidence_table.md
+
+[Control D31 extended predictive stress evidence + prompt ensemble]
+  readiness=extended_predictive_stress_sensitive  required_pass=41/56  all_pass=65/84
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v2/predictive_stress_evidence_table.md
+
+[Control D32 extended predictive stress evidence + ensemble follow-up]
+  readiness=extended_predictive_stress_sensitive  required_pass=55/72  all_pass=85/108
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v3/predictive_stress_evidence_table.md
+
+[Control D33 prompt-ensemble estimator/source evidence]
+  readiness=extended_predictive_stress_sensitive  required_pass=44/56  all_pass=66/84
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v4/predictive_stress_evidence_table.md
+
+[Control D34 main-grade extension stress evidence]
+  readiness=extended_predictive_stress_borderline  required_pass=33/36  all_pass=51/54
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v5/predictive_stress_evidence_table.md
+
+[Control D35 DINO preservation evidence]
+  readiness=dino_preservation_predictive_borderline  pass=8/9
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_dino_evidence_table_v1/predictive_dino_evidence_table.md
+
+[Control D36 seed-scaled extension evidence]
+  readiness=extended_predictive_stress_borderline  required_pass=22/24  all_pass=33/36
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v6_n10/predictive_stress_evidence_table.md
+
+[Control D37 DINO seed-scaled evidence]
+  readiness=dino_preservation_predictive_borderline  pass=8/9
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_dino_evidence_table_v2_n10/predictive_dino_evidence_table.md
+
+[Control D38 rho incremental-value evidence]
+  readiness=rho_incremental_value_sensitive  pass=2/15
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_rho_incremental_value_table_v1/predictive_incremental_value_table.md
+
+[Control D39 failure-boundary table]
+  fail=39/207  required_fail=32/149
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_failure_boundary_table_v1/failure_boundary_table.md
+
+[Control D40 exhaustive top-tier defense evidence]
+  readiness=extended_predictive_stress_sensitive  required_pass=50/60  all_pass=78/90
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v7_exhaustive/predictive_stress_evidence_table.md
+
+[Control D41 predictive permutation-null evidence]
+  readiness=predictive_permutation_null_sensitive  required_pass=23/93  all_pass=30/135
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_permutation_null_table_v1/predictive_permutation_null_table.md
+
+[Control D42 failure-boundary table v2]
+  fail=156/432  required_fail=112/302
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_failure_boundary_table_v2/failure_boundary_table.md
+
+[Control D43 exhaustive n=10 defense evidence]
+  readiness=extended_predictive_stress_sensitive  required_pass=52/60  all_pass=78/90
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_stress_evidence_table_v8_exhaustive_n10/predictive_stress_evidence_table.md
+
+[Control D44 n=10 predictive permutation-null evidence]
+  readiness=predictive_permutation_null_sensitive  required_pass=23/93  all_pass=28/135
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_permutation_null_table_v2_n10/predictive_permutation_null_table.md
+
+[Control D45 failure-boundary table v3]
+  fail=275/657  required_fail=190/455
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_failure_boundary_table_v3/failure_boundary_table.md
+
+[Control D46 predictive diagnostic utility]
+  readiness=predictive_diagnostic_utility_sensitive  required_pass=14/41  all_pass=14/82
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_predictive_diagnostic_utility_table_v1/predictive_diagnostic_utility_table.md
+
+[Control D47 failure-boundary table v4]
+  fail=343/739  required_fail=217/496
+  table=/mnt/20t/study/HIGAN/paper/experiments/out/control_failure_boundary_table_v4/failure_boundary_table.md
+
+============================================================
+DONE

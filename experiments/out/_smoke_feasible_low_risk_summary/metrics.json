@@ -1,0 +1,1482 @@
+{
+  "inputs": [
+    "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json"
+  ],
+  "n_runs": 1,
+  "seeds": [
+    9999
+  ],
+  "attrs": [
+    "clouds"
+  ],
+  "comparisons": {
+    "risk_minus_gain_only": [
+      "risk_aware",
+      "gain_only"
+    ],
+    "risk_minus_random": [
+      "risk_aware",
+      "random"
+    ],
+    "risk_minus_high_risk": [
+      "risk_aware",
+      "high_risk"
+    ],
+    "risk_minus_low_risk": [
+      "risk_aware",
+      "low_risk"
+    ]
+  },
+  "metrics": [
+    "mean_probe_gain",
+    "mean_rho",
+    "target_hit_rate_calib",
+    "mean_id_cos",
+    "mean_lpips_proxy",
+    "mean_abs_delta_attr",
+    "mean_abs_alpha",
+    "mean_lpips_true"
+  ],
+  "cell_level": {
+    "risk_minus_gain_only": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": -0.0018510986119508743,
+        "median": -0.0018510986119508743,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.0018510986119508743,
+          -0.0018510986119508743
+        ],
+        "mean_abs": 0.0018510986119508743,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": -0.018714502453804016,
+        "median": -0.018714502453804016,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.018714502453804016,
+          -0.018714502453804016
+        ],
+        "mean_abs": 0.018714502453804016,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          1.0,
+          1.0
+        ],
+        "mean_abs": 1.0,
+        "orientation": "higher",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": 0.046332716941833496,
+        "median": 0.046332716941833496,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.046332716941833496,
+          0.046332716941833496
+        ],
+        "mean_abs": 0.046332716941833496,
+        "orientation": "higher",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": -0.031778091099113226,
+        "median": -0.031778091099113226,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.031778091099113226,
+          -0.031778091099113226
+        ],
+        "mean_abs": 0.031778091099113226,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": -0.006032299250364304,
+        "median": -0.006032299250364304,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.006032299250364304,
+          -0.006032299250364304
+        ],
+        "mean_abs": 0.006032299250364304,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": -1.271662102662197,
+        "median": -1.271662102662197,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -1.271662102662197,
+          -1.271662102662197
+        ],
+        "mean_abs": 1.271662102662197,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": -0.04375100415199995,
+        "median": -0.04375100415199995,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.04375100415199995,
+          -0.04375100415199995
+        ],
+        "mean_abs": 0.04375100415199995,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_random": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_high_risk": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": 0.004661284387111664,
+        "median": 0.004661284387111664,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.004661284387111664,
+          0.004661284387111664
+        ],
+        "mean_abs": 0.004661284387111664,
+        "orientation": "higher",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": -0.06288115680217743,
+        "median": -0.06288115680217743,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.06288115680217743,
+          -0.06288115680217743
+        ],
+        "mean_abs": 0.06288115680217743,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": -0.01734200119972229,
+        "median": -0.01734200119972229,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.01734200119972229,
+          -0.01734200119972229
+        ],
+        "mean_abs": 0.01734200119972229,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": 0.010177164222113788,
+        "median": 0.010177164222113788,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.010177164222113788,
+          0.010177164222113788
+        ],
+        "mean_abs": 0.010177164222113788,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": 0.007704226300120354,
+        "median": 0.007704226300120354,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.007704226300120354,
+          0.007704226300120354
+        ],
+        "mean_abs": 0.007704226300120354,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": -0.0773880408369454,
+        "median": -0.0773880408369454,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.0773880408369454,
+          -0.0773880408369454
+        ],
+        "mean_abs": 0.0773880408369454,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": 0.005163527792319655,
+        "median": 0.005163527792319655,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.005163527792319655,
+          0.005163527792319655
+        ],
+        "mean_abs": 0.005163527792319655,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_low_risk": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_attribute_cell"
+      }
+    }
+  },
+  "seed_level": {
+    "risk_minus_gain_only": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": -0.0018510986119508743,
+        "median": -0.0018510986119508743,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.0018510986119508743,
+          -0.0018510986119508743
+        ],
+        "mean_abs": 0.0018510986119508743,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": -0.018714502453804016,
+        "median": -0.018714502453804016,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.018714502453804016,
+          -0.018714502453804016
+        ],
+        "mean_abs": 0.018714502453804016,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          1.0,
+          1.0
+        ],
+        "mean_abs": 1.0,
+        "orientation": "higher",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": 0.046332716941833496,
+        "median": 0.046332716941833496,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.046332716941833496,
+          0.046332716941833496
+        ],
+        "mean_abs": 0.046332716941833496,
+        "orientation": "higher",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": -0.031778091099113226,
+        "median": -0.031778091099113226,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.031778091099113226,
+          -0.031778091099113226
+        ],
+        "mean_abs": 0.031778091099113226,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": -0.006032299250364304,
+        "median": -0.006032299250364304,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.006032299250364304,
+          -0.006032299250364304
+        ],
+        "mean_abs": 0.006032299250364304,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": -1.271662102662197,
+        "median": -1.271662102662197,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -1.271662102662197,
+          -1.271662102662197
+        ],
+        "mean_abs": 1.271662102662197,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": -0.04375100415199995,
+        "median": -0.04375100415199995,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.04375100415199995,
+          -0.04375100415199995
+        ],
+        "mean_abs": 0.04375100415199995,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_random": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_high_risk": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": 0.004661284387111664,
+        "median": 0.004661284387111664,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.004661284387111664,
+          0.004661284387111664
+        ],
+        "mean_abs": 0.004661284387111664,
+        "orientation": "higher",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": -0.06288115680217743,
+        "median": -0.06288115680217743,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.06288115680217743,
+          -0.06288115680217743
+        ],
+        "mean_abs": 0.06288115680217743,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": -0.01734200119972229,
+        "median": -0.01734200119972229,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.01734200119972229,
+          -0.01734200119972229
+        ],
+        "mean_abs": 0.01734200119972229,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": 0.010177164222113788,
+        "median": 0.010177164222113788,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.010177164222113788,
+          0.010177164222113788
+        ],
+        "mean_abs": 0.010177164222113788,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": 0.007704226300120354,
+        "median": 0.007704226300120354,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.007704226300120354,
+          0.007704226300120354
+        ],
+        "mean_abs": 0.007704226300120354,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": -0.0773880408369454,
+        "median": -0.0773880408369454,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.0773880408369454,
+          -0.0773880408369454
+        ],
+        "mean_abs": 0.0773880408369454,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": 0.005163527792319655,
+        "median": 0.005163527792319655,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.005163527792319655,
+          0.005163527792319655
+        ],
+        "mean_abs": 0.005163527792319655,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_low_risk": {
+      "mean_probe_gain": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_rho": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "target_hit_rate_calib": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_id_cos": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_abs_alpha": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "mean_abs": 0.0,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      }
+    }
+  },
+  "per_seed": {
+    "9999": {
+      "risk_minus_gain_only": {
+        "mean_probe_gain": -0.0018510986119508743,
+        "mean_rho": -0.018714502453804016,
+        "target_hit_rate_calib": 1.0,
+        "mean_id_cos": 0.046332716941833496,
+        "mean_lpips_proxy": -0.031778091099113226,
+        "mean_abs_delta_attr": -0.006032299250364304,
+        "mean_abs_alpha": -1.271662102662197,
+        "mean_lpips_true": -0.04375100415199995
+      },
+      "risk_minus_random": {
+        "mean_probe_gain": 0.0,
+        "mean_rho": 0.0,
+        "target_hit_rate_calib": 0.0,
+        "mean_id_cos": 0.0,
+        "mean_lpips_proxy": 0.0,
+        "mean_abs_delta_attr": 0.0,
+        "mean_abs_alpha": 0.0,
+        "mean_lpips_true": 0.0
+      },
+      "risk_minus_high_risk": {
+        "mean_probe_gain": 0.004661284387111664,
+        "mean_rho": -0.06288115680217743,
+        "target_hit_rate_calib": 0.0,
+        "mean_id_cos": -0.01734200119972229,
+        "mean_lpips_proxy": 0.010177164222113788,
+        "mean_abs_delta_attr": 0.007704226300120354,
+        "mean_abs_alpha": -0.0773880408369454,
+        "mean_lpips_true": 0.005163527792319655
+      },
+      "risk_minus_low_risk": {
+        "mean_probe_gain": 0.0,
+        "mean_rho": 0.0,
+        "target_hit_rate_calib": 0.0,
+        "mean_id_cos": 0.0,
+        "mean_lpips_proxy": 0.0,
+        "mean_abs_delta_attr": 0.0,
+        "mean_abs_alpha": 0.0,
+        "mean_lpips_true": 0.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_probe_gain",
+      "risk_value": 0.007838943973183632,
+      "baseline_value": 0.009690042585134506,
+      "diff": -0.0018510986119508743
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_rho",
+      "risk_value": 0.142858624458313,
+      "baseline_value": 0.161573126912117,
+      "diff": -0.018714502453804016
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "target_hit_rate_calib",
+      "risk_value": 1.0,
+      "baseline_value": 0.0,
+      "diff": 1.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9774492383003235,
+      "baseline_value": 0.93111652135849,
+      "diff": 0.046332716941833496
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.013244571629911661,
+      "baseline_value": 0.04502266272902489,
+      "diff": -0.031778091099113226
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010752192698419094,
+      "baseline_value": 0.016784491948783398,
+      "diff": -0.006032299250364304
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_alpha",
+      "risk_value": 0.7283378973378031,
+      "baseline_value": 2.0,
+      "diff": -1.271662102662197
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.009397740475833416,
+      "baseline_value": 0.053148744627833366,
+      "diff": -0.04375100415199995
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_probe_gain",
+      "risk_value": 0.007838943973183632,
+      "baseline_value": 0.007838943973183632,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_rho",
+      "risk_value": 0.142858624458313,
+      "baseline_value": 0.142858624458313,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "target_hit_rate_calib",
+      "risk_value": 1.0,
+      "baseline_value": 1.0,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9774492383003235,
+      "baseline_value": 0.9774492383003235,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.013244571629911661,
+      "baseline_value": 0.013244571629911661,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010752192698419094,
+      "baseline_value": 0.010752192698419094,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_alpha",
+      "risk_value": 0.7283378973378031,
+      "baseline_value": 0.7283378973378031,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.009397740475833416,
+      "baseline_value": 0.009397740475833416,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_probe_gain",
+      "risk_value": 0.007838943973183632,
+      "baseline_value": 0.003177659586071968,
+      "diff": 0.004661284387111664
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_rho",
+      "risk_value": 0.142858624458313,
+      "baseline_value": 0.20573978126049042,
+      "diff": -0.06288115680217743
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "target_hit_rate_calib",
+      "risk_value": 1.0,
+      "baseline_value": 1.0,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9774492383003235,
+      "baseline_value": 0.9947912395000458,
+      "diff": -0.01734200119972229
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.013244571629911661,
+      "baseline_value": 0.003067407407797873,
+      "diff": 0.010177164222113788
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010752192698419094,
+      "baseline_value": 0.0030479663982987404,
+      "diff": 0.007704226300120354
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_alpha",
+      "risk_value": 0.7283378973378031,
+      "baseline_value": 0.8057259381747485,
+      "diff": -0.0773880408369454
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.009397740475833416,
+      "baseline_value": 0.004234212683513761,
+      "diff": 0.005163527792319655
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_probe_gain",
+      "risk_value": 0.007838943973183632,
+      "baseline_value": 0.007838943973183632,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_rho",
+      "risk_value": 0.142858624458313,
+      "baseline_value": 0.142858624458313,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "target_hit_rate_calib",
+      "risk_value": 1.0,
+      "baseline_value": 1.0,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9774492383003235,
+      "baseline_value": 0.9774492383003235,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.013244571629911661,
+      "baseline_value": 0.013244571629911661,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010752192698419094,
+      "baseline_value": 0.010752192698419094,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_alpha",
+      "risk_value": 0.7283378973378031,
+      "baseline_value": 0.7283378973378031,
+      "diff": 0.0
+    },
+    {
+      "seed": 9999,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/_smoke_feasible_low_risk/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.009397740475833416,
+      "baseline_value": 0.009397740475833416,
+      "diff": 0.0
+    }
+  ],
+  "config": {
+    "inputs": [
+      "experiments/out/_smoke_feasible_low_risk/metrics.json"
+    ],
+    "out": "experiments/out/_smoke_feasible_low_risk_summary",
+    "seed": 9998,
+    "protocol": null,
+    "protocol_key": "risk_aware_robustness_summary"
+  },
+  "_meta": {
+    "seed": 9998,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-27T03:14:07.189059+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_risk_aware_repeat_summary.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_risk_aware_repeat_summary.py",
+        "--inputs",
+        "experiments/out/_smoke_feasible_low_risk/metrics.json",
+        "--out",
+        "experiments/out/_smoke_feasible_low_risk_summary",
+        "--seed",
+        "9998"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 186620,
+      "timestamp_utc": "2026-05-27T03:14:07.189040+00:00",
+      "protocol_path": null,
+      "protocol_key": "risk_aware_robustness_summary"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "c3_scores": {
+    "indoor_lighting": {
+      "iou_canonical_canonical": 0.2595336139202118,
+      "iou_canonical_noncanonical": 0.18463344871997833,
+      "iou_noncanonical_noncanonical": 0.2174580842256546,
+      "c3_score": 0.07490016520023346,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "wood": {
+      "iou_canonical_canonical": 0.26386556029319763,
+      "iou_canonical_noncanonical": 0.20635254681110382,
+      "iou_noncanonical_noncanonical": 0.22866283357143402,
+      "c3_score": 0.05751301348209381,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "view": {
+      "iou_canonical_canonical": 0.3261193037033081,
+      "iou_canonical_noncanonical": 0.22544237971305847,
+      "iou_noncanonical_noncanonical": 0.22400011122226715,
+      "c3_score": 0.10067692399024963,
+      "canonical_layers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "carpet": {
+      "iou_canonical_canonical": 0.2759248614311218,
+      "iou_canonical_noncanonical": 0.19782359898090363,
+      "iou_noncanonical_noncanonical": 0.22309565544128418,
+      "c3_score": 0.0781012624502182,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "cluttered_space": {
+      "iou_canonical_canonical": 0.3127337396144867,
+      "iou_canonical_noncanonical": 0.22948236763477325,
+      "iou_noncanonical_noncanonical": 0.2486351877450943,
+      "c3_score": 0.08325137197971344,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "glossy": {
+      "iou_canonical_canonical": 0.3010764718055725,
+      "iou_canonical_noncanonical": 0.18559587001800537,
+      "iou_noncanonical_noncanonical": 0.2184952199459076,
+      "c3_score": 0.11548060178756714,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "dirt": {
+      "iou_canonical_canonical": 0.3085540533065796,
+      "iou_canonical_noncanonical": 0.22120119631290436,
+      "iou_noncanonical_noncanonical": 0.23534297943115234,
+      "c3_score": 0.08735285699367523,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "scary": {
+      "iou_canonical_canonical": 0.2946613132953644,
+      "iou_canonical_noncanonical": 0.1942170113325119,
+      "iou_noncanonical_noncanonical": 0.22637952864170074,
+      "c3_score": 0.10044430196285248,
+      "canonical_layers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "mean_c3": 0.08721506223082542,
+  "top_frac": 0.2,
+  "num_samples": 16,
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-19T16:12:37.443534+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "aa9152f14a44abc59b21082d70ca0ed5fffb88bf",
+    "git_dirty": true,
+    "track": "bedroom_c3_iou",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

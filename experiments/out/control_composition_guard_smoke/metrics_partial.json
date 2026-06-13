@@ -1,0 +1,117 @@
+{
+  "pairs": [
+    {
+      "pair": "smile+age",
+      "a": "smile",
+      "b": "age",
+      "mixed_hessian_predictor": 0.0004630205258868752,
+      "max_univariate_pixel_rho": 15.75194792705588,
+      "sum_univariate_pixel_rho": 19.669828812708147,
+      "saliency_cosine": 0.6234631235694559,
+      "saliency_top20_iou": 0.31650941323439863,
+      "mean_target_additivity_error": 6.966961811430314,
+      "median_target_additivity_error": 6.966961811430314,
+      "mean_identity_drop_ab": 0.013531595468521118,
+      "mean_lpips_nonadditivity": 0.01532356720417738,
+      "mean_lpips_ab": 0.08996979705989361,
+      "mean_abs_delta_a_self": 0.004900775384157896,
+      "mean_abs_delta_b_self": 0.012326679192483425,
+      "mean_abs_delta_ab_a": 0.00577178318053484,
+      "mean_abs_delta_ab_b": 0.01397221814841032
+    },
+    {
+      "pair": "smile+pose",
+      "a": "smile",
+      "b": "pose",
+      "mixed_hessian_predictor": 0.00045699383885820674,
+      "max_univariate_pixel_rho": 150.59065119549632,
+      "sum_univariate_pixel_rho": 154.5085320811486,
+      "saliency_cosine": 0.6186318781089897,
+      "saliency_top20_iou": 0.2615406826357391,
+      "mean_target_additivity_error": 1.4402815347690843,
+      "median_target_additivity_error": 1.4402815347690843,
+      "mean_identity_drop_ab": 0.03208160400390625,
+      "mean_lpips_nonadditivity": 0.018174459226429462,
+      "mean_lpips_ab": 0.5025065243244171,
+      "mean_abs_delta_a_self": 0.004900775384157896,
+      "mean_abs_delta_b_self": 0.006415616720914841,
+      "mean_abs_delta_ab_a": 0.00506995664909482,
+      "mean_abs_delta_ab_b": 0.006234603002667427
+    },
+    {
+      "pair": "age+pose",
+      "a": "age",
+      "b": "pose",
+      "mixed_hessian_predictor": 0.0003975652515407973,
+      "max_univariate_pixel_rho": 150.59065119549632,
+      "sum_univariate_pixel_rho": 166.3425991225522,
+      "saliency_cosine": 0.6261500012782732,
+      "saliency_top20_iou": 0.31909714469020567,
+      "mean_target_additivity_error": 1.1515438772386837,
+      "median_target_additivity_error": 1.1515438772386837,
+      "mean_identity_drop_ab": 0.03179013729095459,
+      "mean_lpips_nonadditivity": 0.07428091391921043,
+      "mean_lpips_ab": 0.5125121027231216,
+      "mean_abs_delta_a_self": 0.012326679192483425,
+      "mean_abs_delta_b_self": 0.006415616720914841,
+      "mean_abs_delta_ab_a": 0.004797719419002533,
+      "mean_abs_delta_ab_b": 0.001361105591058731
+    }
+  ],
+  "attr_calibration": {
+    "smile": {
+      "alpha": -0.5,
+      "target_abs_delta_attr": 0.005132454913109541,
+      "target_reached_on_calib": true,
+      "max_abs_delta_attr": 0.010264909826219082
+    },
+    "age": {
+      "alpha": 0.5,
+      "target_abs_delta_attr": 0.013961506774649024,
+      "target_reached_on_calib": true,
+      "max_abs_delta_attr": 0.027923013549298048
+    },
+    "pose": {
+      "alpha": -0.5,
+      "target_abs_delta_attr": 0.014604496536776423,
+      "target_reached_on_calib": true,
+      "max_abs_delta_attr": 0.029208993073552847
+    }
+  },
+  "config": {
+    "attrs": [
+      "smile",
+      "age",
+      "pose"
+    ],
+    "n_calib": 2,
+    "n_test": 2,
+    "max_alpha": 1.0,
+    "alpha_steps": 2,
+    "attr_target_fraction": 0.5,
+    "batch": 2,
+    "lod": 2.0,
+    "c4_source": "experiments/out/ffhq_c4/metrics.json",
+    "pixel_source": "experiments/out/sample_scaling_ffhq_n512/metrics.json",
+    "saliency_dir": "experiments/out/ffhq_saliency",
+    "out": "experiments/out/control_composition_guard_smoke",
+    "seed": 2027
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-23T02:10:17.228951+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_composition_guard.py",
+    "c4_source": "/mnt/20t/study/HIGAN/paper/experiments/out/ffhq_c4/metrics.json",
+    "pixel_source": "/mnt/20t/study/HIGAN/paper/experiments/out/sample_scaling_ffhq_n512/metrics.json",
+    "lod_override": 2.0
+  }
+}

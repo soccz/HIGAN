@@ -1,0 +1,114 @@
+{
+  "pairs": [
+    {
+      "a": "smile",
+      "b": "age",
+      "corr": 0.9822466374087877,
+      "nonlinearity": 0.017753362591212296,
+      "mixed_norm": 141.20847845077515,
+      "predictor": 0.0004630205258868752
+    },
+    {
+      "a": "smile",
+      "b": "pose",
+      "corr": 0.9987386419276116,
+      "nonlinearity": 0.0012613580723883633,
+      "mixed_norm": 783.9521617889404,
+      "predictor": 0.00045699383885820674
+    },
+    {
+      "a": "smile",
+      "b": "gender",
+      "corr": 0.969303728244912,
+      "nonlinearity": 0.030696271755088045,
+      "mixed_norm": 254.57840633392334,
+      "predictor": 0.0006097173802207388
+    },
+    {
+      "a": "smile",
+      "b": "eyeglasses",
+      "corr": 0.9903379172106289,
+      "nonlinearity": 0.009662082789371085,
+      "mixed_norm": 264.99823665618896,
+      "predictor": 0.0004611076229667469
+    },
+    {
+      "a": "age",
+      "b": "pose",
+      "corr": 0.986859653439876,
+      "nonlinearity": 0.013140346560123972,
+      "mixed_norm": 3065.2610931396484,
+      "predictor": 0.0003975652515407973
+    },
+    {
+      "a": "age",
+      "b": "gender",
+      "corr": 0.9555927085142493,
+      "nonlinearity": 0.04440729148575073,
+      "mixed_norm": 1396.60892868042,
+      "predictor": 0.0007442211165956436
+    },
+    {
+      "a": "age",
+      "b": "eyeglasses",
+      "corr": 0.9819211908004627,
+      "nonlinearity": 0.018078809199537305,
+      "mixed_norm": 6011.90860748291,
+      "predictor": 0.0023275115814411517
+    },
+    {
+      "a": "pose",
+      "b": "gender",
+      "corr": 0.9859844098409117,
+      "nonlinearity": 0.014015590159088265,
+      "mixed_norm": 5689.560691833496,
+      "predictor": 0.0005389980839811865
+    },
+    {
+      "a": "pose",
+      "b": "eyeglasses",
+      "corr": 0.9891995860941268,
+      "nonlinearity": 0.010800413905873163,
+      "mixed_norm": 4292.0950927734375,
+      "predictor": 0.00029541335752338
+    },
+    {
+      "a": "gender",
+      "b": "eyeglasses",
+      "corr": 0.971014159189399,
+      "nonlinearity": 0.02898584081060096,
+      "mixed_norm": 2436.1641273498535,
+      "predictor": 0.000688895845545478
+    }
+  ],
+  "spearman": {
+    "r": 0.8060606060606059,
+    "p": 0.004862061101964607
+  },
+  "pearson": {
+    "r": 0.16867839876977228,
+    "p": 0.6413364737211659
+  },
+  "first_norms": {
+    "smile": 260.48957443237305,
+    "age": 1170.7662200927734,
+    "pose": 6585.501770019531,
+    "gender": 1602.8860244750977,
+    "eyeglasses": 2206.227714538574
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-19T16:12:37.514117+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "aa9152f14a44abc59b21082d70ca0ed5fffb88bf",
+    "git_dirty": true,
+    "track": "ffhq_c4",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

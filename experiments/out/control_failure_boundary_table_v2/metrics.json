@@ -1,0 +1,2650 @@
+{
+  "total_rows": 432,
+  "fail_rows": 156,
+  "required_rows": 302,
+  "required_fail_rows": 112,
+  "pass_rows": 276,
+  "tag_counts": {
+    "general_boundary": {
+      "total": 28,
+      "pass": 24,
+      "fail": 4
+    },
+    "conditional_regression_boundary": {
+      "total": 139,
+      "pass": 93,
+      "fail": 46
+    },
+    "matched_pair_boundary": {
+      "total": 139,
+      "pass": 76,
+      "fail": 63
+    },
+    "bedroom_boundary": {
+      "total": 140,
+      "pass": 78,
+      "fail": 62
+    },
+    "strict_gain_boundary": {
+      "total": 18,
+      "pass": 14,
+      "fail": 4
+    },
+    "ffhq_boundary": {
+      "total": 152,
+      "pass": 104,
+      "fail": 48
+    },
+    "random_universe_boundary": {
+      "total": 60,
+      "pass": 38,
+      "fail": 22
+    },
+    "dino_preservation_boundary": {
+      "total": 90,
+      "pass": 51,
+      "fail": 39
+    }
+  },
+  "metric_counts": {
+    "rho vs ID Spearman": {
+      "total": 65,
+      "pass": 49,
+      "fail": 16
+    },
+    "rho vs LPIPS Spearman": {
+      "total": 65,
+      "pass": 50,
+      "fail": 15
+    },
+    "rho beta for ID": {
+      "total": 65,
+      "pass": 37,
+      "fail": 28
+    },
+    "rho beta for LPIPS": {
+      "total": 65,
+      "pass": 50,
+      "fail": 15
+    },
+    "low-risk minus high-risk ID": {
+      "total": 65,
+      "pass": 34,
+      "fail": 31
+    },
+    "low-risk minus high-risk LPIPS": {
+      "total": 65,
+      "pass": 38,
+      "fail": 27
+    },
+    "rho vs DINO-preservation Spearman": {
+      "total": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    "rho beta for DINO preservation": {
+      "total": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    "low-risk minus high-risk DINO preservation": {
+      "total": 6,
+      "pass": 4,
+      "fail": 2
+    },
+    "": {
+      "total": 15,
+      "pass": 2,
+      "fail": 13
+    },
+    "rho vs DINO Spearman": {
+      "total": 3,
+      "pass": 0,
+      "fail": 3
+    },
+    "rho beta for DINO": {
+      "total": 3,
+      "pass": 0,
+      "fail": 3
+    },
+    "low-risk minus high-risk DINO": {
+      "total": 3,
+      "pass": 0,
+      "fail": 3
+    }
+  },
+  "failures": [
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01744619792446785,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": 0.10198301271482002,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.007654231512493409,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.018068951682208158,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_fd_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.002417232521113087,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_fd_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.015595063648646513,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_fd_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.01699903673850437,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.007114471078881202,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.08980857208524844,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "strict_gain_boundary",
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.014981763764635211,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "strict_gain_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01930728396670874,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "strict_gain_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.14589363546291803,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0015576614998281002,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.006766137547674587,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.0029343679719161077,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_sefa_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.07511679992190952,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": 0.030453084824247585,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.01813986129460058,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "extension_v5",
+      "summary": "ffhq_strict_gain",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.012069233856185657,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "strict_gain_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "extension_v5",
+      "summary": "random_universe_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.12417400736691164,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "extension_v5",
+      "summary": "dino_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.013110255945797034,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "dino_v1",
+      "summary": "dino_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.016762734654255214,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "seed_scaled_v6",
+      "summary": "random_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.016100516231916634,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "seed_scaled_v6",
+      "summary": "dino_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.11657655742913212,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "seed_scaled_v6",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0006870267645666277,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "dino_n10_v2",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": -0.0043405814140466785,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "ffhq_ganspace",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.008993112577628049,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "ffhq_ganspace",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02553774757658146,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "ffhq_sefa",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.004751174626428456,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "ffhq_sefa",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": 0.003840240773390089,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "budget_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.010486276846751871,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "budget_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.04494807822897419,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "budget_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0015821174983027583,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "target_q10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.007799825748069508,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "target_q10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02461058767519181,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "target_q50_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.013347324561941518,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "target_q50_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.007950144180480071,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "exhaustive_v7",
+      "summary": "target_q50_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.012561946094923745,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.08106469123582441,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.13198307224195935,
+      "wins": 4,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.007976315621743014,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.016100516231916634,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.23743782177729872,
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6069431012681716,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.10240980922233829,
+      "wins": 4,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6463181887637539,
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.004605810656605031,
+      "wins": 6,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.025215135901809467,
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3700493717607487,
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.38816561400446153,
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.31296152800018195,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.01920112455610817,
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.045463737706005085,
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6241697917147299,
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6555905505667095,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.20879402961616395,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.28212588725391763,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.013802033891419083,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.029921837979946863,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO Spearman",
+      "mean": -0.6620053499136247,
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO",
+      "mean": -0.27738096348711566,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_church",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO",
+      "mean": 0.032285292627664906,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.47373182346791143,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6505447972916556,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.11657655742913212,
+      "wins": 3,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6646533816861403,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0006870267645666277,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02832311747616665,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO Spearman",
+      "mean": -0.6298036529386757,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO",
+      "mean": -0.4471881352769661,
+      "wins": 4,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO",
+      "mean": -0.0043405814140466785,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.34098795648222896,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.3880312816885961,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.28936929660455324,
+      "wins": 6,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.013153847215191394,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02975104764278107,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO Spearman",
+      "mean": -0.3501661600093391,
+      "wins": 6,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO",
+      "mean": -0.3113946071714067,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO",
+      "mean": 0.01842950378789073,
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_fd",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.2171768725705034,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_fd",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.2256942326508286,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_fd",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.02100419247168396,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_fd",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.03020120945100181,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_ganspace",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4939337470491697,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_ganspace",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5087116011246549,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_ganspace",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.47899769687303523,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_ganspace",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.5305360921073388,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_ganspace",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.008993112577628049,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_ganspace",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02553774757658146,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_sefa",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4012300711923736,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_sefa",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5078756397162755,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_sefa",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.05043580148847968,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_sefa",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.37211877297995966,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_sefa",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.004751174626428456,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "ffhq_sefa",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": 0.003840240773390089,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6032835844875178,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "general_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.665487884493912,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "general_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.1736488809903761,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.22055312754926257,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.004828814052590748,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.010486276846751871,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.2985367940966456,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6194196724140879,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.04494807822897419,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.5898465802298427,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0015821174983027583,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.024151953192278794,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.38909907290708207,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.4188842315931022,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "budget_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.2728379248083381,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.15920479026440204,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.2176331746767004,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.009664036680228616,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.020448277138729203,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.11564218316183605,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.013529555603418786,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.33217319437450854,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.16545677325118102,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_ffhq",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.3603713449654947,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "wide_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.016247630350733434,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.07274911262782217,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.13601118413557114,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.12409093906240705,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.4343762075363912,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.14209394584134555,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.007799825748069508,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02461058767519181,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3646770169486703,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.40601536740574806,
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.1719762001953914,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q10_ffhq",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.37201409107662464,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.5938067996196751,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "general_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6349971370789852,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "general_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.13142950026680394,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.19978927121367607,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.014879827745741859,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.031291791833433315,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4077097361157286,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6240955521922749,
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.013347324561941518,
+      "wins": 0,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.549763159048946,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.007950144180480071,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "permutation_v1",
+      "summary": "target_q50_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.012561946094923745,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    }
+  ],
+  "config": {
+    "tables": [
+      "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+      "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+      "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+      "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+      "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+      "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json",
+      "exhaustive_v7=experiments/out/control_predictive_stress_evidence_table_v7_exhaustive/metrics.json",
+      "permutation_v1=experiments/out/control_predictive_permutation_null_table_v1/metrics.json"
+    ],
+    "out": "experiments/out/control_failure_boundary_table_v2",
+    "seed": 4222,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v83_failure_boundary_table_v2.json",
+    "protocol_key": "failure_boundary_table_v2"
+  },
+  "_meta": {
+    "seed": 4222,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-29T12:08:53.912425+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_failure_boundary_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_failure_boundary_table.py",
+        "--tables",
+        "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+        "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+        "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+        "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+        "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+        "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json",
+        "exhaustive_v7=experiments/out/control_predictive_stress_evidence_table_v7_exhaustive/metrics.json",
+        "permutation_v1=experiments/out/control_predictive_permutation_null_table_v1/metrics.json",
+        "--out",
+        "experiments/out/control_failure_boundary_table_v2",
+        "--seed",
+        "4222",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v83_failure_boundary_table_v2.json",
+        "--protocol-key",
+        "failure_boundary_table_v2"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 1852221,
+      "timestamp_utc": "2026-05-29T12:08:53.912224+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v83_failure_boundary_table_v2.json",
+      "protocol_key": "failure_boundary_table_v2",
+      "protocol_sha256": "2236d1d346183f36df9d1376ed60a008ec093178edc4b2e74df65932923bfe16",
+      "protocol_version": "control_v83_failure_boundary_table_v2"
+    }
+  }
+}

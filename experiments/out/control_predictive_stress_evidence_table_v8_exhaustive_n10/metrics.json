@@ -1,0 +1,1523 @@
+{
+  "readiness": "extended_predictive_stress_sensitive",
+  "required_pass_count": 52,
+  "required_total": 60,
+  "all_pass_count": 78,
+  "all_total": 90,
+  "rows": [
+    {
+      "summary": "ffhq_fd_n10",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.2818483653065048,
+      "ci95_bootstrap": [
+        -0.38912582379810845,
+        -0.1641292499074701
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_fd_n10",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.3169383587160102,
+      "ci95_bootstrap": [
+        0.2113337516094654,
+        0.41664107378927995
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_fd_n10",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.46570276562051854,
+      "ci95_bootstrap": [
+        -0.5443416499449316,
+        -0.3858108254412113
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_fd_n10",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.5541843359849244,
+      "ci95_bootstrap": [
+        0.4851278587116935,
+        0.6200390308862184
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_fd_n10",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.019222031266486878,
+      "ci95_bootstrap": [
+        0.009504020227447023,
+        0.02802993195967691
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_fd_n10",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.03431946154670219,
+      "ci95_bootstrap": [
+        -0.051507370684767344,
+        -0.0160311054213253
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_ganspace_n10",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3432401000145574,
+      "ci95_bootstrap": [
+        -0.461484874297769,
+        -0.21788513297085643
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_ganspace_n10",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.3337541344420747,
+      "ci95_bootstrap": [
+        0.2091528277750124,
+        0.45627170466357536
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_ganspace_n10",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.3862771596913066,
+      "ci95_bootstrap": [
+        -0.4872433663844235,
+        -0.30271304695044166
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_ganspace_n10",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.4003924351879908,
+      "ci95_bootstrap": [
+        0.29567920544945336,
+        0.5182855725415088
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_ganspace_n10",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.00403140149711232,
+      "ci95_bootstrap": [
+        -0.021844478087702082,
+        0.013002265393272002
+      ],
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ffhq_ganspace_n10",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": 0.0028992696457065714,
+      "ci95_bootstrap": [
+        -0.040008573579631515,
+        0.04530999402828956
+      ],
+      "wins": 4,
+      "n": 10,
+      "p_sign_two_sided": 0.75390625,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ffhq_sefa_n10",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.345247038729874,
+      "ci95_bootstrap": [
+        -0.47133512712987174,
+        -0.19973377443739712
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_sefa_n10",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.45170825471108245,
+      "ci95_bootstrap": [
+        0.3254245082040045,
+        0.5535996350299873
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_sefa_n10",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.0716503283357994,
+      "ci95_bootstrap": [
+        -0.19945783493536942,
+        0.049602098800120197
+      ],
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ffhq_sefa_n10",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.3731994460921771,
+      "ci95_bootstrap": [
+        0.2801902193737747,
+        0.47486696730907324
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ffhq_sefa_n10",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.011024107984045432,
+      "ci95_bootstrap": [
+        -0.04233555111970885,
+        0.018217779320808834
+      ],
+      "wins": 4,
+      "n": 10,
+      "p_sign_two_sided": 0.75390625,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ffhq_sefa_n10",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": 0.009970293211573288,
+      "ci95_bootstrap": [
+        -0.05417355722274321,
+        0.06939327931517195
+      ],
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "budget_n10_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6128748089209493,
+      "ci95_bootstrap": [
+        -0.6574005809230399,
+        -0.5604150006483971
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6613340294111912,
+      "ci95_bootstrap": [
+        0.6124603545548234,
+        0.6978477397966394
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.15485485116703968,
+      "ci95_bootstrap": [
+        -0.19243396396303253,
+        -0.11453814923258372
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.19658284314680394,
+      "ci95_bootstrap": [
+        0.12692480350024785,
+        0.2536709436207802
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.008267608735925552,
+      "ci95_bootstrap": [
+        0.0037345854545539742,
+        0.01346970523683821
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.017591762441916244,
+      "ci95_bootstrap": [
+        -0.030104336546944582,
+        -0.0062619098044737476
+      ],
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "budget_n10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.2792058862579709,
+      "ci95_bootstrap": [
+        -0.42775398026559286,
+        -0.12904286108915802
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5854368912882428,
+      "ci95_bootstrap": [
+        0.5315441997127861,
+        0.6407473963655297
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.05838914283895143,
+      "ci95_bootstrap": [
+        -0.1417071484204597,
+        0.021344685189869463
+      ],
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "budget_n10_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6399998177640527,
+      "ci95_bootstrap": [
+        0.5749670942279531,
+        0.7011580196099876
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0014425213163186093,
+      "ci95_bootstrap": [
+        -0.00654868479220011,
+        0.008362001464436167
+      ],
+      "wins": 6,
+      "n": 10,
+      "p_sign_two_sided": 0.75390625,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "budget_n10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.021760044748009362,
+      "ci95_bootstrap": [
+        -0.03635124529030786,
+        -0.006593727109410367
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.34942619845288,
+      "ci95_bootstrap": [
+        -0.39714128586959235,
+        -0.3046485860062996
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.3804562447312295,
+      "ci95_bootstrap": [
+        0.33307558173592494,
+        0.42543841967371837
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.29459599445919427,
+      "ci95_bootstrap": [
+        -0.3400562921608007,
+        -0.24479858074555427
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_ffhq",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.4362177921590834,
+      "ci95_bootstrap": [
+        0.40936754443911516,
+        0.46156522438146996
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.024990033847884924,
+      "ci95_bootstrap": [
+        0.017359121196248616,
+        0.032407560472470016
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "budget_n10_ffhq",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.06139224606501006,
+      "ci95_bootstrap": [
+        -0.07684208661317472,
+        -0.04493021613338159
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.5846960899943998,
+      "ci95_bootstrap": [
+        -0.6349476021696252,
+        -0.5392869838281814
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6420416695113657,
+      "ci95_bootstrap": [
+        0.6041109473068491,
+        0.683063459618094
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.14510855070571305,
+      "ci95_bootstrap": [
+        -0.1879193910377383,
+        -0.09404053134074987
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.19728150110958032,
+      "ci95_bootstrap": [
+        0.14402475126440037,
+        0.24318702792220717
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.007865015621561323,
+      "ci95_bootstrap": [
+        0.003453124732585869,
+        0.012667592645956427
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.017421438547916425,
+      "ci95_bootstrap": [
+        -0.027432746208025466,
+        -0.00783064715516891
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3207222441095591,
+      "ci95_bootstrap": [
+        -0.4117583546370545,
+        -0.22496061918540677
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6492084481690653,
+      "ci95_bootstrap": [
+        0.5968048637881606,
+        0.6939273157471019
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.07869154810251033,
+      "ci95_bootstrap": [
+        -0.15023949939960063,
+        -0.015978150076478456
+      ],
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "wide_n10_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6480539174908816,
+      "ci95_bootstrap": [
+        0.5819361220278443,
+        0.7092589071681321
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.011116559678723508,
+      "ci95_bootstrap": [
+        0.005696850390273243,
+        0.016380755927029686
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.040491270916301426,
+      "ci95_bootstrap": [
+        -0.04846304573313585,
+        -0.032905999087638124
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.38832896335764605,
+      "ci95_bootstrap": [
+        -0.4570912366083425,
+        -0.32582074793132476
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.46713006223982356,
+      "ci95_bootstrap": [
+        0.4127577731765164,
+        0.5279203769890624
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.2255597968206169,
+      "ci95_bootstrap": [
+        -0.2860359293758458,
+        -0.1652269590143415
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_ffhq",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.4096195948565221,
+      "ci95_bootstrap": [
+        0.34656330265512253,
+        0.46672596176018166
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.019221792581088273,
+      "ci95_bootstrap": [
+        0.013980166085470345,
+        0.024559065712476177
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "wide_n10_ffhq",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.061935139829674,
+      "ci95_bootstrap": [
+        -0.07919491047541523,
+        -0.044954127425156934
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4954310600275367,
+      "ci95_bootstrap": [
+        -0.6018578785077008,
+        -0.3858543332845822
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.569002043206804,
+      "ci95_bootstrap": [
+        0.4900023872036824,
+        0.6463366455381464
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.0936572390286167,
+      "ci95_bootstrap": [
+        -0.13262967550184748,
+        -0.05360567678875866
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.15554530731557653,
+      "ci95_bootstrap": [
+        0.0971793373781122,
+        0.2101576791890392
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.011469561299719967,
+      "ci95_bootstrap": [
+        0.007158371315602235,
+        0.015772716071225188
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02495159539003112,
+      "ci95_bootstrap": [
+        -0.03458902515817886,
+        -0.015233727138642496
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.2280541684569754,
+      "ci95_bootstrap": [
+        -0.35106291286481545,
+        -0.09559357956882099
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5400547003369377,
+      "ci95_bootstrap": [
+        0.42722572696374955,
+        0.6394115623922232
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.1501247954757937,
+      "ci95_bootstrap": [
+        -0.21011516845166725,
+        -0.08779479356991755
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6899257318605707,
+      "ci95_bootstrap": [
+        0.6143776398302343,
+        0.7577188827782486
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.009796256264923343,
+      "ci95_bootstrap": [
+        0.001640602911344842,
+        0.01791979811486536
+      ],
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "target_q10_n10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.02950201547771896,
+      "ci95_bootstrap": [
+        -0.05115984139783339,
+        -0.007816787282268893
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3267725736100383,
+      "ci95_bootstrap": [
+        -0.4117088784889691,
+        -0.20344091345773288
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.3720759817713132,
+      "ci95_bootstrap": [
+        0.25887924463194706,
+        0.45075004279555675
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.21183036986680254,
+      "ci95_bootstrap": [
+        -0.2752994206740402,
+        -0.15316333867382995
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_ffhq",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.386165813578777,
+      "ci95_bootstrap": [
+        0.33550091035901397,
+        0.4437072846046075
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.014801351622076572,
+      "ci95_bootstrap": [
+        0.005734846023404281,
+        0.022504283958820585
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q10_n10_ffhq",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.05095145432087629,
+      "ci95_bootstrap": [
+        -0.07199388268590456,
+        -0.025831163030882547
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6175151081311233,
+      "ci95_bootstrap": [
+        -0.6590127588144651,
+        -0.5800063465595848
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6538483304338898,
+      "ci95_bootstrap": [
+        0.6172776440966823,
+        0.6894204654320789
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.159596444355397,
+      "ci95_bootstrap": [
+        -0.21027537200303761,
+        -0.10416051318268875
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.22912958858376703,
+      "ci95_bootstrap": [
+        0.1833602554406689,
+        0.2712676171774387
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.014123763796399963,
+      "ci95_bootstrap": [
+        0.009154890476138506,
+        0.018994171713676726
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.030383211214081475,
+      "ci95_bootstrap": [
+        -0.04084003098746658,
+        -0.0189070645915737
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4055762815163714,
+      "ci95_bootstrap": [
+        -0.4796512097061425,
+        -0.3266208843647134
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6445271714132242,
+      "ci95_bootstrap": [
+        0.6133070678431627,
+        0.6816267037102854
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.07186884459470311,
+      "ci95_bootstrap": [
+        -0.14885238045527038,
+        0.008479594279905465
+      ],
+      "wins": 6,
+      "n": 10,
+      "p_sign_two_sided": 0.75390625,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "target_q50_n10_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.611479426290691,
+      "ci95_bootstrap": [
+        0.5482397232209942,
+        0.6713030786008465
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.001481605816743901,
+      "ci95_bootstrap": [
+        -0.007933254790531393,
+        0.011141514714317766
+      ],
+      "wins": 6,
+      "n": 10,
+      "p_sign_two_sided": 0.75390625,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "target_q50_n10_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.023004570890204246,
+      "ci95_bootstrap": [
+        -0.034260753721778385,
+        -0.012603481804488777
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_ffhq",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.43617289912829194,
+      "ci95_bootstrap": [
+        -0.5189412504268124,
+        -0.3520684100142005
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_ffhq",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.47107400587449016,
+      "ci95_bootstrap": [
+        0.3950551530758354,
+        0.5486375178485465
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_ffhq",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.29389200543002914,
+      "ci95_bootstrap": [
+        -0.36075535508341044,
+        -0.23107142630631805
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_ffhq",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.4475857347158172,
+      "ci95_bootstrap": [
+        0.40198527944616136,
+        0.49878462849406063
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_ffhq",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.024199254974873522,
+      "ci95_bootstrap": [
+        0.01377941657868334,
+        0.033660132866991085
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "target_q50_n10_ffhq",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.05193866606529115,
+      "ci95_bootstrap": [
+        -0.07344047603322305,
+        -0.030542678550846445
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    }
+  ],
+  "config": {
+    "summaries": [
+      "ffhq_fd_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_n10/ffhq/metrics.json",
+      "ffhq_ganspace_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_n10/ffhq/metrics.json",
+      "ffhq_sefa_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_n10/ffhq/metrics.json",
+      "budget_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/church/metrics.json",
+      "budget_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/bedroom/metrics.json",
+      "budget_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/ffhq/metrics.json",
+      "wide_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/church/metrics.json",
+      "wide_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/bedroom/metrics.json",
+      "wide_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/ffhq/metrics.json",
+      "target_q10_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/church/metrics.json",
+      "target_q10_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/bedroom/metrics.json",
+      "target_q10_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/ffhq/metrics.json",
+      "target_q50_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/church/metrics.json",
+      "target_q50_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/bedroom/metrics.json",
+      "target_q50_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/ffhq/metrics.json"
+    ],
+    "out": "experiments/out/control_predictive_stress_evidence_table_v8_exhaustive_n10",
+    "seed": 4223,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v89_seed_scaled_exhaustive_defense_evidence_table.json",
+    "protocol_key": "predictive_stress_evidence_table_v8_exhaustive_n10"
+  },
+  "_meta": {
+    "seed": 4223,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-30T01:44:47.125102+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_predictive_stress_evidence_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_predictive_stress_evidence_table.py",
+        "--summaries",
+        "ffhq_fd_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_n10/ffhq/metrics.json",
+        "ffhq_ganspace_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_n10/ffhq/metrics.json",
+        "ffhq_sefa_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_n10/ffhq/metrics.json",
+        "budget_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/church/metrics.json",
+        "budget_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/bedroom/metrics.json",
+        "budget_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/ffhq/metrics.json",
+        "wide_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/church/metrics.json",
+        "wide_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/bedroom/metrics.json",
+        "wide_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/ffhq/metrics.json",
+        "target_q10_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/church/metrics.json",
+        "target_q10_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/bedroom/metrics.json",
+        "target_q10_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/ffhq/metrics.json",
+        "target_q50_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/church/metrics.json",
+        "target_q50_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/bedroom/metrics.json",
+        "target_q50_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/ffhq/metrics.json",
+        "--out",
+        "experiments/out/control_predictive_stress_evidence_table_v8_exhaustive_n10",
+        "--seed",
+        "4223",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v89_seed_scaled_exhaustive_defense_evidence_table.json",
+        "--protocol-key",
+        "predictive_stress_evidence_table_v8_exhaustive_n10"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 1825112,
+      "timestamp_utc": "2026-05-30T01:44:47.124881+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v89_seed_scaled_exhaustive_defense_evidence_table.json",
+      "protocol_key": "predictive_stress_evidence_table_v8_exhaustive_n10",
+      "protocol_sha256": "d31329caba23a7dbd835032373743cc3f36d96e358fe5f4fa6ba517785f8d398",
+      "protocol_version": "control_v89_seed_scaled_exhaustive_defense_evidence_table"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "n_seeds": 20,
+  "prediction": {
+    "spearman_rho_vs_clip_damage": {
+      "mean": 0.3790211345939058,
+      "std": 0.0772975753245531
+    },
+    "spearman_rho_vs_arcface_damage": {
+      "mean": 0.3146607341489819,
+      "std": 0.0899871688061588
+    }
+  },
+  "control": {
+    "clip_id_low_rho_win_rate": {
+      "mean": 0.5873333333333333,
+      "std": 0.05617037574301163
+    },
+    "arcface_id_low_rho_win_rate": {
+      "mean": 0.5700000000000001,
+      "std": 0.05381036661792553
+    }
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-30T03:42:24.058327+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "track": "arcface_robustness_ffhq",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

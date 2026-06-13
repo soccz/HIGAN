@@ -1,0 +1,68 @@
+{
+  "higher_order": [
+    {
+      "attr": "clouds",
+      "first_max": 0.1779293417930603,
+      "second_max": 0.008946182206273079,
+      "ratio_mean": 0.04272738844156265,
+      "ratio_median": 0.04004474729299545,
+      "ratio_p95": 0.07413984090089798,
+      "ratio_p99": 0.08971972763538363
+    },
+    {
+      "attr": "sunny",
+      "first_max": 0.1433836668729782,
+      "second_max": 0.0078063285909593105,
+      "ratio_mean": 0.04478892683982849,
+      "ratio_median": 0.043990619480609894,
+      "ratio_p95": 0.06544600427150726,
+      "ratio_p99": 0.0798518635332585
+    },
+    {
+      "attr": "vegetation",
+      "first_max": 0.057675424963235855,
+      "second_max": 0.004016132093966007,
+      "ratio_mean": 0.04294899106025696,
+      "ratio_median": 0.042765915393829346,
+      "ratio_p95": 0.09607850573956966,
+      "ratio_p99": 0.12530193179845814
+    }
+  ],
+  "abs_corr": [
+    [
+      1.0,
+      0.665477454662323,
+      0.19800077378749847
+    ],
+    [
+      0.665477454662323,
+      1.0,
+      0.21883855760097504
+    ],
+    [
+      0.19800077378749847,
+      0.21883855760097504,
+      1.0
+    ]
+  ],
+  "attrs": [
+    "clouds",
+    "sunny",
+    "vegetation"
+  ],
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-19T16:12:37.469306+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "aa9152f14a44abc59b21082d70ca0ed5fffb88bf",
+    "git_dirty": true,
+    "track": "church_all",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

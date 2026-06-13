@@ -1,0 +1,249 @@
+{
+  "sweeps": {
+    "ganspace": [
+      {
+        "K": 2,
+        "coverage": [
+          "eyeglasses"
+        ],
+        "n_coverage": 1,
+        "diversity": 1
+      },
+      {
+        "K": 4,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "smile"
+        ],
+        "n_coverage": 4,
+        "diversity": 3
+      },
+      {
+        "K": 6,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "smile"
+        ],
+        "n_coverage": 4,
+        "diversity": 3
+      },
+      {
+        "K": 8,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose",
+          "smile"
+        ],
+        "n_coverage": 5,
+        "diversity": 4
+      },
+      {
+        "K": 10,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose",
+          "smile"
+        ],
+        "n_coverage": 5,
+        "diversity": 6
+      },
+      {
+        "K": 12,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose",
+          "smile"
+        ],
+        "n_coverage": 5,
+        "diversity": 6
+      },
+      {
+        "K": 16,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose",
+          "smile"
+        ],
+        "n_coverage": 5,
+        "diversity": 6
+      }
+    ],
+    "sefa": [
+      {
+        "K": 2,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 3,
+        "diversity": 2
+      },
+      {
+        "K": 4,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 3,
+        "diversity": 3
+      },
+      {
+        "K": 6,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 3,
+        "diversity": 5
+      },
+      {
+        "K": 8,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose"
+        ],
+        "n_coverage": 4,
+        "diversity": 6
+      },
+      {
+        "K": 10,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose"
+        ],
+        "n_coverage": 4,
+        "diversity": 7
+      },
+      {
+        "K": 12,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose"
+        ],
+        "n_coverage": 4,
+        "diversity": 8
+      },
+      {
+        "K": 16,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "pose"
+        ],
+        "n_coverage": 4,
+        "diversity": 9
+      }
+    ],
+    "random": [
+      {
+        "K": 2,
+        "coverage": [
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 2,
+        "diversity": 1
+      },
+      {
+        "K": 4,
+        "coverage": [
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 2,
+        "diversity": 2
+      },
+      {
+        "K": 6,
+        "coverage": [
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 2,
+        "diversity": 3
+      },
+      {
+        "K": 8,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 3,
+        "diversity": 4
+      },
+      {
+        "K": 10,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 3,
+        "diversity": 4
+      },
+      {
+        "K": 12,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender"
+        ],
+        "n_coverage": 3,
+        "diversity": 4
+      },
+      {
+        "K": 16,
+        "coverage": [
+          "age",
+          "eyeglasses",
+          "gender",
+          "smile"
+        ],
+        "n_coverage": 4,
+        "diversity": 6
+      }
+    ]
+  },
+  "wall_time_s": {
+    "ganspace_pca": 0.3177633285522461,
+    "sefa_svd": 0.04646158218383789
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-19T16:12:37.496992+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "aa9152f14a44abc59b21082d70ca0ed5fffb88bf",
+    "git_dirty": true,
+    "track": "ffhq_baselines_sweep",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

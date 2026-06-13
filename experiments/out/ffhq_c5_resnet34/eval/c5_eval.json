@@ -1,0 +1,74 @@
+{
+  "results": [
+    {
+      "ckpt": "experiments/out/ffhq_c5_resnet34/ckpt/enc_005000.pt",
+      "iter": 5000,
+      "recon_mse": 0.2047693917993456,
+      "recon_l2_256": 0.20494556776247919,
+      "per_attr_corr": {
+        "smile": 0.2237330896367845,
+        "age": 0.028470803061205106,
+        "pose": 0.0992968658256708,
+        "gender": 0.06621691685878474,
+        "eyeglasses": 0.030364568032926142
+      },
+      "sal_corr_mean": 0.08961644868307425
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_resnet34/ckpt/enc_010000.pt",
+      "iter": 10000,
+      "recon_mse": 0.24595851125195622,
+      "recon_l2_256": 0.24640700686722994,
+      "per_attr_corr": {
+        "smile": 0.20856089960261448,
+        "age": 0.01695809888143093,
+        "pose": 0.09391490553040843,
+        "gender": 0.053010245673357395,
+        "eyeglasses": 0.004206000486734933
+      },
+      "sal_corr_mean": 0.07533003003490922
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_resnet34/ckpt/enc_020000.pt",
+      "iter": 20000,
+      "recon_mse": 0.2075598395895213,
+      "recon_l2_256": 0.2076356620527804,
+      "per_attr_corr": {
+        "smile": 0.2235716113524302,
+        "age": 0.027033040380539143,
+        "pose": 0.12355191395162082,
+        "gender": 0.07616952536184325,
+        "eyeglasses": 0.02592413167323349
+      },
+      "sal_corr_mean": 0.09525004454393339
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_resnet34/ckpt/enc_040000.pt",
+      "iter": 40000,
+      "recon_mse": 0.27088933251798153,
+      "recon_l2_256": 0.27087957924231887,
+      "per_attr_corr": {
+        "smile": 0.20491877262235075,
+        "age": 0.027132598340662867,
+        "pose": 0.10710557843561849,
+        "gender": 0.06842630524165838,
+        "eyeglasses": 0.03181841291413904
+      },
+      "sal_corr_mean": 0.08788033351088591
+    }
+  ],
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-22T16:20:46.567840+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "track": "4_c5_eval"
+  }
+}

@@ -1,0 +1,1425 @@
+{
+  "readiness": "extended_predictive_stress_sensitive",
+  "required_pass_count": 44,
+  "required_total": 56,
+  "all_pass_count": 66,
+  "all_total": 84,
+  "rows": [
+    {
+      "summary": "baseline_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6206066458791913,
+      "ci95_bootstrap": [
+        -0.8230912304351404,
+        -0.3058134710867446
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "baseline_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6596810647320612,
+      "ci95_bootstrap": [
+        0.3854038778577104,
+        0.836609855555461
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.16222639236704534,
+      "ci95_bootstrap": [
+        -0.258798492717307,
+        -0.07123090023208836
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "baseline_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.24153318822079575,
+      "ci95_bootstrap": [
+        0.10235348027013469,
+        0.39874662918562553
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.01924944119690548,
+      "ci95_bootstrap": [
+        0.012734193328235832,
+        0.02362887435991849
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.03831683933731429,
+      "ci95_bootstrap": [
+        -0.050478754004683914,
+        -0.026048565158056414
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3328472170687203,
+      "ci95_bootstrap": [
+        -0.4698206083473737,
+        -0.2028691898003309
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "baseline_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5572352734848994,
+      "ci95_bootstrap": [
+        0.4958597674690416,
+        0.6298440730498448
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.2531171577985275,
+      "ci95_bootstrap": [
+        -0.427283465482732,
+        -0.06737459581678078
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "baseline_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6888221925804892,
+      "ci95_bootstrap": [
+        0.5154159465886062,
+        0.862228438572372
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.005121096488403533,
+      "ci95_bootstrap": [
+        0.0021117263366678624,
+        0.007322967782726887
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "baseline_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.0271108978088749,
+      "ci95_bootstrap": [
+        -0.036613488655418705,
+        -0.01719664603497626
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4473419881211192,
+      "ci95_bootstrap": [
+        -0.5331249247235214,
+        -0.3427558595577208
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5122967483523393,
+      "ci95_bootstrap": [
+        0.36217832719529525,
+        0.6253417525639348
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.2098408536624433,
+      "ci95_bootstrap": [
+        -0.29153804405992645,
+        -0.1218823217550992
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.2805486329546629,
+      "ci95_bootstrap": [
+        0.1570176448176806,
+        0.40409934350109156
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.013132784522352217,
+      "ci95_bootstrap": [
+        -0.0009830483191070106,
+        0.02714212967195746
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01744619792446785,
+      "ci95_bootstrap": [
+        -0.04491799237474857,
+        0.007759509711918543
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4103515213254546,
+      "ci95_bootstrap": [
+        -0.6194343762319132,
+        -0.20126866641899613
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.607379996731553,
+      "ci95_bootstrap": [
+        0.5351773359413057,
+        0.6780758744160976
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": 0.10198301271482002,
+      "ci95_bootstrap": [
+        -0.023717644933771553,
+        0.26843866310451486
+      ],
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.4532580942588603,
+      "ci95_bootstrap": [
+        0.3684567674947342,
+        0.5432446151980768
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.007654231512493409,
+      "ci95_bootstrap": [
+        -0.03377772790246776,
+        0.01846926487748094
+      ],
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.018068951682208158,
+      "ci95_bootstrap": [
+        -0.04991690280605465,
+        0.00537392915548663
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_fd_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6228741300625953,
+      "ci95_bootstrap": [
+        -0.7420142729590453,
+        -0.46830746186470523
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6849026776677757,
+      "ci95_bootstrap": [
+        0.565401447929675,
+        0.7854307162720822
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.21636731811112697,
+      "ci95_bootstrap": [
+        -0.2579809610605056,
+        -0.16940227545932035
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.34912391957214334,
+      "ci95_bootstrap": [
+        0.25590169089445514,
+        0.4595939223396268
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.002417232521113087,
+      "ci95_bootstrap": [
+        -0.01227519536294614,
+        0.015859072446123945
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_fd_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.015595063648646513,
+      "ci95_bootstrap": [
+        -0.04532294102323331,
+        0.01817679067720604
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_fd_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.3129908501202194,
+      "ci95_bootstrap": [
+        -0.42217572278583254,
+        -0.20453981236567015
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5870635772648447,
+      "ci95_bootstrap": [
+        0.5187423928847379,
+        0.6506876859270854
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.2926302875228555,
+      "ci95_bootstrap": [
+        -0.411794109572403,
+        -0.1445794801031365
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.8436635501154843,
+      "ci95_bootstrap": [
+        0.6840283096415765,
+        1.014808015307354
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_fd_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.01699903673850437,
+      "ci95_bootstrap": [
+        -0.0356730084446409,
+        -0.0002562341304367475
+      ],
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_fd_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01389986950181504,
+      "ci95_bootstrap": [
+        -0.02947103899716246,
+        0.004799900020567616
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.5433131123703282,
+      "ci95_bootstrap": [
+        -0.6424813923223105,
+        -0.38765401056250964
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6011978525372801,
+      "ci95_bootstrap": [
+        0.4029547202216121,
+        0.7369517900994327
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.28936363930306636,
+      "ci95_bootstrap": [
+        -0.3990175708184323,
+        -0.17970970778770035
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.35251761915159247,
+      "ci95_bootstrap": [
+        0.19615758933990363,
+        0.5088776489632814
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.016590344583417165,
+      "ci95_bootstrap": [
+        0.00773792342299881,
+        0.027049748020686416
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.029154163333055268,
+      "ci95_bootstrap": [
+        -0.0523353379557193,
+        -0.005995632366660318
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4084718275079166,
+      "ci95_bootstrap": [
+        -0.5199988973574234,
+        -0.3002720043016077
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6436052611651208,
+      "ci95_bootstrap": [
+        0.6006469821606496,
+        0.6858567723634865
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.007114471078881202,
+      "ci95_bootstrap": [
+        -0.12540357877797365,
+        0.11117463662021124
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.544017703657069,
+      "ci95_bootstrap": [
+        0.402280355865794,
+        0.6813442752611015
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.014199860072014996,
+      "ci95_bootstrap": [
+        0.0003113005882887921,
+        0.028088419555741196
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.039864657100260915,
+      "ci95_bootstrap": [
+        -0.060333817874639706,
+        -0.019395496325882118
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6970295213315505,
+      "ci95_bootstrap": [
+        -0.8204661023575452,
+        -0.5792235213720878
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.7288712510549311,
+      "ci95_bootstrap": [
+        0.6256269579977246,
+        0.836383434149314
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.2351491209843716,
+      "ci95_bootstrap": [
+        -0.329704707635022,
+        -0.12892300749766725
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.27063487401895014,
+      "ci95_bootstrap": [
+        0.1674668434630665,
+        0.36564897010302444
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.02128191188509975,
+      "ci95_bootstrap": [
+        0.0010746442579797344,
+        0.04124063522155795
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.04490119674606138,
+      "ci95_bootstrap": [
+        -0.10036754115052256,
+        0.0033823852918835134
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.20497275878275784,
+      "ci95_bootstrap": [
+        -0.2891597044712447,
+        -0.12097251750026268
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5606473954684943,
+      "ci95_bootstrap": [
+        0.5055798768593784,
+        0.609861299869752
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.08980857208524844,
+      "ci95_bootstrap": [
+        -0.2881138607528753,
+        0.056714063468309275
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6578343018181957,
+      "ci95_bootstrap": [
+        0.5890787411795639,
+        0.7265898624568272
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.014981763764635211,
+      "ci95_bootstrap": [
+        -0.05872228796005642,
+        0.020408831107079504
+      ],
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01930728396670874,
+      "ci95_bootstrap": [
+        -0.050985647362509844,
+        0.01237107942909236
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_ganspace_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.6548408731566374,
+      "ci95_bootstrap": [
+        -0.7247597730106098,
+        -0.5995253426253127
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.69676008835175,
+      "ci95_bootstrap": [
+        0.5995253426253127,
+        0.8140543833497776
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.14589363546291803,
+      "ci95_bootstrap": [
+        -0.2884404006129777,
+        0.0026578784067352148
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_ganspace_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.21197647268385253,
+      "ci95_bootstrap": [
+        0.042077144432136206,
+        0.35807885419731517
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0015576614998281002,
+      "ci95_bootstrap": [
+        -0.01464005270972848,
+        0.01688700703283151
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_ganspace_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.006766137547674587,
+      "ci95_bootstrap": [
+        -0.04334993988280378,
+        0.029817664787454613
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.4416213528535996,
+      "ci95_bootstrap": [
+        -0.6440740427352607,
+        -0.1589862561325429
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.5669631642630704,
+      "ci95_bootstrap": [
+        0.3955928978687317,
+        0.6753180554157825
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.5367233542568857,
+      "ci95_bootstrap": [
+        -0.6868998722929968,
+        -0.41473938589095294
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.8222116175814641,
+      "ci95_bootstrap": [
+        0.6729124449280149,
+        0.9148323389502835
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.003152458427385205,
+      "ci95_bootstrap": [
+        -0.018829035692449127,
+        0.021752126266558966
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.0029343679719161077,
+      "ci95_bootstrap": [
+        -0.0505851611750023,
+        0.04251565761265478
+      ],
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_sefa_church",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.5184952989403037,
+      "ci95_bootstrap": [
+        -0.5871803917608829,
+        -0.43896463073195785
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_church",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6427441383328004,
+      "ci95_bootstrap": [
+        0.5991684246690976,
+        0.6824750300165426
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.07511679992190952,
+      "ci95_bootstrap": [
+        -0.24806572756917902,
+        0.09441630610401082
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_sefa_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.21435582348065624,
+      "ci95_bootstrap": [
+        0.05464446685608866,
+        0.3740671801052237
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.03314938201879462,
+      "ci95_bootstrap": [
+        0.008722171112895012,
+        0.0590546524648865
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.07274940185268254,
+      "ci95_bootstrap": [
+        -0.13161766068971092,
+        -0.02330344280053396
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "rho_vs_id_spearman",
+      "display": "rho vs ID Spearman",
+      "mean": -0.40652407522681255,
+      "ci95_bootstrap": [
+        -0.5374751369556332,
+        -0.2577832466779534
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": false,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "rho_vs_lpips_spearman",
+      "display": "rho vs LPIPS Spearman",
+      "mean": 0.6784865978267209,
+      "ci95_bootstrap": [
+        0.6112936663404115,
+        0.7322661855939134
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": 0.030453084824247585,
+      "ci95_bootstrap": [
+        -0.14869193868186054,
+        0.1811978647352531
+      ],
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "negative",
+      "required": false,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.6684372280637707,
+      "ci95_bootstrap": [
+        0.5460501360752792,
+        0.8558552942433648
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "positive",
+      "required": true,
+      "pass": true
+    },
+    {
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.01813986129460058,
+      "ci95_bootstrap": [
+        -0.015461177821271122,
+        0.05174090041047228
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "required": true,
+      "pass": false
+    },
+    {
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.06696506459099641,
+      "ci95_bootstrap": [
+        -0.11371600415856978,
+        -0.02021412502342303
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "required": true,
+      "pass": true
+    }
+  ],
+  "config": {
+    "summaries": [
+      "baseline_church=experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+      "baseline_bedroom=experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+      "ensemble_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble/church/metrics.json",
+      "ensemble_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble/bedroom/metrics.json",
+      "ensemble_fd_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church/metrics.json",
+      "ensemble_fd_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom/metrics.json",
+      "ensemble_high_ntest_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_high_ntest128/church/metrics.json",
+      "ensemble_high_ntest_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_high_ntest128/bedroom/metrics.json",
+      "ensemble_strict_gain_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_strict_gain_match/church/metrics.json",
+      "ensemble_strict_gain_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_strict_gain_match/bedroom/metrics.json",
+      "ensemble_ganspace_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church/metrics.json",
+      "ensemble_ganspace_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom/metrics.json",
+      "ensemble_sefa_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church/metrics.json",
+      "ensemble_sefa_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom/metrics.json"
+    ],
+    "out": "experiments/out/control_predictive_stress_evidence_table_v4",
+    "seed": 4212,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v59_prompt_ensemble_extended_evidence_table.json",
+    "protocol_key": "predictive_stress_evidence_table_v4"
+  },
+  "_meta": {
+    "seed": 4212,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-27T23:46:17.250233+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_predictive_stress_evidence_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_predictive_stress_evidence_table.py",
+        "--summaries",
+        "baseline_church=experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "baseline_bedroom=experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "ensemble_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble/church/metrics.json",
+        "ensemble_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble/bedroom/metrics.json",
+        "ensemble_fd_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church/metrics.json",
+        "ensemble_fd_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom/metrics.json",
+        "ensemble_high_ntest_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_high_ntest128/church/metrics.json",
+        "ensemble_high_ntest_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_high_ntest128/bedroom/metrics.json",
+        "ensemble_strict_gain_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_strict_gain_match/church/metrics.json",
+        "ensemble_strict_gain_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_strict_gain_match/bedroom/metrics.json",
+        "ensemble_ganspace_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church/metrics.json",
+        "ensemble_ganspace_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom/metrics.json",
+        "ensemble_sefa_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church/metrics.json",
+        "ensemble_sefa_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom/metrics.json",
+        "--out",
+        "experiments/out/control_predictive_stress_evidence_table_v4",
+        "--seed",
+        "4212",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v59_prompt_ensemble_extended_evidence_table.json",
+        "--protocol-key",
+        "predictive_stress_evidence_table_v4"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 3918300,
+      "timestamp_utc": "2026-05-27T23:46:17.249985+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v59_prompt_ensemble_extended_evidence_table.json",
+      "protocol_key": "predictive_stress_evidence_table_v4",
+      "protocol_sha256": "7eb7d5d1a71d0bd5c96e3213c90319860082a758780f1dd933d838381e0eac94",
+      "protocol_version": "control_v59_prompt_ensemble_extended_evidence_table"
+    }
+  }
+}

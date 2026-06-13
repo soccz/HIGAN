@@ -1,0 +1,209 @@
+{
+  "readiness": "assumption_sensitive_predictive_claim",
+  "passes": 13,
+  "total": 16,
+  "checks": [
+    {
+      "name": "fd_church: rho_vs_lpips_spearman",
+      "mean": 0.7517402278795513,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "fd_church: lpips_beta_rho",
+      "mean": 0.4013494630669152,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "fd_church: matched_pair_lpips_low_minus_high",
+      "mean": -0.07642006220258335,
+      "wins": 5,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "fd_church: matched_pair_id_low_minus_high",
+      "mean": 0.029046783220055696,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "fd_bedroom: rho_vs_lpips_spearman",
+      "mean": 0.6026056378172828,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "fd_bedroom: lpips_beta_rho",
+      "mean": 0.7825479202322863,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "fd_bedroom: matched_pair_lpips_low_minus_high",
+      "mean": -0.03240683712917546,
+      "wins": 3,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "fd_bedroom: matched_pair_id_low_minus_high",
+      "mean": 0.0027826209957267914,
+      "wins": 4,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_church: rho_vs_lpips_spearman",
+      "mean": 0.7285569619589799,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_church: lpips_beta_rho",
+      "mean": 0.2348566627333602,
+      "wins": 4,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_church: matched_pair_lpips_low_minus_high",
+      "mean": -0.04683115634018409,
+      "wins": 5,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_church: matched_pair_id_low_minus_high",
+      "mean": 0.021581495330323455,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_bedroom: rho_vs_lpips_spearman",
+      "mean": 0.5963035801466877,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_bedroom: lpips_beta_rho",
+      "mean": 0.5875380576355284,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "prompt_bedroom: matched_pair_lpips_low_minus_high",
+      "mean": -0.011950767794910246,
+      "wins": 3,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "prompt_bedroom: matched_pair_id_low_minus_high",
+      "mean": -0.007357299485092618,
+      "wins": 2,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": false
+    }
+  ],
+  "claim_guidance": {
+    "assumption_stress_predictive_ready": "Predictive-validity claim survived finite-difference risk estimation and prompt-template stress tests.",
+    "assumption_stress_predictive_borderline": "Predictive-validity claim is mostly robust, but paper must report sensitivity boundaries.",
+    "assumption_sensitive_predictive_claim": "Predictive-validity claim depends materially on estimator or prompt assumptions; narrow the claim."
+  },
+  "config": {
+    "fd_church": "experiments/out/control_cross_domain_risk_predictive_fd/church/metrics.json",
+    "fd_bedroom": "experiments/out/control_cross_domain_risk_predictive_fd/bedroom/metrics.json",
+    "prompt_church": "experiments/out/control_cross_domain_risk_predictive_prompt_photo/church/metrics.json",
+    "prompt_bedroom": "experiments/out/control_cross_domain_risk_predictive_prompt_photo/bedroom/metrics.json",
+    "out": "experiments/out/control_predictive_assumption_readiness_v1",
+    "seed": 4191,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v44_predictive_assumption_readiness.json",
+    "protocol_key": "predictive_assumption_readiness_v1"
+  },
+  "_meta": {
+    "seed": 4191,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-27T11:36:49.128807+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_predictive_assumption_readiness.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_predictive_assumption_readiness.py",
+        "--fd-church",
+        "experiments/out/control_cross_domain_risk_predictive_fd/church/metrics.json",
+        "--fd-bedroom",
+        "experiments/out/control_cross_domain_risk_predictive_fd/bedroom/metrics.json",
+        "--prompt-church",
+        "experiments/out/control_cross_domain_risk_predictive_prompt_photo/church/metrics.json",
+        "--prompt-bedroom",
+        "experiments/out/control_cross_domain_risk_predictive_prompt_photo/bedroom/metrics.json",
+        "--out",
+        "experiments/out/control_predictive_assumption_readiness_v1",
+        "--seed",
+        "4191",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v44_predictive_assumption_readiness.json",
+        "--protocol-key",
+        "predictive_assumption_readiness_v1"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 2509848,
+      "timestamp_utc": "2026-05-27T11:36:49.128630+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v44_predictive_assumption_readiness.json",
+      "protocol_key": "predictive_assumption_readiness_v1",
+      "protocol_sha256": "5ff76368d9ebc7ae3221163611cd03f40cc8c8ef1588500b6da92bc0f921147e",
+      "protocol_version": "control_v44_predictive_assumption_readiness"
+    }
+  }
+}

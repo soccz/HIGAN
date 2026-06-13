@@ -1,0 +1,2249 @@
+{
+  "protocols": [
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v3_risk_robustness.json",
+      "protocol_version": "control_v3_risk_robustness",
+      "protocol_sha256": "66e24a762af5fc2c2f4e031e296c2e5070718a407891f314d1041c64e869f4c4",
+      "counts": {
+        "complete": 6,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "risk_aware_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_aware_robustness/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2027."
+        },
+        {
+          "key": "risk_aware_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_aware_robustness/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2028."
+        },
+        {
+          "key": "risk_aware_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_aware_robustness/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2029."
+        },
+        {
+          "key": "risk_aware_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_aware_robustness/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2030."
+        },
+        {
+          "key": "risk_aware_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_aware_robustness/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2031."
+        },
+        {
+          "key": "risk_aware_robustness_summary",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_aware_robustness/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Aggregate seed-level and seed-attribute paired deltas without reselection or tuning."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v4_risk_signal_negatives.json",
+      "protocol_version": "control_v4_risk_signal_negatives",
+      "protocol_sha256": "55947a6cbfae5f26a7cda0b3feca43f2d7df8d7d7e6cc6c52aa0312fe4fe4327",
+      "counts": {
+        "complete": 11,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "shuffled_risk_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/shuffled_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller."
+        },
+        {
+          "key": "shuffled_risk_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/shuffled_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller."
+        },
+        {
+          "key": "shuffled_risk_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/shuffled_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller."
+        },
+        {
+          "key": "shuffled_risk_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/shuffled_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller."
+        },
+        {
+          "key": "shuffled_risk_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/shuffled_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller."
+        },
+        {
+          "key": "inverted_risk_seed_2027",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/inverted_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters."
+        },
+        {
+          "key": "inverted_risk_seed_2028",
+          "order": 7,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/inverted_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters."
+        },
+        {
+          "key": "inverted_risk_seed_2029",
+          "order": 8,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/inverted_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters."
+        },
+        {
+          "key": "inverted_risk_seed_2030",
+          "order": 9,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/inverted_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters."
+        },
+        {
+          "key": "inverted_risk_seed_2031",
+          "order": 10,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/inverted_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters."
+        },
+        {
+          "key": "risk_signal_negative_summary",
+          "order": 11,
+          "script": "experiments/control/run_risk_signal_negative_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_signal_negative_controls/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "controller_rows",
+            "controller_vs_gain_only",
+            "controller_vs_random",
+            "diff_rows",
+            "metrics",
+            "modes",
+            "paired_controller_diffs",
+            "seeds"
+          ],
+          "claim_tested": "Actual risk-aware controller should outperform shuffled/inverted-risk controllers on seed-level stability metrics if curvature risk carries useful control signal."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v5_risk_power_sensitivity.json",
+      "protocol_version": "control_v5_risk_power_sensitivity",
+      "protocol_sha256": "3c4336b9b970533e6c3fc5fff65fa4a34495664244ca857a5524e87072d4d5a7",
+      "counts": {
+        "complete": 12,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "risk_power_0p5_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_0p5_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: weaker risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_0p5_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_0p5_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: weaker risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_0p5_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_0p5_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: weaker risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_0p5_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_0p5_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: weaker risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_0p5_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_0p5_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: weaker risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_2p0_seed_2027",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_2p0_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: stronger risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_2p0_seed_2028",
+          "order": 7,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_2p0_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: stronger risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_2p0_seed_2029",
+          "order": 8,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_2p0_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: stronger risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_2p0_seed_2030",
+          "order": 9,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_2p0_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: stronger risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_2p0_seed_2031",
+          "order": 10,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_2p0_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sensitivity check: stronger risk penalty should still be reported against all baselines."
+        },
+        {
+          "key": "risk_power_0p5_summary",
+          "order": 11,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_0p5/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize weaker-risk-penalty sensitivity over the same five seeds."
+        },
+        {
+          "key": "risk_power_2p0_summary",
+          "order": 12,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_risk_power_sensitivity/risk_power_2p0/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize stronger-risk-penalty sensitivity over the same five seeds."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v6_true_lpips_validation.json",
+      "protocol_version": "control_v6_true_lpips_validation",
+      "protocol_sha256": "d342e9af1b443fec5034d6d2540479c4337e1237fe1675ebd0cd806f8f4b692d",
+      "counts": {
+        "complete": 6,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "true_lpips_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_true_lpips_validation/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS validation: risk-aware controller should preserve lower perceptual drift than gain-only/random/high-risk under the same split protocol."
+        },
+        {
+          "key": "true_lpips_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_true_lpips_validation/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS validation: risk-aware controller should preserve lower perceptual drift than gain-only/random/high-risk under the same split protocol."
+        },
+        {
+          "key": "true_lpips_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_true_lpips_validation/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS validation: risk-aware controller should preserve lower perceptual drift than gain-only/random/high-risk under the same split protocol."
+        },
+        {
+          "key": "true_lpips_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_true_lpips_validation/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS validation: risk-aware controller should preserve lower perceptual drift than gain-only/random/high-risk under the same split protocol."
+        },
+        {
+          "key": "true_lpips_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_true_lpips_validation/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS validation: risk-aware controller should preserve lower perceptual drift than gain-only/random/high-risk under the same split protocol."
+        },
+        {
+          "key": "true_lpips_summary",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_true_lpips_validation/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize real-LPIPS validation over the same five seeds."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v7_expanded_candidate_universe.json",
+      "protocol_version": "control_v7_expanded_candidate_universe",
+      "protocol_sha256": "488e589f51adc02a1dbf508b492a424c9c34062d7628c73fc745ed760a4b732a",
+      "counts": {
+        "complete": 6,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "expanded_universe_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source."
+        },
+        {
+          "key": "expanded_universe_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source."
+        },
+        {
+          "key": "expanded_universe_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source."
+        },
+        {
+          "key": "expanded_universe_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source."
+        },
+        {
+          "key": "expanded_universe_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source."
+        },
+        {
+          "key": "expanded_universe_summary",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize expanded-candidate-universe validation over the same five seeds."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v8_campaign_audit.json",
+      "protocol_version": "control_v8_campaign_audit",
+      "protocol_sha256": "23278e4769904380e6f9d20830626e6617f6a0f427ff1315a89a1ed5baa07836",
+      "counts": {
+        "complete": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "control_campaign_audit_final",
+          "order": 1,
+          "script": "experiments/control/audit_control_campaign.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_campaign_audit_final/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "protocols"
+          ],
+          "claim_tested": "Every locked control protocol should have traceable outputs, matching protocol hashes, and declared summary inputs."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v9_fixed_target_negatives.json",
+      "protocol_version": "control_v9_fixed_target_negatives",
+      "protocol_sha256": "fe833cee1d840b83eaf8337a381b03b3a1125a2d58b6b6ce13e92e78f8226451",
+      "counts": {
+        "complete": 16,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "fixed_target_actual_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/actual_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: actual risk should outperform shuffled/inverted risk when target magnitude is estimated independently of selected mode."
+        },
+        {
+          "key": "fixed_target_actual_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/actual_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: actual risk should outperform shuffled/inverted risk when target magnitude is estimated independently of selected mode."
+        },
+        {
+          "key": "fixed_target_actual_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/actual_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: actual risk should outperform shuffled/inverted risk when target magnitude is estimated independently of selected mode."
+        },
+        {
+          "key": "fixed_target_actual_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/actual_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: actual risk should outperform shuffled/inverted risk when target magnitude is estimated independently of selected mode."
+        },
+        {
+          "key": "fixed_target_actual_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/actual_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: actual risk should outperform shuffled/inverted risk when target magnitude is estimated independently of selected mode."
+        },
+        {
+          "key": "fixed_target_shuffled_seed_2027",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/shuffled_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: shuffled risk should underperform actual risk if the risk signal carries control information."
+        },
+        {
+          "key": "fixed_target_shuffled_seed_2028",
+          "order": 7,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/shuffled_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: shuffled risk should underperform actual risk if the risk signal carries control information."
+        },
+        {
+          "key": "fixed_target_shuffled_seed_2029",
+          "order": 8,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/shuffled_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: shuffled risk should underperform actual risk if the risk signal carries control information."
+        },
+        {
+          "key": "fixed_target_shuffled_seed_2030",
+          "order": 9,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/shuffled_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: shuffled risk should underperform actual risk if the risk signal carries control information."
+        },
+        {
+          "key": "fixed_target_shuffled_seed_2031",
+          "order": 10,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/shuffled_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: shuffled risk should underperform actual risk if the risk signal carries control information."
+        },
+        {
+          "key": "fixed_target_inverted_seed_2027",
+          "order": 11,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/inverted_seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: inverted risk should underperform actual risk if risk direction matters."
+        },
+        {
+          "key": "fixed_target_inverted_seed_2028",
+          "order": 12,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/inverted_seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: inverted risk should underperform actual risk if risk direction matters."
+        },
+        {
+          "key": "fixed_target_inverted_seed_2029",
+          "order": 13,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/inverted_seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: inverted risk should underperform actual risk if risk direction matters."
+        },
+        {
+          "key": "fixed_target_inverted_seed_2030",
+          "order": 14,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/inverted_seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: inverted risk should underperform actual risk if risk direction matters."
+        },
+        {
+          "key": "fixed_target_inverted_seed_2031",
+          "order": 15,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/inverted_seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Fixed-target causal control: inverted risk should underperform actual risk if risk direction matters."
+        },
+        {
+          "key": "fixed_target_negative_summary",
+          "order": 16,
+          "script": "experiments/control/run_risk_signal_negative_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_negative_controls/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "controller_rows",
+            "controller_vs_gain_only",
+            "controller_vs_random",
+            "diff_rows",
+            "metrics",
+            "modes",
+            "paired_controller_diffs",
+            "seeds"
+          ],
+          "claim_tested": "Summarize fixed-target actual-vs-shuffled/inverted risk comparisons over matched seeds and attributes."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v10_campaign_audit.json",
+      "protocol_version": "control_v10_campaign_audit",
+      "protocol_sha256": "e00a11bbca88d21fa8becc47fbf86411399700cae7def2e09a62c53fa13120f2",
+      "counts": {
+        "complete": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "control_campaign_audit_full_final",
+          "order": 1,
+          "script": "experiments/control/audit_control_campaign.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_campaign_audit_full_final/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "protocols"
+          ],
+          "claim_tested": "Every locked control protocol should have traceable outputs, matching protocol hashes, and declared summary inputs."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v11_extended_validation.json",
+      "protocol_version": "control_v11_extended_validation",
+      "protocol_sha256": "2ef72192e5603649c890900ada5f8e6e8def8899ea6810d7dda9c86a88caf8e5",
+      "counts": {
+        "complete": 30,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "fixed_target_true_lpips_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_true_lpips/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS fixed-target validation: the controller should preserve identity/perceptual quality when target magnitude is estimated from the full candidate universe."
+        },
+        {
+          "key": "fixed_target_true_lpips_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_true_lpips/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS fixed-target validation: the controller should preserve identity/perceptual quality when target magnitude is estimated from the full candidate universe."
+        },
+        {
+          "key": "fixed_target_true_lpips_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_true_lpips/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS fixed-target validation: the controller should preserve identity/perceptual quality when target magnitude is estimated from the full candidate universe."
+        },
+        {
+          "key": "fixed_target_true_lpips_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_true_lpips/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS fixed-target validation: the controller should preserve identity/perceptual quality when target magnitude is estimated from the full candidate universe."
+        },
+        {
+          "key": "fixed_target_true_lpips_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_true_lpips/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Real-LPIPS fixed-target validation: the controller should preserve identity/perceptual quality when target magnitude is estimated from the full candidate universe."
+        },
+        {
+          "key": "fixed_target_true_lpips_summary",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_fixed_target_true_lpips/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize real-LPIPS fixed-target validation over five paired seeds."
+        },
+        {
+          "key": "budget_probe8_calib16_seed_2027",
+          "order": 7,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe8_calib16/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a small probe/calibration budget."
+        },
+        {
+          "key": "budget_probe8_calib16_seed_2028",
+          "order": 8,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe8_calib16/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a small probe/calibration budget."
+        },
+        {
+          "key": "budget_probe8_calib16_seed_2029",
+          "order": 9,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe8_calib16/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a small probe/calibration budget."
+        },
+        {
+          "key": "budget_probe8_calib16_seed_2030",
+          "order": 10,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe8_calib16/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a small probe/calibration budget."
+        },
+        {
+          "key": "budget_probe8_calib16_seed_2031",
+          "order": 11,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe8_calib16/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a small probe/calibration budget."
+        },
+        {
+          "key": "budget_probe8_calib16_summary",
+          "order": 12,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe8_calib16/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize small-budget controller validation over five paired seeds."
+        },
+        {
+          "key": "budget_probe16_calib16_seed_2027",
+          "order": 13,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe16_calib16/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a moderate probe/calibration budget."
+        },
+        {
+          "key": "budget_probe16_calib16_seed_2028",
+          "order": 14,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe16_calib16/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a moderate probe/calibration budget."
+        },
+        {
+          "key": "budget_probe16_calib16_seed_2029",
+          "order": 15,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe16_calib16/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a moderate probe/calibration budget."
+        },
+        {
+          "key": "budget_probe16_calib16_seed_2030",
+          "order": 16,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe16_calib16/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a moderate probe/calibration budget."
+        },
+        {
+          "key": "budget_probe16_calib16_seed_2031",
+          "order": 17,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe16_calib16/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Sample-budget sensitivity: the controller should retain useful control signal with a moderate probe/calibration budget."
+        },
+        {
+          "key": "budget_probe16_calib16_summary",
+          "order": 18,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_probe_budget_sensitivity/probe16_calib16/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize moderate-budget controller validation over five paired seeds."
+        },
+        {
+          "key": "k4_seed_2027",
+          "order": 19,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k4/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a smaller selected direction set."
+        },
+        {
+          "key": "k4_seed_2028",
+          "order": 20,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k4/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a smaller selected direction set."
+        },
+        {
+          "key": "k4_seed_2029",
+          "order": 21,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k4/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a smaller selected direction set."
+        },
+        {
+          "key": "k4_seed_2030",
+          "order": 22,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k4/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a smaller selected direction set."
+        },
+        {
+          "key": "k4_seed_2031",
+          "order": 23,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k4/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a smaller selected direction set."
+        },
+        {
+          "key": "k4_summary",
+          "order": 24,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k4/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize k=4 selection-size validation over five paired seeds."
+        },
+        {
+          "key": "k12_seed_2027",
+          "order": 25,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k12/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a larger selected direction set."
+        },
+        {
+          "key": "k12_seed_2028",
+          "order": 26,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k12/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a larger selected direction set."
+        },
+        {
+          "key": "k12_seed_2029",
+          "order": 27,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k12/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a larger selected direction set."
+        },
+        {
+          "key": "k12_seed_2030",
+          "order": 28,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k12/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a larger selected direction set."
+        },
+        {
+          "key": "k12_seed_2031",
+          "order": 29,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k12/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Selection-size sensitivity: the control signal should remain useful with a larger selected direction set."
+        },
+        {
+          "key": "k12_summary",
+          "order": 30,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_k_sensitivity/k12/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize k=12 selection-size validation over five paired seeds."
+        }
+      ]
+    },
+    {
+      "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v12_threshold_magnitude_sensitivity.json",
+      "protocol_version": "control_v12_threshold_magnitude_sensitivity",
+      "protocol_sha256": "fc06de6339c99eba07d0af249e8066c49abbbff7daca67c7d26209f6f3e45946",
+      "counts": {
+        "complete": 24,
+        "pending": 0,
+        "failed": 0
+      },
+      "rows": [
+        {
+          "key": "gain_q25_seed_2027",
+          "order": 1,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q25_seed_2028",
+          "order": 2,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q25_seed_2029",
+          "order": 3,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q25_seed_2030",
+          "order": 4,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q25_seed_2031",
+          "order": 5,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q25_summary",
+          "order": 6,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q25/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize relaxed gain-threshold validation over five paired seeds."
+        },
+        {
+          "key": "gain_q75_seed_2027",
+          "order": 7,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q75_seed_2028",
+          "order": 8,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q75_seed_2029",
+          "order": 9,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q75_seed_2030",
+          "order": 10,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q75_seed_2031",
+          "order": 11,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage."
+        },
+        {
+          "key": "gain_q75_summary",
+          "order": 12,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_gain_threshold_sensitivity/gain_q75/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize strict gain-threshold validation over five paired seeds."
+        },
+        {
+          "key": "target_q10_seed_2027",
+          "order": 13,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits."
+        },
+        {
+          "key": "target_q10_seed_2028",
+          "order": 14,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits."
+        },
+        {
+          "key": "target_q10_seed_2029",
+          "order": 15,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits."
+        },
+        {
+          "key": "target_q10_seed_2030",
+          "order": 16,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits."
+        },
+        {
+          "key": "target_q10_seed_2031",
+          "order": 17,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits."
+        },
+        {
+          "key": "target_q10_summary",
+          "order": 18,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q10/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize smaller-target validation over five paired seeds."
+        },
+        {
+          "key": "target_q50_seed_2027",
+          "order": 19,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2027/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits."
+        },
+        {
+          "key": "target_q50_seed_2028",
+          "order": 20,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2028/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits."
+        },
+        {
+          "key": "target_q50_seed_2029",
+          "order": 21,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2029/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits."
+        },
+        {
+          "key": "target_q50_seed_2030",
+          "order": 22,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2030/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits."
+        },
+        {
+          "key": "target_q50_seed_2031",
+          "order": 23,
+          "script": "experiments/control/run_risk_aware_controller.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2031/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "config",
+            "per_attr"
+          ],
+          "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits."
+        },
+        {
+          "key": "target_q50_summary",
+          "order": 24,
+          "script": "experiments/control/run_risk_aware_repeat_summary.py",
+          "metrics": "/mnt/20t/study/HIGAN/paper/experiments/out/control_target_magnitude_sensitivity/target_q50/metrics.json",
+          "status": "complete",
+          "issues": [],
+          "warnings": [
+            "git_dirty is true or missing"
+          ],
+          "payload_keys": [
+            "_meta",
+            "attrs",
+            "cell_level",
+            "comparisons",
+            "config",
+            "inputs",
+            "metrics",
+            "n_runs",
+            "per_seed",
+            "rows",
+            "seed_level",
+            "seeds"
+          ],
+          "claim_tested": "Summarize larger-target validation over five paired seeds."
+        }
+      ]
+    }
+  ],
+  "config": {
+    "protocols": [
+      "experiments/protocols/control_v3_risk_robustness.json",
+      "experiments/protocols/control_v4_risk_signal_negatives.json",
+      "experiments/protocols/control_v5_risk_power_sensitivity.json",
+      "experiments/protocols/control_v6_true_lpips_validation.json",
+      "experiments/protocols/control_v7_expanded_candidate_universe.json",
+      "experiments/protocols/control_v8_campaign_audit.json",
+      "experiments/protocols/control_v9_fixed_target_negatives.json",
+      "experiments/protocols/control_v10_campaign_audit.json",
+      "experiments/protocols/control_v11_extended_validation.json",
+      "experiments/protocols/control_v12_threshold_magnitude_sensitivity.json"
+    ],
+    "out": "experiments/out/control_campaign_audit_extended_final",
+    "seed": 4613,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v13_extended_campaign_audit.json",
+    "protocol_key": "control_campaign_audit_extended_final"
+  },
+  "_meta": {
+    "seed": 4613,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-24T23:50:41.551928+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/audit_control_campaign.py",
+    "execution": {
+      "argv": [
+        "experiments/control/audit_control_campaign.py",
+        "--protocols",
+        "experiments/protocols/control_v3_risk_robustness.json",
+        "experiments/protocols/control_v4_risk_signal_negatives.json",
+        "experiments/protocols/control_v5_risk_power_sensitivity.json",
+        "experiments/protocols/control_v6_true_lpips_validation.json",
+        "experiments/protocols/control_v7_expanded_candidate_universe.json",
+        "experiments/protocols/control_v8_campaign_audit.json",
+        "experiments/protocols/control_v9_fixed_target_negatives.json",
+        "experiments/protocols/control_v10_campaign_audit.json",
+        "experiments/protocols/control_v11_extended_validation.json",
+        "experiments/protocols/control_v12_threshold_magnitude_sensitivity.json",
+        "--out",
+        "experiments/out/control_campaign_audit_extended_final",
+        "--seed",
+        "4613",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v13_extended_campaign_audit.json",
+        "--protocol-key",
+        "control_campaign_audit_extended_final"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 1435219,
+      "timestamp_utc": "2026-05-24T23:50:41.551816+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v13_extended_campaign_audit.json",
+      "protocol_key": "control_campaign_audit_extended_final",
+      "protocol_sha256": "468a2df35b4e6e929d3b152f794d01ec38ce7231c746555590e0aaba6b53cf9b",
+      "protocol_version": "control_v13_extended_campaign_audit"
+    }
+  }
+}

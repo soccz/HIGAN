@@ -1,0 +1,115 @@
+{
+  "per_attr": {
+    "smile": {
+      "target_abs_delta_attr": 0.004353981465101242,
+      "rows": {
+        "curvature_low": [
+          {
+            "index": 150,
+            "group": "curvature_low",
+            "rho_this_dir": 0.269810699195406,
+            "target_abs_delta_attr": 0.004353981465101242,
+            "alpha": 1.0,
+            "target_reached_on_calib": false,
+            "calib_max_abs_delta_attr": 0.0032974006608128548,
+            "mean_delta_attr": 0.009890762157738209,
+            "mean_abs_delta_attr": 0.009890762157738209,
+            "mean_id_cos": 0.9915896654129028,
+            "mean_lpips_proxy": 0.03437176626175642
+          }
+        ],
+        "random": [
+          {
+            "index": 49,
+            "group": "random",
+            "rho_this_dir": 0.4332890666335555,
+            "target_abs_delta_attr": 0.004353981465101242,
+            "alpha": -0.8047188532944135,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.005410562269389629,
+            "mean_delta_attr": 0.0022165337577462196,
+            "mean_abs_delta_attr": 0.0022165337577462196,
+            "mean_id_cos": 0.9881592690944672,
+            "mean_lpips_proxy": 0.045907821506261826
+          }
+        ],
+        "curvature_high": [
+          {
+            "index": 95,
+            "group": "curvature_high",
+            "rho_this_dir": 1.9746592629572715,
+            "target_abs_delta_attr": 0.004353981465101242,
+            "alpha": -0.5669884558189621,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.007679136004298925,
+            "mean_delta_attr": -0.0006797779351472855,
+            "mean_abs_delta_attr": 0.005201620981097221,
+            "mean_id_cos": 0.988251656293869,
+            "mean_lpips_proxy": 0.062475403770804405
+          }
+        ]
+      },
+      "summary": {
+        "curvature_low": {
+          "n": 1,
+          "target_hit_rate_calib": 0.0,
+          "mean_abs_delta_attr": 0.009890762157738209,
+          "mean_id_cos": 0.9915896654129028,
+          "mean_lpips_proxy": 0.03437176626175642,
+          "mean_abs_alpha": 1.0,
+          "mean_rho_this_dir": 0.269810699195406
+        },
+        "random": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.0022165337577462196,
+          "mean_id_cos": 0.9881592690944672,
+          "mean_lpips_proxy": 0.045907821506261826,
+          "mean_abs_alpha": 0.8047188532944135,
+          "mean_rho_this_dir": 0.4332890666335555
+        },
+        "curvature_high": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.005201620981097221,
+          "mean_id_cos": 0.988251656293869,
+          "mean_lpips_proxy": 0.062475403770804405,
+          "mean_abs_alpha": 0.5669884558189621,
+          "mean_rho_this_dir": 1.9746592629572715
+        }
+      }
+    }
+  },
+  "config": {
+    "source": "experiments/out/editing_head_to_head/metrics.json",
+    "out": "experiments/out/matched_editing_smoke",
+    "attrs": [
+      "smile"
+    ],
+    "n_calib": 2,
+    "n_test": 2,
+    "k_per_group": 1,
+    "max_alpha": 1.0,
+    "alpha_steps": 2,
+    "target_quantile": 0.25,
+    "batch": 1,
+    "lod": 2.0,
+    "seed": 2027
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-23T00:47:07.816167+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/baselines/run_matched_editing_head_to_head.py",
+    "source": "/mnt/20t/study/HIGAN/paper/experiments/out/editing_head_to_head/metrics.json",
+    "lod_override": 2.0
+  }
+}

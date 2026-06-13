@@ -1,0 +1,1036 @@
+{
+  "rows": [
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_gain_only ID",
+      "n": 5,
+      "mean": 0.0008636617218144238,
+      "median": 0.0011813048622570932,
+      "std": 0.007034341089189408,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.003868631349178031,
+        0.006495987845119089
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_gain_only true-LPIPS",
+      "n": 5,
+      "mean": -0.0020007935283501864,
+      "median": -0.00198060827642621,
+      "std": 0.021214023861592442,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.019380068150894658,
+        0.012632095818116796
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_random ID",
+      "n": 5,
+      "mean": 0.026821703612222338,
+      "median": 0.023985355132026598,
+      "std": 0.010266065055964023,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.019240326865110548,
+        0.03521669813198969
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_random true-LPIPS",
+      "n": 5,
+      "mean": -0.06122122085707815,
+      "median": -0.05744087724633573,
+      "std": 0.024907274738241492,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.08180208817720995,
+        -0.04179347500994481
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_high_risk ID",
+      "n": 5,
+      "mean": 0.02625949919456616,
+      "median": 0.02589897337020375,
+      "std": 0.008874819406242643,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.019071609643287957,
+        0.03365302350139245
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_high_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.060669511958258225,
+      "median": -0.05295703703632171,
+      "std": 0.030050210966708353,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.0849181744913949,
+        -0.03972389970588684
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_low_risk ID",
+      "n": 5,
+      "mean": 0.018369287968380377,
+      "median": 0.012824082048609853,
+      "std": 0.008762409945469608,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.011819317820481956,
+        0.0249192581162788
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom controller",
+      "claim": "risk_minus_low_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.03960233465422789,
+      "median": -0.03036477033947449,
+      "std": 0.020535643515753935,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.05638428236488835,
+        -0.024122952738071034
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom negatives",
+      "claim": "actual_minus_shuffled ID",
+      "n": 5,
+      "mean": 0.005383652361342683,
+      "median": 0.006049648771295324,
+      "std": 0.007291583120285273,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.0011083603370934726,
+        0.010604888922534883
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom negatives",
+      "claim": "actual_minus_shuffled true-LPIPS",
+      "n": 5,
+      "mean": -0.010509238373560947,
+      "median": -0.009139299660091638,
+      "std": 0.018977138962885536,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.024126300029820413,
+        0.00415939498343505
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom negatives",
+      "claim": "actual_minus_inverted ID",
+      "n": 5,
+      "mean": 0.007673774019349366,
+      "median": 0.008376593556022272,
+      "std": 0.005881621862679238,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.0033055232896003874,
+        0.012049220234621317
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom negatives",
+      "claim": "actual_minus_inverted true-LPIPS",
+      "n": 5,
+      "mean": -0.01872379950782488,
+      "median": -0.01735224916592415,
+      "std": 0.016287386313797503,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.03275503968088742,
+        -0.007518170549701608
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_gain_only ID",
+      "n": 5,
+      "mean": 0.0026889237885673843,
+      "median": 0.0054502222531785565,
+      "std": 0.008276612566241714,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.0040231298034389806,
+        0.008980401745066046
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_gain_only true-LPIPS",
+      "n": 5,
+      "mean": -0.0020138747382588917,
+      "median": -0.010320596509397243,
+      "std": 0.01891718779756343,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.016488729684654875,
+        0.012776820573769023
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_random ID",
+      "n": 5,
+      "mean": 0.005684637371450663,
+      "median": 0.00590779244278868,
+      "std": 0.003206382863289169,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.002912999860321482,
+        0.007905108000462253
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_random true-LPIPS",
+      "n": 5,
+      "mean": -0.018922089652733124,
+      "median": -0.014263645576950998,
+      "std": 0.012684710816033801,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.02908924653820577,
+        -0.009237789301975378
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_high_risk ID",
+      "n": 5,
+      "mean": 0.025456076084325714,
+      "median": 0.022894691675901413,
+      "std": 0.01251922156905302,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.016394895423824586,
+        0.03554320855376621
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_high_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.05576904476341345,
+      "median": -0.04209156794119432,
+      "std": 0.026833749330700644,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.07869962777549518,
+        -0.03813378713894053
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_low_risk ID",
+      "n": 5,
+      "mean": -0.00010080235078930855,
+      "median": -0.003190000386287769,
+      "std": 0.010396369176695291,
+      "wins": 2,
+      "win_rate": 0.4,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.007310553515950839,
+        0.008839723886922004
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured controller",
+      "claim": "risk_minus_low_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.005143424716819329,
+      "median": -0.0012592420613752135,
+      "std": 0.02551967862577644,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.025957452810628938,
+        0.013914039063820383
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured negatives",
+      "claim": "actual_minus_shuffled ID",
+      "n": 5,
+      "mean": 0.002600946463644505,
+      "median": 0.00746352303152283,
+      "std": 0.009773168202756798,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.004958740295842289,
+        0.010028576664626598
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured negatives",
+      "claim": "actual_minus_shuffled true-LPIPS",
+      "n": 5,
+      "mean": -0.004816538775655014,
+      "median": -0.01747130012578661,
+      "std": 0.020225817848190126,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.019974523648488684,
+        0.010341446097178655
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured negatives",
+      "claim": "actual_minus_inverted ID",
+      "n": 5,
+      "mean": 0.005709450645372272,
+      "median": 0.0054502222531785565,
+      "std": 0.009207339614500567,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.001616023931031426,
+        0.01303492522177597
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church structured negatives",
+      "claim": "actual_minus_inverted true-LPIPS",
+      "n": 5,
+      "mean": -0.012289448003987975,
+      "median": -0.010320596509397243,
+      "std": 0.02019044179265815,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.028351071905308344,
+        0.0037721758973323937
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_gain_only ID",
+      "n": 5,
+      "mean": -0.0012017980450764296,
+      "median": 0.0018469944673900802,
+      "std": 0.005321087032750941,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.0059742072752366464,
+        0.002466354371669392
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_gain_only true-LPIPS",
+      "n": 5,
+      "mean": 0.005384206493060142,
+      "median": -0.002472734641438971,
+      "std": 0.014300230847127263,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.004156325870280852,
+        0.018089754751175253
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_random ID",
+      "n": 5,
+      "mean": 0.009598457533866166,
+      "median": 0.011052297855106493,
+      "std": 0.00997794671760428,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        0.001755455002615541,
+        0.017547673817413546
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_random true-LPIPS",
+      "n": 5,
+      "mean": -0.023012281270378784,
+      "median": -0.031136013435874094,
+      "std": 0.019595263434281373,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.03760374364070837,
+        -0.008420818900049197
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_high_risk ID",
+      "n": 5,
+      "mean": 0.015762432292103768,
+      "median": 0.01358090399298817,
+      "std": 0.010043408269203946,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.008179495693184435,
+        0.023452173685655
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_high_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.03080952652899214,
+      "median": -0.019448718407450844,
+      "std": 0.030139718344992798,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.0571214463116424,
+        -0.009109781274855778
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_low_risk ID",
+      "n": 5,
+      "mean": 0.0036628443126877153,
+      "median": 0.002319389760183791,
+      "std": 0.011302303741627037,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.004559407736718029,
+        0.013539526836636168
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "church confirmatory controller",
+      "claim": "risk_minus_low_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.008607537608713755,
+      "median": -0.0038099502241190444,
+      "std": 0.023279715393810702,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.029733596314357173,
+        0.007503011579683516
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church confirmatory negatives",
+      "claim": "actual_minus_shuffled ID",
+      "n": 5,
+      "mean": 0.0019993238306293885,
+      "median": 0.0020197463454678655,
+      "std": 0.008679214045900573,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.004264779544125,
+        0.009295561102529366
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory negatives",
+      "claim": "actual_minus_shuffled true-LPIPS",
+      "n": 5,
+      "mean": -0.002484899717516479,
+      "median": 0.0019070412657432219,
+      "std": 0.022084770406529505,
+      "wins": 2,
+      "win_rate": 0.4,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.02182292063177253,
+        0.012651342121292448
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory negatives",
+      "claim": "actual_minus_inverted ID",
+      "n": 5,
+      "mean": 0.0005610298598185184,
+      "median": 0.0004563390975818038,
+      "std": 0.0059539964040954095,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.004143582563847304,
+        0.005680324944357077
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "church confirmatory negatives",
+      "claim": "actual_minus_inverted true-LPIPS",
+      "n": 5,
+      "mean": 0.0027092396202836725,
+      "median": 0.003878334419520494,
+      "std": 0.015901719654313407,
+      "wins": 2,
+      "win_rate": 0.4,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.010583766576140382,
+        0.015375179839611518
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "church predictive",
+      "claim": "rho_vs_lpips_spearman",
+      "n": 5,
+      "mean": 0.6596810647320612,
+      "median": 0.7689931722776688,
+      "std": 0.3033858612167919,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.38540387785771035,
+        0.8351205942400638
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "church predictive",
+      "claim": "lpips_beta_rho",
+      "n": 5,
+      "mean": 0.24153318822079575,
+      "median": 0.18260752317074552,
+      "std": 0.18749262060921906,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.10235348027013469,
+        0.39874662918562553
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "church predictive",
+      "claim": "matched_pair_lpips_low_minus_high",
+      "n": 5,
+      "mean": -0.03831683933731429,
+      "median": -0.03325109284487553,
+      "std": 0.016821848843183468,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.05253403522933479,
+        -0.02603974828292387
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "church predictive",
+      "claim": "matched_pair_id_low_minus_high",
+      "n": 5,
+      "mean": 0.01924944119690548,
+      "median": 0.02122131674550474,
+      "std": 0.007120170158381715,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.012734193328235832,
+        0.02356022235360884
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom predictive",
+      "claim": "rho_vs_lpips_spearman",
+      "n": 5,
+      "mean": 0.5572352734848994,
+      "median": 0.5644604121531118,
+      "std": 0.08912862864377794,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.4958597674690416,
+        0.6298440730498447
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom predictive",
+      "claim": "lpips_beta_rho",
+      "n": 5,
+      "mean": 0.6888221925804892,
+      "median": 0.7095506525690514,
+      "std": 0.2253105478500397,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.5154159465886062,
+        0.862228438572372
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom predictive",
+      "claim": "matched_pair_lpips_low_minus_high",
+      "n": 5,
+      "mean": -0.0271108978088749,
+      "median": -0.029763400576681504,
+      "std": 0.012845572164048273,
+      "wins": 5,
+      "win_rate": 1.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.036613488655418705,
+        -0.01719664603497626
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "bedroom predictive",
+      "claim": "matched_pair_id_low_minus_high",
+      "n": 5,
+      "mean": 0.005121096488403533,
+      "median": 0.0067392679862678054,
+      "std": 0.003366795163535289,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        0.0021117263366678624,
+        0.007322967782726887
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_gain_only ID",
+      "n": 5,
+      "mean": 0.002963600036067267,
+      "median": -0.00122546738324066,
+      "std": 0.011668160914244224,
+      "wins": 2,
+      "win_rate": 0.4,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.003805940536161264,
+        0.013488504112077257
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_gain_only true-LPIPS",
+      "n": 5,
+      "mean": -0.004047430302898647,
+      "median": 0.0007565706000605132,
+      "std": 0.02298598526087545,
+      "wins": 2,
+      "win_rate": 0.4,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.024934438822204658,
+        0.010419368535804097
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_random ID",
+      "n": 5,
+      "mean": 0.007154334825463593,
+      "median": 0.008666968361164132,
+      "std": 0.011497568064912497,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.002367889190403124,
+        0.015987232040303452
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_random true-LPIPS",
+      "n": 5,
+      "mean": -0.013276723010994829,
+      "median": -0.014314790778674555,
+      "std": 0.027499066998429803,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.031021016077708435,
+        0.010001571577504365
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_high_risk ID",
+      "n": 5,
+      "mean": 0.005108230886980892,
+      "median": 0.0018350119159246485,
+      "std": 0.015826811293424684,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.006583759568942089,
+        0.0183252548178037
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_high_risk true-LPIPS",
+      "n": 5,
+      "mean": -0.00977719415714091,
+      "median": -0.010156513707443082,
+      "std": 0.03301454248865361,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.03724571094056349,
+        0.01756768525883672
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_low_risk ID",
+      "n": 5,
+      "mean": -0.006738461934340498,
+      "median": -0.004389678166868786,
+      "std": 0.006507111505129872,
+      "wins": 0,
+      "win_rate": 0.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        -0.012793091544881462,
+        -0.0026230453979223965
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak controller",
+      "claim": "risk_minus_low_risk true-LPIPS",
+      "n": 5,
+      "mean": 0.014683039711220165,
+      "median": 0.009293827086821693,
+      "std": 0.016914583664773872,
+      "wins": 0,
+      "win_rate": 0.0,
+      "sign_test_p": 0.0625,
+      "bootstrap_ci95": [
+        0.004133921776610806,
+        0.029770520914780718
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak negatives",
+      "claim": "actual_minus_shuffled ID",
+      "n": 5,
+      "mean": 0.0018761112044254936,
+      "median": 0.0030968948655451336,
+      "std": 0.004613589961289173,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.0018513882144664724,
+        0.005334242658379177
+      ],
+      "expected": "positive",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak negatives",
+      "claim": "actual_minus_shuffled true-LPIPS",
+      "n": 5,
+      "mean": -0.0020293683003274054,
+      "median": -0.001778822445279123,
+      "std": 0.006435519982056872,
+      "wins": 3,
+      "win_rate": 0.6,
+      "sign_test_p": 1.0,
+      "bootstrap_ci95": [
+        -0.007115829151568201,
+        0.0031615835204623485
+      ],
+      "expected": "negative",
+      "pass_direction": false
+    },
+    {
+      "section": "gain-first risk-tiebreak negatives",
+      "claim": "actual_minus_inverted ID",
+      "n": 5,
+      "mean": 0.010888403941256303,
+      "median": 0.014471622300334275,
+      "std": 0.011370070991017929,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        0.0012278117084254818,
+        0.018867680313996972
+      ],
+      "expected": "positive",
+      "pass_direction": true
+    },
+    {
+      "section": "gain-first risk-tiebreak negatives",
+      "claim": "actual_minus_inverted true-LPIPS",
+      "n": 5,
+      "mean": -0.022463615657049258,
+      "median": -0.024902242483221926,
+      "std": 0.025778386603955813,
+      "wins": 4,
+      "win_rate": 0.8,
+      "sign_test_p": 0.375,
+      "bootstrap_ci95": [
+        -0.03887468435638464,
+        -0.0003885600476678526
+      ],
+      "expected": "negative",
+      "pass_direction": true
+    }
+  ],
+  "readiness": "main_predictive_claim_only",
+  "pass_count": 32,
+  "total": 56,
+  "config": {
+    "bedroom_actual": "experiments/out/control_bedroom_cross_domain_true_lpips/actual_summary/metrics.json",
+    "bedroom_negative": "experiments/out/control_bedroom_cross_domain_true_lpips/negative_summary/metrics.json",
+    "church_structured": "experiments/out/control_church_failure_diagnosis/structured_only/metrics.json",
+    "church_structured_negative": "experiments/out/control_church_structured_negative_controls/negative_summary/metrics.json",
+    "church_confirmatory": "experiments/out/control_church_structured_confirmatory/actual_summary/metrics.json",
+    "church_confirmatory_negative": "experiments/out/control_church_structured_confirmatory/negative_summary/metrics.json",
+    "church_predictive": "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+    "bedroom_predictive": "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+    "tiebreak_actual": "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary/metrics.json",
+    "tiebreak_negative": "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary/metrics.json",
+    "readiness": "experiments/out/control_main_claim_readiness_v1/metrics.json",
+    "out": "experiments/out/control_main_evidence_table_v1",
+    "seed": 4111,
+    "n_boot": 10000,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v36_main_evidence_table.json",
+    "protocol_key": "main_evidence_table_v1"
+  },
+  "_meta": {
+    "seed": 4111,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-26T22:58:07.598113+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_main_evidence_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_main_evidence_table.py",
+        "--bedroom-actual",
+        "experiments/out/control_bedroom_cross_domain_true_lpips/actual_summary/metrics.json",
+        "--bedroom-negative",
+        "experiments/out/control_bedroom_cross_domain_true_lpips/negative_summary/metrics.json",
+        "--church-structured",
+        "experiments/out/control_church_failure_diagnosis/structured_only/metrics.json",
+        "--church-structured-negative",
+        "experiments/out/control_church_structured_negative_controls/negative_summary/metrics.json",
+        "--church-confirmatory",
+        "experiments/out/control_church_structured_confirmatory/actual_summary/metrics.json",
+        "--church-confirmatory-negative",
+        "experiments/out/control_church_structured_confirmatory/negative_summary/metrics.json",
+        "--church-predictive",
+        "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "--bedroom-predictive",
+        "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "--tiebreak-actual",
+        "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary/metrics.json",
+        "--tiebreak-negative",
+        "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary/metrics.json",
+        "--readiness",
+        "experiments/out/control_main_claim_readiness_v1/metrics.json",
+        "--out",
+        "experiments/out/control_main_evidence_table_v1",
+        "--seed",
+        "4111",
+        "--n-boot",
+        "10000",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v36_main_evidence_table.json",
+        "--protocol-key",
+        "main_evidence_table_v1"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 181221,
+      "timestamp_utc": "2026-05-26T22:58:07.597924+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v36_main_evidence_table.json",
+      "protocol_key": "main_evidence_table_v1",
+      "protocol_sha256": "88f238aa67f65381e2ca7c2e6955ea5315083745df5b67148d862e0046915c42",
+      "protocol_version": "control_v36_main_evidence_table"
+    }
+  }
+}

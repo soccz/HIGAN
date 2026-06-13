@@ -1,0 +1,3158 @@
+{
+  "inputs": [
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json"
+  ],
+  "n_runs": 5,
+  "seeds": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "attrs": [
+    "clouds",
+    "sunny",
+    "vegetation"
+  ],
+  "comparisons": {
+    "risk_minus_gain_only": [
+      "risk_aware",
+      "gain_only"
+    ],
+    "risk_minus_random": [
+      "risk_aware",
+      "random"
+    ],
+    "risk_minus_high_risk": [
+      "risk_aware",
+      "high_risk"
+    ],
+    "risk_minus_low_risk": [
+      "risk_aware",
+      "low_risk"
+    ]
+  },
+  "metrics": [
+    "mean_id_cos",
+    "mean_lpips_proxy",
+    "mean_abs_delta_attr",
+    "mean_lpips_true"
+  ],
+  "cell_level": {
+    "risk_minus_gain_only": {
+      "mean_id_cos": {
+        "n": 15,
+        "mean": 0.0024590382973353067,
+        "median": 0.0,
+        "std": 0.011744406463163897,
+        "sem": 0.003032392709528301,
+        "ci95_normal": [
+          -0.0034844514133401637,
+          0.008402528008010777
+        ],
+        "mean_abs": 0.0063633531332015995,
+        "orientation": "higher",
+        "wins": 5,
+        "win_rate": 0.3333333333333333,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 15,
+        "mean": -0.0003470775508200556,
+        "median": 0.0,
+        "std": 0.0098451543780658,
+        "sem": 0.002542007929805992,
+        "ci95_normal": [
+          -0.005329413093239799,
+          0.004635257991599688
+        ],
+        "mean_abs": 0.004098052883697771,
+        "orientation": "lower",
+        "wins": 4,
+        "win_rate": 0.26666666666666666,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 15,
+        "mean": -0.00017297323702223367,
+        "median": 0.0,
+        "std": 0.0010141406332347797,
+        "sem": 0.000261849985548703,
+        "ci95_normal": [
+          -0.0006861992086976916,
+          0.0003402527346532243
+        ],
+        "mean_abs": 0.0005474818370203138,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 15,
+        "mean": -0.0034379842938809207,
+        "median": 0.0,
+        "std": 0.02576684131035441,
+        "sem": 0.0066529698186247955,
+        "ci95_normal": [
+          -0.01647780513838552,
+          0.009601836550623678
+        ],
+        "mean_abs": 0.0131411672889044,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 0.3333333333333333,
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_random": {
+      "mean_id_cos": {
+        "n": 15,
+        "mean": -0.011008944703886907,
+        "median": -0.011584270978346467,
+        "std": 0.013962416480291217,
+        "sem": 0.0036050804333986573,
+        "ci95_normal": [
+          -0.018074902353348275,
+          -0.003942987054425539
+        ],
+        "mean_abs": 0.014538611595829328,
+        "orientation": "higher",
+        "wins": 3,
+        "win_rate": 0.2,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 15,
+        "mean": 0.00912437901750233,
+        "median": 0.01219519099174704,
+        "std": 0.011022483058960506,
+        "sem": 0.002845992888080495,
+        "ci95_normal": [
+          0.0035462329568645597,
+          0.0147025250781401
+        ],
+        "mean_abs": 0.01080498658933493,
+        "orientation": "lower",
+        "wins": 2,
+        "win_rate": 0.13333333333333333,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 15,
+        "mean": 0.001010419304111565,
+        "median": 0.0015140747827899759,
+        "std": 0.0017165317786416447,
+        "sem": 0.0004432065994609924,
+        "ci95_normal": [
+          0.00014173436916801985,
+          0.00187910423905511
+        ],
+        "mean_abs": 0.0015924123600295085,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 15,
+        "mean": 0.025278572440841647,
+        "median": 0.026036815555926296,
+        "std": 0.03064743412943875,
+        "sem": 0.007913133465820338,
+        "ci95_normal": [
+          0.009768830847833785,
+          0.04078831403384951
+        ],
+        "mean_abs": 0.032005728310423365,
+        "orientation": "lower",
+        "wins": 3,
+        "win_rate": 0.2,
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_high_risk": {
+      "mean_id_cos": {
+        "n": 15,
+        "mean": 0.018995996021355193,
+        "median": 0.023312759585678577,
+        "std": 0.020454597385546443,
+        "sem": 0.0052813543351732765,
+        "ci95_normal": [
+          0.00864454152441557,
+          0.029347450518294814
+        ],
+        "mean_abs": 0.021713975925619404,
+        "orientation": "higher",
+        "wins": 11,
+        "win_rate": 0.7333333333333333,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 15,
+        "mean": -0.011670600311204756,
+        "median": -0.010914875644346012,
+        "std": 0.01710615061197525,
+        "sem": 0.00441678909585973,
+        "ci95_normal": [
+          -0.02032750693908983,
+          -0.003013693683319685
+        ],
+        "mean_abs": 0.015732432424461724,
+        "orientation": "lower",
+        "wins": 11,
+        "win_rate": 0.7333333333333333,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 15,
+        "mean": -0.0018615843190976497,
+        "median": -0.0019115550585411256,
+        "std": 0.0019267357894143396,
+        "sem": 0.0004974810416629025,
+        "ci95_normal": [
+          -0.0028366471607569384,
+          -0.0008865214774383607
+        ],
+        "mean_abs": 0.0020867210934132647,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 15,
+        "mean": -0.03887456535652139,
+        "median": -0.047479392942477716,
+        "std": 0.04700291887905384,
+        "sem": 0.012136101469447581,
+        "ci95_normal": [
+          -0.06266132423663864,
+          -0.01508780647640413
+        ],
+        "mean_abs": 0.047979874442383635,
+        "orientation": "lower",
+        "wins": 11,
+        "win_rate": 0.7333333333333333,
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_low_risk": {
+      "mean_id_cos": {
+        "n": 15,
+        "mean": -0.023861651448532938,
+        "median": -0.022456678794696927,
+        "std": 0.015951040378561904,
+        "sem": 0.00411854091605682,
+        "ci95_normal": [
+          -0.0319339916440043,
+          -0.015789311253061572
+        ],
+        "mean_abs": 0.024900876684114337,
+        "orientation": "higher",
+        "wins": 2,
+        "win_rate": 0.13333333333333333,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 15,
+        "mean": 0.02071112897793152,
+        "median": 0.020050709270662992,
+        "std": 0.01477095877378383,
+        "sem": 0.0038138451558920733,
+        "ci95_normal": [
+          0.013235992472383055,
+          0.028186265483479984
+        ],
+        "mean_abs": 0.021136004341258285,
+        "orientation": "lower",
+        "wins": 1,
+        "win_rate": 0.06666666666666667,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 15,
+        "mean": 0.002145452679421093,
+        "median": 0.0025025572649610694,
+        "std": 0.0016723509848372003,
+        "sem": 0.0004317991675525366,
+        "ci95_normal": [
+          0.0012991263110181215,
+          0.002991779047824065
+        ],
+        "mean_abs": 0.0024072500661228937,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_true": {
+        "n": 15,
+        "mean": 0.056830794727663184,
+        "median": 0.056149449166696286,
+        "std": 0.03691188176238088,
+        "sem": 0.009530606889525228,
+        "ci95_normal": [
+          0.038150805224193736,
+          0.07551078423113264
+        ],
+        "mean_abs": 0.058770030793872746,
+        "orientation": "lower",
+        "wins": 2,
+        "win_rate": 0.13333333333333333,
+        "unit": "seed_attribute_cell"
+      }
+    }
+  },
+  "seed_level": {
+    "risk_minus_gain_only": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": 0.0024590382973353067,
+        "median": 0.0025726336364944777,
+        "std": 0.00847177505962331,
+        "sem": 0.003788692984681011,
+        "ci95_normal": [
+          -0.004966799952639474,
+          0.009884876547310087
+        ],
+        "mean_abs": 0.005918724741786718,
+        "orientation": "higher",
+        "wins": 3,
+        "win_rate": 0.6,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": -0.00034707755082005547,
+        "median": 2.22044203231538e-05,
+        "std": 0.006571576248186882,
+        "sem": 0.002938898242053779,
+        "ci95_normal": [
+          -0.006107318105245462,
+          0.005413163003605351
+        ],
+        "mean_abs": 0.003962921243934639,
+        "orientation": "lower",
+        "wins": 2,
+        "win_rate": 0.4,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": -0.00017297323702223367,
+        "median": -0.00024752315281754517,
+        "std": 0.0007194962369196188,
+        "sem": 0.0003217684990615123,
+        "ci95_normal": [
+          -0.0008036394951827977,
+          0.00045769302113833046
+        ],
+        "mean_abs": 0.0005474818370203138,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 5,
+        "mean": -0.003437984293880921,
+        "median": -0.004071496182101934,
+        "std": 0.018107859935866603,
+        "sem": 0.008098081148728542,
+        "ci95_normal": [
+          -0.01931022334538886,
+          0.012434254757627019
+        ],
+        "mean_abs": 0.012340395780635541,
+        "orientation": "lower",
+        "wins": 3,
+        "win_rate": 0.6,
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_random": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": -0.011008944703886907,
+        "median": -0.010806267848238349,
+        "std": 0.0026073087921438688,
+        "sem": 0.001166023939513312,
+        "ci95_normal": [
+          -0.013294351625332998,
+          -0.008723537782440815
+        ],
+        "mean_abs": 0.011008944703886907,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": 0.009124379017502331,
+        "median": 0.009567433832463243,
+        "std": 0.004406883920993667,
+        "sem": 0.0019708184032585303,
+        "ci95_normal": [
+          0.005261574947115611,
+          0.012987183087889051
+        ],
+        "mean_abs": 0.009124379017502331,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": 0.001010419304111565,
+        "median": 0.0011043106681730326,
+        "std": 0.0003694119182556125,
+        "sem": 0.00016520603218362902,
+        "ci95_normal": [
+          0.000686615481031652,
+          0.0013342231271914779
+        ],
+        "mean_abs": 0.001010419304111565,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 5,
+        "mean": 0.02527857244084165,
+        "median": 0.024869040475247555,
+        "std": 0.007728280838754916,
+        "sem": 0.0034561922609330164,
+        "ci95_normal": [
+          0.018504435609412936,
+          0.032052709272270365
+        ],
+        "mean_abs": 0.02527857244084165,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_high_risk": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": 0.018995996021355193,
+        "median": 0.019636571717758972,
+        "std": 0.010231137900866513,
+        "sem": 0.0045755039667024055,
+        "ci95_normal": [
+          0.010028008246618479,
+          0.027963983796091905
+        ],
+        "mean_abs": 0.018995996021355193,
+        "orientation": "higher",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": -0.011670600311204756,
+        "median": -0.010173180773070575,
+        "std": 0.008533619083335182,
+        "sem": 0.0038163504728853815,
+        "ci95_normal": [
+          -0.019150647238060103,
+          -0.004190553384349409
+        ],
+        "mean_abs": 0.011670600311204756,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": -0.0018615843190976499,
+        "median": -0.001738027052851976,
+        "std": 0.0010890765382902425,
+        "sem": 0.00048704983446342694,
+        "ci95_normal": [
+          -0.0028162019946459667,
+          -0.0009069666435493331
+        ],
+        "mean_abs": 0.0018615843190976499,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 5,
+        "mean": -0.038874565356521396,
+        "median": -0.03537819799278926,
+        "std": 0.023258121283495962,
+        "sem": 0.010401348043766325,
+        "ci95_normal": [
+          -0.05926120752230339,
+          -0.0184879231907394
+        ],
+        "mean_abs": 0.038874565356521396,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_low_risk": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": -0.023861651448532938,
+        "median": -0.02793975795308749,
+        "std": 0.007723411176437887,
+        "sem": 0.0034540144817393472,
+        "ci95_normal": [
+          -0.03063151983274206,
+          -0.017091783064323816
+        ],
+        "mean_abs": 0.023861651448532938,
+        "orientation": "higher",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": 0.02071112897793152,
+        "median": 0.021703478458600028,
+        "std": 0.00484648463224624,
+        "sem": 0.002167413817922132,
+        "ci95_normal": [
+          0.01646299789480414,
+          0.024959260061058898
+        ],
+        "mean_abs": 0.02071112897793152,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": 0.002145452679421093,
+        "median": 0.0021195579368698723,
+        "std": 0.000931792651289036,
+        "sem": 0.0004167103418434083,
+        "ci95_normal": [
+          0.001328700409408013,
+          0.002962204949434173
+        ],
+        "mean_abs": 0.002145452679421093,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      },
+      "mean_lpips_true": {
+        "n": 5,
+        "mean": 0.056830794727663184,
+        "median": 0.06518726277128432,
+        "std": 0.014647388877151958,
+        "sem": 0.006550511444437218,
+        "ci95_normal": [
+          0.04399179229656624,
+          0.06966979715876014
+        ],
+        "mean_abs": 0.056830794727663184,
+        "orientation": "lower",
+        "wins": 0,
+        "win_rate": 0.0,
+        "unit": "seed_mean"
+      }
+    }
+  },
+  "per_seed": {
+    "2027": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.0025726336364944777,
+        "mean_lpips_proxy": 0.00013056059833616018,
+        "mean_abs_delta_attr": -0.00024752315281754517,
+        "mean_lpips_true": -0.004071496182101934
+      },
+      "risk_minus_random": {
+        "mean_id_cos": -0.009418557863682508,
+        "mean_lpips_proxy": 0.0031179201369771667,
+        "mean_abs_delta_attr": 0.0013994057511202602,
+        "mean_lpips_true": 0.014942974677978782
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.007019335248818,
+        "mean_lpips_proxy": -0.0014500952531761868,
+        "mean_abs_delta_attr": -0.000836372214507719,
+        "mean_lpips_true": -0.016652019459797884
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": -0.020567563672860462,
+        "mean_lpips_proxy": 0.018683806083799936,
+        "mean_abs_delta_attr": 0.0021195579368698723,
+        "mean_lpips_true": 0.04855970964217704
+      }
+    },
+    "2028": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": -0.008365457023804387,
+        "mean_lpips_proxy": 0.008886844214127146,
+        "mean_abs_delta_attr": 0.0009158896861360214,
+        "mean_lpips_true": 0.02167624449187618
+      },
+      "risk_minus_random": {
+        "mean_id_cos": -0.01295025134459138,
+        "mean_lpips_proxy": 0.007132460220570162,
+        "mean_abs_delta_attr": 0.0011043106681730326,
+        "mean_lpips_true": 0.026373430926469155
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.012999428436160088,
+        "mean_lpips_proxy": -0.009130968210077603,
+        "mean_abs_delta_attr": -0.0010984611244566622,
+        "mean_lpips_true": -0.02644301357910687
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": -0.030856823936725657,
+        "mean_lpips_proxy": 0.021703478458600028,
+        "mean_abs_delta_attr": 0.0029585993531024237,
+        "mean_lpips_true": 0.06849600277503971
+      }
+    },
+    "2029": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.0031909989969184003,
+        "mean_lpips_proxy": -0.0011271609218207839,
+        "mean_abs_delta_attr": -0.0005392131382298734,
+        "mean_lpips_true": -0.006324387532458786
+      },
+      "risk_minus_random": {
+        "mean_id_cos": -0.0077066527834783,
+        "mean_lpips_proxy": 0.009567433832463243,
+        "mean_abs_delta_attr": 0.0004502374389024529,
+        "mean_lpips_true": 0.024869040475247555
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.019636571717758972,
+        "mean_lpips_proxy": -0.01261468234450073,
+        "mean_abs_delta_attr": -0.0020212891289096055,
+        "mean_lpips_true": -0.03537819799278926
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": -0.011850110022351146,
+        "mean_lpips_proxy": 0.0133756284775662,
+        "mean_abs_delta_attr": 0.00084625659443797,
+        "mean_lpips_true": 0.03491138311119357
+      }
+    },
+    "2030": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.015180774964392185,
+        "mean_lpips_proxy": -0.009647836065065954,
+        "mean_abs_delta_attr": -0.0010144013940589502,
+        "mean_lpips_true": -0.029050066471730435
+      },
+      "risk_minus_random": {
+        "mean_id_cos": -0.010806267848238349,
+        "mean_lpips_proxy": 0.010792601489204875,
+        "mean_abs_delta_attr": 0.0012347362668757949,
+        "mean_lpips_true": 0.023617167431439157
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.021003315535684425,
+        "mean_lpips_proxy": -0.010173180773070575,
+        "mean_abs_delta_attr": -0.001738027052851976,
+        "mean_lpips_true": -0.0382594167112984
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": -0.02809400165763994,
+        "mean_lpips_proxy": 0.024804514991349908,
+        "mean_abs_delta_attr": 0.003105739406843592,
+        "mean_lpips_true": 0.06699961533862127
+      }
+    },
+    "2031": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": -0.00028375908732414246,
+        "mean_lpips_proxy": 2.22044203231538e-05,
+        "mean_abs_delta_attr": 2.0381813859178994e-05,
+        "mean_lpips_true": 0.0005797842250103713
+      },
+      "risk_minus_random": {
+        "mean_id_cos": -0.014162993679443995,
+        "mean_lpips_proxy": 0.015011479408296205,
+        "mean_abs_delta_attr": 0.0008634063954862844,
+        "mean_lpips_true": 0.03659024869307359
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.034321329168354474,
+        "mean_lpips_proxy": -0.024984074975198684,
+        "mean_abs_delta_attr": -0.0036137720747622857,
+        "mean_lpips_true": -0.07764017903961455
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": -0.02793975795308749,
+        "mean_lpips_proxy": 0.024988216878341518,
+        "mean_abs_delta_attr": 0.001697110105851607,
+        "mean_lpips_true": 0.06518726277128432
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9871349157765508,
+      "baseline_value": 0.9871349157765508,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.006863569695269689,
+      "baseline_value": 0.006863569695269689,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.004268533863978519,
+      "baseline_value": 0.004268533863978519,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469660660994123,
+      "baseline_value": 0.03469660660994123,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9871349157765508,
+      "baseline_value": 0.9877946046181023,
+      "diff": -0.0006596888415515423
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.006863569695269689,
+      "baseline_value": 0.006596996947791922,
+      "diff": 0.0002665727474777668
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.004268533863978519,
+      "baseline_value": 0.0043799714685519575,
+      "diff": -0.00011143760457343888
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469660660994123,
+      "baseline_value": 0.03380397678120062,
+      "diff": 0.0008926298287406098
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9871349157765508,
+      "baseline_value": 0.9633004541974515,
+      "diff": 0.023834461579099298
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.006863569695269689,
+      "baseline_value": 0.026150504747874947,
+      "diff": -0.01928693505260526
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.004268533863978519,
+      "baseline_value": 0.006186729864566587,
+      "diff": -0.0019181960005880683
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469660660994123,
+      "baseline_value": 0.09179252172543784,
+      "diff": -0.05709591511549661
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9871349157765508,
+      "baseline_value": 0.9825418994296342,
+      "diff": 0.004593016346916556
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.006863569695269689,
+      "baseline_value": 0.010050134920220444,
+      "diff": -0.0031865652249507548
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.004268533863978519,
+      "baseline_value": 0.005180775163353246,
+      "diff": -0.0009122412993747275
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469660660994123,
+      "baseline_value": 0.04668335060705431,
+      "diff": -0.01198674399711308
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9425997077487409,
+      "baseline_value": 0.9425997077487409,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.053204881611691235,
+      "baseline_value": 0.053204881611691235,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00865897298535856,
+      "baseline_value": 0.00865897298535856,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.15048995379038388,
+      "baseline_value": 0.15048995379038388,
+      "diff": 0.0
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9425997077487409,
+      "baseline_value": 0.9344136246945709,
+      "diff": 0.008186083054170012
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.053204881611691235,
+      "baseline_value": 0.06376932660077728,
+      "diff": -0.010564444989086041
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00865897298535856,
+      "baseline_value": 0.009018882254167693,
+      "diff": -0.0003599092688091332
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.15048995379038388,
+      "baseline_value": 0.17831077472510515,
+      "diff": -0.02782082093472127
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9425997077487409,
+      "baseline_value": 0.9541989085264504,
+      "diff": -0.011599200777709484
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.053204881611691235,
+      "baseline_value": 0.037130722594156396,
+      "diff": 0.01607415901753484
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00865897298535856,
+      "baseline_value": 0.00807021910441108,
+      "diff": 0.000588753880947479
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.15048995379038388,
+      "baseline_value": 0.12830115835822653,
+      "diff": 0.02218879543215735
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9425997077487409,
+      "baseline_value": 0.9774630644824356,
+      "diff": -0.03486335673369467
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.053204881611691235,
+      "baseline_value": 0.013156568523754686,
+      "diff": 0.04004831308793655
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00865897298535856,
+      "baseline_value": 0.005623252211080398,
+      "diff": 0.003035720774278161
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.15048995379038388,
+      "baseline_value": 0.059933628304861486,
+      "diff": 0.0905563254855224
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9573923621792346,
+      "baseline_value": 0.9496744612697512,
+      "diff": 0.007717900909483433
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02164936582835253,
+      "baseline_value": 0.02125768403334405,
+      "diff": 0.00039168179500848055
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008653496068291133,
+      "baseline_value": 0.009396065526743769,
+      "diff": -0.0007425694584526354
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.08434873722762859,
+      "baseline_value": 0.09656322577393439,
+      "diff": -0.012214488546305802
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9573923621792346,
+      "baseline_value": 0.9931744299829006,
+      "diff": -0.035782067803665996
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02164936582835253,
+      "baseline_value": 0.0019977331758127548,
+      "diff": 0.019651632652539774
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008653496068291133,
+      "baseline_value": 0.00398393194154778,
+      "diff": 0.004669564126743353
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.08434873722762859,
+      "baseline_value": 0.012591622087711585,
+      "diff": 0.071757115139917
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9573923621792346,
+      "baseline_value": 0.9485696172341704,
+      "diff": 0.008822744945064187
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02164936582835253,
+      "baseline_value": 0.02278687555281067,
+      "diff": -0.0011375097244581411
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008653496068291133,
+      "baseline_value": 0.009833170592173701,
+      "diff": -0.0011796745238825679
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.08434873722762859,
+      "baseline_value": 0.09939767592368298,
+      "diff": -0.015048938696054392
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9573923621792346,
+      "baseline_value": 0.9888247128110379,
+      "diff": -0.031432350631803274
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02164936582835253,
+      "baseline_value": 0.002459695439938514,
+      "diff": 0.019189670388414015
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008653496068291133,
+      "baseline_value": 0.0044183017325849505,
+      "diff": 0.004235194335706183
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.08434873722762859,
+      "baseline_value": 0.01723918978950678,
+      "diff": 0.06710954743812181
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9398091416805983,
+      "baseline_value": 0.9398091416805983,
+      "diff": 0.0
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.04513431758095976,
+      "baseline_value": 0.04513431758095976,
+      "diff": 0.0
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009421358256076928,
+      "baseline_value": 0.009421358256076928,
+      "diff": 0.0
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.14889857191883493,
+      "baseline_value": 0.14889857191883493,
+      "diff": 0.0
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9398091416805983,
+      "baseline_value": 0.9623082568868995,
+      "diff": -0.022499115206301212
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.04513431758095976,
+      "baseline_value": 0.025630426751376945,
+      "diff": 0.019503890829582815
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009421358256076928,
+      "baseline_value": 0.007508759910706431,
+      "diff": 0.0019125983453704976
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.14889857191883493,
+      "baseline_value": 0.09847185101534706,
+      "diff": 0.050426720903487876
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9398091416805983,
+      "baseline_value": 0.93993821577169,
+      "diff": -0.00012907409109175205
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.04513431758095976,
+      "baseline_value": 0.04471252413713955,
+      "diff": 0.00042179344382020645
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009421358256076928,
+      "baseline_value": 0.009406205582308758,
+      "diff": 1.5152673768170644e-05
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.14889857191883493,
+      "baseline_value": 0.14508028529235162,
+      "diff": 0.0038182866264833137
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9398091416805983,
+      "baseline_value": 0.9714169430080801,
+      "diff": -0.031607801327481866
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.04513431758095976,
+      "baseline_value": 0.018910159329607268,
+      "diff": 0.026224158251352492
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009421358256076928,
+      "baseline_value": 0.006390479427864193,
+      "diff": 0.0030308788282127352
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.14889857191883493,
+      "baseline_value": 0.07543125223310199,
+      "diff": 0.07346731968573295
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9494855846278369,
+      "baseline_value": 0.9779166686348617,
+      "diff": -0.028431084007024765
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.041503222871597245,
+      "baseline_value": 0.013829202930992324,
+      "diff": 0.02767401994060492
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00803921589795209,
+      "baseline_value": 0.005389995460063801,
+      "diff": 0.002649220437888289
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1288731785643904,
+      "baseline_value": 0.05783865877674543,
+      "diff": 0.07103451978764497
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9494855846278369,
+      "baseline_value": 0.9507518305908889,
+      "diff": -0.0012662459630519152
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.041503222871597245,
+      "baseline_value": 0.04117745014536922,
+      "diff": 0.0003257727262280241
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00803921589795209,
+      "baseline_value": 0.008152957021593465,
+      "diff": -0.00011374112364137545
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1288731785643904,
+      "baseline_value": 0.12789537383650895,
+      "diff": 0.0009778047278814483
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9494855846278369,
+      "baseline_value": 0.9261728250421584,
+      "diff": 0.023312759585678577
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.041503222871597245,
+      "baseline_value": 0.052177121317072306,
+      "diff": -0.01067389844547506
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00803921589795209,
+      "baseline_value": 0.0101406025723918,
+      "diff": -0.002101386674439709
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1288731785643904,
+      "baseline_value": 0.17635257150686812,
+      "diff": -0.047479392942477716
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9494855846278369,
+      "baseline_value": 0.981485633412376,
+      "diff": -0.032000048784539104
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.041503222871597245,
+      "baseline_value": 0.011708718370755378,
+      "diff": 0.029794504500841867
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00803921589795209,
+      "baseline_value": 0.005536658632991021,
+      "diff": 0.0025025572649610694
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1288731785643904,
+      "baseline_value": 0.05006210157444002,
+      "diff": 0.07881107698995038
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9598205666989088,
+      "baseline_value": 0.9564858537632972,
+      "diff": 0.0033347129356116056
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.012088628624951525,
+      "baseline_value": 0.013102115923175006,
+      "diff": -0.001013487298223481
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008710919973964337,
+      "baseline_value": 0.008612471353444562,
+      "diff": 9.844862051977543e-05
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.07304016526995838,
+      "baseline_value": 0.0790459515819748,
+      "diff": -0.006005786312016426
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9598205666989088,
+      "baseline_value": 0.9749059595633298,
+      "diff": -0.01508539286442101
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.012088628624951525,
+      "baseline_value": 0.010520911519051879,
+      "diff": 0.0015677171058996464
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008710919973964337,
+      "baseline_value": 0.007196845191174361,
+      "diff": 0.0015140747827899759
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.07304016526995838,
+      "baseline_value": 0.04532439812192024,
+      "diff": 0.02771576714803814
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9598205666989088,
+      "baseline_value": 0.9440059668850154,
+      "diff": 0.015814599813893437
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.012088628624951525,
+      "baseline_value": 0.029229428253529477,
+      "diff": -0.017140799628577952
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008710919973964337,
+      "baseline_value": 0.009920069346662785,
+      "diff": -0.0012091493726984481
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.07304016526995838,
+      "baseline_value": 0.10870809969128459,
+      "diff": -0.03566793442132621
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9598205666989088,
+      "baseline_value": 0.9887831883970648,
+      "diff": -0.028962621698156
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.012088628624951525,
+      "baseline_value": 0.0029968560013458045,
+      "diff": 0.00909177262360572
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008710919973964337,
+      "baseline_value": 0.00536855800783087,
+      "diff": 0.003342361966133467
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.07304016526995838,
+      "baseline_value": 0.01983055362052255,
+      "diff": 0.05320961164943583
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9575464837253094,
+      "baseline_value": 0.9575464837253094,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0333343444235652,
+      "baseline_value": 0.0333343444235652,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00812687090910913,
+      "baseline_value": 0.00812687090910913,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1142963937309105,
+      "baseline_value": 0.1142963937309105,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9575464837253094,
+      "baseline_value": 0.9712237527128309,
+      "diff": -0.01367726898752153
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0333343444235652,
+      "baseline_value": 0.01951633450880763,
+      "diff": 0.013818009914757567
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00812687090910913,
+      "baseline_value": 0.006571152353899379,
+      "diff": 0.0015557185552097508
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1142963937309105,
+      "baseline_value": 0.07409868190734414,
+      "diff": 0.04019771182356635
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9575464837253094,
+      "baseline_value": 0.9642715938389301,
+      "diff": -0.006725110113620758
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0333343444235652,
+      "baseline_value": 0.023652889647564734,
+      "diff": 0.009681454776000464
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00812687090910913,
+      "baseline_value": 0.0072114336344384355,
+      "diff": 0.000915437274670694
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1142963937309105,
+      "baseline_value": 0.08615870921494206,
+      "diff": 0.02813768451596843
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9575464837253094,
+      "baseline_value": 0.9772157159168273,
+      "diff": -0.01966923219151795
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0333343444235652,
+      "baseline_value": 0.013359334953747748,
+      "diff": 0.01997500946981745
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00812687090910913,
+      "baseline_value": 0.005914107323405915,
+      "diff": 0.0022127635857032146
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1142963937309105,
+      "baseline_value": 0.05782000311955926,
+      "diff": 0.056476390611351235
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9632371212355793,
+      "baseline_value": 0.9632371212355793,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02996670616926167,
+      "baseline_value": 0.02996670616926167,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006696060156173189,
+      "baseline_value": 0.006696060156173189,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.09561318929445406,
+      "baseline_value": 0.09561318929445406,
+      "diff": 0.0
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9632371212355793,
+      "baseline_value": 0.9796632884535939,
+      "diff": -0.016426167218014598
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02996670616926167,
+      "baseline_value": 0.01304230278697105,
+      "diff": 0.01692440338229062
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006696060156173189,
+      "baseline_value": 0.004911276713755797,
+      "diff": 0.0017847834424173925
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.09561318929445406,
+      "baseline_value": 0.05049279556806141,
+      "diff": 0.04512039372639265
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9632371212355793,
+      "baseline_value": 0.9240201399661601,
+      "diff": 0.03921698126941919
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02996670616926167,
+      "baseline_value": 0.06657733233441832,
+      "diff": -0.036610626165156646
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006696060156173189,
+      "baseline_value": 0.009537738122162409,
+      "diff": -0.00284167796598922
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.09561318929445406,
+      "baseline_value": 0.17884983283875044,
+      "diff": -0.08323664354429638
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9632371212355793,
+      "baseline_value": 0.9823193920310587,
+      "diff": -0.019082270795479417
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.02996670616926167,
+      "baseline_value": 0.009915996898598678,
+      "diff": 0.020050709270662992
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006696060156173189,
+      "baseline_value": 0.005318814857673715,
+      "diff": 0.0013772452984994743
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.09561318929445406,
+      "baseline_value": 0.04479790407276596,
+      "diff": 0.0508152852216881
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9916858559008688,
+      "baseline_value": 0.9821128589101136,
+      "diff": 0.0095729969907552
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.00277842487827229,
+      "baseline_value": 0.006159907643734641,
+      "diff": -0.0033814827654623514
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.003597237652684271,
+      "baseline_value": 0.005214877067373891,
+      "diff": -0.00161763941468962
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.014603492031255882,
+      "baseline_value": 0.03357665462863224,
+      "diff": -0.01897316259737636
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9916858559008688,
+      "baseline_value": 0.9847023780457675,
+      "diff": 0.006983477855101228
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.00277842487827229,
+      "baseline_value": 0.0048185366779307515,
+      "diff": -0.0020401117996584617
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.003597237652684271,
+      "baseline_value": 0.0055870273336040555,
+      "diff": -0.0019897896809197846
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.014603492031255882,
+      "baseline_value": 0.02531447615547222,
+      "diff": -0.010710984124216338
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9916858559008688,
+      "baseline_value": 0.9652680119033903,
+      "diff": 0.026417843997478485
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.00277842487827229,
+      "baseline_value": 0.013693300522618301,
+      "diff": -0.010914875644346012
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.003597237652684271,
+      "baseline_value": 0.007734864348094561,
+      "diff": -0.00413762669541029
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.014603492031255882,
+      "baseline_value": 0.0656391269812957,
+      "diff": -0.05103563495003982
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9916858559008688,
+      "baseline_value": 0.9884846829809248,
+      "diff": 0.0032011729199439287
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.00277842487827229,
+      "baseline_value": 0.0026772581860541322,
+      "diff": 0.00010116669221815755
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.003597237652684271,
+      "baseline_value": 0.00464847675357305,
+      "diff": -0.001051239100888779
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.014603492031255882,
+      "baseline_value": 0.0171610185307145,
+      "diff": -0.0025575264994586178
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597542479168624,
+      "baseline_value": 0.9597542479168624,
+      "diff": 0.0
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.032017026520406944,
+      "baseline_value": 0.032017026520406944,
+      "diff": 0.0
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008638566607260145,
+      "baseline_value": 0.008638566607260145,
+      "diff": 0.0
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.10243811007057957,
+      "baseline_value": 0.10243811007057957,
+      "diff": 0.0
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597542479168624,
+      "baseline_value": 0.9713385188952088,
+      "diff": -0.011584270978346467
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.032017026520406944,
+      "baseline_value": 0.019801947039013612,
+      "diff": 0.012215079481393332
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008638566607260145,
+      "baseline_value": 0.007235843129819841,
+      "diff": 0.0014027234774403041
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.10243811007057957,
+      "baseline_value": 0.07640129451465327,
+      "diff": 0.026036815555926296
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597542479168624,
+      "baseline_value": 0.9357712445780635,
+      "diff": 0.02398300333879888
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.032017026520406944,
+      "baseline_value": 0.0467940304424701,
+      "diff": -0.014777003922063159
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008638566607260145,
+      "baseline_value": 0.01055012166580127,
+      "diff": -0.0019115550585411256
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.10243811007057957,
+      "baseline_value": 0.15295911209250335,
+      "diff": -0.05052100202192378
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597542479168624,
+      "baseline_value": 0.9807369967456907,
+      "diff": -0.020982748828828335
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.032017026520406944,
+      "baseline_value": 0.011407250218326226,
+      "diff": 0.020609776302080718
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008638566607260145,
+      "baseline_value": 0.00573310669278726,
+      "diff": 0.0029054599144728854
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.10243811007057957,
+      "baseline_value": 0.05124057281864225,
+      "diff": 0.05119753725193732
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.925203189952299,
+      "baseline_value": 0.8998526148498058,
+      "diff": 0.025350575102493167
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.05942397537819488,
+      "baseline_value": 0.08288048605118092,
+      "diff": -0.023456510672986042
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009820725608733483,
+      "baseline_value": 0.011250075604039012,
+      "diff": -0.0014293499953055289
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1800867980091425,
+      "baseline_value": 0.2300088071533537,
+      "diff": -0.04992200914421119
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.925203189952299,
+      "baseline_value": 0.935950123006478,
+      "diff": -0.010746933054178953
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.05942397537819488,
+      "baseline_value": 0.0446911045928573,
+      "diff": 0.014732870785337582
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009820725608733483,
+      "baseline_value": 0.009562584516970674,
+      "diff": 0.0002581410917628091
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1800867980091425,
+      "baseline_value": 0.15432661928934976,
+      "diff": 0.025760178719792748
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.925203189952299,
+      "baseline_value": 0.9271346542518586,
+      "diff": -0.0019314642995595932
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.05942397537819488,
+      "baseline_value": 0.055137641766123124,
+      "diff": 0.004286333612071758
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009820725608733483,
+      "baseline_value": 0.009651543630752712,
+      "diff": 0.00016918197798077017
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1800867980091425,
+      "baseline_value": 0.16594174643978477,
+      "diff": 0.014145051569357747
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.925203189952299,
+      "baseline_value": 0.9815702915657312,
+      "diff": -0.05636710161343217
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.05942397537819488,
+      "baseline_value": 0.010499962595076795,
+      "diff": 0.04892401278311809
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.009820725608733483,
+      "baseline_value": 0.005137340004694124,
+      "diff": 0.0046833856040393584
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1800867980091425,
+      "baseline_value": 0.04790798558678944,
+      "diff": 0.13217881242235308
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9818745420780033,
+      "baseline_value": 0.9616827922873199,
+      "diff": 0.02019174979068339
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.007846442096365536,
+      "baseline_value": 0.013333439618577358,
+      "diff": -0.005486997522211823
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00680381487836712,
+      "baseline_value": 0.008417669065238442,
+      "diff": -0.0016138541868713219
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469348211365286,
+      "baseline_value": 0.07192167238463298,
+      "diff": -0.03722819027098012
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9818745420780033,
+      "baseline_value": 0.9919621415901929,
+      "diff": -0.010087599512189627
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.007846442096365536,
+      "baseline_value": 0.0024165878954818254,
+      "diff": 0.00542985420088371
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00680381487836712,
+      "baseline_value": 0.004760470646942849,
+      "diff": 0.002043344231424271
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469348211365286,
+      "baseline_value": 0.015638974095054436,
+      "diff": 0.019054508018598426
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9818745420780033,
+      "baseline_value": 0.9409161345101893,
+      "diff": 0.04095840756781399
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.007846442096365536,
+      "baseline_value": 0.027875314105585858,
+      "diff": -0.020028872009220322
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00680381487836712,
+      "baseline_value": 0.010275522956362693,
+      "diff": -0.0034717080779955722
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469348211365286,
+      "baseline_value": 0.11309578179498203,
+      "diff": -0.07840229968132917
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9818745420780033,
+      "baseline_value": 0.9888066966086626,
+      "diff": -0.006932154530659318
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.007846442096365536,
+      "baseline_value": 0.0029666862075146128,
+      "diff": 0.004879755888850923
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00680381487836712,
+      "baseline_value": 0.005075442176348588,
+      "diff": 0.0017283727020185324
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.03469348211365286,
+      "baseline_value": 0.01707098577207944,
+      "diff": 0.017622496341573424
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9568579732440412,
+      "baseline_value": 0.9568579732440412,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.038313418596317206,
+      "baseline_value": 0.038313418596317206,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006654171650552598,
+      "baseline_value": 0.006654171650552598,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.11422624800979975,
+      "baseline_value": 0.11422624800979975,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9568579732440412,
+      "baseline_value": 0.9455550324637443,
+      "diff": 0.011302940780296922
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.038313418596317206,
+      "baseline_value": 0.03776358998402429,
+      "diff": 0.000549828612292913
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006654171650552598,
+      "baseline_value": 0.008444241891993443,
+      "diff": -0.0017900702414408443
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.11422624800979975,
+      "baseline_value": 0.12614811197272502,
+      "diff": -0.011921863962925272
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9568579732440412,
+      "baseline_value": 0.8918778202496469,
+      "diff": 0.0649801529943943
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.038313418596317206,
+      "baseline_value": 0.08695012726821005,
+      "diff": -0.04863670867189285
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006654171650552598,
+      "baseline_value": 0.013029135752731236,
+      "diff": -0.006374964102178637
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.11422624800979975,
+      "baseline_value": 0.2614942273357883,
+      "diff": -0.14726797932598856
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9568579732440412,
+      "baseline_value": 0.9774765269830823,
+      "diff": -0.02061855373904109
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.038313418596317206,
+      "baseline_value": 0.013659614002790477,
+      "diff": 0.02465380459352673
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006654171650552598,
+      "baseline_value": 0.00645152468678134,
+      "diff": 0.00020264696377125802
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "clouds",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.11422624800979975,
+      "baseline_value": 0.05807679884310346,
+      "diff": 0.056149449166696286
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9365965574979782,
+      "baseline_value": 0.9365965574979782,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0517028664096415,
+      "baseline_value": 0.0517028664096415,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008644416317110881,
+      "baseline_value": 0.008644416317110881,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1522084168445872,
+      "baseline_value": 0.1522084168445872,
+      "diff": 0.0
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9365965574979782,
+      "baseline_value": 0.9675177352037281,
+      "diff": -0.03092117770574987
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0517028664096415,
+      "baseline_value": 0.019413447788792837,
+      "diff": 0.032289418620848664
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008644416317110881,
+      "baseline_value": 0.006657313925643393,
+      "diff": 0.001987102391467488
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1522084168445872,
+      "baseline_value": 0.07584970619245723,
+      "diff": 0.07635871065212996
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9365965574979782,
+      "baseline_value": 0.9072435251437128,
+      "diff": 0.02935303235426545
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0517028664096415,
+      "baseline_value": 0.07479238769883523,
+      "diff": -0.023089521289193726
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008644416317110881,
+      "baseline_value": 0.011249145314650377,
+      "diff": -0.002604728997539496
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1522084168445872,
+      "baseline_value": 0.22240595406037755,
+      "diff": -0.07019753721579036
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9365965574979782,
+      "baseline_value": 0.9773405988235027,
+      "diff": -0.04074404132552445
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.0517028664096415,
+      "baseline_value": 0.013665693811162782,
+      "diff": 0.03803717259847872
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008644416317110881,
+      "baseline_value": 0.005786505253126961,
+      "diff": 0.00285791106398392
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "sunny",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.1522084168445872,
+      "baseline_value": 0.0581996425462421,
+      "diff": 0.09400877429834509
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.968835262581706,
+      "baseline_value": 0.9696865398436785,
+      "diff": -0.0008512772619724274
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.014717670733830346,
+      "baseline_value": 0.014651057472860884,
+      "diff": 6.661326096946141e-05
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006717523514453205,
+      "baseline_value": 0.006656378072875668,
+      "diff": 6.114544157753699e-05
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.061198423179121164,
+      "baseline_value": 0.05945907050409005,
+      "diff": 0.001739352675031114
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.968835262581706,
+      "baseline_value": 0.9917060066945851,
+      "diff": -0.022870744112879038
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.014717670733830346,
+      "baseline_value": 0.0025224797420833056,
+      "diff": 0.01219519099174704
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006717523514453205,
+      "baseline_value": 0.004324336478020996,
+      "diff": 0.0023931870364322094
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.061198423179121164,
+      "baseline_value": 0.01586452378910508,
+      "diff": 0.045333899390016086
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.968835262581706,
+      "baseline_value": 0.9602044604253024,
+      "diff": 0.00863080215640366
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.014717670733830346,
+      "baseline_value": 0.017943665698339828,
+      "diff": -0.003225994964509482
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006717523514453205,
+      "baseline_value": 0.008579146639021928,
+      "diff": -0.0018616231245687231
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.061198423179121164,
+      "baseline_value": 0.07665344375618588,
+      "diff": -0.015455020577064715
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.968835262581706,
+      "baseline_value": 0.991291941376403,
+      "diff": -0.022456678794696927
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.014717670733830346,
+      "baseline_value": 0.0024439972908112395,
+      "diff": 0.012273673443019106
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.006717523514453205,
+      "baseline_value": 0.0046867512246535625,
+      "diff": 0.0020307722897996427
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+      "attr": "vegetation",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_true",
+      "risk_value": 0.061198423179121164,
+      "baseline_value": 0.01579485833030958,
+      "diff": 0.045403564848811584
+    }
+  ],
+  "config": {
+    "inputs": [
+      "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+      "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+      "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+      "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+      "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json"
+    ],
+    "out": "experiments/out/control_church_failure_diagnosis/high_gain_floor",
+    "seed": 3927,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v23_church_failure_diagnosis.json",
+    "protocol_key": "church_high_gain_floor_summary"
+  },
+  "_meta": {
+    "seed": 3927,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-26T02:48:19.421141+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_risk_aware_repeat_summary.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_risk_aware_repeat_summary.py",
+        "--inputs",
+        "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2027/metrics.json",
+        "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2028/metrics.json",
+        "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2029/metrics.json",
+        "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2030/metrics.json",
+        "experiments/out/control_church_failure_diagnosis/high_gain_floor_seed_2031/metrics.json",
+        "--out",
+        "experiments/out/control_church_failure_diagnosis/high_gain_floor",
+        "--seed",
+        "3927",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v23_church_failure_diagnosis.json",
+        "--protocol-key",
+        "church_high_gain_floor_summary"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 3088919,
+      "timestamp_utc": "2026-05-26T02:48:19.420859+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v23_church_failure_diagnosis.json",
+      "protocol_key": "church_high_gain_floor_summary",
+      "protocol_sha256": "a3e61992358ce03229d39baa3552e4ef58b9ace2f52fa5d06567cb28c9b90c2a",
+      "protocol_version": "control_v23_church_failure_diagnosis"
+    }
+  }
+}

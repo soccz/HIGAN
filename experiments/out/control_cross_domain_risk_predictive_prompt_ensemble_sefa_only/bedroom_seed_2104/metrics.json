@@ -1,0 +1,1075 @@
+{
+  "per_attr": {
+    "indoor_lighting": {
+      "target_abs_delta_attr": 0.028782367589883506,
+      "gain_floor": 0.003909611783456057,
+      "rows": [
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 0,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 2.0288076251745224,
+          "probe_gain": 0.006600804277695715,
+          "probe_sign": 1.0,
+          "alpha": -1.5109206830974324,
+          "target_abs_delta_attr": 0.028782367589883506,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.11667587171541527,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.012893069244455546,
+          "mean_abs_delta_attr": 0.021669263442163356,
+          "mean_id_cos": 0.8366830199956894,
+          "mean_lpips_proxy": 0.1063672830350697,
+          "mean_lpips_true": 0.3588617176283151
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 1,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 1.9029596894979477,
+          "probe_gain": 0.0047611461486667395,
+          "probe_sign": 1.0,
+          "alpha": -5.070727238361452,
+          "target_abs_delta_attr": 0.028782367589883506,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03886822849744931,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.03810877053911099,
+          "mean_abs_delta_attr": 0.038387111424526665,
+          "mean_id_cos": 0.8674322860315442,
+          "mean_lpips_proxy": 0.11220711714122444,
+          "mean_lpips_true": 0.2991599861998111
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 2,
+          "source_group": "sefa",
+          "source_rank": 2,
+          "rho": 6.312349155545235,
+          "probe_gain": 0.010197597905062139,
+          "probe_sign": -1.0,
+          "alpha": -2.4913019595057806,
+          "target_abs_delta_attr": 0.028782367589883506,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.09069837612332776,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.030549218754458707,
+          "mean_abs_delta_attr": 0.031766221996804234,
+          "mean_id_cos": 0.875363428145647,
+          "mean_lpips_proxy": 0.08867075591115281,
+          "mean_lpips_true": 0.27061135205440223
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 3,
+          "source_group": "sefa",
+          "source_rank": 3,
+          "rho": 7.318844847381115,
+          "probe_gain": 0.0013984942343086004,
+          "probe_sign": -1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.028782367589883506,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.013597015640698373,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.003953020954213571,
+          "mean_abs_delta_attr": 0.019317384787427727,
+          "mean_id_cos": 0.8442218974232674,
+          "mean_lpips_proxy": 0.08810662658652291,
+          "mean_lpips_true": 0.4122581295669079
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 4,
+          "source_group": "sefa",
+          "source_rank": 4,
+          "rho": 1.5777357518672943,
+          "probe_gain": 0.003058077418245375,
+          "probe_sign": 1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.028782367589883506,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.02760761562967673,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.029873357067117468,
+          "mean_abs_delta_attr": 0.03265920202829875,
+          "mean_id_cos": 0.8580151246860623,
+          "mean_lpips_proxy": 0.14352154097286984,
+          "mean_lpips_true": 0.34451509616337717
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 5,
+          "source_group": "sefa",
+          "source_rank": 5,
+          "rho": 4.6675493866205215,
+          "probe_gain": 0.001330428698565811,
+          "probe_sign": -1.0,
+          "alpha": -5.706320232064343,
+          "target_abs_delta_attr": 0.028782367589883506,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03230662347050384,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.02292316478997236,
+          "mean_abs_delta_attr": 0.028460302586609032,
+          "mean_id_cos": 0.8081515226513147,
+          "mean_lpips_proxy": 0.09947648033266887,
+          "mean_lpips_true": 0.4305081106722355
+        }
+      ],
+      "matched_pairs": [],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 0,
+        "spearman": {
+          "rho_vs_id": {
+            "r": 0.5,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": -0.5,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 0
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 0
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 0
+          }
+        }
+      }
+    },
+    "wood": {
+      "target_abs_delta_attr": 0.03328457707539201,
+      "gain_floor": 0.0024443792062811553,
+      "rows": [
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 0,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 2.0288076251745224,
+          "probe_gain": 0.004923411062918603,
+          "probe_sign": 1.0,
+          "alpha": -1.602728530006774,
+          "target_abs_delta_attr": 0.03328457707539201,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.11038791091414168,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.026619014359312132,
+          "mean_abs_delta_attr": 0.033854215434985235,
+          "mean_id_cos": 0.8142595514655113,
+          "mean_lpips_proxy": 0.11755753995385021,
+          "mean_lpips_true": 0.38580809254199266
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 1,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 1.9029596894979477,
+          "probe_gain": 0.0017716955626383424,
+          "probe_sign": 1.0,
+          "alpha": -5.538394677630524,
+          "target_abs_delta_attr": 0.03328457707539201,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03796100750332698,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.03879529275582172,
+          "mean_abs_delta_attr": 0.03879529275582172,
+          "mean_id_cos": 0.849717759527266,
+          "mean_lpips_proxy": 0.12811062758555636,
+          "mean_lpips_true": 0.3268796254415065
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 2,
+          "source_group": "sefa",
+          "source_rank": 2,
+          "rho": 6.312349155545235,
+          "probe_gain": 0.0031170628499239683,
+          "probe_sign": -1.0,
+          "alpha": 4.612280115156461,
+          "target_abs_delta_attr": 0.03328457707539201,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.057764844328630716,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.035560306772822514,
+          "mean_abs_delta_attr": 0.04364452607114799,
+          "mean_id_cos": 0.7453811829909682,
+          "mean_lpips_proxy": 0.1360050187795423,
+          "mean_lpips_true": 0.5021930113434792
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 3,
+          "source_group": "sefa",
+          "source_rank": 3,
+          "rho": 7.318844847381115,
+          "probe_gain": 0.0013038540491834283,
+          "probe_sign": -1.0,
+          "alpha": 6.0,
+          "target_abs_delta_attr": 0.03328457707539201,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.012610021629370749,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.015470387865207158,
+          "mean_abs_delta_attr": 0.022796140765422024,
+          "mean_id_cos": 0.8746538329869509,
+          "mean_lpips_proxy": 0.07942518981872126,
+          "mean_lpips_true": 0.2697865155059844
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 4,
+          "source_group": "sefa",
+          "source_rank": 4,
+          "rho": 1.5777357518672943,
+          "probe_gain": 0.0050225978484377265,
+          "probe_sign": -1.0,
+          "alpha": -5.370597767868814,
+          "target_abs_delta_attr": 0.03328457707539201,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03748583298875019,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.03304143328568898,
+          "mean_abs_delta_attr": 0.03389740930288099,
+          "mean_id_cos": 0.8727899808436632,
+          "mean_lpips_proxy": 0.12178001861320809,
+          "mean_lpips_true": 0.31239995709620416
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 5,
+          "source_group": "sefa",
+          "source_rank": 5,
+          "rho": 4.6675493866205215,
+          "probe_gain": 0.0009319465607404709,
+          "probe_sign": -1.0,
+          "alpha": 6.0,
+          "target_abs_delta_attr": 0.03328457707539201,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.03188415843760595,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.02790623702458106,
+          "mean_abs_delta_attr": 0.035596793139120564,
+          "mean_id_cos": 0.835824629291892,
+          "mean_lpips_proxy": 0.11507171811535954,
+          "mean_lpips_true": 0.3533523043151945
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "wood",
+          "low_candidate": 4,
+          "high_candidate": 0,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 9.918678551912308e-05,
+          "rho_diff_low_minus_high": -0.4510718733072281,
+          "mean_abs_delta_attr_diff_low_minus_high": 4.319386789575219e-05,
+          "mean_id_cos_diff_low_minus_high": 0.058530429378151894,
+          "mean_lpips_proxy_diff_low_minus_high": 0.004222478659357876,
+          "mean_lpips_true_diff_low_minus_high": -0.0734081354457885
+        }
+      ],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 1,
+        "spearman": {
+          "rho_vs_id": {
+            "r": -1.0,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": 1.0,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 1,
+            "mean": 0.058530429378151894,
+            "median": 0.058530429378151894,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              0.058530429378151894,
+              0.058530429378151894
+            ],
+            "orientation": "higher",
+            "wins": 1
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 1,
+            "mean": -0.0734081354457885,
+            "median": -0.0734081354457885,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              -0.0734081354457885,
+              -0.0734081354457885
+            ],
+            "orientation": "lower",
+            "wins": 1
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 1,
+            "mean": 4.319386789575219e-05,
+            "median": 4.319386789575219e-05,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              4.319386789575219e-05,
+              4.319386789575219e-05
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    },
+    "view": {
+      "target_abs_delta_attr": 0.025595101178623736,
+      "gain_floor": 0.010976301331538707,
+      "rows": [
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 0,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 56.668317794799805,
+          "probe_gain": 0.00950980605557561,
+          "probe_sign": 1.0,
+          "alpha": 4.485687991533628,
+          "target_abs_delta_attr": 0.025595101178623736,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.02992493356578052,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.03229367708263453,
+          "mean_abs_delta_attr": 0.03708902884682175,
+          "mean_id_cos": 0.8346910933032632,
+          "mean_lpips_proxy": 0.24209506681654602,
+          "mean_lpips_true": 0.5664607654325664
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 1,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 111.29919719696045,
+          "probe_gain": 0.013404270575847477,
+          "probe_sign": 1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.025595101178623736,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.018802640144713223,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.03339809073077049,
+          "mean_abs_delta_attr": 0.037377870627096854,
+          "mean_id_cos": 0.8138293791562319,
+          "mean_lpips_proxy": 0.3053110878681764,
+          "mean_lpips_true": 0.6434765569865704
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 2,
+          "source_group": "sefa",
+          "source_rank": 2,
+          "rho": 62.29616451263428,
+          "probe_gain": 0.00318771053571254,
+          "probe_sign": -1.0,
+          "alpha": 5.8950138030251615,
+          "target_abs_delta_attr": 0.025595101178623736,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.026542975334450603,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.017003844943246804,
+          "mean_abs_delta_attr": 0.03364286296709906,
+          "mean_id_cos": 0.6664633532054722,
+          "mean_lpips_proxy": 0.3398276752559468,
+          "mean_lpips_true": 0.6832975326105952
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 3,
+          "source_group": "sefa",
+          "source_rank": 3,
+          "rho": 91.64697122573853,
+          "probe_gain": 0.0033876553643494844,
+          "probe_sign": 1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.025595101178623736,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.025279143126681447,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.016783336686785333,
+          "mean_abs_delta_attr": 0.03036741643154528,
+          "mean_id_cos": 0.7663036128506064,
+          "mean_lpips_proxy": 0.3370443421881646,
+          "mean_lpips_true": 0.6589777860790491
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 4,
+          "source_group": "sefa",
+          "source_rank": 4,
+          "rho": 128.6085286140442,
+          "probe_gain": 0.013016434735618532,
+          "probe_sign": -1.0,
+          "alpha": -2.1687897546039014,
+          "target_abs_delta_attr": 0.025595101178623736,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.043701431481167674,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.03450600772339385,
+          "mean_abs_delta_attr": 0.04149207558657508,
+          "mean_id_cos": 0.84638596419245,
+          "mean_lpips_proxy": 0.29077590513043106,
+          "mean_lpips_true": 0.6390885505825281
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 5,
+          "source_group": "sefa",
+          "source_rank": 5,
+          "rho": 139.9100923538208,
+          "probe_gain": 0.012442796607501805,
+          "probe_sign": -1.0,
+          "alpha": 2.59865894387787,
+          "target_abs_delta_attr": 0.025595101178623736,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.043852924136444926,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.03113015448616352,
+          "mean_abs_delta_attr": 0.03710507541836705,
+          "mean_id_cos": 0.8200602661818266,
+          "mean_lpips_proxy": 0.29495913546998054,
+          "mean_lpips_true": 0.6107374047860503
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "view",
+          "low_candidate": 1,
+          "high_candidate": 4,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.000387835840228945,
+          "rho_diff_low_minus_high": -17.30933141708374,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.004114204959478229,
+          "mean_id_cos_diff_low_minus_high": -0.032556585036218166,
+          "mean_lpips_proxy_diff_low_minus_high": 0.014535182737745345,
+          "mean_lpips_true_diff_low_minus_high": 0.004388006404042244
+        },
+        {
+          "attr": "view",
+          "low_candidate": 1,
+          "high_candidate": 5,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.0009614739683456719,
+          "rho_diff_low_minus_high": -28.61089515686035,
+          "mean_abs_delta_attr_diff_low_minus_high": 0.00027279520872980356,
+          "mean_id_cos_diff_low_minus_high": -0.006230887025594711,
+          "mean_lpips_proxy_diff_low_minus_high": 0.010351952398195863,
+          "mean_lpips_true_diff_low_minus_high": 0.03273915220052004
+        },
+        {
+          "attr": "view",
+          "low_candidate": 4,
+          "high_candidate": 5,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.0005736381281167269,
+          "rho_diff_low_minus_high": -11.301563739776611,
+          "mean_abs_delta_attr_diff_low_minus_high": 0.004387000168208033,
+          "mean_id_cos_diff_low_minus_high": 0.026325698010623455,
+          "mean_lpips_proxy_diff_low_minus_high": -0.004183230339549482,
+          "mean_lpips_true_diff_low_minus_high": 0.028351145796477795
+        }
+      ],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 3,
+        "spearman": {
+          "rho_vs_id": {
+            "r": 0.5,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": -1.0,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 3,
+            "mean": -0.004153924683729808,
+            "median": -0.006230887025594711,
+            "std": 0.029496036066380796,
+            "sem": 0.017029544362951864,
+            "ci95_normal": [
+              -0.037531831635115455,
+              0.02922398226765584
+            ],
+            "orientation": "higher",
+            "wins": 1
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 3,
+            "mean": 0.02182610146701336,
+            "median": 0.028351145796477795,
+            "std": 0.01526037416380713,
+            "sem": 0.008810581131408457,
+            "ci95_normal": [
+              0.004557362449452783,
+              0.039094840484573935
+            ],
+            "orientation": "lower",
+            "wins": 0
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 3,
+            "mean": 0.0001818634724865357,
+            "median": 0.00027279520872980356,
+            "std": 0.004251331978479446,
+            "sem": 0.002454507662189572,
+            "ci95_normal": [
+              -0.004628971545405025,
+              0.004992698490378097
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    },
+    "carpet": {
+      "target_abs_delta_attr": 0.01779847992293071,
+      "gain_floor": 0.003924508695490658,
+      "rows": [
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 0,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 2.0288076251745224,
+          "probe_gain": 0.006062185537302867,
+          "probe_sign": 1.0,
+          "alpha": -1.652524359892327,
+          "target_abs_delta_attr": 0.01779847992293071,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03645997101557441,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.0189062023164297,
+          "mean_abs_delta_attr": 0.02603855297275004,
+          "mean_id_cos": 0.8028756361454725,
+          "mean_lpips_proxy": 0.12371299340156838,
+          "mean_lpips_true": 0.4002653160132468
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 1,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 1.9029596894979477,
+          "probe_gain": 0.0018352484330534935,
+          "probe_sign": 1.0,
+          "alpha": 6.0,
+          "target_abs_delta_attr": 0.01779847992293071,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.009058744501089677,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.01280517625491484,
+          "mean_abs_delta_attr": 0.020593318400642602,
+          "mean_id_cos": 0.8725635129958391,
+          "mean_lpips_proxy": 0.09845452889567241,
+          "mean_lpips_true": 0.3362955073826015
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 2,
+          "source_group": "sefa",
+          "source_rank": 2,
+          "rho": 6.312349155545235,
+          "probe_gain": 0.006170991284307092,
+          "probe_sign": 1.0,
+          "alpha": 5.911454297834191,
+          "target_abs_delta_attr": 0.01779847992293071,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.01846187250339426,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.024406480184552493,
+          "mean_abs_delta_attr": 0.030455277101282263,
+          "mean_id_cos": 0.6627913750708103,
+          "mean_lpips_proxy": 0.1699577523395419,
+          "mean_lpips_true": 0.5780105614103377
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 3,
+          "source_group": "sefa",
+          "source_rank": 3,
+          "rho": 7.318844847381115,
+          "probe_gain": 0.0025812909880187362,
+          "probe_sign": 1.0,
+          "alpha": 6.0,
+          "target_abs_delta_attr": 0.01779847992293071,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.017577349062776193,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.021405097799288342,
+          "mean_abs_delta_attr": 0.025933639863069402,
+          "mean_id_cos": 0.8746538329869509,
+          "mean_lpips_proxy": 0.07942518981872126,
+          "mean_lpips_true": 0.2697865155059844
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 4,
+          "source_group": "sefa",
+          "source_rank": 4,
+          "rho": 1.5777357518672943,
+          "probe_gain": 0.00526772640296258,
+          "probe_sign": 1.0,
+          "alpha": -4.705926879406918,
+          "target_abs_delta_attr": 0.01779847992293071,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.02401623359764926,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.016277296603220748,
+          "mean_abs_delta_attr": 0.02240367908598273,
+          "mean_id_cos": 0.8894926998764277,
+          "mean_lpips_proxy": 0.0985472709289752,
+          "mean_lpips_true": 0.27573905955068767
+        },
+        {
+          "seed": 2104,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 5,
+          "source_group": "sefa",
+          "source_rank": 5,
+          "rho": 4.6675493866205215,
+          "probe_gain": 0.0015070380468387157,
+          "probe_sign": 1.0,
+          "alpha": -4.810311051759019,
+          "target_abs_delta_attr": 0.01779847992293071,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.027530749881407246,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.016709535197151126,
+          "mean_abs_delta_attr": 0.02439704935750342,
+          "mean_id_cos": 0.8551190290600061,
+          "mean_lpips_proxy": 0.0814320883655455,
+          "mean_lpips_true": 0.36345142195932567
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "carpet",
+          "low_candidate": 0,
+          "high_candidate": 2,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.00010880574700422585,
+          "rho_diff_low_minus_high": -4.283541530370712,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.004416724128532223,
+          "mean_id_cos_diff_low_minus_high": 0.1400842610746622,
+          "mean_lpips_proxy_diff_low_minus_high": -0.04624475893797353,
+          "mean_lpips_true_diff_low_minus_high": -0.1777452453970909
+        },
+        {
+          "attr": "carpet",
+          "low_candidate": 4,
+          "high_candidate": 0,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.0007944591343402863,
+          "rho_diff_low_minus_high": -0.4510718733072281,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.003634873886767309,
+          "mean_id_cos_diff_low_minus_high": 0.08661706373095512,
+          "mean_lpips_proxy_diff_low_minus_high": -0.02516572247259319,
+          "mean_lpips_true_diff_low_minus_high": -0.1245262564625591
+        },
+        {
+          "attr": "carpet",
+          "low_candidate": 4,
+          "high_candidate": 2,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.0009032648813445121,
+          "rho_diff_low_minus_high": -4.73461340367794,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.008051598015299533,
+          "mean_id_cos_diff_low_minus_high": 0.22670132480561733,
+          "mean_lpips_proxy_diff_low_minus_high": -0.07141048141056672,
+          "mean_lpips_true_diff_low_minus_high": -0.30227150185965
+        }
+      ],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 3,
+        "spearman": {
+          "rho_vs_id": {
+            "r": -1.0,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": 1.0,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 3,
+            "mean": 0.15113421653707823,
+            "median": 0.1400842610746622,
+            "std": 0.07069282981321064,
+            "sem": 0.040814524322433564,
+            "ci95_normal": [
+              0.07113774886510844,
+              0.23113068420904803
+            ],
+            "orientation": "higher",
+            "wins": 3
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 3,
+            "mean": -0.2015143345731,
+            "median": -0.1777452453970909,
+            "std": 0.09122538169561595,
+            "sem": 0.05266899867889023,
+            "ci95_normal": [
+              -0.30474557198372487,
+              -0.09828309716247516
+            ],
+            "orientation": "lower",
+            "wins": 3
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 3,
+            "mean": -0.005367732010199688,
+            "median": -0.004416724128532223,
+            "std": 0.0023569418745770783,
+            "sem": 0.0013607810257513773,
+            "ci95_normal": [
+              -0.008034862820672388,
+              -0.002700601199726989
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "n_rows": 12,
+    "n_matched_pairs": 7,
+    "spearman": {
+      "rho_vs_id": {
+        "r": -0.42634222262516014,
+        "orientation": "lower"
+      },
+      "rho_vs_lpips": {
+        "r": 0.7532045933044496,
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      }
+    },
+    "regression": {
+      "id": {
+        "n": 12,
+        "predictors": [
+          "mean_abs_delta_attr",
+          "probe_gain",
+          "rho"
+        ],
+        "beta_rho": -0.28948300858653764,
+        "standardized_betas": {
+          "mean_abs_delta_attr": -0.1298209217674179,
+          "probe_gain": 0.4456086174634782,
+          "rho": -0.28948300858653764
+        },
+        "orientation": "lower"
+      },
+      "lpips": {
+        "n": 12,
+        "predictors": [
+          "mean_abs_delta_attr",
+          "probe_gain",
+          "rho"
+        ],
+        "beta_rho": 1.017423171773789,
+        "standardized_betas": {
+          "mean_abs_delta_attr": 0.10366717728468836,
+          "probe_gain": -0.3149029019465828,
+          "rho": 1.017423171773789
+        },
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      }
+    },
+    "matched_pairs": {
+      "mean_id_cos_diff_low_minus_high": {
+        "n": 7,
+        "mean": 0.0713530435625996,
+        "median": 0.058530429378151894,
+        "std": 0.08953436727554065,
+        "sem": 0.03384080994351432,
+        "ci95_normal": [
+          0.0050250560733115235,
+          0.13768103105188767
+        ],
+        "orientation": "higher",
+        "wins": 5
+      },
+      "mean_lpips_true_diff_low_minus_high": {
+        "n": 7,
+        "mean": -0.08749611925200693,
+        "median": -0.0734081354457885,
+        "std": 0.12393739949521605,
+        "sem": 0.0468439338863434,
+        "ci95_normal": [
+          -0.17931022966923998,
+          0.004317991165226132
+        ],
+        "orientation": "lower",
+        "wins": 4
+      },
+      "mean_abs_delta_attr_diff_low_minus_high": {
+        "n": 7,
+        "mean": -0.002216344535034815,
+        "median": -0.003634873886767309,
+        "std": 0.004070451346287625,
+        "sem": 0.0015384859980093017,
+        "ci95_normal": [
+          -0.005231777091133046,
+          0.0007990880210634165
+        ],
+        "orientation": "matched"
+      }
+    }
+  },
+  "config": {
+    "domain": "bedroom",
+    "attrs": [
+      "indoor_lighting",
+      "wood",
+      "view",
+      "carpet"
+    ],
+    "methods": [
+      "sefa"
+    ],
+    "candidate_k": 6,
+    "ganspace_samples": 2048,
+    "min_gain_quantile": 0.5,
+    "gain_match_rel": 0.25,
+    "n_risk": 8,
+    "n_probe": 16,
+    "probe_alpha": 1.0,
+    "n_calib": 16,
+    "n_test": 64,
+    "alpha_steps": 7,
+    "max_alpha": 6.0,
+    "target_quantile": 0.25,
+    "batch": 4,
+    "true_lpips": true,
+    "lpips_net": "alex",
+    "lpips_size": 256,
+    "risk_estimator": "jvp",
+    "fd_eps": 0.25,
+    "prompt_style": "ensemble",
+    "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2104",
+    "seed": 2104,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v58_prompt_ensemble_source_ablation_predictive_validity.json",
+    "protocol_key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2104"
+  },
+  "_meta": {
+    "seed": 2104,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-27T23:41:00.014284+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_cross_domain_risk_predictive.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_cross_domain_risk_predictive.py",
+        "--domain",
+        "bedroom",
+        "--attrs",
+        "indoor_lighting",
+        "wood",
+        "view",
+        "carpet",
+        "--methods",
+        "sefa",
+        "--candidate-k",
+        "6",
+        "--ganspace-samples",
+        "2048",
+        "--min-gain-quantile",
+        "0.5",
+        "--gain-match-rel",
+        "0.25",
+        "--true-lpips",
+        "--lpips-net",
+        "alex",
+        "--lpips-size",
+        "256",
+        "--n-risk",
+        "8",
+        "--n-probe",
+        "16",
+        "--probe-alpha",
+        "1.0",
+        "--n-calib",
+        "16",
+        "--n-test",
+        "64",
+        "--alpha-steps",
+        "7",
+        "--max-alpha",
+        "6",
+        "--target-quantile",
+        "0.25",
+        "--batch",
+        "4",
+        "--risk-estimator",
+        "jvp",
+        "--prompt-style",
+        "ensemble",
+        "--out",
+        "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2104",
+        "--seed",
+        "2104",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v58_prompt_ensemble_source_ablation_predictive_validity.json",
+        "--protocol-key",
+        "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2104"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 3867571,
+      "timestamp_utc": "2026-05-27T23:41:00.013917+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v58_prompt_ensemble_source_ablation_predictive_validity.json",
+      "protocol_key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2104",
+      "protocol_sha256": "d441fde05d76894b63670077d81697f63098fe74499b9ce188b11ad3fe2d2655",
+      "protocol_version": "control_v58_prompt_ensemble_source_ablation_predictive_validity"
+    }
+  }
+}

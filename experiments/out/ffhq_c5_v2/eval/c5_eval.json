@@ -1,0 +1,102 @@
+{
+  "results": [
+    {
+      "ckpt": "experiments/out/ffhq_c5_v2/ckpt/enc_005000.pt",
+      "iter": 5000,
+      "recon_mse": 0.37526789866387844,
+      "recon_l2_256": 0.37569750379770994,
+      "per_attr_corr": {
+        "smile": 0.21612249155286972,
+        "age": 0.01589394311325095,
+        "pose": 0.06594045265409042,
+        "gender": 0.04524528864516819,
+        "eyeglasses": 0.015076434060204888
+      },
+      "sal_corr_mean": 0.07165572200511683
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_v2/ckpt/enc_020000.pt",
+      "iter": 20000,
+      "recon_mse": 0.41166129196062684,
+      "recon_l2_256": 0.4118218377698213,
+      "per_attr_corr": {
+        "smile": 0.1878537525096337,
+        "age": 0.013375148088303115,
+        "pose": 0.07262235838949035,
+        "gender": 0.0432700465576941,
+        "eyeglasses": 0.015623679678711614
+      },
+      "sal_corr_mean": 0.06654899704476658
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_v2/ckpt/enc_040000.pt",
+      "iter": 40000,
+      "recon_mse": 0.2887588576413691,
+      "recon_l2_256": 0.2889785645529628,
+      "per_attr_corr": {
+        "smile": 0.1621809430161748,
+        "age": 0.03888639799999834,
+        "pose": 0.08906289133962697,
+        "gender": 0.04844651248558031,
+        "eyeglasses": 0.03968119132344062
+      },
+      "sal_corr_mean": 0.0756515872329642
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_v2/ckpt/enc_080000.pt",
+      "iter": 80000,
+      "recon_mse": 0.2960600429214537,
+      "recon_l2_256": 0.29617471620440483,
+      "per_attr_corr": {
+        "smile": 0.1469280942349675,
+        "age": 0.042710413173481156,
+        "pose": 0.1000646392588474,
+        "gender": 0.056172188828172695,
+        "eyeglasses": 0.04174093480584608
+      },
+      "sal_corr_mean": 0.07752325406026296
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_v2/ckpt/enc_120000.pt",
+      "iter": 120000,
+      "recon_mse": 0.3426170162856579,
+      "recon_l2_256": 0.3426696523092687,
+      "per_attr_corr": {
+        "smile": 0.12354057606107614,
+        "age": 0.039363391975802076,
+        "pose": 0.09202091323079423,
+        "gender": 0.05098927033710859,
+        "eyeglasses": 0.03996024372608979
+      },
+      "sal_corr_mean": 0.06917487906617417
+    },
+    {
+      "ckpt": "experiments/out/ffhq_c5_v2/ckpt/enc_160000.pt",
+      "iter": 160000,
+      "recon_mse": 0.3596425987780094,
+      "recon_l2_256": 0.35984605830162764,
+      "per_attr_corr": {
+        "smile": 0.10533431225876994,
+        "age": 0.025726154879368225,
+        "pose": 0.07783820212759257,
+        "gender": 0.04280213536777245,
+        "eyeglasses": 0.028839981871857566
+      },
+      "sal_corr_mean": 0.056108157301072145
+    }
+  ],
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-21T02:13:22.819927+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "track": "4_c5_eval"
+  }
+}

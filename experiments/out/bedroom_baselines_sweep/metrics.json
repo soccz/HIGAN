@@ -1,0 +1,285 @@
+{
+  "sweeps": {
+    "ganspace": [
+      {
+        "K": 2,
+        "coverage": [
+          "indoor_lighting",
+          "view"
+        ],
+        "n_coverage": 2,
+        "diversity": 2
+      },
+      {
+        "K": 4,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view"
+        ],
+        "n_coverage": 4,
+        "diversity": 3
+      },
+      {
+        "K": 6,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 5,
+        "diversity": 5
+      },
+      {
+        "K": 8,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 5,
+        "diversity": 6
+      },
+      {
+        "K": 10,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 5,
+        "diversity": 7
+      },
+      {
+        "K": 12,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 5,
+        "diversity": 7
+      },
+      {
+        "K": 16,
+        "coverage": [
+          "cluttered_space",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 7,
+        "diversity": 10
+      }
+    ],
+    "sefa": [
+      {
+        "K": 2,
+        "coverage": [
+          "glossy",
+          "view"
+        ],
+        "n_coverage": 2,
+        "diversity": 2
+      },
+      {
+        "K": 4,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "view"
+        ],
+        "n_coverage": 3,
+        "diversity": 3
+      },
+      {
+        "K": 6,
+        "coverage": [
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 5,
+        "diversity": 4
+      },
+      {
+        "K": 8,
+        "coverage": [
+          "cluttered_space",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 6,
+        "diversity": 5
+      },
+      {
+        "K": 10,
+        "coverage": [
+          "cluttered_space",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 6,
+        "diversity": 6
+      },
+      {
+        "K": 12,
+        "coverage": [
+          "cluttered_space",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 6,
+        "diversity": 7
+      },
+      {
+        "K": 16,
+        "coverage": [
+          "carpet",
+          "cluttered_space",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 7,
+        "diversity": 7
+      }
+    ],
+    "random": [
+      {
+        "K": 2,
+        "coverage": [
+          "dirt",
+          "glossy",
+          "scary"
+        ],
+        "n_coverage": 3,
+        "diversity": 2
+      },
+      {
+        "K": 4,
+        "coverage": [
+          "carpet",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view"
+        ],
+        "n_coverage": 6,
+        "diversity": 4
+      },
+      {
+        "K": 6,
+        "coverage": [
+          "carpet",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view"
+        ],
+        "n_coverage": 6,
+        "diversity": 6
+      },
+      {
+        "K": 8,
+        "coverage": [
+          "carpet",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view"
+        ],
+        "n_coverage": 6,
+        "diversity": 7
+      },
+      {
+        "K": 10,
+        "coverage": [
+          "carpet",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view"
+        ],
+        "n_coverage": 6,
+        "diversity": 8
+      },
+      {
+        "K": 12,
+        "coverage": [
+          "carpet",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 7,
+        "diversity": 9
+      },
+      {
+        "K": 16,
+        "coverage": [
+          "carpet",
+          "dirt",
+          "glossy",
+          "indoor_lighting",
+          "scary",
+          "view",
+          "wood"
+        ],
+        "n_coverage": 7,
+        "diversity": 9
+      }
+    ]
+  },
+  "wall_time_s": {
+    "ganspace_pca": 0.5163686275482178,
+    "sefa_svd": 0.06506657600402832
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-19T16:12:37.430028+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "aa9152f14a44abc59b21082d70ca0ed5fffb88bf",
+    "git_dirty": true,
+    "track": "bedroom_baselines_sweep",
+    "injected_by": "lib/inject_meta.py"
+  }
+}

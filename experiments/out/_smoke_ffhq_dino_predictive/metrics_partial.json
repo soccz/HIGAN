@@ -1,0 +1,361 @@
+{
+  "per_attr": {
+    "smile": {
+      "target_abs_delta_attr": 0.01772287767380476,
+      "gain_floor": 0.004118103533983231,
+      "rows": [
+        {
+          "seed": 9911,
+          "domain": "ffhq",
+          "attr": "smile",
+          "candidate_index": 0,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 3.0556094646453857,
+          "probe_gain": 0.024951918050646782,
+          "probe_sign": -1.0,
+          "alpha": -1.4102237638039505,
+          "target_abs_delta_attr": 0.01772287767380476,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03742823749780655,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.02363317832350731,
+          "mean_abs_delta_attr": 0.02363317832350731,
+          "mean_id_cos": 0.93158358335495,
+          "mean_lpips_proxy": 0.3064085990190506,
+          "mean_lpips_true": 0.15066145360469818,
+          "mean_dino_cos": 0.8542169332504272
+        },
+        {
+          "seed": 9911,
+          "domain": "ffhq",
+          "attr": "smile",
+          "candidate_index": 1,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 1.1417725086212158,
+          "probe_gain": 0.004118103533983231,
+          "probe_sign": -1.0,
+          "alpha": 0.9392754125353898,
+          "target_abs_delta_attr": 0.01772287767380476,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.011154424399137497,
+          "gain_eligible": true,
+          "mean_delta_attr": 0.009807933121919632,
+          "mean_abs_delta_attr": 0.009807933121919632,
+          "mean_id_cos": 0.980614185333252,
+          "mean_lpips_proxy": 0.06624823808670044,
+          "mean_lpips_true": 0.026127626188099384,
+          "mean_dino_cos": 0.9563317894935608
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "smile",
+          "low_candidate": 1,
+          "high_candidate": 0,
+          "low_source": "sefa",
+          "high_source": "sefa",
+          "probe_gain_abs_diff": 0.02083381451666355,
+          "rho_diff_low_minus_high": -1.91383695602417,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.013825245201587677,
+          "mean_id_cos_diff_low_minus_high": 0.049030601978302,
+          "mean_lpips_proxy_diff_low_minus_high": -0.24016036093235016,
+          "mean_lpips_true_diff_low_minus_high": -0.1245338274165988,
+          "mean_dino_cos_diff_low_minus_high": 0.10211485624313354
+        }
+      ],
+      "aggregate": {
+        "n_rows": 2,
+        "n_matched_pairs": 1,
+        "spearman": {
+          "rho_vs_id": {
+            "r": NaN,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          },
+          "rho_vs_dino": {
+            "r": NaN,
+            "orientation": "lower",
+            "metric": "mean_dino_cos"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 2,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 2,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          },
+          "dino": {
+            "n": 2,
+            "beta_rho": NaN,
+            "orientation": "lower",
+            "metric": "mean_dino_cos"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 1,
+            "mean": 0.049030601978302,
+            "median": 0.049030601978302,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              0.049030601978302,
+              0.049030601978302
+            ],
+            "orientation": "higher",
+            "wins": 1
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 1,
+            "mean": -0.1245338274165988,
+            "median": -0.1245338274165988,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              -0.1245338274165988,
+              -0.1245338274165988
+            ],
+            "orientation": "lower",
+            "wins": 1
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 1,
+            "mean": -0.013825245201587677,
+            "median": -0.013825245201587677,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              -0.013825245201587677,
+              -0.013825245201587677
+            ],
+            "orientation": "matched"
+          },
+          "mean_dino_cos_diff_low_minus_high": {
+            "n": 1,
+            "mean": 0.10211485624313354,
+            "median": 0.10211485624313354,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              0.10211485624313354,
+              0.10211485624313354
+            ],
+            "orientation": "higher",
+            "wins": 1
+          }
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "n_rows": 2,
+    "n_matched_pairs": 1,
+    "spearman": {
+      "rho_vs_id": {
+        "r": NaN,
+        "orientation": "lower"
+      },
+      "rho_vs_lpips": {
+        "r": NaN,
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      },
+      "rho_vs_dino": {
+        "r": NaN,
+        "orientation": "lower",
+        "metric": "mean_dino_cos"
+      }
+    },
+    "regression": {
+      "id": {
+        "n": 2,
+        "beta_rho": NaN,
+        "orientation": "lower"
+      },
+      "lpips": {
+        "n": 2,
+        "beta_rho": NaN,
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      },
+      "dino": {
+        "n": 2,
+        "beta_rho": NaN,
+        "orientation": "lower",
+        "metric": "mean_dino_cos"
+      }
+    },
+    "matched_pairs": {
+      "mean_id_cos_diff_low_minus_high": {
+        "n": 1,
+        "mean": 0.049030601978302,
+        "median": 0.049030601978302,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.049030601978302,
+          0.049030601978302
+        ],
+        "orientation": "higher",
+        "wins": 1
+      },
+      "mean_lpips_true_diff_low_minus_high": {
+        "n": 1,
+        "mean": -0.1245338274165988,
+        "median": -0.1245338274165988,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.1245338274165988,
+          -0.1245338274165988
+        ],
+        "orientation": "lower",
+        "wins": 1
+      },
+      "mean_abs_delta_attr_diff_low_minus_high": {
+        "n": 1,
+        "mean": -0.013825245201587677,
+        "median": -0.013825245201587677,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.013825245201587677,
+          -0.013825245201587677
+        ],
+        "orientation": "matched"
+      },
+      "mean_dino_cos_diff_low_minus_high": {
+        "n": 1,
+        "mean": 0.10211485624313354,
+        "median": 0.10211485624313354,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.10211485624313354,
+          0.10211485624313354
+        ],
+        "orientation": "higher",
+        "wins": 1
+      }
+    }
+  },
+  "config": {
+    "domain": "ffhq",
+    "attrs": [
+      "smile"
+    ],
+    "methods": [
+      "sefa"
+    ],
+    "candidate_k": 2,
+    "ganspace_samples": 16,
+    "min_gain_quantile": 0.0,
+    "gain_match_rel": 1.0,
+    "n_risk": 1,
+    "n_probe": 2,
+    "probe_alpha": 1.0,
+    "n_calib": 2,
+    "n_test": 2,
+    "alpha_steps": 3,
+    "max_alpha": 2.0,
+    "target_quantile": 0.25,
+    "batch": 1,
+    "true_lpips": true,
+    "lpips_net": "alex",
+    "lpips_size": 128,
+    "risk_estimator": "jvp",
+    "fd_eps": 0.25,
+    "dino_preservation": true,
+    "dino_model": "facebook/dinov2-base",
+    "dino_local_files_only": true,
+    "prompt_style": "ensemble",
+    "out": "experiments/out/_smoke_ffhq_dino_predictive",
+    "seed": 9911,
+    "protocol": null,
+    "protocol_key": "cross_domain_risk_predictive"
+  },
+  "_meta": {
+    "seed": 9911,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-28T11:37:40.188673+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_cross_domain_risk_predictive.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_cross_domain_risk_predictive.py",
+        "--domain",
+        "ffhq",
+        "--attrs",
+        "smile",
+        "--methods",
+        "sefa",
+        "--candidate-k",
+        "2",
+        "--ganspace-samples",
+        "16",
+        "--min-gain-quantile",
+        "0.0",
+        "--gain-match-rel",
+        "1.0",
+        "--true-lpips",
+        "--lpips-net",
+        "alex",
+        "--lpips-size",
+        "128",
+        "--n-risk",
+        "1",
+        "--n-probe",
+        "2",
+        "--probe-alpha",
+        "1.0",
+        "--n-calib",
+        "2",
+        "--n-test",
+        "2",
+        "--alpha-steps",
+        "3",
+        "--max-alpha",
+        "2",
+        "--target-quantile",
+        "0.25",
+        "--batch",
+        "1",
+        "--risk-estimator",
+        "jvp",
+        "--prompt-style",
+        "ensemble",
+        "--dino-preservation",
+        "--dino-local-files-only",
+        "--out",
+        "experiments/out/_smoke_ffhq_dino_predictive",
+        "--seed",
+        "9911"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 1819692,
+      "timestamp_utc": "2026-05-28T11:37:40.188643+00:00",
+      "protocol_path": null,
+      "protocol_key": "cross_domain_risk_predictive"
+    }
+  }
+}

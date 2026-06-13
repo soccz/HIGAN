@@ -1,0 +1,524 @@
+{
+  "readiness": "rho_incremental_value_sensitive",
+  "pass_count": 0,
+  "total": 5,
+  "rows": [
+    {
+      "summary": "dino_church",
+      "domain": "church",
+      "target": "clip_id_damage",
+      "delta_cv_r2": {
+        "n": 5,
+        "mean": -0.05574695746235704,
+        "median": -0.05104943324707423,
+        "std": 0.06473376668811022,
+        "sem": 0.028949820550845173,
+        "ci95_normal": [
+          -0.11248860574201358,
+          0.0009946908172994984
+        ],
+        "orientation": "higher",
+        "wins": 1,
+        "p_sign_two_sided": 0.375
+      },
+      "beta_rho_full": {
+        "n": 5,
+        "mean": 0.11330506005177839,
+        "median": 0.16677663411800625,
+        "std": 0.16383388540621688,
+        "sem": 0.07326874095724234,
+        "ci95_normal": [
+          -0.030301672224416584,
+          0.25691179232797334
+        ],
+        "orientation": "higher",
+        "wins": 4,
+        "p_sign_two_sided": 0.375
+      },
+      "pass": false
+    },
+    {
+      "summary": "dino_church",
+      "domain": "church",
+      "target": "dino_damage",
+      "delta_cv_r2": {
+        "n": 5,
+        "mean": -0.1078143115204071,
+        "median": -0.01862082202531451,
+        "std": 0.16525015279135133,
+        "sem": 0.07390211498673764,
+        "ci95_normal": [
+          -0.2526624568944129,
+          0.03703383385359868
+        ],
+        "orientation": "higher",
+        "wins": 0,
+        "p_sign_two_sided": 0.0625
+      },
+      "beta_rho_full": {
+        "n": 5,
+        "mean": 0.09268048772646256,
+        "median": 0.14957895132375665,
+        "std": 0.14380907078360888,
+        "sem": 0.06431337161064568,
+        "ci95_normal": [
+          -0.033373720630402975,
+          0.2187346960833281
+        ],
+        "orientation": "higher",
+        "wins": 4,
+        "p_sign_two_sided": 0.375
+      },
+      "pass": false
+    },
+    {
+      "summary": "dino_church",
+      "domain": "church",
+      "target": "lpips_damage",
+      "delta_cv_r2": {
+        "n": 5,
+        "mean": 0.04161752690943672,
+        "median": -0.01229069326000476,
+        "std": 0.2874766914035745,
+        "sem": 0.1285634847850244,
+        "ci95_normal": [
+          -0.21036690326921115,
+          0.29360195708808456
+        ],
+        "orientation": "higher",
+        "wins": 2,
+        "p_sign_two_sided": 1.0
+      },
+      "beta_rho_full": {
+        "n": 5,
+        "mean": 0.14299101376353662,
+        "median": 0.19185617552777562,
+        "std": 0.193194207879754,
+        "sem": 0.0863990763356711,
+        "ci95_normal": [
+          -0.02635117585437871,
+          0.312333203381452
+        ],
+        "orientation": "higher",
+        "wins": 4,
+        "p_sign_two_sided": 0.375
+      },
+      "pass": false
+    },
+    {
+      "summary": "random_church",
+      "domain": "church",
+      "target": "clip_id_damage",
+      "delta_cv_r2": {
+        "n": 5,
+        "mean": -0.015644723191015925,
+        "median": -0.021465826725025394,
+        "std": 0.0732842253612516,
+        "sem": 0.032773701917234534,
+        "ci95_normal": [
+          -0.07988117894879561,
+          0.04859173256676376
+        ],
+        "orientation": "higher",
+        "wins": 2,
+        "p_sign_two_sided": 1.0
+      },
+      "beta_rho_full": {
+        "n": 5,
+        "mean": 0.1439355799408549,
+        "median": 0.09541789521827962,
+        "std": 0.15251273428190476,
+        "sem": 0.06820576825774032,
+        "ci95_normal": [
+          0.010252274155683888,
+          0.2776188857260259
+        ],
+        "orientation": "higher",
+        "wins": 4,
+        "p_sign_two_sided": 0.375
+      },
+      "pass": false
+    },
+    {
+      "summary": "random_church",
+      "domain": "church",
+      "target": "lpips_damage",
+      "delta_cv_r2": {
+        "n": 5,
+        "mean": 0.04000175425300735,
+        "median": -0.01815796559767635,
+        "std": 0.14168691241203052,
+        "sem": 0.06336431353507178,
+        "ci95_normal": [
+          -0.08419230027573334,
+          0.16419580878174805
+        ],
+        "orientation": "higher",
+        "wins": 1,
+        "p_sign_two_sided": 0.375
+      },
+      "beta_rho_full": {
+        "n": 5,
+        "mean": 0.09289191576898688,
+        "median": 0.10354689818231691,
+        "std": 0.2776733247890142,
+        "sem": 0.12417928595332263,
+        "ci95_normal": [
+          -0.15049948469952545,
+          0.33628331623749924
+        ],
+        "orientation": "higher",
+        "wins": 3,
+        "p_sign_two_sided": 1.0
+      },
+      "pass": false
+    }
+  ],
+  "seed_rows": [
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2122/metrics.json",
+      "domain": "church",
+      "seed": 2122,
+      "target": "lpips_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.22456604045625256,
+      "full_cv_r2": 0.5166394814944957,
+      "delta_cv_r2": 0.2920734410382431,
+      "beta_rho_full": 0.29499195249866444
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2122/metrics.json",
+      "domain": "church",
+      "seed": 2122,
+      "target": "clip_id_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.36396478464604914,
+      "full_cv_r2": 0.24857360120615066,
+      "delta_cv_r2": -0.11539118343989849,
+      "beta_rho_full": 0.09541789521827962
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2123/metrics.json",
+      "domain": "church",
+      "seed": 2123,
+      "target": "lpips_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.6044818695645998,
+      "full_cv_r2": 0.5602074922169845,
+      "delta_cv_r2": -0.0442743773476153,
+      "beta_rho_full": 0.4314223603186401
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2123/metrics.json",
+      "domain": "church",
+      "seed": 2123,
+      "target": "clip_id_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.5446230853243798,
+      "full_cv_r2": 0.6320369292042073,
+      "delta_cv_r2": 0.08741384387982754,
+      "beta_rho_full": 0.3787922600162561
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2124/metrics.json",
+      "domain": "church",
+      "seed": 2124,
+      "target": "lpips_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.630991420907172,
+      "full_cv_r2": 0.6046521990601447,
+      "delta_cv_r2": -0.026339221847027305,
+      "beta_rho_full": -0.20386070208809773
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2124/metrics.json",
+      "domain": "church",
+      "seed": 2124,
+      "target": "clip_id_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.6788182640301402,
+      "full_cv_r2": 0.6573524373051148,
+      "delta_cv_r2": -0.021465826725025394,
+      "beta_rho_full": -0.010106777066546752
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2125/metrics.json",
+      "domain": "church",
+      "seed": 2125,
+      "target": "lpips_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.8397264831703699,
+      "full_cv_r2": 0.8215685175726936,
+      "delta_cv_r2": -0.01815796559767635,
+      "beta_rho_full": 0.10354689818231691
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2125/metrics.json",
+      "domain": "church",
+      "seed": 2125,
+      "target": "clip_id_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.853714057986401,
+      "full_cv_r2": 0.8602385814132605,
+      "delta_cv_r2": 0.0065245234268594965,
+      "beta_rho_full": 0.20288162270394203
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2126/metrics.json",
+      "domain": "church",
+      "seed": 2126,
+      "target": "lpips_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.871973723996739,
+      "full_cv_r2": 0.8686806190158516,
+      "delta_cv_r2": -0.003293104980887418,
+      "beta_rho_full": -0.16164093006658942
+    },
+    {
+      "summary": "random_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2126/metrics.json",
+      "domain": "church",
+      "seed": 2126,
+      "target": "clip_id_damage",
+      "n_rows": 27,
+      "base_cv_r2": 0.6425037272925485,
+      "full_cv_r2": 0.6071987541957057,
+      "delta_cv_r2": -0.03530497309684277,
+      "beta_rho_full": 0.052692898832343515
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2127/metrics.json",
+      "domain": "church",
+      "seed": 2127,
+      "target": "lpips_damage",
+      "n_rows": 18,
+      "base_cv_r2": -0.03932986735633508,
+      "full_cv_r2": 0.3309467092870445,
+      "delta_cv_r2": 0.3702765766433796,
+      "beta_rho_full": 0.262512114667344
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2127/metrics.json",
+      "domain": "church",
+      "seed": 2127,
+      "target": "clip_id_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.7155201610643662,
+      "full_cv_r2": 0.5570629141235759,
+      "delta_cv_r2": -0.15845724694079033,
+      "beta_rho_full": 0.16677663411800625
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2127/metrics.json",
+      "domain": "church",
+      "seed": 2127,
+      "target": "dino_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.4462878085207526,
+      "full_cv_r2": 0.43803069902991576,
+      "delta_cv_r2": -0.008257109490836856,
+      "beta_rho_full": 0.18246245475155926
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2128/metrics.json",
+      "domain": "church",
+      "seed": 2128,
+      "target": "lpips_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.3730053904213476,
+      "full_cv_r2": 0.635940509822887,
+      "delta_cv_r2": 0.26293511940153935,
+      "beta_rho_full": 0.3074662111867422
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2128/metrics.json",
+      "domain": "church",
+      "seed": 2128,
+      "target": "clip_id_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.4488013907589387,
+      "full_cv_r2": 0.38902811906631163,
+      "delta_cv_r2": -0.059773271692627084,
+      "beta_rho_full": 0.22662934854387884
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2128/metrics.json",
+      "domain": "church",
+      "seed": 2128,
+      "target": "dino_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.565375856566223,
+      "full_cv_r2": 0.1699472294267415,
+      "delta_cv_r2": -0.3954286271394815,
+      "beta_rho_full": 0.14957895132375665
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2129/metrics.json",
+      "domain": "church",
+      "seed": 2129,
+      "target": "lpips_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.6138965654047113,
+      "full_cv_r2": 0.5617930511712511,
+      "delta_cv_r2": -0.05210351423346016,
+      "beta_rho_full": -0.18182602229242056
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2129/metrics.json",
+      "domain": "church",
+      "seed": 2129,
+      "target": "clip_id_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.8489605266278923,
+      "full_cv_r2": 0.8222311337530371,
+      "delta_cv_r2": -0.026729392874855207,
+      "beta_rho_full": -0.16446053303635932
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2129/metrics.json",
+      "domain": "church",
+      "seed": 2129,
+      "target": "dino_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.33041885709617363,
+      "full_cv_r2": 0.3117980350708591,
+      "delta_cv_r2": -0.01862082202531451,
+      "beta_rho_full": -0.16312643545671374
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2130/metrics.json",
+      "domain": "church",
+      "seed": 2130,
+      "target": "lpips_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.8797193440514957,
+      "full_cv_r2": 0.8674286507914909,
+      "delta_cv_r2": -0.01229069326000476,
+      "beta_rho_full": 0.19185617552777562
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2130/metrics.json",
+      "domain": "church",
+      "seed": 2130,
+      "target": "clip_id_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.861113780798959,
+      "full_cv_r2": 0.8783883382425206,
+      "delta_cv_r2": 0.017274557443561656,
+      "beta_rho_full": 0.10416137441503209
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2130/metrics.json",
+      "domain": "church",
+      "seed": 2130,
+      "target": "dino_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.8844755059430562,
+      "full_cv_r2": 0.869419293596857,
+      "delta_cv_r2": -0.01505621234619925,
+      "beta_rho_full": 0.15139589959838112
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2131/metrics.json",
+      "domain": "church",
+      "seed": 2131,
+      "target": "lpips_damage",
+      "n_rows": 18,
+      "base_cv_r2": -0.8550783823786325,
+      "full_cv_r2": -1.215808236382903,
+      "delta_cv_r2": -0.3607298540042705,
+      "beta_rho_full": 0.13494658972824175
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2131/metrics.json",
+      "domain": "church",
+      "seed": 2131,
+      "target": "clip_id_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.761363703532773,
+      "full_cv_r2": 0.7103142702856988,
+      "delta_cv_r2": -0.05104943324707423,
+      "beta_rho_full": 0.23341847621833406
+    },
+    {
+      "summary": "dino_church",
+      "source": "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2131/metrics.json",
+      "domain": "church",
+      "seed": 2131,
+      "target": "dino_damage",
+      "n_rows": 18,
+      "base_cv_r2": 0.4786224220512274,
+      "full_cv_r2": 0.37691363545102397,
+      "delta_cv_r2": -0.10170878660020344,
+      "beta_rho_full": 0.1430915684153295
+    }
+  ],
+  "config": {
+    "summaries": [
+      "random_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church/metrics.json",
+      "dino_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation/church/metrics.json"
+    ],
+    "out": "experiments/out/_smoke_rho_incremental_value",
+    "folds": 5,
+    "seed": 9912,
+    "protocol": null,
+    "protocol_key": "predictive_incremental_value_table"
+  },
+  "_meta": {
+    "seed": 9912,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-28T18:33:43.489922+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_predictive_incremental_value_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_predictive_incremental_value_table.py",
+        "--summaries",
+        "random_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church/metrics.json",
+        "dino_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation/church/metrics.json",
+        "--out",
+        "experiments/out/_smoke_rho_incremental_value",
+        "--folds",
+        "5",
+        "--seed",
+        "9912"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 370374,
+      "timestamp_utc": "2026-05-28T18:33:43.489902+00:00",
+      "protocol_path": null,
+      "protocol_key": "predictive_incremental_value_table"
+    }
+  }
+}

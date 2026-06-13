@@ -1,0 +1,326 @@
+{
+  "per_attr": {
+    "smile": {
+      "layer_gain_probe": [
+        0.0007246807217597961,
+        0.0011756261810660362,
+        0.006436849944293499,
+        0.0153447100892663,
+        0.008987766690552235,
+        0.0041892025619745255,
+        0.003198211081326008,
+        0.0010414952412247658,
+        0.00021354667842388153,
+        0.0003487085923552513,
+        0.0014290902763605118,
+        0.0008401153609156609,
+        0.0005439938977360725,
+        0.000750245526432991,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "layer_rho": [
+        0.851181618878021,
+        0.39726388941549295,
+        0.9628864303977376,
+        1.3820613003518902,
+        0.7195989240906218,
+        0.31299059423382714,
+        0.19702218277655734,
+        0.12283773463377165,
+        0.08463943300742974,
+        0.06416962655730821,
+        0.04456946434316653,
+        0.038490164082587736,
+        0.03298506565656955,
+        0.03730193050452943,
+        0.04062180750530536,
+        0.03848053532530657,
+        0.03219080193063332,
+        0.0
+      ],
+      "subsets": {
+        "curvature_control": [
+          10,
+          11
+        ],
+        "gain_control": [
+          3,
+          4
+        ],
+        "low_curvature_control": [
+          10,
+          11
+        ],
+        "canonical": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "all_layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "random_same_size": [
+          3,
+          16
+        ],
+        "wrong_layers": [
+          15,
+          17
+        ]
+      },
+      "target_abs_delta_attr": 0.0027284203097224236,
+      "rows": {
+        "curvature_control": [
+          {
+            "method": "curvature_control",
+            "layers": [
+              10,
+              11
+            ],
+            "alpha": 1.0,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.0027284203097224236,
+            "mean_delta_attr": 0.001386146992444992,
+            "mean_abs_delta_attr": 0.0013862140476703644,
+            "mean_id_cos": 0.9990819990634918,
+            "mean_lpips_proxy": 0.002406673156656325
+          }
+        ],
+        "gain_control": [
+          {
+            "method": "gain_control",
+            "layers": [
+              3,
+              4
+            ],
+            "alpha": -0.09263617903915615,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.029453074792400002,
+            "mean_delta_attr": -0.008855806663632393,
+            "mean_abs_delta_attr": 0.008855806663632393,
+            "mean_id_cos": 0.9980805814266205,
+            "mean_lpips_proxy": 0.007088129874318838
+          }
+        ],
+        "low_curvature_control": [
+          {
+            "method": "low_curvature_control",
+            "layers": [
+              10,
+              11
+            ],
+            "alpha": 1.0,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.0027284203097224236,
+            "mean_delta_attr": 0.001386146992444992,
+            "mean_abs_delta_attr": 0.0013862140476703644,
+            "mean_id_cos": 0.9990819990634918,
+            "mean_lpips_proxy": 0.002406673156656325
+          }
+        ],
+        "canonical": [
+          {
+            "method": "canonical",
+            "layers": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "alpha": -0.15840776143251575,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.017224031733348966,
+            "mean_delta_attr": -0.004219697788357735,
+            "mean_abs_delta_attr": 0.004219697788357735,
+            "mean_id_cos": 0.9979375004768372,
+            "mean_lpips_proxy": 0.008430738234892488
+          }
+        ],
+        "all_layers": [
+          {
+            "method": "all_layers",
+            "layers": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "alpha": -0.06706321787255672,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.04068430350162089,
+            "mean_delta_attr": -0.0064534954726696014,
+            "mean_abs_delta_attr": 0.0064534954726696014,
+            "mean_id_cos": 0.9977936744689941,
+            "mean_lpips_proxy": 0.010119467973709106
+          }
+        ],
+        "random_same_size": [
+          {
+            "method": "random_same_size",
+            "layers": [
+              3,
+              16
+            ],
+            "alpha": -0.10646708385083413,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.025626890594139695,
+            "mean_delta_attr": -0.008389485999941826,
+            "mean_abs_delta_attr": 0.008389485999941826,
+            "mean_id_cos": 0.9985466301441193,
+            "mean_lpips_proxy": 0.0053060632199049
+          }
+        ],
+        "wrong_layers": [
+          {
+            "method": "wrong_layers",
+            "layers": [
+              15,
+              17
+            ],
+            "alpha": 1.0,
+            "target_abs_delta_attr": 0.0027284203097224236,
+            "target_reached_on_calib": false,
+            "calib_max_abs_delta_attr": 0.0,
+            "mean_delta_attr": 0.0,
+            "mean_abs_delta_attr": 0.0,
+            "mean_id_cos": 0.9999999701976776,
+            "mean_lpips_proxy": 0.0
+          }
+        ]
+      },
+      "summary": {
+        "curvature_control": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.0013862140476703644,
+          "mean_id_cos": 0.9990819990634918,
+          "mean_lpips_proxy": 0.002406673156656325,
+          "mean_abs_alpha": 1.0
+        },
+        "gain_control": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.008855806663632393,
+          "mean_id_cos": 0.9980805814266205,
+          "mean_lpips_proxy": 0.007088129874318838,
+          "mean_abs_alpha": 0.09263617903915615
+        },
+        "low_curvature_control": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.0013862140476703644,
+          "mean_id_cos": 0.9990819990634918,
+          "mean_lpips_proxy": 0.002406673156656325,
+          "mean_abs_alpha": 1.0
+        },
+        "canonical": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.004219697788357735,
+          "mean_id_cos": 0.9979375004768372,
+          "mean_lpips_proxy": 0.008430738234892488,
+          "mean_abs_alpha": 0.15840776143251575
+        },
+        "all_layers": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.0064534954726696014,
+          "mean_id_cos": 0.9977936744689941,
+          "mean_lpips_proxy": 0.010119467973709106,
+          "mean_abs_alpha": 0.06706321787255672
+        },
+        "random_same_size": {
+          "n": 1,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.008389485999941826,
+          "mean_id_cos": 0.9985466301441193,
+          "mean_lpips_proxy": 0.0053060632199049,
+          "mean_abs_alpha": 0.10646708385083413
+        },
+        "wrong_layers": {
+          "n": 1,
+          "target_hit_rate_calib": 0.0,
+          "mean_abs_delta_attr": 0.0,
+          "mean_id_cos": 0.9999999701976776,
+          "mean_lpips_proxy": 0.0,
+          "mean_abs_alpha": 1.0
+        }
+      }
+    }
+  },
+  "config": {
+    "attrs": [
+      "smile"
+    ],
+    "layer_k": 2,
+    "n_probe": 2,
+    "n_calib": 2,
+    "n_test": 2,
+    "probe_alpha": 1.0,
+    "max_alpha": 1.0,
+    "alpha_steps": 2,
+    "target_quantile": 0.25,
+    "batch": 2,
+    "lod": 2.0,
+    "rho_source": "experiments/out/per_layer_c1_ffhq/metrics.json",
+    "out": "experiments/out/control_layer_smoke",
+    "seed": 2027
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-23T02:01:18.864685+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_layer_control.py",
+    "rho_source": "/mnt/20t/study/HIGAN/paper/experiments/out/per_layer_c1_ffhq/metrics.json",
+    "lod_override": 2.0
+  }
+}

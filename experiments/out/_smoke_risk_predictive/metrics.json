@@ -1,0 +1,340 @@
+{
+  "per_attr": {
+    "clouds": {
+      "target_abs_delta_attr": 0.009805390262044966,
+      "gain_floor": 0.0034218495711684227,
+      "rows": [
+        {
+          "seed": 9991,
+          "domain": "church",
+          "attr": "clouds",
+          "candidate_index": 0,
+          "source_group": "ganspace",
+          "source_rank": 0,
+          "rho": 0.11570358276367188,
+          "probe_gain": 0.005125425290316343,
+          "probe_sign": -1.0,
+          "alpha": -0.7202249555103587,
+          "target_abs_delta_attr": 0.009805390262044966,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.02214219467714429,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.003234795294702053,
+          "mean_abs_delta_attr": 0.00505316536873579,
+          "mean_id_cos": 0.9865418374538422,
+          "mean_lpips_proxy": 0.01711788633838296,
+          "mean_lpips_true": 0.016277004033327103
+        },
+        {
+          "seed": 9991,
+          "domain": "church",
+          "attr": "clouds",
+          "candidate_index": 1,
+          "source_group": "ganspace",
+          "source_rank": 1,
+          "rho": 0.16324210166931152,
+          "probe_gain": 0.006796703208237886,
+          "probe_sign": -1.0,
+          "alpha": -0.842208626919635,
+          "target_abs_delta_attr": 0.009805390262044966,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.013716886285692453,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.0012736013159155846,
+          "mean_abs_delta_attr": 0.004352833144366741,
+          "mean_id_cos": 0.9837358593940735,
+          "mean_lpips_proxy": 0.02247701119631529,
+          "mean_lpips_true": 0.02036777976900339
+        },
+        {
+          "seed": 9991,
+          "domain": "church",
+          "attr": "clouds",
+          "candidate_index": 2,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 0.16927176713943481,
+          "probe_gain": 0.001176710706204176,
+          "probe_sign": 1.0,
+          "alpha": 1.8971070567768145,
+          "target_abs_delta_attr": 0.009805390262044966,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.010299998801201582,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.00881402101367712,
+          "mean_abs_delta_attr": 0.009241553954780102,
+          "mean_id_cos": 0.9762865900993347,
+          "mean_lpips_proxy": 0.019561642315238714,
+          "mean_lpips_true": 0.024654749780893326
+        },
+        {
+          "seed": 9991,
+          "domain": "church",
+          "attr": "clouds",
+          "candidate_index": 3,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 0.10995889455080032,
+          "probe_gain": 0.001718273852020502,
+          "probe_sign": 1.0,
+          "alpha": -2.0,
+          "target_abs_delta_attr": 0.009805390262044966,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.008321564644575119,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.009258556179702282,
+          "mean_abs_delta_attr": 0.009258556179702282,
+          "mean_id_cos": 0.9765208661556244,
+          "mean_lpips_proxy": 0.028019054792821407,
+          "mean_lpips_true": 0.02990824542939663
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "clouds",
+          "low_candidate": 0,
+          "high_candidate": 1,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0016712779179215431,
+          "rho_diff_low_minus_high": -0.04753851890563965,
+          "mean_abs_delta_attr_diff_low_minus_high": 0.0007003322243690491,
+          "mean_id_cos_diff_low_minus_high": 0.0028059780597686768,
+          "mean_lpips_proxy_diff_low_minus_high": -0.005359124857932329,
+          "mean_lpips_true_diff_low_minus_high": -0.004090775735676289
+        }
+      ],
+      "aggregate": {
+        "n_rows": 2,
+        "n_matched_pairs": 1,
+        "spearman": {
+          "rho_vs_id": {
+            "r": NaN,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 2,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 2,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 1,
+            "mean": 0.0028059780597686768,
+            "median": 0.0028059780597686768,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              0.0028059780597686768,
+              0.0028059780597686768
+            ],
+            "orientation": "higher",
+            "wins": 1
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 1,
+            "mean": -0.004090775735676289,
+            "median": -0.004090775735676289,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              -0.004090775735676289,
+              -0.004090775735676289
+            ],
+            "orientation": "lower",
+            "wins": 1
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 1,
+            "mean": 0.0007003322243690491,
+            "median": 0.0007003322243690491,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              0.0007003322243690491,
+              0.0007003322243690491
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "n_rows": 2,
+    "n_matched_pairs": 1,
+    "spearman": {
+      "rho_vs_id": {
+        "r": NaN,
+        "orientation": "lower"
+      },
+      "rho_vs_lpips": {
+        "r": NaN,
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      }
+    },
+    "regression": {
+      "id": {
+        "n": 2,
+        "beta_rho": NaN,
+        "orientation": "lower"
+      },
+      "lpips": {
+        "n": 2,
+        "beta_rho": NaN,
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      }
+    },
+    "matched_pairs": {
+      "mean_id_cos_diff_low_minus_high": {
+        "n": 1,
+        "mean": 0.0028059780597686768,
+        "median": 0.0028059780597686768,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0028059780597686768,
+          0.0028059780597686768
+        ],
+        "orientation": "higher",
+        "wins": 1
+      },
+      "mean_lpips_true_diff_low_minus_high": {
+        "n": 1,
+        "mean": -0.004090775735676289,
+        "median": -0.004090775735676289,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          -0.004090775735676289,
+          -0.004090775735676289
+        ],
+        "orientation": "lower",
+        "wins": 1
+      },
+      "mean_abs_delta_attr_diff_low_minus_high": {
+        "n": 1,
+        "mean": 0.0007003322243690491,
+        "median": 0.0007003322243690491,
+        "std": 0.0,
+        "sem": 0.0,
+        "ci95_normal": [
+          0.0007003322243690491,
+          0.0007003322243690491
+        ],
+        "orientation": "matched"
+      }
+    }
+  },
+  "config": {
+    "domain": "church",
+    "attrs": [
+      "clouds"
+    ],
+    "methods": [
+      "ganspace",
+      "sefa"
+    ],
+    "candidate_k": 2,
+    "ganspace_samples": 64,
+    "min_gain_quantile": 0.5,
+    "gain_match_rel": 0.5,
+    "n_risk": 1,
+    "n_probe": 2,
+    "probe_alpha": 1.0,
+    "n_calib": 2,
+    "n_test": 2,
+    "alpha_steps": 3,
+    "max_alpha": 2.0,
+    "target_quantile": 0.25,
+    "batch": 2,
+    "true_lpips": true,
+    "lpips_net": "alex",
+    "lpips_size": 64,
+    "out": "experiments/out/_smoke_risk_predictive",
+    "seed": 9991,
+    "protocol": null,
+    "protocol_key": "cross_domain_risk_predictive"
+  },
+  "_meta": {
+    "seed": 9991,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-26T18:40:57.723474+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_cross_domain_risk_predictive.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_cross_domain_risk_predictive.py",
+        "--domain",
+        "church",
+        "--attrs",
+        "clouds",
+        "--methods",
+        "ganspace",
+        "sefa",
+        "--candidate-k",
+        "2",
+        "--ganspace-samples",
+        "64",
+        "--min-gain-quantile",
+        "0.5",
+        "--gain-match-rel",
+        "0.5",
+        "--true-lpips",
+        "--lpips-net",
+        "alex",
+        "--lpips-size",
+        "64",
+        "--n-risk",
+        "1",
+        "--n-probe",
+        "2",
+        "--n-calib",
+        "2",
+        "--n-test",
+        "2",
+        "--alpha-steps",
+        "3",
+        "--max-alpha",
+        "2",
+        "--target-quantile",
+        "0.25",
+        "--batch",
+        "2",
+        "--out",
+        "experiments/out/_smoke_risk_predictive",
+        "--seed",
+        "9991"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 171945,
+      "timestamp_utc": "2026-05-26T18:40:57.723452+00:00",
+      "protocol_path": null,
+      "protocol_key": "cross_domain_risk_predictive"
+    }
+  }
+}

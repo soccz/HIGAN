@@ -1,0 +1,3611 @@
+{
+  "inputs": [
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+    "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json"
+  ],
+  "n_runs": 5,
+  "seeds": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "attrs": [
+    "age",
+    "eyeglasses",
+    "gender",
+    "pose",
+    "smile"
+  ],
+  "comparisons": {
+    "risk_minus_gain_only": [
+      "risk_aware",
+      "gain_only"
+    ],
+    "risk_minus_random": [
+      "risk_aware",
+      "random"
+    ],
+    "risk_minus_high_risk": [
+      "risk_aware",
+      "high_risk"
+    ],
+    "risk_minus_low_risk": [
+      "risk_aware",
+      "low_risk"
+    ]
+  },
+  "metrics": [
+    "mean_id_cos",
+    "mean_lpips_proxy",
+    "mean_abs_delta_attr"
+  ],
+  "cell_level": {
+    "risk_minus_gain_only": {
+      "mean_id_cos": {
+        "n": 25,
+        "mean": 0.012740247488254681,
+        "median": 0.005107506178319454,
+        "std": 0.023488818748508115,
+        "sem": 0.004697763749701623,
+        "ci95_normal": [
+          0.003532630538839501,
+          0.021947864437669863
+        ],
+        "mean_abs": 0.01594517255318351,
+        "orientation": "higher",
+        "wins": 18,
+        "win_rate": 0.72,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "mean": -0.06273226228273415,
+        "median": -0.03806673598046473,
+        "std": 0.09496522031472353,
+        "sem": 0.018993044062944706,
+        "ci95_normal": [
+          -0.09995862864610577,
+          -0.02550589591936253
+        ],
+        "mean_abs": 0.07665392301008979,
+        "orientation": "lower",
+        "wins": 20,
+        "win_rate": 0.8,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "mean": -0.0010140282127258616,
+        "median": -0.0006139438351056015,
+        "std": 0.0015754276728298063,
+        "sem": 0.00031508553456596126,
+        "ci95_normal": [
+          -0.0016315958604751456,
+          -0.0003964605649765775
+        ],
+        "mean_abs": 0.0012739276817274004,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_random": {
+      "mean_id_cos": {
+        "n": 25,
+        "mean": 0.034916530426125976,
+        "median": 0.03045717644272372,
+        "std": 0.022971381368745818,
+        "sem": 0.0045942762737491635,
+        "ci95_normal": [
+          0.025911748929577615,
+          0.04392131192267434
+        ],
+        "mean_abs": 0.034916530426125976,
+        "orientation": "higher",
+        "wins": 25,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "mean": -0.16283244709939027,
+        "median": -0.14119320633108146,
+        "std": 0.09829446039236818,
+        "sem": 0.019658892078473635,
+        "ci95_normal": [
+          -0.2013638755731986,
+          -0.12430101862558193
+        ],
+        "mean_abs": 0.16283244709939027,
+        "orientation": "lower",
+        "wins": 25,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "mean": -0.0023933164257960017,
+        "median": -0.0021144324527995195,
+        "std": 0.0018117049885481734,
+        "sem": 0.0003623409977096347,
+        "ci95_normal": [
+          -0.0031035047813068855,
+          -0.0016831280702851177
+        ],
+        "mean_abs": 0.0025056416036932207,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_high_risk": {
+      "mean_id_cos": {
+        "n": 25,
+        "mean": 0.06701912263291888,
+        "median": 0.07326518627814949,
+        "std": 0.046122008218439974,
+        "sem": 0.009224401643687995,
+        "ci95_normal": [
+          0.04893929541129041,
+          0.08509894985454736
+        ],
+        "mean_abs": 0.06701912263291888,
+        "orientation": "higher",
+        "wins": 25,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "mean": -0.328312273254669,
+        "median": -0.39784934890121804,
+        "std": 0.18598897575415613,
+        "sem": 0.03719779515083123,
+        "ci95_normal": [
+          -0.40121995175029823,
+          -0.25540459475903976
+        ],
+        "mean_abs": 0.328312273254669,
+        "orientation": "lower",
+        "wins": 25,
+        "win_rate": 1.0,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "mean": -0.005210226564381628,
+        "median": -0.0039560352142871125,
+        "std": 0.0040007328395586265,
+        "sem": 0.0008001465679117253,
+        "ci95_normal": [
+          -0.00677851383748861,
+          -0.003641939291274647
+        ],
+        "mean_abs": 0.005244910515543779,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      }
+    },
+    "risk_minus_low_risk": {
+      "mean_id_cos": {
+        "n": 25,
+        "mean": 0.01694974484620616,
+        "median": 0.010908941738307476,
+        "std": 0.015445723167171535,
+        "sem": 0.003089144633434307,
+        "ci95_normal": [
+          0.010895021364674918,
+          0.0230044683277374
+        ],
+        "mean_abs": 0.01815155028598383,
+        "orientation": "higher",
+        "wins": 22,
+        "win_rate": 0.88,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "mean": -0.07353563634871535,
+        "median": -0.060104939628217835,
+        "std": 0.07138330534165012,
+        "sem": 0.014276661068330023,
+        "ci95_normal": [
+          -0.1015178920426422,
+          -0.045553380654788506
+        ],
+        "mean_abs": 0.08079103352985839,
+        "orientation": "lower",
+        "wins": 19,
+        "win_rate": 0.76,
+        "unit": "seed_attribute_cell"
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "mean": -0.00016703142272490369,
+        "median": -0.0001359241371119424,
+        "std": 0.0024020210555892123,
+        "sem": 0.0004804042111178425,
+        "ci95_normal": [
+          -0.001108623676515875,
+          0.0007745608310660675
+        ],
+        "mean_abs": 0.0017571806661544542,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_attribute_cell"
+      }
+    }
+  },
+  "seed_level": {
+    "risk_minus_gain_only": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": 0.01274024748825468,
+        "median": 0.012810141465160995,
+        "std": 0.005159655016999561,
+        "sem": 0.00230746787169177,
+        "ci95_normal": [
+          0.00821761045973881,
+          0.01726288451677055
+        ],
+        "mean_abs": 0.01274024748825468,
+        "orientation": "higher",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": -0.06273226228273417,
+        "median": -0.06615032861336659,
+        "std": 0.018572515120214683,
+        "sem": 0.008305881264388542,
+        "ci95_normal": [
+          -0.07901178956093571,
+          -0.046452735004532626
+        ],
+        "mean_abs": 0.06273226228273417,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": -0.0010140282127258614,
+        "median": -0.0009636543202759639,
+        "std": 0.00032405750494627294,
+        "sem": 0.00014492292193576812,
+        "ci95_normal": [
+          -0.0012980771397199668,
+          -0.0007299792857317559
+        ],
+        "mean_abs": 0.0010140282127258614,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_random": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": 0.034916530426125976,
+        "median": 0.034427925676573067,
+        "std": 0.0084214346278424,
+        "sem": 0.0037661800591852496,
+        "ci95_normal": [
+          0.027534817510122888,
+          0.04229824334212907
+        ],
+        "mean_abs": 0.034916530426125976,
+        "orientation": "higher",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": -0.16283244709939027,
+        "median": -0.17185367921192665,
+        "std": 0.03610847161738884,
+        "sem": 0.016148199420020642,
+        "ci95_normal": [
+          -0.19448291796263073,
+          -0.1311819762361498
+        ],
+        "mean_abs": 0.16283244709939027,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": -0.0023933164257960017,
+        "median": -0.0025624528680054937,
+        "std": 0.00042940081684049035,
+        "sem": 0.00019203388320985457,
+        "ci95_normal": [
+          -0.0027697028368873166,
+          -0.002016930014704687
+        ],
+        "mean_abs": 0.0023933164257960017,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_high_risk": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": 0.0670191226329189,
+        "median": 0.06637331998208537,
+        "std": 0.009180584745017893,
+        "sem": 0.004105682312611517,
+        "ci95_normal": [
+          0.05897198530020033,
+          0.07506625996563747
+        ],
+        "mean_abs": 0.0670191226329189,
+        "orientation": "higher",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": -0.32831227325466894,
+        "median": -0.3341185943749224,
+        "std": 0.0227661880600238,
+        "sem": 0.010181348818151456,
+        "ci95_normal": [
+          -0.3482677169382458,
+          -0.30835682957109206
+        ],
+        "mean_abs": 0.32831227325466894,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": -0.005210226564381628,
+        "median": -0.005248940664705515,
+        "std": 0.0008334265734227342,
+        "sem": 0.0003727196944855906,
+        "ci95_normal": [
+          -0.005940757165573386,
+          -0.00447969596318987
+        ],
+        "mean_abs": 0.005210226564381628,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      }
+    },
+    "risk_minus_low_risk": {
+      "mean_id_cos": {
+        "n": 5,
+        "mean": 0.016949744846206156,
+        "median": 0.017579449887853114,
+        "std": 0.0017286139597042552,
+        "sem": 0.0007730596641507593,
+        "ci95_normal": [
+          0.015434547904470668,
+          0.018464941787941645
+        ],
+        "mean_abs": 0.016949744846206156,
+        "orientation": "higher",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_lpips_proxy": {
+        "n": 5,
+        "mean": -0.07353563634871534,
+        "median": -0.07279749951048871,
+        "std": 0.0038654698848038195,
+        "sem": 0.0017286906854799243,
+        "ci95_normal": [
+          -0.07692387009225599,
+          -0.07014740260517469
+        ],
+        "mean_abs": 0.07353563634871534,
+        "orientation": "lower",
+        "wins": 5,
+        "win_rate": 1.0,
+        "unit": "seed_mean"
+      },
+      "mean_abs_delta_attr": {
+        "n": 5,
+        "mean": -0.00016703142272490369,
+        "median": -8.226036743508303e-05,
+        "std": 0.0007222216273161892,
+        "sem": 0.0003229873306999036,
+        "ci95_normal": [
+          -0.0008000865908967148,
+          0.0004660237454469074
+        ],
+        "mean_abs": 0.0005629185378165857,
+        "orientation": "matched",
+        "note": "Raw risk-aware minus baseline semantic magnitude; closer to zero is preferred.",
+        "unit": "seed_mean"
+      }
+    }
+  },
+  "per_seed": {
+    "2027": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.0058544578962028025,
+        "mean_lpips_proxy": -0.03605545338941738,
+        "mean_abs_delta_attr": -0.0007008192490275178
+      },
+      "risk_minus_random": {
+        "mean_id_cos": 0.02561842282884754,
+        "mean_lpips_proxy": -0.12494379706295149,
+        "mean_abs_delta_attr": -0.0025624528680054937
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.0618085339141544,
+        "mean_lpips_proxy": -0.3079332308439916,
+        "mean_abs_delta_attr": -0.00530955725835156
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": 0.017627920734230428,
+        "mean_lpips_proxy": -0.07940740823287343,
+        "mean_abs_delta_attr": -0.0011354563247550687
+      }
+    },
+    "2028": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.012810141465160995,
+        "mean_lpips_proxy": -0.06615032861336659,
+        "mean_abs_delta_attr": -0.0009636543202759639
+      },
+      "risk_minus_random": {
+        "mean_id_cos": 0.04382693981751799,
+        "mean_lpips_proxy": -0.21180885089033835,
+        "mean_abs_delta_attr": -0.002859679679295368
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.07611963065573946,
+        "mean_lpips_proxy": -0.3341185943749224,
+        "mean_abs_delta_attr": -0.005248940664705515
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": 0.013902133668307216,
+        "mean_lpips_proxy": -0.07453423004899377,
+        "mean_abs_delta_attr": 0.0006839015115929215
+      }
+    },
+    "2029": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.010033856134396047,
+        "mean_lpips_proxy": -0.06636931997054489,
+        "mean_abs_delta_attr": -0.000711193858205661
+      },
+      "risk_minus_random": {
+        "mean_id_cos": 0.034427925676573067,
+        "mean_lpips_proxy": -0.17185367921192665,
+        "mean_abs_delta_attr": -0.0020552294948629423
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.05487366522429511,
+        "mean_lpips_proxy": -0.30153725879572446,
+        "mean_abs_delta_attr": -0.004353605745313871
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": 0.01743574192514643,
+        "mean_lpips_proxy": -0.07204203184737708,
+        "mean_abs_delta_attr": -8.226036743508303e-05
+      }
+    },
+    "2030": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.015711468155495824,
+        "mean_lpips_proxy": -0.057531700487015766,
+        "mean_abs_delta_attr": -0.001400392657114935
+      },
+      "risk_minus_random": {
+        "mean_id_cos": 0.043010051141027364,
+        "mean_lpips_proxy": -0.17620316147731502,
+        "mean_abs_delta_attr": -0.002652598080317148
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.07592046338832006,
+        "mean_lpips_proxy": -0.3541076406916545,
+        "mean_abs_delta_attr": -0.0065116024350572845
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": 0.017579449887853114,
+        "mean_lpips_proxy": -0.07279749951048871,
+        "mean_abs_delta_attr": -0.0006071582091635719
+      }
+    },
+    "2031": {
+      "risk_minus_gain_only": {
+        "mean_id_cos": 0.01929131379001774,
+        "mean_lpips_proxy": -0.08755450895332614,
+        "mean_abs_delta_attr": -0.00129408097900523
+      },
+      "risk_minus_random": {
+        "mean_id_cos": 0.0276993126666639,
+        "mean_lpips_proxy": -0.12935274685441983,
+        "mean_abs_delta_attr": -0.0018366220064990556
+      },
+      "risk_minus_high_risk": {
+        "mean_id_cos": 0.06637331998208537,
+        "mean_lpips_proxy": -0.3438646415670519,
+        "mean_abs_delta_attr": -0.00462742671847991
+      },
+      "risk_minus_low_risk": {
+        "mean_id_cos": 0.0182034780154936,
+        "mean_lpips_proxy": -0.06889701210384373,
+        "mean_abs_delta_attr": 0.0003058162761362837
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.8984382550697774,
+      "baseline_value": 0.8691555177792907,
+      "diff": 0.029282737290486693
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5353127255948493,
+      "baseline_value": 0.6547645804675994,
+      "diff": -0.11945185487275012
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.023156996351190173,
+      "baseline_value": 0.02473009546031335,
+      "diff": -0.0015730991091231772
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.8984382550697774,
+      "baseline_value": 0.8679810786270536,
+      "diff": 0.03045717644272372
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5353127255948493,
+      "baseline_value": 0.6450356467539677,
+      "diff": -0.10972292115911841
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.023156996351190173,
+      "baseline_value": 0.024935902735705895,
+      "diff": -0.0017789063845157216
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.8984382550697774,
+      "baseline_value": 0.7915826852549799,
+      "diff": 0.10685556981479749
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5353127255948493,
+      "baseline_value": 0.9825746312126284,
+      "diff": -0.4472619056177791
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.023156996351190173,
+      "baseline_value": 0.027113031565477286,
+      "diff": -0.0039560352142871125
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.8984382550697774,
+      "baseline_value": 0.8948901457479224,
+      "diff": 0.0035481093218550086
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5353127255948493,
+      "baseline_value": 0.526583850994939,
+      "diff": 0.008728874599910341
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.023156996351190173,
+      "baseline_value": 0.023292920488302116,
+      "diff": -0.0001359241371119424
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.929464633401949,
+      "baseline_value": 0.936975747696124,
+      "diff": -0.007511114294175059
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3803206313659757,
+      "baseline_value": 0.3341468600610824,
+      "diff": 0.04617377130489331
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.014108635849879647,
+      "baseline_value": 0.014621222520872834,
+      "diff": -0.000512586670993187
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.929464633401949,
+      "baseline_value": 0.8953469221887644,
+      "diff": 0.03411771121318452
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3803206313659757,
+      "baseline_value": 0.5036902094834659,
+      "diff": -0.12336957811749016
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.014108635849879647,
+      "baseline_value": 0.017362821378810622,
+      "diff": -0.003254185528930975
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.929464633401949,
+      "baseline_value": 0.8467675844149198,
+      "diff": 0.08269704898702912
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3803206313659757,
+      "baseline_value": 0.7536055953823961,
+      "diff": -0.3732849640164204
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.014108635849879647,
+      "baseline_value": 0.021207437957627917,
+      "diff": -0.00709880210774827
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.929464633401949,
+      "baseline_value": 0.8947158153750934,
+      "diff": 0.03474881802685559
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3803206313659757,
+      "baseline_value": 0.5222543761410634,
+      "diff": -0.1419337447750877
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.014108635849879647,
+      "baseline_value": 0.015542084583103133,
+      "diff": -0.0014334487332234858
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9427004683529958,
+      "baseline_value": 0.9437869663233869,
+      "diff": -0.0010864979703910649
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.32351311410820927,
+      "baseline_value": 0.35333542645457783,
+      "diff": -0.029822312346368562
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02697712350391157,
+      "baseline_value": 0.027011248299004365,
+      "diff": -3.412479509279365e-05
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9427004683529958,
+      "baseline_value": 0.9110504898708314,
+      "diff": 0.03164997848216444
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.32351311410820927,
+      "baseline_value": 0.5092316577211022,
+      "diff": -0.18571854361289297
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02697712350391157,
+      "baseline_value": 0.031766694789894245,
+      "diff": -0.0047895712859826745
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9427004683529958,
+      "baseline_value": 0.8593546835472807,
+      "diff": 0.08334578480571508
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.32351311410820927,
+      "baseline_value": 0.7987667418601632,
+      "diff": -0.4752536277519539
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02697712350391157,
+      "baseline_value": 0.03922156502176222,
+      "diff": -0.012244441517850646
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9427004683529958,
+      "baseline_value": 0.9019463518634439,
+      "diff": 0.04075411648955196
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.32351311410820927,
+      "baseline_value": 0.49827469751471654,
+      "diff": -0.17476158340650727
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02697712350391157,
+      "baseline_value": 0.030414545215990074,
+      "diff": -0.0034374217120785033
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9385992492316291,
+      "baseline_value": 0.9363217895152047,
+      "diff": 0.002277459716424346
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3551269140734803,
+      "baseline_value": 0.3917561866546748,
+      "diff": -0.03662927258119453
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00804113262233841,
+      "baseline_value": 0.008811474457161239,
+      "diff": -0.0007703418348228297
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9385992492316291,
+      "baseline_value": 0.9370317280991003,
+      "diff": 0.0015675211325287819
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3551269140734803,
+      "baseline_value": 0.3989233230604441,
+      "diff": -0.0437964089869638
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00804113262233841,
+      "baseline_value": 0.008898455197822841,
+      "diff": -0.0008573225754844316
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9385992492316291,
+      "baseline_value": 0.9226069403812289,
+      "diff": 0.01599230885040015
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3551269140734803,
+      "baseline_value": 0.45308557975658914,
+      "diff": -0.09795866568310885
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00804113262233841,
+      "baseline_value": 0.009510512484666833,
+      "diff": -0.0014693798623284238
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9385992492316291,
+      "baseline_value": 0.9401995168882422,
+      "diff": -0.0016002676566131413
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3551269140734803,
+      "baseline_value": 0.3662090101861395,
+      "diff": -0.011082096112659201
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00804113262233841,
+      "baseline_value": 0.00810046511355722,
+      "diff": -5.93324912188109e-05
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9540066744666547,
+      "baseline_value": 0.9476969697279856,
+      "diff": 0.006309704738669097
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.23983894697812502,
+      "baseline_value": 0.280386545429792,
+      "diff": -0.040547598451667
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.0126319027081081,
+      "baseline_value": 0.013245846543213702,
+      "diff": -0.0006139438351056015
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9540066744666547,
+      "baseline_value": 0.9237069475930184,
+      "diff": 0.030299726873636246
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.23983894697812502,
+      "baseline_value": 0.4019504804164171,
+      "diff": -0.1621115334382921
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.0126319027081081,
+      "baseline_value": 0.014764181273221766,
+      "diff": -0.0021322785651136655
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9540066744666547,
+      "baseline_value": 0.9338547173538245,
+      "diff": 0.020151957112830132
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.23983894697812502,
+      "baseline_value": 0.38574593812882085,
+      "diff": -0.14590699115069583
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.0126319027081081,
+      "baseline_value": 0.01441103029765145,
+      "diff": -0.00177912758954335
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9540066744666547,
+      "baseline_value": 0.9433178469771519,
+      "diff": 0.010688827489502728
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.23983894697812502,
+      "baseline_value": 0.3178274384481483,
+      "diff": -0.07798849147002329
+    },
+    {
+      "seed": 2027,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.0126319027081081,
+      "baseline_value": 0.013243057258250701,
+      "diff": -0.0006111545501426008
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9041768865427002,
+      "baseline_value": 0.8689407585188746,
+      "diff": 0.035236128023825586
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5340944576091715,
+      "baseline_value": 0.6929684936985723,
+      "diff": -0.15887403608940076
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02403508258612419,
+      "baseline_value": 0.02548501677938475,
+      "diff": -0.0014499341932605603
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9041768865427002,
+      "baseline_value": 0.8260441999300383,
+      "diff": 0.07813268661266193
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5340944576091715,
+      "baseline_value": 0.7819515725714155,
+      "diff": -0.24785711496224394
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02403508258612419,
+      "baseline_value": 0.024815840190740346,
+      "diff": -0.0007807576046161557
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9041768865427002,
+      "baseline_value": 0.7779512847191654,
+      "diff": 0.12622560182353482
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5340944576091715,
+      "baseline_value": 0.9958417672023643,
+      "diff": -0.46174730959319277
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02403508258612419,
+      "baseline_value": 0.027633971562181614,
+      "diff": -0.003598888976057424
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9041768865427002,
+      "baseline_value": 0.9139161403290927,
+      "diff": -0.00973925378639251
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5340944576091715,
+      "baseline_value": 0.4874681059809518,
+      "diff": 0.04662635162821971
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02403508258612419,
+      "baseline_value": 0.022131772040211217,
+      "diff": 0.0019033105459129729
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9195257509127259,
+      "baseline_value": 0.899021121673286,
+      "diff": 0.020504629239439964
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4550166178669315,
+      "baseline_value": 0.5433334393164841,
+      "diff": -0.08831682144955266
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02022785235817537,
+      "baseline_value": 0.02262058043493198,
+      "diff": -0.0023927280767566117
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9195257509127259,
+      "baseline_value": 0.8738894884008914,
+      "diff": 0.0456362625118345
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4550166178669315,
+      "baseline_value": 0.6935133435326861,
+      "diff": -0.23849672566575464
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02022785235817537,
+      "baseline_value": 0.024917023319176224,
+      "diff": -0.004689170961000855
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9195257509127259,
+      "baseline_value": 0.7744006288121454,
+      "diff": 0.14512512210058048
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4550166178669315,
+      "baseline_value": 0.9993731461945572,
+      "diff": -0.5443565283276257
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02022785235817537,
+      "baseline_value": 0.03114077158852524,
+      "diff": -0.010912919230349871
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9195257509127259,
+      "baseline_value": 0.8966551768826321,
+      "diff": 0.02287057403009385
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4550166178669315,
+      "baseline_value": 0.5652066123147961,
+      "diff": -0.11018999444786459
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02022785235817537,
+      "baseline_value": 0.01795124692716854,
+      "diff": 0.0022766054310068284
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9289526236243546,
+      "baseline_value": 0.9238451174460351,
+      "diff": 0.005107506178319454
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.37735584712208947,
+      "baseline_value": 0.4225902724501793,
+      "diff": -0.045234425328089856
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.03490241747158507,
+      "baseline_value": 0.03454107763855063,
+      "diff": 0.0003613398330344353
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9289526236243546,
+      "baseline_value": 0.8722169627435505,
+      "diff": 0.05673566088080406
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.37735584712208947,
+      "baseline_value": 0.7189508783631027,
+      "diff": -0.3415950312410132
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.03490241747158507,
+      "baseline_value": 0.03983902899972236,
+      "diff": -0.004936611528137291
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9289526236243546,
+      "baseline_value": 0.8556146833579987,
+      "diff": 0.07333794026635587
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.37735584712208947,
+      "baseline_value": 0.8229985263969866,
+      "diff": -0.4456426792748971
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.03490241747158507,
+      "baseline_value": 0.04344940730675262,
+      "diff": -0.008546989835167551
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9289526236243546,
+      "baseline_value": 0.9032945695798844,
+      "diff": 0.02565805404447019
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.37735584712208947,
+      "baseline_value": 0.5101507622457575,
+      "diff": -0.13279491512366803
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.03490241747158507,
+      "baseline_value": 0.032233170235485886,
+      "diff": 0.0026692472360991815
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9421009625075385,
+      "baseline_value": 0.9440723157022148,
+      "diff": -0.0019713531946763396
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3597351778735174,
+      "baseline_value": 0.3599948020928423,
+      "diff": -0.0002596242193249054
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00866154092227589,
+      "baseline_value": 0.00903890169593069,
+      "diff": -0.00037736077365480014
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9421009625075385,
+      "baseline_value": 0.9222407573251985,
+      "diff": 0.019860205182339996
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3597351778735174,
+      "baseline_value": 0.48254275959334336,
+      "diff": -0.12280758171982598
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00866154092227589,
+      "baseline_value": 0.01043896677219891,
+      "diff": -0.00177742584992302
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9421009625075385,
+      "baseline_value": 0.9211231147055514,
+      "diff": 0.020977847801987082
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3597351778735174,
+      "baseline_value": 0.47457998765457887,
+      "diff": -0.11484480978106149
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00866154092227589,
+      "baseline_value": 0.010233653187242453,
+      "diff": -0.001572112264966563
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9421009625075385,
+      "baseline_value": 0.9320584569941275,
+      "diff": 0.010042505513411015
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3597351778735174,
+      "baseline_value": 0.41047244265064364,
+      "diff": -0.050737264777126256
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.00866154092227589,
+      "baseline_value": 0.009428504703009821,
+      "diff": -0.0007669637807339313
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9764071732060984,
+      "baseline_value": 0.9712333761272021,
+      "diff": 0.005173797078896314
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.1344380391337836,
+      "baseline_value": 0.17250477511424833,
+      "diff": -0.03806673598046473
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008935652496802504,
+      "baseline_value": 0.009895240887544787,
+      "diff": -0.0009595883907422831
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9764071732060984,
+      "baseline_value": 0.9576372893061489,
+      "diff": 0.01876988389994949
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.1344380391337836,
+      "baseline_value": 0.24272583999663766,
+      "diff": -0.10828780086285406
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008935652496802504,
+      "baseline_value": 0.011050084949602024,
+      "diff": -0.0021144324527995195
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9764071732060984,
+      "baseline_value": 0.9614755319198593,
+      "diff": 0.014931641286239028
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.1344380391337836,
+      "baseline_value": 0.23843968403161853,
+      "diff": -0.10400164489783492
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008935652496802504,
+      "baseline_value": 0.010549445513788669,
+      "diff": -0.0016137930169861647
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9764071732060984,
+      "baseline_value": 0.9557283846661448,
+      "diff": 0.02067878853995353
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.1344380391337836,
+      "baseline_value": 0.2600133666583133,
+      "diff": -0.1255753275245297
+    },
+    {
+      "seed": 2028,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008935652496802504,
+      "baseline_value": 0.011598344371122948,
+      "diff": -0.002662691874320444
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9187804178218357,
+      "baseline_value": 0.9092063053394668,
+      "diff": 0.009574112482368946
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4358057132267277,
+      "baseline_value": 0.5421910830627894,
+      "diff": -0.10638536983606173
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.020925576992112838,
+      "baseline_value": 0.020535012992695556,
+      "diff": 0.0003905639994172816
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9187804178218357,
+      "baseline_value": 0.9067566697485745,
+      "diff": 0.012023748073261231
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4358057132267277,
+      "baseline_value": 0.5287161545420531,
+      "diff": -0.09291044131532544
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.020925576992112838,
+      "baseline_value": 0.020071991279337453,
+      "diff": 0.0008535857127753843
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9187804178218357,
+      "baseline_value": 0.8858363832114264,
+      "diff": 0.03294403461040929
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4358057132267277,
+      "baseline_value": 0.698966701325844,
+      "diff": -0.26316098809911637
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.020925576992112838,
+      "baseline_value": 0.022151859381779104,
+      "diff": -0.0012262823896662667
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9187804178218357,
+      "baseline_value": 0.9165618470287882,
+      "diff": 0.0022185707930475473
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4358057132267277,
+      "baseline_value": 0.43084876253124094,
+      "diff": 0.004956950695486739
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.020925576992112838,
+      "baseline_value": 0.020059254751231492,
+      "diff": 0.0008663222408813454
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9212046277243644,
+      "baseline_value": 0.8962339638383128,
+      "diff": 0.024970663886051625
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4242136916400341,
+      "baseline_value": 0.5612020257212862,
+      "diff": -0.1369883340812521
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02434303316340447,
+      "baseline_value": 0.026151436456530064,
+      "diff": -0.0018084032931255933
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9212046277243644,
+      "baseline_value": 0.838475153548643,
+      "diff": 0.0827294741757214
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4242136916400341,
+      "baseline_value": 0.820321115461411,
+      "diff": -0.39610742382137687
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02434303316340447,
+      "baseline_value": 0.027180051695722796,
+      "diff": -0.002837018532318325
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9212046277243644,
+      "baseline_value": 0.7875787917873822,
+      "diff": 0.13362583593698218
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4242136916400341,
+      "baseline_value": 1.0355219175689854,
+      "diff": -0.6113082259289513
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02434303316340447,
+      "baseline_value": 0.031206771453298643,
+      "diff": -0.006863738289894172
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9212046277243644,
+      "baseline_value": 0.8852818933082744,
+      "diff": 0.03592273441608995
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4242136916400341,
+      "baseline_value": 0.5756247138342587,
+      "diff": -0.15141102219422464
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.02434303316340447,
+      "baseline_value": 0.020404065339789668,
+      "diff": 0.003938967823614803
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9339044569642283,
+      "baseline_value": 0.9423552892403677,
+      "diff": -0.008450832276139408
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.354647413289058,
+      "baseline_value": 0.31933224680688,
+      "diff": 0.03531516648217803
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.030892802329617552,
+      "baseline_value": 0.030489520743685716,
+      "diff": 0.00040328158593183616
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9339044569642283,
+      "baseline_value": 0.8824240022222511,
+      "diff": 0.051480454741977155
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.354647413289058,
+      "baseline_value": 0.6067460991616827,
+      "diff": -0.25209868587262463
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.030892802329617552,
+      "baseline_value": 0.03730173022267991,
+      "diff": -0.006408927893062355
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9339044569642283,
+      "baseline_value": 0.8587280490901321,
+      "diff": 0.07517640787409618
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.354647413289058,
+      "baseline_value": 0.8027264461052255,
+      "diff": -0.44807903281616746
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.030892802329617552,
+      "baseline_value": 0.042724435212676326,
+      "diff": -0.011831632883058774
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9339044569642283,
+      "baseline_value": 0.8911158306873403,
+      "diff": 0.04278862627688795
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.354647413289058,
+      "baseline_value": 0.5313847868237644,
+      "diff": -0.17673737353470642
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.030892802329617552,
+      "baseline_value": 0.036707131487673905,
+      "diff": -0.005814329158056353
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9222354869125411,
+      "baseline_value": 0.8993157701333985,
+      "diff": 0.022919716779142618
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.44808546025888063,
+      "baseline_value": 0.5565486467967276,
+      "diff": -0.10846318653784692
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010501831869987654,
+      "baseline_value": 0.012741154831246604,
+      "diff": -0.0022393229612589494
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9222354869125411,
+      "baseline_value": 0.9103666954906657,
+      "diff": 0.011868791421875358
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.44808546025888063,
+      "baseline_value": 0.5007447865355061,
+      "diff": -0.05265932627662551
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010501831869987654,
+      "baseline_value": 0.011791751935106731,
+      "diff": -0.0012899200651190768
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9222354869125411,
+      "baseline_value": 0.89752335177036,
+      "diff": 0.02471213514218107
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.44808546025888063,
+      "baseline_value": 0.5729758902452886,
+      "diff": -0.12489042998640798
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010501831869987654,
+      "baseline_value": 0.012781756423464685,
+      "diff": -0.0022799245534770307
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9222354869125411,
+      "baseline_value": 0.9259185334667563,
+      "diff": -0.0036830465542152524
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.44808546025888063,
+      "baseline_value": 0.42499923483410385,
+      "diff": 0.023086225424776785
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010501831869987654,
+      "baseline_value": 0.009307039221994273,
+      "diff": 0.0011947926479933813
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9533204234903678,
+      "baseline_value": 0.9521648036898114,
+      "diff": 0.001155619800556451
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25166337078189827,
+      "baseline_value": 0.26698824666164,
+      "diff": -0.01532487587974174
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012666492293874398,
+      "baseline_value": 0.012968580915867278,
+      "diff": -0.0003020886219928798
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9533204234903678,
+      "baseline_value": 0.9392832635203376,
+      "diff": 0.014037159970030189
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25166337078189827,
+      "baseline_value": 0.31715588955557905,
+      "diff": -0.06549251877368079
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012666492293874398,
+      "baseline_value": 0.013260358990464738,
+      "diff": -0.0005938666965903394
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9533204234903678,
+      "baseline_value": 0.945410510932561,
+      "diff": 0.00790991255780682
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25166337078189827,
+      "baseline_value": 0.3119109879298776,
+      "diff": -0.06024761714797933
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012666492293874398,
+      "baseline_value": 0.01223294290434751,
+      "diff": 0.00043354938952688826
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9533204234903678,
+      "baseline_value": 0.9433885987964459,
+      "diff": 0.009931824693921953
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25166337078189827,
+      "baseline_value": 0.3117683104101161,
+      "diff": -0.060104939628217835
+    },
+    {
+      "seed": 2029,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012666492293874398,
+      "baseline_value": 0.01326354768548299,
+      "diff": -0.0005970553916085919
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9032140509225428,
+      "baseline_value": 0.8401101689087227,
+      "diff": 0.06310388201382011
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5007553316681879,
+      "baseline_value": 0.7194320654525654,
+      "diff": -0.21867673378437757
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022775481859525826,
+      "baseline_value": 0.02575382772897683,
+      "diff": -0.0029783458694510045
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9032140509225428,
+      "baseline_value": 0.8634540895582177,
+      "diff": 0.039759961364325136
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5007553316681879,
+      "baseline_value": 0.648155614559073,
+      "diff": -0.14740028289088514
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022775481859525826,
+      "baseline_value": 0.025231778872239374,
+      "diff": -0.0024562970127135486
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9032140509225428,
+      "baseline_value": 0.7807803304749541,
+      "diff": 0.12243372044758871
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5007553316681879,
+      "baseline_value": 1.004137742027524,
+      "diff": -0.5033824103593361
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022775481859525826,
+      "baseline_value": 0.028295005653035332,
+      "diff": -0.0055195237935095065
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9032140509225428,
+      "baseline_value": 0.896622242522426,
+      "diff": 0.006591808400116861
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5007553316681879,
+      "baseline_value": 0.5203496377071133,
+      "diff": -0.019594306038925424
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022775481859525826,
+      "baseline_value": 0.02298434309318509,
+      "diff": -0.00020886123365926323
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9176405371981673,
+      "baseline_value": 0.9001245699473657,
+      "diff": 0.017515967250801623
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4514459733181866,
+      "baseline_value": 0.5360402606602293,
+      "diff": -0.08459428734204266
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01966759492802339,
+      "baseline_value": 0.023297456494447033,
+      "diff": -0.003629861566423642
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9176405371981673,
+      "baseline_value": 0.8375955050578341,
+      "diff": 0.0800450321403332
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4514459733181866,
+      "baseline_value": 0.7750755984161515,
+      "diff": -0.3236296250979649
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01966759492802339,
+      "baseline_value": 0.022342260588857243,
+      "diff": -0.0026746656608338526
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9176405371981673,
+      "baseline_value": 0.7819957695901394,
+      "diff": 0.1356447676080279
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4514459733181866,
+      "baseline_value": 1.014166352149914,
+      "diff": -0.5627203788317274
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01966759492802339,
+      "baseline_value": 0.029116702724422794,
+      "diff": -0.009449107796399403
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9176405371981673,
+      "baseline_value": 0.895135618862696,
+      "diff": 0.022504918335471302
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.4514459733181866,
+      "baseline_value": 0.5315662429929944,
+      "diff": -0.08012026967480779
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01966759492802339,
+      "baseline_value": 0.017475781054599793,
+      "diff": 0.002191813873423598
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9493377547478303,
+      "baseline_value": 0.9492986397817731,
+      "diff": 3.911496605724096e-05
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.2743872900173301,
+      "baseline_value": 0.2899410539539531,
+      "diff": -0.015553763936623
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.024960199597444443,
+      "baseline_value": 0.024641857499773323,
+      "diff": 0.00031834209767112043
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9493377547478303,
+      "baseline_value": 0.9089475943474099,
+      "diff": 0.04039016040042043
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.2743872900173301,
+      "baseline_value": 0.44233383570826845,
+      "diff": -0.16794654569093836
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.024960199597444443,
+      "baseline_value": 0.029817254966474138,
+      "diff": -0.004857055369029695
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9493377547478303,
+      "baseline_value": 0.8706036727526225,
+      "diff": 0.07873408199520782
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.2743872900173301,
+      "baseline_value": 0.7445423259305244,
+      "diff": -0.4701550359131943
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.024960199597444443,
+      "baseline_value": 0.03846173259171337,
+      "diff": -0.013501532994268928
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9493377547478303,
+      "baseline_value": 0.9087778810062446,
+      "diff": 0.04055987374158576
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.2743872900173301,
+      "baseline_value": 0.45927951802150346,
+      "diff": -0.18489222800417338
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.024960199597444443,
+      "baseline_value": 0.029914089666362997,
+      "diff": -0.004953890068918554
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9448388764867559,
+      "baseline_value": 0.9402453256188892,
+      "diff": 0.004593550867866725
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3513381325028604,
+      "baseline_value": 0.3541214856377337,
+      "diff": -0.002783353134873323
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008300344620010947,
+      "baseline_value": 0.009208520810716436,
+      "diff": -0.0009081761907054897
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9448388764867559,
+      "baseline_value": 0.9138167400378734,
+      "diff": 0.03102213644888252
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3513381325028604,
+      "baseline_value": 0.4521842798785656,
+      "diff": -0.10084614737570519
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008300344620010947,
+      "baseline_value": 0.009602077160366207,
+      "diff": -0.0013017325403552604
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9448388764867559,
+      "baseline_value": 0.9155423383926973,
+      "diff": 0.029296538094058633
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3513381325028604,
+      "baseline_value": 0.486838296877977,
+      "diff": -0.13550016437511658
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008300344620010947,
+      "baseline_value": 0.011378415013723497,
+      "diff": -0.003078070393712551
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9448388764867559,
+      "baseline_value": 0.9318171063205227,
+      "diff": 0.013021770166233182
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3513381325028604,
+      "baseline_value": 0.3914059663802618,
+      "diff": -0.040067833877401426
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.008300344620010947,
+      "baseline_value": 0.008391840735953338,
+      "diff": -9.149611594239104e-05
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9501026272191666,
+      "baseline_value": 0.9567978015402332,
+      "diff": -0.006695174321066588
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25538121863428387,
+      "baseline_value": 0.22143158287144615,
+      "diff": 0.033949635762837715
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01313690210599816,
+      "baseline_value": 0.01294082386266382,
+      "diff": 0.0001960782433343411
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9501026272191666,
+      "baseline_value": 0.9262696618679911,
+      "diff": 0.023832965351175517
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25538121863428387,
+      "baseline_value": 0.3965744249653653,
+      "diff": -0.14119320633108146
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01313690210599816,
+      "baseline_value": 0.015110141924651543,
+      "diff": -0.001973239818653383
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9501026272191666,
+      "baseline_value": 0.9366094184224494,
+      "diff": 0.013493208796717227
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25538121863428387,
+      "baseline_value": 0.3541614326131821,
+      "diff": -0.09878021397889825
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01313690210599816,
+      "baseline_value": 0.014146679303394194,
+      "diff": -0.0010097771973960334
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9501026272191666,
+      "baseline_value": 0.9448837484233081,
+      "diff": 0.005218878795858473
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.25538121863428387,
+      "baseline_value": 0.2946940785914194,
+      "diff": -0.039312859957135515
+    },
+    {
+      "seed": 2030,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.01313690210599816,
+      "baseline_value": 0.01311025960671941,
+      "diff": 2.664249927875062e-05
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.908059653302189,
+      "baseline_value": 0.8154988448077347,
+      "diff": 0.09256080849445425
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5210823914385401,
+      "baseline_value": 0.9034096329269232,
+      "diff": -0.38232724148838315
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022005059484854428,
+      "baseline_value": 0.028006720268649588,
+      "diff": -0.00600166078379516
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.908059653302189,
+      "baseline_value": 0.8436028887808789,
+      "diff": 0.0644567645213101
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5210823914385401,
+      "baseline_value": 0.7954402267059777,
+      "diff": -0.2743578352674376
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022005059484854428,
+      "baseline_value": 0.025920638429624887,
+      "diff": -0.003915578944770459
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.908059653302189,
+      "baseline_value": 0.7803446927282494,
+      "diff": 0.1277149605739396
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5210823914385401,
+      "baseline_value": 1.0493192775902571,
+      "diff": -0.528236886151717
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022005059484854428,
+      "baseline_value": 0.029159529019580077,
+      "diff": -0.007154469534725649
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.908059653302189,
+      "baseline_value": 0.9029158098855987,
+      "diff": 0.005143843416590244
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.5210823914385401,
+      "baseline_value": 0.5163070457638241,
+      "diff": 0.004775345674715936
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "age",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.022005059484854428,
+      "baseline_value": 0.022573003327806873,
+      "diff": -0.0005679438429524453
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9470644528628327,
+      "baseline_value": 0.9541388499783352,
+      "diff": -0.0070743971155025065
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.291824660191196,
+      "baseline_value": 0.28961311285820557,
+      "diff": 0.002211547332990449
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.011265211843237921,
+      "baseline_value": 0.011554910493487114,
+      "diff": -0.0002896986502491927
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9470644528628327,
+      "baseline_value": 0.9222473948029801,
+      "diff": 0.02481705805985257
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.291824660191196,
+      "baseline_value": 0.43915882647706894,
+      "diff": -0.14733416628587293
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.011265211843237921,
+      "baseline_value": 0.01488450602391822,
+      "diff": -0.003619294180680299
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9470644528628327,
+      "baseline_value": 0.8760607279546093,
+      "diff": 0.07100372490822338
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.291824660191196,
+      "baseline_value": 0.689674009092414,
+      "diff": -0.39784934890121804
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.011265211843237921,
+      "baseline_value": 0.016763193326141845,
+      "diff": -0.005497981482903924
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9470644528628327,
+      "baseline_value": 0.9170767434407026,
+      "diff": 0.029987709422130138
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.291824660191196,
+      "baseline_value": 0.4283630497739068,
+      "diff": -0.1365383895827108
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "eyeglasses",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.011265211843237921,
+      "baseline_value": 0.013423217655144981,
+      "diff": -0.00215800581190706
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9270652421982959,
+      "baseline_value": 0.9255424474249594,
+      "diff": 0.0015227947733365
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3857047628844157,
+      "baseline_value": 0.40773909395647934,
+      "diff": -0.02203433107206365
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.04054047985482612,
+      "baseline_value": 0.040197727871600364,
+      "diff": 0.00034275198322575307
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9270652421982959,
+      "baseline_value": 0.8988239110913128,
+      "diff": 0.028241331106983125
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3857047628844157,
+      "baseline_value": 0.5234302000899334,
+      "diff": -0.13772543720551766
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.04054047985482612,
+      "baseline_value": 0.04172313643630332,
+      "diff": -0.0011826565814772039
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9270652421982959,
+      "baseline_value": 0.8538000559201464,
+      "diff": 0.07326518627814949
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3857047628844157,
+      "baseline_value": 0.8567561068557552,
+      "diff": -0.4710513439713395
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.04054047985482612,
+      "baseline_value": 0.04569816114144487,
+      "diff": -0.005157681286618754
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9270652421982959,
+      "baseline_value": 0.8901012146379799,
+      "diff": 0.036964027560316026
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3857047628844157,
+      "baseline_value": 0.547695698296593,
+      "diff": -0.16199093541217735
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "gender",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.04054047985482612,
+      "baseline_value": 0.03687279292398671,
+      "diff": 0.003667686930839409
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9430464751785621,
+      "baseline_value": 0.9503186693182215,
+      "diff": -0.007272194139659405
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3938007595279487,
+      "baseline_value": 0.3374301213189028,
+      "diff": 0.056370638209045865
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010096184973917843,
+      "baseline_value": 0.008859799354013376,
+      "diff": 0.0012363856199044676
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9430464751785621,
+      "baseline_value": 0.9381066188798286,
+      "diff": 0.004939856298733503
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3938007595279487,
+      "baseline_value": 0.4035690490200068,
+      "diff": -0.009768289492058102
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010096184973917843,
+      "baseline_value": 0.00954570596297799,
+      "diff": 0.0005504790109398527
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9430464751785621,
+      "baseline_value": 0.9172039969125763,
+      "diff": 0.025842478265985847
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3938007595279487,
+      "baseline_value": 0.5137767556807376,
+      "diff": -0.11997599615278887
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010096184973917843,
+      "baseline_value": 0.011617614777605922,
+      "diff": -0.0015214298036880791
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9430464751785621,
+      "baseline_value": 0.935033607238438,
+      "diff": 0.008012867940124124
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.3938007595279487,
+      "baseline_value": 0.39128204278677003,
+      "diff": 0.0025187167411786504
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "pose",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.010096184973917843,
+      "baseline_value": 0.008954708660098731,
+      "diff": 0.001141476313819112
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597147942986339,
+      "baseline_value": 0.9429952373611741,
+      "diff": 0.016719556937459856
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.22334621947811684,
+      "baseline_value": 0.3153393772263371,
+      "diff": -0.09199315774822026
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_gain_only",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012719293797545106,
+      "baseline_value": 0.014477476861657124,
+      "diff": -0.0017581830641120177
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597147942986339,
+      "baseline_value": 0.9436732409521937,
+      "diff": 0.016041553346440196
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.22334621947811684,
+      "baseline_value": 0.3009242254993296,
+      "diff": -0.07757800602121279
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_random",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012719293797545106,
+      "baseline_value": 0.013735353134052275,
+      "diff": -0.001016059336507169
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597147942986339,
+      "baseline_value": 0.9256745444145054,
+      "diff": 0.03404024988412857
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.22334621947811684,
+      "baseline_value": 0.42555585213631275,
+      "diff": -0.20220963265819591
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_high_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012719293797545106,
+      "baseline_value": 0.01652486528200825,
+      "diff": -0.003805571484463144
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_id_cos",
+      "risk_value": 0.9597147942986339,
+      "baseline_value": 0.9488058525603265,
+      "diff": 0.010908941738307476
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_lpips_proxy",
+      "risk_value": 0.22334621947811684,
+      "baseline_value": 0.27659601741834194,
+      "diff": -0.05324979794022511
+    },
+    {
+      "seed": 2031,
+      "source": "/mnt/20t/study/HIGAN/paper/experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+      "attr": "smile",
+      "comparison": "risk_minus_low_risk",
+      "metric": "mean_abs_delta_attr",
+      "risk_value": 0.012719293797545106,
+      "baseline_value": 0.013273426006662703,
+      "diff": -0.0005541322091175971
+    }
+  ],
+  "config": {
+    "inputs": [
+      "experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+      "experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+      "experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+      "experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+      "experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json"
+    ],
+    "out": "experiments/out/control_expanded_candidate_universe",
+    "seed": 3617,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v7_expanded_candidate_universe.json",
+    "protocol_key": "expanded_universe_summary"
+  },
+  "_meta": {
+    "seed": 3617,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-24T09:13:34.999611+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_risk_aware_repeat_summary.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_risk_aware_repeat_summary.py",
+        "--inputs",
+        "experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+        "experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+        "experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+        "experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+        "experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json",
+        "--out",
+        "experiments/out/control_expanded_candidate_universe",
+        "--seed",
+        "3617",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v7_expanded_candidate_universe.json",
+        "--protocol-key",
+        "expanded_universe_summary"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 300125,
+      "timestamp_utc": "2026-05-24T09:13:34.999355+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v7_expanded_candidate_universe.json",
+      "protocol_key": "expanded_universe_summary",
+      "protocol_sha256": "488e589f51adc02a1dbf508b492a424c9c34062d7628c73fc745ed760a4b732a",
+      "protocol_version": "control_v7_expanded_candidate_universe"
+    }
+  }
+}

@@ -1,0 +1,780 @@
+{
+  "total_rows": 207,
+  "fail_rows": 39,
+  "required_rows": 149,
+  "required_fail_rows": 32,
+  "pass_rows": 168,
+  "tag_counts": {
+    "general_boundary": {
+      "total": 12,
+      "pass": 12,
+      "fail": 0
+    },
+    "conditional_regression_boundary": {
+      "total": 64,
+      "pass": 56,
+      "fail": 8
+    },
+    "matched_pair_boundary": {
+      "total": 64,
+      "pass": 46,
+      "fail": 18
+    },
+    "bedroom_boundary": {
+      "total": 77,
+      "pass": 56,
+      "fail": 21
+    },
+    "strict_gain_boundary": {
+      "total": 18,
+      "pass": 14,
+      "fail": 4
+    },
+    "ffhq_boundary": {
+      "total": 53,
+      "pass": 49,
+      "fail": 4
+    },
+    "random_universe_boundary": {
+      "total": 42,
+      "pass": 35,
+      "fail": 7
+    },
+    "dino_preservation_boundary": {
+      "total": 63,
+      "pass": 50,
+      "fail": 13
+    }
+  },
+  "metric_counts": {
+    "rho vs ID Spearman": {
+      "total": 29,
+      "pass": 29,
+      "fail": 0
+    },
+    "rho vs LPIPS Spearman": {
+      "total": 29,
+      "pass": 29,
+      "fail": 0
+    },
+    "rho beta for ID": {
+      "total": 29,
+      "pass": 22,
+      "fail": 7
+    },
+    "rho beta for LPIPS": {
+      "total": 29,
+      "pass": 28,
+      "fail": 1
+    },
+    "low-risk minus high-risk ID": {
+      "total": 29,
+      "pass": 20,
+      "fail": 9
+    },
+    "low-risk minus high-risk LPIPS": {
+      "total": 29,
+      "pass": 22,
+      "fail": 7
+    },
+    "rho vs DINO-preservation Spearman": {
+      "total": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    "rho beta for DINO preservation": {
+      "total": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    "low-risk minus high-risk DINO preservation": {
+      "total": 6,
+      "pass": 4,
+      "fail": 2
+    },
+    "": {
+      "total": 15,
+      "pass": 2,
+      "fail": 13
+    }
+  },
+  "failures": [
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01744619792446785,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": 0.10198301271482002,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.007654231512493409,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.018068951682208158,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_fd_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.002417232521113087,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_fd_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.015595063648646513,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_fd_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.01699903673850437,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_high_ntest_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.007114471078881202,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.08980857208524844,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "strict_gain_boundary",
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": -0.014981763764635211,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "strict_gain_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_strict_gain_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.01930728396670874,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "strict_gain_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.14589363546291803,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_church",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0015576614998281002,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.006766137547674587,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_ganspace_bedroom",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.0029343679719161077,
+      "wins": 2,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_sefa_church",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.07511679992190952,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": 0.030453084824247585,
+      "wins": 1,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "stress_v4",
+      "summary": "ensemble_sefa_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.01813986129460058,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary"
+      ]
+    },
+    {
+      "table": "extension_v5",
+      "summary": "ffhq_strict_gain",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.012069233856185657,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "strict_gain_boundary",
+        "ffhq_boundary"
+      ]
+    },
+    {
+      "table": "extension_v5",
+      "summary": "random_universe_church",
+      "metric": "lpips_beta_rho",
+      "display": "rho beta for LPIPS",
+      "mean": 0.12417400736691164,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "extension_v5",
+      "summary": "dino_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.013110255945797034,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "dino_v1",
+      "summary": "dino_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.016762734654255214,
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "seed_scaled_v6",
+      "summary": "random_n10_church",
+      "metric": "matched_pair_lpips_low_minus_high",
+      "display": "low-risk minus high-risk LPIPS",
+      "mean": -0.016100516231916634,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "seed_scaled_v6",
+      "summary": "dino_n10_bedroom",
+      "metric": "id_beta_rho",
+      "display": "rho beta for ID",
+      "mean": -0.11657655742913212,
+      "wins": 7,
+      "n": 10,
+      "p_sign_two_sided": 0.34375,
+      "required": false,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary",
+        "conditional_regression_boundary"
+      ]
+    },
+    {
+      "table": "seed_scaled_v6",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_id_low_minus_high",
+      "display": "low-risk minus high-risk ID",
+      "mean": 0.0006870267645666277,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "dino_n10_v2",
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": -0.0043405814140466785,
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "matched_pair_boundary",
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "dino_n10_ffhq",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "dino_preservation_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_bedroom",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "bedroom_boundary",
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_church",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "random_universe_boundary"
+      ]
+    },
+    {
+      "table": "incremental_v1",
+      "summary": "random_n10_ffhq",
+      "metric": "",
+      "display": "",
+      "mean": null,
+      "wins": null,
+      "n": null,
+      "p_sign_two_sided": null,
+      "required": true,
+      "pass": false,
+      "tags": [
+        "ffhq_boundary",
+        "random_universe_boundary"
+      ]
+    }
+  ],
+  "config": {
+    "tables": [
+      "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+      "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+      "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+      "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+      "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+      "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json"
+    ],
+    "out": "experiments/out/control_failure_boundary_table_v1",
+    "seed": 4219,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v74_failure_boundary_table.json",
+    "protocol_key": "failure_boundary_table_v1"
+  },
+  "_meta": {
+    "seed": 4219,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-28T22:44:59.944734+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_failure_boundary_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_failure_boundary_table.py",
+        "--tables",
+        "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+        "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+        "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+        "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+        "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+        "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json",
+        "--out",
+        "experiments/out/control_failure_boundary_table_v1",
+        "--seed",
+        "4219",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v74_failure_boundary_table.json",
+        "--protocol-key",
+        "failure_boundary_table_v1"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 375714,
+      "timestamp_utc": "2026-05-28T22:44:59.944567+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v74_failure_boundary_table.json",
+      "protocol_key": "failure_boundary_table_v1",
+      "protocol_sha256": "a47ab1f16fe1fa3a2188927abdc6506695313fee1b76901bfb4af423bb1c155a",
+      "protocol_version": "control_v74_failure_boundary_table"
+    }
+  }
+}

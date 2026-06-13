@@ -1,60 +1,76 @@
 {
   "points": [
     [
-      23.22,
+      26.379353012423962,
       6.262427465791542
     ],
     [
-      0.495,
+      0.9041501861065626,
       2.7072271837223427
     ],
     [
-      0.624,
+      1.1653990456834435,
       3.060418671315575
     ],
     [
-      0.92,
+      0.945853007142432,
       2.8130185159522636
     ],
     [
-      0.95,
+      1.4166283684317023,
       3.2048890789953655
     ],
     [
-      0.93,
+      0.7349465466686524,
       2.8442859136135863
     ],
     [
-      1.1,
+      0.6279251986416057,
       2.772362719029107
     ],
     [
-      0.85,
+      1.2019510929239914,
       2.9461403348024975
     ],
     [
-      49.87,
+      150.59065119549632,
       6.328581028815449
     ],
     [
-      8.71,
+      20.820180265698582,
       3.5066858691389555
     ],
     [
-      7.62,
+      15.75194792705588,
       3.08259109083033
     ],
     [
-      22.82,
+      23.174428989645094,
       3.68067628488805
     ],
     [
-      1.75,
+      3.9178808856522664,
       2.141247639988788
     ],
     [
-      0.042903508991003036,
-      3.7496789405490194
+      0.2315160317424064,
+      7.691923469347454
+    ],
+    [
+      0.22325865260791034,
+      8.091234742805042
+    ],
+    [
+      0.15747979488999894,
+      7.504771519040943
+    ],
+    [
+      0.08547134522814304,
+      7.5428097862730725
+    ],
+    [
+      0.09177185779359813,
+      8.072354010030752
     ]
   ],
   "labels_apriori": [
@@ -71,7 +87,11 @@
     "textural",
     "structural",
     "textural",
-    "textural"
+    "textural",
+    "textural",
+    "textural",
+    "structural",
+    "structural"
   ],
   "names": [
     "bed-view",
@@ -87,7 +107,11 @@
     "ffhq-age",
     "ffhq-eyeglasses",
     "ffhq-smile",
-    "sd-smile"
+    "sd-smile",
+    "sd-age",
+    "sd-gender",
+    "sd-eyeglasses",
+    "sd-pose"
   ],
   "cluster_labels": [
     1,
@@ -103,7 +127,31 @@
     0,
     0,
     0,
-    0
+    1,
+    1,
+    1,
+    1,
+    1
   ],
-  "agreement_rate": 0.9285714285714286
+  "agreement_rate": 0.7777777777777778,
+  "inputs": {
+    "bedroom_pixel": "experiments/out/sample_scaling_bedroom_n256/metrics.json",
+    "bedroom_clip": "experiments/out/bedroom_c2_path/metrics.json",
+    "ffhq_pixel": "experiments/out/sample_scaling_ffhq_n512/metrics.json",
+    "ffhq_clip": "experiments/out/ffhq_c2_path/metrics.json"
+  },
+  "_meta": {
+    "seed": null,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-25T13:09:50.490590+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": null,
+    "git_commit": "314f2150c8571fff4b1b8fa4fa6b151422bdeb4e",
+    "git_dirty": true,
+    "script": "experiments/metrics/run_crossdomain_signature.py"
+  }
 }

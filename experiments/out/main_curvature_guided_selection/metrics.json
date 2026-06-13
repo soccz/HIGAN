@@ -1,0 +1,262 @@
+{
+  "claim": "Low-curvature pre-selection finds edit directions with smaller identity/perceptual drift than random or high-curvature selections under the fixed-alpha protocol.",
+  "protocol_note": "This is a fixed-strength summary of the existing head-to-head track; attribute-change-matched evaluation should be used as the stronger main-paper version.",
+  "per_attr": {
+    "smile": {
+      "curvature_low": {
+        "rho_this_dir_mean": 0.30407806920973884,
+        "rho_this_dir_std": 0.013519005138068177,
+        "mean_id_cos_mean": 0.9810921819247306,
+        "mean_id_cos_std": 0.003280046341810611,
+        "mean_lpips_proxy_mean": 0.011217637425721478,
+        "mean_lpips_proxy_std": 0.0014948703360843456,
+        "abs_delta_attr_mean": 0.0010392642529986917,
+        "abs_delta_attr_std": 0.0013646515159341116
+      },
+      "random": {
+        "rho_this_dir_mean": 0.6289908256145545,
+        "rho_this_dir_std": 0.28664566156331606,
+        "mean_id_cos_mean": 0.9530759253352881,
+        "mean_id_cos_std": 0.025778458733809094,
+        "mean_lpips_proxy_mean": 0.029959415932968116,
+        "mean_lpips_proxy_std": 0.018411716901481537,
+        "abs_delta_attr_mean": 0.0026144565822905862,
+        "abs_delta_attr_std": 0.0022913666294932258
+      },
+      "curvature_high": {
+        "rho_this_dir_mean": 1.385165813882252,
+        "rho_this_dir_std": 0.22905628935784705,
+        "mean_id_cos_mean": 0.9152486550286412,
+        "mean_id_cos_std": 0.01985921840654618,
+        "mean_lpips_proxy_mean": 0.06473406717657053,
+        "mean_lpips_proxy_std": 0.020815344425151646,
+        "abs_delta_attr_mean": 0.005591513165432844,
+        "abs_delta_attr_std": 0.004717455265663287
+      }
+    },
+    "age": {
+      "curvature_low": {
+        "rho_this_dir_mean": 1.2404428962829042,
+        "rho_this_dir_std": 0.13994032176832402,
+        "mean_id_cos_mean": 0.9506301711909473,
+        "mean_id_cos_std": 0.005798595120383697,
+        "mean_lpips_proxy_mean": 0.039528835121658626,
+        "mean_lpips_proxy_std": 0.005450256542620165,
+        "abs_delta_attr_mean": 0.004927808243315667,
+        "abs_delta_attr_std": 0.0038934648864564292
+      },
+      "random": {
+        "rho_this_dir_mean": 2.8765920725395864,
+        "rho_this_dir_std": 2.049530822387491,
+        "mean_id_cos_mean": 0.9012188760265708,
+        "mean_id_cos_std": 0.05274924056883943,
+        "mean_lpips_proxy_mean": 0.07755982279941964,
+        "mean_lpips_proxy_std": 0.03860712649454016,
+        "abs_delta_attr_mean": 0.007448778596306511,
+        "abs_delta_attr_std": 0.007325747996038029
+      },
+      "curvature_high": {
+        "rho_this_dir_mean": 11.42632129516797,
+        "rho_this_dir_std": 4.705642150414159,
+        "mean_id_cos_mean": 0.7856739086378365,
+        "mean_id_cos_std": 0.04243871015270104,
+        "mean_lpips_proxy_mean": 0.20300473794084972,
+        "mean_lpips_proxy_std": 0.050820636193351726,
+        "abs_delta_attr_mean": 0.008774465837355819,
+        "abs_delta_attr_std": 0.007124959543198875
+      }
+    },
+    "pose": {
+      "curvature_low": {
+        "rho_this_dir_mean": 1.1939208704431503,
+        "rho_this_dir_std": 0.13369556220333012,
+        "mean_id_cos_mean": 0.9742876666262745,
+        "mean_id_cos_std": 0.0033534858144063278,
+        "mean_lpips_proxy_mean": 0.02625991850266291,
+        "mean_lpips_proxy_std": 0.0037638998317439058,
+        "abs_delta_attr_mean": 0.00048679388983873754,
+        "abs_delta_attr_std": 0.00041530901736365353
+      },
+      "random": {
+        "rho_this_dir_mean": 2.8423717606087453,
+        "rho_this_dir_std": 2.0498834407366244,
+        "mean_id_cos_mean": 0.9378554901480675,
+        "mean_id_cos_std": 0.03871561526047606,
+        "mean_lpips_proxy_mean": 0.05786864056047489,
+        "mean_lpips_proxy_std": 0.031003885983033167,
+        "abs_delta_attr_mean": 0.001649283948499943,
+        "abs_delta_attr_std": 0.0012606795164615164
+      },
+      "curvature_high": {
+        "rho_this_dir_mean": 11.307388372783333,
+        "rho_this_dir_std": 4.640440592440623,
+        "mean_id_cos_mean": 0.823888807233423,
+        "mean_id_cos_std": 0.040558889616829075,
+        "mean_lpips_proxy_mean": 0.1801804626971716,
+        "mean_lpips_proxy_std": 0.055275233070247766,
+        "abs_delta_attr_mean": 0.012125551308257853,
+        "abs_delta_attr_std": 0.015026741642047163
+      }
+    },
+    "gender": {
+      "curvature_low": {
+        "rho_this_dir_mean": 1.2404428962829042,
+        "rho_this_dir_std": 0.13994032176832402,
+        "mean_id_cos_mean": 0.9506301711909473,
+        "mean_id_cos_std": 0.005798595120383697,
+        "mean_lpips_proxy_mean": 0.039528835121658626,
+        "mean_lpips_proxy_std": 0.005450256542620165,
+        "abs_delta_attr_mean": 0.004648629871990122,
+        "abs_delta_attr_std": 0.0036975276384973122
+      },
+      "random": {
+        "rho_this_dir_mean": 2.8765920725395864,
+        "rho_this_dir_std": 2.049530822387491,
+        "mean_id_cos_mean": 0.9012188760265708,
+        "mean_id_cos_std": 0.05274924056883943,
+        "mean_lpips_proxy_mean": 0.07755982279941964,
+        "mean_lpips_proxy_std": 0.03860712649454016,
+        "abs_delta_attr_mean": 0.013737618532941268,
+        "abs_delta_attr_std": 0.01203827915225863
+      },
+      "curvature_high": {
+        "rho_this_dir_mean": 11.42632129516797,
+        "rho_this_dir_std": 4.705642150414159,
+        "mean_id_cos_mean": 0.7856739086378365,
+        "mean_id_cos_std": 0.04243871015270104,
+        "mean_lpips_proxy_mean": 0.20300473794084972,
+        "mean_lpips_proxy_std": 0.050820636193351726,
+        "abs_delta_attr_mean": 0.024583144139491198,
+        "abs_delta_attr_std": 0.02073149976540195
+      }
+    },
+    "eyeglasses": {
+      "curvature_low": {
+        "rho_this_dir_mean": 1.2404428962829042,
+        "rho_this_dir_std": 0.13994032176832402,
+        "mean_id_cos_mean": 0.9506301711909473,
+        "mean_id_cos_std": 0.005798595120383697,
+        "mean_lpips_proxy_mean": 0.039528835121658626,
+        "mean_lpips_proxy_std": 0.005450256542620165,
+        "abs_delta_attr_mean": 0.002635555814857071,
+        "abs_delta_attr_std": 0.001532353027753876
+      },
+      "random": {
+        "rho_this_dir_mean": 2.8765920725395864,
+        "rho_this_dir_std": 2.049530822387491,
+        "mean_id_cos_mean": 0.9012188760265708,
+        "mean_id_cos_std": 0.05274924056883943,
+        "mean_lpips_proxy_mean": 0.07755982279941964,
+        "mean_lpips_proxy_std": 0.03860712649454016,
+        "abs_delta_attr_mean": 0.00689034648728557,
+        "abs_delta_attr_std": 0.006957138497460465
+      },
+      "curvature_high": {
+        "rho_this_dir_mean": 11.42632129516797,
+        "rho_this_dir_std": 4.705642150414159,
+        "mean_id_cos_mean": 0.7856739086378365,
+        "mean_id_cos_std": 0.04243871015270104,
+        "mean_lpips_proxy_mean": 0.20300473794084972,
+        "mean_lpips_proxy_std": 0.050820636193351726,
+        "abs_delta_attr_mean": 0.012559411372516479,
+        "abs_delta_attr_std": 0.009524301179181415
+      }
+    }
+  },
+  "paired_attr_effects": {
+    "curvature_low_minus_random": {
+      "rho_this_dir": {
+        "mean": -1.3763622350680915,
+        "ci_lo": -1.6435302046020297,
+        "ci_hi": -0.8494073243455624,
+        "wins_for_low": 5,
+        "n_attrs": 5,
+        "direction": "lower_is_better"
+      },
+      "mean_id_cos": {
+        "mean": 0.0425364637121558,
+        "ci_lo": 0.033978448282182216,
+        "ci_hi": 0.04941129516437648,
+        "wins_for_low": 5,
+        "n_attrs": 5,
+        "direction": "higher_is_better"
+      },
+      "mean_lpips_proxy": {
+        "mean": -0.032888692719668336,
+        "ci_lo": -0.038030987677761016,
+        "ci_hi": -0.02517300905146258,
+        "wins_for_low": 5,
+        "n_attrs": 5,
+        "direction": "lower_is_better"
+      },
+      "abs_delta_attr": {
+        "mean": -0.0037204864148647184,
+        "ci_lo": -0.006536849342788628,
+        "ci_hi": -0.0016818074799055467,
+        "wins_for_low": 0,
+        "n_attrs": 5,
+        "direction": "higher_is_better"
+      }
+    },
+    "curvature_low_minus_high": {
+      "rho_this_dir": {
+        "mean": -8.35043808873358,
+        "ci_lo": -10.185878398885066,
+        "ci_hi": -4.708521827048558,
+        "wins_for_low": 5,
+        "n_attrs": 5,
+        "direction": "lower_is_better"
+      },
+      "mean_id_cos": {
+        "mean": 0.14222223478965468,
+        "ci_lo": 0.10257714052684612,
+        "ci_hi": 0.1649562625531108,
+        "wins_for_low": 5,
+        "n_attrs": 5,
+        "direction": "higher_is_better"
+      },
+      "mean_lpips_proxy": {
+        "mean": -0.13957293648058622,
+        "ci_lo": -0.1634759028191911,
+        "ci_hi": -0.0955891472532494,
+        "wins_for_low": 5,
+        "n_attrs": 5,
+        "direction": "lower_is_better"
+      },
+      "abs_delta_attr": {
+        "mean": -0.00997920675001078,
+        "ci_lo": -0.015198909826671301,
+        "ci_hi": -0.005344333714121604,
+        "wins_for_low": 0,
+        "n_attrs": 5,
+        "direction": "higher_is_better"
+      }
+    }
+  },
+  "source_config": {
+    "n_test": 1000,
+    "n_curv_samples": 64,
+    "k_top": 16,
+    "alpha": 2.0,
+    "latentclr_path": "experiments/out/latentclr_ffhq/directions.npy",
+    "disco_path": "experiments/out/disco_ffhq/directions.npy",
+    "out": "experiments/out/editing_head_to_head",
+    "seed": 2027
+  },
+  "_meta": {
+    "seed": 2027,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-23T00:42:09.301418+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": null,
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/metrics/run_curvature_guided_selection_summary.py",
+    "input": "/mnt/20t/study/HIGAN/paper/experiments/out/editing_head_to_head/metrics.json",
+    "n_boot": 10000
+  }
+}

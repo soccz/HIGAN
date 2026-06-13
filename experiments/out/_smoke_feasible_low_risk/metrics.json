@@ -1,0 +1,336 @@
+{
+  "per_attr": {
+    "clouds": {
+      "candidate_universe": [
+        {
+          "index": 0,
+          "source_group": "ganspace",
+          "source_rank": 0,
+          "rho": 0.142858624458313,
+          "probe_gain": 0.007838943973183632,
+          "probe_sign": -1.0,
+          "selection_rho": 0.142858624458313
+        },
+        {
+          "index": 1,
+          "source_group": "ganspace",
+          "source_rank": 1,
+          "rho": 0.161573126912117,
+          "probe_gain": 0.009690042585134506,
+          "probe_sign": -1.0,
+          "selection_rho": 0.161573126912117
+        },
+        {
+          "index": 2,
+          "source_group": "sefa",
+          "source_rank": 0,
+          "rho": 0.20573978126049042,
+          "probe_gain": 0.003177659586071968,
+          "probe_sign": -1.0,
+          "selection_rho": 0.20573978126049042
+        },
+        {
+          "index": 3,
+          "source_group": "sefa",
+          "source_rank": 1,
+          "rho": 0.16958855092525482,
+          "probe_gain": 0.00516427680850029,
+          "probe_sign": -1.0,
+          "selection_rho": 0.16958855092525482
+        }
+      ],
+      "selected_candidate_offsets": {
+        "risk_aware": [
+          0
+        ],
+        "gain_only": [
+          1
+        ],
+        "low_risk": [
+          0
+        ],
+        "random": [
+          0
+        ],
+        "high_risk": [
+          2
+        ]
+      },
+      "target_abs_delta_attr": 0.005639759823679924,
+      "rows": {
+        "risk_aware": [
+          {
+            "candidate_index": 0,
+            "source_group": "ganspace",
+            "source_rank": 0,
+            "rho": 0.142858624458313,
+            "selection_rho": 0.142858624458313,
+            "probe_gain": 0.007838943973183632,
+            "probe_sign": -1.0,
+            "alpha": -0.7283378973378031,
+            "target_abs_delta_attr": 0.005639759823679924,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.0059582386165857315,
+            "mean_delta_attr": 0.005366775207221508,
+            "mean_abs_delta_attr": 0.010752192698419094,
+            "mean_id_cos": 0.9774492383003235,
+            "mean_lpips_proxy": 0.013244571629911661,
+            "mean_lpips_true": 0.009397740475833416
+          }
+        ],
+        "gain_only": [
+          {
+            "candidate_index": 1,
+            "source_group": "ganspace",
+            "source_rank": 1,
+            "rho": 0.161573126912117,
+            "selection_rho": 0.161573126912117,
+            "probe_gain": 0.009690042585134506,
+            "probe_sign": -1.0,
+            "alpha": 2.0,
+            "target_abs_delta_attr": 0.005639759823679924,
+            "target_reached_on_calib": false,
+            "calib_max_abs_delta_attr": 0.0046843234449625015,
+            "mean_delta_attr": 0.016784491948783398,
+            "mean_abs_delta_attr": 0.016784491948783398,
+            "mean_id_cos": 0.93111652135849,
+            "mean_lpips_proxy": 0.04502266272902489,
+            "mean_lpips_true": 0.053148744627833366
+          }
+        ],
+        "low_risk": [
+          {
+            "candidate_index": 0,
+            "source_group": "ganspace",
+            "source_rank": 0,
+            "rho": 0.142858624458313,
+            "selection_rho": 0.142858624458313,
+            "probe_gain": 0.007838943973183632,
+            "probe_sign": -1.0,
+            "alpha": -0.7283378973378031,
+            "target_abs_delta_attr": 0.005639759823679924,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.0059582386165857315,
+            "mean_delta_attr": 0.005366775207221508,
+            "mean_abs_delta_attr": 0.010752192698419094,
+            "mean_id_cos": 0.9774492383003235,
+            "mean_lpips_proxy": 0.013244571629911661,
+            "mean_lpips_true": 0.009397740475833416
+          }
+        ],
+        "random": [
+          {
+            "candidate_index": 0,
+            "source_group": "ganspace",
+            "source_rank": 0,
+            "rho": 0.142858624458313,
+            "selection_rho": 0.142858624458313,
+            "probe_gain": 0.007838943973183632,
+            "probe_sign": -1.0,
+            "alpha": -0.7283378973378031,
+            "target_abs_delta_attr": 0.005639759823679924,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.0059582386165857315,
+            "mean_delta_attr": 0.005366775207221508,
+            "mean_abs_delta_attr": 0.010752192698419094,
+            "mean_id_cos": 0.9774492383003235,
+            "mean_lpips_proxy": 0.013244571629911661,
+            "mean_lpips_true": 0.009397740475833416
+          }
+        ],
+        "high_risk": [
+          {
+            "candidate_index": 2,
+            "source_group": "sefa",
+            "source_rank": 0,
+            "rho": 0.20573978126049042,
+            "selection_rho": 0.20573978126049042,
+            "probe_gain": 0.003177659586071968,
+            "probe_sign": -1.0,
+            "alpha": 0.8057259381747485,
+            "target_abs_delta_attr": 0.005639759823679924,
+            "target_reached_on_calib": true,
+            "calib_max_abs_delta_attr": 0.010975485667586327,
+            "mean_delta_attr": 0.0030479663982987404,
+            "mean_abs_delta_attr": 0.0030479663982987404,
+            "mean_id_cos": 0.9947912395000458,
+            "mean_lpips_proxy": 0.003067407407797873,
+            "mean_lpips_true": 0.004234212683513761
+          }
+        ]
+      },
+      "summary": {
+        "risk_aware": {
+          "n": 1,
+          "mean_probe_gain": 0.007838943973183632,
+          "mean_rho": 0.142858624458313,
+          "mean_selection_rho": 0.142858624458313,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.010752192698419094,
+          "mean_id_cos": 0.9774492383003235,
+          "mean_lpips_proxy": 0.013244571629911661,
+          "mean_abs_alpha": 0.7283378973378031,
+          "mean_lpips_true": 0.009397740475833416
+        },
+        "gain_only": {
+          "n": 1,
+          "mean_probe_gain": 0.009690042585134506,
+          "mean_rho": 0.161573126912117,
+          "mean_selection_rho": 0.161573126912117,
+          "target_hit_rate_calib": 0.0,
+          "mean_abs_delta_attr": 0.016784491948783398,
+          "mean_id_cos": 0.93111652135849,
+          "mean_lpips_proxy": 0.04502266272902489,
+          "mean_abs_alpha": 2.0,
+          "mean_lpips_true": 0.053148744627833366
+        },
+        "low_risk": {
+          "n": 1,
+          "mean_probe_gain": 0.007838943973183632,
+          "mean_rho": 0.142858624458313,
+          "mean_selection_rho": 0.142858624458313,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.010752192698419094,
+          "mean_id_cos": 0.9774492383003235,
+          "mean_lpips_proxy": 0.013244571629911661,
+          "mean_abs_alpha": 0.7283378973378031,
+          "mean_lpips_true": 0.009397740475833416
+        },
+        "random": {
+          "n": 1,
+          "mean_probe_gain": 0.007838943973183632,
+          "mean_rho": 0.142858624458313,
+          "mean_selection_rho": 0.142858624458313,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.010752192698419094,
+          "mean_id_cos": 0.9774492383003235,
+          "mean_lpips_proxy": 0.013244571629911661,
+          "mean_abs_alpha": 0.7283378973378031,
+          "mean_lpips_true": 0.009397740475833416
+        },
+        "high_risk": {
+          "n": 1,
+          "mean_probe_gain": 0.003177659586071968,
+          "mean_rho": 0.20573978126049042,
+          "mean_selection_rho": 0.20573978126049042,
+          "target_hit_rate_calib": 1.0,
+          "mean_abs_delta_attr": 0.0030479663982987404,
+          "mean_id_cos": 0.9947912395000458,
+          "mean_lpips_proxy": 0.003067407407797873,
+          "mean_abs_alpha": 0.8057259381747485,
+          "mean_lpips_true": 0.004234212683513761
+        }
+      }
+    }
+  },
+  "config": {
+    "domain": "church",
+    "attrs": [
+      "clouds"
+    ],
+    "methods": [
+      "ganspace",
+      "sefa"
+    ],
+    "candidate_k": 2,
+    "ganspace_samples": 64,
+    "k_select": 1,
+    "min_gain_quantile": 0.5,
+    "risk_power": 1.0,
+    "selection_rule": "gain_feasible_low_risk",
+    "gain_pool_multiplier": 2.0,
+    "n_risk": 1,
+    "n_probe": 2,
+    "probe_alpha": 1.0,
+    "n_calib": 2,
+    "n_test": 2,
+    "alpha_steps": 3,
+    "max_alpha": 2.0,
+    "target_quantile": 0.25,
+    "target_source": "universe",
+    "batch": 1,
+    "out": "experiments/out/_smoke_feasible_low_risk",
+    "seed": 9999,
+    "true_lpips": true,
+    "lpips_net": "alex",
+    "lpips_size": 64,
+    "risk_selection_mode": "actual",
+    "protocol": null,
+    "protocol_key": "bedroom_cross_domain_controller"
+  },
+  "_meta": {
+    "seed": 9999,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-27T03:13:56.673195+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_cross_domain_risk_aware_controller.py",
+        "--domain",
+        "church",
+        "--attrs",
+        "clouds",
+        "--methods",
+        "ganspace",
+        "sefa",
+        "--candidate-k",
+        "2",
+        "--ganspace-samples",
+        "64",
+        "--k-select",
+        "1",
+        "--min-gain-quantile",
+        "0.5",
+        "--risk-power",
+        "1.0",
+        "--selection-rule",
+        "gain_feasible_low_risk",
+        "--risk-selection-mode",
+        "actual",
+        "--target-source",
+        "universe",
+        "--true-lpips",
+        "--lpips-net",
+        "alex",
+        "--lpips-size",
+        "64",
+        "--n-risk",
+        "1",
+        "--n-probe",
+        "2",
+        "--probe-alpha",
+        "1.0",
+        "--n-calib",
+        "2",
+        "--n-test",
+        "2",
+        "--alpha-steps",
+        "3",
+        "--max-alpha",
+        "2",
+        "--target-quantile",
+        "0.25",
+        "--batch",
+        "1",
+        "--out",
+        "experiments/out/_smoke_feasible_low_risk",
+        "--seed",
+        "9999"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 186559,
+      "timestamp_utc": "2026-05-27T03:13:56.673179+00:00",
+      "protocol_path": null,
+      "protocol_key": "bedroom_cross_domain_controller"
+    }
+  }
+}

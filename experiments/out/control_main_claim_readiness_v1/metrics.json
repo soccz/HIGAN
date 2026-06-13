@@ -1,0 +1,250 @@
+{
+  "readiness": "main_predictive_claim_only",
+  "predictive_passes": 8,
+  "predictive_total": 8,
+  "controller_passes": 5,
+  "controller_total": 12,
+  "predictive_checks": [
+    {
+      "name": "church: rho_vs_lpips_spearman",
+      "mean": 0.6596810647320612,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church: lpips_beta_rho",
+      "mean": 0.24153318822079575,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church: matched_pair_lpips_low_minus_high",
+      "mean": -0.03831683933731429,
+      "wins": 5,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church: matched_pair_id_low_minus_high",
+      "mean": 0.01924944119690548,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "bedroom: rho_vs_lpips_spearman",
+      "mean": 0.5572352734848994,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "bedroom: lpips_beta_rho",
+      "mean": 0.6888221925804892,
+      "wins": 5,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "bedroom: matched_pair_lpips_low_minus_high",
+      "mean": -0.0271108978088749,
+      "wins": 5,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "bedroom: matched_pair_id_low_minus_high",
+      "mean": 0.005121096488403533,
+      "wins": 4,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    }
+  ],
+  "controller_checks": [
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_gain_only ID",
+      "mean": 0.002963600036067267,
+      "wins": 2,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_gain_only true-LPIPS",
+      "mean": -0.004047430302898647,
+      "wins": 2,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_random ID",
+      "mean": 0.007154334825463593,
+      "wins": 4,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_random true-LPIPS",
+      "mean": -0.013276723010994829,
+      "wins": 4,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_high_risk ID",
+      "mean": 0.005108230886980892,
+      "wins": 3,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_high_risk true-LPIPS",
+      "mean": -0.00977719415714091,
+      "wins": 4,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_low_risk ID",
+      "mean": -0.006738461934340498,
+      "wins": 0,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: risk_minus_low_risk true-LPIPS",
+      "mean": 0.014683039711220165,
+      "wins": 0,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: actual_minus_shuffled ID",
+      "mean": 0.0018761112044254936,
+      "wins": 3,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: actual_minus_shuffled true-LPIPS",
+      "mean": -0.0020293683003274054,
+      "wins": 3,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": false
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: actual_minus_inverted ID",
+      "mean": 0.010888403941256303,
+      "wins": 4,
+      "n": 5,
+      "expected": "positive",
+      "min_wins": 4,
+      "pass": true
+    },
+    {
+      "name": "church_gain_first_risk_tiebreak: actual_minus_inverted true-LPIPS",
+      "mean": -0.022463615657049258,
+      "wins": 4,
+      "n": 5,
+      "expected": "negative",
+      "min_wins": 4,
+      "pass": true
+    }
+  ],
+  "claim_guidance": {
+    "strong_main_control_claim_ready": "Claim risk is both predictive and actionable as a controller.",
+    "borderline_main_control_claim": "Claim risk as actionable but emphasize failure boundaries.",
+    "main_predictive_claim_only": "Make predictive-validity the main claim; controller becomes a conditional application.",
+    "not_main_ready_without_claim_narrowing": "Narrow to failure characterization or run a different method; do not claim a general controller."
+  },
+  "config": {
+    "church_predictive": "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+    "bedroom_predictive": "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+    "tiebreak_actual": "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary/metrics.json",
+    "tiebreak_negative": "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary/metrics.json",
+    "out": "experiments/out/control_main_claim_readiness_v1",
+    "seed": 4101,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v34_main_claim_readiness.json",
+    "protocol_key": "main_claim_readiness_v1"
+  },
+  "_meta": {
+    "seed": 4101,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-26T22:57:51.513507+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_main_claim_readiness.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_main_claim_readiness.py",
+        "--church-predictive",
+        "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "--bedroom-predictive",
+        "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "--tiebreak-actual",
+        "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary/metrics.json",
+        "--tiebreak-negative",
+        "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary/metrics.json",
+        "--out",
+        "experiments/out/control_main_claim_readiness_v1",
+        "--seed",
+        "4101",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v34_main_claim_readiness.json",
+        "--protocol-key",
+        "main_claim_readiness_v1"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 181155,
+      "timestamp_utc": "2026-05-26T22:57:51.513331+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v34_main_claim_readiness.json",
+      "protocol_key": "main_claim_readiness_v1",
+      "protocol_sha256": "393db1169735cef45c8ae62a8f535412ca6b44ee938c6f6c8ca1a67e2fa57b82",
+      "protocol_version": "control_v34_main_claim_readiness"
+    }
+  }
+}

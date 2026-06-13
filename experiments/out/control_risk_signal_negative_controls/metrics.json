@@ -1,0 +1,4444 @@
+{
+  "modes": [
+    "actual",
+    "inverted",
+    "shuffled"
+  ],
+  "seeds": {
+    "actual": [
+      2027,
+      2028,
+      2029,
+      2030,
+      2031
+    ],
+    "shuffled": [
+      2027,
+      2028,
+      2029,
+      2030,
+      2031
+    ],
+    "inverted": [
+      2027,
+      2028,
+      2029,
+      2030,
+      2031
+    ]
+  },
+  "metrics": [
+    "mean_id_cos",
+    "mean_lpips_proxy",
+    "mean_abs_delta_attr"
+  ],
+  "paired_controller_diffs": {
+    "cell_level": {
+      "actual_minus_inverted": {
+        "mean_id_cos": {
+          "n": 25,
+          "unit": "seed_attribute_cell",
+          "mean": 0.022623854154953733,
+          "median": 0.014161318307742476,
+          "std": 0.024430794405882902,
+          "sem": 0.00488615888117658,
+          "ci95_normal": [
+            0.013046982747847635,
+            0.03220072556205983
+          ],
+          "mean_abs": 0.024410917718196288,
+          "orientation": "higher",
+          "wins": 21,
+          "win_rate": 0.84
+        },
+        "mean_lpips_proxy": {
+          "n": 25,
+          "unit": "seed_attribute_cell",
+          "mean": -0.11981439990384388,
+          "median": -0.11855135678706574,
+          "std": 0.09212284864480966,
+          "sem": 0.01842456972896193,
+          "ci95_normal": [
+            -0.15592655657260926,
+            -0.0837022432350785
+          ],
+          "mean_abs": 0.12185171029574121,
+          "orientation": "lower",
+          "wins": 23,
+          "win_rate": 0.92
+        },
+        "mean_abs_delta_attr": {
+          "n": 25,
+          "unit": "seed_attribute_cell",
+          "mean": -0.0011988632210886863,
+          "median": -0.0012026359345327364,
+          "std": 0.0013537515558659933,
+          "sem": 0.00027075031117319864,
+          "ci95_normal": [
+            -0.0017295338309881556,
+            -0.0006681926111892169
+          ],
+          "mean_abs": 0.001418380302375226,
+          "orientation": "matched",
+          "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+        }
+      },
+      "actual_minus_shuffled": {
+        "mean_id_cos": {
+          "n": 25,
+          "unit": "seed_attribute_cell",
+          "mean": 0.013732312162173911,
+          "median": 0.011540003353729844,
+          "std": 0.012871006553366513,
+          "sem": 0.0025742013106733025,
+          "ci95_normal": [
+            0.008686877593254238,
+            0.018777746731093586
+          ],
+          "mean_abs": 0.01425211069989018,
+          "orientation": "higher",
+          "wins": 21,
+          "win_rate": 0.84
+        },
+        "mean_lpips_proxy": {
+          "n": 25,
+          "unit": "seed_attribute_cell",
+          "mean": -0.07858078406658024,
+          "median": -0.07840555650182068,
+          "std": 0.0537032243821765,
+          "sem": 0.0107406448764353,
+          "ci95_normal": [
+            -0.09963244802439343,
+            -0.057529120108767054
+          ],
+          "mean_abs": 0.08007949509687023,
+          "orientation": "lower",
+          "wins": 22,
+          "win_rate": 0.88
+        },
+        "mean_abs_delta_attr": {
+          "n": 25,
+          "unit": "seed_attribute_cell",
+          "mean": -0.0008540194092893216,
+          "median": -0.0011295907700059615,
+          "std": 0.0008940771413030999,
+          "sem": 0.00017881542826061998,
+          "ci95_normal": [
+            -0.0012044976486801369,
+            -0.0005035411698985064
+          ],
+          "mean_abs": 0.001020755564850333,
+          "orientation": "matched",
+          "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+        }
+      }
+    },
+    "seed_level": {
+      "actual_minus_inverted": {
+        "mean_id_cos": {
+          "n": 5,
+          "unit": "seed_mean",
+          "mean": 0.022623854154953733,
+          "median": 0.021013363893143833,
+          "std": 0.008339426991956778,
+          "sem": 0.0037295051294823894,
+          "ci95_normal": [
+            0.01531402410116825,
+            0.029933684208739215
+          ],
+          "mean_abs": 0.022623854154953733,
+          "orientation": "higher",
+          "wins": 5,
+          "win_rate": 1.0
+        },
+        "mean_lpips_proxy": {
+          "n": 5,
+          "unit": "seed_mean",
+          "mean": -0.11981439990384388,
+          "median": -0.11891329523059539,
+          "std": 0.03139570853662401,
+          "sem": 0.014040587697932346,
+          "ci95_normal": [
+            -0.14733395179179126,
+            -0.09229484801589648
+          ],
+          "mean_abs": 0.11981439990384388,
+          "orientation": "lower",
+          "wins": 5,
+          "win_rate": 1.0
+        },
+        "mean_abs_delta_attr": {
+          "n": 5,
+          "unit": "seed_mean",
+          "mean": -0.0011988632210886865,
+          "median": -0.0012626082064116418,
+          "std": 0.0005143563224809264,
+          "sem": 0.00023002714034483092,
+          "ci95_normal": [
+            -0.0016497164161645551,
+            -0.0007480100260128179
+          ],
+          "mean_abs": 0.0011988632210886865,
+          "orientation": "matched",
+          "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+        }
+      },
+      "actual_minus_shuffled": {
+        "mean_id_cos": {
+          "n": 5,
+          "unit": "seed_mean",
+          "mean": 0.01373231216217391,
+          "median": 0.014416156674269587,
+          "std": 0.006720771958889996,
+          "sem": 0.00300562059227049,
+          "ci95_normal": [
+            0.007841295801323749,
+            0.01962332852302407
+          ],
+          "mean_abs": 0.01373231216217391,
+          "orientation": "higher",
+          "wins": 5,
+          "win_rate": 1.0
+        },
+        "mean_lpips_proxy": {
+          "n": 5,
+          "unit": "seed_mean",
+          "mean": -0.07858078406658024,
+          "median": -0.08715759938349947,
+          "std": 0.022875196233480985,
+          "sem": 0.010230098755342126,
+          "ci95_normal": [
+            -0.0986317776270508,
+            -0.05852979050610968
+          ],
+          "mean_abs": 0.07858078406658024,
+          "orientation": "lower",
+          "wins": 5,
+          "win_rate": 1.0
+        },
+        "mean_abs_delta_attr": {
+          "n": 5,
+          "unit": "seed_mean",
+          "mean": -0.0008540194092893216,
+          "median": -0.001082526393520311,
+          "std": 0.00035509627041537163,
+          "sem": 0.00015880387984108367,
+          "ci95_normal": [
+            -0.0011652750137778455,
+            -0.0005427638048007977
+          ],
+          "mean_abs": 0.0008540194092893216,
+          "orientation": "matched",
+          "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+        }
+      }
+    }
+  },
+  "controller_vs_gain_only": {
+    "actual": {
+      "mean_id_cos": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.013752712436253206,
+        "median": 0.0112997189280577,
+        "std": 0.02006433710949685,
+        "sem": 0.00401286742189937,
+        "ci95_normal": [
+          0.005887492289330441,
+          0.021617932583175972
+        ],
+        "mean_abs": 0.01709825125639327,
+        "orientation": "higher",
+        "wins": 19,
+        "win_rate": 0.76
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.07654583900002762,
+        "median": -0.06545156077481806,
+        "std": 0.07634083419905625,
+        "sem": 0.015268166839811251,
+        "ci95_normal": [
+          -0.10647144600605768,
+          -0.04662023199399757
+        ],
+        "mean_abs": 0.08029725573258474,
+        "orientation": "lower",
+        "wins": 22,
+        "win_rate": 0.88
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.000788987132591501,
+        "median": -0.0011778895395764266,
+        "std": 0.0012076445375807632,
+        "sem": 0.00024152890751615264,
+        "ci95_normal": [
+          -0.0012623837913231602,
+          -0.00031559047385984186
+        ],
+        "mean_abs": 0.0012186773500525306,
+        "orientation": "matched",
+        "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+      }
+    },
+    "inverted": {
+      "mean_id_cos": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.01027656972175464,
+        "median": -0.0035121271503157914,
+        "std": 0.015547667935655892,
+        "sem": 0.0031095335871311786,
+        "ci95_normal": [
+          -0.01637125555253175,
+          -0.0041818838909775296
+        ],
+        "mean_abs": 0.011859208040405064,
+        "orientation": "higher",
+        "wins": 4,
+        "win_rate": 0.16
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.04947059570768033,
+        "median": 0.03194992899079807,
+        "std": 0.06176926394123053,
+        "sem": 0.012353852788246106,
+        "ci95_normal": [
+          0.025257044242717963,
+          0.0736841471726427
+        ],
+        "mean_abs": 0.055658907290926436,
+        "orientation": "lower",
+        "wins": 3,
+        "win_rate": 0.12
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.0007076678680050464,
+        "median": 0.0005175389601390634,
+        "std": 0.0013122282393645299,
+        "sem": 0.00026244564787290597,
+        "ci95_normal": [
+          0.00019327439817415067,
+          0.001222061337835942
+        ],
+        "mean_abs": 0.000994429358556772,
+        "orientation": "matched",
+        "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+      }
+    },
+    "shuffled": {
+      "mean_id_cos": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.00033179756719619035,
+        "median": -0.0015812546480447054,
+        "std": 0.017689960897089362,
+        "sem": 0.0035379921794178723,
+        "ci95_normal": [
+          -0.007266262238855219,
+          0.006602667104462839
+        ],
+        "mean_abs": 0.013394319098442792,
+        "orientation": "higher",
+        "wins": 11,
+        "win_rate": 0.44
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.003780570808739867,
+        "median": 0.0008960599734564312,
+        "std": 0.07630875718176507,
+        "sem": 0.015261751436353013,
+        "ci95_normal": [
+          -0.02613246200651204,
+          0.03369360362399178
+        ],
+        "mean_abs": 0.061628694986284246,
+        "orientation": "lower",
+        "wins": 12,
+        "win_rate": 0.48
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.00014535659679495438,
+        "median": 0.00010198013887929847,
+        "std": 0.0012144981901441245,
+        "sem": 0.0002428996380288249,
+        "ci95_normal": [
+          -0.00033072669374154245,
+          0.0006214398873314512
+        ],
+        "mean_abs": 0.0009409557742219477,
+        "orientation": "matched",
+        "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+      }
+    }
+  },
+  "controller_vs_random": {
+    "actual": {
+      "mean_id_cos": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.023732106174575166,
+        "median": 0.018083595379721373,
+        "std": 0.01769076067758175,
+        "sem": 0.00353815213551635,
+        "ci95_normal": [
+          0.01679732798896312,
+          0.030666884360187212
+        ],
+        "mean_abs": 0.024005509755806998,
+        "orientation": "higher",
+        "wins": 24,
+        "win_rate": 0.96
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.09683002027166367,
+        "median": -0.09252799763635267,
+        "std": 0.07746117382001161,
+        "sem": 0.015492234764002322,
+        "ci95_normal": [
+          -0.12719480040910822,
+          -0.06646524013421912
+        ],
+        "mean_abs": 0.10147076702000049,
+        "orientation": "lower",
+        "wins": 22,
+        "win_rate": 0.88
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.0009118292403036321,
+        "median": -0.0006064106092935617,
+        "std": 0.0017572888849683268,
+        "sem": 0.0003514577769936654,
+        "ci95_normal": [
+          -0.0016006864832112163,
+          -0.000222971997396048
+        ],
+        "mean_abs": 0.0015297818074577663,
+        "orientation": "matched",
+        "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+      }
+    },
+    "inverted": {
+      "mean_id_cos": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -8.839062880724668e-05,
+        "median": 0.002182133903261274,
+        "std": 0.030244522856109766,
+        "sem": 0.006048904571221953,
+        "ci95_normal": [
+          -0.011944243588402275,
+          0.011767462330787782
+        ],
+        "mean_abs": 0.02190045833820477,
+        "orientation": "higher",
+        "wins": 15,
+        "win_rate": 0.6
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.027553881656276643,
+        "median": 0.00813886566174915,
+        "std": 0.1257786286401849,
+        "sem": 0.02515572572803698,
+        "ci95_normal": [
+          -0.02175134077067584,
+          0.07685910408322913
+        ],
+        "mean_abs": 0.09379852183927141,
+        "orientation": "lower",
+        "wins": 10,
+        "win_rate": 0.4
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.000543398659392551,
+        "median": 0.00025130459994215926,
+        "std": 0.002127791835955093,
+        "sem": 0.00042555836719101857,
+        "ci95_normal": [
+          -0.0002906957403018453,
+          0.0013774930590869474
+        ],
+        "mean_abs": 0.001608208767402175,
+        "orientation": "matched",
+        "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+      }
+    },
+    "shuffled": {
+      "mean_id_cos": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": 0.00976604495663196,
+        "median": 0.012131929222960025,
+        "std": 0.022734862307266367,
+        "sem": 0.004546972461453273,
+        "ci95_normal": [
+          0.0008539789321835439,
+          0.018678110981080374
+        ],
+        "mean_abs": 0.019783083701040597,
+        "orientation": "higher",
+        "wins": 18,
+        "win_rate": 0.72
+      },
+      "mean_lpips_proxy": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -0.017074279910084443,
+        "median": -0.023664027630729834,
+        "std": 0.09959252552506946,
+        "sem": 0.019918505105013893,
+        "ci95_normal": [
+          -0.05611454991591167,
+          0.021965990095742786
+        ],
+        "mean_abs": 0.08193169784201018,
+        "orientation": "lower",
+        "wins": 15,
+        "win_rate": 0.6
+      },
+      "mean_abs_delta_attr": {
+        "n": 25,
+        "unit": "seed_attribute_cell",
+        "mean": -1.6038289631978843e-05,
+        "median": 3.020405893039424e-05,
+        "std": 0.002048961398032811,
+        "sem": 0.00040979227960656216,
+        "ci95_normal": [
+          -0.0008192311576608407,
+          0.0007871545783968829
+        ],
+        "mean_abs": 0.0016193907130218578,
+        "orientation": "matched",
+        "note": "Raw first mode minus second mode semantic magnitude; closer to zero is preferred."
+      }
+    }
+  },
+  "controller_rows": [
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8860181730706245,
+      "gain_only": 0.859116560430266,
+      "random": 0.8818599107908085,
+      "high_risk": 0.7848769800330047,
+      "low_risk": 0.8927435306250118
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6173637708998285,
+      "gain_only": 0.7166116539301584,
+      "random": 0.6499494163581403,
+      "high_risk": 1.0045084138255334,
+      "low_risk": 0.5357690661621746
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.024982036249411976,
+      "gain_only": 0.025953747270705207,
+      "random": 0.023828464248254022,
+      "high_risk": 0.02791966686891101,
+      "low_risk": 0.023836516972323807
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.922813604818657,
+      "gain_only": 0.9260475760092959,
+      "random": 0.8570624108542688,
+      "high_risk": 0.8447071052214596,
+      "low_risk": 0.8905715270084329
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.45179199788253754,
+      "gain_only": 0.47069851064588875,
+      "random": 0.674001964769559,
+      "high_risk": 0.7677721220898093,
+      "low_risk": 0.5384378990202094
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.015434400087542599,
+      "gain_only": 0.015276458033440576,
+      "random": 0.01949456873148847,
+      "high_risk": 0.021523322826169533,
+      "low_risk": 0.01583136272347474
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9095283447531983,
+      "gain_only": 0.9097671413328499,
+      "random": 0.8724681687890552,
+      "high_risk": 0.8447166637051851,
+      "low_risk": 0.8967516369302757
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5141044118718128,
+      "gain_only": 0.5470378427635296,
+      "random": 0.6843474463312305,
+      "high_risk": 0.8436310852266615,
+      "low_risk": 0.518722648426774
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.033057614715289674,
+      "gain_only": 0.03285994621910504,
+      "random": 0.037594124544739316,
+      "high_risk": 0.043989032571062125,
+      "low_risk": 0.03180218024726855
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9430206621764228,
+      "gain_only": 0.919020508415997,
+      "random": 0.918595043127425,
+      "high_risk": 0.9195514440652914,
+      "low_risk": 0.9392182236188091
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.36648327992952545,
+      "gain_only": 0.4655316826138005,
+      "random": 0.4531670363576268,
+      "high_risk": 0.47318080599143286,
+      "low_risk": 0.37266673026169883
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.008573105553978166,
+      "gain_only": 0.009668963615695247,
+      "random": 0.009995798961654145,
+      "high_risk": 0.009882038660634862,
+      "low_risk": 0.008214601426743684
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9535515244933777,
+      "gain_only": 0.9429802548256703,
+      "random": 0.9354679291136563,
+      "high_risk": 0.9378017242997885,
+      "low_risk": 0.9451784956618212
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.2528077351671527,
+      "gain_only": 0.3182592959419708,
+      "random": 0.37110492338979384,
+      "high_risk": 0.3628924967488274,
+      "low_risk": 0.30610857764986577
+    },
+    {
+      "mode": "actual",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.012387206634684844,
+      "gain_only": 0.013622276182104542,
+      "random": 0.013870702553958836,
+      "high_risk": 0.01388525979291444,
+      "low_risk": 0.013011973225275142
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9076374120777473,
+      "gain_only": 0.889179460471496,
+      "random": 0.8813883319380693,
+      "high_risk": 0.7900057313381694,
+      "low_risk": 0.9215756346238777
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5674526556176716,
+      "gain_only": 0.6458951845197589,
+      "random": 0.6042360403953353,
+      "high_risk": 0.9662002244294854,
+      "low_risk": 0.45007061624346534
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.02277723867155146,
+      "gain_only": 0.023559886031307542,
+      "random": 0.02163204150974707,
+      "high_risk": 0.02634799988800296,
+      "low_risk": 0.020285139172074196
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8886366224032827,
+      "gain_only": 0.873896281409543,
+      "random": 0.877278643194586,
+      "high_risk": 0.7833801141823642,
+      "low_risk": 0.8994003999396227
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5826621631131275,
+      "gain_only": 0.6227120634357561,
+      "random": 0.6099539237402496,
+      "high_risk": 0.971103706258873,
+      "low_risk": 0.5540012128185481
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.021573971994712338,
+      "gain_only": 0.02326138616035678,
+      "random": 0.021415585564454886,
+      "high_risk": 0.03030262039669651,
+      "low_risk": 0.017754265322764695
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9058700240566395,
+      "gain_only": 0.9156809541163966,
+      "random": 0.8908910713507794,
+      "high_risk": 0.8740702016511932,
+      "low_risk": 0.9114850965561345
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5228109934614622,
+      "gain_only": 0.5023346679299721,
+      "random": 0.6402513936918695,
+      "high_risk": 0.7628111918165814,
+      "low_risk": 0.4727488675925997
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.034265565454461466,
+      "gain_only": 0.032407320588390576,
+      "random": 0.03371757882177917,
+      "high_risk": 0.037695764501222584,
+      "low_risk": 0.02935049920961319
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9564900898258202,
+      "gain_only": 0.9408570325467736,
+      "random": 0.9277927003568038,
+      "high_risk": 0.9190140368882567,
+      "low_risk": 0.9317169187706895
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.29527968127513304,
+      "gain_only": 0.3902792594381026,
+      "random": 0.4688617301726481,
+      "high_risk": 0.48495022016140865,
+      "low_risk": 0.4121956098169903
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.007701270230541013,
+      "gain_only": 0.009496639961184883,
+      "random": 0.010579193827652489,
+      "high_risk": 0.010488734395380561,
+      "low_risk": 0.009442129017998013
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9492788358475082,
+      "gain_only": 0.9410842170473188,
+      "random": 0.9526963806129061,
+      "high_risk": 0.9534771348116919,
+      "low_risk": 0.9525997840100899
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.30720429682514805,
+      "gain_only": 0.3558620643507311,
+      "random": 0.28437792243857984,
+      "high_risk": 0.28759431683101866,
+      "low_risk": 0.2807793974534434
+    },
+    {
+      "mode": "actual",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.011995433456831961,
+      "gain_only": 0.01325551432296379,
+      "random": 0.012434755944809694,
+      "high_risk": 0.011892555289023221,
+      "low_risk": 0.0123149036421637
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9207153668976389,
+      "gain_only": 0.9414705817471258,
+      "random": 0.9063816192210652,
+      "high_risk": 0.9099684728425927,
+      "low_risk": 0.9298335231142119
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.41570906064953306,
+      "gain_only": 0.39514907692864654,
+      "random": 0.5373731143190525,
+      "high_risk": 0.57322116632713,
+      "low_risk": 0.36893766870343825
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.018688518658109388,
+      "gain_only": 0.016453026563794992,
+      "random": 0.01986867237098977,
+      "high_risk": 0.01944919240065701,
+      "low_risk": 0.01798609290881359
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8429401676403359,
+      "gain_only": 0.8099718086887151,
+      "random": 0.8264423891669139,
+      "high_risk": 0.7907336895004846,
+      "low_risk": 0.8857725546695292
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.7812253120937385,
+      "gain_only": 0.9360976125171874,
+      "random": 0.8470087528112344,
+      "high_risk": 1.0253812566807028,
+      "low_risk": 0.5736097137123579
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.028412580143594823,
+      "gain_only": 0.030357266645296477,
+      "random": 0.0284720089680377,
+      "high_risk": 0.03109154649246193,
+      "low_risk": 0.02033451857187174
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9228566297679208,
+      "gain_only": 0.9091250006458722,
+      "random": 0.9094197127269581,
+      "high_risk": 0.8587280490901321,
+      "low_risk": 0.8911158306873403
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.4121852687676437,
+      "gain_only": 0.533343604489346,
+      "random": 0.4763097179020406,
+      "high_risk": 0.8027264461052255,
+      "low_risk": 0.5313847868237644
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03317729265472735,
+      "gain_only": 0.034837984206205874,
+      "random": 0.03239984388619632,
+      "high_risk": 0.042724435212676326,
+      "low_risk": 0.036707131487673905
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9325912936474197,
+      "gain_only": 0.924321340629831,
+      "random": 0.9047183060902171,
+      "high_risk": 0.9061648155911826,
+      "low_risk": 0.9268816029652953
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.4154292627936229,
+      "gain_only": 0.45787565139471553,
+      "random": 0.5079572604299756,
+      "high_risk": 0.527841644041473,
+      "low_risk": 0.42005775560392067
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.00986164169012227,
+      "gain_only": 0.011060220073431992,
+      "random": 0.010458973454433362,
+      "high_risk": 0.01176904037447457,
+      "low_risk": 0.009189427506726133
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9624451775453053,
+      "gain_only": 0.9482838592375629,
+      "random": 0.951006393705029,
+      "high_risk": 0.9458220591768622,
+      "low_risk": 0.9447943436680362
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.21234819895471446,
+      "gain_only": 0.29668757031322457,
+      "random": 0.269532147951395,
+      "high_risk": 0.30962690749947797,
+      "low_risk": 0.30452543424325995
+    },
+    {
+      "mode": "actual",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.010880198617087444,
+      "gain_only": 0.01208283455162018,
+      "random": 0.012298991535772075,
+      "high_risk": 0.01218243989592338,
+      "low_risk": 0.013056484804565116
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8931287026498467,
+      "gain_only": 0.8173170958762057,
+      "random": 0.834496158582624,
+      "high_risk": 0.7823016482871026,
+      "low_risk": 0.8971864766790532
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5588287393184146,
+      "gain_only": 0.8737556932319421,
+      "random": 0.7869298422156135,
+      "high_risk": 1.000114531678264,
+      "low_risk": 0.5181683291884838
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.023734982592714005,
+      "gain_only": 0.025585220724451574,
+      "random": 0.02500598670940235,
+      "high_risk": 0.02814445273702404,
+      "low_risk": 0.022856881758116288
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8831694510299712,
+      "gain_only": 0.8676470490754582,
+      "random": 0.8750488043297082,
+      "high_risk": 0.8152863706927747,
+      "low_risk": 0.9012114357901737
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6352141100214794,
+      "gain_only": 0.7276702728704549,
+      "random": 0.620248343606363,
+      "high_risk": 0.8991397232020972,
+      "low_risk": 0.5046451121525024
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.022805688041898975,
+      "gain_only": 0.023019626294626505,
+      "random": 0.02129241891179845,
+      "high_risk": 0.0255135512572906,
+      "low_risk": 0.017024951091116236
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.906221148383338,
+      "gain_only": 0.88866147067165,
+      "random": 0.8721225800691172,
+      "high_risk": 0.8548389229690656,
+      "low_risk": 0.893195882672444
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.47989235638669925,
+      "gain_only": 0.6080871207814198,
+      "random": 0.6539270337452763,
+      "high_risk": 0.7966551671852358,
+      "low_risk": 0.5215493971118121
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03676503996757674,
+      "gain_only": 0.03938432337872655,
+      "random": 0.040520191661016725,
+      "high_risk": 0.04377267390259476,
+      "low_risk": 0.03415603122266475
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9560880961944349,
+      "gain_only": 0.9550041876500472,
+      "random": 0.9010538887814619,
+      "high_risk": 0.9155423383926973,
+      "low_risk": 0.9318171063205227
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.2944698964784038,
+      "gain_only": 0.3249758145902888,
+      "random": 0.509765552567842,
+      "high_risk": 0.486838296877977,
+      "low_risk": 0.3914059663802618
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.007777961988040261,
+      "gain_only": 0.0093744685270849,
+      "random": 0.010399496421996446,
+      "high_risk": 0.011378415013723497,
+      "low_risk": 0.008391840735953338
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9542570903431624,
+      "gain_only": 0.9461548828403465,
+      "random": 0.9415989450644702,
+      "high_risk": 0.9505532701150514,
+      "low_risk": 0.9497641416382976
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.2537503927924263,
+      "gain_only": 0.27677807654617936,
+      "random": 0.3088895705550385,
+      "high_risk": 0.2795480777967896,
+      "low_risk": 0.2666143944225041
+    },
+    {
+      "mode": "actual",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.012350175147275877,
+      "gain_only": 0.012552052198088859,
+      "random": 0.013690291579905534,
+      "high_risk": 0.012383847121100189,
+      "low_risk": 0.01222042024573966
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8907411846448667,
+      "gain_only": 0.8325763019674923,
+      "random": 0.8766455135191791,
+      "high_risk": 0.7942411680414807,
+      "low_risk": 0.9129241039045155
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6498082964244531,
+      "gain_only": 0.8880220521386946,
+      "random": 0.6295911028719274,
+      "high_risk": 1.0153610107518034,
+      "low_risk": 0.470343303255504
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.022876817986798414,
+      "gain_only": 0.025291543748153344,
+      "random": 0.022703799006649206,
+      "high_risk": 0.027680853894480606,
+      "low_risk": 0.020676840403893948
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9412378072156571,
+      "gain_only": 0.9477057124604471,
+      "random": 0.8921652292192448,
+      "high_risk": 0.8781226204882842,
+      "low_risk": 0.9218381401733495
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.34075451508761034,
+      "gain_only": 0.33489811518302304,
+      "random": 0.5451604075933574,
+      "high_risk": 0.6782730876802816,
+      "low_risk": 0.4035564605546824
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.012275377874630067,
+      "gain_only": 0.011604546998569276,
+      "random": 0.015125477579886137,
+      "high_risk": 0.016387272613883397,
+      "low_risk": 0.012943641380843474
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8826686958782375,
+      "gain_only": 0.8722063179593533,
+      "random": 0.8618498210562393,
+      "high_risk": 0.856883633940015,
+      "low_risk": 0.89138801995432
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.642367189640936,
+      "gain_only": 0.7319383535068482,
+      "random": 0.7548330658173654,
+      "high_risk": 0.8476930094693671,
+      "low_risk": 0.5425265635203687
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.04292355942016002,
+      "gain_only": 0.044101448959736445,
+      "random": 0.041627384830917435,
+      "high_risk": 0.04466334226572144,
+      "low_risk": 0.03637377541826936
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9519957393058576,
+      "gain_only": 0.9406960203777999,
+      "random": 0.92787367553683,
+      "high_risk": 0.9197203865624033,
+      "low_risk": 0.9360827055643313
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.344402288661513,
+      "gain_only": 0.39806780715298373,
+      "random": 0.439405337718199,
+      "high_risk": 0.4989431516951299,
+      "low_risk": 0.3858761373121524
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.009438241773295886,
+      "gain_only": 0.009624845996313525,
+      "random": 0.010044652382589447,
+      "high_risk": 0.011218708962587698,
+      "low_risk": 0.008864761481731875
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9238845100044273,
+      "gain_only": 0.9251969273318537,
+      "random": 0.9181600731099024,
+      "high_risk": 0.9264646876836196,
+      "low_risk": 0.9492155821062624
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.4172514405945549,
+      "gain_only": 0.4266742424952099,
+      "random": 0.42516477375102113,
+      "high_risk": 0.42115551776078064,
+      "low_risk": 0.2741744394406851
+    },
+    {
+      "mode": "actual",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.0172652743301569,
+      "gain_only": 0.017014324998626762,
+      "random": 0.01630592093465566,
+      "high_risk": 0.01640729325481516,
+      "low_risk": 0.013180287826799031
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8584483619779348,
+      "gain_only": 0.8600296166259795,
+      "random": 0.8826098155695945,
+      "high_risk": 0.7856653681374155,
+      "low_risk": 0.8932913566241041
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.7396461916650878,
+      "gain_only": 0.7130055024317699,
+      "random": 0.646766858684714,
+      "high_risk": 1.0016106346593006,
+      "low_risk": 0.533270747444476
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.02533678596205391,
+      "gain_only": 0.02590956945664402,
+      "random": 0.02373048728509275,
+      "high_risk": 0.027934987928802002,
+      "low_risk": 0.02367343802029609
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9122487948043272,
+      "gain_only": 0.9260475760092959,
+      "random": 0.8570624108542688,
+      "high_risk": 0.8447071052214596,
+      "low_risk": 0.8905715270084329
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5379302949295379,
+      "gain_only": 0.47069851064588875,
+      "random": 0.674001964769559,
+      "high_risk": 0.7677721220898093,
+      "low_risk": 0.5384378990202094
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.01670406822267978,
+      "gain_only": 0.015276458033440576,
+      "random": 0.01949456873148847,
+      "high_risk": 0.021523322826169533,
+      "low_risk": 0.01583136272347474
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8987366215442307,
+      "gain_only": 0.9097671413328499,
+      "random": 0.8724681687890552,
+      "high_risk": 0.8447166637051851,
+      "low_risk": 0.8967516369302757
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6036716756789247,
+      "gain_only": 0.5470378427635296,
+      "random": 0.6843474463312305,
+      "high_risk": 0.8436310852266615,
+      "low_risk": 0.518722648426774
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03438285448191891,
+      "gain_only": 0.03285994621910504,
+      "random": 0.037594124544739316,
+      "high_risk": 0.043989032571062125,
+      "low_risk": 0.03180218024726855
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9314062264747918,
+      "gain_only": 0.919020508415997,
+      "random": 0.918595043127425,
+      "high_risk": 0.9195514440652914,
+      "low_risk": 0.9392182236188091
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.42950300872689695,
+      "gain_only": 0.4655316826138005,
+      "random": 0.4531670363576268,
+      "high_risk": 0.47318080599143286,
+      "low_risk": 0.37266673026169883
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.009702696323984128,
+      "gain_only": 0.009668963615695247,
+      "random": 0.009995798961654145,
+      "high_risk": 0.009882038660634862,
+      "low_risk": 0.008214601426743684
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9420115211396478,
+      "gain_only": 0.9483078972552903,
+      "random": 0.9389857568894513,
+      "high_risk": 0.9426022148109041,
+      "low_risk": 0.9471606546430849
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.327588021667907,
+      "gain_only": 0.28981968446896644,
+      "random": 0.35101833257067483,
+      "high_risk": 0.3348552213246876,
+      "low_risk": 0.2942292493316927
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.013816671840913841,
+      "gain_only": 0.0127719550744132,
+      "random": 0.013386860164018799,
+      "high_risk": 0.013195952052001303,
+      "low_risk": 0.0127080253580516
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8626246719504707,
+      "gain_only": 0.889179460471496,
+      "random": 0.8813883319380693,
+      "high_risk": 0.7900057313381694,
+      "low_risk": 0.9215756346238777
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.7362364462096593,
+      "gain_only": 0.6458951845197589,
+      "random": 0.6042360403953353,
+      "high_risk": 0.9662002244294854,
+      "low_risk": 0.45007061624346534
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.02415949085570901,
+      "gain_only": 0.023559886031307542,
+      "random": 0.02163204150974707,
+      "high_risk": 0.02634799988800296,
+      "low_risk": 0.020285139172074196
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8619334393879399,
+      "gain_only": 0.873896281409543,
+      "random": 0.877278643194586,
+      "high_risk": 0.7833801141823642,
+      "low_risk": 0.8994003999396227
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6640510643701418,
+      "gain_only": 0.6227120634357561,
+      "random": 0.6099539237402496,
+      "high_risk": 0.971103706258873,
+      "low_risk": 0.5540012128185481
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.023231850652791763,
+      "gain_only": 0.02326138616035678,
+      "random": 0.021415585564454886,
+      "high_risk": 0.03030262039669651,
+      "low_risk": 0.017754265322764695
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8941560126258992,
+      "gain_only": 0.9181960225687362,
+      "random": 0.8924149929662235,
+      "high_risk": 0.8764561754069291,
+      "low_risk": 0.9128886863472871
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6376021592441248,
+      "gain_only": 0.49111970674130134,
+      "random": 0.6343389446265064,
+      "high_risk": 0.7536734243331011,
+      "low_risk": 0.46597587348514935
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03438939313537048,
+      "gain_only": 0.03129728748126581,
+      "random": 0.03325616147412802,
+      "high_risk": 0.036718552804359206,
+      "low_risk": 0.02893011202195339
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9534337125951424,
+      "gain_only": 0.9408570325467736,
+      "random": 0.9277927003568038,
+      "high_risk": 0.9190140368882567,
+      "low_risk": 0.9317169187706895
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.3378193896387529,
+      "gain_only": 0.3902792594381026,
+      "random": 0.4688617301726481,
+      "high_risk": 0.48495022016140865,
+      "low_risk": 0.4121956098169903
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.008687539626635044,
+      "gain_only": 0.009496639961184883,
+      "random": 0.010579193827652489,
+      "high_risk": 0.010488734395380561,
+      "low_risk": 0.009442129017998013
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9358197411056608,
+      "gain_only": 0.9410842170473188,
+      "random": 0.9526963806129061,
+      "high_risk": 0.9534771348116919,
+      "low_risk": 0.9525997840100899
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.38682062643601967,
+      "gain_only": 0.3558620643507311,
+      "random": 0.28437792243857984,
+      "high_risk": 0.28759431683101866,
+      "low_risk": 0.2807793974534434
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.013357494461843089,
+      "gain_only": 0.01325551432296379,
+      "random": 0.012434755944809694,
+      "high_risk": 0.011892555289023221,
+      "low_risk": 0.0123149036421637
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9224542175070383,
+      "gain_only": 0.9414705817471258,
+      "random": 0.9063816192210652,
+      "high_risk": 0.9099684728425927,
+      "low_risk": 0.9298335231142119
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.4848613054236921,
+      "gain_only": 0.39514907692864654,
+      "random": 0.5373731143190525,
+      "high_risk": 0.57322116632713,
+      "low_risk": 0.36893766870343825
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.017808035407938405,
+      "gain_only": 0.016453026563794992,
+      "random": 0.01986867237098977,
+      "high_risk": 0.01944919240065701,
+      "low_risk": 0.01798609290881359
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.839671490015462,
+      "gain_only": 0.8099718086887151,
+      "random": 0.8264423891669139,
+      "high_risk": 0.7907336895004846,
+      "low_risk": 0.8857725546695292
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.8596308685955591,
+      "gain_only": 0.9360976125171874,
+      "random": 0.8470087528112344,
+      "high_risk": 1.0253812566807028,
+      "low_risk": 0.5736097137123579
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.028439333963433455,
+      "gain_only": 0.030357266645296477,
+      "random": 0.0284720089680377,
+      "high_risk": 0.03109154649246193,
+      "low_risk": 0.02033451857187174
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.910945797804743,
+      "gain_only": 0.9091250006458722,
+      "random": 0.9094197127269581,
+      "high_risk": 0.8587280490901321,
+      "low_risk": 0.8911158306873403
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.48274245687935036,
+      "gain_only": 0.533343604489346,
+      "random": 0.4763097179020406,
+      "high_risk": 0.8027264461052255,
+      "low_risk": 0.5313847868237644
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03539478865059209,
+      "gain_only": 0.034837984206205874,
+      "random": 0.03239984388619632,
+      "high_risk": 0.042724435212676326,
+      "low_risk": 0.036707131487673905
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9285266006481834,
+      "gain_only": 0.9243705195840448,
+      "random": 0.9047703783144243,
+      "high_risk": 0.9062166282092221,
+      "low_risk": 0.926914764510002
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.4247426834626822,
+      "gain_only": 0.45749573200009763,
+      "random": 0.5077649506129092,
+      "high_risk": 0.5275433067727135,
+      "low_risk": 0.41990673435793724
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.010252853968950149,
+      "gain_only": 0.011056644099880941,
+      "random": 0.01045792162062753,
+      "high_risk": 0.011763437490117212,
+      "low_risk": 0.009186658435965
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9631383229279891,
+      "gain_only": 0.9482838592375629,
+      "random": 0.951006393705029,
+      "high_risk": 0.9458220591768622,
+      "low_risk": 0.9447943436680362
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.2035919205263781,
+      "gain_only": 0.29668757031322457,
+      "random": 0.269532147951395,
+      "high_risk": 0.30962690749947797,
+      "low_risk": 0.30452543424325995
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.010671935219988882,
+      "gain_only": 0.01208283455162018,
+      "random": 0.012298991535772075,
+      "high_risk": 0.01218243989592338,
+      "low_risk": 0.013056484804565116
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8645591113017872,
+      "gain_only": 0.8173170958762057,
+      "random": 0.834496158582624,
+      "high_risk": 0.7823016482871026,
+      "low_risk": 0.8971864766790532
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6893124605558114,
+      "gain_only": 0.8737556932319421,
+      "random": 0.7869298422156135,
+      "high_risk": 1.000114531678264,
+      "low_risk": 0.5181683291884838
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.025036190768332744,
+      "gain_only": 0.025585220724451574,
+      "random": 0.02500598670940235,
+      "high_risk": 0.02814445273702404,
+      "low_risk": 0.022856881758116288
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8446402144618332,
+      "gain_only": 0.8676470490754582,
+      "random": 0.8750488043297082,
+      "high_risk": 0.8152863706927747,
+      "low_risk": 0.9012114357901737
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.8101857709261822,
+      "gain_only": 0.7276702728704549,
+      "random": 0.620248343606363,
+      "high_risk": 0.8991397232020972,
+      "low_risk": 0.5046451121525024
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.024487568849508534,
+      "gain_only": 0.023019626294626505,
+      "random": 0.02129241891179845,
+      "high_risk": 0.0255135512572906,
+      "low_risk": 0.017024951091116236
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8991452783229761,
+      "gain_only": 0.88866147067165,
+      "random": 0.8721225800691172,
+      "high_risk": 0.8548389229690656,
+      "low_risk": 0.893195882672444
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5470276296764496,
+      "gain_only": 0.6080871207814198,
+      "random": 0.6539270337452763,
+      "high_risk": 0.7966551671852358,
+      "low_risk": 0.5215493971118121
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03686132373786677,
+      "gain_only": 0.03938432337872655,
+      "random": 0.040520191661016725,
+      "high_risk": 0.04377267390259476,
+      "low_risk": 0.03415603122266475
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9430626700050198,
+      "gain_only": 0.9550041876500472,
+      "random": 0.9010538887814619,
+      "high_risk": 0.9155423383926973,
+      "low_risk": 0.9318171063205227
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.38344796976889484,
+      "gain_only": 0.3249758145902888,
+      "random": 0.509765552567842,
+      "high_risk": 0.486838296877977,
+      "low_risk": 0.3914059663802618
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.009969058432488964,
+      "gain_only": 0.0093744685270849,
+      "random": 0.010399496421996446,
+      "high_risk": 0.011378415013723497,
+      "low_risk": 0.008391840735953338
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9456328040105291,
+      "gain_only": 0.9461548828403465,
+      "random": 0.9415989450644702,
+      "high_risk": 0.9505532701150514,
+      "low_risk": 0.9497641416382976
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.27633455648538074,
+      "gain_only": 0.27677807654617936,
+      "random": 0.3088895705550385,
+      "high_risk": 0.2795480777967896,
+      "low_risk": 0.2666143944225041
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.012492337916910401,
+      "gain_only": 0.012552052198088859,
+      "random": 0.013690291579905534,
+      "high_risk": 0.012383847121100189,
+      "low_risk": 0.01222042024573966
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8592263600730803,
+      "gain_only": 0.8325763019674923,
+      "random": 0.8766455135191791,
+      "high_risk": 0.7942411680414807,
+      "low_risk": 0.9129241039045155
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.7809044993191492,
+      "gain_only": 0.8880220521386946,
+      "random": 0.6295911028719274,
+      "high_risk": 1.0153610107518034,
+      "low_risk": 0.470343303255504
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.02457330544848446,
+      "gain_only": 0.025291543748153344,
+      "random": 0.022703799006649206,
+      "high_risk": 0.027680853894480606,
+      "low_risk": 0.020676840403893948
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9437398786540143,
+      "gain_only": 0.9477057124604471,
+      "random": 0.8921652292192448,
+      "high_risk": 0.8781226204882842,
+      "low_risk": 0.9218381401733495
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.33579417515647947,
+      "gain_only": 0.33489811518302304,
+      "random": 0.5451604075933574,
+      "high_risk": 0.6782730876802816,
+      "low_risk": 0.4035564605546824
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.012081837967798492,
+      "gain_only": 0.011604546998569276,
+      "random": 0.015125477579886137,
+      "high_risk": 0.016387272613883397,
+      "low_risk": 0.012943641380843474
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8596115369582549,
+      "gain_only": 0.8722063179593533,
+      "random": 0.8618498210562393,
+      "high_risk": 0.856883633940015,
+      "low_risk": 0.89138801995432
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.8205623133981135,
+      "gain_only": 0.7319383535068482,
+      "random": 0.7548330658173654,
+      "high_risk": 0.8476930094693671,
+      "low_risk": 0.5425265635203687
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.044866453501981596,
+      "gain_only": 0.044101448959736445,
+      "random": 0.041627384830917435,
+      "high_risk": 0.04466334226572144,
+      "low_risk": 0.03637377541826936
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9438572400249541,
+      "gain_only": 0.9406960203777999,
+      "random": 0.92787367553683,
+      "high_risk": 0.9197203865624033,
+      "low_risk": 0.9360827055643313
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.3838752565570758,
+      "gain_only": 0.39806780715298373,
+      "random": 0.439405337718199,
+      "high_risk": 0.4989431516951299,
+      "low_risk": 0.3858761373121524
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.010164450829506677,
+      "gain_only": 0.009624845996313525,
+      "random": 0.010044652382589447,
+      "high_risk": 0.011218708962587698,
+      "low_risk": 0.008864761481731875
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9254479242954403,
+      "gain_only": 0.9251969273318537,
+      "random": 0.9181600731099024,
+      "high_risk": 0.9264646876836196,
+      "low_risk": 0.9492155821062624
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.41223417107539717,
+      "gain_only": 0.4266742424952099,
+      "random": 0.42516477375102113,
+      "high_risk": 0.42115551776078064,
+      "low_risk": 0.2741744394406851
+    },
+    {
+      "mode": "shuffled",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.016463358939745376,
+      "gain_only": 0.017014324998626762,
+      "random": 0.01630592093465566,
+      "high_risk": 0.01640729325481516,
+      "low_risk": 0.013180287826799031
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8584483619779348,
+      "gain_only": 0.8600296166259795,
+      "random": 0.8826098155695945,
+      "high_risk": 0.7856653681374155,
+      "low_risk": 0.8932913566241041
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.7396461916650878,
+      "gain_only": 0.7130055024317699,
+      "random": 0.646766858684714,
+      "high_risk": 1.0016106346593006,
+      "low_risk": 0.533270747444476
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.02533678596205391,
+      "gain_only": 0.02590956945664402,
+      "random": 0.02373048728509275,
+      "high_risk": 0.027934987928802002,
+      "low_risk": 0.02367343802029609
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9319055174710229,
+      "gain_only": 0.9260475760092959,
+      "random": 0.8570624108542688,
+      "high_risk": 0.8447071052214596,
+      "low_risk": 0.8905715270084329
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.46713108810945414,
+      "gain_only": 0.47069851064588875,
+      "random": 0.674001964769559,
+      "high_risk": 0.7677721220898093,
+      "low_risk": 0.5384378990202094
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.015243466380525206,
+      "gain_only": 0.015276458033440576,
+      "random": 0.01949456873148847,
+      "high_risk": 0.021523322826169533,
+      "low_risk": 0.01583136272347474
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8935887566185556,
+      "gain_only": 0.9172672226559371,
+      "random": 0.8817865705350414,
+      "high_risk": 0.8557666004635394,
+      "low_risk": 0.9005939580965787
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6326557686588785,
+      "gain_only": 0.5129937666097248,
+      "random": 0.6540179111907491,
+      "high_risk": 0.8110483590899094,
+      "low_risk": 0.5038455256581074
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.035263063700767816,
+      "gain_only": 0.030697249715558428,
+      "random": 0.035045007795815764,
+      "high_risk": 0.04064715592221546,
+      "low_risk": 0.030851960371819587
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9155083812656812,
+      "gain_only": 0.919020508415997,
+      "random": 0.918595043127425,
+      "high_risk": 0.9195514440652914,
+      "low_risk": 0.9392182236188091
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.49284311314477236,
+      "gain_only": 0.4655316826138005,
+      "random": 0.4531670363576268,
+      "high_risk": 0.47318080599143286,
+      "low_risk": 0.37266673026169883
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.010247103561596305,
+      "gain_only": 0.009668963615695247,
+      "random": 0.009995798961654145,
+      "high_risk": 0.009882038660634862,
+      "low_risk": 0.008214601426743684
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9483078972552903,
+      "gain_only": 0.9483078972552903,
+      "random": 0.9389857568894513,
+      "high_risk": 0.9426022148109041,
+      "low_risk": 0.9471606546430849
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.28981968446896644,
+      "gain_only": 0.28981968446896644,
+      "random": 0.35101833257067483,
+      "high_risk": 0.3348552213246876,
+      "low_risk": 0.2942292493316927
+    },
+    {
+      "mode": "inverted",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.0127719550744132,
+      "gain_only": 0.0127719550744132,
+      "random": 0.013386860164018799,
+      "high_risk": 0.013195952052001303,
+      "low_risk": 0.0127080253580516
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8349127380060963,
+      "gain_only": 0.889179460471496,
+      "random": 0.8813883319380693,
+      "high_risk": 0.7900057313381694,
+      "low_risk": 0.9215756346238777
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.822042216466798,
+      "gain_only": 0.6458951845197589,
+      "random": 0.6042360403953353,
+      "high_risk": 0.9662002244294854,
+      "low_risk": 0.45007061624346534
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.024455120428683585,
+      "gain_only": 0.023559886031307542,
+      "random": 0.02163204150974707,
+      "high_risk": 0.02634799988800296,
+      "low_risk": 0.020285139172074196
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8410678681102581,
+      "gain_only": 0.873896281409543,
+      "random": 0.877278643194586,
+      "high_risk": 0.7833801141823642,
+      "low_risk": 0.8994003999396227
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.7406059424465639,
+      "gain_only": 0.6227120634357561,
+      "random": 0.6099539237402496,
+      "high_risk": 0.971103706258873,
+      "low_risk": 0.5540012128185481
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.025659610431830515,
+      "gain_only": 0.02326138616035678,
+      "random": 0.021415585564454886,
+      "high_risk": 0.03030262039669651,
+      "low_risk": 0.017754265322764695
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8945971268694848,
+      "gain_only": 0.9181960225687362,
+      "random": 0.8924149929662235,
+      "high_risk": 0.8764561754069291,
+      "low_risk": 0.9128886863472871
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6424778102882556,
+      "gain_only": 0.49111970674130134,
+      "random": 0.6343389446265064,
+      "high_risk": 0.7536734243331011,
+      "low_risk": 0.46597587348514935
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03345566233701902,
+      "gain_only": 0.03129728748126581,
+      "random": 0.03325616147412802,
+      "high_risk": 0.036718552804359206,
+      "low_risk": 0.02893011202195339
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9432663295301609,
+      "gain_only": 0.9432663295301609,
+      "random": 0.928758920636028,
+      "high_risk": 0.921175416384358,
+      "low_risk": 0.9320644600666128
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.3772559804128832,
+      "gain_only": 0.3772559804128832,
+      "random": 0.4631402234444977,
+      "high_risk": 0.4742823255510302,
+      "low_risk": 0.41040483787219273
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.009163572353600102,
+      "gain_only": 0.009163572353600102,
+      "random": 0.010490567027773068,
+      "high_risk": 0.010226792429193665,
+      "low_risk": 0.009427940200794183
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9534771348116919,
+      "gain_only": 0.9410842170473188,
+      "random": 0.9526963806129061,
+      "high_risk": 0.9534771348116919,
+      "low_risk": 0.9525997840100899
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.28759431683101866,
+      "gain_only": 0.3558620643507311,
+      "random": 0.28437792243857984,
+      "high_risk": 0.28759431683101866,
+      "low_risk": 0.2807793974534434
+    },
+    {
+      "mode": "inverted",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.011892555289023221,
+      "gain_only": 0.01325551432296379,
+      "random": 0.012434755944809694,
+      "high_risk": 0.011892555289023221,
+      "low_risk": 0.0123149036421637
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9180315947742201,
+      "gain_only": 0.9414705817471258,
+      "random": 0.9063816192210652,
+      "high_risk": 0.9099684728425927,
+      "low_risk": 0.9298335231142119
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.5131778547656722,
+      "gain_only": 0.39514907692864654,
+      "random": 0.5373731143190525,
+      "high_risk": 0.57322116632713,
+      "low_risk": 0.36893766870343825
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.01857708208569875,
+      "gain_only": 0.016453026563794992,
+      "random": 0.01986867237098977,
+      "high_risk": 0.01944919240065701,
+      "low_risk": 0.01798609290881359
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.7937104675802402,
+      "gain_only": 0.8130449085729197,
+      "random": 0.8273590864264406,
+      "high_risk": 0.7937104675802402,
+      "low_risk": 0.886274503718596
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 1.0142680459539406,
+      "gain_only": 0.9241947828559205,
+      "random": 0.843398516139132,
+      "high_risk": 1.0142680459539406,
+      "low_risk": 0.5716094634553883
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.031169668360917058,
+      "gain_only": 0.030424532365714185,
+      "random": 0.028415727795163548,
+      "high_risk": 0.031169668360917058,
+      "low_risk": 0.02024772600907454
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8920261791790836,
+      "gain_only": 0.9091250006458722,
+      "random": 0.9094197127269581,
+      "high_risk": 0.8587280490901321,
+      "low_risk": 0.8911158306873403
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6199347166111693,
+      "gain_only": 0.533343604489346,
+      "random": 0.4763097179020406,
+      "high_risk": 0.8027264461052255,
+      "low_risk": 0.5313847868237644
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.0367088846887782,
+      "gain_only": 0.034837984206205874,
+      "random": 0.03239984388619632,
+      "high_risk": 0.042724435212676326,
+      "low_risk": 0.036707131487673905
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9244297152617946,
+      "gain_only": 0.9244297152617946,
+      "random": 0.9048100525396876,
+      "high_risk": 0.9062699928181246,
+      "low_risk": 0.9269444830715656
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.457117187215772,
+      "gain_only": 0.457117187215772,
+      "random": 0.5075771619158331,
+      "high_risk": 0.5272484056549729,
+      "low_risk": 0.4197531137615442
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.011057483903414322,
+      "gain_only": 0.011057483903414322,
+      "random": 0.010456819313503729,
+      "high_risk": 0.011761164848167027,
+      "low_risk": 0.009185216033301913
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9482838592375629,
+      "gain_only": 0.9482838592375629,
+      "random": 0.951006393705029,
+      "high_risk": 0.9458220591768622,
+      "low_risk": 0.9447943436680362
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.29668757031322457,
+      "gain_only": 0.29668757031322457,
+      "random": 0.269532147951395,
+      "high_risk": 0.30962690749947797,
+      "low_risk": 0.30452543424325995
+    },
+    {
+      "mode": "inverted",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.01208283455162018,
+      "gain_only": 0.01208283455162018,
+      "random": 0.012298991535772075,
+      "high_risk": 0.01218243989592338,
+      "low_risk": 0.013056484804565116
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8173170958762057,
+      "gain_only": 0.8173170958762057,
+      "random": 0.834496158582624,
+      "high_risk": 0.7823016482871026,
+      "low_risk": 0.8971864766790532
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.8737556932319421,
+      "gain_only": 0.8737556932319421,
+      "random": 0.7869298422156135,
+      "high_risk": 1.000114531678264,
+      "low_risk": 0.5181683291884838
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.025585220724451574,
+      "gain_only": 0.025585220724451574,
+      "random": 0.02500598670940235,
+      "high_risk": 0.02814445273702404,
+      "low_risk": 0.022856881758116288
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8299040633137338,
+      "gain_only": 0.8676470490754582,
+      "random": 0.8750488043297082,
+      "high_risk": 0.8152863706927747,
+      "low_risk": 0.9012114357901737
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.8633999991434393,
+      "gain_only": 0.7276702728704549,
+      "random": 0.620248343606363,
+      "high_risk": 0.8991397232020972,
+      "low_risk": 0.5046451121525024
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.0247046572023919,
+      "gain_only": 0.023019626294626505,
+      "random": 0.02129241891179845,
+      "high_risk": 0.0255135512572906,
+      "low_risk": 0.017024951091116236
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8845169055275619,
+      "gain_only": 0.9002759899594821,
+      "random": 0.8833095609443262,
+      "high_risk": 0.858593697543256,
+      "low_risk": 0.8975781778572127
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.6609683633905661,
+      "gain_only": 0.5680997194904194,
+      "random": 0.6154544113524025,
+      "high_risk": 0.7847619798012602,
+      "low_risk": 0.5052521874240483
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.03894953503913712,
+      "gain_only": 0.036687621425699035,
+      "random": 0.038014292563275376,
+      "high_risk": 0.04273622677419553,
+      "low_risk": 0.032811004213726847
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9457396838697605,
+      "gain_only": 0.9566553694894537,
+      "random": 0.902679015242029,
+      "high_risk": 0.917303848604206,
+      "low_risk": 0.9325711983838119
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.37157519550964935,
+      "gain_only": 0.3130232595067355,
+      "random": 0.5032790108089102,
+      "high_risk": 0.47687578115437645,
+      "low_risk": 0.38728545803314773
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.009828819212771123,
+      "gain_only": 0.009062935736665167,
+      "random": 0.010236825559786666,
+      "high_risk": 0.011082883206427141,
+      "low_risk": 0.008298514297734982
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9461548828403465,
+      "gain_only": 0.9461548828403465,
+      "random": 0.9415989450644702,
+      "high_risk": 0.9505532701150514,
+      "low_risk": 0.9497641416382976
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.27677807654617936,
+      "gain_only": 0.27677807654617936,
+      "random": 0.3088895705550385,
+      "high_risk": 0.2795480777967896,
+      "low_risk": 0.2666143944225041
+    },
+    {
+      "mode": "inverted",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.012552052198088859,
+      "gain_only": 0.012552052198088859,
+      "random": 0.013690291579905534,
+      "high_risk": 0.012383847121100189,
+      "low_risk": 0.01222042024573966
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8278078764851671,
+      "gain_only": 0.8325763019674923,
+      "random": 0.8766455135191791,
+      "high_risk": 0.7942411680414807,
+      "low_risk": 0.9129241039045155
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.9199719811294926,
+      "gain_only": 0.8880220521386946,
+      "random": 0.6295911028719274,
+      "high_risk": 1.0153610107518034,
+      "low_risk": 0.470343303255504
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.025809082708292408,
+      "gain_only": 0.025291543748153344,
+      "random": 0.022703799006649206,
+      "high_risk": 0.027680853894480606,
+      "low_risk": 0.020676840403893948
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9477057124604471,
+      "gain_only": 0.9477057124604471,
+      "random": 0.8921652292192448,
+      "high_risk": 0.8781226204882842,
+      "low_risk": 0.9218381401733495
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.33489811518302304,
+      "gain_only": 0.33489811518302304,
+      "random": 0.5451604075933574,
+      "high_risk": 0.6782730876802816,
+      "low_risk": 0.4035564605546824
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.011604546998569276,
+      "gain_only": 0.011604546998569276,
+      "random": 0.015125477579886137,
+      "high_risk": 0.016387272613883397,
+      "low_risk": 0.012943641380843474
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.8724706773646176,
+      "gain_only": 0.8722063179593533,
+      "random": 0.8618498210562393,
+      "high_risk": 0.856883633940015,
+      "low_risk": 0.89138801995432
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.765678488794947,
+      "gain_only": 0.7319383535068482,
+      "random": 0.7548330658173654,
+      "high_risk": 0.8476930094693671,
+      "low_risk": 0.5425265635203687
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.04309269625309753,
+      "gain_only": 0.044101448959736445,
+      "random": 0.041627384830917435,
+      "high_risk": 0.04466334226572144,
+      "low_risk": 0.03637377541826936
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9325464874273166,
+      "gain_only": 0.9407193994265981,
+      "random": 0.9278929145075381,
+      "high_risk": 0.9197499607689679,
+      "low_risk": 0.9360940282349475
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.44551839426276274,
+      "gain_only": 0.3979462666102336,
+      "random": 0.4393499258803786,
+      "high_risk": 0.49881485359946964,
+      "low_risk": 0.3858253203216009
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.010334021760854739,
+      "gain_only": 0.009624052841672892,
+      "random": 0.01004352094071237,
+      "high_risk": 0.011218076693239709,
+      "low_risk": 0.008865045110155734
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "risk_aware": 0.9264646876836196,
+      "gain_only": 0.9251969273318537,
+      "random": 0.9181600731099024,
+      "high_risk": 0.9264646876836196,
+      "low_risk": 0.9492155821062624
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "risk_aware": 0.42115551776078064,
+      "gain_only": 0.4266742424952099,
+      "random": 0.42516477375102113,
+      "high_risk": 0.42115551776078064,
+      "low_risk": 0.2741744394406851
+    },
+    {
+      "mode": "inverted",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "risk_aware": 0.01640729325481516,
+      "gain_only": 0.017014324998626762,
+      "random": 0.01630592093465566,
+      "high_risk": 0.01640729325481516,
+      "low_risk": 0.013180287826799031
+    }
+  ],
+  "diff_rows": [
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8860181730706245,
+      "rhs_value": 0.8584483619779348,
+      "diff": 0.027569811092689633
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.6173637708998285,
+      "rhs_value": 0.7396461916650878,
+      "diff": -0.1222824207652593
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.024982036249411976,
+      "rhs_value": 0.02533678596205391,
+      "diff": -0.000354749712641933
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.922813604818657,
+      "rhs_value": 0.9122487948043272,
+      "diff": 0.01056481001432985
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.45179199788253754,
+      "rhs_value": 0.5379302949295379,
+      "diff": -0.08613829704700038
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.015434400087542599,
+      "rhs_value": 0.01670406822267978,
+      "diff": -0.0012696681351371808
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9095283447531983,
+      "rhs_value": 0.8987366215442307,
+      "diff": 0.010791723208967596
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5141044118718128,
+      "rhs_value": 0.6036716756789247,
+      "diff": -0.08956726380711189
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.033057614715289674,
+      "rhs_value": 0.03438285448191891,
+      "diff": -0.0013252397666292381
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9430206621764228,
+      "rhs_value": 0.9314062264747918,
+      "diff": 0.01161443570163101
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.36648327992952545,
+      "rhs_value": 0.42950300872689695,
+      "diff": -0.0630197287973715
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.008573105553978166,
+      "rhs_value": 0.009702696323984128,
+      "diff": -0.0011295907700059615
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9535515244933777,
+      "rhs_value": 0.9420115211396478,
+      "diff": 0.011540003353729844
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.2528077351671527,
+      "rhs_value": 0.327588021667907,
+      "diff": -0.0747802865007543
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.012387206634684844,
+      "rhs_value": 0.013816671840913841,
+      "diff": -0.001429465206228997
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9076374120777473,
+      "rhs_value": 0.8626246719504707,
+      "diff": 0.04501274012727663
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5674526556176716,
+      "rhs_value": 0.7362364462096593,
+      "diff": -0.16878379059198778
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.02277723867155146,
+      "rhs_value": 0.02415949085570901,
+      "diff": -0.0013822521841575508
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8886366224032827,
+      "rhs_value": 0.8619334393879399,
+      "diff": 0.026703183015342802
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5826621631131275,
+      "rhs_value": 0.6640510643701418,
+      "diff": -0.08138890125701437
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.021573971994712338,
+      "rhs_value": 0.023231850652791763,
+      "diff": -0.0016578786580794258
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9058700240566395,
+      "rhs_value": 0.8941560126258992,
+      "diff": 0.011714011430740356
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5228109934614622,
+      "rhs_value": 0.6376021592441248,
+      "diff": -0.11479116578266257
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.034265565454461466,
+      "rhs_value": 0.03438939313537048,
+      "diff": -0.00012382768090901664
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9564900898258202,
+      "rhs_value": 0.9534337125951424,
+      "diff": 0.0030563772306777537
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.29527968127513304,
+      "rhs_value": 0.3378193896387529,
+      "diff": -0.042539708363619866
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.007701270230541013,
+      "rhs_value": 0.008687539626635044,
+      "diff": -0.0009862693960940305
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9492788358475082,
+      "rhs_value": 0.9358197411056608,
+      "diff": 0.013459094741847366
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.30720429682514805,
+      "rhs_value": 0.38682062643601967,
+      "diff": -0.07961632961087162
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.011995433456831961,
+      "rhs_value": 0.013357494461843089,
+      "diff": -0.0013620610050111281
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9207153668976389,
+      "rhs_value": 0.9224542175070383,
+      "diff": -0.0017388506093993783
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.41570906064953306,
+      "rhs_value": 0.4848613054236921,
+      "diff": -0.06915224477415904
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.018688518658109388,
+      "rhs_value": 0.017808035407938405,
+      "diff": 0.0008804832501709825
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8429401676403359,
+      "rhs_value": 0.839671490015462,
+      "diff": 0.003268677624873817
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.7812253120937385,
+      "rhs_value": 0.8596308685955591,
+      "diff": -0.07840555650182068
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.028412580143594823,
+      "rhs_value": 0.028439333963433455,
+      "diff": -2.6753819838631898e-05
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9228566297679208,
+      "rhs_value": 0.910945797804743,
+      "diff": 0.01191083196317777
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.4121852687676437,
+      "rhs_value": 0.48274245687935036,
+      "diff": -0.07055718811170664
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.03317729265472735,
+      "rhs_value": 0.03539478865059209,
+      "diff": -0.0022174959958647378
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9325912936474197,
+      "rhs_value": 0.9285266006481834,
+      "diff": 0.004064692999236286
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.4154292627936229,
+      "rhs_value": 0.4247426834626822,
+      "diff": -0.009313420669059269
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.00986164169012227,
+      "rhs_value": 0.010252853968950149,
+      "diff": -0.00039121227882787935
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9624451775453053,
+      "rhs_value": 0.9631383229279891,
+      "diff": -0.0006931453826837242
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.21234819895471446,
+      "rhs_value": 0.2035919205263781,
+      "diff": 0.008756278428336373
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.010880198617087444,
+      "rhs_value": 0.010671935219988882,
+      "diff": 0.00020826339709856256
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8931287026498467,
+      "rhs_value": 0.8645591113017872,
+      "diff": 0.028569591348059475
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5588287393184146,
+      "rhs_value": 0.6893124605558114,
+      "diff": -0.13048372123739682
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.023734982592714005,
+      "rhs_value": 0.025036190768332744,
+      "diff": -0.00130120817561874
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8831694510299712,
+      "rhs_value": 0.8446402144618332,
+      "diff": 0.038529236568138
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.6352141100214794,
+      "rhs_value": 0.8101857709261822,
+      "diff": -0.17497166090470273
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.022805688041898975,
+      "rhs_value": 0.024487568849508534,
+      "diff": -0.0016818808076095593
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.906221148383338,
+      "rhs_value": 0.8991452783229761,
+      "diff": 0.007075870060361922
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.47989235638669925,
+      "rhs_value": 0.5470276296764496,
+      "diff": -0.06713527328975033
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.03676503996757674,
+      "rhs_value": 0.03686132373786677,
+      "diff": -9.628377029002877e-05
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9560880961944349,
+      "rhs_value": 0.9430626700050198,
+      "diff": 0.013025426189415157
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.2944698964784038,
+      "rhs_value": 0.38344796976889484,
+      "diff": -0.08897807329049101
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.007777961988040261,
+      "rhs_value": 0.009969058432488964,
+      "diff": -0.0021910964444487036
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9542570903431624,
+      "rhs_value": 0.9456328040105291,
+      "diff": 0.008624286332633346
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.2537503927924263,
+      "rhs_value": 0.27633455648538074,
+      "diff": -0.022584163692954462
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.012350175147275877,
+      "rhs_value": 0.012492337916910401,
+      "diff": -0.000142162769634524
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8907411846448667,
+      "rhs_value": 0.8592263600730803,
+      "diff": 0.03151482457178645
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.6498082964244531,
+      "rhs_value": 0.7809044993191492,
+      "diff": -0.13109620289469603
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.022876817986798414,
+      "rhs_value": 0.02457330544848446,
+      "diff": -0.001696487461686047
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9412378072156571,
+      "rhs_value": 0.9437398786540143,
+      "diff": -0.002502071438357234
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.34075451508761034,
+      "rhs_value": 0.33579417515647947,
+      "diff": 0.004960339931130875
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.012275377874630067,
+      "rhs_value": 0.012081837967798492,
+      "diff": 0.00019353990683157463
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8826686958782375,
+      "rhs_value": 0.8596115369582549,
+      "diff": 0.023057158919982612
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.642367189640936,
+      "rhs_value": 0.8205623133981135,
+      "diff": -0.1781951237571775
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.04292355942016002,
+      "rhs_value": 0.044866453501981596,
+      "diff": -0.0019428940818215779
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9519957393058576,
+      "rhs_value": 0.9438572400249541,
+      "diff": 0.008138499280903488
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.344402288661513,
+      "rhs_value": 0.3838752565570758,
+      "diff": -0.03947296789556276
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.009438241773295886,
+      "rhs_value": 0.010164450829506677,
+      "diff": -0.0007262090562107915
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9238845100044273,
+      "rhs_value": 0.9254479242954403,
+      "diff": -0.0015634142910130322
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.4172514405945549,
+      "rhs_value": 0.41223417107539717,
+      "diff": 0.005017269519157708
+    },
+    {
+      "comparison": "actual_minus_shuffled",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.0172652743301569,
+      "rhs_value": 0.016463358939745376,
+      "diff": 0.0008019153904115228
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8860181730706245,
+      "rhs_value": 0.8584483619779348,
+      "diff": 0.027569811092689633
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.6173637708998285,
+      "rhs_value": 0.7396461916650878,
+      "diff": -0.1222824207652593
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.024982036249411976,
+      "rhs_value": 0.02533678596205391,
+      "diff": -0.000354749712641933
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.922813604818657,
+      "rhs_value": 0.9319055174710229,
+      "diff": -0.009091912652365863
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.45179199788253754,
+      "rhs_value": 0.46713108810945414,
+      "diff": -0.015339090226916596
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.015434400087542599,
+      "rhs_value": 0.015243466380525206,
+      "diff": 0.00019093370701739332
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9095283447531983,
+      "rhs_value": 0.8935887566185556,
+      "diff": 0.01593958813464269
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5141044118718128,
+      "rhs_value": 0.6326557686588785,
+      "diff": -0.11855135678706574
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.033057614715289674,
+      "rhs_value": 0.035263063700767816,
+      "diff": -0.0022054489854781423
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9430206621764228,
+      "rhs_value": 0.9155083812656812,
+      "diff": 0.027512280910741538
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.36648327992952545,
+      "rhs_value": 0.49284311314477236,
+      "diff": -0.1263598332152469
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.008573105553978166,
+      "rhs_value": 0.010247103561596305,
+      "diff": -0.0016739980076181382
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9535515244933777,
+      "rhs_value": 0.9483078972552903,
+      "diff": 0.005243627238087356
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.2528077351671527,
+      "rhs_value": 0.28981968446896644,
+      "diff": -0.03701194930181373
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2027,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.012387206634684844,
+      "rhs_value": 0.0127719550744132,
+      "diff": -0.00038474843972835515
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9076374120777473,
+      "rhs_value": 0.8349127380060963,
+      "diff": 0.07272467407165095
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5674526556176716,
+      "rhs_value": 0.822042216466798,
+      "diff": -0.25458956084912643
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.02277723867155146,
+      "rhs_value": 0.024455120428683585,
+      "diff": -0.001677881757132127
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8886366224032827,
+      "rhs_value": 0.8410678681102581,
+      "diff": 0.04756875429302454
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5826621631131275,
+      "rhs_value": 0.7406059424465639,
+      "diff": -0.1579437793334364
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.021573971994712338,
+      "rhs_value": 0.025659610431830515,
+      "diff": -0.0040856384371181775
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9058700240566395,
+      "rhs_value": 0.8945971268694848,
+      "diff": 0.01127289718715474
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5228109934614622,
+      "rhs_value": 0.6424778102882556,
+      "diff": -0.11966681682679337
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.034265565454461466,
+      "rhs_value": 0.03345566233701902,
+      "diff": 0.0008099031174424454
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9564900898258202,
+      "rhs_value": 0.9432663295301609,
+      "diff": 0.013223760295659304
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.29527968127513304,
+      "rhs_value": 0.3772559804128832,
+      "diff": -0.08197629913775017
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.007701270230541013,
+      "rhs_value": 0.009163572353600102,
+      "diff": -0.0014623021230590894
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9492788358475082,
+      "rhs_value": 0.9534771348116919,
+      "diff": -0.004198298964183778
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.30720429682514805,
+      "rhs_value": 0.28759431683101866,
+      "diff": 0.01960997999412939
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2028,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.011995433456831961,
+      "rhs_value": 0.011892555289023221,
+      "diff": 0.00010287816780873982
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9207153668976389,
+      "rhs_value": 0.9180315947742201,
+      "diff": 0.0026837721234187484
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.41570906064953306,
+      "rhs_value": 0.5131778547656722,
+      "diff": -0.09746879411613918
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.018688518658109388,
+      "rhs_value": 0.01857708208569875,
+      "diff": 0.0001114365724106392
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8429401676403359,
+      "rhs_value": 0.7937104675802402,
+      "diff": 0.04922970006009564
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.7812253120937385,
+      "rhs_value": 1.0142680459539406,
+      "diff": -0.23304273386020213
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.028412580143594823,
+      "rhs_value": 0.031169668360917058,
+      "diff": -0.0027570882173222344
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9228566297679208,
+      "rhs_value": 0.8920261791790836,
+      "diff": 0.030830450588837266
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.4121852687676437,
+      "rhs_value": 0.6199347166111693,
+      "diff": -0.20774944784352556
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.03317729265472735,
+      "rhs_value": 0.0367088846887782,
+      "diff": -0.0035315920340508455
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9325912936474197,
+      "rhs_value": 0.9244297152617946,
+      "diff": 0.008161578385625035
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.4154292627936229,
+      "rhs_value": 0.457117187215772,
+      "diff": -0.04168792442214908
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.00986164169012227,
+      "rhs_value": 0.011057483903414322,
+      "diff": -0.0011958422132920532
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9624451775453053,
+      "rhs_value": 0.9482838592375629,
+      "diff": 0.014161318307742476
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.21234819895471446,
+      "rhs_value": 0.29668757031322457,
+      "diff": -0.0843393713585101
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2029,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.010880198617087444,
+      "rhs_value": 0.01208283455162018,
+      "diff": -0.0012026359345327364
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8931287026498467,
+      "rhs_value": 0.8173170958762057,
+      "diff": 0.07581160677364096
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.5588287393184146,
+      "rhs_value": 0.8737556932319421,
+      "diff": -0.31492695391352754
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.023734982592714005,
+      "rhs_value": 0.025585220724451574,
+      "diff": -0.0018502381317375693
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8831694510299712,
+      "rhs_value": 0.8299040633137338,
+      "diff": 0.053265387716237456
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.6352141100214794,
+      "rhs_value": 0.8633999991434393,
+      "diff": -0.22818588912195992
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.022805688041898975,
+      "rhs_value": 0.0247046572023919,
+      "diff": -0.0018989691604929249
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.906221148383338,
+      "rhs_value": 0.8845169055275619,
+      "diff": 0.0217042428557761
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.47989235638669925,
+      "rhs_value": 0.6609683633905661,
+      "diff": -0.18107600700386683
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.03676503996757674,
+      "rhs_value": 0.03894953503913712,
+      "diff": -0.0021844950715603773
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9560880961944349,
+      "rhs_value": 0.9457396838697605,
+      "diff": 0.010348412324674428
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.2944698964784038,
+      "rhs_value": 0.37157519550964935,
+      "diff": -0.07710529903124552
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.007777961988040261,
+      "rhs_value": 0.009828819212771123,
+      "diff": -0.002050857224730862
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9542570903431624,
+      "rhs_value": 0.9461548828403465,
+      "diff": 0.008102207502815872
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.2537503927924263,
+      "rhs_value": 0.27677807654617936,
+      "diff": -0.02302768375375308
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2030,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.012350175147275877,
+      "rhs_value": 0.012552052198088859,
+      "diff": -0.0002018770508129819
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8907411846448667,
+      "rhs_value": 0.8278078764851671,
+      "diff": 0.06293330815969966
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.6498082964244531,
+      "rhs_value": 0.9199719811294926,
+      "diff": -0.2701636847050395
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "age",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.022876817986798414,
+      "rhs_value": 0.025809082708292408,
+      "diff": -0.0029322647214939934
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9412378072156571,
+      "rhs_value": 0.9477057124604471,
+      "diff": -0.006467905244790018
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.34075451508761034,
+      "rhs_value": 0.33489811518302304,
+      "diff": 0.005856399904587306
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "eyeglasses",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.012275377874630067,
+      "rhs_value": 0.011604546998569276,
+      "diff": 0.0006708308760607906
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.8826686958782375,
+      "rhs_value": 0.8724706773646176,
+      "diff": 0.0101980185136199
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.642367189640936,
+      "rhs_value": 0.765678488794947,
+      "diff": -0.12331129915401107
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "gender",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.04292355942016002,
+      "rhs_value": 0.04309269625309753,
+      "diff": -0.00016913683293751092
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9519957393058576,
+      "rhs_value": 0.9325464874273166,
+      "diff": 0.019449251878540963
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.344402288661513,
+      "rhs_value": 0.44551839426276274,
+      "diff": -0.10111610560124973
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "pose",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.009438241773295886,
+      "rhs_value": 0.010334021760854739,
+      "diff": -0.0008957799875588535
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_id_cos",
+      "lhs_value": 0.9238845100044273,
+      "rhs_value": 0.9264646876836196,
+      "diff": -0.002580177679192275
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_lpips_proxy",
+      "lhs_value": 0.4172514405945549,
+      "rhs_value": 0.42115551776078064,
+      "diff": -0.003904077166225761
+    },
+    {
+      "comparison": "actual_minus_inverted",
+      "seed": 2031,
+      "attr": "smile",
+      "metric": "mean_abs_delta_attr",
+      "lhs_value": 0.0172652743301569,
+      "rhs_value": 0.01640729325481516,
+      "diff": 0.0008579810753417405
+    }
+  ],
+  "config": {
+    "actual_inputs": [
+      "experiments/out/control_risk_aware_robustness/seed_2027/metrics.json",
+      "experiments/out/control_risk_aware_robustness/seed_2028/metrics.json",
+      "experiments/out/control_risk_aware_robustness/seed_2029/metrics.json",
+      "experiments/out/control_risk_aware_robustness/seed_2030/metrics.json",
+      "experiments/out/control_risk_aware_robustness/seed_2031/metrics.json"
+    ],
+    "shuffled_inputs": [
+      "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2027/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2028/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2029/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2030/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2031/metrics.json"
+    ],
+    "inverted_inputs": [
+      "experiments/out/control_risk_signal_negative_controls/inverted_seed_2027/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/inverted_seed_2028/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/inverted_seed_2029/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/inverted_seed_2030/metrics.json",
+      "experiments/out/control_risk_signal_negative_controls/inverted_seed_2031/metrics.json"
+    ],
+    "out": "experiments/out/control_risk_signal_negative_controls",
+    "seed": 3307,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v4_risk_signal_negatives.json",
+    "protocol_key": "risk_signal_negative_summary"
+  },
+  "_meta": {
+    "seed": 3307,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-24T03:29:15.538275+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_risk_signal_negative_summary.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_risk_signal_negative_summary.py",
+        "--actual-inputs",
+        "experiments/out/control_risk_aware_robustness/seed_2027/metrics.json",
+        "experiments/out/control_risk_aware_robustness/seed_2028/metrics.json",
+        "experiments/out/control_risk_aware_robustness/seed_2029/metrics.json",
+        "experiments/out/control_risk_aware_robustness/seed_2030/metrics.json",
+        "experiments/out/control_risk_aware_robustness/seed_2031/metrics.json",
+        "--shuffled-inputs",
+        "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2027/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2028/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2029/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2030/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2031/metrics.json",
+        "--inverted-inputs",
+        "experiments/out/control_risk_signal_negative_controls/inverted_seed_2027/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/inverted_seed_2028/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/inverted_seed_2029/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/inverted_seed_2030/metrics.json",
+        "experiments/out/control_risk_signal_negative_controls/inverted_seed_2031/metrics.json",
+        "--out",
+        "experiments/out/control_risk_signal_negative_controls",
+        "--seed",
+        "3307",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v4_risk_signal_negatives.json",
+        "--protocol-key",
+        "risk_signal_negative_summary"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 2355802,
+      "timestamp_utc": "2026-05-24T03:29:15.537947+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v4_risk_signal_negatives.json",
+      "protocol_key": "risk_signal_negative_summary",
+      "protocol_sha256": "55947a6cbfae5f26a7cda0b3feca43f2d7df8d7d7e6cc6c52aa0312fe4fe4327",
+      "protocol_version": "control_v4_risk_signal_negatives"
+    }
+  }
+}

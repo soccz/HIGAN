@@ -1,0 +1,1062 @@
+{
+  "per_attr": {
+    "indoor_lighting": {
+      "target_abs_delta_attr": 0.024168758172891103,
+      "gain_floor": 0.002358366546104662,
+      "rows": [
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 0,
+          "source_group": "ganspace",
+          "source_rank": 0,
+          "rho": 1.4385806173086166,
+          "probe_gain": 0.0020411615987541154,
+          "probe_sign": 1.0,
+          "alpha": 5.685623267086096,
+          "target_abs_delta_attr": 0.024168758172891103,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.027146395936142653,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.026367397873400478,
+          "mean_abs_delta_attr": 0.031828524352022214,
+          "mean_id_cos": 0.8127928674221039,
+          "mean_lpips_proxy": 0.15869989569182508,
+          "mean_lpips_true": 0.4186014789156616
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 1,
+          "source_group": "ganspace",
+          "source_rank": 1,
+          "rho": 2.07353288307786,
+          "probe_gain": 0.002675571493455209,
+          "probe_sign": -1.0,
+          "alpha": -3.542397624352037,
+          "target_abs_delta_attr": 0.024168758172891103,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.038688965258188546,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.016946546849794686,
+          "mean_abs_delta_attr": 0.019120365555863827,
+          "mean_id_cos": 0.9080437701195478,
+          "mean_lpips_proxy": 0.048775214760098606,
+          "mean_lpips_true": 0.2119263296481222
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 2,
+          "source_group": "ganspace",
+          "source_rank": 2,
+          "rho": 3.033432401716709,
+          "probe_gain": 0.006492461121524684,
+          "probe_sign": 1.0,
+          "alpha": -5.3645173179758165,
+          "target_abs_delta_attr": 0.024168758172891103,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.02670008991844952,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.021618494312861003,
+          "mean_abs_delta_attr": 0.02500721339310985,
+          "mean_id_cos": 0.8595881722867489,
+          "mean_lpips_proxy": 0.08528220490552485,
+          "mean_lpips_true": 0.31614794209599495
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 3,
+          "source_group": "ganspace",
+          "source_rank": 3,
+          "rho": 1.8628644868731499,
+          "probe_gain": 0.0009589396504452452,
+          "probe_sign": -1.0,
+          "alpha": 3.522981456796878,
+          "target_abs_delta_attr": 0.024168758172891103,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.054543980630114675,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.026405835000332445,
+          "mean_abs_delta_attr": 0.02732611761894077,
+          "mean_id_cos": 0.8686416065320373,
+          "mean_lpips_proxy": 0.13166953073232435,
+          "mean_lpips_true": 0.3177913003601134
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 4,
+          "source_group": "ganspace",
+          "source_rank": 4,
+          "rho": 0.4655493013560772,
+          "probe_gain": 0.004675364310969599,
+          "probe_sign": -1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.024168758172891103,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.02332498092437163,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.014979723928263411,
+          "mean_abs_delta_attr": 0.020814120915019885,
+          "mean_id_cos": 0.8808535095304251,
+          "mean_lpips_proxy": 0.0958241613698192,
+          "mean_lpips_true": 0.3208605791442096
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "indoor_lighting",
+          "candidate_index": 5,
+          "source_group": "ganspace",
+          "source_rank": 5,
+          "rho": 3.89262892305851,
+          "probe_gain": 0.0009281389502575621,
+          "probe_sign": -1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.024168758172891103,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.017939476238097996,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.011539752726093866,
+          "mean_abs_delta_attr": 0.01910042313102167,
+          "mean_id_cos": 0.861469098366797,
+          "mean_lpips_proxy": 0.15489133636583574,
+          "mean_lpips_true": 0.3615466966293752
+        }
+      ],
+      "matched_pairs": [],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 0,
+        "spearman": {
+          "rho_vs_id": {
+            "r": -0.5,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": -0.5,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 0
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 0
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 0
+          }
+        }
+      }
+    },
+    "wood": {
+      "target_abs_delta_attr": 0.02480846326216124,
+      "gain_floor": 0.005360719544114545,
+      "rows": [
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 0,
+          "source_group": "ganspace",
+          "source_rank": 0,
+          "rho": 1.4385806173086166,
+          "probe_gain": 0.0076018744148314,
+          "probe_sign": 1.0,
+          "alpha": 3.6667456568441934,
+          "target_abs_delta_attr": 0.02480846326216124,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.042562067275866866,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.02783135141362436,
+          "mean_abs_delta_attr": 0.032000520470319316,
+          "mean_id_cos": 0.8938016146421432,
+          "mean_lpips_proxy": 0.08803656307281926,
+          "mean_lpips_true": 0.2609611968509853
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 1,
+          "source_group": "ganspace",
+          "source_rank": 1,
+          "rho": 2.07353288307786,
+          "probe_gain": 0.004157024202868342,
+          "probe_sign": -1.0,
+          "alpha": 6.0,
+          "target_abs_delta_attr": 0.02480846326216124,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.01538043434266001,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.020134764912654646,
+          "mean_abs_delta_attr": 0.02792878584295977,
+          "mean_id_cos": 0.8243102384731174,
+          "mean_lpips_proxy": 0.1734343720600009,
+          "mean_lpips_true": 0.36325572221539915
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 2,
+          "source_group": "ganspace",
+          "source_rank": 2,
+          "rho": 3.033432401716709,
+          "probe_gain": 0.0064343640697188675,
+          "probe_sign": -1.0,
+          "alpha": -5.550585459160143,
+          "target_abs_delta_attr": 0.02480846326216124,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.02679647272452712,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.02425371832214296,
+          "mean_abs_delta_attr": 0.02885362529195845,
+          "mean_id_cos": 0.8544999193400145,
+          "mean_lpips_proxy": 0.08861397104919888,
+          "mean_lpips_true": 0.3257326122839004
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 3,
+          "source_group": "ganspace",
+          "source_rank": 3,
+          "rho": 1.8628644868731499,
+          "probe_gain": 0.007318265619687736,
+          "probe_sign": -1.0,
+          "alpha": -4.3111191608021375,
+          "target_abs_delta_attr": 0.02480846326216124,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.033294528257101774,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.025002335736644454,
+          "mean_abs_delta_attr": 0.026960699542541988,
+          "mean_id_cos": 0.8874412886798382,
+          "mean_lpips_proxy": 0.10101299508824013,
+          "mean_lpips_true": 0.3049725943710655
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 4,
+          "source_group": "ganspace",
+          "source_rank": 4,
+          "rho": 0.4655493013560772,
+          "probe_gain": 0.0042870750185102224,
+          "probe_sign": -1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.02480846326216124,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.024754286278039217,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.019867443421389908,
+          "mean_abs_delta_attr": 0.023483367112930864,
+          "mean_id_cos": 0.8808535095304251,
+          "mean_lpips_proxy": 0.0958241613698192,
+          "mean_lpips_true": 0.3208605791442096
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "wood",
+          "candidate_index": 5,
+          "source_group": "ganspace",
+          "source_rank": 5,
+          "rho": 3.89262892305851,
+          "probe_gain": 0.003264792845584452,
+          "probe_sign": -1.0,
+          "alpha": 5.967729231676028,
+          "target_abs_delta_attr": 0.02480846326216124,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.02497099421452731,
+          "gain_eligible": false,
+          "mean_delta_attr": 0.017244552815100178,
+          "mean_abs_delta_attr": 0.02361180863226764,
+          "mean_id_cos": 0.871888680383563,
+          "mean_lpips_proxy": 0.12004038307350129,
+          "mean_lpips_true": 0.324066948145628
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "wood",
+          "low_candidate": 0,
+          "high_candidate": 2,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0011675103451125324,
+          "rho_diff_low_minus_high": -1.5948517844080925,
+          "mean_abs_delta_attr_diff_low_minus_high": 0.0031468951783608645,
+          "mean_id_cos_diff_low_minus_high": 0.03930169530212879,
+          "mean_lpips_proxy_diff_low_minus_high": -0.000577407976379618,
+          "mean_lpips_true_diff_low_minus_high": -0.06477141543291509
+        },
+        {
+          "attr": "wood",
+          "low_candidate": 0,
+          "high_candidate": 3,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0002836087951436639,
+          "rho_diff_low_minus_high": -0.42428386956453323,
+          "mean_abs_delta_attr_diff_low_minus_high": 0.005039820927777328,
+          "mean_id_cos_diff_low_minus_high": 0.006360325962305069,
+          "mean_lpips_proxy_diff_low_minus_high": -0.012976432015420869,
+          "mean_lpips_true_diff_low_minus_high": -0.04401139752008021
+        },
+        {
+          "attr": "wood",
+          "low_candidate": 3,
+          "high_candidate": 2,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0008839015499688685,
+          "rho_diff_low_minus_high": -1.1705679148435593,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.001892925749416463,
+          "mean_id_cos_diff_low_minus_high": 0.03294136933982372,
+          "mean_lpips_proxy_diff_low_minus_high": 0.012399024039041251,
+          "mean_lpips_true_diff_low_minus_high": -0.020760017912834883
+        }
+      ],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 3,
+        "spearman": {
+          "rho_vs_id": {
+            "r": -1.0,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": 1.0,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 3,
+            "mean": 0.026201130201419193,
+            "median": 0.03294136933982372,
+            "std": 0.017474454819187628,
+            "sem": 0.01008888119379993,
+            "ci95_normal": [
+              0.006426923061571329,
+              0.04597533734126706
+            ],
+            "orientation": "higher",
+            "wins": 3
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 3,
+            "mean": -0.04318094362194339,
+            "median": -0.04401139752008021,
+            "std": 0.022017448039573718,
+            "sem": 0.012711779552516485,
+            "ci95_normal": [
+              -0.0680960315448757,
+              -0.018265855699011083
+            ],
+            "orientation": "lower",
+            "wins": 3
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 3,
+            "mean": 0.002097930118907243,
+            "median": 0.0031468951783608645,
+            "std": 0.0035834326970798952,
+            "sem": 0.0020688958322819845,
+            "ci95_normal": [
+              -0.001957105712365447,
+              0.006152965950179933
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    },
+    "view": {
+      "target_abs_delta_attr": 0.015309922717278823,
+      "gain_floor": 0.004498526657698676,
+      "rows": [
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 0,
+          "source_group": "ganspace",
+          "source_rank": 0,
+          "rho": 99.08053779602051,
+          "probe_gain": 0.006242710136575624,
+          "probe_sign": -1.0,
+          "alpha": 4.748968785901083,
+          "target_abs_delta_attr": 0.015309922717278823,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.018087162694428116,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.01649087149417028,
+          "mean_abs_delta_attr": 0.02921434200834483,
+          "mean_id_cos": 0.7701361840590835,
+          "mean_lpips_proxy": 0.3076687887078151,
+          "mean_lpips_true": 0.6528590591624379
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 1,
+          "source_group": "ganspace",
+          "source_rank": 1,
+          "rho": 79.12606930732727,
+          "probe_gain": 0.004247990727890283,
+          "probe_sign": 1.0,
+          "alpha": 3.870834941993143,
+          "target_abs_delta_attr": 0.015309922717278823,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.01953002525260672,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.0023738887466606684,
+          "mean_abs_delta_attr": 0.02816446481301682,
+          "mean_id_cos": 0.7609899053350091,
+          "mean_lpips_proxy": 0.3294269492616877,
+          "mean_lpips_true": 0.6468221638351679
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 2,
+          "source_group": "ganspace",
+          "source_rank": 2,
+          "rho": 54.06459426879883,
+          "probe_gain": 0.0023053261102177203,
+          "probe_sign": 1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.015309922717278823,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.008997451048344374,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.01733935155789368,
+          "mean_abs_delta_attr": 0.031164733110927045,
+          "mean_id_cos": 0.7373758312314749,
+          "mean_lpips_proxy": 0.33134131447877735,
+          "mean_lpips_true": 0.6361385127529502
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 3,
+          "source_group": "ganspace",
+          "source_rank": 3,
+          "rho": 61.77743422985077,
+          "probe_gain": 0.0031884738127700984,
+          "probe_sign": -1.0,
+          "alpha": 2.7315458278196036,
+          "target_abs_delta_attr": 0.015309922717278823,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.031424979970324785,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.018023866476141848,
+          "mean_abs_delta_attr": 0.024856974414433353,
+          "mean_id_cos": 0.8634428502991796,
+          "mean_lpips_proxy": 0.2639322148170322,
+          "mean_lpips_true": 0.5863621216267347
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 4,
+          "source_group": "ganspace",
+          "source_rank": 4,
+          "rho": 71.50038814544678,
+          "probe_gain": 0.007715643267147243,
+          "probe_sign": 1.0,
+          "alpha": 4.385930351483998,
+          "target_abs_delta_attr": 0.015309922717278823,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.014384176058229059,
+          "gain_eligible": true,
+          "mean_delta_attr": 0.011993890009762254,
+          "mean_abs_delta_attr": 0.027361999491404276,
+          "mean_id_cos": 0.8374327952042222,
+          "mean_lpips_proxy": 0.3033180992351845,
+          "mean_lpips_true": 0.6036206395365298
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "view",
+          "candidate_index": 5,
+          "source_group": "ganspace",
+          "source_rank": 5,
+          "rho": 122.66401243209839,
+          "probe_gain": 0.004749062587507069,
+          "probe_sign": 1.0,
+          "alpha": -2.7618508062436478,
+          "target_abs_delta_attr": 0.015309922717278823,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.03659837698796764,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.02215467307541985,
+          "mean_abs_delta_attr": 0.025963981068343855,
+          "mean_id_cos": 0.8719732156023383,
+          "mean_lpips_proxy": 0.3055535894818604,
+          "mean_lpips_true": 0.6167088951915503
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "view",
+          "low_candidate": 4,
+          "high_candidate": 0,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0014729331305716187,
+          "rho_diff_low_minus_high": -27.58014965057373,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.0018523425169405527,
+          "mean_id_cos_diff_low_minus_high": 0.06729661114513874,
+          "mean_lpips_proxy_diff_low_minus_high": -0.00435068947263062,
+          "mean_lpips_true_diff_low_minus_high": -0.049238419625908136
+        },
+        {
+          "attr": "view",
+          "low_candidate": 0,
+          "high_candidate": 5,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0014936475490685552,
+          "rho_diff_low_minus_high": -23.58347463607788,
+          "mean_abs_delta_attr_diff_low_minus_high": 0.0032503609400009736,
+          "mean_id_cos_diff_low_minus_high": -0.10183703154325485,
+          "mean_lpips_proxy_diff_low_minus_high": 0.0021151992259547114,
+          "mean_lpips_true_diff_low_minus_high": 0.03615016397088766
+        }
+      ],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 2,
+        "spearman": {
+          "rho_vs_id": {
+            "r": 0.5,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": 0.5,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 2,
+            "mean": -0.017270210199058056,
+            "median": -0.017270210199058056,
+            "std": 0.11959554567174564,
+            "sem": 0.0845668213441968,
+            "ci95_normal": [
+              -0.18302118003368378,
+              0.14848075963556767
+            ],
+            "orientation": "higher",
+            "wins": 1
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 2,
+            "mean": -0.006544127827510238,
+            "median": -0.006544127827510238,
+            "std": 0.060378846497208705,
+            "sem": 0.04269429179839789,
+            "ci95_normal": [
+              -0.0902249397523701,
+              0.07713668409734963
+            ],
+            "orientation": "lower",
+            "wins": 1
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 2,
+            "mean": 0.0006990092115302105,
+            "median": 0.0006990092115302105,
+            "std": 0.003608156216787392,
+            "sem": 0.002551351728470763,
+            "ci95_normal": [
+              -0.004301640176272485,
+              0.005699658599332906
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    },
+    "carpet": {
+      "target_abs_delta_attr": 0.01002165915997466,
+      "gain_floor": 0.0026904980186372995,
+      "rows": [
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 0,
+          "source_group": "ganspace",
+          "source_rank": 0,
+          "rho": 1.4385806173086166,
+          "probe_gain": 0.004912226460874081,
+          "probe_sign": 1.0,
+          "alpha": -6.0,
+          "target_abs_delta_attr": 0.01002165915997466,
+          "target_reached_on_calib": false,
+          "calib_max_abs_delta_attr": 0.00993399351136759,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.007256837059685495,
+          "mean_abs_delta_attr": 0.021144128608284518,
+          "mean_id_cos": 0.8713761111721396,
+          "mean_lpips_proxy": 0.11832236143527552,
+          "mean_lpips_true": 0.30539068300276995
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 1,
+          "source_group": "ganspace",
+          "source_rank": 1,
+          "rho": 2.07353288307786,
+          "probe_gain": 0.0011056425573769957,
+          "probe_sign": 1.0,
+          "alpha": -4.1810622988823685,
+          "target_abs_delta_attr": 0.01002165915997466,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.010284656105795875,
+          "gain_eligible": false,
+          "mean_delta_attr": 0.00589145105186617,
+          "mean_abs_delta_attr": 0.0215286577004008,
+          "mean_id_cos": 0.8916337052360177,
+          "mean_lpips_proxy": 0.05941606359556317,
+          "mean_lpips_true": 0.2487244918011129
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 2,
+          "source_group": "ganspace",
+          "source_rank": 2,
+          "rho": 3.033432401716709,
+          "probe_gain": 0.0023521067923866212,
+          "probe_sign": 1.0,
+          "alpha": -4.147154427383392,
+          "target_abs_delta_attr": 0.01002165915997466,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.0128116293635685,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.0036168389015074354,
+          "mean_abs_delta_attr": 0.015669356525904732,
+          "mean_id_cos": 0.8885690532624722,
+          "mean_lpips_proxy": 0.06263883541396353,
+          "mean_lpips_true": 0.2499428695300594
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 3,
+          "source_group": "ganspace",
+          "source_rank": 3,
+          "rho": 1.8628644868731499,
+          "probe_gain": 0.003204919456038624,
+          "probe_sign": 1.0,
+          "alpha": 3.3306839862622626,
+          "target_abs_delta_attr": 0.01002165915997466,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.0045375158078968525,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.007661803567316383,
+          "mean_abs_delta_attr": 0.019044851047510747,
+          "mean_id_cos": 0.8763712616637349,
+          "mean_lpips_proxy": 0.12221449427306652,
+          "mean_lpips_true": 0.29986051958985627
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 4,
+          "source_group": "ganspace",
+          "source_rank": 4,
+          "rho": 0.4655493013560772,
+          "probe_gain": 0.003028889244887978,
+          "probe_sign": 1.0,
+          "alpha": -2.7305695392536946,
+          "target_abs_delta_attr": 0.01002165915997466,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.016601585724856704,
+          "gain_eligible": true,
+          "mean_delta_attr": -0.010071451815747423,
+          "mean_abs_delta_attr": 0.01582546288773301,
+          "mean_id_cos": 0.9488999806344509,
+          "mean_lpips_proxy": 0.03387420687067788,
+          "mean_lpips_true": 0.143646702170372
+        },
+        {
+          "seed": 2097,
+          "domain": "bedroom",
+          "attr": "carpet",
+          "candidate_index": 5,
+          "source_group": "ganspace",
+          "source_rank": 5,
+          "rho": 3.89262892305851,
+          "probe_gain": 0.0019561495282687247,
+          "probe_sign": 1.0,
+          "alpha": -5.508161512440143,
+          "target_abs_delta_attr": 0.01002165915997466,
+          "target_reached_on_calib": true,
+          "calib_max_abs_delta_attr": 0.011183911614352837,
+          "gain_eligible": false,
+          "mean_delta_attr": -0.012968021357664838,
+          "mean_abs_delta_attr": 0.02052880683913827,
+          "mean_id_cos": 0.8739996859803796,
+          "mean_lpips_proxy": 0.14029191550798714,
+          "mean_lpips_true": 0.3370235301554203
+        }
+      ],
+      "matched_pairs": [
+        {
+          "attr": "carpet",
+          "low_candidate": 4,
+          "high_candidate": 3,
+          "low_source": "ganspace",
+          "high_source": "ganspace",
+          "probe_gain_abs_diff": 0.0001760302111506462,
+          "rho_diff_low_minus_high": -1.3973151855170727,
+          "mean_abs_delta_attr_diff_low_minus_high": -0.0032193881597777363,
+          "mean_id_cos_diff_low_minus_high": 0.072528718970716,
+          "mean_lpips_proxy_diff_low_minus_high": -0.08834028740238864,
+          "mean_lpips_true_diff_low_minus_high": -0.15621381741948426
+        }
+      ],
+      "aggregate": {
+        "n_rows": 3,
+        "n_matched_pairs": 1,
+        "spearman": {
+          "rho_vs_id": {
+            "r": -0.5,
+            "orientation": "lower"
+          },
+          "rho_vs_lpips": {
+            "r": 0.5,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "regression": {
+          "id": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "lower"
+          },
+          "lpips": {
+            "n": 3,
+            "beta_rho": NaN,
+            "orientation": "higher",
+            "metric": "mean_lpips_true"
+          }
+        },
+        "matched_pairs": {
+          "mean_id_cos_diff_low_minus_high": {
+            "n": 1,
+            "mean": 0.072528718970716,
+            "median": 0.072528718970716,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              0.072528718970716,
+              0.072528718970716
+            ],
+            "orientation": "higher",
+            "wins": 1
+          },
+          "mean_lpips_true_diff_low_minus_high": {
+            "n": 1,
+            "mean": -0.15621381741948426,
+            "median": -0.15621381741948426,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              -0.15621381741948426,
+              -0.15621381741948426
+            ],
+            "orientation": "lower",
+            "wins": 1
+          },
+          "mean_abs_delta_attr_diff_low_minus_high": {
+            "n": 1,
+            "mean": -0.0032193881597777363,
+            "median": -0.0032193881597777363,
+            "std": 0.0,
+            "sem": 0.0,
+            "ci95_normal": [
+              -0.0032193881597777363,
+              -0.0032193881597777363
+            ],
+            "orientation": "matched"
+          }
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "n_rows": 12,
+    "n_matched_pairs": 6,
+    "spearman": {
+      "rho_vs_id": {
+        "r": -0.6831155307478788,
+        "orientation": "lower"
+      },
+      "rho_vs_lpips": {
+        "r": 0.7148064574320587,
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      }
+    },
+    "regression": {
+      "id": {
+        "n": 12,
+        "predictors": [
+          "mean_abs_delta_attr",
+          "probe_gain",
+          "rho"
+        ],
+        "beta_rho": -0.4570177246220022,
+        "standardized_betas": {
+          "mean_abs_delta_attr": -0.26889597467596854,
+          "probe_gain": -0.16809278459338123,
+          "rho": -0.4570177246220022
+        },
+        "orientation": "lower"
+      },
+      "lpips": {
+        "n": 12,
+        "predictors": [
+          "mean_abs_delta_attr",
+          "probe_gain",
+          "rho"
+        ],
+        "beta_rho": 0.911088081489884,
+        "standardized_betas": {
+          "mean_abs_delta_attr": -0.13982114977632681,
+          "probe_gain": 0.36139433997391035,
+          "rho": 0.911088081489884
+        },
+        "orientation": "higher",
+        "metric": "mean_lpips_true"
+      }
+    },
+    "matched_pairs": {
+      "mean_id_cos_diff_low_minus_high": {
+        "n": 6,
+        "mean": 0.019431948196142912,
+        "median": 0.03612153232097626,
+        "std": 0.06413210910372483,
+        "sem": 0.02618182390543761,
+        "ci95_normal": [
+          -0.031884426658514806,
+          0.07074832305080063
+        ],
+        "orientation": "higher",
+        "wins": 5
+      },
+      "mean_lpips_true_diff_low_minus_high": {
+        "n": 6,
+        "mean": -0.04980748399005582,
+        "median": -0.04662490857299417,
+        "std": 0.06294857904547817,
+        "sem": 0.025698649782445813,
+        "ci95_normal": [
+          -0.10017683756364962,
+          0.0005618695835379744
+        ],
+        "orientation": "lower",
+        "wins": 5
+      },
+      "mean_abs_delta_attr_diff_low_minus_high": {
+        "n": 6,
+        "mean": 0.0007454034366674023,
+        "median": 0.0006472763307101559,
+        "std": 0.003461578645755441,
+        "sem": 0.001413183564435873,
+        "ci95_normal": [
+          -0.0020244363496269087,
+          0.0035152432229617133
+        ],
+        "orientation": "matched"
+      }
+    }
+  },
+  "config": {
+    "domain": "bedroom",
+    "attrs": [
+      "indoor_lighting",
+      "wood",
+      "view",
+      "carpet"
+    ],
+    "methods": [
+      "ganspace"
+    ],
+    "candidate_k": 6,
+    "ganspace_samples": 2048,
+    "min_gain_quantile": 0.5,
+    "gain_match_rel": 0.25,
+    "n_risk": 8,
+    "n_probe": 16,
+    "probe_alpha": 1.0,
+    "n_calib": 16,
+    "n_test": 64,
+    "alpha_steps": 7,
+    "max_alpha": 6.0,
+    "target_quantile": 0.25,
+    "batch": 4,
+    "true_lpips": true,
+    "lpips_net": "alex",
+    "lpips_size": 256,
+    "risk_estimator": "jvp",
+    "fd_eps": 0.25,
+    "prompt_style": "ensemble",
+    "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2097",
+    "seed": 2097,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v58_prompt_ensemble_source_ablation_predictive_validity.json",
+    "protocol_key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2097"
+  },
+  "_meta": {
+    "seed": 2097,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-27T22:59:59.829663+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_cross_domain_risk_predictive.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_cross_domain_risk_predictive.py",
+        "--domain",
+        "bedroom",
+        "--attrs",
+        "indoor_lighting",
+        "wood",
+        "view",
+        "carpet",
+        "--methods",
+        "ganspace",
+        "--candidate-k",
+        "6",
+        "--ganspace-samples",
+        "2048",
+        "--min-gain-quantile",
+        "0.5",
+        "--gain-match-rel",
+        "0.25",
+        "--true-lpips",
+        "--lpips-net",
+        "alex",
+        "--lpips-size",
+        "256",
+        "--n-risk",
+        "8",
+        "--n-probe",
+        "16",
+        "--probe-alpha",
+        "1.0",
+        "--n-calib",
+        "16",
+        "--n-test",
+        "64",
+        "--alpha-steps",
+        "7",
+        "--max-alpha",
+        "6",
+        "--target-quantile",
+        "0.25",
+        "--batch",
+        "4",
+        "--risk-estimator",
+        "jvp",
+        "--prompt-style",
+        "ensemble",
+        "--out",
+        "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2097",
+        "--seed",
+        "2097",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v58_prompt_ensemble_source_ablation_predictive_validity.json",
+        "--protocol-key",
+        "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2097"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 3601947,
+      "timestamp_utc": "2026-05-27T22:59:59.829266+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v58_prompt_ensemble_source_ablation_predictive_validity.json",
+      "protocol_key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2097",
+      "protocol_sha256": "d441fde05d76894b63670077d81697f63098fe74499b9ce188b11ad3fe2d2655",
+      "protocol_version": "control_v58_prompt_ensemble_source_ablation_predictive_validity"
+    }
+  }
+}

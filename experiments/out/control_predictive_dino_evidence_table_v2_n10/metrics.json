@@ -1,0 +1,192 @@
+{
+  "readiness": "dino_preservation_predictive_borderline",
+  "pass_count": 8,
+  "total": 9,
+  "rows": [
+    {
+      "summary": "dino_n10_church",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO-preservation Spearman",
+      "mean": -0.6620053499136247,
+      "ci95_bootstrap": [
+        -0.7327261753168778,
+        -0.5934599198225045
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_church",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO preservation",
+      "mean": -0.27738096348711566,
+      "ci95_bootstrap": [
+        -0.364190782613765,
+        -0.19350967671572386
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_church",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.032285292627664906,
+      "ci95_bootstrap": [
+        0.009210304693573956,
+        0.05328510962894069
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "positive",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_bedroom",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO-preservation Spearman",
+      "mean": -0.6298036529386757,
+      "ci95_bootstrap": [
+        -0.675471956699969,
+        -0.5800971215138989
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_bedroom",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO preservation",
+      "mean": -0.4471881352769661,
+      "ci95_bootstrap": [
+        -0.6217772636624349,
+        -0.2724948881618545
+      ],
+      "wins": 9,
+      "n": 10,
+      "p_sign_two_sided": 0.021484375,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": -0.0043405814140466785,
+      "ci95_bootstrap": [
+        -0.034353044752038236,
+        0.025898818513336894
+      ],
+      "wins": 5,
+      "n": 10,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "pass": false
+    },
+    {
+      "summary": "dino_n10_ffhq",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO-preservation Spearman",
+      "mean": -0.3501661600093391,
+      "ci95_bootstrap": [
+        -0.4146099131892198,
+        -0.2770375884587567
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_ffhq",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO preservation",
+      "mean": -0.3113946071714067,
+      "ci95_bootstrap": [
+        -0.4067041879207646,
+        -0.20570816933949712
+      ],
+      "wins": 10,
+      "n": 10,
+      "p_sign_two_sided": 0.001953125,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_n10_ffhq",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.01842950378789073,
+      "ci95_bootstrap": [
+        -0.0078123535647395305,
+        0.041640736106712053
+      ],
+      "wins": 8,
+      "n": 10,
+      "p_sign_two_sided": 0.109375,
+      "expected": "positive",
+      "pass": true
+    }
+  ],
+  "config": {
+    "summaries": [
+      "dino_n10_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/church/metrics.json",
+      "dino_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/bedroom/metrics.json",
+      "dino_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/ffhq/metrics.json"
+    ],
+    "out": "experiments/out/control_predictive_dino_evidence_table_v2_n10",
+    "seed": 4217,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v71_dino_preservation_seed_scaled_evidence_table.json",
+    "protocol_key": "predictive_dino_evidence_table_v2_n10"
+  },
+  "_meta": {
+    "seed": 4217,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-28T22:44:19.415330+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_predictive_dino_evidence_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_predictive_dino_evidence_table.py",
+        "--summaries",
+        "dino_n10_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/church/metrics.json",
+        "dino_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/bedroom/metrics.json",
+        "dino_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/ffhq/metrics.json",
+        "--out",
+        "experiments/out/control_predictive_dino_evidence_table_v2_n10",
+        "--seed",
+        "4217",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v71_dino_preservation_seed_scaled_evidence_table.json",
+        "--protocol-key",
+        "predictive_dino_evidence_table_v2_n10"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 375615,
+      "timestamp_utc": "2026-05-28T22:44:19.415170+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v71_dino_preservation_seed_scaled_evidence_table.json",
+      "protocol_key": "predictive_dino_evidence_table_v2_n10",
+      "protocol_sha256": "76444969e333fbd72c6bb11c84a6c2ddd359e3fe94cce7b7fb34bb9b9e4997ae",
+      "protocol_version": "control_v71_dino_preservation_seed_scaled_evidence_table"
+    }
+  }
+}

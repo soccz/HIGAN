@@ -1,0 +1,192 @@
+{
+  "readiness": "dino_preservation_predictive_borderline",
+  "pass_count": 8,
+  "total": 9,
+  "rows": [
+    {
+      "summary": "dino_church",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO-preservation Spearman",
+      "mean": -0.6981930036038063,
+      "ci95_bootstrap": [
+        -0.7880535675427629,
+        -0.6083324396648496
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_church",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO preservation",
+      "mean": -0.297126609833813,
+      "ci95_bootstrap": [
+        -0.4226356526176958,
+        -0.19908268335217758
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_church",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.025993165263267885,
+      "ci95_bootstrap": [
+        -0.0008360781079239168,
+        0.0526450416572126
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "pass": true
+    },
+    {
+      "summary": "dino_bedroom",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO-preservation Spearman",
+      "mean": -0.651869280549548,
+      "ci95_bootstrap": [
+        -0.7195262871964336,
+        -0.5758251854591382
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_bedroom",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO preservation",
+      "mean": -0.6338816554632452,
+      "ci95_bootstrap": [
+        -0.8199110913398536,
+        -0.4332530506250225
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_bedroom",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.016762734654255214,
+      "ci95_bootstrap": [
+        -0.01716112441515455,
+        0.05068659372366498
+      ],
+      "wins": 3,
+      "n": 5,
+      "p_sign_two_sided": 1.0,
+      "expected": "positive",
+      "pass": false
+    },
+    {
+      "summary": "dino_ffhq",
+      "metric": "rho_vs_dino_spearman",
+      "display": "rho vs DINO-preservation Spearman",
+      "mean": -0.34535874156996504,
+      "ci95_bootstrap": [
+        -0.42395218345589897,
+        -0.24960016524895995
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_ffhq",
+      "metric": "dino_beta_rho",
+      "display": "rho beta for DINO preservation",
+      "mean": -0.3051672501386888,
+      "ci95_bootstrap": [
+        -0.47563915874598806,
+        -0.12151476327654379
+      ],
+      "wins": 5,
+      "n": 5,
+      "p_sign_two_sided": 0.0625,
+      "expected": "negative",
+      "pass": true
+    },
+    {
+      "summary": "dino_ffhq",
+      "metric": "matched_pair_dino_low_minus_high",
+      "display": "low-risk minus high-risk DINO preservation",
+      "mean": 0.02025126778712702,
+      "ci95_bootstrap": [
+        -0.01202693731490789,
+        0.04979137842436128
+      ],
+      "wins": 4,
+      "n": 5,
+      "p_sign_two_sided": 0.375,
+      "expected": "positive",
+      "pass": true
+    }
+  ],
+  "config": {
+    "summaries": [
+      "dino_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation/church/metrics.json",
+      "dino_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom/metrics.json",
+      "dino_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq/metrics.json"
+    ],
+    "out": "experiments/out/control_predictive_dino_evidence_table_v1",
+    "seed": 4214,
+    "protocol": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v66_dino_preservation_evidence_table.json",
+    "protocol_key": "predictive_dino_evidence_table_v1"
+  },
+  "_meta": {
+    "seed": 4214,
+    "deterministic_set": true,
+    "timestamp_utc": "2026-05-28T18:01:44.153674+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/control/run_predictive_dino_evidence_table.py",
+    "execution": {
+      "argv": [
+        "experiments/control/run_predictive_dino_evidence_table.py",
+        "--summaries",
+        "dino_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation/church/metrics.json",
+        "dino_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom/metrics.json",
+        "dino_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq/metrics.json",
+        "--out",
+        "experiments/out/control_predictive_dino_evidence_table_v1",
+        "--seed",
+        "4214",
+        "--protocol",
+        "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v66_dino_preservation_evidence_table.json",
+        "--protocol-key",
+        "predictive_dino_evidence_table_v1"
+      ],
+      "cwd": "/mnt/20t/study/HIGAN/paper",
+      "hostname": "server",
+      "pid": 161802,
+      "timestamp_utc": "2026-05-28T18:01:44.153425+00:00",
+      "protocol_path": "/mnt/20t/study/HIGAN/paper/experiments/protocols/control_v66_dino_preservation_evidence_table.json",
+      "protocol_key": "predictive_dino_evidence_table_v1",
+      "protocol_sha256": "a01041af23c862e522a69da8683276037dc2400be1fe86f84814ed2d4a715429",
+      "protocol_version": "control_v66_dino_preservation_evidence_table"
+    }
+  }
+}

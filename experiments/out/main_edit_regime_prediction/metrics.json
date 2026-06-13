@@ -1,0 +1,308 @@
+{
+  "claim": "Generator-side curvature predicts structural/global vs texture/appearance edit regimes.",
+  "label_policy": {
+    "bedroom": "view is structural/global; the other bedroom attributes are texture/appearance.",
+    "ffhq": "pose and eyeglasses are structural/global; smile, age, and gender are texture/appearance.",
+    "church": "clouds, sunny, and vegetation are treated as texture/appearance stress-test attributes."
+  },
+  "points": [
+    {
+      "domain": "bedroom",
+      "attr": "indoor_lighting",
+      "name": "bedroom-indoor_lighting",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.9041501861065626,
+      "log10_pixel_rho": -0.043759423971695514,
+      "clip_path_ratio": 2.7072271837223427,
+      "log10_clip_path_ratio": 0.43252470220457784
+    },
+    {
+      "domain": "bedroom",
+      "attr": "wood",
+      "name": "bedroom-wood",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 1.1653990456834435,
+      "log10_pixel_rho": 0.0664746581212291,
+      "clip_path_ratio": 3.060418671315575,
+      "log10_clip_path_ratio": 0.4857808428882455
+    },
+    {
+      "domain": "bedroom",
+      "attr": "view",
+      "name": "bedroom-view",
+      "is_structural": true,
+      "label": "structural",
+      "pixel_rho": 26.379353012423962,
+      "log10_pixel_rho": 1.4212641397099735,
+      "clip_path_ratio": 6.262427465791542,
+      "log10_clip_path_ratio": 0.7967427087134
+    },
+    {
+      "domain": "bedroom",
+      "attr": "carpet",
+      "name": "bedroom-carpet",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 1.4166283684317023,
+      "log10_pixel_rho": 0.15125593443398522,
+      "clip_path_ratio": 3.2048890789953655,
+      "log10_clip_path_ratio": 0.5058130032108887
+    },
+    {
+      "domain": "bedroom",
+      "attr": "cluttered_space",
+      "name": "bedroom-cluttered_space",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 1.2019510929239914,
+      "log10_pixel_rho": 0.07988679669720555,
+      "clip_path_ratio": 2.9461403348024975,
+      "log10_clip_path_ratio": 0.46925342994000374
+    },
+    {
+      "domain": "bedroom",
+      "attr": "glossy",
+      "name": "bedroom-glossy",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.945853007142432,
+      "log10_pixel_rho": -0.02417635106875427,
+      "clip_path_ratio": 2.8130185159522636,
+      "log10_clip_path_ratio": 0.4491725908034626
+    },
+    {
+      "domain": "bedroom",
+      "attr": "dirt",
+      "name": "bedroom-dirt",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.7349465466686524,
+      "log10_pixel_rho": -0.1337442464001976,
+      "clip_path_ratio": 2.8442859136135863,
+      "log10_clip_path_ratio": 0.4539732504485592
+    },
+    {
+      "domain": "bedroom",
+      "attr": "scary",
+      "name": "bedroom-scary",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.6279251986416057,
+      "log10_pixel_rho": -0.20209208835204465,
+      "clip_path_ratio": 2.772362719029107,
+      "log10_clip_path_ratio": 0.44285005009829925
+    },
+    {
+      "domain": "ffhq",
+      "attr": "smile",
+      "name": "ffhq-smile",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 3.9178808856522664,
+      "log10_pixel_rho": 0.5930512281134633,
+      "clip_path_ratio": 2.141247639988788,
+      "log10_clip_path_ratio": 0.3306668973090432
+    },
+    {
+      "domain": "ffhq",
+      "attr": "age",
+      "name": "ffhq-age",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 15.75194792705588,
+      "log10_pixel_rho": 1.1973342674374723,
+      "clip_path_ratio": 3.08259109083033,
+      "log10_clip_path_ratio": 0.4889159188964648
+    },
+    {
+      "domain": "ffhq",
+      "attr": "pose",
+      "name": "ffhq-pose",
+      "is_structural": true,
+      "label": "structural",
+      "pixel_rho": 150.59065119549632,
+      "log10_pixel_rho": 2.177798011305358,
+      "clip_path_ratio": 6.328581028815449,
+      "log10_clip_path_ratio": 0.801306345019397
+    },
+    {
+      "domain": "ffhq",
+      "attr": "gender",
+      "name": "ffhq-gender",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 20.820180265698582,
+      "log10_pixel_rho": 1.3184844854079107,
+      "clip_path_ratio": 3.5066858691389555,
+      "log10_clip_path_ratio": 0.5448968632838717
+    },
+    {
+      "domain": "ffhq",
+      "attr": "eyeglasses",
+      "name": "ffhq-eyeglasses",
+      "is_structural": true,
+      "label": "structural",
+      "pixel_rho": 23.174428989645094,
+      "log10_pixel_rho": 1.3650090420742962,
+      "clip_path_ratio": 3.68067628488805,
+      "log10_clip_path_ratio": 0.5659276229698984
+    },
+    {
+      "domain": "church",
+      "attr": "clouds",
+      "name": "church-clouds",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.07779408812348265,
+      "log10_pixel_rho": -1.1090534054897931,
+      "clip_path_ratio": null,
+      "log10_clip_path_ratio": null
+    },
+    {
+      "domain": "church",
+      "attr": "sunny",
+      "name": "church-sunny",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.06232157413614914,
+      "log10_pixel_rho": -1.2053615856626825,
+      "clip_path_ratio": null,
+      "log10_clip_path_ratio": null
+    },
+    {
+      "domain": "church",
+      "attr": "vegetation",
+      "name": "church-vegetation",
+      "is_structural": false,
+      "label": "texture_or_appearance",
+      "pixel_rho": 0.05719519624108216,
+      "log10_pixel_rho": -1.2426404455705888,
+      "clip_path_ratio": null,
+      "log10_clip_path_ratio": null
+    }
+  ],
+  "features": {
+    "log10_pixel_rho": {
+      "feature": "log10_pixel_rho",
+      "n": 16,
+      "n_structural": 3,
+      "auroc": 1.0,
+      "best_threshold": {
+        "threshold": 1.3417467637411034,
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0
+      },
+      "leave_one_domain_out": [
+        {
+          "heldout_domain": "bedroom",
+          "threshold": 1.3417467637411034,
+          "n_test": 8,
+          "n_structural_test": 1,
+          "accuracy": 1.0,
+          "balanced_accuracy_present_classes": 1.0,
+          "predicted_structural": [
+            "bedroom-view"
+          ],
+          "missed_structural": [],
+          "false_structural": []
+        },
+        {
+          "heldout_domain": "church",
+          "threshold": 1.3417467637411034,
+          "n_test": 3,
+          "n_structural_test": 0,
+          "accuracy": 1.0,
+          "balanced_accuracy_present_classes": 1.0,
+          "predicted_structural": [],
+          "missed_structural": [],
+          "false_structural": []
+        },
+        {
+          "heldout_domain": "ffhq",
+          "threshold": 0.7862600370719793,
+          "n_test": 5,
+          "n_structural_test": 2,
+          "accuracy": 0.6,
+          "balanced_accuracy_present_classes": 0.6666666666666666,
+          "predicted_structural": [
+            "ffhq-age",
+            "ffhq-pose",
+            "ffhq-gender",
+            "ffhq-eyeglasses"
+          ],
+          "missed_structural": [],
+          "false_structural": [
+            "ffhq-age",
+            "ffhq-gender"
+          ]
+        }
+      ],
+      "mean_lodo_accuracy": 0.8666666666666667,
+      "mean_lodo_balanced_accuracy_present_classes": 0.8888888888888888
+    },
+    "clip_path_ratio": {
+      "feature": "clip_path_ratio",
+      "n": 13,
+      "n_structural": 3,
+      "auroc": 1.0,
+      "best_threshold": {
+        "threshold": 3.593681077013503,
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0
+      },
+      "leave_one_domain_out": [
+        {
+          "heldout_domain": "bedroom",
+          "threshold": 3.593681077013503,
+          "n_test": 8,
+          "n_structural_test": 1,
+          "accuracy": 1.0,
+          "balanced_accuracy_present_classes": 1.0,
+          "predicted_structural": [
+            "bedroom-view"
+          ],
+          "missed_structural": [],
+          "false_structural": []
+        },
+        {
+          "heldout_domain": "ffhq",
+          "threshold": 4.733658272393454,
+          "n_test": 5,
+          "n_structural_test": 2,
+          "accuracy": 0.8,
+          "balanced_accuracy_present_classes": 0.75,
+          "predicted_structural": [
+            "ffhq-pose"
+          ],
+          "missed_structural": [
+            "ffhq-eyeglasses"
+          ],
+          "false_structural": []
+        }
+      ],
+      "mean_lodo_accuracy": 0.9,
+      "mean_lodo_balanced_accuracy_present_classes": 0.875
+    }
+  },
+  "_meta": {
+    "seed": null,
+    "deterministic_set": false,
+    "timestamp_utc": "2026-05-23T00:42:09.034104+00:00",
+    "python": "3.12.9",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "cuda": "12.1",
+    "cudnn_version": 8902,
+    "gpu_name": null,
+    "git_commit": "1051367f5aabbde5a9610cc5c997d7dc6a04ffb2",
+    "git_dirty": true,
+    "script": "experiments/metrics/run_edit_regime_prediction.py",
+    "inputs": [
+      "sample_scaling_bedroom_n256",
+      "sample_scaling_ffhq_n512",
+      "sample_scaling_church_n256"
+    ]
+  }
+}
