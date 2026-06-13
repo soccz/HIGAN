@@ -32,7 +32,7 @@ for head, body in tracks:
     ledger.append(
         f'<tr class="r-{v}"><td><span class="tag {v}">{v.upper()}</span></td>'
         f'<td class="tk">{html.escape(head)}</td>'
-        f'<td><pre>{html.escape(body)[:600] or "—"}</pre></td></tr>')
+        f'<td><pre>{html.escape(body) or "—"}</pre></td></tr>')  # FULL, no truncation
 
 # ---------- control campaign (95 versions) ----------
 def vnum(f):
@@ -48,9 +48,20 @@ for f in sorted(glob.glob(str(PAPER/"experiments/protocols/control_v*.json")), k
     phase = ("controller" if n <= 30 else "feasible" if n <= 40
              else "predictive" if n <= 71 else "stress")
     if "audit" in base or "evidence_table" in base or "readiness" in base: phase = "audit"
+    # pull per-experiment keys (claim_tested) so each version shows what it actually ran
+    sub = ""
+    if isinstance(exps, list) and exps:
+        items = []
+        for e in exps:
+            key = e.get("key", "") or e.get("protocol_key", "")
+            claim = e.get("claim_tested", "") or e.get("claim", "")
+            if key or claim:
+                items.append(f'<li><code>{html.escape(str(key))}</code> {html.escape(str(claim))}</li>')
+        if items:
+            sub = '<details><summary>실행 ' + str(len(items)) + '개</summary><ul>' + "".join(items) + '</ul></details>'
     ctrl.append(
         f'<tr class="c-{phase}"><td class="vn">v{n}</td><td><span class="ph ph-{phase}">{phase}</span></td>'
-        f'<td class="ne">{nexp}</td><td class="pp">{html.escape(purpose)[:230]}</td></tr>')
+        f'<td class="ne">{nexp}</td><td class="pp">{html.escape(purpose)}{sub}</td></tr>')  # FULL purpose
 
 n_out = len(list((PAPER/"experiments/out").glob("*/")))
 n_dev = len(list((PAPER.parent/"higan_dev/scripts").glob("[0-9]*.py")))
@@ -100,7 +111,12 @@ table.led{width:100%;border-collapse:collapse;font-size:.82rem;}
 table.led th{text-align:left;padding:.7rem .9rem;background:var(--bg2);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);position:sticky;top:0;}
 table.led td{padding:.6rem .9rem;border-top:1px solid var(--bd);vertical-align:top;}
 table.led td.tk{font-weight:600;color:var(--tx);min-width:180px;}
-table.led pre{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--tx2);white-space:pre-wrap;line-height:1.5;max-width:560px;}
+table.led pre{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--tx2);white-space:pre-wrap;line-height:1.5;}
+table.ctl details{margin-top:.4rem;}
+table.ctl summary{cursor:pointer;font-size:.72rem;color:var(--ac);font-weight:600;}
+table.ctl details ul{margin:.4rem 0 0 1rem;padding:0;}
+table.ctl details li{font-size:.72rem;color:var(--tx2);line-height:1.5;list-style:disc;margin-bottom:.2rem;}
+table.ctl details code{font-size:.68rem;}
 table.led tr.r-fail td.tk{color:var(--red);}
 table.ctl{width:100%;border-collapse:collapse;font-size:.8rem;}
 table.ctl th{text-align:left;padding:.6rem .8rem;background:var(--bg2);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);}
