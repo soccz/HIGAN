@@ -1,0 +1,28 @@
+{
+  "version": "control_v65_main_grade_extension_evidence_table",
+  "locked_on": "2026-05-28",
+  "purpose": "Build a stress evidence table for FFHQ domain extension, random candidate-universe expansion, and DINO-preservation runs.",
+  "experiments": [
+    {
+      "key": "predictive_stress_evidence_table_v5",
+      "order": 1,
+      "script": "experiments/control/run_predictive_stress_evidence_table.py",
+      "claim_tested": "The predictive signal should survive the main-grade extension stresses without hiding boundary failures.",
+      "args": {
+        "summaries": [
+          "ffhq_ensemble=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq/metrics.json",
+          "ffhq_high_ntest=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_high_ntest128/ffhq/metrics.json",
+          "ffhq_strict_gain=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_strict_gain_match/ffhq/metrics.json",
+          "random_universe_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church/metrics.json",
+          "random_universe_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom/metrics.json",
+          "random_universe_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq/metrics.json",
+          "dino_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation/church/metrics.json",
+          "dino_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom/metrics.json",
+          "dino_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_stress_evidence_table_v5",
+        "seed": 4213
+      }
+    }
+  ]
+}

@@ -1,0 +1,658 @@
+{
+  "version": "control_v63_random_universe_prompt_ensemble_predictive_validity",
+  "locked_on": "2026-05-28",
+  "purpose": "Test whether prompt-ensemble predictive validity survives adding unstructured random directions to the candidate universe.",
+  "experiments": [
+    {
+      "key": "church_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2122",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in church; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2122",
+        "seed": 2122
+      }
+    },
+    {
+      "key": "church_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2123",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in church; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2123",
+        "seed": 2123
+      }
+    },
+    {
+      "key": "church_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2124",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in church; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2124",
+        "seed": 2124
+      }
+    },
+    {
+      "key": "church_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2125",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in church; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2125",
+        "seed": 2125
+      }
+    },
+    {
+      "key": "church_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2126",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in church; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2126",
+        "seed": 2126
+      }
+    },
+    {
+      "key": "bedroom_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2122",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in bedroom; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2122",
+        "seed": 2122
+      }
+    },
+    {
+      "key": "bedroom_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2123",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in bedroom; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2123",
+        "seed": 2123
+      }
+    },
+    {
+      "key": "bedroom_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2124",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in bedroom; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2124",
+        "seed": 2124
+      }
+    },
+    {
+      "key": "bedroom_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2125",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in bedroom; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2125",
+        "seed": 2125
+      }
+    },
+    {
+      "key": "bedroom_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2126",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in bedroom; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2126",
+        "seed": 2126
+      }
+    },
+    {
+      "key": "ffhq_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2122",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2122",
+        "seed": 2122
+      }
+    },
+    {
+      "key": "ffhq_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2123",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2123",
+        "seed": 2123
+      }
+    },
+    {
+      "key": "ffhq_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2124",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2124",
+        "seed": 2124
+      }
+    },
+    {
+      "key": "ffhq_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2125",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2125",
+        "seed": 2125
+      }
+    },
+    {
+      "key": "ffhq_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_seed_2126",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under random_universe stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2126",
+        "seed": 2126
+      }
+    },
+    {
+      "key": "church_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church predictive-validity runs for random_universe.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2122/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2123/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2124/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2125/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church_seed_2126/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/church",
+        "seed": 4616
+      }
+    },
+    {
+      "key": "bedroom_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom predictive-validity runs for random_universe.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2122/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2123/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2124/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2125/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom_seed_2126/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/bedroom",
+        "seed": 4617
+      }
+    },
+    {
+      "key": "ffhq_control_v63_random_universe_prompt_ensemble_predictive_validity_random_universe_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive-validity runs for random_universe.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2122/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2123/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2124/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2125/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq_seed_2126/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe/ffhq",
+        "seed": 4618
+      }
+    }
+  ]
+}

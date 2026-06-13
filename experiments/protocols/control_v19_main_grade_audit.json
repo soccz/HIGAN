@@ -1,0 +1,35 @@
+{
+  "version": "control_v19_main_grade_audit",
+  "locked_on": "2026-05-25",
+  "purpose": "Main-paper reproducibility audit including the FFHQ control campaign and the cross-domain bedroom controller validation.",
+  "experiments": [
+    {
+      "key": "control_campaign_audit_main_grade",
+      "order": 1,
+      "script": "experiments/control/audit_control_campaign.py",
+      "claim_tested": "Every locked control protocol used for the main control-signal claim should have traceable outputs, matching protocol hashes, declared summary inputs, and no silently skipped protocol paths.",
+      "args": {
+        "protocols": [
+          "experiments/protocols/control_v3_risk_robustness.json",
+          "experiments/protocols/control_v4_risk_signal_negatives.json",
+          "experiments/protocols/control_v5_risk_power_sensitivity.json",
+          "experiments/protocols/control_v6_true_lpips_validation.json",
+          "experiments/protocols/control_v7_expanded_candidate_universe.json",
+          "experiments/protocols/control_v8_campaign_audit.json",
+          "experiments/protocols/control_v9_fixed_target_negatives.json",
+          "experiments/protocols/control_v10_campaign_audit.json",
+          "experiments/protocols/control_v11_extended_validation.json",
+          "experiments/protocols/control_v12_threshold_magnitude_sensitivity.json",
+          "experiments/protocols/control_v13_extended_campaign_audit.json",
+          "experiments/protocols/control_v14_true_lpips_fixed_target_negatives.json",
+          "experiments/protocols/control_v15_expanded_universe_true_lpips.json",
+          "experiments/protocols/control_v16_estimator_stability.json",
+          "experiments/protocols/control_v17_full_campaign_audit.json",
+          "experiments/protocols/control_v18_bedroom_cross_domain_controller.json"
+        ],
+        "out": "experiments/out/control_campaign_audit_main_grade",
+        "seed": 6019
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "version": "control_v3_risk_robustness",
+  "locked_on": "2026-05-23",
+  "purpose": "Check whether the predeclared risk-aware controller remains stable across independent latent/probe/calibration/test seeds. The protocol repeats the same controller settings from control_v2 without tuning.",
+  "common": {
+    "lod": 2.0,
+    "batch": 4,
+    "device": "cuda",
+    "domain": "ffhq",
+    "attrs": ["smile", "age", "pose", "gender", "eyeglasses"],
+    "candidate_source": "experiments/out/control_direction_matched_full/metrics.json"
+  },
+  "experiments": [
+    {
+      "key": "risk_aware_seed_2027",
+      "order": 1,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2027.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_aware_robustness/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "risk_aware_seed_2028",
+      "order": 2,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2028.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_aware_robustness/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "risk_aware_seed_2029",
+      "order": 3,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2029.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_aware_robustness/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "risk_aware_seed_2030",
+      "order": 4,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2030.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_aware_robustness/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "risk_aware_seed_2031",
+      "order": 5,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "The locked gain/risk score improves stability at matched semantic change for seed 2031.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_aware_robustness/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "risk_aware_robustness_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Aggregate seed-level and seed-attribute paired deltas without reselection or tuning.",
+      "reporting_rule": "Primary robustness numbers are seed-level means over all five attributes. Also report cell-level statistics as descriptive support.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_risk_aware_robustness/seed_2027/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2028/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2029/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2030/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_risk_aware_robustness",
+        "seed": 3107
+      }
+    }
+  ]
+}

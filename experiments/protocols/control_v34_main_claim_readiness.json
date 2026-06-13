@@ -1,0 +1,21 @@
+{
+  "version": "control_v34_main_claim_readiness",
+  "locked_on": "2026-05-27",
+  "purpose": "Apply predeclared decision rules to decide whether the locked campaign supports a strong main-paper control claim, a predictive-only claim, or a narrowed failure-boundary claim.",
+  "experiments": [
+    {
+      "key": "main_claim_readiness_v1",
+      "order": 1,
+      "script": "experiments/control/run_main_claim_readiness.py",
+      "claim_tested": "Final claim-readiness decision using v31 predictive-validity summaries and v32 gain-first/risk-tiebreak controller summaries.",
+      "args": {
+        "church-predictive": "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "bedroom-predictive": "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "tiebreak-actual": "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary/metrics.json",
+        "tiebreak-negative": "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary/metrics.json",
+        "out": "experiments/out/control_main_claim_readiness_v1",
+        "seed": 4101
+      }
+    }
+  ]
+}

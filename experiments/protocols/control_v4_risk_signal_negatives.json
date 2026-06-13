@@ -1,0 +1,287 @@
+{
+  "version": "control_v4_risk_signal_negatives",
+  "locked_on": "2026-05-23",
+  "purpose": "Test whether the curvature-risk signal itself matters by replacing it with shuffled and inverted risk values while keeping the same seeds, candidate universe, probe/calibration/test sizes, and baselines as the actual-risk robustness run.",
+  "common": {
+    "lod": 2.0,
+    "batch": 4,
+    "device": "cuda",
+    "domain": "ffhq",
+    "attrs": ["smile", "age", "pose", "gender", "eyeglasses"],
+    "candidate_source": "experiments/out/control_direction_matched_full/metrics.json"
+  },
+  "experiments": [
+    {
+      "key": "shuffled_risk_seed_2027",
+      "order": 1,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "shuffled_risk_seed_2028",
+      "order": 2,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "shuffled_risk_seed_2029",
+      "order": 3,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "shuffled_risk_seed_2030",
+      "order": 4,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "shuffled_risk_seed_2031",
+      "order": 5,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: shuffled curvature risk should not match the actual risk-aware controller.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "inverted_risk_seed_2027",
+      "order": 6,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/inverted_seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "inverted_risk_seed_2028",
+      "order": 7,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/inverted_seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "inverted_risk_seed_2029",
+      "order": 8,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/inverted_seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "inverted_risk_seed_2030",
+      "order": 9,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/inverted_seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "inverted_risk_seed_2031",
+      "order": 10,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Negative control: inverted curvature risk should be worse than actual risk-aware selection if risk direction matters.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_signal_negative_controls/inverted_seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "risk_signal_negative_summary",
+      "order": 11,
+      "script": "experiments/control/run_risk_signal_negative_summary.py",
+      "claim_tested": "Actual risk-aware controller should outperform shuffled/inverted-risk controllers on seed-level stability metrics if curvature risk carries useful control signal.",
+      "reporting_rule": "Primary comparisons are actual minus shuffled and actual minus inverted over matched seeds 2027-2031 and all five attributes. Report all metrics regardless of outcome.",
+      "args": {
+        "actual-inputs": [
+          "experiments/out/control_risk_aware_robustness/seed_2027/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2028/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2029/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2030/metrics.json",
+          "experiments/out/control_risk_aware_robustness/seed_2031/metrics.json"
+        ],
+        "shuffled-inputs": [
+          "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2027/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2028/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2029/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2030/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/shuffled_seed_2031/metrics.json"
+        ],
+        "inverted-inputs": [
+          "experiments/out/control_risk_signal_negative_controls/inverted_seed_2027/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/inverted_seed_2028/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/inverted_seed_2029/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/inverted_seed_2030/metrics.json",
+          "experiments/out/control_risk_signal_negative_controls/inverted_seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_risk_signal_negative_controls",
+        "seed": 3307
+      }
+    }
+  ]
+}

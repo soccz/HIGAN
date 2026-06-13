@@ -1,0 +1,21 @@
+{
+  "version": "control_v44_predictive_assumption_readiness",
+  "locked_on": "2026-05-27",
+  "purpose": "Apply predeclared decision rules to FD-estimator and prompt-template predictive-validity stress tests.",
+  "experiments": [
+    {
+      "key": "predictive_assumption_readiness_v1",
+      "order": 1,
+      "script": "experiments/control/run_predictive_assumption_readiness.py",
+      "claim_tested": "Decide whether the predictive-validity claim survives the two main measurement-assumption stress tests.",
+      "args": {
+        "fd-church": "experiments/out/control_cross_domain_risk_predictive_fd/church/metrics.json",
+        "fd-bedroom": "experiments/out/control_cross_domain_risk_predictive_fd/bedroom/metrics.json",
+        "prompt-church": "experiments/out/control_cross_domain_risk_predictive_prompt_photo/church/metrics.json",
+        "prompt-bedroom": "experiments/out/control_cross_domain_risk_predictive_prompt_photo/bedroom/metrics.json",
+        "out": "experiments/out/control_predictive_assumption_readiness_v1",
+        "seed": 4191
+      }
+    }
+  ]
+}

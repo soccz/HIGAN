@@ -15,6 +15,19 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+PAPER = Path(__file__).resolve().parents[2]
+
+
+def load_json(path: Path):
+    return json.loads(path.read_text())
+
+
+def latest_pixel_rhos(path: Path) -> dict[str, float]:
+    metrics = load_json(path)
+    table = metrics["bootstrap_ci"]
+    latest_n = max(int(k) for k in table)
+    return {attr: float(row["mean"]) for attr, row in table[str(latest_n)].items()}
+
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -22,19 +35,20 @@ def main() -> None:
     args = ap.parse_args()
 
     out = Path(args.out)
+    if not out.is_absolute():
+        out = PAPER / "experiments" / out
     out.mkdir(parents=True, exist_ok=True)
-    base = Path("out")
+    base = PAPER / "experiments" / "out"
 
     # --- pull metrics ---
-    bedroom_c2 = {
-        "indoor_lighting": 0.495, "wood": 0.624, "carpet": 0.95, "cluttered_space": 0.85,
-        "glossy": 0.92, "dirt": 0.93, "scary": 1.10, "view": 23.22,
-    }
-    ffhq_c2 = json.load(open(base / "ffhq_higher_order" / "metrics.json"))
-    church_c2 = json.load(open(base / "church_all" / "metrics.json"))["higher_order"]
-    bedroom_c3 = json.load(open(base / "bedroom_c3_iou" / "metrics.json"))["c3_scores"]
-    bedroom_c4 = json.load(open(base / "bedroom_c4" / "metrics.json"))
-    ffhq_c4 = json.load(open(base / "ffhq_c4" / "metrics.json"))
+    bedroom_c2 = latest_pixel_rhos(base / "sample_scaling_bedroom_n256" / "metrics.json")
+    ffhq_c2 = latest_pixel_rhos(base / "sample_scaling_ffhq_n512" / "metrics.json")
+    church_c2 = latest_pixel_rhos(base / "sample_scaling_church_n256" / "metrics.json")
+    bedroom_c3 = load_json(base / "bedroom_c3_iou" / "metrics.json")["c3_scores"]
+    bedroom_c4 = load_json(base / "bedroom_c4" / "metrics.json")
+    ffhq_c4 = load_json(base / "ffhq_c4" / "metrics.json")
+    church_c4_path = base / "church_c4" / "metrics.json"
+    church_c4 = load_json(church_c4_path) if church_c4_path.exists() else None
 
     import matplotlib
     matplotlib.use("Agg")
@@ -46,11 +60,11 @@ def main() -> None:
     ax = fig.add_subplot(gs[0, :])
     color_dom = {"bedroom": "#44403c", "ffhq": "#6d28d9", "church": "#0e7490"}
     all_attrs_bd = list(bedroom_c2.keys())
-    all_attrs_ffhq = [d["attr"] for d in ffhq_c2]
-    all_attrs_ch = [d["attr"] for d in church_c2]
+    all_attrs_ffhq = list(ffhq_c2.keys())
+    all_attrs_ch = list(church_c2.keys())
     y_bd = [bedroom_c2[a] for a in all_attrs_bd]
-    y_ffhq = [d["ratio_mean"] for d in ffhq_c2]
-    y_ch = [d["ratio_mean"] for d in church_c2]
+    y_ffhq = [ffhq_c2[a] for a in all_attrs_ffhq]
+    y_ch = [church_c2[a] for a in all_attrs_ch]
 
     # plot grouped bar-like scatter
     xs_bd = np.arange(len(all_attrs_bd))
@@ -67,8 +81,7 @@ def main() -> None:
     ax.set_xticklabels(all_labels, rotation=40, ha="right", fontsize=9)
     ax.set_ylabel(r"non-linearity ratio  $\bar{\rho}(b)$", fontsize=11)
     ax.set_title(
-        "C2 — second-order saliency ratio per attribute, across 3 domains\n"
-        "(view, pose, eyeglasses are topological-change attributes — high curvature)",
+        "C2 — second-order saliency ratio per attribute, across 3 domains",
         fontsize=11, weight="bold", pad=8,
     )
     ax.set_yscale("log")
@@ -92,7 +105,7 @@ def main() -> None:
     ax.set_ylabel("pairwise IoU at top-20%", fontsize=10)
     ax.set_title(
         "C3 — pairwise saliency IoU per layer-pair class (bedroom)\n"
-        "for every attribute: cc > cn > nn ⇒ boundary is layer-localised",
+        "computed from the bedroom layer-IoU metrics file",
         fontsize=10, weight="bold", pad=8,
     )
     ax.legend(fontsize=8, loc="upper right")
@@ -107,7 +120,7 @@ def main() -> None:
     ax.set_ylabel("C3 score = IoU_cc − IoU_cn", fontsize=10)
     ax.set_title(
         "C3 — layer-localisation score (bedroom)\n"
-        "all 8 attributes positive ⇒ C3 validated",
+        "score is IoU_cc minus IoU_cn",
         fontsize=10, weight="bold", pad=8,
     )
     ax.axhline(0, color="black", lw=0.5)
@@ -130,20 +143,27 @@ def main() -> None:
                edgecolors="white", linewidths=1.5,
                label=f"FFHQ (n={len(ff_P)}, Spearman r={ffhq_c4['spearman']['r']:.2f}, "
                      f"p={ffhq_c4['spearman']['p']:.3f})")
+    if church_c4 is not None:
+        ch_P = [p["predictor"] for p in church_c4["pairs"]]
+        ch_Y = [p["nonlinearity"] for p in church_c4["pairs"]]
+        ch_Pn = np.array(ch_P) / max(ch_P)
+        ax.scatter(ch_Pn, ch_Y, s=70, c=color_dom["church"], alpha=0.85,
+                   edgecolors="white", linewidths=1.5,
+                   label=f"church (n={len(ch_P)}, Spearman r={church_c4['spearman']['r']:.2f}, "
+                         f"p={church_c4['spearman']['p']:.3f})")
     ax.set_xlabel(r"normalised mixed-Hessian predictor  $\hat P(a,b) = P / \max P$ per domain",
                   fontsize=11)
     ax.set_ylabel(r"compositional non-linearity  $1 - \mathrm{corr}(\mathrm{sal}(a+b),\, \mathrm{sal}(a)+\mathrm{sal}(b))$",
                   fontsize=10)
     ax.set_title(
-        "C4 — mixed-Hessian predictor of compositional failure (two domains)\n"
-        "positive rank-correlation in both, both p < 0.01",
+        "C4 — mixed-Hessian predictor of compositional failure",
         fontsize=11, weight="bold", pad=8,
     )
     ax.legend(fontsize=9, loc="upper left")
     ax.grid(alpha=0.25)
 
     fig.suptitle(
-        "Cross-domain validation of claims C2 (curvature), C3 (layer-localised), C4 (compositional)",
+        "Cross-domain curvature and composition evidence",
         fontsize=13, weight="bold", y=1.005,
     )
     fig.canvas.draw()

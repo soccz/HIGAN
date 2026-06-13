@@ -1,0 +1,22 @@
+{
+  "version": "control_v71_dino_preservation_seed_scaled_evidence_table",
+  "locked_on": "2026-05-29",
+  "purpose": "Build a DINO-specific n=10 evidence table for non-language preservation predictive validity.",
+  "experiments": [
+    {
+      "key": "predictive_dino_evidence_table_v2_n10",
+      "order": 1,
+      "script": "experiments/control/run_predictive_dino_evidence_table.py",
+      "claim_tested": "The seed-scaled rho signal should predict DINOv2 feature damage beyond the original five-seed result.",
+      "args": {
+        "summaries": [
+          "dino_n10_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/church/metrics.json",
+          "dino_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/bedroom/metrics.json",
+          "dino_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/ffhq/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_dino_evidence_table_v2_n10",
+        "seed": 4217
+      }
+    }
+  ]
+}

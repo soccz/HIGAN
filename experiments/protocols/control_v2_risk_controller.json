@@ -1,0 +1,41 @@
+{
+  "version": "control_v2_risk_controller",
+  "locked_on": "2026-05-23",
+  "purpose": "Evaluate a predeclared risk-aware latent edit controller. The controller combines target response and curvature risk; all attributes and all baselines are reported regardless of outcome.",
+  "common": {
+    "seed": 2027,
+    "lod": 2.0,
+    "batch": 4,
+    "device": "cuda",
+    "domain": "ffhq",
+    "attrs": ["smile", "age", "pose", "gender", "eyeglasses"]
+  },
+  "experiments": [
+    {
+      "key": "risk_aware_controller",
+      "order": 1,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "A predeclared gain/risk score can select safer edit directions than gain-only, random, and high-risk baselines at matched semantic change.",
+      "primary_metrics": ["mean_id_cos", "mean_lpips_proxy", "mean_abs_delta_attr"],
+      "primary_comparisons": ["risk_aware - gain_only", "risk_aware - random", "risk_aware - high_risk", "risk_aware - low_risk"],
+      "reporting_rule": "Use the fixed candidate universe from control_direction_matched_full. Report all five FFHQ attributes and all five methods. Do not tune risk_power, min_gain_quantile, or k_select after seeing results.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_risk_aware_controller",
+        "seed": 2027
+      }
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "version": "control_v27_church_structured_confirmatory_replication",
+  "locked_on": "2026-05-26",
+  "purpose": "Independent-seed, larger-test-set replication of the church structured-only control-signal result and its shuffled/inverted risk negative controls.",
+  "common": {
+    "domain": "church",
+    "attrs": [
+      "clouds",
+      "sunny",
+      "vegetation"
+    ],
+    "methods": [
+      "ganspace",
+      "sefa"
+    ],
+    "target_source": "universe",
+    "lpips_net": "alex",
+    "n_test": 128
+  },
+  "experiments": [
+    {
+      "key": "church_structured_confirmatory_actual_seed_2032",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed church structured-only replication: the same predeclared controller should preserve identity and reduce true LPIPS without retuning.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/actual_seed_2032",
+        "seed": 2032
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_actual_seed_2033",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed church structured-only replication: the same predeclared controller should preserve identity and reduce true LPIPS without retuning.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/actual_seed_2033",
+        "seed": 2033
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_actual_seed_2034",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed church structured-only replication: the same predeclared controller should preserve identity and reduce true LPIPS without retuning.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/actual_seed_2034",
+        "seed": 2034
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_actual_seed_2035",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed church structured-only replication: the same predeclared controller should preserve identity and reduce true LPIPS without retuning.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/actual_seed_2035",
+        "seed": 2035
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_actual_seed_2036",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed church structured-only replication: the same predeclared controller should preserve identity and reduce true LPIPS without retuning.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/actual_seed_2036",
+        "seed": 2036
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_shuffled_seed_2032",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/shuffled_seed_2032",
+        "seed": 2032
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_shuffled_seed_2033",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/shuffled_seed_2033",
+        "seed": 2033
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_shuffled_seed_2034",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/shuffled_seed_2034",
+        "seed": 2034
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_shuffled_seed_2035",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/shuffled_seed_2035",
+        "seed": 2035
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_shuffled_seed_2036",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/shuffled_seed_2036",
+        "seed": 2036
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_inverted_seed_2032",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/inverted_seed_2032",
+        "seed": 2032
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_inverted_seed_2033",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/inverted_seed_2033",
+        "seed": 2033
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_inverted_seed_2034",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/inverted_seed_2034",
+        "seed": 2034
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_inverted_seed_2035",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/inverted_seed_2035",
+        "seed": 2035
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_inverted_seed_2036",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Independent-seed structured-only risk-signal negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_confirmatory/inverted_seed_2036",
+        "seed": 2036
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_actual_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Aggregate independent-seed structured-only actual controller results.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2032/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2033/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2034/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2035/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2036/metrics.json"
+        ],
+        "out": "experiments/out/control_church_structured_confirmatory/actual_summary",
+        "seed": 4041
+      }
+    },
+    {
+      "key": "church_structured_confirmatory_negative_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_signal_negative_summary.py",
+      "claim_tested": "Aggregate independent-seed actual-vs-shuffled/inverted structured-only risk controls.",
+      "args": {
+        "actual-inputs": [
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2032/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2033/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2034/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2035/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/actual_seed_2036/metrics.json"
+        ],
+        "shuffled-inputs": [
+          "experiments/out/control_church_structured_confirmatory/shuffled_seed_2032/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/shuffled_seed_2033/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/shuffled_seed_2034/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/shuffled_seed_2035/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/shuffled_seed_2036/metrics.json"
+        ],
+        "inverted-inputs": [
+          "experiments/out/control_church_structured_confirmatory/inverted_seed_2032/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/inverted_seed_2033/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/inverted_seed_2034/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/inverted_seed_2035/metrics.json",
+          "experiments/out/control_church_structured_confirmatory/inverted_seed_2036/metrics.json"
+        ],
+        "out": "experiments/out/control_church_structured_confirmatory/negative_summary",
+        "seed": 4043
+      }
+    }
+  ]
+}

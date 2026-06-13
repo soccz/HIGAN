@@ -1,0 +1,668 @@
+{
+  "version": "control_v85_ffhq_estimator_source_seed_scaling_predictive_validity",
+  "locked_on": "2026-05-29",
+  "purpose": "Scale FFHQ finite-difference and source-ablation defense axes from five to ten seeds.",
+  "experiments": [
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_fd_seed_2177",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_fd should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2177",
+        "seed": 2177,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_fd_seed_2178",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_fd should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2178",
+        "seed": 2178,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_fd_seed_2179",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_fd should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2179",
+        "seed": 2179,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_fd_seed_2180",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_fd should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2180",
+        "seed": 2180,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_fd_seed_2181",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_fd should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2181",
+        "seed": 2181,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_fd_n10_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq ffhq_fd runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd/ffhq_seed_2142/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd/ffhq_seed_2143/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd/ffhq_seed_2144/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd/ffhq_seed_2145/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd/ffhq_seed_2146/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2177/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2178/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2179/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2180/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_seed_scaling/ffhq_seed_2181/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_n10/ffhq",
+        "seed": 4906
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_ganspace_only_seed_2182",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_ganspace_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2182",
+        "seed": 2182
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_ganspace_only_seed_2183",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_ganspace_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2183",
+        "seed": 2183
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_ganspace_only_seed_2184",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_ganspace_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2184",
+        "seed": 2184
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_ganspace_only_seed_2185",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_ganspace_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2185",
+        "seed": 2185
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_ganspace_only_seed_2186",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_ganspace_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2186",
+        "seed": 2186
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_ganspace_only_n10_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq ffhq_ganspace_only runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2147/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2148/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2149/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2150/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2151/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2182/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2183/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2184/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2185/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_seed_scaling/ffhq_seed_2186/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_n10/ffhq",
+        "seed": 4912
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_sefa_only_seed_2187",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_sefa_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2187",
+        "seed": 2187
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_sefa_only_seed_2188",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_sefa_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2188",
+        "seed": 2188
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_sefa_only_seed_2189",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_sefa_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2189",
+        "seed": 2189
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_sefa_only_seed_2190",
+      "order": 16,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_sefa_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2190",
+        "seed": 2190
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_sefa_only_seed_2191",
+      "order": 17,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis ffhq_sefa_only should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2191",
+        "seed": 2191
+      }
+    },
+    {
+      "key": "ffhq_control_v85_ffhq_estimator_source_seed_scaling_predictive_validity_ffhq_sefa_only_n10_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq ffhq_sefa_only runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2152/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2153/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2154/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2155/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2156/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2187/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2188/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2189/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2190/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_seed_scaling/ffhq_seed_2191/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_n10/ffhq",
+        "seed": 4918
+      }
+    }
+  ]
+}

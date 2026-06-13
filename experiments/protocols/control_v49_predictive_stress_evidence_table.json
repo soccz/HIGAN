@@ -1,0 +1,31 @@
+{
+  "version": "control_v49_predictive_stress_evidence_table",
+  "locked_on": "2026-05-27",
+  "purpose": "Build a generic predeclared evidence table for baseline and assumption-stress predictive-validity summaries.",
+  "experiments": [
+    {
+      "key": "predictive_stress_evidence_table_v1",
+      "order": 1,
+      "script": "experiments/control/run_predictive_stress_evidence_table.py",
+      "claim_tested": "Curvature/risk predictive validity should have stable directional evidence across estimator, prompt, evaluation budget, and semantic matching stress tests.",
+      "args": {
+        "summaries": [
+          "baseline_church=experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+          "baseline_bedroom=experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+          "fd_church=experiments/out/control_cross_domain_risk_predictive_fd/church/metrics.json",
+          "fd_bedroom=experiments/out/control_cross_domain_risk_predictive_fd/bedroom/metrics.json",
+          "photo_church=experiments/out/control_cross_domain_risk_predictive_prompt_photo/church/metrics.json",
+          "photo_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_photo/bedroom/metrics.json",
+          "caption_church=experiments/out/control_cross_domain_risk_predictive_prompt_caption/church/metrics.json",
+          "caption_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_caption/bedroom/metrics.json",
+          "high_ntest_church=experiments/out/control_cross_domain_risk_predictive_high_ntest128/church/metrics.json",
+          "high_ntest_bedroom=experiments/out/control_cross_domain_risk_predictive_high_ntest128/bedroom/metrics.json",
+          "strict_gain_church=experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church/metrics.json",
+          "strict_gain_bedroom=experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_stress_evidence_table_v1",
+        "seed": 4209
+      }
+    }
+  ]
+}

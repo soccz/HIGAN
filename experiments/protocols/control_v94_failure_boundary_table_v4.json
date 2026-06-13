@@ -1,0 +1,30 @@
+{
+  "version": "control_v94_failure_boundary_table_v4",
+  "locked_on": "2026-05-30",
+  "purpose": "Update failure-boundary reporting with diagnostic utility.",
+  "experiments": [
+    {
+      "key": "failure_boundary_table_v4",
+      "order": 1,
+      "script": "experiments/control/run_failure_boundary_table.py",
+      "claim_tested": "Final framing should expose both stress-test and diagnostic-utility boundaries.",
+      "args": {
+        "tables": [
+          "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+          "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+          "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+          "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+          "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+          "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json",
+          "exhaustive_v7=experiments/out/control_predictive_stress_evidence_table_v7_exhaustive/metrics.json",
+          "permutation_v1=experiments/out/control_predictive_permutation_null_table_v1/metrics.json",
+          "exhaustive_n10_v8=experiments/out/control_predictive_stress_evidence_table_v8_exhaustive_n10/metrics.json",
+          "permutation_n10_v2=experiments/out/control_predictive_permutation_null_table_v2_n10/metrics.json",
+          "diagnostic_v1=experiments/out/control_predictive_diagnostic_utility_table_v1/metrics.json"
+        ],
+        "out": "experiments/out/control_failure_boundary_table_v4",
+        "seed": 4227
+      }
+    }
+  ]
+}

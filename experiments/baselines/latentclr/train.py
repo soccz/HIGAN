@@ -53,7 +53,7 @@ def train(K: int = 100, B: int = 16, epochs: int = 100,
           direction_scale: float = 6.0, feature_layer: int = 10,
           temperature: float = 0.5,
           out: str = "experiments/out/latentclr_ffhq", seed: int = 0,
-          chunk: int = 25, lod: float = 2.0):
+          chunk: int = 25, lod: float = 2.0, use_checkpoint: bool = True):
     """K is the number of directions; chunk controls how many directions
     we forward per minibatch slice (memory).
 
@@ -94,17 +94,18 @@ def train(K: int = 100, B: int = 16, epochs: int = 100,
                     base_feat = cap["feat"].detach()        # (B, C)
 
                 directions = bank.unit_dirs                  # (K, w_dim)
-                # Gradient checkpointing: forward each direction without
-                # holding the activations for backward; recompute them
-                # later. This is what lets K=100 fit in 8GB VRAM —
-                # otherwise the synthesizer's intermediate tensors for
-                # all K forwards pile up and OOM.
-                import torch.utils.checkpoint as cp
-
+                # use_checkpoint=True: trades compute for memory via
+                # torch.utils.checkpoint. Empirically, the forward-hook
+                # pattern (cap["feat"] populated by side-effect) does
+                # NOT propagate gradients through cp.checkpoint(use_reentrant=False)
+                # because the closure captures `cap` outside the checkpoint
+                # boundary and the recompute path's grad-tracked feat
+                # never connects to the autograd graph of the returned tensor.
+                # Verified empirically: loss stuck at 2.6198 for 22+ epochs
+                # with checkpointing; without it, loss decreases normally.
+                # Use checkpoint only if you've replaced the hook with an
+                # explicit grad-flow extraction.
                 def synth_one(chunk_dirs):
-                    """Forward (k1-k0)*B latents, return feature_diff.
-                    Activations recomputed during backward.
-                    """
                     wp_pos = wp_base.unsqueeze(0) + direction_scale * \
                              chunk_dirs.unsqueeze(1).unsqueeze(2)
                     wp_pos = wp_pos.reshape(-1, *wp_base.shape[1:])
@@ -114,13 +115,21 @@ def train(K: int = 100, B: int = 16, epochs: int = 100,
                         chunk_dirs.shape[0], 1)
 
                 feats = []
-                for k0 in range(0, K, chunk):
-                    k1 = min(k0 + chunk, K)
-                    chunk_dirs = directions[k0:k1]
-                    feat_diff = cp.checkpoint(
-                        synth_one, chunk_dirs, use_reentrant=False
-                    )
-                    feats.append(feat_diff)
+                if use_checkpoint:
+                    import torch.utils.checkpoint as cp
+                    for k0 in range(0, K, chunk):
+                        k1 = min(k0 + chunk, K)
+                        chunk_dirs = directions[k0:k1]
+                        feat_diff = cp.checkpoint(
+                            synth_one, chunk_dirs, use_reentrant=False
+                        )
+                        feats.append(feat_diff)
+                else:
+                    for k0 in range(0, K, chunk):
+                        k1 = min(k0 + chunk, K)
+                        chunk_dirs = directions[k0:k1]
+                        feat_diff = synth_one(chunk_dirs)
+                        feats.append(feat_diff)
                 features = torch.cat(feats, dim=0)           # (K*B, C)
 
                 loss = nt_xent_loss(features, K=K, B=B,
@@ -168,6 +177,9 @@ if __name__ == "__main__":
     ap.add_argument("--lod", type=float, default=2.0,
                     help="StyleGAN1 lod override (2=256², 1=512², 0=1024²); "
                     "lod≥1 needed for K=100 chunk=8+ on 8GB")
+    ap.add_argument("--no-checkpoint", action="store_true",
+                    help="Disable gradient checkpointing (recommended — "
+                    "checkpointing breaks grad flow through forward hook).")
     args = ap.parse_args()
 
     train(K=args.K, B=args.B, epochs=args.epochs,
@@ -176,4 +188,4 @@ if __name__ == "__main__":
           feature_layer=args.feature_layer,
           temperature=args.temperature,
           out=args.out, seed=args.seed, chunk=args.chunk,
-          lod=args.lod)
+          lod=args.lod, use_checkpoint=not args.no_checkpoint)

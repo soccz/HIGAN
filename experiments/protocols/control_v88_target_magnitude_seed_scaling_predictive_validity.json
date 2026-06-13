@@ -1,0 +1,1339 @@
+{
+  "version": "control_v88_target_magnitude_seed_scaling_predictive_validity",
+  "locked_on": "2026-05-29",
+  "purpose": "Scale target-magnitude sensitivity axes to n=10.",
+  "experiments": [
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2202",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2202",
+        "seed": 2202
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2203",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2203",
+        "seed": 2203
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2204",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2204",
+        "seed": 2204
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2205",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2205",
+        "seed": 2205
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2206",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2206",
+        "seed": 2206
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2202",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2202",
+        "seed": 2202
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2203",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2203",
+        "seed": 2203
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2204",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2204",
+        "seed": 2204
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2205",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2205",
+        "seed": 2205
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2206",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2206",
+        "seed": 2206
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2202",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2202",
+        "seed": 2202
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2203",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2203",
+        "seed": 2203
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2204",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2204",
+        "seed": 2204
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2205",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2205",
+        "seed": 2205
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_seed_2206",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q10 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2206",
+        "seed": 2206
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_n10_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church target_q10 runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2167/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2168/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2169/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2170/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2171/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2202/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2203/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2204/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2205/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/church_seed_2206/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/church",
+        "seed": 4916
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_n10_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom target_q10 runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2167/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2168/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2169/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2170/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2171/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2202/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2203/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2204/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2205/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/bedroom_seed_2206/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/bedroom",
+        "seed": 4917
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q10_n10_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq target_q10 runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2167/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2168/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2169/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2170/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2171/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2202/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2203/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2204/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2205/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_seed_scaling/ffhq_seed_2206/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/ffhq",
+        "seed": 4918
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2207",
+      "order": 19,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2207",
+        "seed": 2207
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2208",
+      "order": 20,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2208",
+        "seed": 2208
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2209",
+      "order": 21,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2209",
+        "seed": 2209
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2210",
+      "order": 22,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2210",
+        "seed": 2210
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2211",
+      "order": 23,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2211",
+        "seed": 2211
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2207",
+      "order": 24,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2207",
+        "seed": 2207
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2208",
+      "order": 25,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2208",
+        "seed": 2208
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2209",
+      "order": 26,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2209",
+        "seed": 2209
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2210",
+      "order": 27,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2210",
+        "seed": 2210
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2211",
+      "order": 28,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2211",
+        "seed": 2211
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2207",
+      "order": 29,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2207",
+        "seed": 2207
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2208",
+      "order": 30,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2208",
+        "seed": 2208
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2209",
+      "order": 31,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2209",
+        "seed": 2209
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2210",
+      "order": 32,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2210",
+        "seed": 2210
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_seed_2211",
+      "order": 33,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the predeclared defense axis target_q50 should remain auditable when extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2211",
+        "seed": 2211
+      }
+    },
+    {
+      "key": "church_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_n10_summary",
+      "order": 34,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church target_q50 runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2172/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2173/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2174/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2175/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2176/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2207/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2208/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2209/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2210/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/church_seed_2211/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/church",
+        "seed": 4934
+      }
+    },
+    {
+      "key": "bedroom_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_n10_summary",
+      "order": 35,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom target_q50 runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2172/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2173/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2174/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2175/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2176/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2207/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2208/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2209/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2210/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/bedroom_seed_2211/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/bedroom",
+        "seed": 4935
+      }
+    },
+    {
+      "key": "ffhq_control_v88_target_magnitude_seed_scaling_predictive_validity_target_q50_n10_summary",
+      "order": 36,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq target_q50 runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2172/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2173/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2174/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2175/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2176/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2207/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2208/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2209/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2210/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_seed_scaling/ffhq_seed_2211/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/ffhq",
+        "seed": 4936
+      }
+    }
+  ]
+}

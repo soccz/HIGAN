@@ -1,0 +1,27 @@
+{
+  "version": "control_v83_failure_boundary_table_v2",
+  "locked_on": "2026-05-29",
+  "purpose": "Update the failure-boundary table after the exhaustive defense and permutation-null evidence.",
+  "experiments": [
+    {
+      "key": "failure_boundary_table_v2",
+      "order": 1,
+      "script": "experiments/control/run_failure_boundary_table.py",
+      "claim_tested": "The final paper framing should expose robust and weak regimes across all top-tier defense axes.",
+      "args": {
+        "tables": [
+          "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+          "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+          "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+          "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+          "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+          "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json",
+          "exhaustive_v7=experiments/out/control_predictive_stress_evidence_table_v7_exhaustive/metrics.json",
+          "permutation_v1=experiments/out/control_predictive_permutation_null_table_v1/metrics.json"
+        ],
+        "out": "experiments/out/control_failure_boundary_table_v2",
+        "seed": 4222
+      }
+    }
+  ]
+}

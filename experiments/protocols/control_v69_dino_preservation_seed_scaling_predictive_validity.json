@@ -1,0 +1,688 @@
+{
+  "version": "control_v69_dino_preservation_seed_scaling_predictive_validity",
+  "locked_on": "2026-05-29",
+  "purpose": "Scale the non-language DINO-preservation stress test from five to ten seeds for top-tier statistical robustness.",
+  "experiments": [
+    {
+      "key": "church_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2137",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2137",
+        "seed": 2137,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "church_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2138",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2138",
+        "seed": 2138,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "church_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2139",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2139",
+        "seed": 2139,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "church_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2140",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2140",
+        "seed": 2140,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "church_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2141",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2141",
+        "seed": 2141,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "bedroom_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2137",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2137",
+        "seed": 2137,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "bedroom_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2138",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2138",
+        "seed": 2138,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "bedroom_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2139",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2139",
+        "seed": 2139,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "bedroom_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2140",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2140",
+        "seed": 2140,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "bedroom_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2141",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2141",
+        "seed": 2141,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "ffhq_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2137",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2137",
+        "seed": 2137,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "ffhq_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2138",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2138",
+        "seed": 2138,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "ffhq_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2139",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2139",
+        "seed": 2139,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "ffhq_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2140",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2140",
+        "seed": 2140,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "ffhq_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_seed_2141",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier seed scaling: the rho predictive signal should remain stable when dino_preservation is extended from five to ten seeds in ffhq.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2141",
+        "seed": 2141,
+        "dino-preservation": true,
+        "dino-local-files-only": true
+      }
+    },
+    {
+      "key": "church_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_n10_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church dino_preservation predictive-validity runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2127/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2128/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2129/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2130/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/church_seed_2131/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2137/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2138/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2139/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2140/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/church_seed_2141/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/church",
+        "seed": 4716
+      }
+    },
+    {
+      "key": "bedroom_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_n10_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom dino_preservation predictive-validity runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom_seed_2127/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom_seed_2128/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom_seed_2129/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom_seed_2130/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom_seed_2131/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2137/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2138/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2139/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2140/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/bedroom_seed_2141/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/bedroom",
+        "seed": 4717
+      }
+    },
+    {
+      "key": "ffhq_control_v69_dino_preservation_seed_scaling_predictive_validity_dino_preservation_n10_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq dino_preservation predictive-validity runs at n=10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq_seed_2127/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq_seed_2128/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq_seed_2129/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq_seed_2130/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq_seed_2131/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2137/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2138/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2139/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2140/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_dino_preservation_seed_scaling/ffhq_seed_2141/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/ffhq",
+        "seed": 4718
+      }
+    }
+  ]
+}

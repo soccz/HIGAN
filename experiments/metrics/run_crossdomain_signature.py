@@ -16,6 +16,20 @@ from pathlib import Path
 import numpy as np
 
 PAPER = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PAPER / "experiments"))
+
+from lib.reproducibility import run_metadata  # noqa: E402
+
+
+def load_json(path: Path):
+    return json.loads(path.read_text())
+
+
+def latest_pixel_rhos(path: Path) -> dict[str, float]:
+    metrics = load_json(path)
+    table = metrics["bootstrap_ci"]
+    latest_n = max(int(k) for k in table)
+    return {attr: float(row["mean"]) for attr, row in table[str(latest_n)].items()}
 
 
 def main():
@@ -23,22 +37,20 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
 
     # bedroom: load existing higher-order + CLIP path
-    bed_h = json.loads((PAPER / "experiments" / "out" / "bedroom_c2_path"
-                        / "metrics.json").read_text())["per_attr"]
-    # bedroom pixel ratios are hardcoded in scripts; use them
-    BEDROOM_PIXEL = {
-        "indoor_lighting": 0.495, "wood": 0.624, "carpet": 0.95,
-        "cluttered_space": 0.85, "glossy": 0.92, "dirt": 0.93,
-        "scary": 1.10, "view": 23.22,
-    }
+    bed_h = load_json(PAPER / "experiments" / "out" / "bedroom_c2_path"
+                      / "metrics.json")["per_attr"]
+    bedroom_pixel = latest_pixel_rhos(
+        PAPER / "experiments" / "out" / "sample_scaling_bedroom_n256"
+        / "metrics.json"
+    )
 
     # FFHQ
-    ffhq_path = json.loads((PAPER / "experiments" / "out" / "ffhq_c2_path"
-                            / "metrics.json").read_text())["per_attr"]
-    FFHQ_PIXEL = {
-        "smile": 1.75, "age": 7.62, "gender": 8.71,
-        "eyeglasses": 22.82, "pose": 49.87,
-    }
+    ffhq_path = load_json(PAPER / "experiments" / "out" / "ffhq_c2_path"
+                          / "metrics.json")["per_attr"]
+    ffhq_pixel = latest_pixel_rhos(
+        PAPER / "experiments" / "out" / "sample_scaling_ffhq_n512"
+        / "metrics.json"
+    )
 
     # collect points
     points = []
@@ -46,7 +58,7 @@ def main():
     names = []
     for e in bed_h:
         attr = e["attr"]
-        pixel = BEDROOM_PIXEL[attr]
+        pixel = bedroom_pixel[attr]
         clip = e["mean_ratio"]
         struct = attr == "view"
         points.append([pixel, clip])
@@ -54,7 +66,7 @@ def main():
         names.append(f"bed-{attr}")
     for e in ffhq_path:
         attr = e["attr"]
-        pixel = FFHQ_PIXEL[attr]
+        pixel = ffhq_pixel[attr]
         clip = e["mean_ratio"]
         struct = attr in {"pose", "eyeglasses"}
         points.append([pixel, clip])
@@ -115,6 +127,15 @@ def main():
         "names": names,
         "cluster_labels": cluster_labels.tolist(),
         "agreement_rate": float(agreement) if struct_idxs else None,
+        "inputs": {
+            "bedroom_pixel": "experiments/out/sample_scaling_bedroom_n256/metrics.json",
+            "bedroom_clip": "experiments/out/bedroom_c2_path/metrics.json",
+            "ffhq_pixel": "experiments/out/sample_scaling_ffhq_n512/metrics.json",
+            "ffhq_clip": "experiments/out/ffhq_c2_path/metrics.json",
+        },
+        "_meta": run_metadata(extra={
+            "script": "experiments/metrics/run_crossdomain_signature.py",
+        }),
     }
     (out / "metrics.json").write_text(json.dumps(payload, indent=2))
 

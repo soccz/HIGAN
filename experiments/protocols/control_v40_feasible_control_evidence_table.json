@@ -1,0 +1,25 @@
+{
+  "version": "control_v40_feasible_control_evidence_table",
+  "locked_on": "2026-05-27",
+  "purpose": "Build reviewer-facing evidence rows for the narrowed feasible minimum-risk controller claim.",
+  "experiments": [
+    {
+      "key": "feasible_control_evidence_table_v1",
+      "order": 1,
+      "script": "experiments/control/run_feasible_control_evidence_table.py",
+      "claim_tested": "Report bootstrap CIs and exact sign tests for predictive validity, feasible controller baselines, negative controls, and low-risk boundary rows.",
+      "args": {
+        "church-predictive": "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "bedroom-predictive": "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "church-actual": "experiments/out/control_feasible_risk_controller/church/actual_summary/metrics.json",
+        "church-negative": "experiments/out/control_feasible_risk_controller/church/negative_summary/metrics.json",
+        "bedroom-actual": "experiments/out/control_feasible_risk_controller/bedroom/actual_summary/metrics.json",
+        "bedroom-negative": "experiments/out/control_feasible_risk_controller/bedroom/negative_summary/metrics.json",
+        "readiness": "experiments/out/control_feasible_readiness_v1/metrics.json",
+        "out": "experiments/out/control_feasible_evidence_table_v1",
+        "seed": 4131,
+        "n-boot": 10000
+      }
+    }
+  ]
+}

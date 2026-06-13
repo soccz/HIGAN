@@ -1,0 +1,23 @@
+{
+  "version": "control_v39_feasible_control_readiness",
+  "locked_on": "2026-05-27",
+  "purpose": "Apply predeclared main-claim rules to predictive validity plus semantic-feasible minimum-risk controller outputs.",
+  "experiments": [
+    {
+      "key": "feasible_control_readiness_v1",
+      "order": 1,
+      "script": "experiments/control/run_feasible_control_readiness.py",
+      "claim_tested": "Decide whether the narrowed feasible-control claim is supported without requiring domination of a risk-only lower-bound baseline.",
+      "args": {
+        "church-predictive": "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "bedroom-predictive": "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "church-actual": "experiments/out/control_feasible_risk_controller/church/actual_summary/metrics.json",
+        "church-negative": "experiments/out/control_feasible_risk_controller/church/negative_summary/metrics.json",
+        "bedroom-actual": "experiments/out/control_feasible_risk_controller/bedroom/actual_summary/metrics.json",
+        "bedroom-negative": "experiments/out/control_feasible_risk_controller/bedroom/negative_summary/metrics.json",
+        "out": "experiments/out/control_feasible_readiness_v1",
+        "seed": 4121
+      }
+    }
+  ]
+}

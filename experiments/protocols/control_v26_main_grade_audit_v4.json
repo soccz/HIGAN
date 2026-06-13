@@ -1,0 +1,35 @@
+{
+  "version": "control_v26_main_grade_audit_v4",
+  "locked_on": "2026-05-26",
+  "purpose": "Final non-GPU reproducibility audit after the church structured-only risk-signal negative-control protocol.",
+  "experiments": [
+    {
+      "key": "main_grade_audit_v4",
+      "order": 1,
+      "script": "experiments/control/audit_control_campaign.py",
+      "claim_tested": "All locked control protocols through the church structured-only negative controls have complete outputs and traceable protocol metadata.",
+      "args": {
+        "protocols": [
+          "experiments/protocols/control_v3_risk_robustness.json",
+          "experiments/protocols/control_v4_risk_signal_negatives.json",
+          "experiments/protocols/control_v5_risk_power_sensitivity.json",
+          "experiments/protocols/control_v6_true_lpips_validation.json",
+          "experiments/protocols/control_v7_expanded_candidate_universe.json",
+          "experiments/protocols/control_v9_fixed_target_negatives.json",
+          "experiments/protocols/control_v11_extended_validation.json",
+          "experiments/protocols/control_v12_threshold_magnitude_sensitivity.json",
+          "experiments/protocols/control_v14_true_lpips_fixed_target_negatives.json",
+          "experiments/protocols/control_v15_expanded_universe_true_lpips.json",
+          "experiments/protocols/control_v16_estimator_stability.json",
+          "experiments/protocols/control_v18_bedroom_cross_domain_controller.json",
+          "experiments/protocols/control_v20_church_cross_domain_controller.json",
+          "experiments/protocols/control_v22_church_risk_power_sensitivity.json",
+          "experiments/protocols/control_v23_church_failure_diagnosis.json",
+          "experiments/protocols/control_v25_church_structured_negative_controls.json"
+        ],
+        "out": "experiments/out/control_campaign_audit_main_grade_v4",
+        "seed": 3707
+      }
+    }
+  ]
+}
