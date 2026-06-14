@@ -41,3 +41,14 @@ not a downstream task win.
 
 All experiments run on a single 8 GB GPU. `main.tex` is the earlier short-note
 version, superseded by `tmlr_main.tex`.
+
+## Evidence ledgers (every table number traces here)
+`submission/evidence/` carries the exact `metrics.json` behind each table, so a
+single clone reproduces every headline number:
+- `sd_sign_inversion_table1.json` — Table 1 (SD Spearman per seed; exact −0.734, FD −0.178)
+- `stylegan_fd_vs_exact_table2.json` — Table 2 (StyleGAN sweep; 45.2% floor, 2.4% 1st-order)
+- `stylegan_fp64_precision_control.json` — fp32 vs fp64 floor (47.1% / 47.1%, precision-independent)
+- `toy_table_groundtruth.json` — toy table (JVP 2.5e-17 vs best FD 8.6e-9)
+
+Generators: `../higan_dev/scripts/30_fp64_precision_control.py` (precision control),
+`29_shao_fd_vs_exact.py` (StyleGAN), `../paper/experiments/diffusion/run_park_fd_vs_exact.py` (SD).
