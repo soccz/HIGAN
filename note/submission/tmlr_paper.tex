@@ -381,4 +381,214 @@ withheld for anonymous review and will be added for the camera-ready version.
 \bibliography{refs}
 \bibliographystyle{tmlr}
 
+\newpage
+\appendix
+
+\section{Stable-Diffusion experimental setup}
+\label{app:sd}
+The sign-inversion experiment of Section~\ref{sec:flip} uses Stable Diffusion
+v1.5 at $256{\times}256$ with a $20$-step DDIM schedule. The h-space is the
+bottleneck activation of the U-Net mid-block, of shape $(1,1280,4,4)$. For a base
+latent we run the deterministic DDIM chain to the edit step $t_{\mathrm{edit}}=12$,
+then study the map $\alpha\mapsto x_T(\alpha)$ obtained by injecting a perturbation
+$\alpha\,v$ into h-space at step $t_{\mathrm{edit}}$ and completing the chain. The
+prompt is fixed (``a photograph of a face''), classifier-free guidance is on, and
+all randomness is seeded.
+
+We draw $K=16$ unit-norm h-space probes, build the first-order Jacobian column by
+column as $J e_k$, take its SVD, and keep the top $k=12$ right-singular vectors as
+edit directions $u_i$ with singular values $\sigma_i$. Along each $u_i$ we form the
+curvature ratio $\rho_i=|\partial^2_\alpha x_T|/|\partial_\alpha x_T|$ at
+$\alpha=0$. We report Spearman$(\sigma,\rho)$ over the $12$ directions, for each of
+$6$ seeds ($0$ through $5$). The finite-difference estimate of the inner second
+derivative uses a central difference of the \jvp{} at $\eps\in\{0.1,0.05,0.01,
+0.001\}$; the main text reports $\eps=0.05$ and Appendix~\ref{app:sdfull} gives all
+four. Every run fits in $4.6$\,GB of GPU memory.
+
+\section{The composed-\jvp{} instrument}
+\label{app:code}
+Forward-mode AD returns $\partial f(x)[v]$ alongside $f(x)$ in one pass. Nesting it
+gives the exact second-order pushforward with no step size:
+\begin{verbatim}
+def pushforward2(G, x, u):       # exact d^2/d alpha^2 G(x + alpha u) at alpha=0
+    f  = lambda a: G(x + a * u)              # curve through x in direction u
+    df = lambda a: jvp(f, (a,), (1.0,))[1]   # first-order pushforward, exact
+    _, d2 = jvp(df, (0.0,), (1.0,))          # directional derivative of df, exact
+    return d2                                # second-order pushforward
+\end{verbatim}
+Here \texttt{jvp} is \texttt{torch.func.jvp}. The inner call computes
+$\partial_\alpha G$; the outer call differentiates it again along the same tangent.
+No Jacobian or Hessian is materialized, so peak memory is that of a single forward
+evaluation of $G$, independent of the output dimension $3HW$. The $k$-th order
+pushforward follows from $k$ nested calls. For the diffusion experiments $G$ is the
+DDIM chain from $t_{\mathrm{edit}}$ onward; the same wrapper runs unmodified on the
+StyleGAN synthesis network.
+
+\section{Finite-difference error: derivation}
+\label{app:deriv}
+\paragraph{Second derivative.} Taylor expansion about $\alpha$ gives
+$f(\alpha\pm\eps)=f\pm\eps f'+\tfrac{\eps^2}{2}f''\pm\tfrac{\eps^3}{6}f'''
++\tfrac{\eps^4}{24}f^{(4)}\pm\cdots$, so the odd terms cancel in the sum and
+\[
+\frac{f(\alpha+\eps)-2f(\alpha)+f(\alpha-\eps)}{\eps^2}
+= f''(\alpha)+\frac{\eps^2}{12}f^{(4)}(\alpha)+O(\eps^4).
+\]
+Each evaluated value carries a rounding error of size $\eps_{\mathrm{mach}}|f|$, and
+the three-term numerator accumulates $O(\eps_{\mathrm{mach}}|f|)$, divided by
+$\eps^2$. The total error is therefore
+$g(\eps)=c_1\eps^2+c_2\eps_{\mathrm{mach}}/\eps^2$ with $c_1=|f^{(4)}|/12$ and
+$c_2=O(|f|)$. Setting $g'(\eps)=2c_1\eps-2c_2\eps_{\mathrm{mach}}/\eps^3=0$ gives
+$\eps^\star=(c_2/c_1)^{1/4}\eps_{\mathrm{mach}}^{1/4}$ and
+$g(\eps^\star)=2\sqrt{c_1c_2}\,\eps_{\mathrm{mach}}^{1/2}$. Dividing by $|f''|$
+gives the relative floor $2\sqrt{|f^{(4)}f|}/|f''|\cdot\eps_{\mathrm{mach}}^{1/2}$.
+
+\paragraph{First derivative.} The central first difference
+$\big(f(\alpha+\eps)-f(\alpha-\eps)\big)/2\eps=f'+\tfrac{\eps^2}{6}f'''+O(\eps^4)$
+has truncation $O(\eps^2)$ and roundoff $O(\eps_{\mathrm{mach}}|f|/\eps)$, so
+$g(\eps)=c_1\eps^2+c_2\eps_{\mathrm{mach}}/\eps$, minimized at
+$\eps^\star\sim\eps_{\mathrm{mach}}^{1/3}$ with floor
+$\eps_{\mathrm{mach}}^{2/3}$. The first-derivative floor
+($\eps_{\mathrm{mach}}^{2/3}\approx2\times10^{-5}$ in fp32) is far below the
+second-derivative floor ($\eps_{\mathrm{mach}}^{1/2}\approx3\times10^{-4}$ benign,
+and orders of magnitude worse once the constant $|f^{(4)}f|/f''^2$ is large), which
+is the asymmetry the paper rests on.
+
+\section{StyleGAN sweep: full table}
+\label{app:stylegan}
+Table~\ref{tab:stylegan} reports a subset of steps. Table~\ref{tab:stylegan-full}
+gives the complete fp32 sweep over $6$ directions ($3$ attributes
+\texttt{indoor\_lighting}/\texttt{wood}/\texttt{view} and $3$ random) $\times16$
+samples. The exact curvature is $1.17$.
+
+\begin{table}[h]\centering\small
+\begin{tabular}{rccc}
+\toprule
+step $\delta$ & $|D^2_\delta G|$ & 2nd-order rel.\ err. & 1st-order rel.\ err. \\
+\midrule
+$8$ & $7.07\times10^{-3}$ & $74.5\%$ & $63.81\%$ \\
+$5$ & $1.38\times10^{-2}$ & $57.3\%$ & $54.01\%$ \\
+$3$ & $2.65\times10^{-2}$ & $45.2\%$ & $44.07\%$ \\
+$2$ & $4.32\times10^{-2}$ & $56.1\%$ & $37.12\%$ \\
+$1.5$ & $6.09\times10^{-2}$ & $73.6\%$ & $32.39\%$ \\
+$1$ & $9.92\times10^{-2}$ & $106.4\%$ & $26.22\%$ \\
+$0.7$ & $1.50\times10^{-1}$ & $142.0\%$ & $21.34\%$ \\
+$0.5$ & $2.17\times10^{-1}$ & $184.2\%$ & $17.36\%$ \\
+$0.3$ & $3.68\times10^{-1}$ & $266.9\%$ & $12.50\%$ \\
+$0.2$ & $5.56\times10^{-1}$ & $355.2\%$ & $9.37\%$ \\
+$0.1$ & $1.06$ & $622.8\%$ & $5.47\%$ \\
+$0.05$ & $1.86$ & $1429.3\%$ & $3.05\%$ \\
+$0.02$ & $4.05$ & $6772.5\%$ & $2.44\%$ \\
+$0.01$ & $8.74$ & $25023.0\%$ & $5.71\%$ \\
+$0.005$ & $2.36\times10^{1}$ & $93346.3\%$ & $15.04\%$ \\
+$0.001$ & $4.09\times10^{2}$ & $1985856.3\%$ & $139.11\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Full fp32 StyleGAN sweep. The second-order relative error is U-shaped with
+a floor of $45.2\%$ at $\delta=3$; the first-order error has a clean minimum of
+$2.44\%$ at $\delta=0.02$, confirming the pipeline.}
+\label{tab:stylegan-full}
+\end{table}
+
+\section{Precision control: full fp32 vs fp64 sweep}
+\label{app:fp64}
+Table~\ref{tab:fp64-full} gives the per-step second-order relative error in fp32
+and fp64 over $3$ directions $\times8$ samples. At large steps the two precisions
+agree (truncation). At small steps fp32 diverges through catastrophic cancellation
+while fp64 does not, yet fp64 does not converge either: it plateaus near $3000\%$,
+because the chord-scale second difference of a non-smooth (LeakyReLU) generator does
+not approach the pointwise pushforward. The best-step floor is $47.1\%$ in both.
+
+\begin{table}[h]\centering\small
+\begin{tabular}{rcc}
+\toprule
+step $\delta$ & fp32 2nd-order rel.\ err. & fp64 2nd-order rel.\ err. \\
+\midrule
+$3$ & $47.1\%$ & $47.1\%$ \\
+$1$ & $96.8\%$ & $96.8\%$ \\
+$0.3$ & $216.8\%$ & $216.4\%$ \\
+$0.1$ & $431.1\%$ & $410.2\%$ \\
+$0.03$ & $1467.2\%$ & $748.0\%$ \\
+$0.01$ & $10557.7\%$ & $1203.0\%$ \\
+$0.003$ & $1.09\times10^{5}\%$ & $1815.0\%$ \\
+$0.001$ & $8.35\times10^{5}\%$ & $2373.4\%$ \\
+$10^{-4}$ & $6.59\times10^{7}\%$ & $3183.4\%$ \\
+$10^{-5}$ & $5.58\times10^{9}\%$ & $3470.7\%$ \\
+$10^{-6}$ & $4.67\times10^{11}\%$ & $1502.6\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Full precision control. fp64 removes cancellation (small-step columns drop
+by orders of magnitude) but the floor is unchanged: no precision recovers the
+second-order pushforward on a real generator.}
+\label{tab:fp64-full}
+\end{table}
+
+\section{Stable Diffusion: per-seed, per-step}
+\label{app:sdfull}
+Table~\ref{tab:sd-full} gives Spearman$(\sigma,\rho)$ for every seed and every
+finite-difference step, with the exact column for reference. The exact estimate is
+negative on five of six seeds. The finite-difference estimate has no step that
+reproduces it: at each step the across-seed mean is near zero ($-0.08$ to $-0.34$)
+and the sign varies seed to seed.
+
+\begin{table}[h]\centering\small
+\begin{tabular}{rccccc}
+\toprule
+seed & exact & \fd@$0.1$ & \fd@$0.05$ & \fd@$0.01$ & \fd@$0.001$ \\
+\midrule
+$0$ & $-0.853$ & $+0.287$ & $+0.182$ & $-0.259$ & $+0.692$ \\
+$1$ & $-0.825$ & $-0.378$ & $-0.552$ & $-0.287$ & $+0.049$ \\
+$2$ & $-0.916$ & $-0.853$ & $-0.783$ & $-0.902$ & $-0.916$ \\
+$3$ & $-0.944$ & $-0.168$ & $-0.399$ & $-0.028$ & $-0.538$ \\
+$4$ & $-0.028$ & $+0.238$ & $+0.552$ & $+0.000$ & $+0.280$ \\
+$5$ & $-0.839$ & $+0.021$ & $-0.070$ & $-0.580$ & $-0.021$ \\
+\midrule
+mean & $-0.734$ & $-0.142$ & $-0.178$ & $-0.343$ & $-0.076$ \\
+\bottomrule
+\end{tabular}
+\caption{Per-seed Spearman$(\sigma,\rho)$ on Stable Diffusion. No finite-difference
+step recovers the exact column's consistent negative sign.}
+\label{tab:sd-full}
+\end{table}
+
+\section{Literature audit: classification criteria}
+\label{app:audit}
+For each paper in Table~\ref{tab:survey} we asked three questions from the primary
+source. (i) Does it compute a second-order quantity at all (curvature, a geodesic,
+the metric derivative / Christoffel symbols)? (ii) If so, is that quantity obtained
+by an explicit $/\eps^2$ finite difference, by automatic differentiation, by an
+analytic expression, or as the exact gradient of a discretized energy? (iii) Does a
+reported conclusion depend on it? A paper is ``exposed'' only when a second-order
+quantity is formed by an explicit second-order finite difference. By this test:
+\citet{shao2018} discretizes the geodesic energy and its gradient is the discrete
+Laplacian $g_{i+1}-2g_i+g_{i-1}$, the exact gradient of $\sum\|g_{i+1}-g_i\|^2$,
+with no division by $\eps^2$, so it is not exposed; \citet{saito2025} uses
+first-order score differences; \citet{arvanitidis2018} forms the metric derivative
+analytically and integrates the geodesic ODE numerically; \citet{yang2018}
+differentiates the energy with autodiff; \citet{park2023}, \citet{chen2018}, and
+\citet{kwon2023} never take a second derivative. The single exposed published
+practice is the first-order finite difference of a network derivative, which the
+asymmetry of Section~\ref{sec:fd} places on the safe side.
+
+\section{Reproduction}
+\label{app:repro}
+All experiments run on a single $8$\,GB GPU with PyTorch~$2.2.2$ and
+\texttt{numpy<2}. The analytic referee (Table~\ref{tab:toy}) is a CPU script and
+is deterministic. The StyleGAN sweeps use the public StyleGAN-bedroom-$256$
+weights; the diffusion experiments use Stable Diffusion v1.5. Representative
+commands:
+\begin{verbatim}
+# StyleGAN FD-vs-exact curvature sweep (Table 3, Appendix D)
+python scripts/29_shao_fd_vs_exact.py --attrs indoor_lighting wood view \
+    --n-random-dirs 3 --num-samples 16
+
+# fp32 vs fp64 precision control (Appendix E)
+python scripts/30_fp64_precision_control.py --num-samples 8
+
+# Stable-Diffusion sign inversion (Table 1, Appendix F)
+python experiments/diffusion/run_park_fd_vs_exact.py --n-seeds 6 \
+    --K-probes 16 --top-k 12 --steps 20 --t-edit 12 --resolution 256
+\end{verbatim}
+Each table's \texttt{metrics.json} is released alongside the code. The repository
+link is withheld for anonymous review.
+
 \end{document}
