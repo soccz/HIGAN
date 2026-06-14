@@ -34,165 +34,152 @@ Generative Geometry: A Non-Recoverability Result and an Exact Instrument}
 \maketitle
 
 \begin{abstract}
-Studies of the differential geometry of generative models increasingly measure
-\emph{second-order} quantities---curvature of the generated manifold and the
-terms that enter geodesics. We report a concrete, reproducible hazard in how
-these are computed. On Stable Diffusion, a representative second-order geometric
-measurement---the rank correlation between the first-order singular value
-$\sigma$ of the latent-to-image Jacobian and a second-order curvature ratio
-$\rho$ along the leading directions---comes out \emph{with opposite sign}
-depending only on the numerical method: the exact forward-mode estimate gives a
-consistent strong negative correlation (Spearman $-0.73$, $5/6$ seeds
-$\leq\!-0.82$), whereas a finite-difference (\fd) estimate of the same quantity
-is sign-unstable and averages $-0.18$. The first-order Jacobian, by contrast, is
-recovered by finite differences to $2.4\%$. We explain this asymmetry: central
-\fd{} for a \emph{second} derivative is \emph{non-recoverable}---truncation and
-floating-point cancellation trade off so that no step size beats a
-$\sqrt{\eps_{\mathrm{mach}}}$ relative-error floor, which in the single precision
-generators use is large---while \fd{} for a first derivative is well conditioned.
-On a StyleGAN generator the naive \fd{} curvature estimate misses the exact
-value by $\geq\!45\%$ at every fixed step, in \emph{both} single and double
-precision (validated against the exact instrument by the first-order \fd, which
-agrees to $2.4\%$); precision does not rescue it. We provide the exact
-constant-memory instrument---composed forward-mode automatic differentiation,
-generator-agnostic and extending to any order---and survey how the literature
-computes second-order geometry, finding that the catastrophic explicit-$/\eps^2$
-regime is the natural first thing to reach for but is, fortunately, avoided by
-most published methods. Our contribution is the precise account of when finite
-differences fail for second-order generative geometry, the practitioner-facing
-first/second-order asymmetry, and a drop-in exact replacement.
+Measuring the curvature of a generative model's image manifold by finite
+differences can return the wrong sign. On Stable Diffusion, the rank correlation
+between a Jacobian singular value and a second-order curvature ratio is $-0.73$
+under exact forward-mode automatic differentiation and a sign-unstable $-0.18$
+under a finite-difference estimate of the identical quantity. The same finite
+differences recover the first-order Jacobian accurately. The cause is an
+asymmetry. A central finite difference is well conditioned for a first derivative
+but \emph{non-recoverable} for a second: truncation error and floating-point
+cancellation cannot be made small at the same step, leaving a relative-error floor
+of order $\sqrt{\eps_{\mathrm{mach}}}$ that single precision makes large. On a
+StyleGAN generator the naive second-difference curvature misses the exact value by
+at least $45\%$ at every fixed step, in fp32 and fp64 alike, while the first-order
+difference of the same code agrees with exact AD to $2.4\%$. We give the exact
+alternative, composed forward-mode AD, which returns the $k$-th-order pushforward
+in $k$ forward passes at the memory of one. A survey of how the latent-geometry
+literature computes second-order quantities finds the dangerous $/\eps^2$ estimate
+to be the obvious choice, yet one that most published methods sidestep by
+construction. We do not claim any published result is wrong. We characterize when
+finite differences fail for second-order generative geometry, give the
+first/second-order asymmetry as practitioner guidance, and supply a drop-in exact
+replacement.
 \end{abstract}
 
 \section{Introduction}
-Let $G:\R^{d}\to\R^{3HW}$ be a trained generator. Treating $\{G(z)\}$ as a
-manifold pulled back through $G$, a productive line of work studies its geometry:
-the pullback metric $M_z=J_z^\top J_z$ and its singular vectors (the local latent
-basis), geodesics between latent codes, and the curvature of the generated
-manifold \citep{arvanitidis2018,shao2018,chen2018,park2023,saito2025}. First-order
-objects ($J_z$, $M_z$) are routine to compute. The \emph{second-order} objects
----curvature, the second-order pushforward $\partial^2 G/\partial\alpha^2$ along a
-path, the metric derivative $\partial_z M_z$ that appears in the geodesic
-ODE---are where numerical practice matters and, we show, can silently flip a
-result.
+Let $G:\R^{d}\to\R^{3HW}$ be a trained generator. Treating the image set
+$\{G(z)\}$ as a manifold pulled back through $G$, a line of work studies its
+geometry: the pullback metric $M_z=J_z^\top J_z$ and its singular vectors (the
+local latent basis), geodesics between latent codes, and the curvature of the
+generated manifold \citep{arvanitidis2018,shao2018,chen2018,park2023,saito2025}.
+The first-order objects $J_z$ and $M_z$ are routine to compute. The second-order
+objects are not: the curvature, the second-order pushforward
+$\partial^2 G/\partial\alpha^2$ along a path, and the metric derivative
+$\partial_z M_z$ that appears in the geodesic ODE. These are where the numerical
+method can silently flip a result.
 
-Our entry point is an observation, not a theorem (Section~\ref{sec:flip}). A
-standard second-order measurement on Stable Diffusion returns the
-\emph{opposite sign} depending only on whether the second derivative is taken by
-finite differences or by exact forward-mode AD. The exact method finds a clean,
-seed-consistent relationship; the finite-difference method, applied to the very
-same quantity, is sign-unstable and washes it out. A practitioner choosing the
-natural finite-difference route would draw the wrong qualitative conclusion.
+We start with a measurement (Section~\ref{sec:flip}). A standard second-order
+quantity on Stable Diffusion returns the opposite sign depending only on whether
+the second derivative is taken by finite differences or by exact forward-mode AD.
+The exact method finds a clean, seed-consistent relationship. Finite differences,
+applied to the same quantity, are sign-unstable and wash it out. A practitioner
+who reached for the natural finite-difference estimate would draw the wrong
+qualitative conclusion.
 
-The explanation is an asymmetry that is elementary once stated but, in our
-experience, not widely appreciated in this applied setting
-(Section~\ref{sec:fd}): a central finite difference is well conditioned for a
-\emph{first} derivative but \emph{non-recoverable} for a \emph{second}
-derivative, because for the second derivative truncation error and floating-point
-cancellation cannot be made small at the same step size, leaving a relative-error
-floor of order $\sqrt{\eps_{\mathrm{mach}}}$. In the single precision that GANs
-and diffusion U-Nets run in, that floor is large; and on a strongly nonlinear,
-non-smooth generator it is large at \emph{every} step and in \emph{both}
-precisions (Section~\ref{sec:stylegan}: $\geq\!45\%$ on StyleGAN, fp32 and fp64
-alike).
+The explanation is an asymmetry (Section~\ref{sec:fd}). A central finite
+difference is well conditioned for a first derivative but non-recoverable for a
+second, because for the second derivative truncation and floating-point
+cancellation trade off and cannot be small together. The resulting relative-error
+floor is of order $\sqrt{\eps_{\mathrm{mach}}}$. In the single precision that GANs
+and diffusion U-Nets run in, that floor is large, and on a strongly nonlinear
+generator it is larger still: at least $45\%$ on StyleGAN, in both single and
+double precision (Section~\ref{sec:stylegan}).
 
-We make three contributions: (i) the reproducible sign-inversion phenomenon and
-the first/second-order asymmetry that governs it, as concrete guidance; (ii) an
-exact, constant-memory instrument for the higher-order pushforward via composed
-forward-mode AD, which removes the hazard at the cost of one extra forward pass
-per order; and (iii) a survey of how the field computes second-order geometry,
-locating where the trap is and is not. We are explicit about scope
-(Section~\ref{sec:scope}): we do not claim any published result is wrong---indeed
-we find most published methods route around the catastrophic regime---we
-characterize a real numerical hazard and supply the fix.
+We contribute the reproducible sign-inversion phenomenon and the
+first/second-order asymmetry that governs it; an exact, constant-memory instrument
+for the higher-order pushforward, built by composing forward-mode AD; and a survey
+that locates which parts of the literature are exposed and which are safe. The
+contribution is a precise account of a real numerical hazard and the fix, not a
+claim that any published method is wrong; the survey finds that most route around
+the regime by construction (Section~\ref{sec:scope}).
 
 \section{The sign-inversion phenomenon}
 \label{sec:flip}
 On a Stable-Diffusion h-space pipeline we take a base latent, form the first-order
-Jacobian $J$ of the (truncated) denoising map along $K$ random h-space probes,
-and along its top-$k$ right-singular directions $u_i$ measure a second-order
-curvature ratio
+Jacobian $J$ of the (truncated) denoising map along $K$ random h-space probes, and
+along its top-$k$ right-singular directions $u_i$ measure a second-order curvature
+ratio
 \[
 \rho_i \;=\; \frac{|\,\partial^2_\alpha G(z+\alpha u_i)\,|}{|\,\partial_\alpha
 G(z+\alpha u_i)\,|}\Bigg|_{\alpha=0},
 \]
 the magnitude of the second-order pushforward relative to the first. We then ask a
-standard question---does curvature co-vary with the first-order singular value
-$\sigma_i$?---via Spearman$(\sigma,\rho)$, computing the second derivative in
-$\rho$ two ways: exact composed \jvp{} (Section~\ref{sec:method}) and a finite
-difference of the \jvp{} (the natural way a practitioner would estimate it).
+standard question: does curvature co-vary with the first-order singular value
+$\sigma_i$? We compute Spearman$(\sigma,\rho)$ with the second derivative in
+$\rho$ taken two ways. The first is exact: a composed \jvp{} (nesting two
+forward-mode passes, defined in Section~\ref{sec:method}). The second is the
+finite difference of the \jvp{} that a practitioner would naturally write.
 
-Over $6$ seeds (top-$12$ directions each), the two methods disagree in
-\emph{sign} (Table~\ref{tab:flip}). The exact instrument yields a strong negative
-correlation on five of six seeds (mean $-0.73$; the five clustered in
-$[-0.94,-0.82]$, with seed~4 a near-zero outlier at $-0.03$). The
-finite-difference estimate of the \emph{same} ratio is sign-unstable across seeds
-and averages $-0.18$: it does not merely add noise, it destroys the relationship.
-The exact estimate is more negative than the \fd{} estimate on \emph{all six}
-seeds (Wilcoxon signed-rank $p=0.031$, the floor attainable at $n{=}6$), and the
-\fd{} estimate is sign-unstable at \emph{every} step in the grid
-$\{0.1,0.05,0.01,0.001\}$ (means between $-0.08$ and $-0.34$): no step reproduces
-the clean $-0.73$, so the disagreement is not an artifact of the chosen step. A study
-relying on the finite-difference route would report ``no clear relationship,'' the
-opposite of what the exact second-order estimate finds.
+Over $6$ seeds, with the top $12$ directions each, the two methods disagree in
+sign (Table~\ref{tab:flip}). The exact instrument gives a strong negative
+correlation on five of six seeds, clustered in $[-0.94,-0.82]$, with seed~4 a
+near-zero outlier at $-0.03$; the mean is $-0.73$. Run through finite differences,
+the same ratio is sign-unstable across seeds and averages $-0.18$. This is not
+added noise but a destroyed relationship. The exact estimate is more negative than
+the finite-difference estimate on all six seeds (Wilcoxon signed-rank $p=0.031$,
+the smallest value attainable at $n{=}6$), and the finite-difference estimate is
+sign-unstable at every step in the grid $\{0.1,0.05,0.01,0.001\}$, with means
+between $-0.08$ and $-0.34$. No step reproduces the clean $-0.73$. A study built on
+the finite-difference route would report ``no clear relationship,'' the opposite
+of what the exact second-order estimate finds.
 
 \begin{table}[h]\centering
 \begin{tabular}{lccccccc}
 \toprule
-seed & 0 & 1 & 2 & 3 & 4 & 5 & \textbf{mean} \\
+seed & 0 & 1 & 2 & 3 & 4 & 5 & mean \\
 \midrule
-exact composed \jvp & $-0.85$ & $-0.83$ & $-0.92$ & $-0.94$ & $-0.03$ & $-0.84$ & $\mathbf{-0.73}$ \\
-\fd-of-\jvp ($\eps{=}0.05$) & $+0.18$ & $-0.55$ & $-0.78$ & $-0.40$ & $+0.55$ & $-0.07$ & $\mathbf{-0.18}$ \\
+exact composed \jvp & $-0.85$ & $-0.83$ & $-0.92$ & $-0.94$ & $-0.03$ & $-0.84$ & $-0.73$ \\
+\fd-of-\jvp ($\eps{=}0.05$) & $+0.18$ & $-0.55$ & $-0.78$ & $-0.40$ & $+0.55$ & $-0.07$ & $-0.18$ \\
 \bottomrule
 \end{tabular}
 \caption{Spearman$(\sigma,\rho)$ on Stable Diffusion, per seed. The exact
-second-order estimate is consistently strongly negative; the finite-difference
-estimate of the identical quantity changes sign across seeds and averages near
-zero. ($\rho$ is a measurement we define to expose the method dependence; the
-point is that the two numerical routes disagree on its sign, not the specific
-value of any prior work.)}
+second-order estimate is consistently negative; the finite-difference estimate of
+the identical quantity changes sign across seeds and averages near zero. We define
+$\rho$ to expose the method dependence; the point is that the two numerical routes
+disagree on its sign, not the specific value of any prior work.}
 \label{tab:flip}
 \end{table}
 
-\section{Why: finite differences are non-recoverable for a second derivative}
+\section{Why finite differences are non-recoverable for a second derivative}
 \label{sec:fd}
-For smooth scalar $f$ the central second difference is
-$D^2_\eps f=\big(f(\alpha+\eps)-2f(\alpha)+f(\alpha-\eps)\big)/\eps^2$, with
+For a smooth scalar $f$ the central second difference is
+$D^2_\eps f=\big(f(\alpha+\eps)-2f(\alpha)+f(\alpha-\eps)\big)/\eps^2$, and
 \[
 D^2_\eps f - f''(\alpha)
 =\underbrace{\tfrac{\eps^2}{12}f^{(4)}(\alpha)+O(\eps^4)}_{\text{truncation}}
 +\underbrace{O\!\big(\eps_{\mathrm{mach}}\,|f|/\eps^2\big)}_{\text{cancellation}} .
 \]
-The two terms cannot be made small together: minimizing their sum gives an optimal
-step $\eps^\star\sim\eps_{\mathrm{mach}}^{1/4}$ and a relative-error floor (dividing
-the absolute error above by $|f''|$, assuming $f^{(4)}$ bounded, $f''\neq0$, and
-$|f|$ normalized to $O(1)$) of $2\sqrt{|f^{(4)}f|}/|f''|\cdot\eps_{\mathrm{mach}}^{1/2}$.
-The \emph{exponent} $\tfrac12$ is intrinsic to the operation; the constant carries
-the generator's nonlinearity $|f^{(4)}f|/f''^2$, which is large for a deep network.
-In double precision the floor is $\sim\!10^{-8}$ in the benign (constant~$\approx1$)
-case; in the single precision generators use
-($\eps_{\mathrm{mach}}\!\approx\!1.2\times10^{-7}$ for fp32) it is
-$\sim\!3\times10^{-4}$ benign and far worse for a strongly nonlinear $G$
-(Section~\ref{sec:stylegan}: $\geq\!45\%$). No choice of $\eps$ removes the floor. Because the floor is a property of the
-finite-difference \emph{operation} in fixed precision, not of any architecture, the
-hazard is general; we demonstrate its magnitude on two generator families
-(StyleGAN and a latent-diffusion U-Net).
+The two terms cannot be small together. Minimizing their sum gives an optimal step
+$\eps^\star\sim\eps_{\mathrm{mach}}^{1/4}$ and, under mild regularity ($f^{(4)}$
+bounded, $f''\neq0$, $|f|$ of order one), a relative-error floor
+$2\sqrt{|f^{(4)}f|}/|f''|\cdot\eps_{\mathrm{mach}}^{1/2}$. The exponent
+$\tfrac12$ is intrinsic to the operation; the constant carries the generator's
+nonlinearity $|f^{(4)}f|/f''^2$, which is large for a deep network. In double
+precision the floor is about $10^{-8}$ in the benign (constant near one) case. In
+the single precision generators use ($\eps_{\mathrm{mach}}\approx1.2\times10^{-7}$
+for fp32) it is about $3\times10^{-4}$ benign, and far worse for a strongly
+nonlinear $G$, where Section~\ref{sec:stylegan} measures $\geq45\%$. The floor is a
+property of the operation in fixed precision, not of any architecture, so the
+hazard is general; we demonstrate its magnitude on two generator families.
 
-\paragraph{The asymmetry.} The \emph{first} central difference
+The first derivative behaves differently. The central first difference
 $\big(f(\alpha+\eps)-f(\alpha-\eps)\big)/2\eps$ has truncation $O(\eps^2)$ and
-cancellation $O(\eps_{\mathrm{mach}}|f|/\eps)$, giving a much milder floor
-$\sim\eps_{\mathrm{mach}}^{2/3}$ and a wide usable window. This is why first-order
-Jacobians are safely finite-differenced while second-order curvature is not---and
-it is the control we use to validate our instrument (Sections~\ref{sec:flip},
-\ref{sec:stylegan}): wherever the first-order \fd{} agrees with exact \jvp, the
-pipeline is correct and any second-order disagreement is genuine.
+cancellation $O(\eps_{\mathrm{mach}}|f|/\eps)$, a much milder floor
+$\eps_{\mathrm{mach}}^{2/3}$ with a wide usable window. First-order Jacobians are
+therefore safe to finite-difference while second-order curvature is not. This is
+also the control we use throughout: wherever the first-order finite difference
+agrees with the exact \jvp, the pipeline is correct, and any second-order
+disagreement is real rather than a bug.
 
-\paragraph{Analytic referee.} Let
+To check the constants against ground truth, let
 $f(\alpha)=[\,e^{0.7\alpha},\sin 3\alpha,(\alpha+0.4)^3,\tanh 2\alpha,
-\alpha^2\cos\alpha\,]$, with closed-form derivatives. At $\alpha=0.3$ in double
-precision (Table~\ref{tab:toy}) the central-\fd{} second-order relative error is
-U-shaped, bottoming at $8.6\times10^{-9}$ near $\eps=10^{-4}$ and diverging to
-$0.29$ by $\eps=10^{-8}$; the composed \jvp{} attains $2.5\times10^{-17}$---\fd's
-best is $3.5\times10^{8}$ times worse.
+\alpha^2\cos\alpha\,]$, whose derivatives are known in closed form. At
+$\alpha=0.3$ in double precision (Table~\ref{tab:toy}) the central second-order
+relative error is U-shaped: it bottoms at $8.6\times10^{-9}$ near $\eps=10^{-4}$
+and diverges to $0.29$ by $\eps=10^{-8}$. The composed \jvp{} reaches
+$2.5\times10^{-17}$, so the best finite difference is $3.5\times10^{8}$ times
+worse.
 
 \begin{table}[h]\centering
 \begin{tabular}{rcl}
@@ -215,30 +202,31 @@ precision. Finite differences never approach the exact composed \jvp.}
 
 \section{Quantification on a real generator}
 \label{sec:stylegan}
-The toy fixes ideas; on a real generator the failure is both worse and broader
-than cancellation alone. On a StyleGAN-bedroom generator ($256{\times}256$) we
-form the naive \fd{} curvature estimate a practitioner would write,
-$D^2_\delta G=\big(G(z{+}\delta u)-2G(z)+G(z{-}\delta u)\big)/\delta^2$, and the
-exact composed \jvp{} $\partial^2_\alpha G(z{+}\alpha u)$, over $6$ directions
-($3$ attributes, $3$ random) $\times\,16$ samples, sweeping $\delta$
-(Table~\ref{tab:stylegan}). The exact curvature is a definite, step-free number
-(mean $1.17$). Holding a \emph{single} step across all samples---what a
-practitioner does---the \fd{} mean relative error never drops below $45.2\%$ (best
-step $\delta=3$, bracketed on both sides); it is $267\%$ at $\delta\!\sim\!0.3$ and
-explodes as $\delta\to0$. Even allowing an \emph{oracle} per-sample step the median
-best error is still $\sim\!9\%$ (vs.\ the composed \jvp's $0$). \textbf{Precision
-does not rescue it:} rerunning the entire sweep in fp64 leaves the floor unchanged
-($47.1\%$ in both fp32 and fp64; Table~\ref{tab:stylegan} note). The mechanism is
-not cancellation alone: at usable steps the error is truncation (precision-blind);
-at tiny steps fp32 adds catastrophic cancellation, but fp64---which removes
-cancellation---instead exposes the generator's \emph{non-smoothness} (LeakyReLU
-kinks), where the chord-scale second difference does not converge to the pointwise
-pushforward (fp64 error grows to $>\!3000\%$ as $\delta\to0$). So on a real
-generator \emph{no step and no precision} recovers the exact second-order
-pushforward, which the composed \jvp{} returns directly. The control: the
-\emph{first}-order central difference of the same pipeline agrees with the exact
-first-order \jvp{} to $2.4\%$, so the instrument and pipeline are correct and the
-second-order failure is genuine, not a bug.
+On a real generator the failure is worse than the toy predicts, and for an extra
+reason. We compare the naive second-difference curvature a practitioner would
+write, $D^2_\delta G=\big(G(z{+}\delta u)-2G(z)+G(z{-}\delta u)\big)/\delta^2$,
+against the exact composed \jvp{} $\partial^2_\alpha G(z{+}\alpha u)$ on a
+StyleGAN-bedroom generator at $256{\times}256$, over $6$ directions ($3$
+annotated attributes, $3$ random) and $16$ samples, sweeping $\delta$
+(Table~\ref{tab:stylegan}). The exact curvature is a definite, step-free number,
+mean $1.17$. Holding a single step across all samples, as a practitioner does, the
+finite-difference mean relative error never drops below $45.2\%$ (best step
+$\delta=3$, bracketed on both sides); it is $267\%$ at $\delta\!\approx\!0.3$ and
+explodes as $\delta\to0$. Allowing an oracle per-sample step the median best error
+is still about $9\%$, against the composed \jvp's zero.
+
+Precision does not rescue it. Rerunning the entire sweep in fp64 leaves the floor
+unchanged, $47.1\%$ in both fp32 and fp64. The mechanism is not cancellation
+alone. At usable steps the error is truncation and is precision-blind. At tiny
+steps fp32 adds catastrophic cancellation, but fp64, which removes that, instead
+exposes the generator's non-smoothness: across a LeakyReLU kink the chord-scale
+second difference does not converge to the pointwise pushforward, and the fp64
+error grows past $3000\%$ as $\delta\to0$. So no step and no precision recovers the
+exact second-order pushforward, which the composed \jvp{} returns directly.
+
+The control confirms the instrument is correct. The first-order central difference
+of the same pipeline agrees with the exact first-order \jvp{} to $2.4\%$, so the
+second-order failure is genuine.
 
 \begin{table}[h]\centering
 \begin{tabular}{rccc}
@@ -246,69 +234,76 @@ second-order failure is genuine, not a bug.
 step $\delta$ & $|D^2_\delta G|$ & 2nd-order rel.\ err. & 1st-order rel.\ err. \\
 \midrule
 $8$ & $7.1\times10^{-3}$ & $74.5\%$ & $63.8\%$ \\
-$3$ & $2.7\times10^{-2}$ & $\mathbf{45.2\%}$ (floor) & $44.1\%$ \\
+$3$ & $2.7\times10^{-2}$ & $45.2\%$ (floor) & $44.1\%$ \\
 $1$ & $9.9\times10^{-2}$ & $106.4\%$ & $26.2\%$ \\
 $0.3$ & $3.7\times10^{-1}$ & $266.9\%$ & $12.5\%$ \\
 $0.1$ & $1.06$ & $622.8\%$ & $5.5\%$ \\
-$0.02$ & $4.05$ & $6.8\times10^{3}\%$ & $\mathbf{2.4\%}$ (1st-order min) \\
+$0.02$ & $4.05$ & $6.8\times10^{3}\%$ & $2.4\%$ (1st-order min) \\
 $10^{-3}$ & $4.09\times10^{2}$ & $2.0\times10^{6}\%$ & $139\%$ \\
 \midrule
 composed \jvp & $1.17$ & exact (step-free) & --- \\
 \bottomrule
 \end{tabular}
 \caption{StyleGAN-bedroom, fp32. Columns are means over $6$ directions $\times16$
-samples at each fixed step; rel.\ err.\ is the mean per-direction relative error,
-while $|D^2_\delta G|$ is the aggregate magnitude (not its direct source). The
-naive \fd{} second difference never gets within $45\%$ of the exact curvature at
-any fixed step; the first-order \fd{} of the same code agrees to $2.4\%$,
-validating the instrument. Rerunning in fp64 leaves the best-step floor unchanged
-($47.1\%$ fp32 vs.\ $47.1\%$ fp64), so the floor is not a single-precision
-artifact---it is truncation at usable steps and generator non-smoothness at tiny
-steps.}
+samples at each fixed step. The relative-error column is the mean per-direction
+relative error; $|D^2_\delta G|$ is the aggregate magnitude, shown for scale and
+not the quantity the relative error is computed from. The naive second difference
+never gets within $45\%$ of the exact curvature at any fixed step, while the
+first-order difference of the same code agrees to $2.4\%$. Rerunning in fp64 leaves
+the best-step floor unchanged ($47.1\%$ fp32 vs.\ $47.1\%$ fp64): the floor is
+truncation at usable steps and generator non-smoothness at tiny steps, not a
+single-precision artifact.}
 \label{tab:stylegan}
 \end{table}
 
-\section{The exact instrument: composed forward-mode AD}
+\section{The exact instrument}
 \label{sec:method}
-Forward-mode AD evaluates, for a map $f$ and tangent $v$, the
-Jacobian--vector product $\partial f(x)[v]$ alongside $f(x)$ in one pass without
-forming the Jacobian. With $f=G$, $x=\gamma(\alpha)$, $v=u$ this gives the exact
+Forward-mode AD evaluates, for a map $f$ and tangent $v$, the Jacobian--vector
+product $\partial f(x)[v]$ alongside $f(x)$ in one pass, without forming the
+Jacobian. With $f=G$, $x=\gamma(\alpha)$, and $v=u$ this gives the exact
 first-order pushforward. The second-order term is the directional derivative of
 the first, so composing forward mode with itself,
-$\partial^2_\alpha G(\gamma(\alpha))=\partial_\alpha\big[\partial
-G(\gamma(\alpha))[u]\big][u]$, is exact and is evaluated by nesting two \jvp{}
-calls (\texttt{torch.func.jvp} of a function that returns a \jvp). No Jacobian is
-stored, so memory stays at one forward pass; the same nesting yields any order in
-a constant number of passes. The instrument is generator-agnostic (we ran it
-unmodified on StyleGAN1/2 and a latent-diffusion U-Net) and, unlike reverse-mode
-Hessian materialization (memory $O(3HW)$), its cost is independent of output
-dimension.
+\[
+\partial^2_\alpha G(\gamma(\alpha))=\partial_\alpha\big[\partial
+G(\gamma(\alpha))[u]\big][u],
+\]
+is exact and is evaluated by nesting two \jvp{} calls: in PyTorch,
+\texttt{torch.func.jvp} of a function that itself returns a \jvp. No Jacobian is
+stored, so memory stays at one forward pass, and the same nesting yields any order
+in a constant number of passes. Composing forward-mode passes for higher-order
+directional derivatives is standard algorithmic differentiation
+\citep{griewank2008}; the contribution here is to apply it as the exact
+ground truth against which the finite-difference practice fails. The instrument is
+generator-agnostic: we ran it unmodified on StyleGAN1 and 2 and on a
+latent-diffusion U-Net. Unlike reverse-mode Hessian materialization, whose memory
+is $O(3HW)$, its cost is independent of output dimension.
 
-\section{Survey: where the trap is, and is not}
+\section{Related work and survey}
 \label{sec:survey}
-Table~\ref{tab:survey} classifies representative latent-geometry papers by how
-they obtain second-order/geodesic quantities. The explicit $/\eps^2$ second-order
-finite difference---the catastrophic regime of Section~\ref{sec:fd}---is the
-natural first thing to reach for, but most published methods avoid it: they keep
-the metric first-order, replace the geodesic ODE with a discretized energy whose
-\emph{exact} gradient is a well-conditioned discrete Laplacian (not a $/\eps^2$
-curvature), use analytic Christoffel symbols, or differentiate the energy with
-autodiff \citep{yang2018}; first-order constructions
-\citep{park2023,chen2018,kwon2023} never touch a second derivative. The genuinely
-exposed practice is first-order \fd{} of a network derivative (e.g.\ a
-score-Jacobian--vector product), which is only mildly inaccurate, and---most
-relevant here---the direct $/\eps^2$ curvature estimate that a practitioner adds
-on top of an existing pipeline, as in our Section~\ref{sec:flip} measurement. The
-contribution of the survey is to draw this line precisely. The reason the field is
-mostly safe is structural---the canonical formulations are first-order metrics or
-energy minimizations \emph{by construction}, which never form an explicit
-second-order finite difference. But that safety is a property of the current
-formulations, not a law: as curvature- and geodesic-level analysis of diffusion
-models grows (e.g.\ \citet{saito2025}, and any second-order extension of the
-first-order bases of \citet{park2023}), the $/\eps^2$ estimate becomes the obvious
-next step. We intend the line in Table~\ref{tab:survey}, the asymmetry, and the
-drop-in instrument as forward-looking guardrails for that emerging work, not as a
-retrospective indictment.
+The finite-difference step-size tradeoff is classical numerical analysis
+\citep{press2007}, and higher-order forward-mode AD is standard
+\citep{griewank2008}; what has been missing is an account of where the tradeoff
+bites in the differential geometry of generative models, and how often. Table~%
+\ref{tab:survey} classifies representative latent-geometry papers by how they
+obtain their second-order or geodesic quantities. The explicit $/\eps^2$
+second-difference, the dangerous regime of Section~\ref{sec:fd}, is the obvious
+estimate for a practitioner adding a curvature measurement, but most published
+methods never form it. They keep the metric first order, replace the geodesic ODE
+with a discretized energy whose exact gradient is a well-conditioned discrete
+Laplacian rather than a $/\eps^2$ curvature, use analytic Christoffel symbols, or
+differentiate the energy with autodiff \citep{yang2018}; the first-order
+constructions \citep{park2023,chen2018,kwon2023} never take a second derivative.
+The one exposed published practice is the first-order finite difference of a
+network derivative, such as a score-Jacobian--vector product, which sits on the
+well-conditioned $\eps_{\mathrm{mach}}^{2/3}$ side of Section~\ref{sec:fd}.
+
+The field is mostly safe by construction, not by caution, and that safety is a
+property of the current formulations rather than a law. As curvature- and
+geodesic-level analysis of diffusion models grows, for instance the
+energy-and-score geometry of \citet{saito2025} or any second-order extension of
+the first-order bases of \citet{park2023}, the $/\eps^2$ estimate becomes the
+obvious next step. We intend Table~\ref{tab:survey}, the asymmetry, and the
+drop-in instrument as guardrails for that emerging work.
 
 \begin{table}[h]\centering
 \begin{tabular}{>{\raggedright}p{4.4cm} l p{3.6cm}}
@@ -316,8 +311,8 @@ retrospective indictment.
 Paper & 2nd-order quantity & how obtained \\
 \midrule
 \citet{shao2018} & discretized geodesic energy &
-exact discrete-energy gradient (Laplacian), coarse $T$; \emph{no} $/\eps^2$ \\
-\citet{saito2025} & geodesic (energy) & first-order score-differences $\|s(x_{i+1}){-}s(x_i)\|^2$ (no $/\eps^2$); JVP backend unspecified \\
+exact discrete-energy gradient (Laplacian), coarse $T$; no $/\eps^2$ \\
+\citet{saito2025} & geodesic (energy) & first-order score-differences $\|s(x_{i+1}){-}s(x_i)\|^2$; no $/\eps^2$ \\
 \citet{arvanitidis2018} & geodesic ODE (Christoffel) & analytic $\partial M$, numeric ODE integ. \\
 \citet{yang2018} & geodesic energy & autodiff \\
 \citet{park2023} & none (first-order basis) & autodiff power iteration \\
@@ -326,48 +321,55 @@ exact discrete-energy gradient (Laplacian), coarse $T$; \emph{no} $/\eps^2$ \\
 \bottomrule
 \end{tabular}
 \caption{How representative latent-geometry papers obtain second-order quantities.
-The explicit $/\eps^2$ second-order finite difference (Sections~\ref{sec:fd},
-\ref{sec:stylegan}) is largely avoided in published work; it is nonetheless the
-natural choice for a practitioner adding a curvature measurement, which is where
-the hazard bites.}
+The explicit $/\eps^2$ second difference (Sections~\ref{sec:fd},
+\ref{sec:stylegan}) is largely avoided in published work, but it is the obvious
+choice for a practitioner adding a curvature measurement, which is where the
+hazard bites.}
 \label{tab:survey}
 \end{table}
 
-\paragraph{Guidance.} The practical rule is short. \emph{First}-order quantities
-(Jacobians, pullback metrics, first-order pushforwards) may be finite-differenced;
-choose a step near $\eps_{\mathrm{mach}}^{1/3}$ and expect a few digits. \emph{Second
-or higher}-order quantities (curvature, the second-order pushforward, the metric
-derivative / Christoffel symbols, anything with a $/\eps^2$) should \emph{not} be
-finite-differenced: in single precision no step gives even one reliable digit on a
-deep generator (Section~\ref{sec:stylegan}), and the error can flip the sign of a
-downstream conclusion (Section~\ref{sec:flip}). Use composed forward-mode AD instead
----it is exact, costs one extra forward pass per order, and adds no memory. A free
-diagnostic comes with it: compare the first-order finite difference to the
-first-order \jvp; if they disagree, the pipeline is wrong, and if they agree, any
-second-order disagreement is real, not numerical.
+\paragraph{Guidance.} Finite-difference first-order quantities freely: choose a
+step near $\eps_{\mathrm{mach}}^{1/3}$ and expect a few digits. Never
+finite-difference a second derivative. In single precision no step gives even one
+reliable digit on a deep generator (Section~\ref{sec:stylegan}), and the error can
+flip the sign of a downstream conclusion (Section~\ref{sec:flip}). Use composed
+forward-mode AD: it is exact, costs one extra forward pass per order, and adds no
+memory. It also gives a free check. If the first-order finite difference and the
+\jvp{} disagree, the pipeline is wrong; if they agree, any second-order
+disagreement is real.
 
-\section{Scope, limitations, and what we do not claim}
+\section{Scope and limitations}
 \label{sec:scope}
-This is a numerical-methods contribution with a survey and demonstrations.
-\textbf{(1)} We do \emph{not} claim any surveyed paper reached a false conclusion;
-on the contrary, the survey shows most route around the catastrophic regime. The
-sign inversion of Section~\ref{sec:flip} is on a quantity \emph{we} define to
-expose method dependence, not a number from prior work.
-\textbf{(2)} The non-recoverability result is specifically about \emph{second}-order
-finite differences; first-order finite differences (e.g.\ score-JVPs) are well
-conditioned, and we say so.
-\textbf{(3)} The instrument is a thin, exact wrapper around forward-mode AD; its
-value is in routine exact higher-order pushforward and in the precise account of
-when the finite-difference alternative fails, not in algorithmic novelty.
-\textbf{(4)} We do not propose a downstream task win: this is a
-measurement-correctness result, not a demonstration that exact curvature improves
-an application. Whether accurate second-order geometry changes downstream
-conclusions is left to future work.
+One limitation matters more than the rest. We show that the measurement can flip,
+not that any published number is wrong; the survey's point is that the field
+mostly avoids the trap. The sign inversion of Section~\ref{sec:flip} is on a ratio
+$\rho$ that we define to expose method dependence, not a quantity from prior work.
+The remaining caveats are routine. The non-recoverability result is specific to
+second-order finite differences; first-order finite differences, including
+score-JVPs, are well conditioned, as we state. The instrument is a thin exact
+wrapper around forward-mode AD, with no algorithmic novelty; its value is in making
+exact higher-order pushforward routine and in the account of when the
+finite-difference alternative fails. Finally, we show no downstream task win: this
+is a measurement-correctness result, and whether accurate second-order geometry
+changes downstream conclusions is left to future work.
 
-\section{Reproducibility}
-We release the exact-instrument module, the analytic referee, and the StyleGAN
-and Stable-Diffusion scripts with fixed seeds and the emitted
-\texttt{metrics.json} for every table. All experiments run on a single 8\,GB GPU.
+\section{Conclusion}
+A second derivative of a deep generator cannot be recovered by finite differences:
+no step and, on a real generator, no precision closes the gap to the exact value,
+and the error is large enough to flip the sign of a measured geometric
+relationship. A first derivative is safe, which gives both a clean diagnostic and a
+reason the failure is easy to miss. The fix is a one-line composition of
+forward-mode AD that returns the exact higher-order pushforward at the memory of a
+single forward pass. Most current latent-geometry methods avoid the dangerous
+estimate by construction, but as second-order and geodesic analysis of diffusion
+models grows, the exact instrument is the principled default.
+
+\section*{Reproducibility statement}
+We release the exact-instrument module, the analytic referee, and the StyleGAN and
+Stable-Diffusion scripts, with fixed seeds and the emitted \texttt{metrics.json}
+behind every table. The generators are the public StyleGAN-bedroom-256 weights and
+Stable Diffusion v1.5; all experiments run on a single 8\,GB GPU. The code link is
+withheld for anonymous review and will be added for the camera-ready version.
 
 \bibliography{refs}
 \bibliographystyle{tmlr}
