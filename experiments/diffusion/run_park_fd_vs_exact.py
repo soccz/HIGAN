@@ -51,10 +51,14 @@ def jvp1(sdh, x_edit, v, alpha_val, t_idx, cond, uncond):
 
 
 def second_fd(sdh, x_edit, v, eps, t_idx, cond, uncond):
-    """FD-of-JVP 2nd derivative: (jvp(+eps) - jvp(-eps)) / (2 eps)."""
+    """FD-of-JVP 2nd derivative: (jvp(+eps) - jvp(-eps)) / (2 eps).
+    The first-order denominator is taken at alpha=0 (the EXACT JVP), identical to
+    second_exact, so the FD and exact rho differ ONLY in the second-derivative
+    numerator, not in the denominator."""
     dxp = jvp1(sdh, x_edit, v, +eps, t_idx, cond, uncond)
     dxm = jvp1(sdh, x_edit, v, -eps, t_idx, cond, uncond)
-    first = 0.5 * (dxp.abs().mean() + dxm.abs().mean()).item()
+    d0 = jvp1(sdh, x_edit, v, 0.0, t_idx, cond, uncond)   # denominator at alpha=0
+    first = d0.abs().mean().item()
     second = ((dxp - dxm) / (2 * eps)).abs().mean().item()
     return second, first
 
@@ -81,7 +85,7 @@ def main():
     ap.add_argument("--top-k", type=int, default=5)
     ap.add_argument("--t-edit", type=int, default=12)
     ap.add_argument("--steps", type=int, default=20)
-    ap.add_argument("--resolution", type=int, default=512)
+    ap.add_argument("--resolution", type=int, default=256)
     ap.add_argument("--eps-grid", type=float, nargs="+",
                     default=[0.1, 0.05, 0.01, 0.001])
     ap.add_argument("--paper-eps", type=float, default=0.05)
