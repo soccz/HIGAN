@@ -283,8 +283,11 @@ steps the error is truncation and is precision-blind. At tiny steps fp32 adds
 catastrophic cancellation, but fp64, which removes that, instead exposes the
 generator's non-smoothness: across a LeakyReLU kink the chord-scale second
 difference does not converge to the pointwise pushforward, and the fp64 error peaks
-near $3000$--$3500\%$ at small steps. So on this generator no step and no precision recovers the
-exact second-order pushforward, which the composed \jvp{} returns directly.
+near $3000$--$3500\%$ at small steps. So on this generator no step and no precision
+recovers the exact second-order pushforward, which the composed \jvp{} returns
+directly. Here ``exact'' is the AD second-order pushforward of the implemented graph,
+not a classical $C^2$ curvature (undefined at kinks): the claim is that finite
+differences fail to recover even this well-defined AD quantity.
 
 The control confirms the instrument is correct. The first-order central difference
 of the same pipeline agrees with the exact first-order \jvp{} to $2.4\%$, so the
@@ -335,7 +338,8 @@ and is evaluated by nesting two \jvp{} calls: in PyTorch, \texttt{torch.func.jvp
 of a function that itself returns a \jvp{} \citep{paszke2019}. No full Jacobian or
 Hessian is materialized, so memory is dominated by a forward evaluation and tangent
 propagation rather than by the output dimension $3HW$, and the same nesting yields
-any order in a constant number of passes. Composing forward-mode passes for
+the $k$-th-order pushforward from $k$ nested forward-mode sweeps, a count that grows
+with the derivative order but not with the output dimension. Composing forward-mode passes for
 higher-order directional derivatives is standard algorithmic differentiation
 \citep{griewank2008}; our use of it is as the step-size-free ground truth against
 which the finite-difference practice fails. The instrument needs only a
@@ -352,7 +356,9 @@ bites in the differential geometry of generative models, and how often. We class
 a targeted, representative set of latent-geometry methods, those most directly
 adjacent to curvature, geodesics, and the pullback metric, by how each obtains (or
 avoids) a second-order or geodesic quantity (the per-paper test is in
-Appendix~\ref{app:audit}); this is a representative audit, not an exhaustive survey.
+Appendix~\ref{app:audit}); this is a representative audit, not an exhaustive survey,
+and broader adjacent work on generative-model geometry
+\citep{wang2021,tosi2014,saito2025b} is not classified in the table.
 Table~\ref{tab:survey} gives the result. The explicit $/\eps^2$ second-difference of
 Section~\ref{sec:fd} is the obvious estimate for a practitioner adding a curvature
 measurement, but most published methods never form it. They keep the metric first
@@ -617,8 +623,9 @@ $5$ & $-0.839$ & $+0.021$ & $-0.070$ & $-0.580$ & $-0.021$ \\
 mean & $-0.734$ & $-0.156$ & $-0.178$ & $-0.343$ & $-0.076$ \\
 \bottomrule
 \end{tabular}
-\caption{Per-seed Spearman$(\sigma,\rho)$ on Stable Diffusion. No finite-difference
-step recovers the exact column's consistent negative sign.}
+\caption{Per-seed Spearman$(\sigma,\rho)$ on Stable Diffusion. The exact estimate is
+negative on five of six seeds (strongly so on five; seed~4 is a near-zero outlier);
+no finite-difference step reproduces this across-seed pattern.}
 \label{tab:sd-full}
 \end{table}
 
