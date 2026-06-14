@@ -43,9 +43,10 @@ under exact forward-mode automatic differentiation and a sign-unstable $-0.18$
 under a finite-difference estimate of the identical quantity. The same finite
 differences recover the first-order Jacobian accurately. The cause is an
 asymmetry. A central finite difference is well conditioned for a first derivative
-but \emph{non-recoverable} for a second: truncation error and floating-point
-cancellation cannot be made small at the same step, leaving a relative-error floor
-of order $\sqrt{\eps_{\mathrm{mach}}}$ that single precision makes large. On a
+but \emph{non-recoverable} for a second, because truncation error and
+floating-point cancellation cannot be made small at the same step. The resulting
+relative-error floor, of order $\sqrt{\eps_{\mathrm{mach}}}$, is large in single
+precision. On a
 StyleGAN generator the naive second-difference curvature misses the exact value by
 at least $45\%$ at every fixed step, in fp32 and fp64 alike, while the first-order
 difference of the same code agrees with exact AD to $2.4\%$. We give the exact
@@ -70,8 +71,8 @@ $\partial^2 G/\partial\alpha^2$ along a path, and the metric derivative
 $\partial_z M_z$ that appears in the geodesic ODE. These are where the numerical
 method can silently flip a result.
 
-We start with a measurement (Section~\ref{sec:flip}). A standard second-order
-quantity on Stable Diffusion returns the opposite sign depending only on whether
+We start with a measurement (Section~\ref{sec:flip}). A natural second-order
+diagnostic on Stable Diffusion returns the opposite sign depending only on whether
 the second derivative is taken by finite differences or by exact forward-mode AD.
 The exact method finds a clean, seed-consistent relationship. Finite differences,
 applied to the same quantity, are sign-unstable and wash it out. A practitioner
@@ -127,8 +128,8 @@ is more negative than
 the finite-difference estimate on all six seeds (Wilcoxon signed-rank $p=0.031$,
 the smallest value attainable at $n{=}6$), and the finite-difference estimate is
 sign-unstable at every step in the grid $\{0.1,0.05,0.01,0.001\}$, with means
-between $-0.08$ and $-0.34$. No step reproduces the clean $-0.73$. A study built on
-the finite-difference route would report ``no clear relationship,'' the opposite
+between $-0.08$ and $-0.34$, so no step reproduces the clean $-0.73$. A study built
+on the finite-difference route would report ``no clear relationship,'' the opposite
 of what the exact second-order estimate finds.
 
 \begin{table}[h]\centering
@@ -236,7 +237,7 @@ the best-step floor unchanged at $47\%$, so no precision recovers the curvature.
 \label{fig:floor}
 \end{figure}
 
-On a real generator the failure is worse than the toy predicts, and for an extra
+On a real generator the failure is worse than the toy predicts, and for a second
 reason. We compare the naive second-difference curvature a practitioner would
 write, $D^2_\delta G=\big(G(z{+}\delta u)-2G(z)+G(z{-}\delta u)\big)/\delta^2$,
 against the exact composed \jvp{} $\partial^2_\alpha G(z{+}\alpha u)$ on a
@@ -250,7 +251,7 @@ explodes as $\delta\to0$. Allowing an oracle per-sample step the median best err
 is still about $9\%$, against the composed \jvp's zero.
 
 Precision does not rescue it. Rerunning the entire sweep in fp64 leaves the floor
-unchanged, $47.1\%$ in both fp32 and fp64. The mechanism is not cancellation
+unchanged, $47.1\%$ in both fp32 and fp64, and the mechanism is not cancellation
 alone. At usable steps the error is truncation and is precision-blind. At tiny
 steps fp32 adds catastrophic cancellation, but fp64, which removes that, instead
 exposes the generator's non-smoothness: across a LeakyReLU kink the chord-scale
@@ -332,8 +333,8 @@ The one exposed published practice is the first-order finite difference of a
 network derivative, such as a score-Jacobian--vector product, which sits on the
 well-conditioned $\eps_{\mathrm{mach}}^{2/3}$ side of Section~\ref{sec:fd}.
 
-The field is mostly safe by construction, not by caution, and that safety is a
-property of the current formulations rather than a law. As curvature- and
+The field is mostly safe because the canonical formulations never form the
+estimate, but that safety is a property of those formulations rather than a law. As curvature- and
 geodesic-level analysis of diffusion models grows, for instance the
 energy-and-score geometry of \citet{saito2025} or any second-order extension of
 the first-order bases of \citet{park2023}, the $/\eps^2$ estimate becomes the
@@ -398,7 +399,7 @@ large enough to flip a measured sign, whereas the exact instrument costs one ext
 forward pass. The methods examined here stay first-order or energy-based and so
 avoid the problem today. Whether that holds as the field reaches for the
 second-order quantities the instrument now makes cheap to compute exactly is the
-open question this note is meant to flag.
+open question this work is meant to flag.
 
 \section*{Reproducibility statement}
 We release the exact-instrument module, the analytic referee, and the StyleGAN and
