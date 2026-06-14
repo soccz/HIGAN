@@ -10,6 +10,8 @@
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\jvp}{\textsc{jvp}}
@@ -49,9 +51,8 @@ at least $45\%$ at every fixed step, in fp32 and fp64 alike, while the first-ord
 difference of the same code agrees with exact AD to $2.4\%$. We give the exact
 alternative, composed forward-mode AD, which returns the $k$-th-order pushforward
 in $k$ forward passes at the memory of one. An audit of how the latent-geometry
-literature computes second-order quantities finds the dangerous $/\eps^2$ estimate
-to be the obvious choice, yet one that most published methods sidestep by
-construction. We do not claim any published result is wrong. We characterize when
+literature computes second-order quantities finds the $/\eps^2$ estimate to be the
+natural choice, yet one that most published methods sidestep by construction. We do not claim any published result is wrong. We characterize when
 finite differences fail for second-order generative geometry, give the
 first/second-order asymmetry as practitioner guidance, and supply a drop-in exact
 replacement.
@@ -149,19 +150,34 @@ disagree on its sign, not the specific value of any prior work.}
 
 \section{Why finite differences are non-recoverable for a second derivative}
 \label{sec:fd}
-For a smooth scalar $f$ the central second difference is
-$D^2_\eps f=\big(f(\alpha+\eps)-2f(\alpha)+f(\alpha-\eps)\big)/\eps^2$, and
+\begin{proposition}[Second-order non-recoverability]
+\label{prop:floor}
+Let $f\in C^4$ near $\alpha$ with $f^{(4)}$ bounded and $f''(\alpha)\neq0$,
+evaluated in floating point with unit roundoff $\eps_{\mathrm{mach}}$. The central
+second difference $D^2_\eps f=\big(f(\alpha+\eps)-2f(\alpha)+f(\alpha-\eps)\big)/
+\eps^2$ has relative error, minimized over the step,
+\[
+\min_{\eps}\;\frac{|D^2_\eps f-f''(\alpha)|}{|f''(\alpha)|}
+=\frac{2\sqrt{|f^{(4)}(\alpha)\,f(\alpha)|}}{|f''(\alpha)|}\,
+\eps_{\mathrm{mach}}^{1/2}+o\!\big(\eps_{\mathrm{mach}}^{1/2}\big),
+\]
+attained at $\eps^\star\sim\eps_{\mathrm{mach}}^{1/4}$, and no step does better.
+The central first difference, by contrast, attains floor
+$\eps_{\mathrm{mach}}^{2/3}$.
+\end{proposition}
+
+The argument is elementary; we give it because the consequence is easy to miss in
+practice. The central second difference satisfies
 \[
 D^2_\eps f - f''(\alpha)
 =\underbrace{\tfrac{\eps^2}{12}f^{(4)}(\alpha)+O(\eps^4)}_{\text{truncation}}
-+\underbrace{O\!\big(\eps_{\mathrm{mach}}\,|f|/\eps^2\big)}_{\text{cancellation}} .
++\underbrace{O\!\big(\eps_{\mathrm{mach}}\,|f|/\eps^2\big)}_{\text{cancellation}} ,
 \]
-The two terms cannot be small together. Minimizing their sum gives an optimal step
-$\eps^\star\sim\eps_{\mathrm{mach}}^{1/4}$ and, under mild regularity ($f^{(4)}$
-bounded, $f''\neq0$, $|f|$ of order one), a relative-error floor
-$2\sqrt{|f^{(4)}f|}/|f''|\cdot\eps_{\mathrm{mach}}^{1/2}$. The exponent
-$\tfrac12$ is intrinsic to the operation; the constant carries the generator's
-nonlinearity $|f^{(4)}f|/f''^2$, which is large for a deep network. In double
+and the two terms cannot be small together: minimizing their sum gives
+$\eps^\star\sim\eps_{\mathrm{mach}}^{1/4}$ and the floor above (full derivation in
+Appendix~\ref{app:deriv}). The exponent $\tfrac12$ is intrinsic to the operation;
+the constant carries the generator's nonlinearity $|f^{(4)}f|/f''^2$, which is
+large for a deep network. In double
 precision the floor is about $10^{-8}$ in the benign (constant near one) case. In
 the single precision generators use ($\eps_{\mathrm{mach}}\approx1.2\times10^{-7}$
 for fp32) it is about $3\times10^{-4}$ benign, and far worse for a strongly
@@ -208,14 +224,26 @@ precision. Finite differences never approach the exact composed \jvp.}
 
 \section{Quantification on a real generator}
 \label{sec:stylegan}
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{fig1_floor.pdf}
+\caption{The non-recoverability of Proposition~\ref{prop:floor} on a StyleGAN
+generator. (a) Relative error of the finite-difference curvature versus step
+$\delta$ in fp32: the first-order difference (blue) has a usable minimum near
+$2.4\%$, while the second-order difference (red) never falls below $45\%$. The
+exact composed \jvp{} has error $0$ at any $\delta$. (b) The second-order error in
+fp32 versus fp64: double precision removes the small-step cancellation but leaves
+the best-step floor unchanged at $47\%$, so no precision recovers the curvature.}
+\label{fig:floor}
+\end{figure}
+
 On a real generator the failure is worse than the toy predicts, and for an extra
 reason. We compare the naive second-difference curvature a practitioner would
 write, $D^2_\delta G=\big(G(z{+}\delta u)-2G(z)+G(z{-}\delta u)\big)/\delta^2$,
 against the exact composed \jvp{} $\partial^2_\alpha G(z{+}\alpha u)$ on a
 StyleGAN-bedroom generator at $256{\times}256$, over $6$ directions ($3$
 annotated attributes, $3$ random) and $16$ samples, sweeping $\delta$
-(Table~\ref{tab:stylegan}). The exact curvature is a definite, step-free number,
-mean $1.17$. Holding a single step across all samples, as a practitioner does, the
+(Figure~\ref{fig:floor}, Table~\ref{tab:stylegan}). The exact curvature is a
+definite, step-free number, mean $1.17$. Holding a single step across all samples, as a practitioner does, the
 finite-difference mean relative error never drops below $45.2\%$ (best step
 $\delta=3$, bracketed on both sides); it is $267\%$ at $\delta\!\approx\!0.3$ and
 explodes as $\delta\to0$. Allowing an oracle per-sample step the median best error
@@ -289,12 +317,13 @@ is $O(3HW)$, its cost is independent of output dimension.
 The finite-difference step-size tradeoff is classical numerical analysis
 \citep{press2007}, and higher-order forward-mode AD is standard
 \citep{griewank2008}; what has been missing is an account of where the tradeoff
-bites in the differential geometry of generative models, and how often. Table~%
-\ref{tab:survey} classifies representative latent-geometry papers by how they
-obtain their second-order or geodesic quantities. The explicit $/\eps^2$
-second-difference, the dangerous regime of Section~\ref{sec:fd}, is the obvious
-estimate for a practitioner adding a curvature measurement, but most published
-methods never form it. They keep the metric first order, replace the geodesic ODE
+bites in the differential geometry of generative models, and how often. We include
+the papers we could identify that compute, or deliberately avoid, a second-order or
+geodesic quantity in a generative-model latent space, and classify each by how it
+obtains that quantity (the per-paper test is in Appendix~\ref{app:audit}). Table~%
+\ref{tab:survey} gives the result. The explicit $/\eps^2$ second-difference of
+Section~\ref{sec:fd} is the obvious estimate for a practitioner adding a curvature
+measurement, but most published methods never form it. They keep the metric first order, replace the geodesic ODE
 with a discretized energy whose exact gradient is a well-conditioned discrete
 Laplacian rather than a $/\eps^2$ curvature, use analytic Christoffel symbols, or
 differentiate the energy with autodiff \citep{yang2018}; the first-order
@@ -352,10 +381,10 @@ mostly avoids the trap. The sign inversion of Section~\ref{sec:flip} is on a rat
 $\rho$ that we define to expose method dependence, not a quantity from prior work.
 The remaining caveats are routine. The non-recoverability result is specific to
 second-order finite differences; first-order finite differences, including
-score-JVPs, are well conditioned, as we state. The instrument is a thin exact
-wrapper around forward-mode AD, with no algorithmic novelty; its value is in making
-exact higher-order pushforward routine and in the account of when the
-finite-difference alternative fails. Finally, we show no downstream task win: this
+score-JVPs, are well conditioned, as we state. The instrument is algorithmically
+standard but operationally decisive: composing forward-mode AD is textbook, yet it
+is what makes exact higher-order pushforward routine where the finite-difference
+alternative fails. Finally, we show no downstream task win: this
 is a measurement-correctness result, and whether accurate second-order geometry
 changes downstream conclusions is left to future work.
 
