@@ -46,7 +46,7 @@ def main() -> None:
 
     L, D = G.num_layers, G.w_dim
     H = W = G.resolution
-    rng = torch.Generator(device=G.device).manual_seed(101)
+    rng = torch.Generator(device=G.device).manual_seed(2027)
     base_wp = G.sample_wp(args.num_samples, generator=rng)
 
     matrix: dict[str, list[np.ndarray]] = {}     # attr -> [14 saliency maps]

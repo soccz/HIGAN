@@ -1,0 +1,119 @@
+{
+  "anchors": [
+    {
+      "anchor_seed": 31,
+      "rho_cAD_NL": 0.6966146458583433,
+      "rho_jvp_NL": 0.6956542617046819,
+      "rho_cAD_jvp": 0.9826170468187275,
+      "partial_given_jvp": 0.09787547151360503,
+      "perm_p_given_jvp": 0.2521495700859828,
+      "partial_given_jvp_chord": 0.06996564898354204,
+      "boot95_given_jvp": [
+        -0.2562867534038361,
+        0.4524495743170973
+      ],
+      "boot95_given_jvp_chord": [
+        -0.24798338600422568,
+        0.4345270058530101
+      ]
+    },
+    {
+      "anchor_seed": 32,
+      "rho_cAD_NL": 0.531812725090036,
+      "rho_jvp_NL": 0.5072268907563026,
+      "rho_cAD_jvp": 0.973109243697479,
+      "partial_given_jvp": 0.19255900843146154,
+      "perm_p_given_jvp": 0.09458108378324336,
+      "partial_given_jvp_chord": 0.08612218958819026,
+      "boot95_given_jvp": [
+        -0.07423381008694145,
+        0.42912868631818313
+      ],
+      "boot95_given_jvp_chord": [
+        -0.15195437614934443,
+        0.3777710040293276
+      ]
+    },
+    {
+      "anchor_seed": 33,
+      "rho_cAD_NL": 0.36028811524609844,
+      "rho_jvp_NL": 0.4787995198079232,
+      "rho_cAD_jvp": 0.8824489795918368,
+      "partial_given_jvp": -0.1506795125464103,
+      "perm_p_given_jvp": 0.8570285942811438,
+      "partial_given_jvp_chord": -0.319717928558286,
+      "boot95_given_jvp": [
+        -0.34147899621204914,
+        0.09442444283561895
+      ],
+      "boot95_given_jvp_chord": [
+        -0.4563727384099565,
+        -0.007621904943323456
+      ]
+    },
+    {
+      "anchor_seed": 34,
+      "rho_cAD_NL": 0.6145018007202881,
+      "rho_jvp_NL": 0.5420888355342137,
+      "rho_cAD_jvp": 0.7548139255702281,
+      "partial_given_jvp": 0.3725069235087888,
+      "perm_p_given_jvp": 0.003799240151969606,
+      "partial_given_jvp_chord": 0.29669052548450825,
+      "boot95_given_jvp": [
+        -0.07644058113716212,
+        0.6479238035341077
+      ],
+      "boot95_given_jvp_chord": [
+        -0.06850761099351935,
+        0.5514007117530425
+      ]
+    },
+    {
+      "anchor_seed": 35,
+      "rho_cAD_NL": 0.6146938775510205,
+      "rho_jvp_NL": 0.5781992797118848,
+      "rho_cAD_jvp": 0.7615366146458583,
+      "partial_given_jvp": 0.329754211060297,
+      "perm_p_given_jvp": 0.009998000399920015,
+      "partial_given_jvp_chord": 0.1442208056834833,
+      "boot95_given_jvp": [
+        -0.08521538560895717,
+        0.6106922213364816
+      ],
+      "boot95_given_jvp_chord": [
+        -0.13535306958970691,
+        0.4653179175349812
+      ]
+    }
+  ],
+  "partial_given_jvp_distribution": [
+    0.09787547151360503,
+    0.19255900843146154,
+    -0.1506795125464103,
+    0.3725069235087888,
+    0.329754211060297
+  ],
+  "partial_given_jvp_chord_distribution": [
+    0.06996564898354204,
+    0.08612218958819026,
+    -0.319717928558286,
+    0.29669052548450825,
+    0.1442208056834833
+  ],
+  "n_anchors": 5,
+  "n_positive": 4,
+  "median_partial_given_jvp": 0.19255900843146154,
+  "median_partial_given_jvp_chord": 0.08612218958819026,
+  "n_anchors_CI_excludes_0": 0,
+  "verdict": "NEGATIVE_TMLR_anchor_fragile",
+  "config": {
+    "config": "configs/default.yaml",
+    "n_random": 42,
+    "n_base": 12,
+    "anchors": 5,
+    "T": 3.0,
+    "K": 33,
+    "base_seed0": 31,
+    "out": "out/curvature_lift_multianchor"
+  }
+}

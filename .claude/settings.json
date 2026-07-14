@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/home/soccz/22tb/study/HIGAN/note/submission/evidence/sd_sign_inversion_table1.json'\\)\\);print\\(type\\(d\\)\\); print\\(list\\(d.keys\\(\\)\\)[:30] if isinstance\\(d,dict\\) else len\\(d\\)\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/home/soccz/22tb/study/HIGAN/note/submission/evidence/stylegan_fd_vs_exact_table2.json'\\)\\);print\\(type\\(d\\)\\); print\\(list\\(d.keys\\(\\)\\)[:30] if isinstance\\(d,dict\\) else len\\(d\\)\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(pkill -f \"07_gate5\")",
+      "Bash(pkill -9 -f \"07_gate5_u3pilot.py\")",
+      "Bash(kill -0 4044816)",
+      "Bash(kill -0 4055753)",
+      "Bash(pkill -f \"g9|09_gate7\")",
+      "Bash(sed -i 's/^HORIZON = 96/HORIZON = 48/' scripts/09_gate7_multihorizon.py)"
+    ]
+  }
+}

@@ -58,6 +58,15 @@ class HiGANGenerator(nn.Module):
     # ----- monkey-patch -----
     def _patch_synthesis_for_jvp(self) -> None:
         synth = self._net.synthesis
+        if not hasattr(synth, "lod"):
+            # StyleGAN2-style synthesis lacks the progressive-growing `lod` buffer.
+            # Its native forward is NOT jvp-safe: composed-jvp runs without error but
+            # returns wrong derivatives (a 1st-order FD control disagrees by ~87%).
+            # Refuse rather than silently produce garbage; a SG2-specific patch +
+            # control validation is required before this generator can be used.
+            raise NotImplementedError(
+                "composed-jvp not validated for this synthesis (no `lod`); "
+                "the native forward gives incorrect forward-mode derivatives.")
         cached_lod = float(synth.lod.detach().cpu().item())
         init_log2 = synth.init_res_log2
         final_log2 = synth.final_res_log2
