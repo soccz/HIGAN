@@ -1,73 +1,84 @@
-# HIGAN
+# HIGAN — a research line that ended honestly
 
-침실 GAN(StyleGAN bedroom256, [genforce/higan](https://github.com/genforce/higan))의 잠재공간을
-**inversion + boundary 편집 + CAM-style 픽셀 saliency**로 해석하는 두 단계 프로젝트.
+> StyleGAN 잠재공간 해석에서 출발해, 2차 미분기하의 한계를 **검증된 negative**로 확정하고,
+> 그 폐허의 감사에서 살아남은 아이디어 하나를 논문으로 완성하기까지의 전 과정 기록.
+> 이 레포는 성공만 남기지 않는다 — 실패한 가설, 발동한 킬게이트, 적대검증이 잡아낸
+> artifact까지 전부 커밋돼 있다.
 
-> 보고서: **<https://soccz.github.io/projects/higan/>**
+**📖 읽기 좋은 형태의 기록:**
+- [HIGAN v2 보고서](https://soccz.github.io/projects/higan/) — 28종 해석 분석 (JVP saliency · disentanglement · CLIP 재발견)
+- [일반화 여정](https://soccz.github.io/projects/higan-generalization/) — 2차 곡률 라인의 전체 실험 기록 (95 versions, 정직한 회고)
+- [폐기에서 논문까지](https://soccz.github.io/projects/higan-to-paper/) — 이 폴더의 감사에서 시작해 논문이 되기까지 7일
 
-## 두 가지 코드베이스
+---
 
-### v1 — Colab 노트북 (원본 프로토타입)
+## 이 레포의 아크
 
-루트의 `.ipynb` 3종.
-
-| 노트북 | 역할 |
-| --- | --- |
-| `HIGAN_encoder.ipynb` | 다중 손실(MSE / Perceptual / LPIPS / TV) 기반 최적화 인버전 |
-| `HIGAN_encoder_지홍.ipynb` | 위 노트북과 동일 (이름만 다른 사본) |
-| `HiGAN_PSP.ipynb` | pSp(FFHQ) 인코더로 잠재 추출 시도 |
-
-손실함수
-1. **MSE**  — 픽셀 차이 (색상·밝기 보정)
-2. **Perceptual** — VGG16 feature 차이 (구조·패턴)
-3. **LPIPS** — 시각적 유사성
-4. **TV** — 매끄러움·노이즈 억제
-
-알려진 한계: 가구 배치·구도는 잡히지만 색상·정확도는 부족.
-
-### v2 — `higan_dev/` (.py 패키지, 본 보고서)
-
-[`higan_dev/`](higan_dev/) 디렉토리에 로컬 GPU(RTX 3070 8 GB)용으로 다시 짠 모듈형 파이프라인.
-
-핵심 차이점:
-- **Differentiable generator wrapper**: v1의 `easy_synthesize`는 numpy uint8을 detach해서 반환 → autograd가 끊김.
-  `higan_dev.generator.HiGANGenerator.synthesize(wp)`는 `G.net.synthesis`를 직접 호출해 gradient flow 보존.
-- **도메인 특화 인코더**: pSp/FFHQ 대신 ResNet50 backbone + multi-scale neck + 14 layer-head를 합성 supervision으로 학습.
-- **잠재 → 픽셀 saliency 두 가지 버전**:
-  - forward perturbation (`cam/diff_map.py`): 분류기 없이 ±δ로 픽셀 차이 누적 — cheap, classifier-free, 평균 spatial 패턴.
-  - backward gradient (`cam/grad_saliency.py`): 미분 가능 generator + `torch.func.jvp`로 ∂I/∂α를 정확히 계산 — 각 침실의 실제 램프/창문/우드 프레임을 pinpoint.
-- **분석 28종**: per-layer / 8×14 / disentanglement / local edit / encoder attention /
-  random direction discovery / compositional / robustness / intermediate Grad-CAM /
-  K-means taxonomy / CLIP zero-shot / ckpt evolution / ∂²I/∂α² / saliency morph /
-  실제 LSUN 사진 등 — 모두 추가 학습 0개로 frozen generator + 기존 ckpt 위에서.
-- **로컬 실행**: Colab 의존 제거, YAML config + 28-step CLI.
-
-자세한 사용법과 모든 스크립트 인덱스는 [`higan_dev/README.md`](higan_dev/README.md). 30초 요약:
-
-```bash
-cd higan_dev
-pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
-pip install --no-deps lpips==0.1.4 open_clip_torch
-pip install pyyaml "numpy<2" pillow opencv-python tqdm matplotlib scipy \
-            scikit-learn datasets ftfy regex wcwidth huggingface_hub safetensors timm
-
-python scripts/01_download_assets.py            # HiGAN 자산
-PYTHONPATH=. python scripts/02_invert_optim.py --self-test --steps 1000 --lr 0.1 --out out/inv_selftest
-PYTHONPATH=. python scripts/03_train_encoder.py                  # 40k iter ≈ 1h 50m
-PYTHONPATH=. python scripts/11_grad_saliency.py --num-samples 64 # JVP saliency (헤드라인)
-PYTHONPATH=. python scripts/22_taxonomy.py                       # unsupervised attribute discovery
-PYTHONPATH=. python scripts/24_clip_label_clusters.py            # CLIP zero-shot 라벨
+```
+2024-12  LumTerior (부트캠프 서비스: StyleGAN bedroom + Grad-CAM 조명 배치)
+            │  한계 자기명시: "사용자 이미지 → latent 인코더가 없다"
+2026-05  v2 재점화: 미분가능 generator 래퍼 + 인코더 + 28종 해석 분석
+            │  발견: view 방향의 곡률이 texture류의 수십 배
+2026-05  "곡률 = 편집 위험 신호" 가설 → 사전등록 컨트롤 캠페인 95 versions
+            │  판정: controller가 church에서 random에 패배 → 라인 폐기
+2026-06  피벗: "FD가 2차 기하의 부호를 뒤집는다" (TMLR 제출 → desk-reject)
+            │  리라이트: exact composed-JVP instrument + step-selection trilemma
+            │  워크플로우 6종의 consequence 사냥 → "다운스트림 결과 없음" 확정
+2026-06-22  ABANDONED — 실패가 아니라 검증된 negative로 종결
+2026-07-07  이 폴더의 전수 감사 → tsfm_audit의 banked 관찰 하나가 부활
+2026-07-14  "Data-Starved Baselines Inflate the Measured Advantage of
+             Time-Series Foundation Models on ETT" (8pp) 완성 → arXiv
 ```
 
-## 결과 하이라이트
+## 검증된 negative (이 레포의 핵심 산출물)
 
-- **인버전**: optim 1000-step Adam이 self-test에서 loss 5.6 → 0.027 (99.5% ↓).
-- **Saliency**: JVP 기반 gradient 버전이 각 침실의 실제 lamp / 창문 / 우드 프레임을 scene-specific 하게 pinpoint.
-- **Disentanglement**: HiGAN의 8 boundary가 사실상 view + 표면 텍스처 두 클러스터로 갈림 (view만 직교 0.32, 나머지 7개 mutually 0.6–0.83 entangled).
-- **Compositional**: 같은 layer cluster는 선형 합성 (carpet+wood corr 0.97), 교차는 비선형 간섭 (view+wood 0.55) — view의 곡률이 다른 attribute의 40배라는 ∂²I/∂α² 분석으로 직접 설명.
-- **CLIP rediscovery**: 256개 random direction → K-means → CLIP zero-shot으로 cluster 2가 "a view through a window" 자동 식별. 라벨/분류기 0개로 HiGAN의 view boundary 재발견.
-- **학습 동역학**: encoder의 saliency-vs-GT 상관이 1k → 40k에서 45배 향상 (recon MSE는 18%만), saliency가 reconstruction보다 학습에 민감.
+FD(finite-difference) 기반 2차 generator 곡률에 대해, fixed-seed 증거로 확정한 것:
+
+| 결과 | 수치 | 증거 |
+|---|---|---|
+| FD /δ² magnitude 오차 floor | fp32 ≥45% (fp64도 47.12% — 정밀도 무관) | `note/submission/evidence/` |
+| step-selection trilemma | magnitude/bias/rank 최적 step이 3.0/2.0/0.2로 분리 | 〃 |
+| **그러나 rank는 보존** | exact 대비 Spearman 0.815–0.963 | 〃 |
+| → 다운스트림 consequence 부재 | ordering flip 0, gate flip은 rescale artifact | 〃 |
+
+즉: FD 곡률은 크기로는 틀리지만 순위로는 맞아서, 순위 기반 응용에서는 **아무 결정도
+뒤집히지 않는다**. 이것이 이 라인이 논문이 되지 못한 이유이고, 그 사실 자체가 기록 가치다.
+
+부산물로 남은 도구: **exact composed-JVP 2차 곡률 계측기**
+(`higan_dev/higan_dev/generator.py` — toy 해석해 대비 상대오차 2.5e-17, 비트동일 결정성).
+
+## 레포 구조
+
+```
+higan_dev/          v2 해석 파이프라인 (scripts/01–28: 분석 28종, 29–33: FD-vs-exact 라인)
+paper/              곡률-제어 라인: 사전등록 프로토콜 95개 + 컨트롤 캠페인 (743 runs, 0 fail)
+note/               TMLR 라인 정본: 설계 문서, 원고 2판, 제출 evidence (fixed-seed JSON)
+paper_refutation/   자기반박 시도의 하루 기록 (leakage audit 방법론 포함)
+tsfm_audit/         TSFM 오염 감사 곁가지 — 후속 논문의 씨앗이 된 banked 관찰
+*.workflow.mjs      데스크리젝 후 재작성을 오케스트레이션한 에이전트 워크플로우 6종
+MEMORY.md           실험 연속성 로그 (종결 기록 포함)
+```
+
+v2 파이프라인의 설치·실행 인덱스는 [README_v2_pipeline.md](README_v2_pipeline.md).
+
+## 방법론적으로 남긴 것
+
+이 레포가 논문보다 오래 쓰일 수 있는 부분:
+
+- **사전등록 하네스** — 잠긴 JSON 프로토콜에 판정 규칙을 실험 전에 박고, 클린 트리에서
+  실행하고, 결과에 프로토콜 해시·커밋을 기록 (`paper/experiments/protocols/`)
+- **적대검증 패턴** — 무맥락 cold 감사, deflationary-prior consequence 사냥,
+  "작성자가 자기 산출물을 승인하지 않는다" 게이트 (루트 워크플로우 6종)
+- **artifact 판별 기법** — global-rescale 후 irreducible flip 판정, outcome-coupled
+  baseline의 label-leakage 정량 감사 (`paper_refutation/leakage_audit.py`)
+
+## 후속
+
+이 폴더의 감사에서 부활한 라인은 별도로 완성됐다:
+**Data-Starved Baselines Inflate the Measured Advantage of Time-Series Foundation Models on ETT**
+— TSFM의 zero-shot 우위 중 일부가 baseline 학습예산의 측정 artifact임을 개입 실험으로 실증.
+(arXiv 링크 공개 시 여기 게시. 여정 전체는 [폐기에서 논문까지](https://soccz.github.io/projects/higan-to-paper/).)
 
 ## 라이선스
 
-이 레포의 코드는 학술/실험용. genforce/higan의 가중치는 그쪽 라이선스를 따른다.
+코드는 학술/실험용. `genforce/higan` 가중치는 원 저장소 라이선스를 따른다.
