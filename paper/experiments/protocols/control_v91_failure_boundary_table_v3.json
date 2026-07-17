@@ -1,0 +1,29 @@
+{
+  "version": "control_v91_failure_boundary_table_v3",
+  "locked_on": "2026-05-29",
+  "purpose": "Update the final failure-boundary table after n=10 scaling.",
+  "experiments": [
+    {
+      "key": "failure_boundary_table_v3",
+      "order": 1,
+      "script": "experiments/control/run_failure_boundary_table.py",
+      "claim_tested": "Final paper framing should expose all robust and weak regimes after n=10 scaling.",
+      "args": {
+        "tables": [
+          "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+          "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+          "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+          "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+          "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+          "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json",
+          "exhaustive_v7=experiments/out/control_predictive_stress_evidence_table_v7_exhaustive/metrics.json",
+          "permutation_v1=experiments/out/control_predictive_permutation_null_table_v1/metrics.json",
+          "exhaustive_n10_v8=experiments/out/control_predictive_stress_evidence_table_v8_exhaustive_n10/metrics.json",
+          "permutation_n10_v2=experiments/out/control_predictive_permutation_null_table_v2_n10/metrics.json"
+        ],
+        "out": "experiments/out/control_failure_boundary_table_v3",
+        "seed": 4225
+      }
+    }
+  ]
+}

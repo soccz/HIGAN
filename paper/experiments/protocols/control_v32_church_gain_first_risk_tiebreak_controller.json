@@ -1,0 +1,670 @@
+{
+  "version": "control_v32_church_gain_first_risk_tiebreak_controller",
+  "locked_on": "2026-05-27",
+  "purpose": "Held-out controller test that uses risk as a tiebreaker inside a high-gain candidate pool, instead of relying on the original gain/risk ratio.",
+  "experiments": [
+    {
+      "key": "church_gain_first_risk_tiebreak_actual_seed_2042",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak controller: risk should act as a control signal inside a high-gain candidate pool.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2042",
+        "seed": 2042
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_actual_seed_2043",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak controller: risk should act as a control signal inside a high-gain candidate pool.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2043",
+        "seed": 2043
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_actual_seed_2044",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak controller: risk should act as a control signal inside a high-gain candidate pool.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2044",
+        "seed": 2044
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_actual_seed_2045",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak controller: risk should act as a control signal inside a high-gain candidate pool.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2045",
+        "seed": 2045
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_actual_seed_2046",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak controller: risk should act as a control signal inside a high-gain candidate pool.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2046",
+        "seed": 2046
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_shuffled_seed_2042",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2042",
+        "seed": 2042
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_shuffled_seed_2043",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2043",
+        "seed": 2043
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_shuffled_seed_2044",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2044",
+        "seed": 2044
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_shuffled_seed_2045",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2045",
+        "seed": 2045
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_shuffled_seed_2046",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using shuffled risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "shuffled",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2046",
+        "seed": 2046
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_inverted_seed_2042",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2042",
+        "seed": 2042
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_inverted_seed_2043",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2043",
+        "seed": 2043
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_inverted_seed_2044",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2044",
+        "seed": 2044
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_inverted_seed_2045",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2045",
+        "seed": 2045
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_inverted_seed_2046",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Held-out gain-first/risk-tiebreak negative control using inverted risk.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "selection-rule": "gain_topk_low_risk",
+        "gain-pool-multiplier": 2.0,
+        "risk-selection-mode": "inverted",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2046",
+        "seed": 2046
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_actual_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Aggregate held-out gain-first/risk-tiebreak controller runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2042/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2043/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2044/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2045/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2046/metrics.json"
+        ],
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary",
+        "seed": 4091
+      }
+    },
+    {
+      "key": "church_gain_first_risk_tiebreak_negative_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_signal_negative_summary.py",
+      "claim_tested": "Aggregate actual-vs-shuffled/inverted risk for the held-out gain-first/risk-tiebreak controller.",
+      "args": {
+        "actual-inputs": [
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2042/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2043/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2044/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2045/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/actual_seed_2046/metrics.json"
+        ],
+        "shuffled-inputs": [
+          "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2042/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2043/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2044/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2045/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/shuffled_seed_2046/metrics.json"
+        ],
+        "inverted-inputs": [
+          "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2042/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2043/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2044/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2045/metrics.json",
+          "experiments/out/control_church_gain_first_risk_tiebreak/inverted_seed_2046/metrics.json"
+        ],
+        "out": "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary",
+        "seed": 4093
+      }
+    }
+  ]
+}

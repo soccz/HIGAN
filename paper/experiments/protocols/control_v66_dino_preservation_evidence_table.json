@@ -1,0 +1,22 @@
+{
+  "version": "control_v66_dino_preservation_evidence_table",
+  "locked_on": "2026-05-28",
+  "purpose": "Build a DINO-specific evidence table for non-language preservation predictive validity.",
+  "experiments": [
+    {
+      "key": "predictive_dino_evidence_table_v1",
+      "order": 1,
+      "script": "experiments/control/run_predictive_dino_evidence_table.py",
+      "claim_tested": "Low-rho candidates should preserve DINOv2 image features better than high-rho candidates at matched CLIP gain.",
+      "args": {
+        "summaries": [
+          "dino_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation/church/metrics.json",
+          "dino_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation/bedroom/metrics.json",
+          "dino_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation/ffhq/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_dino_evidence_table_v1",
+        "seed": 4214
+      }
+    }
+  ]
+}

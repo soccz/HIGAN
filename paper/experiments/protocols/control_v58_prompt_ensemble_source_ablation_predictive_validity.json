@@ -1,0 +1,825 @@
+{
+  "version": "control_v58_prompt_ensemble_source_ablation_predictive_validity",
+  "locked_on": "2026-05-28",
+  "purpose": "Test whether prompt-ensemble predictive validity depends on the GANSpace or SeFa candidate-source family.",
+  "experiments": [
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2097",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2097",
+        "seed": 2097
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2098",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2098",
+        "seed": 2098
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2099",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2099",
+        "seed": 2099
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2100",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2100",
+        "seed": 2100
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2101",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2101",
+        "seed": 2101
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2097",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2097",
+        "seed": 2097
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2098",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2098",
+        "seed": 2098
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2099",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2099",
+        "seed": 2099
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2100",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2100",
+        "seed": 2100
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_seed_2101",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: ganspace_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2101",
+        "seed": 2101
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_summary",
+      "order": 11,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church prompt-ensemble ganspace_only predictive source-ablation runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2097/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2098/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2099/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2100/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church_seed_2101/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/church",
+        "seed": 4511
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_ganspace_only_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom prompt-ensemble ganspace_only predictive source-ablation runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2097/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2098/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2099/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2100/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom_seed_2101/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_ganspace_only/bedroom",
+        "seed": 4512
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2102",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2102",
+        "seed": 2102
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2103",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2103",
+        "seed": 2103
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2104",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2104",
+        "seed": 2104
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2105",
+      "order": 16,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2105",
+        "seed": 2105
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2106",
+      "order": 17,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2106",
+        "seed": 2106
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2102",
+      "order": 18,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2102",
+        "seed": 2102
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2103",
+      "order": 19,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2103",
+        "seed": 2103
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2104",
+      "order": 20,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2104",
+        "seed": 2104
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2105",
+      "order": 21,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2105",
+        "seed": 2105
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_seed_2106",
+      "order": 22,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should not depend entirely on one candidate-source family: sefa_only in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2106",
+        "seed": 2106
+      }
+    },
+    {
+      "key": "church_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_summary",
+      "order": 23,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church prompt-ensemble sefa_only predictive source-ablation runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2102/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2103/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2104/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2105/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church_seed_2106/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/church",
+        "seed": 4523
+      }
+    },
+    {
+      "key": "bedroom_control_v58_prompt_ensemble_source_ablation_predictive_validity_sefa_only_summary",
+      "order": 24,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom prompt-ensemble sefa_only predictive source-ablation runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2102/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2103/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2104/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2105/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom_seed_2106/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_sefa_only/bedroom",
+        "seed": 4524
+      }
+    }
+  ]
+}

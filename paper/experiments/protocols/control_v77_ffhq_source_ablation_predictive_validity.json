@@ -1,0 +1,431 @@
+{
+  "version": "control_v77_ffhq_source_ablation_predictive_validity",
+  "locked_on": "2026-05-29",
+  "purpose": "Close the FFHQ candidate-source gap by testing GANSpace-only and SeFa-only prompt-ensemble predictive validity.",
+  "experiments": [
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_ganspace_only_seed_2147",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_ganspace_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2147",
+        "seed": 2147
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_ganspace_only_seed_2148",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_ganspace_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2148",
+        "seed": 2148
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_ganspace_only_seed_2149",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_ganspace_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2149",
+        "seed": 2149
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_ganspace_only_seed_2150",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_ganspace_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2150",
+        "seed": 2150
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_ganspace_only_seed_2151",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_ganspace_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2151",
+        "seed": 2151
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_ganspace_only_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive runs for ffhq_ganspace_only.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2147/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2148/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2149/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2150/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq_seed_2151/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only/ffhq",
+        "seed": 4806
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_sefa_only_seed_2152",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_sefa_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2152",
+        "seed": 2152
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_sefa_only_seed_2153",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_sefa_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2153",
+        "seed": 2153
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_sefa_only_seed_2154",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_sefa_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2154",
+        "seed": 2154
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_sefa_only_seed_2155",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_sefa_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2155",
+        "seed": 2155
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_sefa_only_seed_2156",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under ffhq_sefa_only in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2156",
+        "seed": 2156
+      }
+    },
+    {
+      "key": "ffhq_control_v77_ffhq_source_ablation_predictive_validity_ffhq_sefa_only_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive runs for ffhq_sefa_only.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2152/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2153/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2154/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2155/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq_seed_2156/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only/ffhq",
+        "seed": 4812
+      }
+    }
+  ]
+}

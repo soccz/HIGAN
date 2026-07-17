@@ -1,0 +1,37 @@
+{
+  "version": "control_v55_predictive_stress_evidence_table_ensemble_followup",
+  "locked_on": "2026-05-28",
+  "purpose": "Build the extended predictive stress evidence table including prompt-ensemble high-n-test and strict-gain follow-ups.",
+  "experiments": [
+    {
+      "key": "predictive_stress_evidence_table_v3",
+      "order": 1,
+      "script": "experiments/control/run_predictive_stress_evidence_table.py",
+      "claim_tested": "Prompt-ensemble semantic directions should clarify which sensitivity failures remain after prompt averaging.",
+      "args": {
+        "summaries": [
+          "baseline_church=experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+          "baseline_bedroom=experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+          "fd_church=experiments/out/control_cross_domain_risk_predictive_fd/church/metrics.json",
+          "fd_bedroom=experiments/out/control_cross_domain_risk_predictive_fd/bedroom/metrics.json",
+          "photo_church=experiments/out/control_cross_domain_risk_predictive_prompt_photo/church/metrics.json",
+          "photo_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_photo/bedroom/metrics.json",
+          "caption_church=experiments/out/control_cross_domain_risk_predictive_prompt_caption/church/metrics.json",
+          "caption_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_caption/bedroom/metrics.json",
+          "ensemble_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble/church/metrics.json",
+          "ensemble_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble/bedroom/metrics.json",
+          "ensemble_high_ntest_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_high_ntest128/church/metrics.json",
+          "ensemble_high_ntest_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_high_ntest128/bedroom/metrics.json",
+          "ensemble_strict_gain_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_strict_gain_match/church/metrics.json",
+          "ensemble_strict_gain_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_strict_gain_match/bedroom/metrics.json",
+          "high_ntest_church=experiments/out/control_cross_domain_risk_predictive_high_ntest128/church/metrics.json",
+          "high_ntest_bedroom=experiments/out/control_cross_domain_risk_predictive_high_ntest128/bedroom/metrics.json",
+          "strict_gain_church=experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church/metrics.json",
+          "strict_gain_bedroom=experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_stress_evidence_table_v3",
+        "seed": 4211
+      }
+    }
+  ]
+}

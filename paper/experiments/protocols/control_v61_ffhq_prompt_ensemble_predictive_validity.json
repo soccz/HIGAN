@@ -1,0 +1,224 @@
+{
+  "version": "control_v61_ffhq_prompt_ensemble_predictive_validity",
+  "locked_on": "2026-05-28",
+  "purpose": "Extend prompt-ensemble predictive validity to FFHQ so the claim is not only a church/bedroom cross-domain result.",
+  "experiments": [
+    {
+      "key": "ffhq_control_v61_ffhq_prompt_ensemble_predictive_validity_ffhq_prompt_ensemble_seed_2107",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under ffhq_prompt_ensemble stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2107",
+        "seed": 2107
+      }
+    },
+    {
+      "key": "ffhq_control_v61_ffhq_prompt_ensemble_predictive_validity_ffhq_prompt_ensemble_seed_2108",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under ffhq_prompt_ensemble stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2108",
+        "seed": 2108
+      }
+    },
+    {
+      "key": "ffhq_control_v61_ffhq_prompt_ensemble_predictive_validity_ffhq_prompt_ensemble_seed_2109",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under ffhq_prompt_ensemble stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2109",
+        "seed": 2109
+      }
+    },
+    {
+      "key": "ffhq_control_v61_ffhq_prompt_ensemble_predictive_validity_ffhq_prompt_ensemble_seed_2110",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under ffhq_prompt_ensemble stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2110",
+        "seed": 2110
+      }
+    },
+    {
+      "key": "ffhq_control_v61_ffhq_prompt_ensemble_predictive_validity_ffhq_prompt_ensemble_seed_2111",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "The rho signal should remain directionally stable under ffhq_prompt_ensemble stress in ffhq; failures define boundary conditions rather than being filtered out.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2111",
+        "seed": 2111
+      }
+    },
+    {
+      "key": "ffhq_control_v61_ffhq_prompt_ensemble_predictive_validity_ffhq_prompt_ensemble_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive-validity runs for ffhq_prompt_ensemble.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2107/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2108/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2109/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2110/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq_seed_2111/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble/ffhq",
+        "seed": 4606
+      }
+    }
+  ]
+}

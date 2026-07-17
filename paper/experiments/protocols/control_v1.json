@@ -1,0 +1,78 @@
+{
+  "version": "control_v1",
+  "locked_on": "2026-05-23",
+  "purpose": "Test whether generator-side curvature is an operational control signal for latent editing. All methods and negative outcomes are reported; outputs must not filter attributes or methods based on observed performance.",
+  "common": {
+    "seed": 2027,
+    "lod": 2.0,
+    "batch": 4,
+    "device": "cuda",
+    "domain": "ffhq",
+    "attrs": ["smile", "age", "pose", "gender", "eyeglasses"]
+  },
+  "experiments": [
+    {
+      "key": "direction_control",
+      "order": 1,
+      "script": "experiments/baselines/run_matched_editing_head_to_head.py",
+      "claim_tested": "High-curvature candidate directions are unstable at matched semantic change; low-curvature selection is evaluated against random and high-curvature controls.",
+      "primary_metrics": ["mean_id_cos", "mean_lpips_proxy", "mean_abs_delta_attr"],
+      "primary_comparisons": ["curvature_low - random", "curvature_low - curvature_high"],
+      "reporting_rule": "Report all five FFHQ attributes and all three groups. Do not drop smile/pose/gender if unfavorable.",
+      "args": {
+        "n-calib": 64,
+        "n-test": 256,
+        "k-per-group": 8,
+        "alpha-steps": 9,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_direction_matched_full",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "layer_control",
+      "order": 2,
+      "script": "experiments/control/run_layer_control.py",
+      "claim_tested": "Curvature can be used with target response to choose causal layer subsets; canonical, all-layer, random, and wrong-layer baselines are retained as controls.",
+      "primary_metrics": ["mean_id_cos", "mean_lpips_proxy", "mean_abs_delta_attr"],
+      "primary_comparisons": ["curvature_control - gain_control", "curvature_control - canonical", "curvature_control - random_same_size"],
+      "reporting_rule": "Report all methods even if curvature_control underperforms. Treat underperformance as evidence about the limits of the proposed control rule.",
+      "args": {
+        "n-probe": 32,
+        "n-calib": 32,
+        "n-test": 128,
+        "layer-k": 4,
+        "responsive-quantile": 0.75,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_layer_intervention",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "composition_guard",
+      "order": 3,
+      "script": "experiments/control/run_composition_guard.py",
+      "claim_tested": "Mixed-Hessian risk predicts actual composed-edit failure better than univariate curvature controls.",
+      "primary_metrics": ["mean_target_additivity_error", "mixed_hessian_predictor", "auroc_failure_top50"],
+      "primary_comparisons": ["mixed_hessian_predictor", "max_univariate_pixel_rho", "sum_univariate_pixel_rho", "saliency_top20_iou", "saliency_cosine"],
+      "reporting_rule": "Report all ten FFHQ attribute pairs and all predictors. Do not select a failure threshold after seeing results; use top-50 failure as fixed in the script.",
+      "args": {
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 4,
+        "attr-target-fraction": 0.5,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_composition_guard",
+        "seed": 2027
+      }
+    }
+  ]
+}

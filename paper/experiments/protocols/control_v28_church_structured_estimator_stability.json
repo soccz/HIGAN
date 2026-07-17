@@ -1,0 +1,237 @@
+{
+  "version": "control_v28_church_structured_estimator_stability",
+  "locked_on": "2026-05-26",
+  "purpose": "Test whether the structured-only church controller is stable when the curvature, probe-gain, and calibration estimates use larger sample budgets.",
+  "common": {
+    "domain": "church",
+    "attrs": [
+      "clouds",
+      "sunny",
+      "vegetation"
+    ],
+    "methods": [
+      "ganspace",
+      "sefa"
+    ],
+    "target_source": "universe",
+    "lpips_net": "alex",
+    "n_risk": 16,
+    "n_probe": 32,
+    "n_calib": 32,
+    "n_test": 128
+  },
+  "experiments": [
+    {
+      "key": "church_structured_estimator_stability_seed_2027",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Church structured-only estimator stability: increasing risk/probe/calibration samples should not be required to change the predeclared controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_estimator_stability/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "church_structured_estimator_stability_seed_2028",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Church structured-only estimator stability: increasing risk/probe/calibration samples should not be required to change the predeclared controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_estimator_stability/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "church_structured_estimator_stability_seed_2029",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Church structured-only estimator stability: increasing risk/probe/calibration samples should not be required to change the predeclared controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_estimator_stability/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "church_structured_estimator_stability_seed_2030",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Church structured-only estimator stability: increasing risk/probe/calibration samples should not be required to change the predeclared controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_estimator_stability/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "church_structured_estimator_stability_seed_2031",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Church structured-only estimator stability: increasing risk/probe/calibration samples should not be required to change the predeclared controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_estimator_stability/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "church_structured_estimator_stability_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Aggregate larger-estimator church structured-only controller results.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_church_structured_estimator_stability/seed_2027/metrics.json",
+          "experiments/out/control_church_structured_estimator_stability/seed_2028/metrics.json",
+          "experiments/out/control_church_structured_estimator_stability/seed_2029/metrics.json",
+          "experiments/out/control_church_structured_estimator_stability/seed_2030/metrics.json",
+          "experiments/out/control_church_structured_estimator_stability/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_church_structured_estimator_stability/summary",
+        "seed": 4051
+      }
+    }
+  ]
+}

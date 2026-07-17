@@ -1,0 +1,658 @@
+{
+  "version": "control_v78_estimator_budget_predictive_validity",
+  "locked_on": "2026-05-29",
+  "purpose": "Test whether the random-universe prompt-ensemble signal survives a larger rho/probe sampling budget.",
+  "experiments": [
+    {
+      "key": "church_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2157",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2157",
+        "seed": 2157
+      }
+    },
+    {
+      "key": "church_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2158",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2158",
+        "seed": 2158
+      }
+    },
+    {
+      "key": "church_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2159",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2159",
+        "seed": 2159
+      }
+    },
+    {
+      "key": "church_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2160",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2160",
+        "seed": 2160
+      }
+    },
+    {
+      "key": "church_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2161",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2161",
+        "seed": 2161
+      }
+    },
+    {
+      "key": "bedroom_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2157",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2157",
+        "seed": 2157
+      }
+    },
+    {
+      "key": "bedroom_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2158",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2158",
+        "seed": 2158
+      }
+    },
+    {
+      "key": "bedroom_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2159",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2159",
+        "seed": 2159
+      }
+    },
+    {
+      "key": "bedroom_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2160",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2160",
+        "seed": 2160
+      }
+    },
+    {
+      "key": "bedroom_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2161",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2161",
+        "seed": 2161
+      }
+    },
+    {
+      "key": "ffhq_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2157",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2157",
+        "seed": 2157
+      }
+    },
+    {
+      "key": "ffhq_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2158",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2158",
+        "seed": 2158
+      }
+    },
+    {
+      "key": "ffhq_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2159",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2159",
+        "seed": 2159
+      }
+    },
+    {
+      "key": "ffhq_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2160",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2160",
+        "seed": 2160
+      }
+    },
+    {
+      "key": "ffhq_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_seed_2161",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under random_universe_high_budget in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 16,
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2161",
+        "seed": 2161
+      }
+    },
+    {
+      "key": "church_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church predictive runs for random_universe_high_budget.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2157/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2158/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2159/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2160/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church_seed_2161/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/church",
+        "seed": 4816
+      }
+    },
+    {
+      "key": "bedroom_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom predictive runs for random_universe_high_budget.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2157/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2158/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2159/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2160/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom_seed_2161/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/bedroom",
+        "seed": 4817
+      }
+    },
+    {
+      "key": "ffhq_control_v78_estimator_budget_predictive_validity_random_universe_high_budget_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive runs for random_universe_high_budget.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2157/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2158/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2159/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2160/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq_seed_2161/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget/ffhq",
+        "seed": 4818
+      }
+    }
+  ]
+}

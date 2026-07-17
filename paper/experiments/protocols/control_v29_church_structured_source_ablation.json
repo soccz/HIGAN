@@ -1,0 +1,431 @@
+{
+  "version": "control_v29_church_structured_source_ablation",
+  "locked_on": "2026-05-26",
+  "purpose": "Test whether the structured-only control claim is tied to one decomposition family by evaluating GANSpace-only and SeFa-only candidate universes.",
+  "common": {
+    "domain": "church",
+    "attrs": [
+      "clouds",
+      "sunny",
+      "vegetation"
+    ],
+    "target_source": "universe",
+    "lpips_net": "alex"
+  },
+  "experiments": [
+    {
+      "key": "church_structured_source_ablation_ganspace_only_seed_2027",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a ganspace-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_ganspace_only_seed_2028",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a ganspace-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_ganspace_only_seed_2029",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a ganspace-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_ganspace_only_seed_2030",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a ganspace-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_ganspace_only_seed_2031",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a ganspace-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_sefa_only_seed_2027",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a sefa-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_sefa_only_seed_2028",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a sefa-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_sefa_only_seed_2029",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a sefa-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_sefa_only_seed_2030",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a sefa-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_sefa_only_seed_2031",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_aware_controller.py",
+      "claim_tested": "Structured-source ablation: the control signal should be evaluated within a sefa-only candidate universe without changing the controller rule.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "k-select": 4,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "target-source": "universe",
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_ganspace_only_summary",
+      "order": 11,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Aggregate ganspace_only structured-source ablation results.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2027/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2028/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2029/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2030/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/ganspace_only_seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_church_structured_source_ablation/ganspace_only",
+        "seed": 4072
+      }
+    },
+    {
+      "key": "church_structured_source_ablation_sefa_only_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Aggregate sefa_only structured-source ablation results.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2027/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2028/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2029/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2030/metrics.json",
+          "experiments/out/control_church_structured_source_ablation/sefa_only_seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_church_structured_source_ablation/sefa_only",
+        "seed": 4073
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": "control_v90_seed_scaled_predictive_permutation_null_table",
+  "locked_on": "2026-05-29",
+  "purpose": "Run the permutation-null test on the n=10 defense set.",
+  "experiments": [
+    {
+      "key": "predictive_permutation_null_table_v2_n10",
+      "order": 1,
+      "script": "experiments/control/run_predictive_permutation_null_table.py",
+      "claim_tested": "The n=10 observed rho/damage relationships should beat attribute-wise shuffled-rho nulls.",
+      "args": {
+        "summaries": [
+          "random_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_n10/church/metrics.json",
+          "random_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_n10/bedroom/metrics.json",
+          "random_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_n10/ffhq/metrics.json",
+          "dino_n10_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/church/metrics.json",
+          "dino_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/bedroom/metrics.json",
+          "dino_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/ffhq/metrics.json",
+          "ffhq_fd_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_n10/ffhq/metrics.json",
+          "ffhq_ganspace_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_n10/ffhq/metrics.json",
+          "ffhq_sefa_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_n10/ffhq/metrics.json",
+          "budget_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/church/metrics.json",
+          "budget_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/bedroom/metrics.json",
+          "budget_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/ffhq/metrics.json",
+          "wide_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/church/metrics.json",
+          "wide_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/bedroom/metrics.json",
+          "wide_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/ffhq/metrics.json",
+          "target_q10_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/church/metrics.json",
+          "target_q10_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/bedroom/metrics.json",
+          "target_q10_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/ffhq/metrics.json",
+          "target_q50_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/church/metrics.json",
+          "target_q50_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/bedroom/metrics.json",
+          "target_q50_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/ffhq/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_permutation_null_table_v2_n10",
+        "permutations": 500,
+        "alpha": 0.05,
+        "seed": 4224
+      }
+    }
+  ]
+}

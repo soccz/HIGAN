@@ -1,0 +1,563 @@
+{
+  "version": "control_v12_threshold_magnitude_sensitivity",
+  "locked_on": "2026-05-24",
+  "purpose": "Sensitivity validation for controller hyperparameters that affect operating regime: minimum gain threshold and target edit magnitude.",
+  "common": {
+    "lod": 2.0,
+    "batch": 4,
+    "device": "cuda",
+    "domain": "ffhq",
+    "attrs": ["smile", "age", "pose", "gender", "eyeglasses"],
+    "candidate_source": "experiments/out/control_direction_matched_full/metrics.json"
+  },
+  "experiments": [
+    {
+      "key": "gain_q25_seed_2027",
+      "order": 1,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.25,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "gain_q25_seed_2028",
+      "order": 2,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.25,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "gain_q25_seed_2029",
+      "order": 3,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.25,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "gain_q25_seed_2030",
+      "order": 4,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.25,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "gain_q25_seed_2031",
+      "order": 5,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: relaxed gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.25,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "gain_q25_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Summarize relaxed gain-threshold validation over five paired seeds.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2027/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2028/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2029/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2030/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q25/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q25",
+        "seed": 4401
+      }
+    },
+    {
+      "key": "gain_q75_seed_2027",
+      "order": 7,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.75,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "gain_q75_seed_2028",
+      "order": 8,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.75,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "gain_q75_seed_2029",
+      "order": 9,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.75,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "gain_q75_seed_2030",
+      "order": 10,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.75,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "gain_q75_seed_2031",
+      "order": 11,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Gain-threshold sensitivity: strict gain eligibility should still preserve the risk-aware control advantage.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.75,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "gain_q75_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Summarize strict gain-threshold validation over five paired seeds.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2027/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2028/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2029/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2030/metrics.json",
+          "experiments/out/control_gain_threshold_sensitivity/gain_q75/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_gain_threshold_sensitivity/gain_q75",
+        "seed": 4407
+      }
+    },
+    {
+      "key": "target_q10_seed_2027",
+      "order": 13,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.10,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "target_q10_seed_2028",
+      "order": 14,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.10,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "target_q10_seed_2029",
+      "order": 15,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.10,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "target_q10_seed_2030",
+      "order": 16,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.10,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "target_q10_seed_2031",
+      "order": 17,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for smaller matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.10,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "target_q10_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Summarize smaller-target validation over five paired seeds.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2027/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2028/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2029/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2030/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q10/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q10",
+        "seed": 4510
+      }
+    },
+    {
+      "key": "target_q50_seed_2027",
+      "order": 19,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.50,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "target_q50_seed_2028",
+      "order": 20,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.50,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "target_q50_seed_2029",
+      "order": 21,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.50,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "target_q50_seed_2030",
+      "order": 22,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.50,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "target_q50_seed_2031",
+      "order": 23,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Target-magnitude sensitivity: the controller should remain useful for larger matched edits.",
+      "args": {
+        "candidate-source": "experiments/out/control_direction_matched_full/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.50,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "target_q50_summary",
+      "order": 24,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Summarize larger-target validation over five paired seeds.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2027/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2028/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2029/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2030/metrics.json",
+          "experiments/out/control_target_magnitude_sensitivity/target_q50/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_target_magnitude_sensitivity/target_q50",
+        "seed": 4550
+      }
+    }
+  ]
+}

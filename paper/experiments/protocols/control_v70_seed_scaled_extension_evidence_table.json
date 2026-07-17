@@ -1,0 +1,25 @@
+{
+  "version": "control_v70_seed_scaled_extension_evidence_table",
+  "locked_on": "2026-05-29",
+  "purpose": "Build the n=10 evidence table for random-universe and DINO-preservation seed-scaled predictive tests.",
+  "experiments": [
+    {
+      "key": "predictive_stress_evidence_table_v6_n10",
+      "order": 1,
+      "script": "experiments/control/run_predictive_stress_evidence_table.py",
+      "claim_tested": "Seed-scaled random-universe and DINO-preservation predictive evidence should remain directionally stable.",
+      "args": {
+        "summaries": [
+          "random_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_n10/church/metrics.json",
+          "random_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_n10/bedroom/metrics.json",
+          "random_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_n10/ffhq/metrics.json",
+          "dino_n10_church=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/church/metrics.json",
+          "dino_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/bedroom/metrics.json",
+          "dino_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_dino_preservation_n10/ffhq/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_stress_evidence_table_v6_n10",
+        "seed": 4216
+      }
+    }
+  ]
+}

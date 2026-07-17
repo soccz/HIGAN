@@ -1,0 +1,141 @@
+% =============================================================
+% HIGAN paper main.tex — CVPR template skeleton (v0 draft)
+% Compile with: pdflatex main && bibtex main && pdflatex main x2
+% =============================================================
+%
+% IMPORTANT: the CVPR style file is NOT shipped with this repo.
+% Download cvpr.sty / cvpr_template.tex from the latest CVPR
+% template and place alongside this file before compiling.
+%
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}             % CVPR official style — fetch separately
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[bookmarks=false]{hyperref}
+\usepackage{microtype}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc, arrows.meta, decorations.pathreplacing}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+
+% --- our macros ---
+\newcommand{\jvp}{\textsc{jvp}\xspace}
+\newcommand{\vjp}{\textsc{vjp}\xspace}
+\newcommand{\hvp}{\textsc{hvp}\xspace}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\W}{W^+}
+\newcommand{\Mfd}{\mathcal{M}}
+\newcommand{\Img}{\mathcal{I}}
+\newcommand{\dG}[1]{\mathrm{d}G_{#1}}
+\newcommand{\todo}[1]{\textcolor{red}{[\textbf{TODO}: #1]}}
+\newcommand{\note}[1]{\textcolor{blue}{[\textbf{note}: #1]}}
+
+% theorem environments
+\newtheorem{claim}{Claim}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+% \cvprfinalcopy not needed in current cvpr.sty (cvpr-org/author-kit)
+\def\confName{CVPR}
+\def\confYear{2026}
+\def\cvprPaperID{****}
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Forward-Mode Differential Geometry of GAN Latent Spaces:\\
+       Per-Pixel Curvature and Compositional Editing Prediction}
+
+\author{Jihong An\\
+Affiliation\\
+Institute\\
+{\tt\small ether9073@gmail.com}
+% For a paper whose authors are all at the same institution,
+% omit the following lines until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+}
+
+\maketitle
+\thispagestyle{empty}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+We view trained image generators through the differential geometry of their
+image manifold $\Mfd = G(\W) \subset \R^{3HW}$. Per-pixel saliency,
+attribute disentanglement, compositional editing failure, and unsupervised
+direction discovery are recast as classical operations: pushforward, the
+second fundamental form, Lie brackets of vector fields, and tangent-space
+clustering. Forward-mode automatic differentiation gives all per-pixel
+first- and second-order sensitivities in a single composed pass, making
+each operation directly measurable in $\sim 2 \times$ a generator forward.
+We formalise six structural claims and validate each quantitatively on
+four pre-trained generators spanning two architecture families: StyleGAN1
+(LSUN bedroom, FFHQ faces), StyleGAN2 (LSUN church), and Stable Diffusion
+v1.5 (latent diffusion). Across 13 attribute--domain combinations, layer
+localisation IoU is positive at every threshold from 10\% to 50\% of
+pixels; two independent curvature measures (pixel
+$\partial^2 I/\partial\alpha^2$ and CLIP-feature path length / direct
+distance) agree at Pearson $r=+0.99$ (bedroom) and Spearman $r=+1.00$
+(FFHQ); unsupervised K-means clusters of random directions recover the
+ground-truth attribute set with precision $1.00$ on both bedroom and FFHQ
+(lift $+0.81 / +0.66$ over the random-vocab null). The mixed-Hessian
+predictor of compositional non-linearity is honest about its scope: it
+discriminates between curvature regimes but does not order within a
+regime. Code and reproducible benchmarks at
+\url{https://github.com/soccz/HIGAN}.
+\end{abstract}
+
+%-------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+\input{sections/01_introduction}
+
+%-------------------------------------------------------------------------
+\section{Related Work}
+\label{sec:related}
+\input{sections/02_related}
+
+%-------------------------------------------------------------------------
+\section{Theoretical Framework}
+\label{sec:theory}
+\input{sections/03_theory}
+
+%-------------------------------------------------------------------------
+\section{Method}
+\label{sec:method}
+\input{sections/04_method}
+
+%-------------------------------------------------------------------------
+\section{Empirical Validation of the Six Claims}
+\label{sec:experiments}
+\input{sections/05_experiments}
+
+%-------------------------------------------------------------------------
+\section{Application: Compositional Editing Prediction}
+\label{sec:application}
+\input{sections/06_application}
+
+%-------------------------------------------------------------------------
+\section{Limitations and Discussion}
+\label{sec:discussion}
+\input{sections/07_discussion}
+
+%-------------------------------------------------------------------------
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{references}
+}
+
+\end{document}

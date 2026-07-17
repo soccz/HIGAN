@@ -1,0 +1,436 @@
+{
+  "version": "control_v57_prompt_ensemble_fd_predictive_validity",
+  "locked_on": "2026-05-28",
+  "purpose": "Test whether prompt-ensemble predictive validity survives replacing JVP rho with finite-difference rho.",
+  "experiments": [
+    {
+      "key": "church_control_v57_prompt_ensemble_fd_predictive_validity_seed_2092",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2092",
+        "seed": 2092,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "church_control_v57_prompt_ensemble_fd_predictive_validity_seed_2093",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2093",
+        "seed": 2093,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "church_control_v57_prompt_ensemble_fd_predictive_validity_seed_2094",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2094",
+        "seed": 2094,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "church_control_v57_prompt_ensemble_fd_predictive_validity_seed_2095",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2095",
+        "seed": 2095,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "church_control_v57_prompt_ensemble_fd_predictive_validity_seed_2096",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in church.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2096",
+        "seed": 2096,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "bedroom_control_v57_prompt_ensemble_fd_predictive_validity_seed_2092",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2092",
+        "seed": 2092,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "bedroom_control_v57_prompt_ensemble_fd_predictive_validity_seed_2093",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2093",
+        "seed": 2093,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "bedroom_control_v57_prompt_ensemble_fd_predictive_validity_seed_2094",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2094",
+        "seed": 2094,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "bedroom_control_v57_prompt_ensemble_fd_predictive_validity_seed_2095",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2095",
+        "seed": 2095,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "bedroom_control_v57_prompt_ensemble_fd_predictive_validity_seed_2096",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Prompt-ensemble predictive validity should remain directionally stable under this stress setting in bedroom.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "fd",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2096",
+        "seed": 2096,
+        "fd-eps": 0.25
+      }
+    },
+    {
+      "key": "church_control_v57_prompt_ensemble_fd_predictive_validity_summary",
+      "order": 11,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church prompt-ensemble predictive-validity runs for control_v57_prompt_ensemble_fd_predictive_validity.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2092/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2093/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2094/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2095/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church_seed_2096/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/church",
+        "seed": 4411
+      }
+    },
+    {
+      "key": "bedroom_control_v57_prompt_ensemble_fd_predictive_validity_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom prompt-ensemble predictive-validity runs for control_v57_prompt_ensemble_fd_predictive_validity.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2092/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2093/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2094/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2095/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom_seed_2096/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_fd/bedroom",
+        "seed": 4412
+      }
+    }
+  ]
+}

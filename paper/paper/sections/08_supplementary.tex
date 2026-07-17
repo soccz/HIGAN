@@ -1,0 +1,185 @@
+% =====================================================
+% 08_supplementary.tex — supplementary material for the camera-ready
+% =====================================================
+%
+% Compiled separately as supplementary_main.tex; the main paper
+% includes only summary references to these contents.
+
+\section{Extended proofs}
+\label{app:proofs}
+
+\subsection{Proposition 2 (second fundamental form): full proof}
+
+\noindent\emph{Restatement.} At a point $wp$ where $dG_{wp}$ has full
+rank on $b$, the projection of $H(wp, b)$ onto the normal bundle
+$N_{G(wp)}\Mfd \subset T_{G(wp)}\R^{3HW}$ equals the second
+fundamental form $\mathrm{II}(b, b)$ of the embedding
+$\Mfd \hookrightarrow \R^{3HW}$.
+
+\begin{proof}
+Let $i:\Mfd \hookrightarrow \R^{3HW}$ denote the inclusion. The
+second fundamental form is the symmetric bilinear form on $T\Mfd$
+defined by
+$\mathrm{II}(X, Y) = (\nabla^{\R^{3HW}}_X Y)^\perp$
+where $\nabla^{\R^{3HW}}$ is the flat connection on $\R^{3HW}$ and
+$(\cdot)^\perp$ projects onto $N\Mfd$.
+
+Parameterise locally: let $\gamma(\alpha) = G(wp + \alpha b)$ be the
+curve in $\Mfd$ through $G(wp)$ with $\gamma'(0) = dG_{wp}\cdot b$.
+By the chain rule
+$$\nabla^{\R^{3HW}}_{\gamma'(0)} \gamma'(0)
+  \;=\; \tfrac{d}{d\alpha}\Big|_{\alpha = 0}
+  \!\big[ \gamma'(\alpha) \big] \;=\; \gamma''(0)
+  \;=\; \tfrac{\partial^2}{\partial \alpha^2}\Big|_{\alpha = 0}
+  G(wp + \alpha b)
+  \;=\; H(wp, b).$$
+Projecting onto $N\Mfd$:
+$\mathrm{II}(dG\,b, dG\,b) = H(wp, b)^\perp$.
+The tangential component $H(wp, b)^\top = H - H^\perp$ vanishes when
+$\alpha \mapsto wp + \alpha b$ is a geodesic for the pullback metric
+$g = dG^\top dG$ on $\W$. For generic $b$ it does not vanish but
+captures the geodesic acceleration of the latent curve. We report
+the full $|H|$ in §C1 because (a) it is what \texttt{torch.func.jvp}
+returns and (b) at the prior-averaged level, the tangential and
+normal components both contribute meaningfully to "compositional
+non-linearity" --- the normal component is geometric curvature, the
+tangential component is the geodesic correction.
+\qed
+\end{proof}
+
+\subsection{Proposition 3 (compositional superposition): full proof}
+
+\noindent\emph{Restatement.} For $G\in C^2(wp)$,
+$G(wp + b_a + b_b) - G(wp + b_a) - G(wp + b_b) + G(wp) =
+ H(wp; b_a, b_b) + O(\|b\|^3)$.
+
+\begin{proof}
+Taylor-expand each term to third order, using the convention
+$d^k G \cdot (u, \ldots, u) := \partial^k/\partial\epsilon^k|_{\epsilon=0}
+ G(wp + \epsilon u)$:
+\begin{align*}
+G(wp + b_a + b_b) &= G(wp) + dG\cdot(b_a + b_b)
+  + \tfrac12 d^2 G\cdot(b_a+b_b, b_a+b_b) + O(\|b\|^3)\\
+G(wp + b_a) &= G(wp) + dG\cdot b_a + \tfrac12 d^2 G\cdot(b_a, b_a) + O(\|b\|^3)\\
+G(wp + b_b) &= G(wp) + dG\cdot b_b + \tfrac12 d^2 G\cdot(b_b, b_b) + O(\|b\|^3)
+\end{align*}
+Signed sum:
+\begin{align*}
+&G(wp + b_a + b_b) - G(wp + b_a) - G(wp + b_b) + G(wp)\\
+&= \tfrac12\!\left[d^2 G\cdot(b_a+b_b, b_a+b_b)
+   - d^2 G\cdot(b_a, b_a) - d^2 G\cdot(b_b, b_b)\right] + O(\|b\|^3)\\
+&= d^2 G\cdot(b_a, b_b) + O(\|b\|^3)
+\end{align*}
+where the last equality uses the symmetry $d^2 G(u,v) = d^2 G(v,u)$
+and the bilinear expansion of $d^2 G(u+v, u+v)$.
+By definition $d^2 G\cdot(b_a, b_b) = H(wp; b_a, b_b)$.
+\qed
+\end{proof}
+
+\section{Extended experimental tables}
+\label{app:tables}
+
+\subsection{Track 11 wall-clock benchmark}
+
+\todo[Populate from out/walltime/metrics.json once Wave 3 completes.]
+
+\subsection{Track 14 per-domain noise robustness}
+
+\todo[Populate from out/noise_robustness_*/metrics.json once Wave 3
+completes. Format: per-attribute mean ± std across 5 seeds × 32
+samples each.]
+
+\subsection{Track 17 intrinsic dimensions}
+
+\todo[Median effective rank and IQR per domain, plus per-latent
+spectrum top-16 values.]
+
+\subsection{Track 7 Park-NeurIPS23 reproduction}
+
+\todo[$\sigma$ vs $\rho$ Spearman across 8 seeds + qualitative
+visualisations of top-4 SVD direction sweeps.]
+
+\section{Hyperparameter sensitivity}
+\label{app:hyperparam}
+
+\subsection{Truncation-$\psi$ (Track 8)}
+\todo[Per-attr $\bar\rho$ at $\psi \in \{0.5, 0.7, 1.0\}$ with
+cross-$\psi$ Spearman r.]
+
+\subsection{CLIP variant (Track 9)}
+\todo[Per-variant $\times$ per-domain Pearson + Spearman; expect
+$r \geq 0.9$ across {ViT-B/32, L/14, H/14}.]
+
+\subsection{Threshold for top-k (Track 3 / Track 12)}
+\todo[Per-attribute C3 score at top-k$\in\{0.1, 0.2, 0.3, 0.5\}$.
+Already partially reported in main paper Tab.~\ref{tab:c3}.]
+
+\section{Compute and reproducibility}
+\label{app:repro}
+
+\subsection{Hardware}
+All experiments fit on a single 8\,GB GPU (RTX 3070). Wall-clock per
+track is given in \texttt{experiments/designs/NN\_*.md} under
+"Compute budget".
+
+\subsection{Code organisation}
+The supplementary code archive (\texttt{HIGAN-paper.zip}) contains:
+\begin{itemize}
+\item \texttt{experiments/designs/} — one markdown design doc per
+      track (1--23), each with hypothesis / prior art / method /
+      expected signal / failure modes.
+\item \texttt{experiments/diffusion/} — Stable Diffusion v1.5
+      h-space wrapper + JVP-safe DDIM step + C1/C2/Park-repro/DAAM
+      scripts.
+\item \texttt{experiments/domains/\{ffhq, bedroom, church\}/} —
+      generator wrappers + per-domain measurement scripts.
+\item \texttt{experiments/baselines/} — GANSpace, SeFa, LatentCLR,
+      DisCo, CLIP-Grad-CAM, editing head-to-head.
+\item \texttt{experiments/metrics/} — quantitative metric drivers
+      (C2 path, C3 IoU, sample scaling, multi-CLIP, fingerprint).
+\item \texttt{experiments/method/} — wall-clock benchmark + FD
+      validation + intrinsic dimension.
+\item \texttt{experiments/run\_all\_tracks.sh} — sequential queued
+      runner.
+\item \texttt{experiments/aggregate\_results.py} — produces the
+      final results dashboard.
+\end{itemize}
+
+\subsection{Replication procedure}
+\begin{verbatim}
+git clone <repo>
+cd HIGAN/paper
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+nohup bash experiments/run_all_tracks.sh > logs/run.log 2>&1 &
+# wait ~170 hours
+python experiments/aggregate_results.py
+\end{verbatim}
+
+Total disk usage: $\sim$5\,GB for SD models, $\sim$2\,GB for
+StyleGAN checkpoints, $\sim$1\,GB for outputs.
+
+\section{Failure modes encountered}
+\label{app:failures}
+
+For complete reviewer transparency, we list the implementation
+issues encountered while building the SD wrapper:
+
+\begin{itemize}
+\item \texttt{F.scaled\_dot\_product\_attention} (flash kernel) does
+  not support forward-mode AD as of torch 2.2. Resolved by switching
+  to the math \texttt{AttnProcessor}.
+\item Composed JVP through 25 DDIM steps OOMs at 512$^2$ on 8\,GB.
+  Resolved by computing the second derivative as
+  $(\jvp|_{+\epsilon} - \jvp|_{-\epsilon})/(2\epsilon)$ (Park
+  NeurIPS23's construction) which keeps peak memory at one JVP's
+  budget. Sensitivity to $\epsilon$ is in §C of the main paper.
+\item fp16 + math \texttt{AttnProcessor} loses dtype consistency
+  under \jvp; we run SD in fp32, which still fits at 512$^2$.
+\item DAAM cross-attention capture requires patching diffusers'
+  \texttt{AttnProcessor.\_\_call\_\_}; we provide the patched class
+  in \texttt{experiments/diffusion/run\_daam\_comparison.py}.
+\end{itemize}
+
+The bedroom + FFHQ StyleGAN wrappers carry analogous fixes
+documented in their respective \texttt{generator.py}.

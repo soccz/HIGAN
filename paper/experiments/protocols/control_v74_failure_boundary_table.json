@@ -1,0 +1,25 @@
+{
+  "version": "control_v74_failure_boundary_table",
+  "locked_on": "2026-05-29",
+  "purpose": "Build a final failure-boundary table so negative and borderline results are explicit rather than hidden in aggregate counts.",
+  "experiments": [
+    {
+      "key": "failure_boundary_table_v1",
+      "order": 1,
+      "script": "experiments/control/run_failure_boundary_table.py",
+      "claim_tested": "Top-tier framing should state where the rho signal is robust and where matched-pair/controller claims remain boundary-limited.",
+      "args": {
+        "tables": [
+          "stress_v4=experiments/out/control_predictive_stress_evidence_table_v4/metrics.json",
+          "extension_v5=experiments/out/control_predictive_stress_evidence_table_v5/metrics.json",
+          "dino_v1=experiments/out/control_predictive_dino_evidence_table_v1/metrics.json",
+          "seed_scaled_v6=experiments/out/control_predictive_stress_evidence_table_v6_n10/metrics.json",
+          "dino_n10_v2=experiments/out/control_predictive_dino_evidence_table_v2_n10/metrics.json",
+          "incremental_v1=experiments/out/control_rho_incremental_value_table_v1/metrics.json"
+        ],
+        "out": "experiments/out/control_failure_boundary_table_v1",
+        "seed": 4219
+      }
+    }
+  ]
+}

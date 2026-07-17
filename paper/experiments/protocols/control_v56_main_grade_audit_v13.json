@@ -1,0 +1,56 @@
+{
+  "version": "control_v56_main_grade_audit_v13",
+  "locked_on": "2026-05-28",
+  "purpose": "Final non-GPU reproducibility audit including prompt-ensemble follow-up stress tests.",
+  "experiments": [
+    {
+      "key": "main_grade_audit_v13",
+      "order": 1,
+      "script": "experiments/control/audit_control_campaign.py",
+      "claim_tested": "All locked control protocols through prompt-ensemble follow-up stress tests have complete traceable outputs.",
+      "args": {
+        "protocols": [
+          "experiments/protocols/control_v3_risk_robustness.json",
+          "experiments/protocols/control_v4_risk_signal_negatives.json",
+          "experiments/protocols/control_v5_risk_power_sensitivity.json",
+          "experiments/protocols/control_v6_true_lpips_validation.json",
+          "experiments/protocols/control_v7_expanded_candidate_universe.json",
+          "experiments/protocols/control_v9_fixed_target_negatives.json",
+          "experiments/protocols/control_v11_extended_validation.json",
+          "experiments/protocols/control_v12_threshold_magnitude_sensitivity.json",
+          "experiments/protocols/control_v14_true_lpips_fixed_target_negatives.json",
+          "experiments/protocols/control_v15_expanded_universe_true_lpips.json",
+          "experiments/protocols/control_v16_estimator_stability.json",
+          "experiments/protocols/control_v18_bedroom_cross_domain_controller.json",
+          "experiments/protocols/control_v20_church_cross_domain_controller.json",
+          "experiments/protocols/control_v22_church_risk_power_sensitivity.json",
+          "experiments/protocols/control_v23_church_failure_diagnosis.json",
+          "experiments/protocols/control_v25_church_structured_negative_controls.json",
+          "experiments/protocols/control_v27_church_structured_confirmatory_replication.json",
+          "experiments/protocols/control_v28_church_structured_estimator_stability.json",
+          "experiments/protocols/control_v29_church_structured_source_ablation.json",
+          "experiments/protocols/control_v31_cross_domain_risk_predictive_validity.json",
+          "experiments/protocols/control_v32_church_gain_first_risk_tiebreak_controller.json",
+          "experiments/protocols/control_v34_main_claim_readiness.json",
+          "experiments/protocols/control_v36_main_evidence_table.json",
+          "experiments/protocols/control_v38_semantic_feasible_minrisk_controller.json",
+          "experiments/protocols/control_v39_feasible_control_readiness.json",
+          "experiments/protocols/control_v40_feasible_control_evidence_table.json",
+          "experiments/protocols/control_v42_fd_risk_predictive_validity.json",
+          "experiments/protocols/control_v43_prompt_template_predictive_validity.json",
+          "experiments/protocols/control_v44_predictive_assumption_readiness.json",
+          "experiments/protocols/control_v46_caption_prompt_predictive_validity.json",
+          "experiments/protocols/control_v47_high_ntest_predictive_validity.json",
+          "experiments/protocols/control_v48_strict_gain_match_predictive_validity.json",
+          "experiments/protocols/control_v49_predictive_stress_evidence_table.json",
+          "experiments/protocols/control_v51_prompt_ensemble_predictive_validity.json",
+          "experiments/protocols/control_v52_predictive_stress_evidence_table_with_ensemble.json",
+          "experiments/protocols/control_v54_prompt_ensemble_followup_predictive_validity.json",
+          "experiments/protocols/control_v55_predictive_stress_evidence_table_ensemble_followup.json"
+        ],
+        "out": "experiments/out/control_campaign_audit_main_grade_v13",
+        "seed": 3722
+      }
+    }
+  ]
+}

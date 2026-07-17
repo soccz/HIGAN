@@ -1,0 +1,1309 @@
+{
+  "version": "control_v80_target_magnitude_predictive_validity",
+  "locked_on": "2026-05-29",
+  "purpose": "Test whether predictive validity is specific to the default semantic target magnitude or survives lower and higher targets.",
+  "experiments": [
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q10_seed_2167",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2167",
+        "seed": 2167
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q10_seed_2168",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2168",
+        "seed": 2168
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q10_seed_2169",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2169",
+        "seed": 2169
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q10_seed_2170",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2170",
+        "seed": 2170
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q10_seed_2171",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2171",
+        "seed": 2171
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q10_seed_2167",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2167",
+        "seed": 2167
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q10_seed_2168",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2168",
+        "seed": 2168
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q10_seed_2169",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2169",
+        "seed": 2169
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q10_seed_2170",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2170",
+        "seed": 2170
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q10_seed_2171",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2171",
+        "seed": 2171
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q10_seed_2167",
+      "order": 11,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2167",
+        "seed": 2167
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q10_seed_2168",
+      "order": 12,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2168",
+        "seed": 2168
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q10_seed_2169",
+      "order": 13,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2169",
+        "seed": 2169
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q10_seed_2170",
+      "order": 14,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2170",
+        "seed": 2170
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q10_seed_2171",
+      "order": 15,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q10 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.1,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2171",
+        "seed": 2171
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q10_summary",
+      "order": 16,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church predictive runs for target_q10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2167/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2168/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2169/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2170/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church_seed_2171/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/church",
+        "seed": 4816
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q10_summary",
+      "order": 17,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom predictive runs for target_q10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2167/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2168/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2169/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2170/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom_seed_2171/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/bedroom",
+        "seed": 4817
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q10_summary",
+      "order": 18,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive runs for target_q10.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2167/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2168/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2169/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2170/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq_seed_2171/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10/ffhq",
+        "seed": 4818
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q50_seed_2172",
+      "order": 19,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2172",
+        "seed": 2172
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q50_seed_2173",
+      "order": 20,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2173",
+        "seed": 2173
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q50_seed_2174",
+      "order": 21,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2174",
+        "seed": 2174
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q50_seed_2175",
+      "order": 22,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2175",
+        "seed": 2175
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q50_seed_2176",
+      "order": 23,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in church; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2176",
+        "seed": 2176
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q50_seed_2172",
+      "order": 24,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2172",
+        "seed": 2172
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q50_seed_2173",
+      "order": 25,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2173",
+        "seed": 2173
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q50_seed_2174",
+      "order": 26,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2174",
+        "seed": 2174
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q50_seed_2175",
+      "order": 27,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2175",
+        "seed": 2175
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q50_seed_2176",
+      "order": 28,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in bedroom; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2176",
+        "seed": 2176
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q50_seed_2172",
+      "order": 29,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2172",
+        "seed": 2172
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q50_seed_2173",
+      "order": 30,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2173",
+        "seed": 2173
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q50_seed_2174",
+      "order": 31,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2174",
+        "seed": 2174
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q50_seed_2175",
+      "order": 32,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2175",
+        "seed": 2175
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q50_seed_2176",
+      "order": 33,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Top-tier defense: rho predictive validity should remain auditable under target_q50 in ffhq; failures are kept as boundary evidence.",
+      "args": {
+        "domain": "ffhq",
+        "attrs": [
+          "smile",
+          "age",
+          "pose",
+          "gender",
+          "eyeglasses"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa",
+          "random"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.5,
+        "batch": 2,
+        "risk-estimator": "jvp",
+        "prompt-style": "ensemble",
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2176",
+        "seed": 2176
+      }
+    },
+    {
+      "key": "church_control_v80_target_magnitude_predictive_validity_target_q50_summary",
+      "order": 34,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church predictive runs for target_q50.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2172/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2173/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2174/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2175/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church_seed_2176/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/church",
+        "seed": 4834
+      }
+    },
+    {
+      "key": "bedroom_control_v80_target_magnitude_predictive_validity_target_q50_summary",
+      "order": 35,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom predictive runs for target_q50.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2172/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2173/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2174/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2175/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom_seed_2176/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/bedroom",
+        "seed": 4835
+      }
+    },
+    {
+      "key": "ffhq_control_v80_target_magnitude_predictive_validity_target_q50_summary",
+      "order": 36,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate ffhq predictive runs for target_q50.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2172/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2173/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2174/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2175/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq_seed_2176/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50/ffhq",
+        "seed": 4836
+      }
+    }
+  ]
+}

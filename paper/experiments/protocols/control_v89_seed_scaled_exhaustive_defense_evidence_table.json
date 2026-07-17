@@ -1,0 +1,34 @@
+{
+  "version": "control_v89_seed_scaled_exhaustive_defense_evidence_table",
+  "locked_on": "2026-05-29",
+  "purpose": "Build the n=10 evidence table for exhaustive defense axes.",
+  "experiments": [
+    {
+      "key": "predictive_stress_evidence_table_v8_exhaustive_n10",
+      "order": 1,
+      "script": "experiments/control/run_predictive_stress_evidence_table.py",
+      "claim_tested": "The exhaustive top-tier defense axes should remain auditable after seed scaling to n=10.",
+      "args": {
+        "summaries": [
+          "ffhq_fd_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_fd_n10/ffhq/metrics.json",
+          "ffhq_ganspace_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_ganspace_only_n10/ffhq/metrics.json",
+          "ffhq_sefa_n10=experiments/out/control_cross_domain_risk_predictive_ffhq_prompt_ensemble_sefa_only_n10/ffhq/metrics.json",
+          "budget_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/church/metrics.json",
+          "budget_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/bedroom/metrics.json",
+          "budget_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_random_universe_high_budget_n10/ffhq/metrics.json",
+          "wide_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/church/metrics.json",
+          "wide_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/bedroom/metrics.json",
+          "wide_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_wide_universe_n10/ffhq/metrics.json",
+          "target_q10_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/church/metrics.json",
+          "target_q10_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/bedroom/metrics.json",
+          "target_q10_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q10_n10/ffhq/metrics.json",
+          "target_q50_n10_church=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/church/metrics.json",
+          "target_q50_n10_bedroom=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/bedroom/metrics.json",
+          "target_q50_n10_ffhq=experiments/out/control_cross_domain_risk_predictive_prompt_ensemble_target_q50_n10/ffhq/metrics.json"
+        ],
+        "out": "experiments/out/control_predictive_stress_evidence_table_v8_exhaustive_n10",
+        "seed": 4223
+      }
+    }
+  ]
+}

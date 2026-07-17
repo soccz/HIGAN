@@ -1,0 +1,29 @@
+{
+  "version": "control_v36_main_evidence_table",
+  "locked_on": "2026-05-27",
+  "purpose": "Build reviewer-facing evidence table with seed-level bootstrap confidence intervals and exact sign-test p-values for the main control-signal claim.",
+  "experiments": [
+    {
+      "key": "main_evidence_table_v1",
+      "order": 1,
+      "script": "experiments/control/run_main_evidence_table.py",
+      "claim_tested": "The final paper table should include all central positive, negative-control, predictive-validity, and gain-first/risk-tiebreak evidence without manual filtering.",
+      "args": {
+        "bedroom-actual": "experiments/out/control_bedroom_cross_domain_true_lpips/actual_summary/metrics.json",
+        "bedroom-negative": "experiments/out/control_bedroom_cross_domain_true_lpips/negative_summary/metrics.json",
+        "church-structured": "experiments/out/control_church_failure_diagnosis/structured_only/metrics.json",
+        "church-structured-negative": "experiments/out/control_church_structured_negative_controls/negative_summary/metrics.json",
+        "church-confirmatory": "experiments/out/control_church_structured_confirmatory/actual_summary/metrics.json",
+        "church-confirmatory-negative": "experiments/out/control_church_structured_confirmatory/negative_summary/metrics.json",
+        "church-predictive": "experiments/out/control_cross_domain_risk_predictive/church/metrics.json",
+        "bedroom-predictive": "experiments/out/control_cross_domain_risk_predictive/bedroom/metrics.json",
+        "tiebreak-actual": "experiments/out/control_church_gain_first_risk_tiebreak/actual_summary/metrics.json",
+        "tiebreak-negative": "experiments/out/control_church_gain_first_risk_tiebreak/negative_summary/metrics.json",
+        "readiness": "experiments/out/control_main_claim_readiness_v1/metrics.json",
+        "out": "experiments/out/control_main_evidence_table_v1",
+        "seed": 4111,
+        "n-boot": 10000
+      }
+    }
+  ]
+}

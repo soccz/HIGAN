@@ -1,0 +1,152 @@
+{
+  "version": "control_v7_expanded_candidate_universe",
+  "locked_on": "2026-05-24",
+  "purpose": "Check whether the risk-aware controller survives an expanded predeclared candidate universe from the fixed-alpha editing run, rather than depending on the narrower matched-control output file.",
+  "common": {
+    "lod": 2.0,
+    "batch": 4,
+    "device": "cuda",
+    "domain": "ffhq",
+    "attrs": ["smile", "age", "pose", "gender", "eyeglasses"],
+    "candidate_source": "experiments/out/editing_head_to_head/metrics.json"
+  },
+  "experiments": [
+    {
+      "key": "expanded_universe_seed_2027",
+      "order": 1,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source.",
+      "args": {
+        "candidate-source": "experiments/out/editing_head_to_head/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_expanded_candidate_universe/seed_2027",
+        "seed": 2027
+      }
+    },
+    {
+      "key": "expanded_universe_seed_2028",
+      "order": 2,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source.",
+      "args": {
+        "candidate-source": "experiments/out/editing_head_to_head/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_expanded_candidate_universe/seed_2028",
+        "seed": 2028
+      }
+    },
+    {
+      "key": "expanded_universe_seed_2029",
+      "order": 3,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source.",
+      "args": {
+        "candidate-source": "experiments/out/editing_head_to_head/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_expanded_candidate_universe/seed_2029",
+        "seed": 2029
+      }
+    },
+    {
+      "key": "expanded_universe_seed_2030",
+      "order": 4,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source.",
+      "args": {
+        "candidate-source": "experiments/out/editing_head_to_head/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_expanded_candidate_universe/seed_2030",
+        "seed": 2030
+      }
+    },
+    {
+      "key": "expanded_universe_seed_2031",
+      "order": 5,
+      "script": "experiments/control/run_risk_aware_controller.py",
+      "claim_tested": "Candidate-universe ablation: controller should remain useful when candidates come from the expanded fixed-alpha source.",
+      "args": {
+        "candidate-source": "experiments/out/editing_head_to_head/metrics.json",
+        "k-select": 8,
+        "min-gain-quantile": 0.5,
+        "risk-power": 1.0,
+        "risk-selection-mode": "actual",
+        "n-probe": 32,
+        "probe-alpha": 1.0,
+        "n-calib": 32,
+        "n-test": 128,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "lod": 2,
+        "out": "experiments/out/control_expanded_candidate_universe/seed_2031",
+        "seed": 2031
+      }
+    },
+    {
+      "key": "expanded_universe_summary",
+      "order": 6,
+      "script": "experiments/control/run_risk_aware_repeat_summary.py",
+      "claim_tested": "Summarize expanded-candidate-universe validation over the same five seeds.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_expanded_candidate_universe/seed_2027/metrics.json",
+          "experiments/out/control_expanded_candidate_universe/seed_2028/metrics.json",
+          "experiments/out/control_expanded_candidate_universe/seed_2029/metrics.json",
+          "experiments/out/control_expanded_candidate_universe/seed_2030/metrics.json",
+          "experiments/out/control_expanded_candidate_universe/seed_2031/metrics.json"
+        ],
+        "out": "experiments/out/control_expanded_candidate_universe",
+        "seed": 3617
+      }
+    }
+  ]
+}

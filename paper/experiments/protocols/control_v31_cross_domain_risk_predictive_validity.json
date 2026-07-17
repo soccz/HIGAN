@@ -1,0 +1,406 @@
+{
+  "version": "control_v31_cross_domain_risk_predictive_validity",
+  "locked_on": "2026-05-27",
+  "purpose": "Directly test whether curvature/risk predicts edit damage after semantic gain is controlled, addressing gain-only ambiguity.",
+  "experiments": [
+    {
+      "key": "church_risk_predictive_seed_2037",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the church structured candidate universe.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/church_seed_2037",
+        "seed": 2037
+      }
+    },
+    {
+      "key": "church_risk_predictive_seed_2038",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the church structured candidate universe.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/church_seed_2038",
+        "seed": 2038
+      }
+    },
+    {
+      "key": "church_risk_predictive_seed_2039",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the church structured candidate universe.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/church_seed_2039",
+        "seed": 2039
+      }
+    },
+    {
+      "key": "church_risk_predictive_seed_2040",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the church structured candidate universe.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/church_seed_2040",
+        "seed": 2040
+      }
+    },
+    {
+      "key": "church_risk_predictive_seed_2041",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the church structured candidate universe.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/church_seed_2041",
+        "seed": 2041
+      }
+    },
+    {
+      "key": "bedroom_risk_predictive_seed_2037",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the bedroom structured candidate universe.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2037",
+        "seed": 2037
+      }
+    },
+    {
+      "key": "bedroom_risk_predictive_seed_2038",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the bedroom structured candidate universe.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2038",
+        "seed": 2038
+      }
+    },
+    {
+      "key": "bedroom_risk_predictive_seed_2039",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the bedroom structured candidate universe.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2039",
+        "seed": 2039
+      }
+    },
+    {
+      "key": "bedroom_risk_predictive_seed_2040",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the bedroom structured candidate universe.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2040",
+        "seed": 2040
+      }
+    },
+    {
+      "key": "bedroom_risk_predictive_seed_2041",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive validity: curvature/risk should predict identity/perceptual damage after controlling semantic gain in the bedroom structured candidate universe.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.25,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "out": "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2041",
+        "seed": 2041
+      }
+    },
+    {
+      "key": "church_risk_predictive_summary",
+      "order": 11,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church risk predictive-validity runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive/church_seed_2037/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/church_seed_2038/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/church_seed_2039/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/church_seed_2040/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/church_seed_2041/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive/church",
+        "seed": 4092
+      }
+    },
+    {
+      "key": "bedroom_risk_predictive_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom risk predictive-validity runs.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2037/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2038/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2039/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2040/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive/bedroom_seed_2041/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive/bedroom",
+        "seed": 4093
+      }
+    }
+  ]
+}

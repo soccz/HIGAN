@@ -1,0 +1,426 @@
+{
+  "version": "control_v48_strict_gain_match_predictive_validity",
+  "locked_on": "2026-05-27",
+  "purpose": "Test whether predictive validity survives stricter semantic magnitude matching by reducing gain_match_rel from 0.25 to 0.10.",
+  "experiments": [
+    {
+      "key": "church_control_v48_strict_gain_match_predictive_validity_seed_2072",
+      "order": 1,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in church, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2072",
+        "seed": 2072
+      }
+    },
+    {
+      "key": "church_control_v48_strict_gain_match_predictive_validity_seed_2073",
+      "order": 2,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in church, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2073",
+        "seed": 2073
+      }
+    },
+    {
+      "key": "church_control_v48_strict_gain_match_predictive_validity_seed_2074",
+      "order": 3,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in church, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2074",
+        "seed": 2074
+      }
+    },
+    {
+      "key": "church_control_v48_strict_gain_match_predictive_validity_seed_2075",
+      "order": 4,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in church, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2075",
+        "seed": 2075
+      }
+    },
+    {
+      "key": "church_control_v48_strict_gain_match_predictive_validity_seed_2076",
+      "order": 5,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in church, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "church",
+        "attrs": [
+          "clouds",
+          "sunny",
+          "vegetation"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2076",
+        "seed": 2076
+      }
+    },
+    {
+      "key": "bedroom_control_v48_strict_gain_match_predictive_validity_seed_2072",
+      "order": 6,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in bedroom, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2072",
+        "seed": 2072
+      }
+    },
+    {
+      "key": "bedroom_control_v48_strict_gain_match_predictive_validity_seed_2073",
+      "order": 7,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in bedroom, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2073",
+        "seed": 2073
+      }
+    },
+    {
+      "key": "bedroom_control_v48_strict_gain_match_predictive_validity_seed_2074",
+      "order": 8,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in bedroom, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2074",
+        "seed": 2074
+      }
+    },
+    {
+      "key": "bedroom_control_v48_strict_gain_match_predictive_validity_seed_2075",
+      "order": 9,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in bedroom, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2075",
+        "seed": 2075
+      }
+    },
+    {
+      "key": "bedroom_control_v48_strict_gain_match_predictive_validity_seed_2076",
+      "order": 10,
+      "script": "experiments/control/run_cross_domain_risk_predictive.py",
+      "claim_tested": "Predictive-validity assumption stress test: curvature/risk should predict identity/perceptual damage after semantic gain is controlled in bedroom, with risk_estimator=jvp and prompt_style=default.",
+      "args": {
+        "domain": "bedroom",
+        "attrs": [
+          "indoor_lighting",
+          "wood",
+          "view",
+          "carpet"
+        ],
+        "methods": [
+          "ganspace",
+          "sefa"
+        ],
+        "candidate-k": 6,
+        "ganspace-samples": 2048,
+        "min-gain-quantile": 0.5,
+        "gain-match-rel": 0.1,
+        "true-lpips": true,
+        "lpips-net": "alex",
+        "lpips-size": 256,
+        "n-risk": 8,
+        "n-probe": 16,
+        "probe-alpha": 1.0,
+        "n-calib": 16,
+        "n-test": 64,
+        "alpha-steps": 7,
+        "max-alpha": 6,
+        "target-quantile": 0.25,
+        "batch": 4,
+        "risk-estimator": "jvp",
+        "prompt-style": "default",
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2076",
+        "seed": 2076
+      }
+    },
+    {
+      "key": "church_control_v48_strict_gain_match_predictive_validity_summary",
+      "order": 11,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate church predictive-validity assumption stress runs for control_v48_strict_gain_match_predictive_validity.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2072/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2073/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2074/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2075/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church_seed_2076/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/church",
+        "seed": 4211
+      }
+    },
+    {
+      "key": "bedroom_control_v48_strict_gain_match_predictive_validity_summary",
+      "order": 12,
+      "script": "experiments/control/run_risk_predictive_summary.py",
+      "claim_tested": "Aggregate bedroom predictive-validity assumption stress runs for control_v48_strict_gain_match_predictive_validity.",
+      "args": {
+        "inputs": [
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2072/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2073/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2074/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2075/metrics.json",
+          "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom_seed_2076/metrics.json"
+        ],
+        "out": "experiments/out/control_cross_domain_risk_predictive_strict_gain_match/bedroom",
+        "seed": 4212
+      }
+    }
+  ]
+}
