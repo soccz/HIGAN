@@ -1,0 +1,67 @@
+{
+  "scope": "analytic design checks only; no trained-model or novelty validation",
+  "status": "PASS",
+  "checks_run": 11,
+  "failures": 0,
+  "errors": 0,
+  "script_sha256": "9b9d1e03412e4dd32e1c16fa26283bc8aa68afe26c3e19e1c0deeb1279a165bf",
+  "design_sha256": "c9e8c5d21d379300ec2d38e91185988387b63bc2390c54fa35bde5c66ba7a415",
+  "measurements": {
+    "bilinear_max_error": 0.0,
+    "constant_directions": {
+      "order_difference": 0.0,
+      "finite_interaction_norm": 1.0
+    },
+    "direction_rescaling": {
+      "raw_second_over_first": {
+        "0.25": 0.5,
+        "1.0": 2.0,
+        "4.0": 8.0
+      },
+      "matched_residual_norm": 0.25
+    },
+    "linear_counterexample": {
+      "absolute_saliency_correlation": -0.8444444444444446,
+      "finite_interaction_norm": 0.0
+    },
+    "coordinate_transport": {
+      "transported_endpoint": [
+        0.5,
+        0.0
+      ],
+      "new_straight_endpoint": [
+        0.5,
+        -0.25
+      ]
+    },
+    "observer": {
+      "raw_interaction": [
+        0.0
+      ],
+      "squared_observation_interaction": [
+        2.0
+      ]
+    },
+    "straight_curve_variable_speed": {
+      "second_over_first": 1.0,
+      "curve_curvature": 0.0
+    },
+    "rank_deficiency": {
+      "full_latent_identity_possible": false,
+      "output_tangent_preserved": true
+    },
+    "encoder_branch": {
+      "original_response": 2.0,
+      "same_numeric_direction_response": -2.0,
+      "transported_direction_response": 2.0
+    },
+    "finite_grid": {
+      "max_sampled_residual": 0.0,
+      "unsampled_residual": 1.0
+    },
+    "hinge": {
+      "local_second_derivative": 0.0,
+      "residual_at_1": 0.5
+    }
+  }
+}

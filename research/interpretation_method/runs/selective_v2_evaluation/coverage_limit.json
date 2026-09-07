@@ -1,0 +1,15 @@
+{
+  "scope": "post-evaluation oracle diagnosis; target labels used, not a prediction",
+  "formula": "sum_groups max(0, K - actually_acceptable_count) / sum_groups K; K=floor(group_size*0.5)",
+  "fixed_fraction": 0.5,
+  "groups": 192,
+  "forced_failure_groups": 68,
+  "oracle_wrong": 2288,
+  "selected": 10752,
+  "oracle_minimum_risk": 0.21279761904761904,
+  "near_ridge_fixed_fraction_risk": 0.22200520833333331,
+  "near_ridge_threshold_accepted_min_per_anchor": 16,
+  "near_ridge_threshold_accepted_max_per_anchor": 336,
+  "near_ridge_zero_acceptance_anchors": 0,
+  "rows_sha256": "ffe2252f15d219e3dbc1fa92f5dedbc5305c10d427512298ecc45604b7562a49"
+}

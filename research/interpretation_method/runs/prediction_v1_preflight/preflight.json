@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "gate_scope": "finite forward measurement; JVP checks are diagnostic and not a gate for the finite pilot",
+  "repeat_max_abs": 0.0,
+  "wrapper_max_abs": 0.0,
+  "forward_ms": 18.632401537615806,
+  "base_min": -1.1079137325286865,
+  "base_max": 1.0815701484680176,
+  "jvp_fd_relative_rms": {
+    "view": {
+      "0.01": 0.05914009296866691,
+      "0.03": 0.11098927148635045,
+      "0.1": 0.20552153201736595
+    },
+    "indoor_lighting": {
+      "0.01": 0.025885790530718305,
+      "0.03": 0.04530798975160911,
+      "0.1": 0.08799176378863527
+    },
+    "wood": {
+      "0.01": 0.031089592956862717,
+      "0.03": 0.05219813215300505,
+      "0.1": 0.09353997252916378
+    }
+  },
+  "mixed_symmetry_relative_error": 4.073795899278522e-07,
+  "mixed_rms": 0.008551690185670778,
+  "mixed_jvp_seconds": 0.2160784974694252,
+  "peak_allocated_bytes": 576982016,
+  "local_derivative_scope": "AD local mixed derivative; no finite-interval Hessian guarantee"
+}

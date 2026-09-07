@@ -1,0 +1,2501 @@
+{
+  "scope": "secondary information hierarchy and view exclusion; all models/thresholds remain frozen",
+  "rows_sha256": "ffe2252f15d219e3dbc1fa92f5dedbc5305c10d427512298ecc45604b7562a49",
+  "analysis_source_sha256": "a7c118496d2bb575d6f403852c81e53fe037080a0c4a0a6817a589f787bac6b4",
+  "information_increments": [
+    {
+      "richer": "near_ridge",
+      "baseline": "overlap",
+      "mae_relative_gain": 0.7311485900739904,
+      "mae_relative_gain_95": [
+        0.6880646439187164,
+        0.7708378796883782
+      ],
+      "matched_risk_improvement": 0.06994047619047619,
+      "matched_risk_improvement_95": [
+        0.05626860119047619,
+        0.08482142857142856
+      ]
+    },
+    {
+      "richer": "two_amplitude",
+      "baseline": "near_ridge",
+      "mae_relative_gain": 0.10753526545894243,
+      "mae_relative_gain_95": [
+        0.0743942112168081,
+        0.13267873322623316
+      ],
+      "matched_risk_improvement": 0.0005580357142857153,
+      "matched_risk_improvement_95": [
+        -0.0009300595238095218,
+        0.0023251488095238095
+      ]
+    },
+    {
+      "richer": "two_direction",
+      "baseline": "two_amplitude",
+      "mae_relative_gain": 0.004569225984253689,
+      "mae_relative_gain_95": [
+        0.0021179086730334583,
+        0.006677717809938281
+      ],
+      "matched_risk_improvement": 0.00046502976190476134,
+      "matched_risk_improvement_95": [
+        9.300595238095238e-05,
+        0.0009300595238095221
+      ]
+    }
+  ],
+  "without_view": {
+    "n": 16128,
+    "independent_anchors": 64,
+    "actual_nonadditive_rate": 0.4476066468253968,
+    "methods": {
+      "overlap": {
+        "mean_absolute_risk_error": 0.029318792561630634,
+        "fixed_coverage": 0.5,
+        "fixed_coverage_risk": 0.37351190476190477,
+        "threshold": 0.074,
+        "coverage": 0.08947172619047619,
+        "accepted": 1443,
+        "wrong": 203,
+        "false_adoption": 0.14067914067914067,
+        "cluster_bootstrap_risk_upper_95": 0.2126829152586905,
+        "valid_bootstrap_draws": 4000,
+        "empirical_practical_gate": false,
+        "by_anchor": {
+          "96001": {
+            "mae": 0.0062493877138672885,
+            "fixed_coverage_risk": 0.09523809523809523,
+            "accepted": 29,
+            "wrong": 0
+          },
+          "96002": {
+            "mae": 0.019344588907676662,
+            "fixed_coverage_risk": 0.0873015873015873,
+            "accepted": 18,
+            "wrong": 0
+          },
+          "96003": {
+            "mae": 0.015120819464443264,
+            "fixed_coverage_risk": 0.30952380952380953,
+            "accepted": 24,
+            "wrong": 0
+          },
+          "96004": {
+            "mae": 0.03358915691843631,
+            "fixed_coverage_risk": 0.6984126984126984,
+            "accepted": 56,
+            "wrong": 17
+          },
+          "96005": {
+            "mae": 0.012050945831585714,
+            "fixed_coverage_risk": 0.16666666666666666,
+            "accepted": 5,
+            "wrong": 0
+          },
+          "96006": {
+            "mae": 0.03791362684449476,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 72,
+            "wrong": 0
+          },
+          "96007": {
+            "mae": 0.02346382323264035,
+            "fixed_coverage_risk": 0.5793650793650794,
+            "accepted": 1,
+            "wrong": 1
+          },
+          "96008": {
+            "mae": 0.017440909558269636,
+            "fixed_coverage_risk": 0.9285714285714286,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96009": {
+            "mae": 0.014222297972656147,
+            "fixed_coverage_risk": 0.18253968253968253,
+            "accepted": 12,
+            "wrong": 0
+          },
+          "96010": {
+            "mae": 0.02674161367548864,
+            "fixed_coverage_risk": 0.373015873015873,
+            "accepted": 105,
+            "wrong": 16
+          },
+          "96011": {
+            "mae": 0.02587760948347722,
+            "fixed_coverage_risk": 0.03968253968253968,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96012": {
+            "mae": 0.01118780118132651,
+            "fixed_coverage_risk": 0.09523809523809523,
+            "accepted": 16,
+            "wrong": 0
+          },
+          "96013": {
+            "mae": 0.021550181183096435,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 88,
+            "wrong": 0
+          },
+          "96014": {
+            "mae": 0.01632474119402842,
+            "fixed_coverage_risk": 0.30158730158730157,
+            "accepted": 8,
+            "wrong": 0
+          },
+          "96015": {
+            "mae": 0.04025458222289209,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96016": {
+            "mae": 0.021831058776736245,
+            "fixed_coverage_risk": 0.3888888888888889,
+            "accepted": 24,
+            "wrong": 5
+          },
+          "96017": {
+            "mae": 0.021814176211765325,
+            "fixed_coverage_risk": 0.3253968253968254,
+            "accepted": 58,
+            "wrong": 3
+          },
+          "96018": {
+            "mae": 0.018077706805937923,
+            "fixed_coverage_risk": 0.5158730158730159,
+            "accepted": 10,
+            "wrong": 4
+          },
+          "96019": {
+            "mae": 0.028882534385360953,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 42,
+            "wrong": 0
+          },
+          "96020": {
+            "mae": 0.015422333431759784,
+            "fixed_coverage_risk": 0.8492063492063492,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96021": {
+            "mae": 0.016841256772831648,
+            "fixed_coverage_risk": 0.031746031746031744,
+            "accepted": 28,
+            "wrong": 0
+          },
+          "96022": {
+            "mae": 0.013089654514622876,
+            "fixed_coverage_risk": 0.2857142857142857,
+            "accepted": 7,
+            "wrong": 0
+          },
+          "96023": {
+            "mae": 0.016418709346408898,
+            "fixed_coverage_risk": 0.14285714285714285,
+            "accepted": 8,
+            "wrong": 0
+          },
+          "96024": {
+            "mae": 0.008182181826334812,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 46,
+            "wrong": 0
+          },
+          "96025": {
+            "mae": 0.024655250850265747,
+            "fixed_coverage_risk": 0.6031746031746031,
+            "accepted": 6,
+            "wrong": 2
+          },
+          "96026": {
+            "mae": 0.024950493729791128,
+            "fixed_coverage_risk": 0.6904761904761905,
+            "accepted": 24,
+            "wrong": 1
+          },
+          "96027": {
+            "mae": 0.026157519796998763,
+            "fixed_coverage_risk": 0.031746031746031744,
+            "accepted": 2,
+            "wrong": 0
+          },
+          "96028": {
+            "mae": 0.008966189517495287,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 36,
+            "wrong": 0
+          },
+          "96029": {
+            "mae": 0.11826885214631516,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 36,
+            "wrong": 32
+          },
+          "96030": {
+            "mae": 0.018737879542134517,
+            "fixed_coverage_risk": 0.8571428571428571,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96031": {
+            "mae": 0.010940054429779146,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 12,
+            "wrong": 0
+          },
+          "96032": {
+            "mae": 0.08144834802113862,
+            "fixed_coverage_risk": 0.9047619047619048,
+            "accepted": 10,
+            "wrong": 6
+          },
+          "96033": {
+            "mae": 0.02545576484943394,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 16,
+            "wrong": 0
+          },
+          "96034": {
+            "mae": 0.12030758878153935,
+            "fixed_coverage_risk": 0.9841269841269841,
+            "accepted": 23,
+            "wrong": 23
+          },
+          "96035": {
+            "mae": 0.026421354667063843,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 35,
+            "wrong": 0
+          },
+          "96036": {
+            "mae": 0.019844380619444837,
+            "fixed_coverage_risk": 0.11904761904761904,
+            "accepted": 12,
+            "wrong": 0
+          },
+          "96037": {
+            "mae": 0.1079307422148073,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 21,
+            "wrong": 21
+          },
+          "96038": {
+            "mae": 0.025819148870975098,
+            "fixed_coverage_risk": 0.6428571428571429,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96039": {
+            "mae": 0.013714260273444776,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 10,
+            "wrong": 0
+          },
+          "96040": {
+            "mae": 0.02710021130718292,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 36,
+            "wrong": 0
+          },
+          "96041": {
+            "mae": 0.013942297523507381,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 100,
+            "wrong": 1
+          },
+          "96042": {
+            "mae": 0.012985160322455308,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 12,
+            "wrong": 0
+          },
+          "96043": {
+            "mae": 0.028001568793305953,
+            "fixed_coverage_risk": 0.6746031746031746,
+            "accepted": 6,
+            "wrong": 2
+          },
+          "96044": {
+            "mae": 0.12077390737247783,
+            "fixed_coverage_risk": 0.9761904761904762,
+            "accepted": 31,
+            "wrong": 31
+          },
+          "96045": {
+            "mae": 0.009796457939981903,
+            "fixed_coverage_risk": 0.2777777777777778,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96046": {
+            "mae": 0.025529218515298387,
+            "fixed_coverage_risk": 0.7142857142857143,
+            "accepted": 30,
+            "wrong": 12
+          },
+          "96047": {
+            "mae": 0.018335910128432588,
+            "fixed_coverage_risk": 0.23809523809523808,
+            "accepted": 120,
+            "wrong": 14
+          },
+          "96048": {
+            "mae": 0.011758089478632343,
+            "fixed_coverage_risk": 0.03968253968253968,
+            "accepted": 12,
+            "wrong": 0
+          },
+          "96049": {
+            "mae": 0.03549405073293697,
+            "fixed_coverage_risk": 0.9365079365079365,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96050": {
+            "mae": 0.014929415727498117,
+            "fixed_coverage_risk": 0.03968253968253968,
+            "accepted": 1,
+            "wrong": 0
+          },
+          "96051": {
+            "mae": 0.00903973441023836,
+            "fixed_coverage_risk": 0.373015873015873,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96052": {
+            "mae": 0.011897589551504389,
+            "fixed_coverage_risk": 0.30158730158730157,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96053": {
+            "mae": 0.01709261406583632,
+            "fixed_coverage_risk": 0.6746031746031746,
+            "accepted": 1,
+            "wrong": 0
+          },
+          "96054": {
+            "mae": 0.09497166796632352,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96055": {
+            "mae": 0.0344980945333809,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96056": {
+            "mae": 0.020216239294666732,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 19,
+            "wrong": 0
+          },
+          "96057": {
+            "mae": 0.02218077712684049,
+            "fixed_coverage_risk": 0.753968253968254,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96058": {
+            "mae": 0.036324320649290406,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96059": {
+            "mae": 0.024425319077077054,
+            "fixed_coverage_risk": 0.0873015873015873,
+            "accepted": 11,
+            "wrong": 0
+          },
+          "96060": {
+            "mae": 0.08635896009015541,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 9,
+            "wrong": 9
+          },
+          "96061": {
+            "mae": 0.018840332274041645,
+            "fixed_coverage_risk": 0.8015873015873016,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96062": {
+            "mae": 0.01054163733681532,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 51,
+            "wrong": 0
+          },
+          "96063": {
+            "mae": 0.02587387094276919,
+            "fixed_coverage_risk": 0.47619047619047616,
+            "accepted": 19,
+            "wrong": 3
+          },
+          "96064": {
+            "mae": 0.009985753016945606,
+            "fixed_coverage_risk": 0.03968253968253968,
+            "accepted": 65,
+            "wrong": 0
+          }
+        }
+      },
+      "near_ridge": {
+        "mean_absolute_risk_error": 0.007317817680689988,
+        "fixed_coverage": 0.5,
+        "fixed_coverage_risk": 0.30518353174603174,
+        "threshold": 0.094,
+        "coverage": 0.49776785714285715,
+        "accepted": 8028,
+        "wrong": 130,
+        "false_adoption": 0.01619332336821126,
+        "cluster_bootstrap_risk_upper_95": 0.02187126534255521,
+        "valid_bootstrap_draws": 4000,
+        "empirical_practical_gate": true,
+        "by_anchor": {
+          "96001": {
+            "mae": 0.0025878841180835242,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 143,
+            "wrong": 1
+          },
+          "96002": {
+            "mae": 0.002660372046723374,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 207,
+            "wrong": 1
+          },
+          "96003": {
+            "mae": 0.005122821976216032,
+            "fixed_coverage_risk": 0.09523809523809523,
+            "accepted": 120,
+            "wrong": 1
+          },
+          "96004": {
+            "mae": 0.005401069833770426,
+            "fixed_coverage_risk": 0.6428571428571429,
+            "accepted": 41,
+            "wrong": 1
+          },
+          "96005": {
+            "mae": 0.0031940082887549816,
+            "fixed_coverage_risk": 0.16666666666666666,
+            "accepted": 95,
+            "wrong": 1
+          },
+          "96006": {
+            "mae": 0.003696744522037804,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96007": {
+            "mae": 0.008054514953801295,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 61,
+            "wrong": 3
+          },
+          "96008": {
+            "mae": 0.004918232846457313,
+            "fixed_coverage_risk": 0.9206349206349206,
+            "accepted": 3,
+            "wrong": 0
+          },
+          "96009": {
+            "mae": 0.004874596637885611,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 141,
+            "wrong": 0
+          },
+          "96010": {
+            "mae": 0.004546184815558878,
+            "fixed_coverage_risk": 0.30952380952380953,
+            "accepted": 92,
+            "wrong": 5
+          },
+          "96011": {
+            "mae": 0.005850764247815557,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 230,
+            "wrong": 9
+          },
+          "96012": {
+            "mae": 0.003264495364849385,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 177,
+            "wrong": 2
+          },
+          "96013": {
+            "mae": 0.00445538107834806,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 246,
+            "wrong": 9
+          },
+          "96014": {
+            "mae": 0.002509713900949344,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 132,
+            "wrong": 0
+          },
+          "96015": {
+            "mae": 0.004731981634432056,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 0
+          },
+          "96016": {
+            "mae": 0.005289962247350987,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 114,
+            "wrong": 0
+          },
+          "96017": {
+            "mae": 0.0030889017154402355,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 104,
+            "wrong": 1
+          },
+          "96018": {
+            "mae": 0.0030774228944961657,
+            "fixed_coverage_risk": 0.2698412698412698,
+            "accepted": 70,
+            "wrong": 0
+          },
+          "96019": {
+            "mae": 0.0029890379071630373,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 244,
+            "wrong": 1
+          },
+          "96020": {
+            "mae": 0.0039957614170398476,
+            "fixed_coverage_risk": 0.7619047619047619,
+            "accepted": 23,
+            "wrong": 0
+          },
+          "96021": {
+            "mae": 0.002578286522838394,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 204,
+            "wrong": 1
+          },
+          "96022": {
+            "mae": 0.004212787358698512,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 133,
+            "wrong": 2
+          },
+          "96023": {
+            "mae": 0.003429545055830102,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 169,
+            "wrong": 2
+          },
+          "96024": {
+            "mae": 0.0017664773142274093,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 217,
+            "wrong": 0
+          },
+          "96025": {
+            "mae": 0.016027578483587723,
+            "fixed_coverage_risk": 0.4444444444444444,
+            "accepted": 85,
+            "wrong": 9
+          },
+          "96026": {
+            "mae": 0.010328287275286167,
+            "fixed_coverage_risk": 0.6111111111111112,
+            "accepted": 52,
+            "wrong": 4
+          },
+          "96027": {
+            "mae": 0.0039120180228911965,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 232,
+            "wrong": 5
+          },
+          "96028": {
+            "mae": 0.0019148638067081056,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 189,
+            "wrong": 0
+          },
+          "96029": {
+            "mae": 0.05457529248972431,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96030": {
+            "mae": 0.00837303130935287,
+            "fixed_coverage_risk": 0.8333333333333334,
+            "accepted": 12,
+            "wrong": 1
+          },
+          "96031": {
+            "mae": 0.0021198366523592126,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 174,
+            "wrong": 0
+          },
+          "96032": {
+            "mae": 0.0291741335862252,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 9,
+            "wrong": 0
+          },
+          "96033": {
+            "mae": 0.0019027347228100068,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 220,
+            "wrong": 0
+          },
+          "96034": {
+            "mae": 0.025804873965305643,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96035": {
+            "mae": 0.003134821253956804,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96036": {
+            "mae": 0.007009097633140282,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 212,
+            "wrong": 17
+          },
+          "96037": {
+            "mae": 0.045403220597550045,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96038": {
+            "mae": 0.0057212778790340845,
+            "fixed_coverage_risk": 0.5714285714285714,
+            "accepted": 50,
+            "wrong": 3
+          },
+          "96039": {
+            "mae": 0.0031807661307259954,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 188,
+            "wrong": 3
+          },
+          "96040": {
+            "mae": 0.003633790610012554,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 239,
+            "wrong": 0
+          },
+          "96041": {
+            "mae": 0.004125841804011933,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 250,
+            "wrong": 8
+          },
+          "96042": {
+            "mae": 0.005579351776631167,
+            "fixed_coverage_risk": 0.047619047619047616,
+            "accepted": 177,
+            "wrong": 7
+          },
+          "96043": {
+            "mae": 0.009404725160003442,
+            "fixed_coverage_risk": 0.6507936507936508,
+            "accepted": 38,
+            "wrong": 3
+          },
+          "96044": {
+            "mae": 0.018425508506209234,
+            "fixed_coverage_risk": 0.9761904761904762,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96045": {
+            "mae": 0.0038805160530509,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 127,
+            "wrong": 2
+          },
+          "96046": {
+            "mae": 0.005009846253482905,
+            "fixed_coverage_risk": 0.5396825396825397,
+            "accepted": 38,
+            "wrong": 1
+          },
+          "96047": {
+            "mae": 0.002120083727214494,
+            "fixed_coverage_risk": 0.15873015873015872,
+            "accepted": 114,
+            "wrong": 1
+          },
+          "96048": {
+            "mae": 0.002367912349082789,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 179,
+            "wrong": 0
+          },
+          "96049": {
+            "mae": 0.006990722845207788,
+            "fixed_coverage_risk": 0.9365079365079365,
+            "accepted": 5,
+            "wrong": 0
+          },
+          "96050": {
+            "mae": 0.003379718919576161,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 203,
+            "wrong": 1
+          },
+          "96051": {
+            "mae": 0.0034521492525301824,
+            "fixed_coverage_risk": 0.2777777777777778,
+            "accepted": 98,
+            "wrong": 1
+          },
+          "96052": {
+            "mae": 0.0027049171487102002,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 140,
+            "wrong": 0
+          },
+          "96053": {
+            "mae": 0.006471081288943092,
+            "fixed_coverage_risk": 0.5,
+            "accepted": 49,
+            "wrong": 0
+          },
+          "96054": {
+            "mae": 0.010279186320693842,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96055": {
+            "mae": 0.002706949212284416,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 247,
+            "wrong": 0
+          },
+          "96056": {
+            "mae": 0.004681519966290228,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 233,
+            "wrong": 5
+          },
+          "96057": {
+            "mae": 0.008378748957182044,
+            "fixed_coverage_risk": 0.6666666666666666,
+            "accepted": 26,
+            "wrong": 0
+          },
+          "96058": {
+            "mae": 0.004870602892720865,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96059": {
+            "mae": 0.004904682487047666,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 223,
+            "wrong": 14
+          },
+          "96060": {
+            "mae": 0.012339824304629956,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96061": {
+            "mae": 0.012235401616000613,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 23,
+            "wrong": 2
+          },
+          "96062": {
+            "mae": 0.002537306101661537,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 222,
+            "wrong": 0
+          },
+          "96063": {
+            "mae": 0.010220397773149028,
+            "fixed_coverage_risk": 0.40476190476190477,
+            "accepted": 69,
+            "wrong": 3
+          },
+          "96064": {
+            "mae": 0.0027607637304062085,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 186,
+            "wrong": 0
+          }
+        }
+      },
+      "two_amplitude": {
+        "mean_absolute_risk_error": 0.006572303548686447,
+        "fixed_coverage": 0.5,
+        "fixed_coverage_risk": 0.30431547619047616,
+        "threshold": 0.095,
+        "coverage": 0.5084325396825397,
+        "accepted": 8200,
+        "wrong": 146,
+        "false_adoption": 0.017804878048780486,
+        "cluster_bootstrap_risk_upper_95": 0.023095002174720814,
+        "valid_bootstrap_draws": 4000,
+        "empirical_practical_gate": true,
+        "by_anchor": {
+          "96001": {
+            "mae": 0.002899812191008114,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 151,
+            "wrong": 2
+          },
+          "96002": {
+            "mae": 0.002579057864369908,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 213,
+            "wrong": 2
+          },
+          "96003": {
+            "mae": 0.005018168424136261,
+            "fixed_coverage_risk": 0.10317460317460317,
+            "accepted": 130,
+            "wrong": 3
+          },
+          "96004": {
+            "mae": 0.005265825451518116,
+            "fixed_coverage_risk": 0.6428571428571429,
+            "accepted": 44,
+            "wrong": 1
+          },
+          "96005": {
+            "mae": 0.0031252544178848435,
+            "fixed_coverage_risk": 0.16666666666666666,
+            "accepted": 98,
+            "wrong": 1
+          },
+          "96006": {
+            "mae": 0.0031709888036703464,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96007": {
+            "mae": 0.006849956473703726,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 58,
+            "wrong": 2
+          },
+          "96008": {
+            "mae": 0.004803511190477899,
+            "fixed_coverage_risk": 0.9206349206349206,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96009": {
+            "mae": 0.004458051371179395,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 144,
+            "wrong": 1
+          },
+          "96010": {
+            "mae": 0.004467700448005847,
+            "fixed_coverage_risk": 0.29365079365079366,
+            "accepted": 96,
+            "wrong": 4
+          },
+          "96011": {
+            "mae": 0.006157985782910546,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 229,
+            "wrong": 12
+          },
+          "96012": {
+            "mae": 0.0030544141940313484,
+            "fixed_coverage_risk": 0.031746031746031744,
+            "accepted": 183,
+            "wrong": 4
+          },
+          "96013": {
+            "mae": 0.004856437713757805,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 9
+          },
+          "96014": {
+            "mae": 0.002475047140519955,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 148,
+            "wrong": 0
+          },
+          "96015": {
+            "mae": 0.00562640887872333,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 241,
+            "wrong": 0
+          },
+          "96016": {
+            "mae": 0.004678151512360131,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 124,
+            "wrong": 0
+          },
+          "96017": {
+            "mae": 0.003459859414234428,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 105,
+            "wrong": 1
+          },
+          "96018": {
+            "mae": 0.003086311914879173,
+            "fixed_coverage_risk": 0.2698412698412698,
+            "accepted": 76,
+            "wrong": 0
+          },
+          "96019": {
+            "mae": 0.0028533273523337717,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 1
+          },
+          "96020": {
+            "mae": 0.003410057934580267,
+            "fixed_coverage_risk": 0.7619047619047619,
+            "accepted": 23,
+            "wrong": 0
+          },
+          "96021": {
+            "mae": 0.0027176228636327095,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 203,
+            "wrong": 1
+          },
+          "96022": {
+            "mae": 0.004637016880177033,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 143,
+            "wrong": 5
+          },
+          "96023": {
+            "mae": 0.0034031341780798078,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 169,
+            "wrong": 4
+          },
+          "96024": {
+            "mae": 0.0019651270255174897,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 219,
+            "wrong": 0
+          },
+          "96025": {
+            "mae": 0.01287539526964039,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 81,
+            "wrong": 7
+          },
+          "96026": {
+            "mae": 0.008591472833887597,
+            "fixed_coverage_risk": 0.6111111111111112,
+            "accepted": 52,
+            "wrong": 4
+          },
+          "96027": {
+            "mae": 0.0034565996906423045,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 233,
+            "wrong": 4
+          },
+          "96028": {
+            "mae": 0.0019536325956138532,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 195,
+            "wrong": 0
+          },
+          "96029": {
+            "mae": 0.04430927388169012,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96030": {
+            "mae": 0.007272333393798073,
+            "fixed_coverage_risk": 0.8253968253968254,
+            "accepted": 15,
+            "wrong": 1
+          },
+          "96031": {
+            "mae": 0.0022548074814665144,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 179,
+            "wrong": 0
+          },
+          "96032": {
+            "mae": 0.02287726070158149,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 14,
+            "wrong": 0
+          },
+          "96033": {
+            "mae": 0.0020922487837092105,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 222,
+            "wrong": 0
+          },
+          "96034": {
+            "mae": 0.021933843138589024,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 1,
+            "wrong": 0
+          },
+          "96035": {
+            "mae": 0.002746308261733602,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96036": {
+            "mae": 0.005956743391885069,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 206,
+            "wrong": 14
+          },
+          "96037": {
+            "mae": 0.03790509062757323,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96038": {
+            "mae": 0.006097749256554264,
+            "fixed_coverage_risk": 0.5714285714285714,
+            "accepted": 55,
+            "wrong": 3
+          },
+          "96039": {
+            "mae": 0.003165936679427567,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 191,
+            "wrong": 3
+          },
+          "96040": {
+            "mae": 0.0029285640269464354,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 241,
+            "wrong": 0
+          },
+          "96041": {
+            "mae": 0.003996766891361162,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 247,
+            "wrong": 5
+          },
+          "96042": {
+            "mae": 0.005233390847052491,
+            "fixed_coverage_risk": 0.047619047619047616,
+            "accepted": 174,
+            "wrong": 5
+          },
+          "96043": {
+            "mae": 0.008438155618812492,
+            "fixed_coverage_risk": 0.6507936507936508,
+            "accepted": 40,
+            "wrong": 5
+          },
+          "96044": {
+            "mae": 0.016312306652316713,
+            "fixed_coverage_risk": 0.9761904761904762,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96045": {
+            "mae": 0.003891336737177431,
+            "fixed_coverage_risk": 0.1984126984126984,
+            "accepted": 138,
+            "wrong": 5
+          },
+          "96046": {
+            "mae": 0.004932331598109318,
+            "fixed_coverage_risk": 0.5317460317460317,
+            "accepted": 44,
+            "wrong": 2
+          },
+          "96047": {
+            "mae": 0.00230192793629813,
+            "fixed_coverage_risk": 0.14285714285714285,
+            "accepted": 120,
+            "wrong": 1
+          },
+          "96048": {
+            "mae": 0.00269452681574206,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 186,
+            "wrong": 0
+          },
+          "96049": {
+            "mae": 0.006119479346530128,
+            "fixed_coverage_risk": 0.9365079365079365,
+            "accepted": 5,
+            "wrong": 0
+          },
+          "96050": {
+            "mae": 0.002958127480053389,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 206,
+            "wrong": 0
+          },
+          "96051": {
+            "mae": 0.004157969488204366,
+            "fixed_coverage_risk": 0.2857142857142857,
+            "accepted": 112,
+            "wrong": 6
+          },
+          "96052": {
+            "mae": 0.0028081467553024843,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 148,
+            "wrong": 2
+          },
+          "96053": {
+            "mae": 0.006612244946301033,
+            "fixed_coverage_risk": 0.5,
+            "accepted": 53,
+            "wrong": 3
+          },
+          "96054": {
+            "mae": 0.009171746636382497,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96055": {
+            "mae": 0.0029904049717426532,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 0
+          },
+          "96056": {
+            "mae": 0.004607456274826551,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 233,
+            "wrong": 5
+          },
+          "96057": {
+            "mae": 0.008735781009574098,
+            "fixed_coverage_risk": 0.6746031746031746,
+            "accepted": 32,
+            "wrong": 1
+          },
+          "96058": {
+            "mae": 0.004004227822476745,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96059": {
+            "mae": 0.004890757944196465,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 222,
+            "wrong": 14
+          },
+          "96060": {
+            "mae": 0.010402815918271042,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96061": {
+            "mae": 0.009943223922026977,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 22,
+            "wrong": 1
+          },
+          "96062": {
+            "mae": 0.002660729024497675,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 226,
+            "wrong": 0
+          },
+          "96063": {
+            "mae": 0.008789961464694055,
+            "fixed_coverage_risk": 0.40476190476190477,
+            "accepted": 70,
+            "wrong": 2
+          },
+          "96064": {
+            "mae": 0.002537121577551693,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 193,
+            "wrong": 0
+          }
+        }
+      },
+      "two_direction": {
+        "mean_absolute_risk_error": 0.006538360888759939,
+        "fixed_coverage": 0.5,
+        "fixed_coverage_risk": 0.3044394841269841,
+        "threshold": 0.095,
+        "coverage": 0.5085565476190477,
+        "accepted": 8202,
+        "wrong": 149,
+        "false_adoption": 0.01816630090221897,
+        "cluster_bootstrap_risk_upper_95": 0.023475889613172735,
+        "valid_bootstrap_draws": 4000,
+        "empirical_practical_gate": true,
+        "by_anchor": {
+          "96001": {
+            "mae": 0.0029022611815541265,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 150,
+            "wrong": 2
+          },
+          "96002": {
+            "mae": 0.0025821458305330383,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 212,
+            "wrong": 2
+          },
+          "96003": {
+            "mae": 0.0050795965406041045,
+            "fixed_coverage_risk": 0.1111111111111111,
+            "accepted": 132,
+            "wrong": 4
+          },
+          "96004": {
+            "mae": 0.005275818554604692,
+            "fixed_coverage_risk": 0.6428571428571429,
+            "accepted": 44,
+            "wrong": 1
+          },
+          "96005": {
+            "mae": 0.003133754046244044,
+            "fixed_coverage_risk": 0.16666666666666666,
+            "accepted": 98,
+            "wrong": 1
+          },
+          "96006": {
+            "mae": 0.0031539029820303387,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96007": {
+            "mae": 0.006828001946616262,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 59,
+            "wrong": 2
+          },
+          "96008": {
+            "mae": 0.0047981465928191875,
+            "fixed_coverage_risk": 0.9206349206349206,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96009": {
+            "mae": 0.00444355131110541,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 144,
+            "wrong": 1
+          },
+          "96010": {
+            "mae": 0.004466553180672679,
+            "fixed_coverage_risk": 0.29365079365079366,
+            "accepted": 96,
+            "wrong": 4
+          },
+          "96011": {
+            "mae": 0.006173642783879382,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 229,
+            "wrong": 12
+          },
+          "96012": {
+            "mae": 0.00306501761047073,
+            "fixed_coverage_risk": 0.031746031746031744,
+            "accepted": 183,
+            "wrong": 4
+          },
+          "96013": {
+            "mae": 0.004873910898861406,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 9
+          },
+          "96014": {
+            "mae": 0.0024631826572426613,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 147,
+            "wrong": 0
+          },
+          "96015": {
+            "mae": 0.005618919208988467,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 241,
+            "wrong": 0
+          },
+          "96016": {
+            "mae": 0.004683316061133699,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 125,
+            "wrong": 0
+          },
+          "96017": {
+            "mae": 0.003445720010659769,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 105,
+            "wrong": 1
+          },
+          "96018": {
+            "mae": 0.003104046315243286,
+            "fixed_coverage_risk": 0.2698412698412698,
+            "accepted": 75,
+            "wrong": 0
+          },
+          "96019": {
+            "mae": 0.002852795070198957,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 1
+          },
+          "96020": {
+            "mae": 0.003406917348161011,
+            "fixed_coverage_risk": 0.7619047619047619,
+            "accepted": 23,
+            "wrong": 0
+          },
+          "96021": {
+            "mae": 0.0027667708234576736,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 202,
+            "wrong": 1
+          },
+          "96022": {
+            "mae": 0.004634765587957819,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 143,
+            "wrong": 5
+          },
+          "96023": {
+            "mae": 0.0034094083646021315,
+            "fixed_coverage_risk": 0.07142857142857142,
+            "accepted": 170,
+            "wrong": 4
+          },
+          "96024": {
+            "mae": 0.0019358687139898604,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 220,
+            "wrong": 0
+          },
+          "96025": {
+            "mae": 0.012685387239194278,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 81,
+            "wrong": 7
+          },
+          "96026": {
+            "mae": 0.008592480983745392,
+            "fixed_coverage_risk": 0.6111111111111112,
+            "accepted": 53,
+            "wrong": 5
+          },
+          "96027": {
+            "mae": 0.003434924348178505,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 233,
+            "wrong": 4
+          },
+          "96028": {
+            "mae": 0.001945506935253671,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 195,
+            "wrong": 0
+          },
+          "96029": {
+            "mae": 0.043742042662583934,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96030": {
+            "mae": 0.007178222879353218,
+            "fixed_coverage_risk": 0.8253968253968254,
+            "accepted": 15,
+            "wrong": 1
+          },
+          "96031": {
+            "mae": 0.002219657546437907,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 179,
+            "wrong": 0
+          },
+          "96032": {
+            "mae": 0.022543918666350797,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 14,
+            "wrong": 0
+          },
+          "96033": {
+            "mae": 0.0020919892894285456,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 223,
+            "wrong": 0
+          },
+          "96034": {
+            "mae": 0.021693254585328857,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 1,
+            "wrong": 0
+          },
+          "96035": {
+            "mae": 0.00274353441814197,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96036": {
+            "mae": 0.005928333427070469,
+            "fixed_coverage_risk": 0.023809523809523808,
+            "accepted": 206,
+            "wrong": 14
+          },
+          "96037": {
+            "mae": 0.03748465497439104,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96038": {
+            "mae": 0.006095411004710532,
+            "fixed_coverage_risk": 0.5714285714285714,
+            "accepted": 55,
+            "wrong": 3
+          },
+          "96039": {
+            "mae": 0.003174735164049815,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 191,
+            "wrong": 3
+          },
+          "96040": {
+            "mae": 0.0029336743082747723,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 241,
+            "wrong": 0
+          },
+          "96041": {
+            "mae": 0.003997069887951687,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 247,
+            "wrong": 5
+          },
+          "96042": {
+            "mae": 0.005189962433908119,
+            "fixed_coverage_risk": 0.047619047619047616,
+            "accepted": 174,
+            "wrong": 5
+          },
+          "96043": {
+            "mae": 0.008461773188706343,
+            "fixed_coverage_risk": 0.6507936507936508,
+            "accepted": 40,
+            "wrong": 5
+          },
+          "96044": {
+            "mae": 0.01612131940278701,
+            "fixed_coverage_risk": 0.9761904761904762,
+            "accepted": 1,
+            "wrong": 0
+          },
+          "96045": {
+            "mae": 0.003890471715270406,
+            "fixed_coverage_risk": 0.1984126984126984,
+            "accepted": 138,
+            "wrong": 5
+          },
+          "96046": {
+            "mae": 0.004903081705702264,
+            "fixed_coverage_risk": 0.5317460317460317,
+            "accepted": 44,
+            "wrong": 2
+          },
+          "96047": {
+            "mae": 0.002321932488712797,
+            "fixed_coverage_risk": 0.14285714285714285,
+            "accepted": 120,
+            "wrong": 1
+          },
+          "96048": {
+            "mae": 0.002729528248036072,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 186,
+            "wrong": 1
+          },
+          "96049": {
+            "mae": 0.0060715014737919475,
+            "fixed_coverage_risk": 0.9365079365079365,
+            "accepted": 5,
+            "wrong": 0
+          },
+          "96050": {
+            "mae": 0.002970040285605513,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 206,
+            "wrong": 0
+          },
+          "96051": {
+            "mae": 0.004170993458547962,
+            "fixed_coverage_risk": 0.2857142857142857,
+            "accepted": 112,
+            "wrong": 6
+          },
+          "96052": {
+            "mae": 0.0028167191119949134,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 147,
+            "wrong": 2
+          },
+          "96053": {
+            "mae": 0.006579655188061971,
+            "fixed_coverage_risk": 0.5,
+            "accepted": 53,
+            "wrong": 3
+          },
+          "96054": {
+            "mae": 0.009140169043020513,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96055": {
+            "mae": 0.0029815653993494617,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 0
+          },
+          "96056": {
+            "mae": 0.004596881143193794,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 233,
+            "wrong": 5
+          },
+          "96057": {
+            "mae": 0.008723405114053734,
+            "fixed_coverage_risk": 0.6746031746031746,
+            "accepted": 32,
+            "wrong": 1
+          },
+          "96058": {
+            "mae": 0.00397952602063819,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96059": {
+            "mae": 0.004885256071668001,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 222,
+            "wrong": 14
+          },
+          "96060": {
+            "mae": 0.010469841607359235,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96061": {
+            "mae": 0.009832209808728058,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 22,
+            "wrong": 1
+          },
+          "96062": {
+            "mae": 0.002692526288268152,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 226,
+            "wrong": 0
+          },
+          "96063": {
+            "mae": 0.008794808552896789,
+            "fixed_coverage_risk": 0.40476190476190477,
+            "accepted": 70,
+            "wrong": 2
+          },
+          "96064": {
+            "mae": 0.002549117188258751,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 192,
+            "wrong": 0
+          }
+        }
+      },
+      "near_linear": {
+        "mean_absolute_risk_error": 0.03884291059265073,
+        "fixed_coverage": 0.5,
+        "fixed_coverage_risk": 0.30344742063492064,
+        "threshold": 0.051,
+        "coverage": 0.35627480158730157,
+        "accepted": 5746,
+        "wrong": 74,
+        "false_adoption": 0.012878524190741385,
+        "cluster_bootstrap_risk_upper_95": 0.01924633612051742,
+        "valid_bootstrap_draws": 4000,
+        "empirical_practical_gate": false,
+        "by_anchor": {
+          "96001": {
+            "mae": 0.036774709986086326,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 69,
+            "wrong": 1
+          },
+          "96002": {
+            "mae": 0.03112582795675761,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 171,
+            "wrong": 0
+          },
+          "96003": {
+            "mae": 0.03612337889449311,
+            "fixed_coverage_risk": 0.09523809523809523,
+            "accepted": 58,
+            "wrong": 0
+          },
+          "96004": {
+            "mae": 0.04592574332511868,
+            "fixed_coverage_risk": 0.6428571428571429,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96005": {
+            "mae": 0.043107168696708685,
+            "fixed_coverage_risk": 0.16666666666666666,
+            "accepted": 40,
+            "wrong": 1
+          },
+          "96006": {
+            "mae": 0.01843395735403739,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96007": {
+            "mae": 0.048716633645143656,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 15,
+            "wrong": 0
+          },
+          "96008": {
+            "mae": 0.04989329103992334,
+            "fixed_coverage_risk": 0.9206349206349206,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96009": {
+            "mae": 0.039749801201974286,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 73,
+            "wrong": 0
+          },
+          "96010": {
+            "mae": 0.040480886160483294,
+            "fixed_coverage_risk": 0.30158730158730157,
+            "accepted": 3,
+            "wrong": 0
+          },
+          "96011": {
+            "mae": 0.03499494627525776,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 218,
+            "wrong": 11
+          },
+          "96012": {
+            "mae": 0.03593344399476837,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 128,
+            "wrong": 2
+          },
+          "96013": {
+            "mae": 0.0288307411280683,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 237,
+            "wrong": 6
+          },
+          "96014": {
+            "mae": 0.035699336043000414,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 98,
+            "wrong": 0
+          },
+          "96015": {
+            "mae": 0.025254443495783176,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 240,
+            "wrong": 1
+          },
+          "96016": {
+            "mae": 0.03907568245409553,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 59,
+            "wrong": 0
+          },
+          "96017": {
+            "mae": 0.04021915790173468,
+            "fixed_coverage_risk": 0.21428571428571427,
+            "accepted": 59,
+            "wrong": 0
+          },
+          "96018": {
+            "mae": 0.041434170442840486,
+            "fixed_coverage_risk": 0.2698412698412698,
+            "accepted": 3,
+            "wrong": 0
+          },
+          "96019": {
+            "mae": 0.025995605646845464,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 234,
+            "wrong": 1
+          },
+          "96020": {
+            "mae": 0.047181592152292236,
+            "fixed_coverage_risk": 0.7619047619047619,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96021": {
+            "mae": 0.03208275469482376,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 132,
+            "wrong": 1
+          },
+          "96022": {
+            "mae": 0.038065152902894674,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 71,
+            "wrong": 1
+          },
+          "96023": {
+            "mae": 0.03594348289560437,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 83,
+            "wrong": 2
+          },
+          "96024": {
+            "mae": 0.032481079493415374,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 177,
+            "wrong": 0
+          },
+          "96025": {
+            "mae": 0.05494186291604193,
+            "fixed_coverage_risk": 0.42063492063492064,
+            "accepted": 10,
+            "wrong": 1
+          },
+          "96026": {
+            "mae": 0.049862246872585454,
+            "fixed_coverage_risk": 0.6111111111111112,
+            "accepted": 6,
+            "wrong": 1
+          },
+          "96027": {
+            "mae": 0.0300949526983095,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 220,
+            "wrong": 1
+          },
+          "96028": {
+            "mae": 0.03223882834836385,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 142,
+            "wrong": 0
+          },
+          "96029": {
+            "mae": 0.026580244125449178,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96030": {
+            "mae": 0.052211265627926634,
+            "fixed_coverage_risk": 0.8333333333333334,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96031": {
+            "mae": 0.03291567020892355,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 119,
+            "wrong": 0
+          },
+          "96032": {
+            "mae": 0.032824053253110434,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96033": {
+            "mae": 0.03061591783989143,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 213,
+            "wrong": 0
+          },
+          "96034": {
+            "mae": 0.04489616201291835,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96035": {
+            "mae": 0.024400605365399727,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96036": {
+            "mae": 0.03799415819749376,
+            "fixed_coverage_risk": 0.031746031746031744,
+            "accepted": 170,
+            "wrong": 14
+          },
+          "96037": {
+            "mae": 0.02733253975692716,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96038": {
+            "mae": 0.048299589975661486,
+            "fixed_coverage_risk": 0.5714285714285714,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96039": {
+            "mae": 0.03448069179654887,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 127,
+            "wrong": 1
+          },
+          "96040": {
+            "mae": 0.02550965578381785,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 225,
+            "wrong": 0
+          },
+          "96041": {
+            "mae": 0.029078341698668065,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 246,
+            "wrong": 5
+          },
+          "96042": {
+            "mae": 0.03860814409547238,
+            "fixed_coverage_risk": 0.03968253968253968,
+            "accepted": 123,
+            "wrong": 5
+          },
+          "96043": {
+            "mae": 0.051029056349866785,
+            "fixed_coverage_risk": 0.6507936507936508,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96044": {
+            "mae": 0.04779266946833487,
+            "fixed_coverage_risk": 0.9761904761904762,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96045": {
+            "mae": 0.03942873702549735,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 43,
+            "wrong": 4
+          },
+          "96046": {
+            "mae": 0.0447364824777433,
+            "fixed_coverage_risk": 0.5238095238095238,
+            "accepted": 3,
+            "wrong": 0
+          },
+          "96047": {
+            "mae": 0.03735351911498437,
+            "fixed_coverage_risk": 0.15079365079365079,
+            "accepted": 42,
+            "wrong": 0
+          },
+          "96048": {
+            "mae": 0.0335125269113878,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 124,
+            "wrong": 0
+          },
+          "96049": {
+            "mae": 0.0519659211055324,
+            "fixed_coverage_risk": 0.9365079365079365,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96050": {
+            "mae": 0.0348951795270153,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 171,
+            "wrong": 2
+          },
+          "96051": {
+            "mae": 0.03905365734600802,
+            "fixed_coverage_risk": 0.2777777777777778,
+            "accepted": 11,
+            "wrong": 1
+          },
+          "96052": {
+            "mae": 0.03580511362434348,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 75,
+            "wrong": 0
+          },
+          "96053": {
+            "mae": 0.045899552990629276,
+            "fixed_coverage_risk": 0.5,
+            "accepted": 2,
+            "wrong": 0
+          },
+          "96054": {
+            "mae": 0.06029958381253739,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96055": {
+            "mae": 0.027239544034325762,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 240,
+            "wrong": 0
+          },
+          "96056": {
+            "mae": 0.03131926874749948,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 220,
+            "wrong": 1
+          },
+          "96057": {
+            "mae": 0.04929981814869311,
+            "fixed_coverage_risk": 0.6587301587301587,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96058": {
+            "mae": 0.05324199630566986,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96059": {
+            "mae": 0.033992021464276385,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 189,
+            "wrong": 11
+          },
+          "96060": {
+            "mae": 0.0611241729229572,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96061": {
+            "mae": 0.05760991204093546,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96062": {
+            "mae": 0.029999475680207967,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 204,
+            "wrong": 0
+          },
+          "96063": {
+            "mae": 0.05163815981554577,
+            "fixed_coverage_risk": 0.40476190476190477,
+            "accepted": 9,
+            "wrong": 0
+          },
+          "96064": {
+            "mae": 0.03230199065999471,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 140,
+            "wrong": 0
+          }
+        }
+      },
+      "near_quadratic": {
+        "mean_absolute_risk_error": 0.07760576432738464,
+        "fixed_coverage": 0.5,
+        "fixed_coverage_risk": 0.30344742063492064,
+        "threshold": 0.149,
+        "coverage": 0.4791046626984127,
+        "accepted": 7727,
+        "wrong": 293,
+        "false_adoption": 0.03791898537595444,
+        "cluster_bootstrap_risk_upper_95": 0.051148611378448214,
+        "valid_bootstrap_draws": 4000,
+        "empirical_practical_gate": false,
+        "by_anchor": {
+          "96001": {
+            "mae": 0.05700185714121939,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 136,
+            "wrong": 5
+          },
+          "96002": {
+            "mae": 0.04788265159972032,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 189,
+            "wrong": 0
+          },
+          "96003": {
+            "mae": 0.06374584237125387,
+            "fixed_coverage_risk": 0.09523809523809523,
+            "accepted": 110,
+            "wrong": 4
+          },
+          "96004": {
+            "mae": 0.07499007503043688,
+            "fixed_coverage_risk": 0.6428571428571429,
+            "accepted": 61,
+            "wrong": 8
+          },
+          "96005": {
+            "mae": 0.07112605785434012,
+            "fixed_coverage_risk": 0.16666666666666666,
+            "accepted": 88,
+            "wrong": 4
+          },
+          "96006": {
+            "mae": 0.027723048988888308,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 252,
+            "wrong": 0
+          },
+          "96007": {
+            "mae": 0.0681090371183865,
+            "fixed_coverage_risk": 0.42857142857142855,
+            "accepted": 69,
+            "wrong": 10
+          },
+          "96008": {
+            "mae": 0.08645349352979516,
+            "fixed_coverage_risk": 0.9206349206349206,
+            "accepted": 25,
+            "wrong": 15
+          },
+          "96009": {
+            "mae": 0.05790473090938316,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 125,
+            "wrong": 9
+          },
+          "96010": {
+            "mae": 0.06851158281128074,
+            "fixed_coverage_risk": 0.30158730158730157,
+            "accepted": 93,
+            "wrong": 9
+          },
+          "96011": {
+            "mae": 0.03611016228528079,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 213,
+            "wrong": 2
+          },
+          "96012": {
+            "mae": 0.051697306485677906,
+            "fixed_coverage_risk": 0.015873015873015872,
+            "accepted": 152,
+            "wrong": 1
+          },
+          "96013": {
+            "mae": 0.034167053851634925,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 235,
+            "wrong": 5
+          },
+          "96014": {
+            "mae": 0.06442502300482726,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 121,
+            "wrong": 3
+          },
+          "96015": {
+            "mae": 0.03515041860228552,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 242,
+            "wrong": 0
+          },
+          "96016": {
+            "mae": 0.06403799420478878,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 113,
+            "wrong": 5
+          },
+          "96017": {
+            "mae": 0.07359203991662659,
+            "fixed_coverage_risk": 0.21428571428571427,
+            "accepted": 95,
+            "wrong": 0
+          },
+          "96018": {
+            "mae": 0.07668061058607072,
+            "fixed_coverage_risk": 0.2698412698412698,
+            "accepted": 83,
+            "wrong": 6
+          },
+          "96019": {
+            "mae": 0.041582703652806675,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 232,
+            "wrong": 0
+          },
+          "96020": {
+            "mae": 0.08072016180358764,
+            "fixed_coverage_risk": 0.7619047619047619,
+            "accepted": 40,
+            "wrong": 10
+          },
+          "96021": {
+            "mae": 0.050567038872708456,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 179,
+            "wrong": 0
+          },
+          "96022": {
+            "mae": 0.05617624678833261,
+            "fixed_coverage_risk": 0.07936507936507936,
+            "accepted": 133,
+            "wrong": 7
+          },
+          "96023": {
+            "mae": 0.0539773420439623,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 144,
+            "wrong": 0
+          },
+          "96024": {
+            "mae": 0.04896724262877456,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 182,
+            "wrong": 0
+          },
+          "96025": {
+            "mae": 0.05916409827859935,
+            "fixed_coverage_risk": 0.42063492063492064,
+            "accepted": 84,
+            "wrong": 12
+          },
+          "96026": {
+            "mae": 0.06476476359051263,
+            "fixed_coverage_risk": 0.6111111111111112,
+            "accepted": 69,
+            "wrong": 21
+          },
+          "96027": {
+            "mae": 0.0434480459988755,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 211,
+            "wrong": 3
+          },
+          "96028": {
+            "mae": 0.05218647565687938,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 166,
+            "wrong": 0
+          },
+          "96029": {
+            "mae": 0.31338885306149195,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96030": {
+            "mae": 0.07658093982171639,
+            "fixed_coverage_risk": 0.8333333333333334,
+            "accepted": 41,
+            "wrong": 20
+          },
+          "96031": {
+            "mae": 0.05356087602829718,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 169,
+            "wrong": 2
+          },
+          "96032": {
+            "mae": 0.2094003497887322,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 15,
+            "wrong": 0
+          },
+          "96033": {
+            "mae": 0.04552634536281693,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 199,
+            "wrong": 0
+          },
+          "96034": {
+            "mae": 0.24536299660064798,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96035": {
+            "mae": 0.03745457491118129,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 247,
+            "wrong": 0
+          },
+          "96036": {
+            "mae": 0.04093323128683699,
+            "fixed_coverage_risk": 0.031746031746031744,
+            "accepted": 194,
+            "wrong": 10
+          },
+          "96037": {
+            "mae": 0.2838102449455262,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 4,
+            "wrong": 0
+          },
+          "96038": {
+            "mae": 0.08632691599527928,
+            "fixed_coverage_risk": 0.5714285714285714,
+            "accepted": 56,
+            "wrong": 7
+          },
+          "96039": {
+            "mae": 0.05016846000310797,
+            "fixed_coverage_risk": 0.007936507936507936,
+            "accepted": 175,
+            "wrong": 1
+          },
+          "96040": {
+            "mae": 0.04252160846531636,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 230,
+            "wrong": 0
+          },
+          "96041": {
+            "mae": 0.03405594758824975,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 245,
+            "wrong": 4
+          },
+          "96042": {
+            "mae": 0.0495888516494771,
+            "fixed_coverage_risk": 0.03968253968253968,
+            "accepted": 160,
+            "wrong": 7
+          },
+          "96043": {
+            "mae": 0.07364390185275996,
+            "fixed_coverage_risk": 0.6507936507936508,
+            "accepted": 51,
+            "wrong": 14
+          },
+          "96044": {
+            "mae": 0.23340102995207543,
+            "fixed_coverage_risk": 0.9761904761904762,
+            "accepted": 4,
+            "wrong": 1
+          },
+          "96045": {
+            "mae": 0.05755116206860789,
+            "fixed_coverage_risk": 0.20634920634920634,
+            "accepted": 116,
+            "wrong": 4
+          },
+          "96046": {
+            "mae": 0.07581921136516154,
+            "fixed_coverage_risk": 0.5238095238095238,
+            "accepted": 62,
+            "wrong": 15
+          },
+          "96047": {
+            "mae": 0.06537713271229677,
+            "fixed_coverage_risk": 0.15079365079365079,
+            "accepted": 99,
+            "wrong": 4
+          },
+          "96048": {
+            "mae": 0.053176213629479,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 158,
+            "wrong": 0
+          },
+          "96049": {
+            "mae": 0.09962132847173386,
+            "fixed_coverage_risk": 0.9365079365079365,
+            "accepted": 10,
+            "wrong": 2
+          },
+          "96050": {
+            "mae": 0.04764728000416656,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 175,
+            "wrong": 4
+          },
+          "96051": {
+            "mae": 0.06135117584243478,
+            "fixed_coverage_risk": 0.2777777777777778,
+            "accepted": 102,
+            "wrong": 7
+          },
+          "96052": {
+            "mae": 0.058718124362717436,
+            "fixed_coverage_risk": 0.06349206349206349,
+            "accepted": 123,
+            "wrong": 5
+          },
+          "96053": {
+            "mae": 0.07082584653131908,
+            "fixed_coverage_risk": 0.5,
+            "accepted": 60,
+            "wrong": 6
+          },
+          "96054": {
+            "mae": 0.19777698205964,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96055": {
+            "mae": 0.03829140617256026,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 242,
+            "wrong": 0
+          },
+          "96056": {
+            "mae": 0.041161516929668365,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 223,
+            "wrong": 7
+          },
+          "96057": {
+            "mae": 0.0793660412897877,
+            "fixed_coverage_risk": 0.6587301587301587,
+            "accepted": 44,
+            "wrong": 6
+          },
+          "96058": {
+            "mae": 0.09797562655330831,
+            "fixed_coverage_risk": 0.9682539682539683,
+            "accepted": 10,
+            "wrong": 6
+          },
+          "96059": {
+            "mae": 0.04050127013883216,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 208,
+            "wrong": 5
+          },
+          "96060": {
+            "mae": 0.14928271100285023,
+            "fixed_coverage_risk": 1.0,
+            "accepted": 0,
+            "wrong": 0
+          },
+          "96061": {
+            "mae": 0.07296021293989013,
+            "fixed_coverage_risk": 0.7777777777777778,
+            "accepted": 38,
+            "wrong": 12
+          },
+          "96062": {
+            "mae": 0.04789411557948297,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 196,
+            "wrong": 0
+          },
+          "96063": {
+            "mae": 0.06934359350853964,
+            "fixed_coverage_risk": 0.40476190476190477,
+            "accepted": 68,
+            "wrong": 5
+          },
+          "96064": {
+            "mae": 0.05553973286969095,
+            "fixed_coverage_risk": 0.0,
+            "accepted": 157,
+            "wrong": 0
+          }
+        }
+      }
+    },
+    "two_direction_comparisons": {
+      "overlap": {
+        "mae_relative_gain": 0.7769907858580554,
+        "mae_relative_gain_95": [
+          0.740093836756197,
+          0.8106107003663482
+        ],
+        "mae_at_least_5_percent_supported": true,
+        "mae_5_percent_ruled_out": false,
+        "matched_risk_improvement": 0.06907242063492064,
+        "matched_risk_improvement_95": [
+          0.05108816964285714,
+          0.0890376984126984
+        ],
+        "risk_at_least_1pp_supported": true,
+        "risk_1pp_ruled_out": false
+      },
+      "near_ridge": {
+        "mae_relative_gain": 0.10651492370284832,
+        "mae_relative_gain_95": [
+          0.06526048529966008,
+          0.13516874404839052
+        ],
+        "mae_at_least_5_percent_supported": true,
+        "mae_5_percent_ruled_out": false,
+        "matched_risk_improvement": 0.000744047619047619,
+        "matched_risk_improvement_95": [
+          -0.0004960317460317482,
+          0.0019841269841269853
+        ],
+        "risk_at_least_1pp_supported": false,
+        "risk_1pp_ruled_out": true
+      },
+      "two_amplitude": {
+        "mae_relative_gain": 0.005164499733627093,
+        "mae_relative_gain_95": [
+          0.0021498612534141897,
+          0.007482954429849321
+        ],
+        "mae_at_least_5_percent_supported": false,
+        "mae_5_percent_ruled_out": true,
+        "matched_risk_improvement": -0.0001240079365079365,
+        "matched_risk_improvement_95": [
+          -0.000496031746031746,
+          0.000248015873015873
+        ],
+        "risk_at_least_1pp_supported": false,
+        "risk_1pp_ruled_out": true
+      }
+    },
+    "uncertainty_scope": "anchor-cluster bootstrap; empirical intervals, not a distribution-free or per-case guarantee"
+  }
+}

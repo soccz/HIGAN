@@ -1,0 +1,1359 @@
+{
+  "status": "COMPLETE",
+  "scope": "target singles known; target joint withheld until predictions are saved",
+  "overall": {
+    "n": 5376,
+    "actual_additive_rate": 0.7985491071428571,
+    "mean_relative_error": {
+      "additive": 0.07702326836368849,
+      "local_mixed": 0.07679696194187725,
+      "probe_constant": 0.07475730649339687,
+      "probe_linear": 0.07258243797474064,
+      "probe_quadratic": 0.19402629995154785,
+      "probe_calibrated": 0.07230074660020254
+    },
+    "risk": {
+      "additive": {
+        "adoption_rate": 1.0,
+        "false_adoption_rate_among_adopted": 0.20145089285714285,
+        "false_adoption_rate_all": 0.20145089285714285,
+        "mean_absolute_risk_error": 0.07702326836368849
+      },
+      "local_mixed": {
+        "adoption_rate": 0.9970238095238095,
+        "false_adoption_rate_among_adopted": 0.19906716417910447,
+        "false_adoption_rate_all": 0.19847470238095238,
+        "mean_absolute_risk_error": 0.07004730489108077
+      },
+      "probe_constant": {
+        "adoption_rate": 1.0,
+        "false_adoption_rate_among_adopted": 0.20145089285714285,
+        "false_adoption_rate_all": 0.20145089285714285,
+        "mean_absolute_risk_error": 0.07068745353282407
+      },
+      "probe_linear": {
+        "adoption_rate": 0.9888392857142857,
+        "false_adoption_rate_among_adopted": 0.19243792325056433,
+        "false_adoption_rate_all": 0.19029017857142858,
+        "mean_absolute_risk_error": 0.04505616642900565
+      },
+      "probe_quadratic": {
+        "adoption_rate": 0.2464657738095238,
+        "false_adoption_rate_among_adopted": 0.0,
+        "false_adoption_rate_all": 0.0,
+        "mean_absolute_risk_error": 0.12719152239617018
+      },
+      "probe_calibrated": {
+        "adoption_rate": 0.9966517857142857,
+        "false_adoption_rate_among_adopted": 0.19876819708846585,
+        "false_adoption_rate_all": 0.19810267857142858,
+        "mean_absolute_risk_error": 0.05537099380443572
+      },
+      "scale_prior": {
+        "adoption_rate": 0.6666666666666666,
+        "false_adoption_rate_among_adopted": 0.0859375,
+        "false_adoption_rate_all": 0.057291666666666664,
+        "mean_absolute_risk_error": 0.02348166728330743
+      },
+      "overlap_ridge": {
+        "adoption_rate": 0.6560639880952381,
+        "false_adoption_rate_among_adopted": 0.0674794442869294,
+        "false_adoption_rate_all": 0.044270833333333336,
+        "mean_absolute_risk_error": 0.022183344029173834
+      }
+    }
+  },
+  "by_scale": {
+    "0.03": {
+      "n": 1792,
+      "actual_additive_rate": 0.96484375,
+      "mean_relative_error": {
+        "additive": 0.05375501153162325,
+        "local_mixed": 0.05362413410362069,
+        "probe_constant": 0.049162350486152945,
+        "probe_linear": 0.04594555946769975,
+        "probe_quadratic": 0.08003312439011205,
+        "probe_calibrated": 0.045909672599656205
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03515625,
+          "false_adoption_rate_all": 0.03515625,
+          "mean_absolute_risk_error": 0.05375501153162325
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03515625,
+          "false_adoption_rate_all": 0.03515625,
+          "mean_absolute_risk_error": 0.05059286959393131
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03515625,
+          "false_adoption_rate_all": 0.03515625,
+          "mean_absolute_risk_error": 0.04334261691283097
+        },
+        "probe_linear": {
+          "adoption_rate": 0.9888392857142857,
+          "false_adoption_rate_among_adopted": 0.024266365688487584,
+          "false_adoption_rate_all": 0.023995535714285716,
+          "mean_absolute_risk_error": 0.02251844404873111
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.703125,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.039956540037507295
+        },
+        "probe_calibrated": {
+          "adoption_rate": 0.9933035714285714,
+          "false_adoption_rate_among_adopted": 0.028651685393258425,
+          "false_adoption_rate_all": 0.028459821428571428,
+          "mean_absolute_risk_error": 0.027785815144794078
+        },
+        "scale_prior": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03515625,
+          "false_adoption_rate_all": 0.03515625,
+          "mean_absolute_risk_error": 0.017408035696323723
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.98828125,
+          "false_adoption_rate_among_adopted": 0.029361942405420668,
+          "false_adoption_rate_all": 0.029017857142857144,
+          "mean_absolute_risk_error": 0.016989010454029452
+        }
+      }
+    },
+    "0.06": {
+      "n": 1792,
+      "actual_additive_rate": 0.86328125,
+      "mean_relative_error": {
+        "additive": 0.07689346687839337,
+        "local_mixed": 0.0766297818168826,
+        "probe_constant": 0.0753769457531658,
+        "probe_linear": 0.07332545885657094,
+        "probe_quadratic": 0.18219225929203917,
+        "probe_calibrated": 0.07302387874937033
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13671875,
+          "false_adoption_rate_all": 0.13671875,
+          "mean_absolute_risk_error": 0.07689346687839337
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13671875,
+          "false_adoption_rate_all": 0.13671875,
+          "mean_absolute_risk_error": 0.07037194432416846
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13671875,
+          "false_adoption_rate_all": 0.13671875,
+          "mean_absolute_risk_error": 0.0715720267741801
+        },
+        "probe_linear": {
+          "adoption_rate": 0.9888392857142857,
+          "false_adoption_rate_among_adopted": 0.12697516930022573,
+          "false_adoption_rate_all": 0.12555803571428573,
+          "mean_absolute_risk_error": 0.04496482625311383
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.03627232142857143,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.11467837687328383
+        },
+        "probe_calibrated": {
+          "adoption_rate": 0.9966517857142857,
+          "false_adoption_rate_among_adopted": 0.13381858902575589,
+          "false_adoption_rate_all": 0.13337053571428573,
+          "mean_absolute_risk_error": 0.0561277117111671
+        },
+        "scale_prior": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13671875,
+          "false_adoption_rate_all": 0.13671875,
+          "mean_absolute_risk_error": 0.02388775656755315
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.7583705357142857,
+          "false_adoption_rate_among_adopted": 0.094186902133922,
+          "false_adoption_rate_all": 0.07142857142857142,
+          "mean_absolute_risk_error": 0.02230778285712617
+        }
+      }
+    },
+    "0.1": {
+      "n": 1792,
+      "actual_additive_rate": 0.5675223214285714,
+      "mean_relative_error": {
+        "additive": 0.10042132668104885,
+        "local_mixed": 0.10013696990512848,
+        "probe_constant": 0.0997326232408719,
+        "probe_linear": 0.09847629559995122,
+        "probe_quadratic": 0.31985351617249236,
+        "probe_calibrated": 0.09796868845158109
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.43247767857142855,
+          "false_adoption_rate_all": 0.43247767857142855,
+          "mean_absolute_risk_error": 0.10042132668104885
+        },
+        "local_mixed": {
+          "adoption_rate": 0.9910714285714286,
+          "false_adoption_rate_among_adopted": 0.42736486486486486,
+          "false_adoption_rate_all": 0.42354910714285715,
+          "mean_absolute_risk_error": 0.08917710075514255
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.43247767857142855,
+          "false_adoption_rate_all": 0.43247767857142855,
+          "mean_absolute_risk_error": 0.09714771691146117
+        },
+        "probe_linear": {
+          "adoption_rate": 0.9888392857142857,
+          "false_adoption_rate_among_adopted": 0.4260722347629797,
+          "false_adoption_rate_all": 0.4213169642857143,
+          "mean_absolute_risk_error": 0.06768522898517203
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.0,
+          "false_adoption_rate_among_adopted": null,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.2269396502777194
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.43247767857142855,
+          "false_adoption_rate_all": 0.43247767857142855,
+          "mean_absolute_risk_error": 0.082199454557346
+        },
+        "scale_prior": {
+          "adoption_rate": 0.0,
+          "false_adoption_rate_among_adopted": null,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.02914920958604542
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.22154017857142858,
+          "false_adoption_rate_among_adopted": 0.14609571788413098,
+          "false_adoption_rate_all": 0.03236607142857143,
+          "mean_absolute_risk_error": 0.027253238776365884
+        }
+      }
+    }
+  },
+  "by_anchor": {
+    "93001": {
+      "n": 336,
+      "actual_additive_rate": 0.9166666666666666,
+      "mean_relative_error": {
+        "additive": 0.06295699168282932,
+        "local_mixed": 0.06271101165764,
+        "probe_constant": 0.06106190248796731,
+        "probe_linear": 0.05830274265210748,
+        "probe_quadratic": 0.14526202536431246,
+        "probe_calibrated": 0.05861229355252111
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.08333333333333333,
+          "false_adoption_rate_all": 0.08333333333333333,
+          "mean_absolute_risk_error": 0.06295699168282932
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.08333333333333333,
+          "false_adoption_rate_all": 0.08333333333333333,
+          "mean_absolute_risk_error": 0.0580309823329583
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.08333333333333333,
+          "false_adoption_rate_all": 0.08333333333333333,
+          "mean_absolute_risk_error": 0.058131725694302055
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.08333333333333333,
+          "false_adoption_rate_all": 0.08333333333333333,
+          "mean_absolute_risk_error": 0.038647011827320055
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.31547619047619047,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.0921350491971542
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.08333333333333333,
+          "false_adoption_rate_all": 0.08333333333333333,
+          "mean_absolute_risk_error": 0.04648290758888647
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.017857142857142856,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.0251173048192775
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.02722246648275499
+        }
+      }
+    },
+    "93002": {
+      "n": 336,
+      "actual_additive_rate": 0.8660714285714286,
+      "mean_relative_error": {
+        "additive": 0.07758799399097506,
+        "local_mixed": 0.07720372465038323,
+        "probe_constant": 0.07535065226945141,
+        "probe_linear": 0.07269337247469551,
+        "probe_quadratic": 0.18461077927871694,
+        "probe_calibrated": 0.07272133921488375
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13392857142857142,
+          "false_adoption_rate_all": 0.13392857142857142,
+          "mean_absolute_risk_error": 0.07758799399097506
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13392857142857142,
+          "false_adoption_rate_all": 0.13392857142857142,
+          "mean_absolute_risk_error": 0.07223278858232669
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13392857142857142,
+          "false_adoption_rate_all": 0.13392857142857142,
+          "mean_absolute_risk_error": 0.0714854500923012
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13392857142857142,
+          "false_adoption_rate_all": 0.13392857142857142,
+          "mean_absolute_risk_error": 0.04697742614918403
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.26785714285714285,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.11687609575945085
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.13392857142857142,
+          "false_adoption_rate_all": 0.13392857142857142,
+          "mean_absolute_risk_error": 0.05681261124750291
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.017857142857142856,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.013837246789014396
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.6755952380952381,
+          "false_adoption_rate_among_adopted": 0.022026431718061675,
+          "false_adoption_rate_all": 0.01488095238095238,
+          "mean_absolute_risk_error": 0.011865722016310119
+        }
+      }
+    },
+    "93003": {
+      "n": 336,
+      "actual_additive_rate": 0.7053571428571429,
+      "mean_relative_error": {
+        "additive": 0.09203132669075864,
+        "local_mixed": 0.09185887833964974,
+        "probe_constant": 0.08934843340175405,
+        "probe_linear": 0.08845686703644406,
+        "probe_quadratic": 0.2575063986572944,
+        "probe_calibrated": 0.08717381128978095
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.29464285714285715,
+          "false_adoption_rate_all": 0.29464285714285715,
+          "mean_absolute_risk_error": 0.09203132669075864
+        },
+        "local_mixed": {
+          "adoption_rate": 0.9761904761904762,
+          "false_adoption_rate_among_adopted": 0.2774390243902439,
+          "false_adoption_rate_all": 0.2708333333333333,
+          "mean_absolute_risk_error": 0.07577984502525678
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.29464285714285715,
+          "false_adoption_rate_all": 0.29464285714285715,
+          "mean_absolute_risk_error": 0.08363429898654552
+        },
+        "probe_linear": {
+          "adoption_rate": 0.9285714285714286,
+          "false_adoption_rate_among_adopted": 0.2403846153846154,
+          "false_adoption_rate_all": 0.22321428571428573,
+          "mean_absolute_risk_error": 0.0498617745606601
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.17261904761904762,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.17618705925916042
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.29464285714285715,
+          "false_adoption_rate_all": 0.29464285714285715,
+          "mean_absolute_risk_error": 0.06342273320849627
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.1875,
+          "false_adoption_rate_all": 0.125,
+          "mean_absolute_risk_error": 0.027771181327192748
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.8005952380952381,
+          "false_adoption_rate_among_adopted": 0.19330855018587362,
+          "false_adoption_rate_all": 0.15476190476190477,
+          "mean_absolute_risk_error": 0.023438467774202106
+        }
+      }
+    },
+    "93004": {
+      "n": 336,
+      "actual_additive_rate": 0.49404761904761907,
+      "mean_relative_error": {
+        "additive": 0.10120393131740271,
+        "local_mixed": 0.10107477286554767,
+        "probe_constant": 0.09813736005771846,
+        "probe_linear": 0.09447265662503354,
+        "probe_quadratic": 0.2466142492664604,
+        "probe_calibrated": 0.09450000162475247
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5059523809523809,
+          "false_adoption_rate_all": 0.5059523809523809,
+          "mean_absolute_risk_error": 0.10120393131740271
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5059523809523809,
+          "false_adoption_rate_all": 0.5059523809523809,
+          "mean_absolute_risk_error": 0.0947734923131434
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5059523809523809,
+          "false_adoption_rate_all": 0.5059523809523809,
+          "mean_absolute_risk_error": 0.09312831814392396
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5059523809523809,
+          "false_adoption_rate_all": 0.5059523809523809,
+          "mean_absolute_risk_error": 0.06039610800297047
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.0625,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.15983503930943865
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5059523809523809,
+          "false_adoption_rate_all": 0.5059523809523809,
+          "mean_absolute_risk_error": 0.07357813710817634
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.25892857142857145,
+          "false_adoption_rate_all": 0.17261904761904762,
+          "mean_absolute_risk_error": 0.015499991205249577
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.4166666666666667,
+          "false_adoption_rate_among_adopted": 0.17142857142857143,
+          "false_adoption_rate_all": 0.07142857142857142,
+          "mean_absolute_risk_error": 0.015032641849892524
+        }
+      }
+    },
+    "93005": {
+      "n": 336,
+      "actual_additive_rate": 0.7678571428571429,
+      "mean_relative_error": {
+        "additive": 0.07962464664832605,
+        "local_mixed": 0.07915730580036442,
+        "probe_constant": 0.07736612640934937,
+        "probe_linear": 0.07496777850156583,
+        "probe_quadratic": 0.19328528384046198,
+        "probe_calibrated": 0.07483517188658835
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.23214285714285715,
+          "false_adoption_rate_all": 0.23214285714285715,
+          "mean_absolute_risk_error": 0.07962464664832605
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.23214285714285715,
+          "false_adoption_rate_all": 0.23214285714285715,
+          "mean_absolute_risk_error": 0.07385549226893372
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.23214285714285715,
+          "false_adoption_rate_all": 0.23214285714285715,
+          "mean_absolute_risk_error": 0.07329118224605152
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.23214285714285715,
+          "false_adoption_rate_all": 0.23214285714285715,
+          "mean_absolute_risk_error": 0.04777865502714743
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.24404761904761904,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.12316282796608027
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.23214285714285715,
+          "false_adoption_rate_all": 0.23214285714285715,
+          "mean_absolute_risk_error": 0.0580289884995207
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.05357142857142857,
+          "false_adoption_rate_all": 0.03571428571428571,
+          "mean_absolute_risk_error": 0.013339446558612151
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.6011904761904762,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.014458295066624272
+        }
+      }
+    },
+    "93006": {
+      "n": 336,
+      "actual_additive_rate": 0.6577380952380952,
+      "mean_relative_error": {
+        "additive": 0.0889815984093903,
+        "local_mixed": 0.08891189181062761,
+        "probe_constant": 0.08637402195320563,
+        "probe_linear": 0.0847995164318237,
+        "probe_quadratic": 0.24239379875521877,
+        "probe_calibrated": 0.08391817259060017
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.34226190476190477,
+          "false_adoption_rate_all": 0.34226190476190477,
+          "mean_absolute_risk_error": 0.0889815984093903
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.34226190476190477,
+          "false_adoption_rate_all": 0.34226190476190477,
+          "mean_absolute_risk_error": 0.08192679979812903
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.34226190476190477,
+          "false_adoption_rate_all": 0.34226190476190477,
+          "mean_absolute_risk_error": 0.08128643121536833
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.34226190476190477,
+          "false_adoption_rate_all": 0.34226190476190477,
+          "mean_absolute_risk_error": 0.04971429808450334
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.11904761904761904,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.16453927513824168
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.34226190476190477,
+          "false_adoption_rate_all": 0.34226190476190477,
+          "mean_absolute_risk_error": 0.062488215732978435
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.12053571428571429,
+          "false_adoption_rate_all": 0.08035714285714286,
+          "mean_absolute_risk_error": 0.014360441448314155
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.4642857142857143,
+          "false_adoption_rate_among_adopted": 0.05128205128205128,
+          "false_adoption_rate_all": 0.023809523809523808,
+          "mean_absolute_risk_error": 0.018014508214930527
+        }
+      }
+    },
+    "93007": {
+      "n": 336,
+      "actual_additive_rate": 0.7470238095238095,
+      "mean_relative_error": {
+        "additive": 0.07732065520904749,
+        "local_mixed": 0.07788447677322312,
+        "probe_constant": 0.07448692621764953,
+        "probe_linear": 0.07057501947461076,
+        "probe_quadratic": 0.20204561438715415,
+        "probe_calibrated": 0.07077078609912307
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.25297619047619047,
+          "false_adoption_rate_all": 0.25297619047619047,
+          "mean_absolute_risk_error": 0.07732065520904749
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.25297619047619047,
+          "false_adoption_rate_all": 0.25297619047619047,
+          "mean_absolute_risk_error": 0.06950093039401924
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.25297619047619047,
+          "false_adoption_rate_all": 0.25297619047619047,
+          "mean_absolute_risk_error": 0.0707854058810323
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.25297619047619047,
+          "false_adoption_rate_all": 0.25297619047619047,
+          "mean_absolute_risk_error": 0.04363286172721685
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.20833333333333334,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.14218340071046914
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.25297619047619047,
+          "false_adoption_rate_all": 0.25297619047619047,
+          "mean_absolute_risk_error": 0.05466834865243769
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.08928571428571429,
+          "false_adoption_rate_all": 0.05952380952380952,
+          "mean_absolute_risk_error": 0.02211144919615965
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.5922619047619048,
+          "false_adoption_rate_among_adopted": 0.11055276381909548,
+          "false_adoption_rate_all": 0.06547619047619048,
+          "mean_absolute_risk_error": 0.02722577204590673
+        }
+      }
+    },
+    "93008": {
+      "n": 336,
+      "actual_additive_rate": 0.9642857142857143,
+      "mean_relative_error": {
+        "additive": 0.06327815504898071,
+        "local_mixed": 0.06301732587496027,
+        "probe_constant": 0.06134636981188423,
+        "probe_linear": 0.05878103455304385,
+        "probe_quadratic": 0.14940637677282353,
+        "probe_calibrated": 0.058960742146895444
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03571428571428571,
+          "false_adoption_rate_all": 0.03571428571428571,
+          "mean_absolute_risk_error": 0.06327815504898071
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03571428571428571,
+          "false_adoption_rate_all": 0.03571428571428571,
+          "mean_absolute_risk_error": 0.05837252475202006
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03571428571428571,
+          "false_adoption_rate_all": 0.03571428571428571,
+          "mean_absolute_risk_error": 0.05829757363658209
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03571428571428571,
+          "false_adoption_rate_all": 0.03571428571428571,
+          "mean_absolute_risk_error": 0.038278761267509336
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.34523809523809523,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.09566280175342826
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.03571428571428571,
+          "false_adoption_rate_all": 0.03571428571428571,
+          "mean_absolute_risk_error": 0.04631516291537253
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.022991167611390945
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.7440476190476191,
+          "false_adoption_rate_among_adopted": 0.004,
+          "false_adoption_rate_all": 0.002976190476190476,
+          "mean_absolute_risk_error": 0.020693791162599475
+        }
+      }
+    },
+    "93009": {
+      "n": 336,
+      "actual_additive_rate": 0.9791666666666666,
+      "mean_relative_error": {
+        "additive": 0.06431053260321569,
+        "local_mixed": 0.06407410237865754,
+        "probe_constant": 0.062468726234712585,
+        "probe_linear": 0.06028356676484359,
+        "probe_quadratic": 0.1528460508159376,
+        "probe_calibrated": 0.06030577327833796
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.020833333333333332,
+          "false_adoption_rate_all": 0.020833333333333332,
+          "mean_absolute_risk_error": 0.06431053260321569
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.020833333333333332,
+          "false_adoption_rate_all": 0.020833333333333332,
+          "mean_absolute_risk_error": 0.05999008886263572
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.020833333333333332,
+          "false_adoption_rate_all": 0.020833333333333332,
+          "mean_absolute_risk_error": 0.05925824239763854
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.020833333333333332,
+          "false_adoption_rate_all": 0.020833333333333332,
+          "mean_absolute_risk_error": 0.038959699422061234
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.31845238095238093,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.09679396482356749
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.020833333333333332,
+          "false_adoption_rate_all": 0.020833333333333332,
+          "mean_absolute_risk_error": 0.047106930623781726
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.022260017991209087
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.7559523809523809,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.01724309888396328
+        }
+      }
+    },
+    "93010": {
+      "n": 336,
+      "actual_additive_rate": 1,
+      "mean_relative_error": {
+        "additive": 0.05172631279369733,
+        "local_mixed": 0.05152259782073795,
+        "probe_constant": 0.05022478968890453,
+        "probe_linear": 0.048525200019361815,
+        "probe_quadratic": 0.12506778572558105,
+        "probe_calibrated": 0.048496041958497604
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.05172631279369733
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.04655252544649402
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.04763046204919734
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.03108665457245716
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.39285714285714285,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.07998096256013648
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.03774057355583623
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.03453309980482941
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.5684523809523809,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.0432762133918687
+        }
+      }
+    },
+    "93011": {
+      "n": 336,
+      "actual_additive_rate": 0.9880952380952381,
+      "mean_relative_error": {
+        "additive": 0.054370075838158935,
+        "local_mixed": 0.05409506323772838,
+        "probe_constant": 0.05274375819527944,
+        "probe_linear": 0.05065476412613937,
+        "probe_quadratic": 0.12860980538860642,
+        "probe_calibrated": 0.050771245959183274
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.011904761904761904,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.054370075838158935
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.011904761904761904,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.04929261558598776
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.011904761904761904,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.05008928330807463
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.011904761904761904,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.03289693328291271
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.3482142857142857,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.08205027592751252
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.011904761904761904,
+          "false_adoption_rate_all": 0.011904761904761904,
+          "mean_absolute_risk_error": 0.039796400377696245
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.0318893367603678
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.8273809523809523,
+          "false_adoption_rate_among_adopted": 0.01079136690647482,
+          "false_adoption_rate_all": 0.008928571428571428,
+          "mean_absolute_risk_error": 0.024048496577181062
+        }
+      }
+    },
+    "93012": {
+      "n": 336,
+      "actual_additive_rate": 0.6875,
+      "mean_relative_error": {
+        "additive": 0.08570712947251065,
+        "local_mixed": 0.08553674834636722,
+        "probe_constant": 0.08320739063398104,
+        "probe_linear": 0.079969588071971,
+        "probe_quadratic": 0.2033680080957012,
+        "probe_calibrated": 0.08011097461868955
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.3125,
+          "false_adoption_rate_all": 0.3125,
+          "mean_absolute_risk_error": 0.08570712947251065
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.3125,
+          "false_adoption_rate_all": 0.3125,
+          "mean_absolute_risk_error": 0.07958684556992936
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.3125,
+          "false_adoption_rate_all": 0.3125,
+          "mean_absolute_risk_error": 0.0791642209112997
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.3125,
+          "false_adoption_rate_all": 0.3125,
+          "mean_absolute_risk_error": 0.05237027383583091
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.20535714285714285,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.12921393248426005
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.3125,
+          "false_adoption_rate_all": 0.3125,
+          "mean_absolute_risk_error": 0.06320319098715001
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.08928571428571429,
+          "false_adoption_rate_all": 0.05952380952380952,
+          "mean_absolute_risk_error": 0.014940701645506583
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.47023809523809523,
+          "false_adoption_rate_among_adopted": 0.006329113924050633,
+          "false_adoption_rate_all": 0.002976190476190476,
+          "mean_absolute_risk_error": 0.020865965424881776
+        }
+      }
+    },
+    "93013": {
+      "n": 336,
+      "actual_additive_rate": 0.4255952380952381,
+      "mean_relative_error": {
+        "additive": 0.12685971158805992,
+        "local_mixed": 0.12615541917656303,
+        "probe_constant": 0.12357882772479106,
+        "probe_linear": 0.125522977711241,
+        "probe_quadratic": 0.3811391507340689,
+        "probe_calibrated": 0.12223813789362559
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5744047619047619,
+          "false_adoption_rate_all": 0.5744047619047619,
+          "mean_absolute_risk_error": 0.12685971158805992
+        },
+        "local_mixed": {
+          "adoption_rate": 0.9761904761904762,
+          "false_adoption_rate_among_adopted": 0.5640243902439024,
+          "false_adoption_rate_all": 0.5505952380952381,
+          "mean_absolute_risk_error": 0.10784617187579472
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.5744047619047619,
+          "false_adoption_rate_all": 0.5744047619047619,
+          "mean_absolute_risk_error": 0.11469205534726423
+        },
+        "probe_linear": {
+          "adoption_rate": 0.8928571428571429,
+          "false_adoption_rate_among_adopted": 0.5233333333333333,
+          "false_adoption_rate_all": 0.46726190476190477,
+          "mean_absolute_risk_error": 0.06560237955867501
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.06547619047619048,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.2635815153041322
+        },
+        "probe_calibrated": {
+          "adoption_rate": 0.9464285714285714,
+          "false_adoption_rate_among_adopted": 0.550314465408805,
+          "false_adoption_rate_all": 0.5208333333333334,
+          "mean_absolute_risk_error": 0.08533651793596368
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.41517857142857145,
+          "false_adoption_rate_all": 0.2767857142857143,
+          "mean_absolute_risk_error": 0.04433393973720923
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.7023809523809523,
+          "false_adoption_rate_among_adopted": 0.4449152542372881,
+          "false_adoption_rate_all": 0.3125,
+          "mean_absolute_risk_error": 0.04470399840167333
+        }
+      }
+    },
+    "93014": {
+      "n": 336,
+      "actual_additive_rate": 1,
+      "mean_relative_error": {
+        "additive": 0.044282580917820995,
+        "local_mixed": 0.043962117294944945,
+        "probe_constant": 0.04287624793485796,
+        "probe_linear": 0.04098306581767141,
+        "probe_quadratic": 0.10633756794814565,
+        "probe_calibrated": 0.04112703567369374
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.044282580917820995
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.040479565611888875
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.04070947944094636
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.02638672315535146
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.4375,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.06924258733839989
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.03213031934545124
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.04197683168070574
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.9523809523809523,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.017974272752643326
+        }
+      }
+    },
+    "93015": {
+      "n": 336,
+      "actual_additive_rate": 0.6845238095238095,
+      "mean_relative_error": {
+        "additive": 0.09011639676651631,
+        "local_mixed": 0.08976968247737165,
+        "probe_constant": 0.08759294837367194,
+        "probe_linear": 0.08483020965305146,
+        "probe_quadratic": 0.21632009297673477,
+        "probe_calibrated": 0.08472914336712166
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.31547619047619047,
+          "false_adoption_rate_all": 0.31547619047619047,
+          "mean_absolute_risk_error": 0.09011639676651631
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.31547619047619047,
+          "false_adoption_rate_all": 0.31547619047619047,
+          "mean_absolute_risk_error": 0.08459623156042283
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.31547619047619047,
+          "false_adoption_rate_all": 0.31547619047619047,
+          "mean_absolute_risk_error": 0.08302685612088279
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.31547619047619047,
+          "false_adoption_rate_all": 0.31547619047619047,
+          "mean_absolute_risk_error": 0.05447978051249324
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.15178571428571427,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.13678493480694248
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.31547619047619047,
+          "false_adoption_rate_all": 0.31547619047619047,
+          "mean_absolute_risk_error": 0.06594793630177491
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.12053571428571429,
+          "false_adoption_rate_all": 0.08035714285714286,
+          "mean_absolute_risk_error": 0.015437795163046466
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.5803571428571429,
+          "false_adoption_rate_among_adopted": 0.07179487179487179,
+          "false_adoption_rate_all": 0.041666666666666664,
+          "mean_absolute_risk_error": 0.014070150774663923
+        }
+      }
+    },
+    "93016": {
+      "n": 336,
+      "actual_additive_rate": 0.8928571428571429,
+      "mean_relative_error": {
+        "additive": 0.07201425484132569,
+        "local_mixed": 0.07181627256526932,
+        "probe_constant": 0.06995242249917152,
+        "probe_linear": 0.06750064768224578,
+        "probe_quadratic": 0.16960781121754753,
+        "probe_calibrated": 0.06754127444894596
+      },
+      "risk": {
+        "additive": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.10714285714285714,
+          "false_adoption_rate_all": 0.10714285714285714,
+          "mean_absolute_risk_error": 0.07201425484132569
+        },
+        "local_mixed": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.10714285714285714,
+          "false_adoption_rate_all": 0.10714285714285714,
+          "mean_absolute_risk_error": 0.06793997827735189
+        },
+        "probe_constant": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.10714285714285714,
+          "false_adoption_rate_all": 0.10714285714285714,
+          "mean_absolute_risk_error": 0.06638827105377475
+        },
+        "probe_linear": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.10714285714285714,
+          "false_adoption_rate_all": 0.10714285714285714,
+          "mean_absolute_risk_error": 0.043829321877797145
+        },
+        "probe_quadratic": {
+          "adoption_rate": 0.28869047619047616,
+          "false_adoption_rate_among_adopted": 0.0,
+          "false_adoption_rate_all": 0.0,
+          "mean_absolute_risk_error": 0.10683463600034823
+        },
+        "probe_calibrated": {
+          "adoption_rate": 1.0,
+          "false_adoption_rate_among_adopted": 0.10714285714285714,
+          "false_adoption_rate_all": 0.10714285714285714,
+          "mean_absolute_risk_error": 0.05287692678994617
+        },
+        "scale_prior": {
+          "adoption_rate": 0.6666666666666666,
+          "false_adoption_rate_among_adopted": 0.004464285714285714,
+          "false_adoption_rate_all": 0.002976190476190476,
+          "mean_absolute_risk_error": 0.015306724794833458
+        },
+        "overlap_ridge": {
+          "adoption_rate": 0.6785714285714286,
+          "false_adoption_rate_among_adopted": 0.013157894736842105,
+          "false_adoption_rate_all": 0.008928571428571428,
+          "mean_absolute_risk_error": 0.014799643646685215
+        }
+      }
+    }
+  },
+  "without_view": {
+    "n": 4032,
+    "actual_additive_rate": 0.7571924603174603,
+    "mean_relative_error": {
+      "additive": 0.08197563260088005,
+      "local_mixed": 0.08163726238976876,
+      "probe_constant": 0.07960314786977558,
+      "probe_linear": 0.07733853594677743,
+      "probe_quadratic": 0.20372415578452285,
+      "probe_calibrated": 0.07705935666479581
+    },
+    "risk": {
+      "additive": {
+        "adoption_rate": 1.0,
+        "false_adoption_rate_among_adopted": 0.24280753968253968,
+        "false_adoption_rate_all": 0.24280753968253968,
+        "mean_absolute_risk_error": 0.08197563260088005
+      },
+      "local_mixed": {
+        "adoption_rate": 0.996031746031746,
+        "false_adoption_rate_among_adopted": 0.23979083665338646,
+        "false_adoption_rate_all": 0.23883928571428573,
+        "mean_absolute_risk_error": 0.0746971111854823
+      },
+      "probe_constant": {
+        "adoption_rate": 1.0,
+        "false_adoption_rate_among_adopted": 0.24280753968253968,
+        "false_adoption_rate_all": 0.24280753968253968,
+        "mean_absolute_risk_error": 0.07524451171192105
+      },
+      "probe_linear": {
+        "adoption_rate": 0.9851190476190477,
+        "false_adoption_rate_among_adopted": 0.23136958710976838,
+        "false_adoption_rate_all": 0.2279265873015873,
+        "mean_absolute_risk_error": 0.048237552870001206
+      },
+      "probe_quadratic": {
+        "adoption_rate": 0.21651785714285715,
+        "false_adoption_rate_among_adopted": 0.0,
+        "false_adoption_rate_all": 0.0,
+        "mean_absolute_risk_error": 0.13219932254655836
+      },
+      "probe_calibrated": {
+        "adoption_rate": 0.9955357142857143,
+        "false_adoption_rate_among_adopted": 0.23941205779770802,
+        "false_adoption_rate_all": 0.23834325396825398,
+        "mean_absolute_risk_error": 0.059071592375067164
+      },
+      "scale_prior": {
+        "adoption_rate": 0.6666666666666666,
+        "false_adoption_rate_among_adopted": 0.10788690476190477,
+        "false_adoption_rate_all": 0.07192460317460317,
+        "mean_absolute_risk_error": 0.02258773008748311
+      },
+      "overlap_ridge": {
+        "adoption_rate": 0.6443452380952381,
+        "false_adoption_rate_among_adopted": 0.08391070053887606,
+        "false_adoption_rate_all": 0.05406746031746032,
+        "mean_absolute_risk_error": 0.021222481031901202
+      }
+    }
+  },
+  "comparisons": {
+    "additive": {
+      "mean_baseline_minus_calibrated": 0.0047225217634859476,
+      "paired_anchor_bootstrap_95_percent": [
+        0.004254216263701865,
+        0.005215078329761089
+      ],
+      "relative_error_reduction": 0.061312923533537206,
+      "passes_preregistered_gate": true
+    },
+    "local_mixed": {
+      "mean_baseline_minus_calibrated": 0.004496215341674717,
+      "paired_anchor_bootstrap_95_percent": [
+        0.003982436045249861,
+        0.005073547715293764
+      ],
+      "relative_error_reduction": 0.058546786591344796,
+      "passes_preregistered_gate": true
+    },
+    "probe_constant": {
+      "mean_baseline_minus_calibrated": 0.00245655989319434,
+      "paired_anchor_bootstrap_95_percent": [
+        0.002161784073173381,
+        0.0027742088821910236
+      ],
+      "relative_error_reduction": 0.032860465530701294,
+      "passes_preregistered_gate": false
+    },
+    "probe_linear": {
+      "mean_baseline_minus_calibrated": 0.00028169137453809426,
+      "paired_anchor_bootstrap_95_percent": [
+        -6.571229698446032e-05,
+        0.0007482153291782352
+      ],
+      "relative_error_reduction": 0.0038809852961418233,
+      "passes_preregistered_gate": false
+    },
+    "probe_quadratic": {
+      "mean_baseline_minus_calibrated": 0.12172555335134533,
+      "paired_anchor_bootstrap_95_percent": [
+        0.10159483278774316,
+        0.14577578718029413
+      ],
+      "relative_error_reduction": 0.627366255923772,
+      "passes_preregistered_gate": true
+    }
+  },
+  "extension_gate_passed": false,
+  "uncertainty_scope": "16 anchor clusters; unadjusted descriptive 95% intervals; no row independence or safety guarantee"
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "post-evaluation observed-response diagnosis, not a prediction; oracle uses target labels; not part of preregistered success gate",
+  "rows_sha256": "1e1a0b2f8c4f6a23ef77cd6e13dcd7be05366a6982a0f3c3120ae7c84e27d827",
+  "analysis_source_sha256": "ec37439e9ef7d149c816c625c4880bb6b8cb6b82a7fa5e6c3ba5da1b91c3c0e8",
+  "overall": {
+    "n": 5376,
+    "median_probe_target_cosine": 0.35675280933394915,
+    "mean_oracle_positive_projection_error": 0.07139707362846874,
+    "mean_frozen_calibrated_error": 0.07230074660020254
+  },
+  "by_scale": {
+    "0.03": {
+      "n": 1792,
+      "median_probe_target_cosine": 0.5401850272697626,
+      "mean_oracle_positive_projection_error": 0.04522940864633053,
+      "mean_frozen_calibrated_error": 0.045909672599656205
+    },
+    "0.06": {
+      "n": 1792,
+      "median_probe_target_cosine": 0.3402549783867509,
+      "mean_oracle_positive_projection_error": 0.07202664205608059,
+      "mean_frozen_calibrated_error": 0.07302387874937033
+    },
+    "0.1": {
+      "n": 1792,
+      "median_probe_target_cosine": 0.2412002503838047,
+      "mean_oracle_positive_projection_error": 0.0969351701829951,
+      "mean_frozen_calibrated_error": 0.09796868845158109
+    }
+  }
+}

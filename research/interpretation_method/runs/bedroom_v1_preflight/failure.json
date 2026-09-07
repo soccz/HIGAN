@@ -1,0 +1,4 @@
+{
+  "status": "FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/20t/study/HIGAN/research/interpretation_method/run_bedroom.py\", line 394, in main\n    generator, directions, info = load_generator(protocol)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/20t/study/HIGAN/research/interpretation_method/run_bedroom.py\", line 80, in load_generator\n    direction[:, boundary.manipulate_layers, :] = boundary.direction.to(\"cuda\")\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: linearIndex.numel()*sliceSize*nElemBefore == expandedValue.numel() INTERNAL ASSERT FAILED at \"../aten/src/ATen/native/cuda/Indexing.cu\":496, please report a bug to PyTorch. number of flattened indices did not match number of elements in the value tensor: 3072 vs 262144\n"
+}

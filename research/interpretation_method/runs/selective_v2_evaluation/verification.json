@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "phase": "evaluation",
+  "rows": 21504,
+  "independent_anchors": 64,
+  "sources": 101,
+  "inputs": 9,
+  "prediction_locks": 64,
+  "saved_tensor_cases": 64,
+  "previous": {
+    "status": "PASS",
+    "phase": "calibration",
+    "rows": 5376,
+    "independent_anchors": 16,
+    "sources": 101,
+    "inputs": 9,
+    "prediction_locks": 16,
+    "saved_tensor_cases": 16,
+    "previous": {
+      "status": "PASS",
+      "phase": "training",
+      "rows": 8064,
+      "independent_anchors": 24,
+      "sources": 101,
+      "inputs": 9,
+      "prediction_locks": 24,
+      "saved_tensor_cases": 24,
+      "previous": {
+        "status": "PASS",
+        "phase": "preflight"
+      }
+    }
+  }
+}

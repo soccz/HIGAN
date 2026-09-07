@@ -1,0 +1,38 @@
+{
+  "scope": "predefined finite experiment decision; no universal accuracy or novelty claim",
+  "confirmation_required": false,
+  "confirmation_limit_reached": false,
+  "unresolved_boundaries": [],
+  "empirical_practical_results": {
+    "near_ridge": {
+      "coverage": 0.5649646577380952,
+      "false_adoption": 0.024281833895793893,
+      "risk_95": [
+        0.01743531964140586,
+        0.0316781955693195
+      ],
+      "practical_gate": true
+    },
+    "two_amplitude": {
+      "coverage": 0.5721726190476191,
+      "false_adoption": 0.023488296488946684,
+      "risk_95": [
+        0.017559721180073987,
+        0.030216151821618322
+      ],
+      "practical_gate": true
+    },
+    "two_direction": {
+      "coverage": 0.5722191220238095,
+      "false_adoption": 0.023648923201950427,
+      "risk_95": [
+        0.017763245250557932,
+        0.030409973309669228
+      ],
+      "practical_gate": true
+    }
+  },
+  "interpretation": "Use independent confirmation if a specified boundary is unresolved; never tune on evaluation. Residual uncertainty is reported, not converted to success.",
+  "summary_sha256": "8d87220e92b0c93b8ece5ff62334343bbe94ae2900667264c8afebe44ef52210",
+  "decision_source_sha256": "bb9a2ebe8ad8fa6136afa46c0129ac4a19ee7bda421a5e3473bc867bbca6d18d"
+}

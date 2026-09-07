@@ -1,4 +1,22 @@
-# HIGAN — a research line that ended honestly
+# HIGAN — 개입 해석의 가능성과 한계를 검증한 연구 기록
+
+## 최신 결과 · 2026-09-07
+
+**가까운 개입을 한 번 관측해 가산 설명의 위험을 예측하고, 허용하기 어려우면 설명을 보류한다.**
+bedroom StyleGAN의 새 잠재 기준점 64개·21,504건에서 설명 채택률 **56.50%**, 채택 중 오판율
+**2.43%**를 기록했다. 기준점 bootstrap의 단측 95% 오판 상한은 **3.05%**였다.
+두 번째 관측은 위험 크기 예측을 개선했지만 채택 판단의 추가 이득은 작았고, 호출 비용이 늘었다.
+
+이번 방법론·해석론 연구는 **검증한 범위의 경험적 결과와 재현 코드 공개로 마무리**한다.
+다른 모델로의 일반화, 의미 정확도, 개별 사례의 무오판 보장, 새로운 이론의 성립은 확인하지 않았다.
+아래의 과거 곡률 연구 및 별도 TSFM 후속 연구와 구분해서 읽는다.
+
+- [읽기 쉬운 결과 페이지](https://soccz.github.io/projects/higan-interaction/)
+- [짧은 연구 보고서](research/interpretation_method/REPORT.md)
+- [설계·전체 결과·종료 판정](INTERACTION.md)
+- [코드·공개 데이터·재현 안내](research/interpretation_method/README.md)
+
+## 이전 연구 기록
 
 > **HIGAN**은 [genforce/higan](https://github.com/genforce/higan)(IJCV'20)의 bedroom StyleGAN을 가리키며,
 > 이 레포는 그 잠재공간을 해석하는 연구다. StyleGAN 잠재공간 해석에서 출발해,
@@ -34,6 +52,8 @@
 2026-07-14  "Data-Starved Baselines Inflate the Measured Advantage of
              Time-Series Foundation Models on ETT" (8pp) 완성
              (arXiv 공개 준비 — 링크 추후 게시)
+2026-09-07  개입 해석 방법론: 유한 상호작용 분해 → 미관측 반응 예측 → 위험 예측·보류
+             새 기준점 64개 평가 및 독립 재계산 완료, 연구 기록·코드 공개로 종결
 ```
 
 ## 검증된 negative (이 레포의 핵심 산출물)
@@ -56,6 +76,8 @@ FD 기반 2차 generator 곡률에 대해, fixed-seed 증거로 확정한 것:
 ## 레포 구조
 
 ```
+research/interpretation_method/  개입 해석 방법론: 코드·고정 프로토콜·행 단위 결과·검증 기록
+INTERACTION.md      2026-09 방법론 연구의 설계·결과·최종 판정
 higan_dev/          v2 해석 파이프라인 (scripts/01–28: 분석 28종, 29–33: FD-vs-exact 라인)
 paper/              곡률-제어 라인: 사전등록 프로토콜 95개 + 컨트롤 캠페인 (743 runs, 0 fail)
 note/               TMLR 라인 정본: 설계 문서, 원고 2판, 제출 evidence (fixed-seed JSON)

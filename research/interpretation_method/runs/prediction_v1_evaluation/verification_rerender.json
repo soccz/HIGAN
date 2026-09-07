@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "rows": 5376,
+  "independent_anchors": 16,
+  "source_files_verified": 100,
+  "input_files_verified": 9,
+  "prediction_locks_verified": 16,
+  "saved_tensor_error_max": 0.0,
+  "frozen_fit_and_cluster_bootstrap_reproduced": true,
+  "independent_rerender": {
+    "status": "PASS",
+    "seed": 93016,
+    "scale": 0.06,
+    "max_abs_errors": {
+      "base": 0.0,
+      "response_a": 0.0,
+      "response_b": 0.0,
+      "interaction": 0.0,
+      "probe_c": 0.0,
+      "mixed": 0.0
+    },
+    "original_forward_calls": 7,
+    "mixed_jvps": 1,
+    "scope": "Original manipulation and unpatched forward for finite responses; existing AD wrapper for mixed derivative"
+  }
+}
